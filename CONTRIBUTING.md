@@ -1,21 +1,19 @@
-> **ALPHA**
-> This is a new service – your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
+> **ALPHA**: This is a new service – your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
+
 # Contributing to this repository
 
-> How to propose, submit, and review contributions to the AI Engineering Lab Best Practice Repository.
+This guide outlines how to propose, submit, and review contributions to this repository. We welcome all contributions from across government as they help us to keep these materials current, comprehensive, and useful.
 
-Thank you for your interest in improving this repository. Contributions from across government help keep these materials current, comprehensive, and practically useful.
-
-## Before you contribute
+## 1. Before you contribute
 
 ### Who can contribute
 
-This repository welcomes contributions from:
+This repository accepts contributions from:
 
-- Civil servants across all government departments
-- Contractors and suppliers working on government projects
-- Arm's length bodies and agencies
-- Forward Deployed Engineers (FDEs) capturing learnings from engagements
+- civil servants across all government departments
+- contractors and suppliers working on government projects
+- arm's length bodies and agencies
+- forward deployed engineers (FDEs) who are capturing learnings from engagements
 
 ### Types of contribution
 
@@ -25,146 +23,166 @@ This repository welcomes contributions from:
 | Minor improvements | Clarifications, additional examples, formatting | Standard process |
 | New content | New playbooks, prompts, case studies | Full review process |
 | Structural changes | New sections, reorganisation | Proposal required |
-| Tool-specific guides | New AI assistant coverage | Full review + security assessment |
+| Tool-specific guides | New AI assistant coverage | Full review and security assessment |
 
-### What we're looking for
+### What you should submit
 
-We particularly welcome:
+We're accepting material which includes:
 
-- Practical examples from real adoption experiences
-- Prompts that have proven effective in government contexts
-- Case studies (anonymised where necessary)
-- Accessibility improvements
-- Corrections to outdated information
-- Integration patterns for government technology stacks
-- Translations or plain English improvements
+- practical examples from real adoption experiences
+- prompts that have proven effective in government contexts
+- anonymised case studies
+- accessibility improvements
+- corrections to outdated information
+- integration patterns for government technology stacks
+- translations or plain English improvements
 
 ### What requires additional review
 
-The following contributions require security or governance review before merging:
+Some contributions will require security or governance reviews before merging. These include:
 
-- Content relating to security controls or guardrails
-- Tool-specific configuration guidance
-- Incident response procedures
-- Any content mentioning specific vulnerabilities
-- Integration patterns involving authentication or secrets
+- content relating to security controls or guardrails
+- tool-specific configuration guidance
+- incident response procedures
+- any content mentioning specific vulnerabilities
+- integration patterns involving authentication or secrets
 
 ### Writing style
 
-All content must follow [GOV.UK content design principles](https://www.gov.uk/guidance/content-design/writing-for-gov-uk):
+All content must follow [GOV.UK content design principles](https://www.gov.uk/guidance/content-design/writing-for-gov-uk). In short, this means you must:
 
-1. **Use plain English** - Avoid jargon; explain technical terms on first use
-2. **Use active voice** - Write "Review the code" not "The code should be reviewed"
-3. **Front-load information** - Put the most important point first
-4. **Keep sentences short** - Aim for 25 words or fewer per sentence
-5. **Use short paragraphs** - One idea per paragraph; 2-3 sentences maximum
-6. **Be direct** - Use "you" to address the reader; use "we" for the repository team
+- use plain English to avoid jargon, and you should explain technical terms on first use
+- use active voice, such as *'review the code'* instead of *'the code should be reviewed'*
+- front-load information by putting most important point first
+- keep sentences short by aiming for 25 words or fewer per sentence
+- use short paragraphs of one idea per paragraph with a maximum of 2 to 3 sentences
+- be direct by using *'you'* to address the reader and *'we'* for the repository team
 
 ### Formatting standards
 
-**Headings:**
-- Use sentence case (capitalise first word only)
-- Use heading levels sequentially (don't skip from H2 to H4)
-- Keep headings descriptive and actionable
+**Headings:**  
 
-**Lists:**
-- Use bullet points for unordered items
-- Use numbered lists only for sequential steps
-- Start each item with a capital letter
-- Don't use full stops at the end of list items unless they're complete sentences
+All headings must:
+- use sentence case (capitalise only the first word)
+- use heading levels sequentially (don't skip from H2 to H4)
+- be descriptive and actionable
 
-**Code examples:**
-- Use fenced code blocks with language identifiers
-- Keep examples concise and focused
-- Include comments explaining non-obvious elements
-- Test all code examples before submitting
+**Lists:**  
 
-**Links:**
-- Use descriptive link text (not "click here")
-- Use relative links for internal repository references
-- Check all links work before submitting
+All lists must:
+- use bullet points for unordered items
+- use numbered lists only for sequential steps
+- if a bullet list, it should:
+   - start with a lead-in line which completes a full sentence with each item
+   - start with a lowercase letter
+   - end with any punctuation (such as full stops or commas)
+- if a numbered list item is a complete step in itself, it can:
+   - start with an uppercase letter
+   - end in punctuation
 
-## Accessibility requirements
+**Code examples:**  
 
-All contributions must meet accessibility standards. Before submitting:
+All code examples must:
+- use fenced code blocks with language identifiers
+- be concise and focused
+- include comments explaining non-obvious elements
+- be checked before submitting
 
-### Text content
+**Links:**  
 
-- [ ] Use clear, simple language (aim for reading age 9)
-- [ ] Provide alt text descriptions for any images
-- [ ] Don't use colour alone to convey meaning
-- [ ] Define acronyms on first use
-- [ ] Use descriptive link text
+All links must:
+- reflect the title of the linked page and not just be *'click here'*
+- be relevant for internal repository references
+- checked before submission
+
+Detailed guidance on how to write content can be found on the [A to Z Style Guide](https://www.gov.uk/guidance/style-guide/a-to-z).
+
+## 2. Accessibility requirements
+
+All contributions must meet the following accessibility standards.
+
+### Text content  
+
+All text content must:
+
+- use clear, simple language (aim for around a standard reading age of 9)
+- include alt text descriptions for all images
+- not use colour alone to convey meaning
+- define acronyms on first use
+- use descriptive link text
 
 ### Structure
 
-- [ ] Use proper heading hierarchy
-- [ ] Use semantic markup (lists, tables, headings)
-- [ ] Keep tables simple; avoid merged cells
-- [ ] Provide table headers for data tables
+All content structure must:
+
+- use proper heading hierarchy
+- use semantic markup, including lists, tables and headings
+- contain only simple tables without merged cells
+- include table headers for data tables
 
 ### Code examples
 
-- [ ] Don't rely on syntax highlighting alone
-- [ ] Include comments for complex logic
-- [ ] Ensure examples are screen-reader friendly when rendered
+All code examples must: 
+
+- not rely on syntax highlighting alone
+- include comments for complex logic
+- be screen-reader friendly when rendered
 
 ### Cognitive accessibility
 
-- [ ] Break complex content into manageable chunks
-- [ ] Use consistent terminology throughout
-- [ ] Provide summaries for long documents
-- [ ] Include practical examples alongside theory
+To meet cognitive accessibilty requirements, you must:
 
-For detailed guidance, see the repository's accessibility documentation.
+- break complex content into manageable chunks
+- use consistent terminology throughout
+- provide summaries for long documents
+- include practical examples alongside theory
 
-## Contribution process
+## 3. Contribution process  
 
-### Quick fixes (typos, broken links)
+If you'd like to contribute to this repo, you must following a set process.
 
-For simple corrections that don't change meaning:
+### Quick fixes
 
-1. Fork the repository
-2. Make your change in a new branch
-3. Submit a pull request with a clear description
-4. A maintainer will review and merge within [PLACEHOLDER: X] working days
+A quick fix is something that doesn't change the meaning of the content, such as correcting broken links and typos. To submit a fix, you must:
+
+1. fork the repository
+2. make your change in a new branch
+3. submit a pull request with a clear description
+
+After submission, one of our team will aim to review and merge your fix within 10 working days.
 
 ### Standard contributions
 
-For improvements, clarifications, and new examples:
+For improvements, clarifications, and new examples, you must:
 
-1. **Check existing content** - Ensure your contribution isn't duplicating existing material
-2. **Open an issue first** - Describe what you're proposing and why
-3. **Wait for feedback** - A maintainer will respond within [PLACEHOLDER: X] working days
-4. **Fork and branch** - Create a branch with a descriptive name
-   - Use format: `type/brief-description`
-   - Examples: `fix/broken-copilot-link`, `add/terraform-prompt-examples`
-5. **Make your changes** - Follow content standards above
-6. **Self-review** - Check against the quality checklist below
-7. **Submit pull request** - Reference the original issue
-8. **Respond to feedback** - Make requested changes promptly
-9. **Approval and merge** - Maintainers will merge approved contributions
+1. check existing content to ensure that your contribution isn't duplicating existing material
+2. open an issue to describe what you're proposing and why
+3. wait for feedback, which we aim to provide within 10 working days
+4. fork and create a branch with a descriptive name, using this format: *`type/brief-description`*. For example - *`fix/broken-copilot-link`* or *`add/terraform-prompt-examples`*
+5. make your changes by following the content standards above
+6. self-review by checking against the quality checklist below
+7. submit a pull request, ensuring you reference the original issue
+8. respond to feedback by making requested changes promptly
+
+After submission, one of our team will aim to approve and merge your fix within 10 working days.
 
 ### New content or structural changes
 
-For significant new content or repository changes:
+For significant new content or repository changes, you must first submit a proposal by opening an issue which contains:
+   - what you're proposing
+   - why it's needed
+   - who will benefit
+   - an outline of the content structure
+   - estimated effort
+   - any security or governance considerations
 
-1. **Submit a proposal** - Open an issue using the "Content Proposal" template
-2. **Include in your proposal:**
-   - What you're proposing
-   - Why it's needed
-   - Who will benefit
-   - Outline of content structure
-   - Estimated effort
-   - Any security or governance considerations
-3. **Proposal review** - The team will review within [PLACEHOLDER: X] working days
-4. **Approval to proceed** - You'll receive feedback and approval (or suggestions for alternative approaches)
-5. **Create content** - Follow the standard contribution process above
-6. **Enhanced review** - New content receives additional scrutiny from subject matter experts
+Our team will aim to review your proposal within 10 working days. After this you'll receive feedback and approval to proceed, or suggestions for alternative approaches. You can then create your content by following the standard contribution process above.
 
-## Quality checklist
+Finally, your new content will receive additional scrutiny from subject matter experts.
 
-Before submitting, verify your contribution against this checklist:
+## 4. Quality checklist
+
+Use this checklist to ensure that your contribution is suitable.
 
 ### Content quality
 
@@ -184,7 +202,7 @@ Before submitting, verify your contribution against this checklist:
 
 ### Security and governance
 
-- [ ] Suitable for OFFICIAL classification
+- [ ] Suitable for [OFFICIAL classification](https://www.gov.uk/government/publications/government-security-classifications/government-security-classifications-policy-html#definitions-for-official-secret-and-top-secret)
 - [ ] Doesn't expose sensitive information
 - [ ] Follows security best practices
 - [ ] Doesn't include real credentials, keys, or secrets
@@ -204,78 +222,67 @@ Before submitting, verify your contribution against this checklist:
 
 ### What reviewers check
 
-Maintainers review contributions for:
+Our reviewers check contributions for:
 
-1. **Alignment** - Does it fit the repository's purpose and scope?
-2. **Quality** - Does it meet content standards?
-3. **Accuracy** - Is the technical content correct?
-4. **Security** - Is it safe for government use?
-5. **Accessibility** - Does it meet accessibility standards?
-6. **Consistency** - Does it align with existing content?
+- alignment to make sure it fits the repository's purpose and scope
+- quality, so that it meets content standards
+- technical accuracy
+- security, so that it's safe for government use
+- meeting accessibility standards
+- consistency, so it aligns with existing content
 
 ### Review outcomes
 
-- **Approved** - Merged as submitted
-- **Approved with changes** - Minor edits made by maintainer before merge
-- **Changes requested** - Feedback provided; contributor makes updates
-- **Declined** - Doesn't meet requirements; feedback provided
+**Approved** - merged as submitted.  
+**Approved with changes** - minor edits made by reviewer before merge.  
+**Changes requested** - feedback provided and you must make updates.  
+**Declined** - content doesn't meet requirements. Additional feedback will be provided.  
 
-## Recognition
+## 5. Recognition
 
 Contributors are recognised through:
 
-- Attribution in document metadata where appropriate
-- Listing in the repository's contributors file
-- Acknowledgement in release notes for significant contributions
+- attribution in document metadata where appropriate
+- listing in the repository's contributors file
+- acknowledgement in release notes for significant contributions
 
-## Code of conduct
+## 5. Code of conduct
 
-All contributors must adhere to the [Civil Service Code](https://www.gov.uk/government/publications/civil-service-code/the-civil-service-code) principles:
+All contributors must adhere to the [Civil Service Code](https://www.gov.uk/government/publications/civil-service-code/the-civil-service-code) principles. These include:
 
-- **Integrity** - Act with honesty and impartiality
-- **Honesty** - Be truthful and transparent
-- **Objectivity** - Base advice on evidence
-- **Impartiality** - Act without bias
+- integrity, by acting with impartiality
+- honesty, by being truthful and transparent
+- objectivity, where all advice is based on evidence
+- impartiality, where there is no bias
 
-Additionally:
+Additionally, we ask that you:
 
-- Be respectful and constructive in all interactions
-- Focus feedback on content, not individuals
-- Assume good intent from other contributors
-- Maintain confidentiality where required
-- Report concerns to [PLACEHOLDER: contact for reporting concerns]
+- be respectful and constructive in all interactions
+- focus feedback on content, not individuals
+- assume good intent from other contributors
+- maintain confidentiality where required
+- Report any concerns
 
-## Getting help
+## 6. Getting help
 
 If you need assistance with contributing:
 
 | Need | Contact |
 |------|---------|
-| Process questions | [PLACEHOLDER: team email] |
-| Technical guidance | [PLACEHOLDER: technical contact] |
-| Content standards | [PLACEHOLDER: content contact] |
-| Accessibility advice | [PLACEHOLDER: accessibility contact] |
+| Process questions | TBD |
+| Technical guidance | TBD |
+| Content standards | TBD |
+| Accessibility advice | TBD |
 
-[PLACEHOLDER: Add Slack/Teams channels if available]
-
-## Intellectual property
+## 7. Intellectual property
 
 By contributing to this repository, you confirm that:
 
-1. Your contribution is your own original work, or you have permission to submit it
-2. You have the right to grant the licence below
-3. Your contribution doesn't infringe any third-party intellectual property rights
-4. Your contribution is suitable for publication under the Open Government Licence
+1. your contribution is your own original work, or that you have permission to submit it
+2. you have the right to grant the licence below
+3. your contribution doesn't infringe any third-party intellectual property rights
+4. your contribution is suitable for publication under the [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)
 
-Contributions are published under the [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/).
-
-## Related documents
+## 8. Related documents
 
 - [README.md](README.md) - Repository overview
-
-## References
-
-- [GOV.UK Content Design Guide](https://www.gov.uk/guidance/content-design)
-- [GOV.UK Writing for GOV.UK](https://www.gov.uk/guidance/content-design/writing-for-gov-uk)
-- [Civil Service Code](https://www.gov.uk/government/publications/civil-service-code/the-civil-service-code)
-- [Open Government Licence](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)
