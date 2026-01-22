@@ -1,20 +1,20 @@
-> **ALPHA**
+> **ALPHA**:
 > This is a new service – your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
-# Technical Lead Assessment Questionnaire
+# Technical lead assessment questionnaire
 
 ## Why we're asking for this information
 
-This questionnaire helps us understand your team's technical environment so we can design AI Coding Assistant adoption that works with your existing tools, practices, and constraints. We're gathering information to tailor the right integration approach and guardrails for your specific context.
+This questionnaire helps us to understand your team's technical environment so we can design AI coding assistant adoption that works with your existing tools, practices, and constraints. We're gathering information to tailor the right integration approach and guardrails for your specific context.
 
-**What happens next:** Your responses, along with questionnaires from your Delivery Manager and team engineers, help us determine how to integrate AI Coding Assistants into your workflows effectively and safely.
+**What happens next:** your responses, along with questionnaires from your delivery manager and team engineers, help us determine how to integrate AI coding assistants into your workflows effectively and safely.
 
-**Time needed:** Approximately 10-15 minutes
+**Time needed:** approximately 10 to 15 minutes
 
-**Confidentiality:** Your responses are used only to design your team's adoption plan. No individual team data is shared beyond the programme team.
+**Confidentiality:** your responses are used only to design your team's adoption plan. No individual team data is shared beyond the programme team.
 
 ---
 
-## Technical Environment
+## Technical environment
 
 ### 1. Primary programming languages
 What languages does your team primarily work in? (Select all that apply)
@@ -64,7 +64,7 @@ What version control system does your team use?
 
 ---
 
-## Development Practices
+## Development practices
 
 ### 5. Branching strategy
 How does your team manage code branches?
@@ -113,7 +113,7 @@ How does your team handle CI/CD?
 
 ---
 
-## Code Quality and Standards
+## Code quality and standards
 
 ### 10. Code quality tools
 What automated code quality tools does your team use? (Select all that apply)
@@ -150,7 +150,7 @@ How does your team handle technical debt?
 
 ---
 
-## System Architecture and Constraints
+## System architecture and constraints
 
 ### 14. System architecture
 What architectural patterns does your team primarily work with? (Select all that apply)
@@ -193,12 +193,10 @@ What compliance frameworks does your team work within? (Select all that apply)
 
 ---
 
-## Integration and Tooling
+## Integration and tooling
 
 ### 18. Development workflow
 Describe a typical workflow from starting a task to deploying code:
-
-_________________
 
 ### 19. Tool integration challenges
 What would make integrating a new tool into your workflow difficult? (Select all that apply)
@@ -222,7 +220,7 @@ If engineers currently use AI coding tools (Q15 from Delivery Manager questionna
 
 ---
 
-## Technical Team Capability
+## Technical team capability
 
 ### 21. Team's technical practices maturity
 How would you characterise your team's development practices?
@@ -248,7 +246,7 @@ Do legacy systems or technical constraints significantly limit what your team ca
 
 ---
 
-## AI Coding Assistant Integration
+## AI coding assistant integration
 
 ### 24. Anticipated integration challenges
 What technical challenges do you anticipate with AI Coding Assistant adoption? (Select all that apply)
@@ -263,19 +261,17 @@ What technical challenges do you anticipate with AI Coding Assistant adoption? (
 - [ ] Other (please specify): _________________
 
 ### 25. Success criteria
-From a technical perspective, what would indicate successful AI Coding Assistant adoption? (Open text)
+From a technical perspective, what would indicate successful AI coding assistant adoption?
 
 _________________
 
 ### 26. Technical context
-Is there anything else about your technical environment that would help us design the right integration approach? (Open text - optional)
+Is there anything else about your technical environment that would help us design the right integration approach?
 
 _________________
 
----
-
 **Thank you for completing this questionnaire.**
 
-Your Assessment Lead will review your responses alongside the Delivery Manager and individual engineer questionnaires to design your team's adoption approach.
+Your assessment lead will review your responses alongside the delivery manager and individual engineer questionnaires to design your team's adoption approach.
 
-If you have any questions, please contact [Assessment Lead contact details].
+If you have any questions, contact [Assessment Lead contact details].
