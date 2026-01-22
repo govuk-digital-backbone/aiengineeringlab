@@ -1,20 +1,20 @@
-> **ALPHA**
+> **ALPHA**:
 > This is a new service – your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
-# Individual Engineer Assessment Questionnaire
+# Individual engineer assessment questionnaire
 
 ## Why we're asking for this information
 
-This questionnaire helps us understand your experience, work context, and learning preferences so we can provide the right support for you to adopt AI Engineering Labs effectively. There's no right or wrong answers - we want to understand what will help you work better.
+This questionnaire helps us understand your experience, work context, and learning preferences so that we can provide the right support for you to adopt AI Engineering Labs effectively. There's no right or wrong answers because we want to understand what will help you work better.
 
-**What happens next:** Your responses, combined with questionnaires from your Delivery Manager and Technical Lead, help us design training, resources, and support that work for your specific needs and context.
+**What happens next:** your responses, combined with questionnaires from your delivery manager and technical lead, help us design training, resources, and support that work for your specific needs and context.
 
-**Time needed:** Approximately 10-15 minutes
+**Time needed:** approximately 10 to 15 minutes
 
-**Confidentiality:** Your individual responses are only seen by the programme team and used to design support. We'll share aggregate patterns with your team leadership, but never individual responses.
+**Confidentiality:** your individual responses are only seen by the programme team and used to design support. We'll share aggregate patterns with your team leadership, but never individual responses.
 
 ---
 
-## About You
+## About you
 
 ### 1. Your role
 What's your primary engineering role?
@@ -27,18 +27,18 @@ What's your primary engineering role?
 ### 2. Your experience
 How long have you been working as an engineer?
 - [ ] Less than 1 year
-- [ ] 1-2 years
-- [ ] 3-5 years
-- [ ] 6-10 years
-- [ ] 11-15 years
+- [ ] 1 to 2 years
+- [ ] 3 to 5 years
+- [ ] 6 to 10 years
+- [ ] 11 to 15 years
 - [ ] More than 15 years
 
 ### 3. Time in current role
 How long have you been in your current team or role?
 - [ ] Less than 3 months
-- [ ] 3-6 months
-- [ ] 6-12 months
-- [ ] 1-2 years
+- [ ] 3 to 6 months
+- [ ] 6 to 12 months
+- [ ] 1 to 2 years
 - [ ] More than 2 years
 
 ### 4. Working pattern
@@ -51,10 +51,10 @@ What's your typical working arrangement?
 
 ---
 
-## Your Work
+## Your work
 
 ### 5. Time allocation
-How do you typically spend your time? (Estimate percentages - should total roughly 100%)
+How do you typically spend your time? (Estimate percentages so they total roughly 100%)
 
 - Writing new code: _____%
 - Reviewing code: _____%
@@ -95,10 +95,10 @@ How much do you work with others on code?
 
 ---
 
-## Current AI Tool Experience
+## Current AI tool experience
 
 ### 9. AI coding tool familiarity
-Have you used AI Coding Assistants before? (Select all that apply)
+Have you used AI coding assistants before? (Select all that apply)
 - [ ] GitHub Copilot
 - [ ] Claude Code
 - [ ] Google Antigravity
@@ -110,10 +110,10 @@ Have you used AI Coding Assistants before? (Select all that apply)
 - [ ] ChatGPT for coding help
 - [ ] Claude for coding help
 - [ ] Other AI tools (please specify): _________________
-- [ ] No, I haven't used AI Coding Assistants
+- [ ] No, I haven't used AI coding assistants
 
 ### 10. Current AI tool usage
-If you've used an AI Coding Assistant, how often do you use them?
+If you've used an AI coding assistant, how often do you use them?
 - [ ] Not applicable - haven't used them
 - [ ] Daily
 - [ ] Several times a week
@@ -122,7 +122,7 @@ If you've used an AI Coding Assistant, how often do you use them?
 - [ ] Used in the past but stopped
 
 ### 11. AI tool effectiveness
-If you've used an AI Coding Assistant, how helpful have you found them?
+If you've used an AI coding assistant, how helpful have you found them?
 - [ ] Not applicable - haven't used them
 - [ ] Very helpful - significantly improved my work
 - [ ] Quite helpful - useful for certain tasks
@@ -131,7 +131,7 @@ If you've used an AI Coding Assistant, how helpful have you found them?
 - [ ] Unhelpful - created more work than they saved
 
 ### 12. Use cases
-If you've used an AI Coding Assistant, what did you use them for? (Select all that apply)
+If you've used an AI coding assistant, what did you use them for? (Select all that apply)
 - [ ] Not applicable - haven't used them
 - [ ] Writing boilerplate code
 - [ ] Understanding unfamiliar code
@@ -146,7 +146,7 @@ If you've used an AI Coding Assistant, what did you use them for? (Select all th
 
 ---
 
-## Your Development Environment
+## Your development environment
 
 ### 13. Primary programming languages
 What languages do you work with most? (Select up to 3)
@@ -187,7 +187,7 @@ Where do you write code?
 
 ---
 
-## Learning and Adaptation
+## Learning and adaptation
 
 ### 16. Learning preferences
 How do you prefer to learn new tools or technologies? (Select all that apply)
@@ -220,13 +220,11 @@ When you're stuck or need help, what do you typically do? (Select all that apply
 - [ ] Other (please specify): _________________
 
 ### 19. Accessibility needs
-Do you have any accessibility requirements or preferences we should consider when designing training and resources? (Open text - optional)
+Do you have any accessibility requirements or preferences we should consider when designing training and resources? (Optional)
 
 _________________
 
----
-
-## Confidence and Concerns
+## Confidence and concerns
 
 ### 20. AI confidence level
 How confident do you feel about using AI coding assistants effectively?
@@ -276,12 +274,12 @@ What would help you most in your day-to-day work right now? (Select all that app
 
 ---
 
-## Your Adoption Context
+## Your adoption context
 
 ### 24. Time availability
 Realistically, how much time can you dedicate to learning AI coding assistants over the next 2-4 weeks?
 - [ ] 5+ hours per week
-- [ ] 2-4 hours per week
+- [ ] 2 to 4 hours per week
 - [ ] 1 hour per week
 - [ ] 30 minutes per week
 - [ ] Very limited - I'm on tight deadlines
@@ -296,19 +294,17 @@ How do you feel about adopting AI coding assistants?
 - [ ] Uncertain - I need to understand more first
 
 ### 26. Success for you
-What would make AI coding assistant adoption successful from your perspective? (Open text)
+What would make AI coding assistant adoption successful from your perspective?
 
 _________________
 
 ### 27. Additional context
-Is there anything else about your work, experience, or preferences that would help us support your adoption? (Open text - optional)
+Is there anything else about your work, experience, or preferences that would help us support your adoption? (Optional)
 
 _________________
 
----
-
 **Thank you for completing this questionnaire.**
 
-Your Assessment Lead will review your responses alongside your Delivery Manager and Technical Lead questionnaires to design support that works for your team and your individual needs.
+Your assessment lead will review your responses alongside your delivery manager and technical lead questionnaires to design support that works for your team and your individual needs.
 
-If you have any questions, please contact [Assessment Lead contact details].
+If you have any questions, contact [Assessment Lead contact details].
