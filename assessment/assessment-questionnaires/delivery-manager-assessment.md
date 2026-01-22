@@ -1,20 +1,20 @@
-> **ALPHA**
+> **ALPHA**:
 > This is a new service – your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
-# Delivery Manager Assessment Questionnaire
+# Delivery manager assessment questionnaire
 
 ## Why we're asking for this information
 
-This questionnaire helps us understand your team's context so we can tailor the right support for adopting AI Coding Assistants. There's no right or wrong answers - we're gathering information to design an approach that works for your specific situation.
+This questionnaire helps us understand your team's context so that we can tailor the right support for adopting AI coding assistants. There's no right or wrong answers as we're gathering information to design an approach that works for your specific situation.
 
-**What happens next:** Your responses, along with questionnaires from your Technical Lead and team engineers, help us determine the most effective adoption approach for your team. This might include customised training, specific guardrails, or additional hands-on support.
+**What happens next:** your responses, along with questionnaires from your technical lead and team engineers, help us to determine the most effective adoption approach for your team. This might include customised training, specific guardrails, or additional hands-on support.
 
-**Time needed:** Approximately 10-15 minutes
+**Time needed:** approximately 10 to 15 minutes
 
-**Confidentiality:** Your responses are used only to design your team's adoption plan. No individual team data is shared beyond the programme team.
+**Confidentiality:** your responses are used only to design your team's adoption plan. No individual team data is shared beyond the programme team.
 
 ---
 
-## About Your Team
+## About your team
 
 ### 1. Team composition
 How many engineers are in your team?
@@ -34,21 +34,21 @@ Which engineering roles are in your team? (Select all that apply)
 ### 3. Team stability
 How long has your current team been working together?
 - [ ] Less than 3 months
-- [ ] 3-6 months
-- [ ] 6-12 months
+- [ ] 3 to 6 months
+- [ ] 6 to 12 months
 - [ ] More than 12 months
 
 ### 4. Experience levels
 What's the mix of experience in your team?
-- [ ] Mostly junior (0-2 years experience)
-- [ ] Mix of junior and mid-level (0-5 years)
-- [ ] Mostly mid-level (3-7 years experience)
-- [ ] Mix of mid and senior (3-10+ years)
+- [ ] Mostly junior (0 to 2 years experience)
+- [ ] Mix of junior and mid-level (0 to 5 years)
+- [ ] Mostly mid-level (3 to 7 years experience)
+- [ ] Mix of mid and senior (3 to 10+ years)
 - [ ] Mostly senior (7+ years experience)
 
 ---
 
-## What Your Team Works On
+## What your team works on
 
 ### 5. Primary work type
 What type of work does your team primarily do? (Select one)
@@ -76,7 +76,7 @@ How would you describe the criticality of the systems your team works on?
 
 ---
 
-## Delivery Approach and Pressures
+## Delivery approach and pressures
 
 ### 8. Current delivery methodology
 How does your team work? (Select all that apply)
@@ -105,11 +105,11 @@ Do you have any significant delivery milestones in the next 3 months?
 - [ ] No major deadlines
 - [ ] Uncertain - requirements still emerging
 
-If yes, please briefly describe: _________________
+If yes, briefly describe: _________________
 
 ---
 
-## Quality Standards and Practices
+## Quality standards and practices
 
 ### 11. Code review practices
 How does code get reviewed before it goes live?
@@ -150,16 +150,16 @@ How would you characterise your team's technical debt situation?
 
 ---
 
-## AI and Governance Context
+## AI and governance context
 
 ### 15. Current AI tool usage
-Do engineers in your team currently use any AI Coding Assistant tools?
+Do engineers in your team currently use any AI coding assistant tools?
 - [ ] Yes, officially sanctioned by organisation
 - [ ] Yes, but unofficially (shadow IT)
 - [ ] No, not aware of any usage
 - [ ] No, explicitly prohibited
 
-If yes, please specify which tools (select all that apply):
+If yes, specify which tools (select all that apply):
 - [ ] GitHub Copilot
 - [ ] Claude Code
 - [ ] Google Antigravity
@@ -199,7 +199,7 @@ What security constraints does your team work within? (Select all that apply)
 
 ---
 
-## Change and Learning Context
+## Change and learning context
 
 ### 19. Recent changes
 Has your team experienced significant changes recently? (Select all that apply)
@@ -229,10 +229,10 @@ Realistically, how much time can engineers dedicate to learning new tools over t
 
 ---
 
-## Support Needs
+## Support needs
 
 ### 22. Main concerns
-What concerns you most about introducing AI Coding Assistants to your team? (Select up to 3)
+What concerns you most about introducing AI coding assistants to your team? (Select up to 3)
 - [ ] Data security and information leakage
 - [ ] Code quality might decrease
 - [ ] Engineers might become over-reliant on AI
@@ -245,19 +245,18 @@ What concerns you most about introducing AI Coding Assistants to your team? (Sel
 - [ ] Other (please specify): _________________
 
 ### 23. Success indicators
-How would you know this adoption has been successful for your team? (Open text)
+Describe how you would know this adoption has been successful for your team.
 
 _________________
 
 ### 24. Additional context
-Is there anything else about your team's context that would help us design the right support approach? (Open text - optional)
+Is there anything else about your team's context that would help us design the right support approach? (Optional)
 
 _________________
 
----
 
 **Thank you for completing this questionnaire.**
 
-Your Assessment Lead will review your responses alongside the Technical Lead and individual engineer questionnaires to design your team's adoption approach.
+Your assessment lead will review your responses alongside the technical lead and individual engineer questionnaires to design your team's adoption approach.
 
-If you have any questions, please contact [Assessment Lead contact details].
+If you have any questions, contact [Assessment Lead contact details].
