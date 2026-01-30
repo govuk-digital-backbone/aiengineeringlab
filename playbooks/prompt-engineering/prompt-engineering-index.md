@@ -7,7 +7,7 @@ Practical techniques for prompting AI code assistants to get consistent, high-qu
 
 ## Purpose
 
-AI code assistants are powerful tools, but they require structured approaches to deliver consistent value. This playbook teaches you prompt engineering - the techniques for communicating effectively with AI assistants to get better results, whether you are working solo or enabling an entire team.
+AI code assistants are powerful tools, but they require structured approaches to provide consistent value. This playbook teaches you prompt engineering - the techniques for communicating effectively with AI assistants to get better results, whether you are working solo or enabling an entire team.
 
 Use this playbook to:
 
@@ -24,7 +24,7 @@ This playbook applies to all technical personnel using AI code assistants on gov
 - software engineers
 - technical architects
 - team leads and engineering managers
-- civil servants, contractors, and suppliers with access to government code repositories
+- civil servants, contractors and suppliers with access to government code repositories
 
 ## Introduction
 
@@ -32,11 +32,11 @@ Your colleague asks an AI assistant to build an authentication system and gets p
 
 The difference is simpler than you might think: effective prompting - how you communicate your requirements to the AI.
 
-Whether you are generating code, learning new concepts, exploring design options, or debugging issues, the quality of AI assistance depends on how you ask for it. This playbook teaches you prompt engineering - the structured techniques for getting consistent, high-quality results from AI assistants across all these tasks.
+Whether you are generating code, learning new concepts, exploring design options or debugging issues, the quality of AI assistance depends on how you ask for it. This playbook teaches you prompt engineering - the structured techniques for getting consistent, high-quality results from AI assistants across all these tasks.
 
 ### The AI adoption challenge
 
-Many organisations struggle with AI code assistant adoption, facing these common issues:
+Many organisations struggle with AI code assistant adoption, facing these common issues.
 
 Inconsistent results: engineers get vastly different quality outputs depending on their prompts and understanding of how Large Language Models (LLMs) work. Some copy and paste code without understanding what it does or whether it is even correct.
 
@@ -48,7 +48,7 @@ Knowledge silos: when someone figures out how to get great results, that knowled
 
 ### The solution
 
-These organizational challenges start with individual engineers not knowing how to prompt effectively. When everyone on a team learns prompt engineering, the organizational problems resolve naturally.
+These organisational challenges start with individual engineers not knowing how to prompt effectively. When everyone on a team learns prompt engineering, the organisational problems resolve naturally.
 
 This playbook teaches you the foundational prompt engineering techniques. You will learn how to:
 
@@ -61,9 +61,9 @@ This playbook teaches you the foundational prompt engineering techniques. You wi
 
 For individual engineers: follow the techniques through your development workflow. Start with the foundational techniques, then apply them to your daily work.
 
-For team leads: use this as a training resource. Share relevant sections with your team, establish standards based on these patterns, and create your own examples that match your tech stack.
+For team leads: use this as a training resource. Share relevant sections with your team, establish standards based on these patterns and create your own examples that match your tech stack.
 
-For organisations: adapt these techniques to your context. Create internal guidelines, build example libraries, and establish review processes that ensure AI-generated code meets your standards.
+For organisations: adapt these techniques to your context. Create internal guidelines, build example libraries and establish review processes that ensure AI-generated code meets your standards.
 
 Throughout this guide, you will see examples that demonstrate core principles. While the specific technologies may differ from yours, the prompting patterns and techniques apply universally.
 
@@ -71,7 +71,7 @@ Throughout this guide, you will see examples that demonstrate core principles. W
 ### Core content
 
 Part 1: Foundational prompting techniques
-- [The Human Test: can someone else do this task?](./prompt-engineering-foundations.md#the-human-test-can-someone-else-do-this-task)
+- [The Human Test: can someone else do this task](./prompt-engineering-foundations.md#the-human-test-can-someone-else-do-this-task)
 - [The 5 core techniques](./prompt-engineering-foundations.md#the-5-core-techniques)
 - [Combining techniques: the power prompt](./prompt-engineering-foundations.md#combining-techniques-the-power-prompt)
 - [Context: the secret weapon](./prompt-engineering-foundations.md#context-the-secret-weapon)
@@ -119,34 +119,24 @@ Part 6: Prompt engineering for AI coding agents
 
 ### Key principles revisited
 
-1. Context is everything - more context leads to better code. Include tech stack, constraints, and patterns. Apply the Human Test: could a colleague complete this task with your instructions?
+1. Provide comprehensive context including tech stack, constraints and patterns to help AI understand your requirements.
+2. Build functionality iteratively in layers rather than expecting perfect code immediately.
+3. Match your prompting technique to task complexity and specific requirements.
+4. Use chat-based AI for learning and critical code, and agents for repetitive mechanical tasks.
+5. Always understand, test and review all AI-generated code before accepting it.
+6. Step away when AI stops helping after several iterations or when tasks are faster without AI.
 
-2. Iterate, do not expect perfection - build up functionality in layers. Switch roles to get different perspectives. Refine through multiple passes. Code never comes without bugs - iterative refinement helps you understand each piece.
+## Solving the adoption challenges
 
-3. Use the right technique for the task:
+Remember the problems we started with? Here is how these techniques solve them.
 
-    - new features with unknowns: reverse prompting and chain of thought
-    - maintaining consistency: few-shot and context
-    - complex logic: chain of thought and role assignment
-    - critical code: all techniques combined
+Inconsistent results: Fixed by establishing standard prompting patterns. When everyone uses the Human Test and provides rich context, output quality becomes consistent.
 
-4. Know when to use agents vs chat - use chat for learning and critical code. Use agents for repetitive, mechanical tasks. Always review what agents do.
+No shared standards: Create a team prompting guide based on these techniques. Share example prompts that work well. Review AI-generated code in pull requests just like human code.
 
-5. Never blindly accept - understand every change. Test everything. Keep humans in the loop. You are the architect, AI is the assistant.
+Architecture drift: Use few-shot prompting with your existing patterns. AI matches your team's style when you show it examples.
 
-6. Know when AI is not helping - watch for the loop of despair. Some tasks are faster without AI. Security-critical code deserves extra scrutiny. Step away if not making progress.
-
-### Solving the adoption challenges
-
-Remember the problems we started with? Here is how these techniques solve them:
-
-Inconsistent results? Fixed by establishing standard prompting patterns. When everyone uses the Human Test and provides rich context, output quality becomes consistent.
-
-No shared standards? Create a team prompting guide based on these techniques. Share example prompts that work well. Review AI-generated code in pull requests (PRs) just like human code.
-
-Architecture drift? Use few-shot prompting with your existing patterns. AI matches your team's style when you show it examples.
-
-Knowledge silos? Document your effective prompts. When someone discovers a great technique, add it to your team's playbook.
+Knowledge silos: Document your effective prompts. When someone discovers a great technique, add it to your team's playbook.
 
 ### The competitive advantage
 
@@ -158,7 +148,7 @@ Engineers who thrive are not those who avoid AI or blindly trust it - they are t
 - review with domain expertise
 - test everything
 - understand before accepting
-- use AI to handle the tedious work while they focus on architecture, design, and critical thinking
+- use AI to handle the tedious work while they focus on architecture, design and critical thinking
 
 AI coding assistants do not replace the need for skill - they amplify it. The better you understand software development, the better you can direct AI to help you.
 
@@ -170,13 +160,13 @@ AI coding assistants do not replace the need for skill - they amplify it. The be
 4. Share what works with your team.
 5. Build your own examples that match your tech stack.
 
-The future belongs to engineers who can think clearly, communicate precisely, and use AI effectively.
+The future belongs to engineers who can think clearly, communicate precisely and use AI effectively.
 
 ---
 
 ## Useful resources
 
-This playbook works best when combined with the wider resources in this repository:
+This playbook works best when combined with the wider resources in this repository.
 
 ### Start here
 - [Maturity assessment framework](../../assessment/maturity-assessment-framework.md) - understand your starting point

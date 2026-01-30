@@ -9,13 +9,13 @@ This guide provides engineering managers with practical guidance for implementin
 
 ## Who this is for
 
-This guide is for:
+Advanced AI tools should be used by:
 
 - engineering managers
 - technical leads
 - delivery managers responsible for AI Engineering Lab adoption in their teams
 
-## What's in this guide
+## What is in this guide
 
 This guide is organised into the following sections.
 
@@ -40,7 +40,6 @@ Additional resources:
 
 - [Related resources](#related-resources) - links to official documentation, government guidance, and repository materials
 - [Contributing](#contributing) - how to improve this guide
-- [Support and contact](#support-and-contact) - getting help
 
 ## Before you start
 
@@ -49,7 +48,7 @@ Before reading this guide, you should understand:
 - your team's current development workflow and tooling
 - basic software development lifecycle concepts
 - your department's security classification requirements
-- the [AI Engineering Lab maturity assessment](../assessment/README.md) framework
+- the [AI Engineering Lab maturity assessment](../../assessment/maturity-assessment-framework.md) framework
 
 ## What GitHub Copilot does
 
@@ -57,11 +56,11 @@ GitHub Copilot provides real-time code suggestions directly in your team's devel
 
 Primary capabilities include:
 
-- autocomplete code as engineers type
-- generate implementation from function signatures or comments
-- create unit tests based on existing code
-- produce documentation and code explanations
-- suggest fixes for errors and warnings
+- autocompleting code as engineers type
+- generating implementation from function signatures or comments
+- creating unit tests based on existing code
+- producing documentation and code explanations
+- suggesting fixes for errors and warnings
 
 ### Copilot interaction modes
 
@@ -75,13 +74,13 @@ GitHub Copilot offers several ways to interact with AI assistance, each suited f
 | Copilot Workspace | Plan and implement features from issues | Feature planning, task breakdown | Enterprise only |
 | Agent mode | Autonomous task execution with approval | Complex multi-step tasks, investigations | Enterprise only |
 
-When to use each mode:
+Each mode is suited to specific tasks:
 
-- inline suggestions: daily coding, implementing known patterns, writing tests
-- chat: understanding unfamiliar code, debugging errors, generating documentation
-- edits: renaming variables across files, applying security fixes, refactoring
-- workspace: planning new features, breaking down epics, designing implementations
-- agent mode: investigating bugs across codebase, migrating frameworks, comprehensive refactoring
+- inline suggestions for daily coding, implementing known patterns, and writing tests
+- chat for understanding unfamiliar code, debugging errors, and generating documentation
+- edits for renaming variables across files, applying security fixes, and refactoring
+- workspace for planning new features, breaking down epics, and designing implementations
+- agent mode for investigating bugs across codebase, migrating frameworks, and comprehensive refactoring
 
 ### Best suited for
 
@@ -107,12 +106,12 @@ For a detailed comparison of GitHub Copilot with other AI code assistants, see t
 
 ### When to combine with other tools
 
-When to combine with other tools:
+Consider combining GitHub Copilot with other tools when:
 
-- use Claude Code for complex refactoring or architectural questions
-- use Claude with GitHub MCP server for AI-assisted code reviews, pull request analysis, and issue management
-- use Amazon Q for AWS-specific deployment tasks
-- use government MCP servers with Claude for standards compliance checking
+- you need Claude Code for complex refactoring or architectural questions
+- you need Claude with GitHub MCP server for AI-assisted code reviews, pull request analysis, and issue management
+- you need Amazon Q for AWS-specific deployment tasks
+- you need government MCP servers with Claude for standards compliance checking
 
 ### MCP servers and extended workflows
 
@@ -208,22 +207,22 @@ You must configure Copilot to exclude sensitive files and patterns. Recommended 
 
 ```yaml
 # Environment and configuration files
-**/.env
-**/.env.*
-**/secrets/**
-**/config/production.yml
-**/config/production/**
+/.env
+/.env.
+/secrets/
+/config/production.yml
+/config/production/
 
 # AWS and API credentials
-**/credentials
-**/aws/config
-**/.aws/**
-**/api-keys/**
+/credentials
+/aws/config
+/.aws/
+/api-keys/
 
 # Department-specific patterns
-**/citizen-data/**
-**/personal-identifiable-information/**
-**/security-configurations/**
+/citizen-data/
+/personal-identifiable-information/
+/security-configurations/
 ```
 
 ### Data residency
@@ -240,16 +239,9 @@ For government projects, use Business or Enterprise tier only.
 
 ### Installation process
 
-To get started with GitHub Copilot:
-
-1. Complete organisation setup.
-2. Complete engineer installation.
-3. Complete authentication.
-4. Complete verification.
+To get started with GitHub Copilot, complete the following steps.
 
 #### Step 1: organisation setup
-
-To complete organisation setup:
 
 1. Enable Copilot in your GitHub organisation settings.
 2. Configure content exclusion policies.
@@ -282,21 +274,27 @@ Test installation by opening a code file. Copilot should show inline suggestions
 
 ### Engineer training (45 minutes)
 
-Module 1: basic usage (15 minutes) covers:
+Module 1: basic usage (15 minutes)
+
+This module covers:
 
 - accepting and rejecting suggestions
 - keyboard shortcuts
 - enabling and disabling for specific file types
 - when to trust suggestions versus manual coding
 
-Module 2: effective prompting (15 minutes) covers:
+Module 2: effective prompting (15 minutes)
+
+This module covers:
 
 - writing comments that generate good code
 - using function names and signatures strategically
 - providing context through imports and surrounding code
 - common patterns that work well
 
-Module 3: security and quality (15 minutes) covers:
+Module 3: security and quality (15 minutes)
+
+This module covers:
 
 - reviewing generated code critically
 - recognising and rejecting insecure patterns
@@ -307,13 +305,12 @@ Format: live demonstration with hands-on practice using real project examples.
 
 ### Manager briefing (30 minutes)
 
-Topics covered include:
+This briefing covers:
 
 - capability overview and realistic expectations
 - usage metrics and how to interpret them
 - policy configuration and content exclusions
 - addressing team concerns about AI tools
-- return on investment calculation
 
 Format: presentation with Q&A session.
 
@@ -327,27 +324,27 @@ For quality metrics refer to the monitoring and evaluation framework documentati
 
 #### Inline suggestions not appearing
 
-Symptoms:
+Symptoms include:
 
 - no autocomplete suggestions while typing
 - extension appears inactive
 
-Solutions:
+To resolve this issue:
 
 1. Verify extension is enabled and authenticated in IDE settings.
 2. Check that file type is not excluded in Copilot settings.
-3. Ensure inline suggestions are enabled: `"editor.inlineSuggest.enabled": true`
+3. Ensure inline suggestions are enabled: `"editor.inlineSuggest.enabled": true`.
 4. Restart IDE and check network connectivity.
 5. Sign out and sign back in to refresh authentication.
 
 #### Copilot Chat not responding
 
-Symptoms:
+Symptoms include:
 
 - chat window opens but no responses
 - error messages in chat interface
 
-Solutions:
+To resolve this issue:
 
 1. Check GitHub service status at [githubstatus.com](https://www.githubstatus.com/).
 2. Verify license is active in GitHub organisation settings.
@@ -357,12 +354,12 @@ Solutions:
 
 #### Agent mode failures
 
-Symptoms:
+Symptoms include:
 
 - agent tasks fail to complete
 - timeout errors or incomplete work
 
-Solutions:
+To resolve this issue:
 
 1. Break down complex tasks into smaller, more specific requests.
 2. Ensure agent has sufficient permissions for requested operations.
@@ -374,12 +371,12 @@ For detailed troubleshooting of Copilot agent mode specifically, see [Troublesho
 
 #### Poor suggestion quality
 
-Symptoms:
+Symptoms include:
 
 - suggestions do not match project patterns
 - irrelevant or incorrect code generated
 
-Solutions:
+To resolve this issue:
 
 1. Provide more context via descriptive comments and function signatures.
 2. Ensure relevant imports and dependencies are visible in file.
@@ -392,12 +389,12 @@ Understanding how to communicate with Copilot effectively can dramatically impro
 
 #### Performance issues
 
-Symptoms:
+Symptoms include:
 
 - slow suggestion generation
 - IDE lagging when Copilot active
 
-Solutions:
+To resolve this issue:
 
 1. Reduce number of active IDE extensions.
 2. Check network connectivity and latency.
@@ -407,13 +404,13 @@ Solutions:
 
 #### Enterprise-specific issues
 
-Symptoms:
+Symptoms include:
 
 - license assignment not working
 - policy changes not taking effect
 - usage metrics not appearing
 
-Solutions:
+To resolve this issue:
 
 1. Verify user is member of correct GitHub organisation.
 2. Check seat assignment in organisation Copilot settings.
@@ -448,32 +445,32 @@ Follow-up:
 
 ```yaml
 # Secrets and credentials
-**/.env
-**/.env.*
-**/secrets/**
-**/*.key
-**/*.pem
-**/credentials
-**/.aws/**
+/.env
+/.env.
+/secrets/
+/*.key
+/*.pem
+/credentials
+/.aws/
 
 # Configuration files
-**/config/production.yml
-**/config/production/**
-**/terraform/production/**
+/config/production.yml
+/config/production/
+/terraform/production/
 
 # Citizen data
-**/citizen-data/**
-**/personal-identifiable-information/**
-**/user-data/**
+/citizen-data/
+/personal-identifiable-information/
+/user-data/
 
 # Security configurations
-**/security-configurations/**
-**/auth-config/**
-**/firewall-rules/**
+/security-configurations/
+/auth-config/
+/firewall-rules/
 
 # Legacy code (if applicable)
-**/legacy/**
-**/deprecated/**
+/legacy/
+/deprecated/
 ```
 
 ### IDE-level settings
@@ -502,7 +499,7 @@ Disable Copilot for specific file types where suggestions are not helpful or may
 
 ### Organisation-level settings
 
-Configure in GitHub organisation settings:
+To configure organisation-level settings:
 
 1. Navigate to Settings → Copilot.
 2. Enable Copilot for organisation.
@@ -514,8 +511,6 @@ Configure in GitHub organisation settings:
 
 ### Official GitHub resources
 
-Links to official GitHub resources:
-
 - [GitHub Copilot documentation](https://docs.github.com/en/copilot) - complete official documentation
 - [Copilot model comparison](https://docs.github.com/en/copilot/using-github-copilot/asking-github-copilot-questions-in-your-ide#ai-models-for-copilot-chat) - detailed model capabilities and selection
 - [Copilot Trust Center](https://resources.github.com/copilot-trust-center/) - security, privacy, and compliance information
@@ -524,16 +519,11 @@ Links to official GitHub resources:
 
 ### Enterprise and security
 
-Links to enterprise and security resources:
-
 - [Managing Copilot in your organisation](https://docs.github.com/en/copilot/managing-copilot/managing-github-copilot-in-your-organization) - policy configuration and administration
 - [Copilot content exclusions](https://docs.github.com/en/copilot/managing-copilot/managing-github-copilot-in-your-organization/setting-policies-for-copilot-in-your-organization/excluding-content-from-github-copilot) - configuring what Copilot can access
-- [Copilot for Business vs Enterprise](https://docs.github.com/en/copilot/overview-of-github-copilot/github-copilot-features#github-copilot-business-and-github-copilot-enterprise) - feature comparison
 - [Usage metrics and reporting](https://docs.github.com/en/copilot/managing-copilot/managing-github-copilot-in-your-organization/reviewing-usage-data-for-github-copilot-in-your-organization) - measuring adoption and impact
 
 ### Government procurement
-
-Links to government procurement resources:
 
 - [Crown Commercial Service G-Cloud 14](https://www.crowncommercial.gov.uk/agreements/g-cloud-14) - UK government cloud services framework
 - [GitHub on G-Cloud](https://www.digitalmarketplace.service.gov.uk/) - search for GitHub Enterprise and Copilot offerings
@@ -541,27 +531,23 @@ Links to government procurement resources:
 
 ### NCSC guidance
 
-Links to NCSC guidance:
-
 - [Cloud security principles](https://www.ncsc.gov.uk/collection/cloud/the-cloud-security-principles) - assessing cloud services
 - [Secure development and deployment guidance](https://www.ncsc.gov.uk/collection/developers-collection) - security best practices
 - [Vulnerability disclosure](https://www.ncsc.gov.uk/information/vulnerability-disclosure-toolkit) - handling security issues
 
 ### Repository resources
 
-Links to repository resources:
-
 - [AI SDLC Playbook](../../playbooks/ai-sdlc-playbook.md) - integrating AI code assistants across development lifecycle
 - [Model Selection Playbook](../../playbooks/model-selection.md) - choosing appropriate models for tasks
 
 ### Providing feedback
 
-We welcome feedback to improve these materials. You can:
+You can provide feedback to improve these materials by:
 
-- raise an issue in the issue tracker (location to be confirmed)
-- submit improvements via pull request (see [CONTRIBUTING.md](../../CONTRIBUTING.md))
-- contact the team at the team email address (to be confirmed)
-- use the feedback mechanism in your department's AI Engineering Lab community
+- raising an issue in the issue tracker (location to be confirmed)
+- submitting improvements via pull request (see [CONTRIBUTING.md](../../CONTRIBUTING.md))
+- contacting the team at the team email address (to be confirmed)
+- using the feedback mechanism in your department's AI Engineering Lab community
 
 ## Contributing
 
@@ -576,24 +562,13 @@ Before contributing, read [CONTRIBUTING.md](../../CONTRIBUTING.md) which covers:
 - accessibility requirements
 - how to submit changes
 
-## Support and contact
-
-| Need | Contact |
-|------|---------|
-| General enquiries | Team email to be confirmed |
-| FDE support requests | FDE request process to be confirmed |
-| Urgent issues | Escalation contact to be confirmed |
-| Content feedback | Feedback mechanism to be confirmed |
-
-Relevant Slack or Teams channels to be confirmed.
-
 ## Licence
 
 This repository is published under the [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/).
 
 You are encouraged to use and adapt these materials for your own government context.
 
-When reusing content:
+When reusing content, you should:
 
 - maintain attribution to this repository
 - share improvements back via contribution

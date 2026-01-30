@@ -5,11 +5,11 @@
 
 ## Executive summary
 
-This playbook provides practical guidance on creating and managing instruction files for AI code assistants across government projects. Instruction files ensure AI tools understand your project's standards, compliance requirements, and coding patterns, reducing the need to repeat context in every interaction.
+This playbook provides practical guidance on creating and managing instruction files for AI code assistants across government projects. Instruction files ensure AI tools understand your project's standards, compliance requirements and coding patterns, reducing the need to repeat context in every interaction.
 
 Key benefits include:
 
-- consistency - AI suggestions align with government standards (GDS Service Manual, Digital Service Standard, WCAG)
+- consistency - AI suggestions align with government standards (GDS Service Manual, Digital Service Standard, Web Content Accessibility Guidelines (WCAG))
 - efficiency - reduce time spent explaining context in each prompt
 - compliance - embed regulatory requirements directly into AI workflows
 - quality - maintain code quality and architectural patterns across teams
@@ -43,7 +43,7 @@ Secondary audience includes:
 This playbook covers:
 
 - creating instruction files for AI code assistants (GitHub Copilot, Claude Code, Amazon Q, Gemini)
-- structuring instructions at personal, repository, and organisation levels
+- structuring instructions at personal, repository and organisation levels
 - integrating government standards and compliance requirements
 - templates and examples for common scenarios
 
@@ -63,7 +63,7 @@ Instruction files are part of your project documentation. Treat them as potentia
 
 You must:
 
-- never include credentials, secrets, API keys, or production data
+- never include credentials, secrets, API keys or production data
 - keep content at the correct security classification for the repository
 - review AI-generated changes as you would any other code (peer review, tests, threat modelling where appropriate)
 
@@ -78,11 +78,11 @@ For fuller guidance on risks and mitigations, link to your governance and securi
 
 The scenario: you want AI assistants to automatically follow your project's standards every time, without having to repeat context in every prompt.
 
-Instruction files are configuration files that tell AI assistants about your coding standards, patterns, and requirements. They ensure consistency across your team and reduce the need to provide the same context repeatedly.
+Instruction files are configuration files that tell AI assistants about your coding standards, patterns and requirements. They ensure consistency across your team and reduce the need to provide the same context repeatedly.
 
 For government projects, instruction files are particularly valuable for:
 
-- embedding compliance requirements (WCAG, GDPR, security classifications)
+- embedding compliance requirements (WCAG, General Data Protection Regulation (GDPR), security classifications)
 - maintaining consistency with GDS patterns and standards
 - ensuring accessibility is considered from the start
 - applying security policies automatically
@@ -96,7 +96,7 @@ In practice, your repository instructions should:
 - link to the Digital Service Standard and GDS Service Manual
 - state the accessibility requirement (WCAG 2.1 AA) and any tooling expectations
 - state the security classification and the most important handling rules
-- summarise GDPR and data protection expectations relevant to code (for example, 'no PII in logs')
+- summarise GDPR and data protection expectations relevant to code (for example, 'no Personally Identifiable Information (PII) in logs')
 
 Example snippet (copy and paste into a repo instruction file):
 
@@ -142,7 +142,7 @@ Use repository instructions for:
 
 - tech stack and versions
 - project-specific patterns and architecture
-- build, test, and deployment processes
+- build, test and deployment processes
 - code quality standards for this project
 - integration points and APIs
 - project-specific compliance requirements
@@ -181,16 +181,16 @@ Different AI code assistants look for different repository instruction files. To
 
 | Tool | Repository instruction file | Notes |
 | --- | --- | --- |
-| GitHub Copilot | `.github/copilot-instructions.md` | Supports personal and organisation instructions in settings. Combines instructions with priority Personal then Repository then Organisation. |
-| Claude Code (Cline) | `.clinerules` (and optionally `.clineignore`) | Reads automatically on each interaction. Good for detailed engineering and architecture rules. |
-| Amazon Q | `.amazonq/instructions.md` | Useful for AWS patterns (IAM, CDK and CloudFormation, Well-Architected). |
-| Gemini (IDEs) | `.gemini-instructions.md` | Good for structured context. Keep it short and specific. |
-| Web chat tools (no repo awareness) | `AI_INSTRUCTIONS.md` | These tools do not automatically read your repo. Paste the relevant sections at the start of a session. |
+| GitHub Copilot | `.github/copilot-instructions.md` | Supports personal and organisation instructions in settings - Combines instructions with priority Personal then Repository then Organisation |
+| Claude Code (Cline) | `.clinerules` (and optionally `.clineignore`) | Reads automatically on each interaction - Good for detailed engineering and architecture rules |
+| Amazon Q | `.amazonq/instructions.md` | Useful for AWS patterns (IAM, CDK and CloudFormation, Well-Architected) |
+| Gemini (IDEs) | `.gemini-instructions.md` | Good for structured context - Keep it short and specific |
+| Web chat tools (no repo awareness) | `AI_INSTRUCTIONS.md` | These tools do not automatically read your repo - Paste the relevant sections at the start of a session |
 
 ### Quick setup (repository-level)
 
 1. Create the relevant file for your tool (see table).
-2. Add tech stack, most important patterns, links to standards, and handling rules (no secrets, no production data).
+2. Add tech stack, most important patterns, links to standards and handling rules (no secrets, no production data).
 3. Commit the file so it applies consistently for the team.
 4. Review periodically (owner and cadence).
 
@@ -210,10 +210,10 @@ Technical standards include:
 
 Frontend-specific instructions include:
 
-- framework and version (React, Vue, Angular, and similar)
+- framework and version (React, Vue, Angular and similar)
 - component patterns and structure
 - state management approach
-- styling methodology (CSS Modules, Tailwind, and similar)
+- styling methodology (CSS Modules, Tailwind and similar)
 - GOV.UK frontend integration
 - accessibility requirements (WCAG 2.1 AA)
 - browser support requirements
@@ -224,7 +224,7 @@ Frontend-specific instructions include:
 Backend-specific instructions include:
 
 - framework and language version
-- API design patterns (REST, GraphQL, and similar)
+- API design patterns (REST, GraphQL and similar)
 - database patterns and ORM usage
 - authentication and authorisation approach
 - error handling patterns
@@ -236,7 +236,7 @@ Backend-specific instructions include:
 
 Security requirements include:
 
-- security classification (OFFICIAL, SECRET, and similar)
+- security classification (OFFICIAL, SECRET and similar)
 - authentication mechanisms
 - authorisation patterns
 - input validation rules
@@ -249,7 +249,7 @@ Security requirements include:
 
 Government and enterprise requirements include:
 
-- compliance standards (WCAG 2.1 AA, GDS, GDPR, and similar)
+- compliance standards (WCAG 2.1 AA, GDS, GDPR and similar)
 - Digital Service Standard requirements
 - GDS Service Manual alignment
 - audit and logging requirements
@@ -326,7 +326,7 @@ Performance and quality includes:
 - digital service standard: [which points apply - reference https://www.gov.uk/service-manual/service-standard]
 - GDS service manual: [relevant sections - reference https://www.gov.uk/service-manual]
 - WCAG 2.1 AA compliance required
-- Security classification: [OFFICIAL, SECRET, and similar]
+- Security classification: [OFFICIAL, SECRET and similar]
 - GDPR compliance required
 
 ## Tech stack
@@ -337,11 +337,13 @@ Performance and quality includes:
 
 ## Critical requirements
 
-1. All code must meet WCAG 2.1 AA standards.
-2. Follow GOV.UK Design System patterns for UI.
-3. Security classification: [classification] - handle accordingly.
-4. All user actions must be audit logged.
-5. No PII in application logs.
+All code must meet these requirements:
+
+- all code must meet WCAG 2.1 AA standards
+- follow GOV.UK Design System patterns for UI
+- security classification: [classification] - handle accordingly
+- all user actions must be audit logged
+- no PII in application logs
 
 ## Code style
 - [Style guide to follow - for example, PEP 8, Airbnb JavaScript]
@@ -351,7 +353,7 @@ Performance and quality includes:
 - [File organisation]
 
 ## Architecture and patterns
-[Description of important patterns - repositories, services, and similar]
+[Description of important patterns - repositories, services and similar]
 
 ## Frontend guidelines
 - use GOV.UK frontend components (version X.X)
@@ -362,7 +364,7 @@ Performance and quality includes:
 - accessibility testing: axe DevTools on all components
 
 ## Backend guidelines
-- API patterns: [REST, GraphQL, and similar]
+- API patterns: [REST, GraphQL and similar]
 - database access: [patterns]
 - authentication: [approach]
 - authorisation: [approach]
@@ -472,7 +474,7 @@ All projects within [Organisation] must follow these standards.
 
 ### Testing requirements
 - minimum 80% code coverage for all projects
-- unit, integration, and E2E tests required
+- unit, integration and E2E tests required
 - accessibility tests required for all UI
 - security tests for authentication and authorisation
 - performance tests for critical user journeys
@@ -527,8 +529,8 @@ Ownership and responsibility includes:
 ## Getting started
 
 1. Create the right file for your tool (for example, `.github/copilot-instructions.md`).
-2. Add only the essentials: tech stack, most important patterns, and links to standards.
-3. Add handling rules: classification, 'no secrets', and 'no production data'.
+2. Add only the essentials: tech stack, most important patterns and links to standards.
+3. Add handling rules: classification, 'no secrets' and 'no production data'.
 4. Review regularly: set an owner and a review date.
 
 ## Useful links and resources

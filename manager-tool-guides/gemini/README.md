@@ -30,7 +30,6 @@ This guide is for:
 - [Support and escalation](#support-and-escalation)
 - [Related resources](#related-resources)
 - [Contributing](#contributing) - how to improve this guide
-- [Support and contact](#support-and-contact) - getting help
 
 ## Before you start
 
@@ -58,7 +57,7 @@ Gemini Code Assist can:
 ### Editions
 
 | Edition | Target audience | Differences |
-|---------|-----------------|-----------------|
+|---------|-----------------|-------------|
 | Individual (free) | Students, hobbyists, freelancers | 6,000 completions per day, 240 chat sessions per day |
 | Standard | Teams and businesses | Enterprise security, management tools, intellectual property (IP) indemnification |
 | Enterprise | Large organisations | All Standard features plus code customisation from private repositories |
@@ -97,7 +96,7 @@ Choose Gemini Code Assist when:
 - you need large-scale code transformation for migrations
 - your infrastructure is GCP-based
 
-Combine with other tools:
+Consider combining with other tools to:
 
 - use GitHub Copilot for faster inline completions in non-GCP contexts
 - use Claude Code for complex architectural reasoning
@@ -120,7 +119,7 @@ You must configure Gemini Code Assist to exclude sensitive files. See the [polic
 
 ### Data residency
 
-Data residency details:
+Data residency considerations state:
 
 - code suggestions are processed in configurable GCP regions
 - customer code is not stored or used for model training
@@ -130,7 +129,7 @@ Check your department's data residency requirements before deployment.
 
 ### Central deployment model
 
-The AI Engineering Lab uses a central deployment model:
+The AI Engineering Lab uses a central deployment model including:
 
 - central GCP enterprise account managed by the Department for Science, Innovation and Technology (DSIT)
 - users receive credentials to plug into their IDEs
@@ -150,9 +149,9 @@ $19 per user per month (annual commitment) or $22.80 per user per month (monthly
 
 Standard includes:
 
-- AI coding assistance with enterprise-grade security
-- code completion, generation, and chat
-- agent mode
+1. AI coding assistance with enterprise-grade security.
+2. Code completion, generation, and chat
+agent mode.
 
 #### Enterprise
 
@@ -160,10 +159,10 @@ $45 per user per month (annual commitment) or $54 per user per month (monthly co
 
 Enterprise includes:
 
-- all Standard features
-- code customisation from private repositories
-- IP indemnity included
-- usage analytics and reporting
+1. All Standard features.
+2. Code customisation from private repositories.
+3. IP indemnity.
+4. Usage analytics and reporting.
 
 Prices are listed in USD. If you pay in a currency other than USD, the prices listed in your currency on [Cloud Platform SKUs](https://cloud.google.com/skus) apply. Check [Gemini for Google Cloud pricing](https://cloud.google.com/products/gemini/pricing) for current rates.
 
@@ -180,71 +179,78 @@ For detailed installation steps, see the [Gemini Code Assist getting started gui
 
 ## Phased rollout approach
 
-### Phase 1: Pilot (weeks 1 to 4)
+### Phase 1: pilot (weeks 1 to 4)
 
 Check the tool works and find any problems.
 
-#### Activities
 
-- select 5 to 10 engineers across different experience levels
-- focus on GCP-related projects or cloud infrastructure work
-- schedule weekly feedback sessions
-- document effective usage patterns, especially for GCP tasks
-- test agent mode and code transformation features on real codebases
+Activities in this phase:
+
+1. Select 5 to 10 engineers across different experience levels.
+2. Focus on GCP-related projects or cloud infrastructure work.
+3. Schedule weekly feedback sessions.
+4. Document effective usage patterns, especially for GCP tasks.
+5. Test agent mode and code transformation features on real codebases.
 
 #### Success criteria
 
-- 70% or more of pilot users actively using Gemini Code Assist
-- no security incidents
-- documented productivity benefits for GCP tasks
-- clear implementation guidance for wider rollout
-- positive feedback on agent mode and code transformation capabilities
+- [ ] 70% or more of pilot users actively using Gemini Code Assist
+- [ ] No security incidents
+- [ ] Documented productivity benefits for GCP tasks
+- [ ] Clear implementation guidance for wider rollout
+- [ ] Positive feedback on agent mode and code transformation capabilities
 
-### Phase 2: Team expansion (weeks 5 to 12)
+### Phase 2: team expansion (weeks 5 to 12)
 
 Scale to full engineering team.
 
 #### Activities
 
-- roll out to entire team in groups of 10 to 15
-- deliver 60-minute training sessions per group
-- share pilot user success stories, especially GCP and agent mode use cases
-- establish support channels (Slack, Teams, or email)
-- create internal knowledge base of effective prompts
+Activities in this phase:
+
+1. Roll out to entire team in groups of 10 to 15.
+2. Deliver 60-minute training sessions per group.
+3. Share pilot user success stories, especially GCP and agent mode use cases.
+4. Establish support channels (Slack, Teams, or email).
+5. Create internal knowledge base of effective prompts.
 
 #### Success criteria
 
-- 80% or more licence activation rate
-- acceptance rate above 20%
-- engineers report time savings on GCP tasks
-- no increase in security vulnerabilities
-- active use of agent mode and transformation features
+- [ ] 80% or more licence activation rate
+- [ ] Acceptance rate above 20%
+- [ ] Engineers report time savings on GCP tasks
+- [ ] No increase in security vulnerabilities
+- [ ] Active use of agent mode and transformation features
 
-### Phase 3: Optimisation (ongoing)
+### Phase 3: optimisation (ongoing)
 
 Get the most from the tool and fix any problems.
 
 #### Activities
 
-- review monthly usage analytics via GCP console
-- refine content exclusion policies based on incidents
-- update training materials based on common questions
-- share wins across department
-- explore advanced features (MCP integration, multimodal capabilities)
+Activities in this phase:
+
+1. Review monthly usage analytics via GCP console.
+2. Refine content exclusion policies based on incidents.
+3. Update training materials based on common questions.
+4. Share wins across department.
+5. Explore advanced features (MCP integration, multimodal capabilities).
 
 #### Success criteria
 
-- consistent month-on-month usage
-- fewer support tickets
-- measurable productivity improvements
-- positive engineer satisfaction scores
-- successful use of advanced features
+- [ ] Consistent month-on-month usage
+- [ ] Fewer support tickets
+- [ ] Measurable productivity improvements
+- [ ] Positive engineer satisfaction scores
+- [ ] Successful use of advanced features
 
 ## Training requirements
 
 ### Engineer training (60 minutes)
 
-#### Module 1: Basic usage (20 minutes)
+#### Module 1: basic usage (20 minutes)
+
+Module 1 covers:
 
 - accepting and rejecting suggestions
 - using Gemini Chat for questions
@@ -252,10 +258,14 @@ Get the most from the tool and fix any problems.
 
 #### Module 2: GCP-specific features (20 minutes)
 
+Module 2 covers:
+
 - generating Terraform and infrastructure code
 - troubleshooting GCP software development kit (SDK) integration
 
-#### Module 3: Advanced features and security (20 minutes)
+#### Module 3: advanced features and security (20 minutes)
+
+Module 3 covers:
 
 - using agent mode for multi-step tasks
 - reviewing generated code critically
@@ -270,7 +280,6 @@ This briefing covers:
 - capability overview and realistic expectations
 - usage metrics and how to interpret them
 - addressing team concerns about AI tools
-- return on investment calculation
 
 ## Measuring success
 
@@ -280,12 +289,16 @@ For in-depth information on measuring quality metrics, refer to the [monitoring 
 
 #### Adoption metrics
 
+Adoption metrics include:
+
 - licence activation rate (target: 90% or higher)
 - daily active users (target: 80% or higher of activated licences)
 - suggestion acceptance rate (target: 20% to 30%)
 - agent mode usage (target: weekly per engineer)
 
 #### Productivity metrics
+
+Productivity metrics include:
 
 - lines of code accepted per engineer per day
 - time spent on GCP integration tasks (via engineer survey)
@@ -294,6 +307,8 @@ For in-depth information on measuring quality metrics, refer to the [monitoring 
 - test coverage increase rate
 
 #### Quality metrics
+
+Quality metrics include:
 
 - code issues detected via Gemini reviews
 - code review comments per PR (should remain stable)
@@ -304,10 +319,10 @@ For in-depth information on measuring quality metrics, refer to the [monitoring 
 
 Run monthly surveys with engineers covering:
 
-1. How often do you use Gemini Code Assist? (daily, weekly, rarely, or never)
+1. How often do you use Gemini Code Assist?
 2. For which tasks is Gemini Code Assist most helpful?
 3. How helpful are the GCP-specific features?
-4. Has Gemini Code Assist affected your productivity? (much faster, somewhat faster, no change, or slower)
+4. Has Gemini Code Assist affected your productivity?
 5. Do you feel confident reviewing Gemini-generated code?
 6. How useful is agent mode for complex tasks?
 
@@ -357,7 +372,7 @@ What to do:
 | Issue | Common causes | First steps |
 |-------|---------------|-------------|
 | Suggestions not appearing | Extension disabled, authentication expired, file type excluded | Check extension is enabled, sign out and back in, verify file type is supported |
-| Chat not responding | Service outage, licence inactive, firewall blocking | Check [GCP status](https://status.cloud.google.com/), verify licence in console, check firewall rules |
+| Chat not responding | Service outage, licence inactive, firewall blocking | Check GCP status, verify licence in console, check firewall rules |
 | Agent mode failures | Task too complex, insufficient permissions, MCP misconfigured | Break task into smaller requests, check permissions, verify MCP connections |
 | Poor suggestion quality | Limited context, exclusions too restrictive | Add descriptive comments, check exclusion settings, open relevant files |
 | Performance issues | Too many extensions, network latency | Reduce active extensions, check network connectivity |
@@ -383,8 +398,8 @@ Reviewers should check:
 
 - logic correctness and edge case handling
 - no hardcoded secrets or sensitive data
-- compliance with team coding standards
-- reviewer understands the implementation
+- with the compliance with team coding standards
+- that the reviewer understands the implementation
 
 ### Git workflow
 
@@ -464,17 +479,17 @@ Configure in GCP console:
 
 ### Support tiers
 
-#### Tier 1: Self-service
+#### Tier 1: self-service
 
-Self-service resources include:
+Self-service resources includes:
 
 - [Gemini Code Assist documentation](https://cloud.google.com/gemini/docs/codeassist)
 - [Getting started guide](https://cloud.google.com/gemini/docs/codeassist/getting-started)
 - internal knowledge base (if established)
 
-#### Tier 2: Team support
+#### Tier 2: team support
 
-Team support options include:
+Team support options includes:
 
 - internal Slack or Teams channel
 - champion network
@@ -491,6 +506,8 @@ For escalated issues:
 
 ### Official Google resources
 
+Official Google resources include:
+
 - [Gemini Code Assist documentation](https://cloud.google.com/gemini/docs/codeassist)
 - [Getting started guide](https://cloud.google.com/gemini/docs/codeassist/getting-started)
 - [Agent mode documentation](https://developers.google.com/gemini-code-assist/docs/write-code-gemini)
@@ -498,11 +515,15 @@ For escalated issues:
 
 ### Government guidance
 
+Government guidance includes:
+
 - [Crown Commercial Service G-Cloud 14](https://www.crowncommercial.gov.uk/agreements/g-cloud-14)
 - [NCSC cloud security principles](https://www.ncsc.gov.uk/collection/cloud/the-cloud-security-principles)
 - [NCSC secure development guidance](https://www.ncsc.gov.uk/collection/developers-collection)
 
 ### Repository resources
+
+Repository resources include:
 
 - [AI SDLC playbook](../../playbooks/ai-sdlc-playbook.md)
 - [GitHub Copilot manager guide](../copilot/README.md)
@@ -512,7 +533,7 @@ For escalated issues:
 
 See [CONTRIBUTING.md](../../CONTRIBUTING.md) for contribution guidelines.
 
-We encourage contributions from across government to keep this repository current and comprehensive. Share your team's experience, lessons learned, and effective practices to help other government departments.
+We encourage contributions from across government to keep this repository current and comprehensive. Standard contributions are improvements to existing content, such as updating outdated information, fixing errors, or clarifying explanations. Share your team's experience, lessons learned, and effective practices to help other government departments.
 
 Before contributing, read [CONTRIBUTING.md](../../CONTRIBUTING.md) which covers:
 
@@ -521,15 +542,14 @@ Before contributing, read [CONTRIBUTING.md](../../CONTRIBUTING.md) which covers:
 - accessibility requirements
 - how to submit changes
 
-
 ## Support and contact
 
 | Need | Contact |
 |------|---------|
-| General enquiries | to be confirmed |
-| FDE support requests | to be confirmed |
-| Urgent issues | to be confirmed |
-| Content feedback | to be confirmed |
+| General enquiries | To be confirmed |
+| FDE support requests | To be confirmed |
+| Urgent issues | To be confirmed |
+| Content feedback | To be confirmed |
 
 Contact details to be confirmed.
 
@@ -543,4 +563,4 @@ When reusing content:
 
 - maintain attribution to this repository
 - share improvements back via contribution
-- ensure adaptations remain suitable for government use.
+- ensure adaptations remain suitable for government use

@@ -9,10 +9,10 @@
 - [Purpose](#purpose)
 - [Strategic objectives](#strategic-objectives)
 - [Success criteria](#success-criteria)
-- [Tier 1: Adoption metrics](#tier-1-adoption-metrics)
-- [Tier 2: Productivity metrics](#tier-2-productivity-metrics)
-- [Tier 3: Quality and delivery metrics](#tier-3-quality-and-delivery-metrics)
-- [Tier 4: Business outcome metrics](#tier-4-business-outcome-metrics)
+- [Tier 1: adoption metrics](#tier-1-adoption-metrics)
+- [Tier 2: productivity metrics](#tier-2-productivity-metrics)
+- [Tier 3: quality and delivery metrics](#tier-3-quality-and-delivery-metrics)
+- [Tier 4: business outcome metrics](#tier-4-business-outcome-metrics)
 - [Satisfaction metrics](#satisfaction-metrics)
 - [Adaptability metrics](#adaptability-metrics)
 - [Comparative analysis](#comparative-analysis)
@@ -40,11 +40,11 @@ For practical implementation guidance, see [Measurement playbook](measurement-pl
 
 ## Strategic objectives
 
-The AI Engineering Lab programme aims to achieve five strategic objectives:
+The AI Engineering Lab programme aims to achieve the following five strategic objectives.
 
 | Objective | Description | Why it matters |
 |-----------|-------------|----------------|
-| Adoption | AI tools actively used by allocated engineers | Investment only delivers value if tools are used |
+| Adoption | AI tools actively used by allocated engineers | Investment only works if tools are used |
 | Productivity | Measurable improvement in engineer efficiency | Core value proposition of AI assistants |
 | Quality | Code quality maintained or improved | Speed must not sacrifice quality |
 | Satisfaction | Positive engineer and stakeholder experience | Sustainable adoption requires satisfaction |
@@ -56,21 +56,21 @@ The AI Engineering Lab programme aims to achieve five strategic objectives:
 
 ### Programme-level targets
 
-These targets apply across the AI Engineering Lab programme:
+These targets apply across the AI Engineering Lab programme.
 
 | Metric | Target | Rationale |
 |--------|--------|-----------|
-| Licence activation | 100% within 48 hours | Previous trial achieved only 66 to 75%; structured support should achieve full activation |
-| Daily active usage | Over 80% of activated licences | High usage indicates tools embedded in workflow |
-| Training attendance | 70% or more of allocated users | Training correlates with successful adoption |
-| Training satisfaction | 8.0 or more out of 10 | Quality training accelerates proficiency |
-| Champion engagement | 200 identified, 50 or more actively contributing | Champions sustain adoption beyond programme |
-| Use cases documented | 2 or more with measured benefits | Evidence base for future investment |
-| Reusable blueprint | Complete and validated | Enables wider public sector rollout |
+| Licence activation | 100% within 48 hours | Previous trial achieved only 66% to 75%, Structured support should achieve full activation |
+| Daily active usage | Over 80% of activated licences | High usage indicates tools embedded in workflow                                            |
+| Training attendance | 70% or more of allocated users | Training correlates with successful adoption                                               |
+| Training satisfaction | 8.0 or more out of 10 | Quality training accelerates proficiency                                                   |
+| Champion engagement | 200 identified, 50 or more actively contributing | Champions sustain adoption beyond programme                                                |
+| Use cases documented | 2 or more with measured benefits | Evidence base for future investment                                                        |
+| Reusable blueprint | Complete and validated | Enables wider public sector rollout                                                        |
 
 ### Tiered success framework
 
-Success builds progressively through four tiers:
+Success builds progressively through the following four tiers.
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -88,11 +88,11 @@ Success builds progressively through four tiers:
 └─────────────────────────────────────────────────────────────┘
 ```
 
-Progression principle: Higher tiers only matter if lower tiers are achieved. There's no productivity gain without adoption; no business outcome without sustained quality.
+Progression principle: higher tiers only matter if lower tiers are achieved. There is no productivity gain without adoption. There is no business outcome without sustained quality.
 
 ---
 
-## Tier 1: Adoption metrics
+## Tier 1: adoption metrics
 
 Question answered: are people using the tools?
 
@@ -104,17 +104,17 @@ Question answered: are people using the tools?
 | Daily active users (DAU) | Users with activity today and activated users | Over 80% | Daily |
 | Weekly active users (WAU) | Users with activity this week and activated users | Over 90% | Weekly |
 | Training completion | Users completing core training and allocated users | 70% or more | Weekly |
-| Feature adoption breadth | Features used per user (completion, chat, or similar.) | Increasing trend | Monthly |
+| Feature adoption breadth | Features used per user (completion, chat, and similar) | Increasing trend | Monthly |
 
 ### Leading indicators
 
-Early warning signs of adoption issues:
+#### Early warning signs of adoption issues
 
 | Indicator | Warning threshold | Action trigger |
 |-----------|-------------------|----------------|
 | Activation delay | Over 48 hours | Immediate outreach |
 | DAU decline | Less than 70% for 3 consecutive days | Forward Deployed Engineer (FDE) intervention |
-| Training non-attendance | Less than 50% by week 2 | Delivery Manager (DM) escalation |
+| Training non-attendance | Less than 50% by week 2 | Delivery manager (DM) escalation |
 | Feature usage narrow | Only 1 feature used after 2 weeks | Additional training |
 
 ### Segmentation
@@ -131,12 +131,12 @@ Analyse adoption by:
 
 ## Tier 2: Productivity metrics
 
-Question answered: Are engineers more efficient?
+Question answered: are engineers more efficient?
 
 ### Metrics
 
 | Metric | Definition | Target | Measurement frequency |
-|--------|------------|--------|----------------------|
+|--------|------------|--------|-----------------------|
 | Suggestion acceptance rate | AI suggestions accepted and suggestions shown | Baseline and positive trend | Weekly |
 | Time on task | Time to complete comparable tasks | Decreasing versus baseline | Sprint |
 | Code commit frequency | Commits per engineer per day | Increasing versus baseline | Weekly |
@@ -145,27 +145,22 @@ Question answered: Are engineers more efficient?
 
 ### Productivity targets (indicative)
 
-Based on industry benchmarks and programme evidence:
-
 | Metric | Indicative target | Notes |
 |--------|-------------------|-------|
-| Commit frequency | +15% by month 3 | More frequent, smaller commits |
-| Lead time | -20% | Faster path to production |
-| Code review cycle time | -25% | Faster reviews with AI assistance |
-| Time on routine tasks | -30 to 50% | Largest gains on boilerplate, tests |
+| Commit frequency | Increase by 15% by month 3 | More frequent, smaller commits |
+| Lead time | Reduce by 20% | Faster path to production |
+| Code review cycle time | Reduce by 25% | Faster reviews with AI assistance |
+| Time on routine tasks | Reduce by 30% to 50% | Largest gains on boilerplate, tests |
 
-### Measurement cautions:
+### Measurement cautions
 
-- compare teams to their own baselines, not each other
-- account for sprint-to-sprint variation
-- control for team changes, holidays, major releases
-- balance speed metrics with quality metrics
+Compare teams to their own baselines, not each other. Account for sprint-to-sprint variation. Control for team changes, holidays, major releases. Balance speed metrics with quality metrics.
 
 ---
 
 ## Tier 3: Quality and delivery metrics
 
-Question answered: Is the code good and delivery reliable?
+Question answered: is the code good and work reliable?
 
 ### Metrics
 
@@ -182,14 +177,12 @@ Question answered: Is the code good and delivery reliable?
 
 | Metric | Target | Rationale |
 |--------|--------|-----------|
-| Defect density | -15% to 20% | AI should reduce errors, not increase them |
+| Defect density | Reduce by 15% to 20% | AI should reduce errors, not increase them |
 | Change failure rate | Maintain or reduce | Speed must not sacrifice stability |
-| Test coverage | Maintain or +5% to +10% | AI-assisted test generation should improve coverage |
-| Technical debt | -20% remediation cost | AI helps address debt faster |
+| Test coverage | Maintain or increase by 5% to 10% | AI-assisted test generation should improve coverage |
+| Technical debt | Reduce remediation cost by 20% | AI helps address debt faster |
 
 ### Quality safeguards
-
-To ensure AI adoption doesn't compromise quality:
 
 | Safeguard | Implementation |
 |-----------|----------------|
@@ -202,29 +195,27 @@ To ensure AI adoption doesn't compromise quality:
 
 ## Tier 4: Business outcome metrics
 
-Question answered: is the programme delivering organisational value?
+Question answered: is the programme providing organisational value?
 
 ### Metrics
 
 | Metric | Definition | Target | Measurement frequency |
 |--------|------------|--------|----------------------|
-| Time to delivery | Calendar time to deliver features | Decreasing | Quarterly |
-| Development cost per feature | Total cost or features delivered | Decreasing | Quarterly |
-| Effective capacity | Work delivered without headcount increase | Increasing | Quarterly |
+| Time to work completion | Calendar time to complete features | Decreasing | Quarterly |
+| Development cost per feature | Total cost or features completed | Decreasing | Quarterly |
+| Effective capacity | Work completed without headcount increase | Increasing | Quarterly |
 | Contractor dependency | Contractor ratio or spend | Decreasing | Quarterly |
 | Engineer retention | Turnover rate | Maintaining or improving | Annually |
-| Service delivery improvement | User-facing service metrics | Improving | Quarterly |
+| Service improvements | User-facing service metrics | Improving | Quarterly |
 
 ### Business case alignment
-
-Connect metrics to government priorities:
 
 | Priority | Related metrics |
 |----------|-----------------|
 | Efficiency savings | Cost per feature, contractor reduction |
-| Digital transformation acceleration | Time to delivery, capacity increase |
+| Digital transformation acceleration | Time to work completion, capacity increase |
 | Civil service capability | Skills development, contractor reduction |
-| Service quality | Defect rates, service delivery metrics |
+| Service quality | Defect rates, service metrics |
 
 ### Long-term value indicators
 
@@ -245,10 +236,10 @@ Question answered: how do people feel about it?
 
 | Metric | Definition | Target | Frequency |
 |--------|------------|--------|-----------|
-| Overall satisfaction | "How satisfied are you with AI tools?" (on a scale of 1 to 10) | 8.0 or more| Monthly |
-| Net Promoter Score | "Would you recommend to a colleague?" (on a scale from -100 to +100) | Positive | Monthly |
-| Confidence level | "How confident are you using AI tools?" (on a scale of 1 to 10) | Increasing | Monthly |
-| Workflow integration | "AI tools fit well into my workflow" (on a scale of 1 to 5) | 4.0 or more | Monthly |
+| Overall satisfaction | 'How satisfied are you with AI tools?' (on a scale of 1 to 10) | 8.0 or more | Monthly |
+| Net promoter score | 'Would you recommend to a colleague?' (on a scale from -100 to +100) | Positive | Monthly |
+| Confidence level | 'How confident are you using AI tools?' (on a scale of 1 to 10) | Increasing | Monthly |
+| Workflow integration | 'AI tools fit well into my workflow' (on a scale of 1 to 5) | 4.0 or more | Monthly |
 | Training satisfaction | Post-training survey score | 8.0 or more | Post-training |
 
 ### Stakeholder satisfaction
@@ -256,13 +247,13 @@ Question answered: how do people feel about it?
 | Stakeholder | Key concerns | Measurement |
 |-------------|--------------|-------------|
 | Technical leads | Quality, standards compliance | Quarterly survey |
-| Delivery managers | Delivery performance, team health | Quarterly survey |
-| Senior Responsible Owners (SROs) | Value for money and risk management | Quarterly review |
+| Delivery managers | Work performance, team health | Quarterly survey |
+| Senior responsible owners (SROs) | Value for money and risk management | Quarterly review |
 | Security teams | Compliance and incident rates | Quarterly review |
 
 ### Sentiment tracking
 
-Beyond scores, track qualitative sentiment:
+Beyond scores, track qualitative sentiment.
 
 | Channel | Frequency | Analysis |
 |---------|-----------|----------|
@@ -275,7 +266,7 @@ Beyond scores, track qualitative sentiment:
 
 ## Adaptability metrics
 
-Beyond measuring adoption and productivity, tracking adaptability helps ensure teams and the programme can respond to change and sustain success long-term.
+Beyond measuring adoption and productivity, tracking adaptability helps make sure teams and the programme can respond to change and sustain success long-term.
 
 ### Why measure adaptability
 
@@ -290,9 +281,9 @@ Beyond measuring adoption and productivity, tracking adaptability helps ensure t
 
 #### Operational agility
 
-Question answered: How flexibly can teams respond to changing needs?
+Question answered: how flexibly can teams respond to changing needs?
 
-| Metric | Definition | Leading or Lagging | Target |
+| Metric | Definition | Leading or lagging | Target |
 |--------|------------|-----------------|--------|
 | Cross-tool proficiency | Percentage of engineers proficient in 2 or more AI tools | Leading | Over 30% by programme end |
 | Team onboarding time | Days to onboard new team to AI tools | Lagging | Decreasing trend |
@@ -300,7 +291,7 @@ Question answered: How flexibly can teams respond to changing needs?
 | Support request resolution | Time to resolve AI-related issues | Lagging | Decreasing trend |
 | Practice adoption speed | Time from new practice introduced to team adoption | Lagging | Decreasing trend |
 
-Operational agility indicators:
+The following are some operational agility indicators.
 
 | Indicator | What it signals | How to measure |
 |-----------|-----------------|----------------|
@@ -312,7 +303,7 @@ Operational agility indicators:
 
 #### Workforce readiness
 
-Question answered: Are people equipped for current and future AI-assisted development?
+Question answered: are people equipped for current and future AI-assisted development?
 
 | Metric | Definition | Leading or lagging | Target |
 |--------|------------|-----------------|--------|
@@ -323,12 +314,12 @@ Question answered: Are people equipped for current and future AI-assisted develo
 | Willingness to change | Survey score on openness to new practices | Leading | 4.0 or more |
 | Internal mobility | Engineers moving to AI-focused roles or projects | Lagging | Increasing trend |
 
-Workforce readiness indicators:
+The following is workforce readiness indicators.
 
 | Indicator | What it signals | How to measure |
 |-----------|-----------------|----------------|
 | Proactive learning | Engineers seek out AI skills | Self-initiated training completion |
-| Peer teaching | Knowledge multiplies through team | Champion-led sessions delivered |
+| Peer teaching | Knowledge multiplies through team | Champion-led sessions provided |
 | Experimentation culture | Safe to try and fail | New techniques tried per sprint |
 | Career development | AI skills valued in progression | AI skills in role expectations |
 
@@ -372,11 +363,11 @@ Add these questions to periodic team assessments:
 
 | Metric | Current | Target | Trend |
 |--------|---------|--------|-------|
-| Cross-tool proficiency | X% | Over 30% | ↑↓→ |
-| Average team onboarding time | X days | Less than 10 days | ↑↓→ |
-| Champion density | X per 100 | 2 or more per 100 | ↑↓→ |
-| Self-service resolution rate | X% | Over 70% | ↑↓→ |
-| Willingness to change score | X/5 | 4.0 or more | ↑↓→ |
+| Cross-tool proficiency | X% | Over 30% | Increasing, decreasing or stable |
+| Average team onboarding time | X days | Less than 10 days | Increasing, decreasing or stable |
+| Champion density | X per 100 | 2 or more per 100 | Increasing, decreasing or stable |
+| Self-service resolution rate | X% | Over 70% | Increasing, decreasing or stable |
+| Willingness to change score | X/5 | 4.0 or more | Increasing, decreasing or stable |
 
 ---
 
@@ -389,13 +380,11 @@ Add these questions to periodic team assessments:
 | Proactive | Teams anticipate and prepare for change | High self-service, fast onboarding, actively seek new features |
 | Generative | Teams drive change and help others adapt | Contribute to repository, mentor other teams, champion new practices |
 
-Target: Move all teams to at least 'Responsive' by programme end, with 30% at 'Proactive' or 'Generative'.
+Target: move all teams to at least 'responsive' by programme end, with 30% at 'Proactive' or 'Generative'.
 
 ---
 
 ### Building adaptability
-
-Actions to improve adaptability metrics:
 
 | Metric gap | Intervention |
 |------------|--------------|
@@ -412,7 +401,7 @@ Actions to improve adaptability metrics:
 
 ### Cross-tool comparison
 
-Where teams use different tools, compare:
+Where teams use different tools, the following should be compared.
 
 | Dimension | Metrics |
 |-----------|---------|
@@ -420,26 +409,24 @@ Where teams use different tools, compare:
 | Productivity impact | Acceptance rate, time savings |
 | Quality impact | Defect rates by tool |
 | Satisfaction | Scores by tool |
-| Cost effectiveness | Value delivered per licence cost |
+| Cost effectiveness | Value provided per licence cost |
 
 Caution: control for team differences. Tool comparisons require similar team contexts.
 
 ### Cross-department comparison
 
-Compare departments on:
+Compare departments on the following dimensions.
 
 | Dimension | Purpose |
 |-----------|---------|
 | Adoption trajectory | Identify fast or slow adopters |
 | Support efficiency | FDE time to achieve outcomes |
 | Pattern effectiveness | Which approaches work best |
-| Maturity progression | Speed through starting through developing through established |
+| Maturity progression | Speed through starting, developing and established |
 
-Use for: identifying transferable practices, not ranking departments.
+Use for identifying transferable practices, not ranking departments.
 
 ### Work type analysis
-
-Compare by work type cohort:
 
 | Work type | Specific metrics of interest |
 |-----------|------------------------------|
@@ -458,9 +445,9 @@ Compare by work type cohort:
 | Report | Frequency | Audience | Focus |
 |--------|-----------|----------|-------|
 | Operational dashboard | Real-time | Programme team | Adoption alerts, daily metrics |
-| Weekly summary | Weekly | Programme team, DMs | Progress, issues, actions |
+| Weekly summary | Weekly | Programme team, delivery managers | Progress, issues, actions |
 | Monthly report | Monthly | Programme board | Trends, insights, decisions |
-| Quarterly review | Quarterly | SROs, senior leadership | Business outcomes, strategic direction |
+| Quarterly review | Quarterly | Senior responsible owners, senior leadership | Business outcomes, strategic direction |
 | Final evaluation | Programme end | DSIT, senior stakeholders | Overall impact, lessons, recommendations |
 
 ### Dashboard design principles
@@ -484,7 +471,7 @@ Compare by work type cohort:
 ### Programme health
 | Metric | Target | Actual | Trend | Status |
 |--------|--------|--------|-------|--------|
-| [Metric] | [X] | [Y] | ↑↓→ | 🟢🟡🔴 |
+| [Metric] | [X] | [Y] | Increasing, decreasing or stable | Green, amber or red |
 
 ### Adoption
 - Licences activated: X/Y (Z%)
@@ -492,7 +479,7 @@ Compare by work type cohort:
 - Training completion: X%
 
 ### Productivity and quality
-- [Key metrics with trend]
+- [Important metrics with trend]
 
 ### Satisfaction
 - Engineer satisfaction: X/10
@@ -524,7 +511,7 @@ Compare by work type cohort:
 | Productivity | Department teams | Programme operations | FDEs and tech leads |
 | Quality | Department teams | Programme operations | Tech leads |
 | Satisfaction | Programme operations | Programme operations | Programme leads |
-| Business outcomes | Departments | Programme operations | SROs |
+| Business outcomes | Departments | Programme operations | Senior responsible owners |
 
 ### Review rhythm
 
@@ -533,7 +520,7 @@ Compare by work type cohort:
 | Daily stand-up | Daily | Programme team | Immediate interventions |
 | Weekly review | Weekly | Programme leads | Tactical adjustments |
 | Monthly board | Monthly | Programme board | Resource allocation, escalations |
-| Quarterly steering | Quarterly | SROs, DSIT | Strategic direction |
+| Quarterly steering | Quarterly | Senior responsible owners, DSIT | Strategic direction |
 
 ### Escalation triggers
 
@@ -541,9 +528,9 @@ Compare by work type cohort:
 |-----------|-------------|----------|
 | Single team below adoption threshold | FDE lead | Within 48 hours |
 | Department below adoption threshold | Programme board | Within 1 week |
-| Quality metrics declining | Tech lead, Security | Within 1 week |
+| Quality metrics declining | Tech lead, security | Within 1 week |
 | Satisfaction below 6.0 | Programme board | Within 1 week |
-| Programme-wide metric decline | SRO, DSIT | Immediate |
+| Programme-wide metric decline | Senior responsible owner, DSIT | Immediate |
 
 ---
 
@@ -555,7 +542,7 @@ Compare by work type cohort:
 |----------|-----------|---------|
 | Metric relevance review | Quarterly | Retire unused metrics, add emerging needs |
 | Target calibration | Quarterly | Adjust targets based on evidence |
-| Collection method audit | Quarterly | Ensure data quality |
+| Collection method audit | Quarterly | Make sure data quality is high |
 | Benchmark update | Annually | Refresh industry comparisons |
 
 ### Learning loops
@@ -564,17 +551,15 @@ Compare by work type cohort:
 |------|-----------|--------|
 | Team to programme | FDE reports and metrics | Pattern identification |
 | Programme to teams | Best practice sharing | Improved approaches |
-| Programme to repository | Documented learnings | Reusable knowledge |
+| Programme to AI Engineering Lab repository | Documented learnings | Reusable knowledge |
 | Programme to future phases | Evaluation report | Blueprint refinement |
 
 ### Success pattern capture
 
-When teams achieve strong results:
-
 1. Identify the factors contributing to success.
 2. Document the approach and context.
 3. Assess transferability to other teams.
-4. Add to repository as recommended practice.
+4. Add to AI Engineering Lab repository as recommended practice.
 5. Share through champion network.
 
 ---
@@ -604,18 +589,18 @@ When teams achieve strong results:
 | Requirement | Implementation |
 |-------------|----------------|
 | Privacy | Team-level aggregation minimum, no individual reporting |
-| Security | Data classification OFFICIAL, secure storage |
+| Security | Data classification official, secure storage |
 | Retention | Retain for programme duration plus 2 years |
 | Access | Role-based access to dashboards and data |
 
 ---
 
-## Related documents:
+## Related documents
 
 - [Measurement playbook](measurement-playbook.md) - Practical implementation guidance
 - [Maturity assessment framework](../assessment/maturity-assessment-framework.md) - Team-level assessment
 
-## References:
+## References
 
 - [DORA State of DevOps](https://dora.dev/) - Industry benchmarks
 - [GDS Service Manual - Measuring success](https://www.gov.uk/service-manual/measuring-success)

@@ -7,7 +7,7 @@ Techniques for providing effective context to AI code assistants to maximise out
 
 ## Purpose
 
-AI code assistants are only as good as the context they receive. This playbook provides practical techniques for structuring your codebase, creating prompts, and managing context to get the best results from AI tools.
+AI code assistants are only as good as the context they receive. This playbook provides practical techniques for structuring your codebase, creating prompts and managing context to get the best results from AI tools.
 
 Use this playbook to:
 
@@ -18,11 +18,11 @@ Use this playbook to:
 
 ## Who this applies to
 
-This playbook applies to all technical personnel using AI coding assistants on government projects, including civil servants, contractors, and suppliers with access to government code repositories or development environments.
+This playbook applies to all technical personnel using AI coding assistants on government projects, including civil servants, contractors and suppliers with access to government code repositories or development environments.
 
-## What is context engineering?
+## What is context engineering
 
-Context engineering is the practice of deliberately structuring and providing information to AI assistants so they can generate accurate, relevant, and useful outputs.
+Context engineering is the practice of deliberately structuring and providing information to AI assistants so they can generate accurate, relevant and useful outputs.
 
 Unlike simple prompting (asking a question), context engineering considers:
 
@@ -65,7 +65,7 @@ This is organisation-wide settings and rules configured in the AI tool.
 How to use it:
 
 - configure organisation coding standards
-- set up MCP servers for government standards (TCoP, WCAG, NCSC)
+- set up Model Context Protocol (MCP) servers for government standards (Technology Code of Practice (TCoP), Web Content Accessibility Guidelines (WCAG), National Cyber Security Centre (NCSC))
 - define prohibited patterns or security rules
 - establish default behaviours
 
@@ -114,7 +114,7 @@ Techniques:
 
 - keep related files in logical directories
 - use consistent naming conventions
-- maintain up-to-date dependency files (package.json, requirements.txt, and similar)
+- maintain up-to-date dependency files (package.json, requirements.txt and similar)
 - include type definitions and interfaces
 
 ### Level 4: file context
@@ -130,7 +130,7 @@ Techniques:
 
 ### Level 5: immediate context
 
-This is your current prompt, selected code, and cursor position.
+This is your current prompt, selected code and cursor position.
 
 Techniques:
 
@@ -529,26 +529,26 @@ When asking AI for code generation:
 ## AI-generated code review checklist
 
 ### Context verification
-- [ ] was appropriate context provided to the AI?
-- [ ] does the code match our project patterns?
-- [ ] are there signs of hallucinated APIs or methods?
+- [ ] Was appropriate context provided to the AI
+- [ ] Does the code match our project patterns
+- [ ] Are there signs of hallucinated APIs or methods
 
 ### Quality checks
-- [ ] does the code compile or run without errors?
-- [ ] are all dependencies valid and approved?
-- [ ] do tests pass and cover important paths?
-- [ ] is the code readable and maintainable?
+- [ ] Does the code compile or run without errors
+- [ ] Are all dependencies valid and approved
+- [ ] Do tests pass and cover important paths
+- [ ] Is the code readable and maintainable
 
 ### Security checks
-- [ ] no hardcoded credentials or secrets?
-- [ ] input validation present where needed?
-- [ ] no obvious security vulnerabilities?
-- [ ] follows secure coding standards?
+- [ ] No hardcoded credentials or secrets
+- [ ] Input validation present where needed
+- [ ] No obvious security vulnerabilities
+- [ ] Follows secure coding standards
 
 ### Standards compliance
-- [ ] follows team coding conventions?
-- [ ] meets accessibility requirements (if UI)?
-- [ ] documentation is adequate?
+- [ ] Follows team coding conventions
+- [ ] Meets accessibility requirements (if UI)
+- [ ] Documentation is adequate
 ```
 
 ---

@@ -5,7 +5,7 @@
 
 # Prompt engineering for testing: getting comprehensive test coverage
 
-Techniques for using AI assistants to generate thorough test suites including security, accessibility, and performance testing.
+Techniques for using AI assistants to generate thorough test suites including security, accessibility and performance testing.
 
 ## Purpose
 
@@ -13,7 +13,7 @@ AI assistants excel at generating comprehensive test suites when given the right
 
 Use this guide to learn how to prompt AI for:
 
-- unit, integration, and end-to-end tests
+- unit, integration and end-to-end tests
 - security tests aligned with National Cyber Security Centre (NCSC) guidance
 - accessibility tests meeting Web Content Accessibility Guidelines (WCAG) standards
 - performance tests and edge case discovery
@@ -31,7 +31,7 @@ This guide applies to all engineers responsible for code quality:
 
 ### Types of tests to generate
 
-#### Unit tests - isolating individual components:
+#### Unit tests - isolating individual components
 
 Example prompt for unit tests:
 ```
@@ -56,6 +56,7 @@ Use pytest fixtures for:
 
 Follow AAA pattern (Arrange, Act, Assert) and include descriptive test names.
 ```
+
 #### Integration tests - testing components working together
 
 Example prompt for integration tests:
@@ -84,6 +85,7 @@ Cache behaviour:
 
 Use pytest-asyncio for async testing and real test database (not mocks - we are testing integration).
 ```
+
 ### Security testing - critical for government projects
 
 Example prompt for security testing:
@@ -124,6 +126,7 @@ For each test:
 
 Use pytest with requests library for HTTP tests.
 ```
+
 Why this matters: government services handle sensitive citizen data. Security testing is not optional.
 
 ### Accessibility testing - meeting WCAG standards
@@ -161,6 +164,7 @@ Contrast:
 
 Use pytest with playwright for browser testing and axe-core for automated accessibility scanning.
 ```
+
 ### Performance testing
 
 Example prompt for performance testing:
@@ -198,6 +202,7 @@ Use locust for load testing and include:
 - mix of successful and error scenarios
 - monitoring hooks for metrics collection
 ```
+
 ### Edge case discovery
 
 This is where AI really excels.
@@ -237,7 +242,8 @@ Concurrency:
 
 Then write tests for the 10 most critical edge cases.
 ```
-What you get: edge cases you never thought of. The AI combines common software failure modes, domain-specific issues (government applications), concurrency problems, and resource exhaustion scenarios.
+
+What you get: edge cases you never thought of. The AI combines common software failure modes, domain-specific issues (government applications), concurrency problems and resource exhaustion scenarios.
 
 ### Maintaining test suites
 
@@ -265,6 +271,7 @@ Changes needed:
 
 Mark obsolete tests clearly with comments explaining why they were removed.
 ```
+
 Example prompt for test coverage analysis:
 ```
 Here is my function and its tests:
@@ -286,15 +293,18 @@ Write additional tests to achieve greater than 90% coverage of meaningful code p
 
 Do not chase 100% coverage - some code (like __repr__ or logging statements) does not need tests. Focus on business logic and error handling.
 ```
+
 ### Common testing mistakes
 
 Mistakes to avoid:
+
 - only testing the happy path: real users find the unhappy paths
 - mocking everything in integration tests: then you are not actually testing integration
 - tests that depend on external services: tests should be reliable and fast
 - not testing accessibility: accessibility violations often surface in production
 
 The comprehensive approach:
+
 - test happy path and error cases
 - test edge cases exhaustively
 - test security implications
@@ -304,6 +314,6 @@ The comprehensive approach:
 
 ---
 
-Previous: [ Practical use cases](./prompt-engineering-use-cases.md)
+Previous: [Practical use cases](./prompt-engineering-use-cases.md)
 
 Next: [Prompt engineering for code documentation](./prompt-engineering-documentation.md)

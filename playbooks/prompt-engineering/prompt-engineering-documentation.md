@@ -36,9 +36,9 @@ Documentation exists at multiple levels. Each serves a different purpose. The fo
 ### Level 1: inline comments - use sparingly
 
 The first rule of comments: your code should explain what it does. Comments explain why.
-```
-Example prompt for adding comments:
 
+Example prompt for adding comments:
+```
 Review this function and add inline comments only where the logic is not self-evident:
 
 [paste function with complex business logic]
@@ -52,6 +52,7 @@ Follow these principles:
 
 Remove any existing comments that just restate the code.
 ```
+
 Example of good vs bad comments:
 
 ```python
@@ -94,6 +95,7 @@ Identify:
 
 Provide specific suggestions for improvements."
 ```
+
 ### Level 2: docstrings - the primary documentation
 
 Docstrings are how engineers understand your functions without reading the implementation.
@@ -119,6 +121,7 @@ For classes, include:
 - usage example
 - any important lifecycle considerations
 ```
+
 Example prompt for converting between docstring formats:
 ```
 Convert these docstrings from Google style to NumPy style:
@@ -128,6 +131,7 @@ Convert these docstrings from Google style to NumPy style:
 Maintain all information while following NumPy conventions.
 Ensure compatibility with Sphinx autodoc.
 ```
+
 ### Level 3: README files - project overview
 
 Example prompt for creating a comprehensive README:
@@ -156,6 +160,7 @@ Include sections for:
 
 Use GitHub Flavoured Markdown (GFM) with appropriate headings, code blocks, and badges where relevant.
 ```
+
 ### Level 4: API documentation
 
 For APIs, documentation is part of the product.
@@ -177,6 +182,7 @@ Ensure the documentation includes:
 
 Write descriptions in plain English suitable for both technical and non-technical stakeholders.
 ```
+
 ### Maintaining documentation
 
 Documentation rots faster than code. Keep it current.
@@ -201,6 +207,7 @@ Identify:
 
 Provide updated docstrings that match the current implementation.
 ```
+
 Example prompt for batch updates after refactoring:
 ```
 After refactoring, update all documentation in this module:
@@ -218,6 +225,7 @@ Update:
 Maintain the same docstring style (Google format).
 Flag any examples that are now invalid.
 ```
+
 ### Automating documentation with Sphinx
 
 Example prompt for setting up Sphinx documentation:
@@ -244,9 +252,10 @@ Include extensions for:
 - Mermaid (for diagrams)
 - OpenAPI (for FastAPI endpoint documentation)
 ```
+
 ### Common documentation mistakes
 
-Mistakes to avoid:
+Mistakes to avoid.
 
 Documenting obvious things:
 ```python
@@ -264,16 +273,18 @@ def process_payment(amount):
 ```
 
 Other common mistakes:
+
 - outdated examples - documentation says one thing, code does another
 - no examples - engineers learn by example, not just descriptions
 
 The good documentation approach:
+
 - explain why and when, not just what
 - include realistic examples
 - document edge cases and gotchas
 - keep it current as code evolves
 - add context about system integration
-- warn about security and PII (Personally Identifiable Information) considerations
+- warn about security and Personally Identifiable Information (PII) considerations
 
 ---
 

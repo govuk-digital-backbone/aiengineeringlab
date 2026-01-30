@@ -6,15 +6,15 @@
 
 ## Purpose
 
-This template provides a consistent approach to identifying, assessing, and managing risks across all AI Engineering Lab deployments. It aligns with government risk management frameworks and ensures risks are visible, owned, and actively managed.
+This template provides a consistent approach to identifying, assessing and managing risks across all AI Engineering Lab deployments. It aligns with government risk management frameworks and ensures risks are visible, owned and actively managed.
 
 Use this template to:
 
-1. Document risks identified during assessments.
-2. Track risks throughout the adoption lifecycle.
-3. Provide assurance to senior responsible owners.
-4. Support security accreditation processes.
-5. Enable cross-government learning from risk patterns.
+- document risks identified during assessments
+- track risks throughout the adoption lifecycle
+- provide assurance to senior responsible owners
+- support security accreditation processes
+- enable cross-government learning from risk patterns
 
 ## How to use this template
 
@@ -93,7 +93,7 @@ Use this template to:
 |-------|-------|
 | Risk ID | RISK-SEC-01 |
 | Category | Security |
-| Risk description | Engineers inadvertently share sensitive, classified, or personal data with AI code assistants through prompts, code context, or file uploads |
+| Risk description | Engineers inadvertently share sensitive, classified or personal data with AI code assistants through prompts, code context or file uploads |
 | Risk owner | To be confirmed |
 | Likelihood (inherent) | 4 (Likely) |
 | Impact (inherent) | 4 (Major) |
@@ -113,7 +113,7 @@ Use this template to:
 |-------|-------|
 | Risk ID | RISK-SEC-02 |
 | Category | Security |
-| Risk description | AI assistants generate code containing hardcoded credentials, API keys, or connection strings that are committed to repositories |
+| Risk description | AI assistants generate code containing hardcoded credentials, API keys or connection strings that are committed to repositories |
 | Risk owner | To be confirmed |
 | Likelihood (inherent) | 3 (Possible) |
 | Impact (inherent) | 4 (Major) |
@@ -138,7 +138,7 @@ Use this template to:
 | Likelihood (inherent) | 3 (Possible) |
 | Impact (inherent) | 3 (Moderate) |
 | Inherent risk score | 9 (Medium) |
-| Existing controls | Vendor data residency verification, DPA review, tool accreditation process |
+| Existing controls | Vendor data residency verification, Data processing agreement (DPA) review, tool accreditation process |
 | Likelihood (residual) | 2 (Unlikely) |
 | Impact (residual) | 3 (Moderate) |
 | Residual risk score | 6 (Medium) |
@@ -162,7 +162,7 @@ Use this template to:
 | Likelihood (inherent) | 4 (Likely) |
 | Impact (inherent) | 4 (Major) |
 | Inherent risk score | 16 (High) |
-| Existing controls | Mandatory code review, SAST and DAST integration, security scanning in CI and CD |
+| Existing controls | Mandatory code review, Static application security testing (SAST) and Dynamic application security testing (DAST) integration, security scanning in Continuous integration (CI) and Continuous deployment (CD) |
 | Likelihood (residual) | 2 (Unlikely) |
 | Impact (residual) | 4 (Major) |
 | Residual risk score | 8 (Medium) |
@@ -177,7 +177,7 @@ Use this template to:
 |-------|-------|
 | Risk ID | RISK-CODE-02 |
 | Category | Code quality |
-| Risk description | AI assistants suggest packages or libraries that are malicious, abandoned, or contain known vulnerabilities |
+| Risk description | AI assistants suggest packages or libraries that are malicious, abandoned or contain known vulnerabilities |
 | Risk owner | To be confirmed |
 | Likelihood (inherent) | 3 (Possible) |
 | Impact (inherent) | 4 (Major) |
@@ -241,7 +241,7 @@ Use this template to:
 |-------|-------|
 | Risk ID | RISK-IP-02 |
 | Category | Legal and IP |
-| Risk description | Uncertainty over intellectual property ownership of AI-generated code creates complications for procurement, licensing, or future commercialisation |
+| Risk description | Uncertainty over intellectual property ownership of AI-generated code creates complications for procurement, licensing or future commercialisation |
 | Risk owner | To be confirmed |
 | Likelihood (inherent) | 2 (Unlikely) |
 | Impact (inherent) | 3 (Moderate) |
@@ -285,7 +285,7 @@ Use this template to:
 |-------|-------|
 | Risk ID | RISK-ADO-02 |
 | Category | Adoption |
-| Risk description | Engineers resist using AI tools due to scepticism, concerns about job security, or preference for existing workflows, undermining adoption targets |
+| Risk description | Engineers resist using AI tools due to scepticism, concerns about job security or preference for existing workflows, undermining adoption targets |
 | Risk owner | To be confirmed |
 | Likelihood (inherent) | 3 (Possible) |
 | Impact (inherent) | 3 (Moderate) |
@@ -334,7 +334,7 @@ Use this template to:
 | Likelihood (inherent) | 3 (Possible) |
 | Impact (inherent) | 2 (Minor) |
 | Inherent risk score | 6 (Medium) |
-| Existing controls | Vendor SLA monitoring, training on working without AI, multiple tool familiarity |
+| Existing controls | Vendor Service level agreement (SLA) monitoring, training on working without AI, multiple tool familiarity |
 | Likelihood (residual) | 3 (Possible) |
 | Impact (residual) | 2 (Minor) |
 | Residual risk score | 6 (Medium) |
@@ -387,12 +387,12 @@ Use this template to:
 
 ## Adding deployment-specific risks
 
-Use this template for risks unique to your deployment:
+Use this template for risks unique to your deployment.
 
 | Field | Value |
 |-------|-------|
 | Risk ID | RISK-[CAT]-[NN] |
-| Category | Security, code quality, legal and IP, adoption, vendor, or other |
+| Category | Security, code quality, legal and IP, adoption, vendor or other |
 | Risk description | Clear description of what could go wrong |
 | Risk owner | Name and role |
 | Likelihood (inherent) | 1 to 5 |
@@ -404,7 +404,7 @@ Use this template for risks unique to your deployment:
 | Residual risk score | Likelihood × impact |
 | Additional mitigations planned | What else will be done |
 | Target risk score | Desired end state |
-| Status | Open, mitigating, closed, or accepted |
+| Status | Open, mitigating, closed or accepted |
 | Last updated | Date |
 
 ---

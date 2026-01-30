@@ -20,17 +20,17 @@ This guide applies to all engineers using AI code assistants, particularly:
 - anyone looking to improve the quality of AI-generated code
 
 
-### The Human Test: can someone else do this task?
+### The Human Test: can someone else do this task
 
-Here is a simple test to check if your prompt has enough context:
+Here is a simple test to check if your prompt has enough context.
 
 Imagine you are going on holiday for 2 weeks. You write down instructions for a colleague to complete a task while you are away. You hand them the note. Could they actually do it?
 
 If the answer is no - if they would need to interrupt your holiday to ask clarifying questions - then your AI prompt will not work either.
 
-#### AI cannot read your mind, just as humans cannot.
+#### AI cannot read your mind, just as humans cannot
 
-The better your instructions, the better the output. This applies whether you are delegating to a junior engineer, a contractor, or an AI assistant.
+The better your instructions, the better the output. This applies whether you are delegating to a junior engineer, a contractor or an AI assistant.
 
 Example of the Human Test in action:
 ```
@@ -63,29 +63,30 @@ Passes the Human Test:
 #### What you need to give someone to complete a task properly
 
 Think about what a human needs:
-- the goal: what are they building and why?
-- the environment: what tools, frameworks, databases are available?
-- the constraints: what are the limits (performance, security, budget)?
-- the examples: how have we solved similar problems before?
-- the standards: what coding style, patterns, naming conventions?
-- the integration points: what does this connect to?
-- the edge cases: what special situations need handling?
-- the success criteria: how will we know it is done correctly?
+
+- the goal: what are they building and why
+- the environment: what tools, frameworks, databases are available
+- the constraints: what are the limits (performance, security, budget)
+- the examples: how have we solved similar problems before
+- the standards: what coding style, patterns, naming conventions
+- the integration points: what does this connect to
+- the edge cases: what special situations need handling
+- the success criteria: how will we know it is done correctly
 
 If you give this information to a human, they can complete the task. If you give it to AI, it can too.
 
 #### The delegation principle
 
-Before you write an AI prompt, ask yourself:
-> "If I handed these instructions to a competent engineer who has never seen our codebase, could they complete this task successfully?"
+Before you write an AI prompt, check if a competent engineer who has never seen your codebase could complete the task successfully with your instructions.
 
-If the answer is yes, your prompt is probably good enough.
+If they could, your prompt is probably good enough.
 
-If the answer is no, you are missing context. Add it before you prompt the AI.
+If they could not, you are missing context. Add it before you prompt the AI.
 
-#### Why this matters for teams:
+#### Why this matters for teams
 
 When everyone on your team applies the Human Test before prompting AI:
+
 - code quality becomes consistent
 - AI-generated code fits existing patterns
 - less time wasted on back-and-forth revisions
@@ -98,18 +99,13 @@ Remember: AI is powerful, but it is not psychic. Treat it like you would treat a
 
 Brief introduction to the techniques we will apply throughout:
 
-1. Chain of thought reasoning - getting AI to show its working. "Walk me through your thought process step by step..." or "Let's think through this systematically...".
-
-2. Few-shot prompting - teaching by example. "Reference this good example and make it look like that". Show the pattern you want repeated.
-
-3. Reverse prompting - make the AI ask you questions first. "Before you get started, ask me for any information you need to do a good job". Uncover requirements before coding.
-
-4. Role assignment - "Act as a senior Python engineer...". Changes expertise level and perspective.
-
-5. Emphasis - add context about importance to improve output quality. "This is critical for production code that handles sensitive user data." or "Think carefully about edge cases - this function processes financial transactions." or "This is important for my team's code review - be thorough."
+- chain of thought reasoning - getting AI to show its working. "Walk me through your thought process step by step..." or "Let's think through this systematically..."
+- few-shot prompting - teaching by example. "Reference this good example and make it look like that". Show the pattern you want repeated
+- reverse prompting - make the AI ask you questions first. "Before you get started, ask me for any information you need to do a good job". Uncover requirements before coding
+- role assignment - "Act as a senior Python engineer...". Changes expertise level and perspective
+- emphasis - add context about importance to improve output quality. "This is critical for production code that handles sensitive user data." or "Think carefully about edge cases - this function processes financial transactions." or "This is important for my team's code review - be thorough"
 
 Why this works: just as you would give a colleague more context about why something matters, AI responds to framing that indicates the stakes and required quality level.
-
 ### Combining techniques: the power prompt
 
 The most effective prompts combine multiple techniques. Here is the formula:
@@ -127,7 +123,9 @@ Walk me through your thought process step by step as you design the solution. (C
 
 Act as a senior [role] with expertise in [domain]. (Role Assignment)"
 ```
+
 Real example:
+```
 "Help me write a user authentication endpoint.
 
 This is critical for production - we handle 10,000+ logins daily.
@@ -140,8 +138,9 @@ Here is an example of another endpoint from our codebase:
 Once you understand the requirements, walk me through your design approach step by step before writing the code.
 
 Act as a senior backend engineer with FastAPI and security expertise."
+```
 
-What happens:
+What happens when you use the power prompt.
 
 1. AI understands the stakes (emphasis).
 2. AI asks clarifying questions (reverse prompting).
@@ -153,6 +152,7 @@ What happens:
 8. Code matches your existing patterns.
 
 Why this works:
+
 - emphasis ensures appropriate attention to quality
 - reverse prompting ensures you do not miss critical requirements
 - few-shot examples maintain consistency with your codebase
@@ -176,11 +176,12 @@ The single biggest factor in getting quality output from AI assistants? Context.
 
 The difference between mediocre and excellent AI output is not which technique you use - it is how much relevant context you provide. The more context and clarity you provide, the more accurate and relevant the output will be.
 
-Think of context as all the information in your prompt that helps the Large Language Model (LLM) understand not just what you want, but how it should fit into your existing project. This includes your tech stack, coding standards, dependencies, constraints, and the patterns you are already using.
+Think of context as all the information in your prompt that helps the Large Language Model (LLM) understand not just what you want, but how it should fit into your existing project. This includes your tech stack, coding standards, dependencies, constraints and the patterns you are already using.
 
-By providing clear and detailed instructions, you can get the model to generate functional, ready-to-use code. Use your domain expertise to make specific requests, mention the packages and dependencies you want, reference your existing patterns, and be explicit about requirements.
+By providing clear and detailed instructions, you can get the model to generate functional, ready-to-use code. Use your domain expertise to make specific requests, mention the packages and dependencies you want, reference your existing patterns and be explicit about requirements.
 
 What to include in every prompt:
+
 - tech stack: languages, frameworks, versions
 - architecture: how this fits into your system
 - constraints: performance, security, scalability requirements
@@ -209,7 +210,9 @@ Task: [specific request]
 
 Before proceeding, ask me any clarifying questions about requirements, edge cases, or constraints.
 ```
+
 Why this transforms output quality:
+
 - reduces back-and-forth iterations by 70% or more
 - produces code that fits your codebase immediately
 - avoids deprecated or incompatible solutions
@@ -221,24 +224,28 @@ Why this transforms output quality:
 #### The context hierarchy
 
 Must have:
+
 - what you are building
 - tech stack and versions
 - how it integrates with existing code
 - critical compliance requirements
 
 Should have:
+
 - example code demonstrating patterns
 - constraints and requirements
 - known edge cases
 - security and accessibility standards
 
 Nice to have:
+
 - team conventions and style preferences
 - performance benchmarks
 - testing requirements
 - documentation standards
 
 For government projects, also include:
+
 - security classification level
 - data handling requirements
 - accessibility standards (WCAG level)

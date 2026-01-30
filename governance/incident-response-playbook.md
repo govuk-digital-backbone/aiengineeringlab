@@ -2,11 +2,11 @@
 > This is a new service – your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 # AI Engineering Lab incident response playbook
 
-> Procedures for identifying, responding to, and learning from incidents related to AI code assistant usage.
+> Procedures for identifying, responding to and learning from incidents related to AI code assistant usage.
 
 ## Purpose
 
-This playbook provides standardised procedures for handling security incidents, data exposures, and other adverse events involving AI Engineering Lab. It ensures consistent, timely responses that minimise harm and support organisational learning.
+This playbook provides standardised procedures for handling security incidents, data exposures and other adverse events involving AI Engineering Lab. It ensures consistent, timely responses that minimise harm and support organisational learning.
 
 Use this playbook when:
 
@@ -18,35 +18,35 @@ Use this playbook when:
 
 ## Key terms and acronyms
 
-SIRO (Senior Information Risk Owner) – Accountable for information risk and approves major decisions.
+Senior information risk owner (SIRO) – Accountable for information risk and approves major decisions
 
-SRO (Senior Responsible Owner) – AI Engineering Lab programme lead.
+Senior responsible owner (SRO) – AI Engineering Lab programme lead
 
-DPO (Data Protection Officer) – Ensures GDPR compliance and manages ICO notifications.
+Data protection officer (DPO) – Ensures General data protection regulation (GDPR) compliance and manages Information commissioner's office (ICO) notifications
 
-CISO (Chief Information Security Officer) – Overall security leadership and oversight.
+Chief information security officer (CISO) – Overall security leadership and oversight
 
-NCSC (National Cyber Security Centre) – UK cyber security authority (part of GCHQ).
+National cyber security centre (NCSC) – UK cyber security authority (part of GCHQ)
 
-ICO (Information Commissioner's Office) – UK data protection regulator.
+ICO – UK data protection regulator
 
-PII (Personally Identifiable Information) – Data that can identify a person (names, emails, and similar).
+Personally identifiable information (PII) – Data that can identify a person (names, emails and similar)
 
-GDPR (General Data Protection Regulation) – UK and EU law on personal data protection.
+GDPR – UK and EU law on personal data protection
 
-DPA (Data Processing Agreement) – Contract with AI vendors on data handling.
+Data processing agreement (DPA) – Contract with AI vendors on data handling
 
-Prompt injection – Security attack using malicious AI instructions to manipulate system behaviour.
+Prompt injection – Security attack using malicious AI instructions to manipulate system behaviour
 
 ## Incident classification
 
 ### Severity levels
 
-The following table shows severity levels for incidents:
+The following table shows severity levels for incidents.
 
 | Severity | Description | Response time | Examples |
 |----------|-------------|---------------|----------|
-| P1 - Critical | Immediate threat to data, systems, or operations | Within 1 hour | SECRET data exposed, active exploitation of AI-generated vulnerability, credential compromise |
+| P1 - Critical | Immediate threat to data, systems or operations | Within 1 hour | SECRET data exposed, active exploitation of AI-generated vulnerability, credential compromise |
 | P2 - High | Significant risk requiring urgent attention | Within 4 hours | OFFICIAL-SENSITIVE data exposed, security vulnerability in production, bulk PII exposure |
 | P3 - Medium | Notable incident requiring prompt response | Within 24 hours | OFFICIAL data inadvertently shared, vulnerability detected pre-deployment, single PII record exposed |
 | P4 - Low | Minor incident for awareness and tracking | Within 72 hours | Near-miss events, policy violations without data exposure, process failures caught in review |
@@ -57,7 +57,7 @@ The following table shows severity levels for incidents:
 |----------|------|-------------|
 | Data exposure | DE | Sensitive data shared with AI tool |
 | Code vulnerability | CV | Security flaw in AI-generated code |
-| Credential leak | CL | Secrets, keys, or passwords exposed |
+| Credential leak | CL | Secrets, keys or passwords exposed |
 | Service compromise | SC | AI tool or integration compromised |
 | Policy violation | PV | Guardrails or usage policy breached |
 | IP/Licence issue | IP | Copyright or licensing concern |
@@ -72,10 +72,10 @@ The following table shows severity levels for incidents:
 
 #### How to report an incident
 
-Immediate actions for the person discovering the incident:
+If you discover an incident, take the following steps.
 
 1. Stop – do not continue the activity that caused or revealed the incident.
-2. Do not attempt to fix – preserve evidence and do not delete prompts, outputs, or logs.
+2. Do not attempt to fix – preserve evidence and do not delete prompts, outputs or logs.
 3. Report immediately through the appropriate channels in your department.
 4. Complete an initial report with the following information:
    - what happened (brief description)
@@ -92,9 +92,9 @@ Incidents may be detected through:
 |--------|----------|
 | Self-reporting | Engineer realises they shared sensitive data |
 | Code review | Reviewer identifies vulnerability or exposed secret |
-| Automated scanning | Static Application Security Testing (SAST) and secret detection tools flag issues  |
+| Automated scanning | Static application security testing (SAST) and secret detection tools flag issues |
 | Security monitoring | Anomaly detection in AI tool usage patterns |
-| External notification | Vendor, third party, or security researcher report |
+| External notification | Vendor, third party or security researcher report |
 | Audit | Periodic review identifies historical issues |
 
 ---
@@ -103,7 +103,7 @@ Incidents may be detected through:
 
 #### Initial triage (within 30 minutes of report)
 
-The Security Team or designated incident handler will:
+The Security Team or designated incident handler will complete these steps.
 
 1. Acknowledge receipt to the reporter.
 2. Assign incident ID using format: AIENG-[YYYY]-[NNNN].
@@ -120,7 +120,7 @@ The Security Team or designated incident handler will:
 
 Incident severity levels are:
 
-- P1 (Critical) - immediate threat to data, systems, or operations requiring urgent, organisation-wide response
+- P1 (Critical) - immediate threat to data, systems or operations requiring urgent, organisation-wide response
 - P2 (High) - significant risk requiring urgent attention, but not an immediate crisis
 - P3 (Medium) - notable incident needing prompt response, but not urgent
 - P4 (Low) - minor incident for awareness and tracking only
@@ -136,13 +136,13 @@ Incident severity levels are:
 
 | Question | Purpose |
 |----------|---------|
-| What data was exposed? | Determine classification and sensitivity |
-| How much data? | Scope the exposure |
-| Who has access to the AI tool's logs and data? | Understand potential access |
-| Is the data still accessible? | Determine if retrieval is possible |
-| Has the vulnerability been exploited? | Assess actual versus potential harm |
-| Are other systems affected? | Identify lateral impact |
-| Is the incident ongoing? | Determine containment urgency |
+| What data was exposed | Determine classification and sensitivity |
+| How much data | Scope the exposure |
+| Who has access to the AI tool's logs and data | Understand potential access |
+| Is the data still accessible | Determine if retrieval is possible |
+| Has the vulnerability been exploited | Assess actual versus potential harm |
+| Are other systems affected | Identify lateral impact |
+| Is the incident ongoing | Determine containment urgency |
 
 ---
 
@@ -152,7 +152,7 @@ Incident severity levels are:
 
 ##### Data exposure (DE)
 
-Data exposure (DE) means any incident where sensitive, confidential, or personal data is shared with an AI tool, either accidentally or through a security failure.
+Data exposure (DE) means any incident where sensitive, confidential or personal data is shared with an AI tool, either accidentally or through a security failure.
 
 | Action | Responsibility | Timeframe |
 |--------|----------------|-----------|
@@ -196,11 +196,11 @@ Data exposure (DE) means any incident where sensitive, confidential, or personal
 
 Before proceeding to eradication, confirm:
 
-- [ ] Immediate threat has been neutralised.
-- [ ] Affected systems or data have been isolated.
-- [ ] Evidence has been preserved.
-- [ ] Spread has been prevented.
-- [ ] Stakeholders have been notified.
+- [ ] Immediate threat has been neutralised
+- [ ] Affected systems or data have been isolated
+- [ ] Evidence has been preserved
+- [ ] Spread has been prevented
+- [ ] Stakeholders have been notified
 
 ---
 
@@ -262,7 +262,7 @@ Report contents:
 
 #### Lessons learned session
 
-For P1 and P2 incidents, conduct a blameless post-incident review:
+For P1 and P2 incidents, conduct a blameless post-incident review.
 
 | Element | Description |
 |---------|-------------|
@@ -288,30 +288,32 @@ For P1 and P2 incidents, conduct a blameless post-incident review:
 
 ### Example A: Personal data exposed to AI tool
 
-#### Scenario: An engineer accidentally includes real customer Personally Identifiable Information (PII) in a prompt.
+Scenario: An engineer accidentally includes real customer personally identifiable information (PII) in a prompt.
 
-#### Immediate actions:
+#### Immediate actions
 
 1. End the AI session immediately.
 2. Do not attempt to undo by asking AI to forget.
 3. Document exactly what was shared.
-4. Report to Security and Data Protection Officer (DPO) within 1 hour.
+4. Report to Security and DPO within 1 hour.
 
-#### Assessment:
+#### Assessment
 
 Questions to consider:
 
-- how many data subjects affected?
-- what categories of personal data?
-- is the AI tool provider a processor under GDPR?
-- what does the vendor's DPA say about data retention?
+- how many data subjects affected
+- what categories of personal data
+- is the AI tool provider a processor under GDPR
+- what does the vendor's DPA say about data retention
 
-#### Containment:
+#### Containment
+
+Actions to take:
 
 - request vendor delete session data (reference DPA terms)
 - assess notification requirements (ICO, data subjects)
 
-#### Regulatory considerations:
+#### Regulatory considerations
 
 | Condition | Action |
 |-----------|--------|
@@ -321,30 +323,34 @@ Questions to consider:
 
 ### Example B: Security vulnerability deployed to production
 
-#### Scenario: AI-generated code containing SQL injection vulnerability reaches production.
+Scenario: AI-generated code containing SQL injection vulnerability reaches production.
 
-#### Immediate actions:
+#### Immediate actions
 
 1. Assess if vulnerability is being exploited (check logs).
 2. If exploited: invoke major security incident process.
 3. If not exploited: implement emergency change to disable or fix.
 
-#### Assessment:
+#### Assessment
 
 Questions to consider:
 
-- what data could be accessed via the vulnerability?
-- how long has the vulnerability been in production?
-- is there evidence of exploitation?
-- what compensating controls exist (WAF, input validation)?
+- what data could be accessed via the vulnerability
+- how long has the vulnerability been in production
+- is there evidence of exploitation
+- what compensating controls exist (Web application firewall (WAF), input validation)
 
-#### Containment:
+#### Containment
+
+Actions to take:
 
 - deploy hotfix or disable affected functionality
-- implement Web Application Firewall (WAF) rule if available
+- implement WAF rule if available
 - increase monitoring on affected endpoints
 
-#### Recovery:
+#### Recovery
+
+Actions to complete:
 
 - full code review of AI-generated sections in the application
 - retrospective security testing
@@ -352,61 +358,67 @@ Questions to consider:
 
 ### Example C: API key committed to repository
 
-#### Scenario: AI suggests code containing a hardcoded API key which is committed.
+Scenario: AI suggests code containing a hardcoded API key which is committed.
 
-#### Immediate actions:
+#### Immediate actions
 
 1. Rotate the API key immediately – assume compromised.
 2. Check if repository is public or has been cloned.
 3. Remove from repository history (not just current version).
 
-#### Assessment:
+#### Assessment
 
 Questions to consider:
 
-- what does the API key provide access to?
-- has the key been used since exposure?
-- who has had access to the repository?
+- what does the API key provide access to
+- has the key been used since exposure
+- who has had access to the repository
 
-#### Containment:
+#### Containment
 
 ```bash
 # Remove from git history (example using git-filter-repo)
 git filter-repo --invert-paths --path 
 ```
 
-#### Prevention:
+#### Prevention
+
+Actions to take:
 
 - enable pre-commit hooks for secret detection
-- review CI/CD secret scanning configuration
+- review Continuous Integration/Continuous Deployment (CI/CD) secret scanning configuration
 - reinforce training on secret management
 
 ### Example D: Suspected prompt injection attack
 
-#### Scenario: AI assistant produces unexpected output suggesting malicious prompt injection.
+Scenario: AI assistant produces unexpected output suggesting malicious prompt injection.
 
-#### Immediate actions:
+#### Immediate actions
 
 1. Stop using the affected AI session.
 2. Do not execute any suggested commands or code.
 3. Screenshot and document the suspicious output.
 4. Report to Security.
 
-#### Assessment:
+#### Assessment
 
 Questions to consider:
 
-- what triggered the unusual behaviour?
-- was user input involved that could contain injection?
-- is this a vulnerability in our application or the AI tool?
+- what triggered the unusual behaviour
+- was user input involved that could contain injection
+- is this a vulnerability in our application or the AI tool
 
-#### Containment:
+#### Containment
+
+Actions to take:
 
 - review application for prompt injection vulnerabilities
 - implement input sanitisation
 - consider rate limiting AI interactions
 
-#### Vendor notification:
+#### Vendor notification
+
+Actions to take:
 
 - report to AI tool vendor if it appears to be a tool vulnerability
 - share details (sanitised) with AI Engineering Lab for cross-government awareness
@@ -522,7 +534,6 @@ Questions: Contact [Incident Owner]
 
 - [Guardrails Base](guardrails-base.md) - Security controls to prevent incidents
 - [Risk Register Template](risk-register-template.md) - Risk documentation
-- Department Security Incident Process - To be confirmed
 
 ## References
 

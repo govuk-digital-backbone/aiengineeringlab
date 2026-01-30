@@ -3,11 +3,11 @@
 
 # AI-assisted software development lifecycle
 
-This playbook provides guidance on integrating AI coding assistants across all phases of the software development lifecycle. It is designed for UK government teams delivering digital services and complements the 'Government Service Manual' and 'AI Playbook for the UK Government'.
+This playbook provides guidance on integrating AI coding assistants across all phases of the software development lifecycle. It is designed for UK government teams providing digital services and complements the 'Government Service Manual' and 'AI Playbook for the UK Government'.
 
 ## Who this is for
 
-This guidance is for anyone involved in delivering software in government. This includes:
+This guidance is for anyone involved in providing software in government, including:
 
 - engineers
 - technical architects
@@ -20,7 +20,7 @@ It assumes basic familiarity with AI coding assistant tools but accommodates tea
 
 ## Before you start
 
-Before integrating AI coding assistants into your workflow, ensure you have:
+Before integrating AI coding assistants into your workflow, ensure you have completed the following:
 
 - completed your department's AI Engineering Lab onboarding and received tool access
 - reviewed the 'guardrails-base.md' for your organisation
@@ -37,7 +37,7 @@ Context drives quality. The effectiveness of AI coding assistant outputs depends
 
 Verify before committing. Never commit AI-generated code without understanding what it does. Run tests, review logic and validate against requirements.
 
-Continuous compliance. Use Model Context Protocol servers and guardrails to embed government standards (Technology Code of Practice, Web Content Accessibility Guidelines, National Cyber Security Centre, Government Service Standard) into your workflow from the start, not as an afterthought.
+Continuous compliance. Use Model Context Protocol (MCP) servers and guardrails to embed government standards (Technology Code of Practice, Web Content Accessibility Guidelines (WCAG), National Cyber Security Centre (NCSC), Government Service Standard) into your workflow from the start, not as an afterthought.
 
 ---
 
@@ -78,7 +78,7 @@ Create spike documentation. When investigating unknowns, use AI coding assistant
 
 ### Anti-patterns to avoid
 
-Things to avoid:
+Avoid these practices:
 
 - accepting AI-generated estimates without team validation
 - using AI coding assistants to write user stories without user research input
@@ -86,7 +86,7 @@ Things to avoid:
 
 ### Quality indicators
 
-Signs of good practice:
+Good practice includes:
 
 - stories have clear acceptance criteria before development starts
 - technical approach is understood and agreed by the team
@@ -139,18 +139,18 @@ See 'context-engineering.md' for detailed guidance.
 
 ### Security considerations
 
-Things to remember:
+Remember these security practices:
 
 - never paste secrets, credentials or API keys into AI coding assistant prompts
 - review generated code for security vulnerabilities before committing
 - use static application security testing tools to validate AI-generated code
 - be cautious with AI-generated SQL, authentication and authorisation code
 - validate input handling and output encoding in generated code
-- configure coding agents to exclude sensitive files (agentic coding tools should be configured to avoid reading .env files, .env.local, credential files, or any other files containing environment variables or secrets - add these patterns to your agent's ignore configuration to prevent accidental exposure of sensitive data)
+- configure coding agents to exclude sensitive files (agentic coding tools should be configured to avoid reading .env files, .env.local, credential files or any other files containing environment variables or secrets - add these patterns to your agent's ignore configuration to prevent accidental exposure of sensitive data)
 
 ### Anti-patterns to avoid
 
-Things to avoid:
+Avoid these practices:
 
 - accepting suggestions without understanding the code
 - ignoring security implications of generated code
@@ -160,7 +160,7 @@ Things to avoid:
 
 ### Quality indicators
 
-Signs of good practice:
+Good practice includes:
 
 - code follows team conventions and passes linting
 - generated code has appropriate test coverage
@@ -198,7 +198,7 @@ Resolve dependency conflicts. When facing dependency issues, AI coding assistant
 
 ### Anti-patterns to avoid
 
-Things to avoid:
+Avoid these practices:
 
 - applying suggested fixes without understanding the root cause
 - ignoring security warnings in dependency suggestions
@@ -206,7 +206,7 @@ Things to avoid:
 
 ### Quality indicators
 
-Signs of good practice:
+Good practice includes:
 
 - builds complete successfully and consistently
 - build times are reasonable and optimised
@@ -260,7 +260,7 @@ AI-generated tests require careful review. Check that tests:
 
 ### Anti-patterns to avoid
 
-Things to avoid:
+Avoid these practices:
 
 - generating tests purely to increase coverage metrics
 - accepting tests without verifying they test the right behaviour
@@ -269,7 +269,7 @@ Things to avoid:
 
 ### Quality indicators
 
-Signs of good practice:
+Good practice includes:
 
 - tests verify actual requirements, not just implementation
 - coverage is meaningful, not just numerical
@@ -310,7 +310,7 @@ Prepare rollback procedures. Document rollback steps for each significant change
 
 ### Anti-patterns to avoid
 
-Things to avoid:
+Avoid these practices:
 
 - publishing AI-generated release notes without review
 - automating release decisions without human approval
@@ -318,7 +318,7 @@ Things to avoid:
 
 ### Quality indicators
 
-Signs of good practice:
+Good practice includes:
 
 - release notes are accurate and complete
 - deployment checklists are followed consistently
@@ -359,7 +359,7 @@ Generate deployment runbooks. Create step-by-step deployment guides for operatio
 
 ### Security considerations
 
-Things to remember:
+Remember these security practices:
 
 - review all generated infrastructure code for security misconfigurations
 - never include credentials in infrastructure-as-code
@@ -368,7 +368,7 @@ Things to remember:
 
 ### Anti-patterns to avoid
 
-Things to avoid:
+Avoid these practices:
 
 - deploying AI-generated infrastructure without security review
 - using overly permissive security configurations from suggestions
@@ -376,7 +376,7 @@ Things to avoid:
 
 ### Quality indicators
 
-Signs of good practice:
+Good practice includes:
 
 - deployments are automated and repeatable
 - infrastructure follows security best practices
@@ -415,7 +415,7 @@ Optimise performance. Analyse performance data and suggest optimisation opportun
 
 ### Anti-patterns to avoid
 
-Things to avoid:
+Avoid these practices:
 
 - relying solely on AI suggestions during critical incidents
 - implementing suggested fixes without understanding the problem
@@ -423,7 +423,7 @@ Things to avoid:
 
 ### Quality indicators
 
-Signs of good practice:
+Good practice includes:
 
 - incidents are resolved quickly with clear documentation
 - runbooks are accurate and up to date
@@ -463,7 +463,7 @@ Summarise user feedback. Analyse support tickets, feedback and error reports to 
 
 ### Anti-patterns to avoid
 
-Things to avoid:
+Avoid these practices:
 
 - acting on AI-identified patterns without validation
 - creating excessive alerts based on suggestions
@@ -471,7 +471,7 @@ Things to avoid:
 
 ### Quality indicators
 
-Signs of good practice:
+Good practice includes:
 
 - dashboards show actionable information
 - alerts indicate real problems requiring attention
@@ -495,12 +495,12 @@ Configure your AI Engineering Lab tools to reference these standards automatical
 
 ## Getting help
 
-If you encounter challenges using AI coding assistants effectively:
+If you encounter challenges using AI coding assistants effectively, complete these steps.
 
-1. Check the [prompt-library](../prompt-library/) for tested prompts for common scenarios
-2. Consult your team's AI Engineering Lab champion for guidance
-3. Raise questions in the cross-government AI Engineering Lab community channels
-4. Request support from the Forward Deployed Engineering team for complex adoption challenges
+1. Check the prompt library for tested prompts for common scenarios.
+2. Consult your team's AI Engineering Lab champion for guidance.
+3. Raise questions in the cross-government AI Engineering Lab community channels.
+4. Request support from the Forward Deployed Engineering team for complex adoption challenges.
 
 ---
 

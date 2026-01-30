@@ -3,7 +3,7 @@
 
 # Team classification guide
 
-> Detailed criteria and guidance for classifying teams as Starting, Developing, or Established.
+> Detailed criteria and guidance for classifying teams as starting, developing, or established.
 
 ## Purpose
 
@@ -16,14 +16,14 @@ Use this guide to:
 - identify specific areas for improvement
 - plan appropriate support interventions
 
-For the full assessment process, see 'Maturity assessment framework'.
+For the full assessment process, see [Maturity assessment framework](maturity-assessment-framework.md).
 
 ## Classification overview
 
 | Level | Description | Support model | Typical programme duration |
 |-------|-------------|---------------|---------------------------|
-| Starting | Teams needing intensive support to begin adoption | Embedded forward deployed engineer (FDE), high-touch | 6 to 8 weeks to Developing |
-| Developing | Teams building proficiency with moderate support | Shared FDE, blended | 4 to 6 weeks to Established |
+| Starting | Teams needing intensive support to begin adoption | Embedded forward deployed engineer (FDE), high-touch | 6 to 8 weeks to developing |
+| Developing | Teams building proficiency with moderate support | Shared FDE, blended | 4 to 6 weeks to established |
 | Established | Teams ready for self-sufficient adoption | On-demand consultation | Ongoing self-service |
 
 ## Starting classification
@@ -69,12 +69,12 @@ Starting teams have limited AI assistant experience, face significant constraint
 | Indicator | What it looks like |
 |-----------|-------------------|
 | Active resistance | Vocal opposition from team members |
-| Strong scepticism | "This will not work for us" mindset |
+| Strong scepticism | 'This will not work for us' mindset |
 | Job security concerns | Fear that AI will replace engineers |
 | Previous negative experience | Bad experience with AI tools or failed initiatives |
 | Trust issues | Distrust of management motives for adoption |
 
-### Support approach for Starting teams
+### Support approach for starting teams
 
 | Element | Approach |
 |---------|----------|
@@ -84,15 +84,15 @@ Starting teams have limited AI assistant experience, face significant constraint
 | Change management | High-touch, address resistance directly |
 | Focus | Build basic confidence, quick wins, address concerns |
 
-### What Starting teams need to progress
+### What starting teams need to progress
 
-To progress to Developing classification, Starting teams need to demonstrate:
+To progress to developing classification, starting teams need to demonstrate:
 
-1. Basic tool proficiency – team can use AI for simple tasks.
-2. Reduced resistance – no active blockers to adoption.
-3. Established workflows – AI integrated into daily work.
-4. Support sustainability – can work independently for short periods.
-5. Champion emergence – at least one enthusiastic team member.
+- basic tool proficiency, with the team using AI for simple tasks
+- reduced resistance, with no active blockers to adoption
+- established workflows, with AI integrated into daily work
+- sustainability, with the team working independently for short periods
+- champion emergence, with at least one enthusiastic team member
 
 ## Developing classification
 
@@ -138,8 +138,8 @@ Developing teams have foundational capabilities or some AI experience. They need
 | Cautiously positive | Open to trying, want to see results |
 | Some concerns | Questions about quality, security, workflow |
 | Mixed enthusiasm | Some keen, some neutral, few resistant |
-| Pragmatic mindset | "Show me it works" attitude |
-| Potential champions | One to 2 people who could become champions |
+| Pragmatic mindset | 'Show me it works' attitude |
+| Potential champions | 1 or 2 people who could become champions |
 
 ### Support approach for Developing teams
 
@@ -153,13 +153,13 @@ Developing teams have foundational capabilities or some AI experience. They need
 
 ### What Developing teams need to progress
 
-To progress to Established classification, Developing teams need to demonstrate:
+To progress to established classification, developing teams need to demonstrate:
 
-1. Consistent daily usage – more than 80% of team using tools daily.
-2. Quality output – AI-generated code passing reviews consistently.
-3. Advanced techniques – team using context engineering, complex prompting.
-4. Self-sufficiency – minimal FDE support needed.
-5. Active champion – at least one person supporting others, contributing to community.
+- consistent daily usage, with more than 80% of team using tools daily
+- quality output, with AI-generated code passing reviews consistently
+- advanced techniques, with the team using context engineering and complex prompting
+- self-sufficiency, with minimal FDE support needed
+- an active champion, with at least one person supporting others, contributing to the community
 
 ## Established classification
 
@@ -208,7 +208,7 @@ Established teams are ready for self-sufficient AI Engineering Lab adoption. The
 | Willing to share | Happy to help other teams, contribute to programme |
 | Champions present | Multiple people who could lead adoption |
 
-### Support approach for Established teams
+### Support approach for established teams
 
 | Element | Approach |
 |---------|----------|
@@ -218,9 +218,9 @@ Established teams are ready for self-sufficient AI Engineering Lab adoption. The
 | Change management | Light-touch, team self-manages |
 | Focus | Optimisation, advanced use cases, champion development |
 
-### Role of Established teams in programme
+### Role of established teams in programme
 
-Established teams contribute to the broader programme:
+Established teams contribute to the broader programme.
 
 | Contribution | Description |
 |--------------|-------------|
@@ -264,7 +264,7 @@ START
 
 ### Scoring-based classification
 
-If you use dimension scoring from the [Maturity Assessment Framework](maturity-assessment-framework.md):
+Consider using dimension scoring from the [Maturity Assessment Framework](maturity-assessment-framework.md).
 
 | Average score | Classification |
 |---------------|----------------|
@@ -274,26 +274,26 @@ If you use dimension scoring from the [Maturity Assessment Framework](maturity-a
 
 ### Override conditions
 
-Certain conditions override the score-based classification:
+Certain conditions override the score-based classification.
 
 | Condition | Override |
 |-----------|----------|
-| No security approval | Maximum: Starting |
-| Critical deadline within 4 weeks | Maximum: Starting |
-| More than 50% active resistance | Maximum: Starting |
-| No management support | Maximum: Starting |
+| No security approval | Maximum: starting |
+| Critical deadline within 4 weeks | Maximum: starting |
+| More than 50% active resistance | Maximum: starting |
+| No management support | Maximum: starting |
 | Air-gapped environment (cloud tools) | Not suitable for cloud AI tools |
-| Active champions and more than 80% daily usage | Minimum: Developing |
+| Active champions and more than 80% daily usage | Minimum: developing |
 
 ### Borderline cases
 
-For teams scoring near classification boundaries (for example, 1.7 to 1.8 or 2.4 to 2.5):
+For teams scoring near classification boundaries, such as 1.7 to 1.8 or 2.4 to 2.5:
 
-1. Review qualitative factors – do interview notes suggest higher or lower?
-2. Consider trajectory – is the team improving or facing new challenges?
-3. Apply "benefit of doubt" – when uncertain, classify lower to ensure adequate support.
-4. Document rationale – record why borderline decision was made.
-5. Plan early reassessment – schedule check-in at 2 weeks instead of 4.
+- review qualitative factors, do interview notes suggest higher or lower?
+- consider trajectory, is the team improving or facing new challenges?
+- apply 'benefit of doubt', when uncertain, classify lower to ensure adequate support.
+- document rationale, record why borderline decision was made
+- plan early reassessment, schedule check-in at 2 weeks instead of 4
 
 ## Dimension-specific guidance
 
@@ -301,144 +301,145 @@ For teams scoring near classification boundaries (for example, 1.7 to 1.8 or 2.4
 
 | Score | Criteria |
 |-------|----------|
-| 1 (Starting) | Non-standard IDEs, legacy VCS, no CI/CD, manual deployments, more than 70% legacy code, complex local setup |
-| 2 (Developing) | Standard IDE with some variation, Git workflows, basic CI/CD, 30% to 70% legacy code, documented setup |
-| 3 (Established) | Standardised IDE, mature Git practices, comprehensive CI/CD, less than 30% legacy, containerised or automated setup |
+| 1 (starting) | Non-standard IDEs, legacy VCS, no CI/CD, manual deployments, more than 70% legacy code, complex local setup |
+| 2 (developing) | Standard IDE with some variation, Git workflows, basic CI/CD, 30% to 70% legacy code, documented setup |
+| 3 (established) | Standardised IDE, mature Git practices, comprehensive CI/CD, less than 30% legacy, containerised or automated setup |
 
 ### Team composition scoring
 
 | Score | Criteria |
 |-------|----------|
-| 1 (Starting) | More than 50% junior, less than 20% AI experience, limited learning time, siloed knowledge |
-| 2 (Developing) | Mixed levels, 20% to 50% AI experience, some learning activities, some knowledge sharing |
-| 3 (Established) | Strong senior presence, more than 50% AI experience, active learning culture, systematic knowledge transfer |
+| 1 (starting) | More than 50% junior, less than 20% AI experience, limited learning time, siloed knowledge |
+| 2 (developing) | Mixed levels, 20% to 50% AI experience, some learning activities, some knowledge sharing |
+| 3 (established) | Strong senior presence, more than 50% AI experience, active learning culture, systematic knowledge transfer |
 
 ### Delivery context scoring
 
 | Score | Criteria |
 |-------|----------|
-| 1 (Starting) | Critical deadline less than 8 weeks, recent major changes, no time for training, uncertain management support |
-| 2 (Developing) | Moderate pressure, some recent changes, can allocate some time, supportive management |
-| 3 (Established) | Manageable workload, stable period, can dedicate time, management actively championing |
+| 1 (starting) | Critical deadline less than 8 weeks, recent major changes, no time for training, uncertain management support |
+| 2 (developing) | Moderate pressure, some recent changes, can allocate some time, supportive management |
+| 3 (established) | Manageable workload, stable period, can dedicate time, management actively championing |
 
 ### Security posture scoring
 
 | Score | Criteria |
 |-------|----------|
-| 1 (Starting) | OFFICIAL-SENSITIVE and above, significant restrictions, complex compliance, security concerns unresolved |
-| 2 (Developing) | OFFICIAL-SENSITIVE with controls, some restrictions, moderate compliance, security engaged |
-| 3 (Established) | OFFICIAL only, standard requirements, security approved, clear posture |
+| 1 (starting) | OFFICIAL-SENSITIVE and above, significant restrictions, complex compliance, security concerns unresolved |
+| 2 (developing) | OFFICIAL-SENSITIVE with controls, some restrictions, moderate compliance, security engaged |
+| 3 (established) | OFFICIAL only, standard requirements, security approved, clear posture |
 
 ### Attitudes scoring
 
 | Score | Criteria |
 |-------|----------|
-| 1 (Starting) | Sceptical or resistant, significant concerns, no champions, negative prior experience |
-| 2 (Developing) | Cautiously positive, some concerns, potential champions, mixed enthusiasm |
-| 3 (Established) | Enthusiastic, concerns managed, active champions, positive prior experience |
+| 1 (starting) | Sceptical or resistant, significant concerns, no champions, negative prior experience |
+| 2 (developing) | Cautiously positive, some concerns, potential champions, mixed enthusiasm |
+| 3 (established) | Enthusiastic, concerns managed, active champions, positive prior experience |
 
 ### Ways of working scoring
 
 | Score | Criteria |
 |-------|----------|
-| 1 (Starting) | Informal or no standards, limited testing, minimal docs, high technical debt |
-| 2 (Developing) | Documented but inconsistent standards, reasonable testing, basic docs, moderate debt |
-| 3 (Established) | Clear enforced standards, comprehensive testing, good docs, managed debt |
+| 1 (starting) | Informal or no standards, limited testing, minimal docs, high technical debt |
+| 2 (developing) | Documented but inconsistent standards, reasonable testing, basic docs, moderate debt |
+| 3 (established) | Clear enforced standards, comprehensive testing, good docs, managed debt |
 
 ---
 
 ## Common classification scenarios
 
-### Scenario 1: Legacy modernisation team
+### Scenario 1: legacy modernisation team
 
-Context: Team maintaining 15-year-old Java application, planning modernisation.
+Team maintaining 15-year-old Java application, planning modernisation.
 
-Assessment findings:
+| Assessment | Score | Description |
+|------------|-------|-------------|
+| Technical | 1 | Java 8, Subversion, limited CI/CD |
+| Team | 2 | Mixed experience, 30% used AI tools |
+| Delivery | 2 | Modernisation starting in 3 months |
+| Security | 3 | OFFICIAL, standard requirements |
+| Attitudes | 2 | Interested, see AI helping modernisation |
+| Ways of working | 2 | Basic standards, reasonable testing |
 
-- technical: Java 8, Subversion, limited CI/CD (Score: 1)
-- team: mixed experience, 30% used AI tools (Score: 2)
-- delivery: modernisation starting in 3 months (Score: 2)
-- security: OFFICIAL, standard requirements (Score: 3)
-- attitudes: interested, see AI helping modernisation (Score: 2)
-- ways of working: basic standards, reasonable testing (Score: 2)
+Average: 2.0 leading to developing classification.
 
-Average: 2.0 leading to Developing classification.
-
-Rationale: Despite legacy technical environment, team is stable, has capacity, and sees AI as helpful for modernisation. Developing classification with focus on legacy-specific techniques.
+Despite legacy technical environment, team is stable, has capacity, and sees AI as helpful for modernisation. Developing classification with focus on legacy-specific techniques.
 
 ---
 
 ### Scenario 2: High-pressure delivery team
 
-Context: Team building new citizen-facing service with go-live in 6 weeks.
+Team building new citizen-facing service with go-live in 6 weeks.
 
-Assessment findings:
+| Assessment | Score | Description |
+|------------|-------|-------------|
+| Technical | 3 | Modern stack, good CI/CD |
+| Team | 3 | Experienced, 60% used AI tools |
+| Delivery | 1 | Critical deadline in 6 weeks |
+| Security | 3 | OFFICIAL, approved |
+| Attitudes | 2 | Enthusiastic but time-poor |
+| Ways of working | 3 | Strong practices |
 
-- technical: modern stack, good CI/CD (Score: 3)
-- team: experienced, 60% used AI tools (Score: 3)
-- delivery: critical deadline in 6 weeks (Score: 1)
-- security: OFFICIAL, approved (Score: 3)
-- attitudes: enthusiastic but time-poor (Score: 2)
-- ways of working: strong practices (Score: 3)
+Average: 2.5 leading to established classification.
 
-Average: 2.5 leading to Established classification.
+However, critical deadline override applies.
 
-However: Critical deadline override applies.
+Classification: starting (deferred).
 
-Classification: Starting (deferred)
-
-Rationale: Despite strong indicators, team cannot allocate time for adoption. Recommend deferring intensive adoption until after go-live, with self-service resources available for interested individuals now.
+Despite strong indicators, team cannot allocate time for adoption. Recommend deferring intensive adoption until after go-live, with self-service resources available for interested individuals now.
 
 ### Scenario 3: Security-constrained team
 
-Context: Team working on law enforcement system with strict security requirements.
+Team working on law enforcement system with strict security requirements.
 
-Assessment findings:
+| Assessment | Score | Description |
+|------------|-------|-------------|
+| Technical | 2 | Modern but constrained environment |
+| Team | 2 | Experienced, 40% AI experience |
+| Delivery | 3 | Manageable workload |
+| Security | 1 | OFFICIAL-SENSITIVE, significant constraints |
+| Attitudes | 2 | Positive but cautious about security |
+| Ways of working | 3 | Strong practices |
 
-- technical: modern but constrained environment (Score: 2)
-- team: experienced, 40% AI experience (Score: 2)
-- delivery: manageable workload (Score: 3)
-- security: OFFICIAL-SENSITIVE, significant constraints (Score: 1)
-- attitudes: positive but cautious about security (Score: 2)
-- ways of working: strong practices (Score: 3)
+Average: 2.2 leading to developing classification.
 
-Average: 2.2 leading to Developing classification.
-
-Rationale: Developing classification but with security-focused onboarding. FDE engagement should focus on guardrails configuration and security-safe workflows. May need extended timeline for security approvals.
+Developing classification but with security-focused onboarding. FDE engagement should focus on guardrails configuration and security-safe workflows. May need extended timeline for security approvals.
 
 ### Scenario 4: Resistant team
 
-Context: Team where engineers are sceptical about AI tools.
+Team where engineers are sceptical about AI tools.
 
-Assessment findings:
-
-- technical: good environment (Score: 3)
-- team: experienced but negative prior AI experience (Score: 2)
-- delivery: reasonable capacity (Score: 2)
-- security: standard (Score: 3)
-- attitudes: 40% resistant, 30% neutral, 30% positive (Score: 1)
-- ways of working: strong (Score: 3)
+| Assessment | Score | Description |
+|------------|-------|-------------|
+| Technical | 3 | Good environment |
+| Team | 2 | Experienced but negative prior AI experience |
+| Delivery | 2 | Reasonable capacity |
+| Security | 3 | Standard |
+| Attitudes | 1 | 40% resistant, 30% neutral, 30% positive |
+| Ways of working | 3 | Strong |
 
 Average: 2.3 leading to Developing classification.
 
-Rationale: Despite good technical foundations, attitude score pulls down average. Developing classification with heavy change management focus. FDE should work with resistant individuals, demonstrating value, and building from the 30% who are positive.
+Despite good technical foundations, attitude score pulls down average. Developing classification with heavy change management focus. FDE should work with resistant individuals, demonstrating value, and building from the 30% who are positive.
 
 ### Scenario 5: Champion-ready team
 
-Context: Team with several AI enthusiasts already experimenting.
+Team with several AI enthusiasts already experimenting.
 
-Assessment findings:
+| Assessment | Score | Description |
+|------------|-------|-------------|
+| Technical | 3 | Modern, well-maintained |
+| Team | 3 | Mixed, but 3 engineers already using AI extensively |
+| Delivery | 3 | Stable, capacity available |
+| Security | 3 | OFFICIAL, approved |
+| Attitudes | 3 | Enthusiastic, multiple potential champions |
+| Ways of working | 3 | Strong practices |
 
-- technical: modern, well-maintained (Score: 3)
-- team: mixed, but 3 engineers already using AI extensively (Score: 3)
-- delivery: stable, capacity available (Score: 3)
-- security: OFFICIAL, approved (Score: 3)
-- attitudes: enthusiastic, multiple potential champions (Score: 3)
-- ways of working: strong practices (Score: 3)
 
 Average: 3.0 leading to Established classification.
 
-Rationale: Clear Established classification. Focus on enabling existing enthusiasts as champions, capturing their patterns for AI Engineering Lab repository, and connecting them to community. Light-touch support only.
+Clear Established classification. Focus on enabling existing enthusiasts as champions, capturing their patterns for AI Engineering Lab repository, and connecting them to community. Light-touch support only.
 
 ## Classification communication
 
@@ -446,10 +447,8 @@ Rationale: Clear Established classification. Focus on enabling existing enthusia
 
 When you share classification with teams:
 
-Do:
-
 - explain what the classification means for support they will receive
-- frame as "matching support to needs" not judgement
+- frame as 'matching support to needs' not judgement
 - highlight strengths identified in assessment
 - be clear about path to progression
 - answer questions openly
@@ -458,7 +457,7 @@ Do not:
 
 - present as a grade or ranking
 - compare teams to each other
-- make teams feel "behind"
+- make teams feel 'behind'
 - suggest classification is permanent
 - dismiss concerns about classification
 
@@ -471,29 +470,34 @@ Team: [Name]
 Classification: [Starting, Developing, or Established]
 Assessment date: [Date]
 
-What this means:
+What this means.
+
 [2 to 3 sentences explaining the classification and support model]
 
-Key strengths identified:
-- [Strength 1]
-- [Strength 2]
-- [Strength 3]
+Key strengths identified.
 
-Areas for development:
-- [Area 1]
-- [Area 2]
+1. [Strength 1]
+2. [Strength 2]
+3. [Strength 3]
 
-Your support plan:
-- FDE model: [Embedded, Shared, or On-demand]
-- Training: [Approach]
-- Check-in frequency: [Frequency]
+Areas for development.
 
-Next steps:
+1. [Area 1]
+2. [Area 2]
+
+Your support plan.
+
+1. FDE model: [Embedded, Shared, or On-demand]
+2. Training: [Approach]
+3. Check-in frequency: [Frequency]
+
+Next steps.
+
 1. [Immediate action]
 2. [Short-term action]
 3. [Medium-term goal]
 
-Questions? Contact [Name] at [Email]
+Questions? Contact [Name] at [email].
 ```
 
 ---
@@ -513,8 +517,8 @@ Questions? Contact [Name] at [Email]
 
 | Transition | Approval needed |
 |------------|-------------------|
-| Starting to Developing | FDE and programme team |
-| Developing to Established | FDE and programme team |
+| Starting to developing | FDE and programme team |
+| Developing to established | FDE and programme team |
 | Downgrade (any) | Programme team and delivery manager agreement |
 
 ### Documenting progression

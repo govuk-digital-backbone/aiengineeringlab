@@ -6,7 +6,7 @@
 
 ## Purpose
 
-This guide helps engineers and teams choose appropriate AI code assistants and models based on their work type, task requirements, and cost considerations. It supports the programme's goal of optimising cost to utilisation trade-offs while maintaining productivity gains.
+This guide helps engineers and teams choose appropriate AI code assistants and models based on their work type, task requirements and cost considerations. It supports the programme's goal of optimising cost to use trade-offs while maintaining productivity gains.
 
 ## Tools in scope
 
@@ -17,7 +17,7 @@ The AI Engineering Lab programme includes 4 AI code assistants:
 - Amazon Q Engineer by AWS
 - Gemini Code Assist by Google
 
-Each tool has different strengths, pricing models, and model options. This guide will be updated as comparative evidence emerges from programme deployments.
+Each tool has different strengths, pricing models and model options. This guide will be updated as comparative evidence emerges from programme deployments.
 
 ---
 
@@ -27,7 +27,7 @@ Teams are cohorted by work type during assessment. Different work types may bene
 
 ### Modernisation projects
 
-Work involving legacy system updates, language migrations, and refactoring.
+Work involving legacy system updates, language migrations and refactoring.
 
 Evidence from deployments:
 
@@ -50,7 +50,7 @@ Evidence from deployments:
 
 ### Test generation
 
-Unit tests, integration tests, BDD and Playwright tests.
+Unit tests, integration tests, Behaviour-Driven Development (BDD) and Playwright tests.
 
 Evidence from deployments:
 
@@ -80,16 +80,20 @@ Evidence: Limited specific evidence in current programme data. Will be updated a
 
 ---
 
-## Key considerations when selecting models
+## Important considerations when selecting models
 
 When choosing an AI model for your tool, consider these 2 primary characteristics.
 
 ### Model curiosity level
 
-- high curiosity: models that ask questions, dive deeper, and explore problems broadly
+Model curiosity levels include:
+
+- high curiosity: models that ask questions, dive deeper and explore problems broadly
 - low curiosity: models that stick closely to instructions without much exploration
 
 ### Model agency level
+
+Model agency levels include:
 
 - high agency: models willing to go beyond your prompt and solve problems independently
 - low agency: models that execute exactly what you ask without going further
@@ -184,13 +188,13 @@ For complex problems, consider using multiple models to validate solutions.
 
 Technique: present the same problem to different AI assistants, then have each evaluate the other's solution.
 
-Process:
+To use multi-model validation, complete these steps.
 
 1. Present the problem to Model A, for example GitHub Copilot.
 2. Present the same problem to Model B, for example Claude.
 3. Ask Model A to evaluate Model B's solution.
 4. Ask Model B to evaluate Model A's solution.
-5. Synthesise the best approach based on their analysis.
+5. Create the best approach based on their analysis.
 
 Each model will evaluate and return analysis. This approach adds overhead but can improve solution quality for important problems.
 
@@ -200,11 +204,15 @@ Each model will evaluate and return analysis. This approach adds overhead but ca
 
 ### When you are unsure
 
+When you are unsure which model to use:
+
 - start with auto mode: many platforms offer automatic model selection based on task and capacity
 - use your daily driver: Claude 4.5 Sonnet works well for most tasks
 - switch mid conversation: if you are not getting the results you want, try a different model
 
 ### Common switching scenarios
+
+You should switch models when:
 
 - stuck in a loop: switch to a different model for a fresh perspective
 - need more creativity: move from low agency to high agency models
@@ -212,6 +220,8 @@ Each model will evaluate and return analysis. This approach adds overhead but ca
 - need deeper analysis: switch to Claude 4.5 Opus or other deep reasoning models
 
 ### Context and efficiency
+
+Consider these factors for context and efficiency:
 
 - separate chat sessions: use different models for different types of tasks
 - consider response time: balance quality needs with speed requirements
@@ -221,9 +231,9 @@ Each model will evaluate and return analysis. This approach adds overhead but ca
 
 ## Premium credit management
 
-Teams learn which AI code assistant models and approaches suit different tasks, optimising cost to utilisation trade-offs and preventing licence waste.
+Teams learn which AI code assistant models and approaches suit different tasks, optimising cost to use trade-offs and preventing licence waste.
 
-Principle: use premium models for complex reasoning tasks, and smaller or standard models for specialist or routine tasks.
+Principle: use premium models for complex reasoning tasks and smaller or standard models for specialist or routine tasks.
 
 Sustainable usage patterns across billing periods ensure that premium model calls are distributed effectively without exhausting limits early, maintaining consistent impact throughout the period.
 
@@ -235,9 +245,9 @@ Credit allocation is based on team size and maturity, with monitoring set up to 
 
 The programme is designed to generate evidence-based recommendations for tool to task matching.
 
-Approach:
+The programme uses this approach:
 
-- teams are cohorted by work type, including modernisation, application development, legacy maintenance, data projects, and infrastructure
+- teams are cohorted by work type, including modernisation, application development, legacy maintenance, data projects and infrastructure
 - different tools are deployed across similar cohorts
 - differential impact is tracked as teams progress through maturity levels
 - evidence feeds back into this guide
@@ -250,6 +260,8 @@ Current status: comparative data collection is ongoing. This section will be upd
 
 ### Task specific optimisation
 
+Task-specific model recommendations include:
+
 - code explanation: high curiosity models such as Claude 4.5 Opus
 - bug fixing: balanced models such as Claude 4.5 Sonnet
 - feature implementation: lower agency models for precision
@@ -257,11 +269,15 @@ Current status: comparative data collection is ongoing. This section will be upd
 
 ### Team considerations
 
+Team-level considerations include:
+
 - consistency: establish team standards for model selection
 - documentation: some models excel at generating comprehensive documentation
 - code reviews: models with higher agency can provide more thorough feedback
 
 ### Cost and capacity
+
+Cost and capacity factors include:
 
 - auto mode: considers model availability and cost
 - peak usage: have backup model preferences
@@ -274,10 +290,10 @@ Current status: comparative data collection is ongoing. This section will be upd
 1. Begin with a balanced model such as Claude 4.5 Sonnet.
 2. Experiment with different models for the same task.
 3. Note which models work best for your specific use cases.
-4. Build your personal quiver of 3 to 4 go to models.
+4. Build your personal quiver of 3 to 4 go-to models.
 5. Do not be afraid to switch if you are not getting good results.
 
-Remember: model selection is highly personal and task dependent. What works best for one developer or use case may not work for another. The key is experimentation and building familiarity with different model characteristics.
+Remember: model selection is highly personal and task dependent. What works best for one developer or use case may not work for another. The important thing is experimentation and building familiarity with different model characteristics.
 
 ## Related documents
 
@@ -300,4 +316,4 @@ Remember: model selection is highly personal and task dependent. What works best
 
 See 'CONTRIBUTING.md' (../../CONTRIBUTING.md) for contribution guidelines.
 
-We encourage contributions from across government. Share your team's experience, lessons learned, and effective practices to help other departments.
+We encourage contributions from across government. Share your team's experience, lessons learned and effective practices to help other departments.

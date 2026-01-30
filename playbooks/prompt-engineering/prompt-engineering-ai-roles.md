@@ -5,11 +5,11 @@
 
 # Prompt engineering for different AI assistant roles
 
-How to write effective prompts to use AI assistants as a coach, design consultant, and onboarding accelerator.
+How to write effective prompts to use AI assistants as a coach, design consultant and onboarding accelerator.
 
 ## Purpose
 
-AI assistants can serve multiple roles in your development workflow beyond just generating code. This guide shows you how to write effective prompts to use AI as a learning tool, design consultant, and onboarding accelerator.
+AI assistants can serve multiple roles in your development workflow beyond just generating code. This guide shows you how to write effective prompts to use AI as a learning tool, design consultant and onboarding accelerator.
 
 Use this guide to learn how to prompt AI for:
 
@@ -33,7 +33,7 @@ The scenario: you are looking at unfamiliar code or trying to understand a compl
 
 #### A simple learning workflow (explain, demonstrate, imitate, practise)
 
-This is a straightforward way to learn a new concept with an AI assistant:
+This is a straightforward way to learn a new concept with an AI assistant.
 
 Explain: ask the AI to explain the concept.
 
@@ -44,6 +44,7 @@ Example prompt:
 What is the difference between returning a blob vs a ReadableStream?
 When would I use each approach?"
 ```
+
 Demonstrate: ask for a concrete example.
 
 Example prompt:
@@ -55,10 +56,11 @@ Include:
 - handling the stream response
 - basic error handling"
 ```
-Imitate: create something similar with guidance.
-```
-Example prompt:
 
+Imitate: create something similar with guidance.
+
+Example prompt:
+```
 "Now help me write a streaming method for our audio service.
 
 Context:
@@ -70,6 +72,7 @@ Requirements:
 - include authentication token handling
 - follow our existing service patterns"
 ```
+
 Practise: apply it independently with review.
 
 Example prompt:
@@ -81,7 +84,8 @@ Does it follow best practices?
 How is the error handling?
 Any potential issues with memory or performance?"
 ```
-Why this works: it mirrors how we naturally learn - understand the concept, see it in action, try it yourself, then refine through practice. It also naturally combines the prompting techniques in this playbook (for example: reverse prompting when asking for explanations, few-shot prompting when requesting examples, and step-by-step reasoning when reviewing your attempt).
+
+Why this works: it mirrors how we naturally learn - understand the concept, see it in action, try it yourself, then refine through practice. It also naturally combines the prompting techniques in this playbook (for example: reverse prompting when asking for explanations, few-shot prompting when requesting examples and step-by-step reasoning when reviewing your attempt).
 
 #### Understanding complex code
 
@@ -97,7 +101,8 @@ Then explain:
 3. What are the potential downsides?
 4. Can you suggest a simpler alternative for a beginner?"
 ```
-#### Learning new concepts:
+
+#### Learning new concepts
 
 Example prompt:
 ```
@@ -110,7 +115,8 @@ Explain:
 4. Then show me a more realistic example with error handling.
 5. What are common mistakes beginners make?"
 ```
-#### Understanding frameworks:
+
+#### Understanding frameworks
 
 Example prompt:
 ```
@@ -122,6 +128,7 @@ Explain it like I am coming from Flask background:
 3. Show me a realistic example with database connections.
 4. What are the benefits of this approach?"
 ```
+
 ### As a design consultant
 
 The scenario: you are at a decision point. Should you use pattern A or pattern B? Which library? Which architecture? Use the AI to explore options before committing.
@@ -139,23 +146,27 @@ Give me 3 different architectural approaches:
 4. Recommend which approach for a team of 5 engineers.
 5. Highlight the trade-offs I am making with each choice."
 ```
+
 This same approach works for any decision: comparing libraries, choosing design patterns, evaluating architectural styles. The AI gives you expert-level analysis without the bias of "we have always done it this way."
 
 #### Understanding design patterns
 
-The Gang of Four patterns are fundamental design tools. Here is a quick reference:
+The Gang of Four patterns are fundamental design tools. Here is a quick reference.
 
 Creational patterns (how objects are created):
+
 - singleton: ensure only one instance exists
 - factory: create objects without specifying exact class
 - builder: construct complex objects step by step
 
 Structural patterns (how objects are composed):
+
 - adapter: make incompatible interfaces work together
 - decorator: add behaviour to objects dynamically
 - facade: provide simple interface to complex system
 
 Behavioural patterns (how objects communicate):
+
 - strategy: select algorithm at runtime
 - template method: define skeleton, let subclasses fill details
 - observer: notify multiple objects of changes
@@ -167,7 +178,7 @@ When you are unsure which pattern fits your problem, describe your use case to t
 
 The scenario: you have just joined a team with an unfamiliar codebase. Instead of spending weeks building up context, use AI to accelerate your understanding.
 
-Using instruction files for consistency: rather than providing context in every prompt, many teams create instruction files that AI assistants automatically read. These files contain your project's standards, patterns, and requirements, ensuring every AI interaction follows your team's conventions. For detailed guidance, see the dedicated instruction-files playbook in this repository.
+Using instruction files for consistency: rather than providing context in every prompt, many teams create instruction files that AI assistants automatically read. These files contain your project's standards, patterns and requirements, ensuring every AI interaction follows your team's conventions. For detailed guidance, see the dedicated instruction-files playbook in this repository.
 
 #### Understanding the codebase
 
@@ -184,6 +195,7 @@ Help me understand:
 4. What are the patterns I should understand?
 5. What would be a good starting point to make my first contribution?"
 ```
+
 #### Tracing through flows
 
 Example prompt:
@@ -202,6 +214,7 @@ Walk me through:
 4. How would I add a new authentication method (for example, OAuth)?
 5. What are the security considerations in this implementation?"
 ```
+
 #### Understanding architectural decisions
 
 Example prompt:
@@ -215,7 +228,8 @@ Explain:
 4. How does this affect how I should write new features?
 5. What should I be careful about when modifying this code?"
 ```
-#### Learning team conventions:
+
+#### Learning team conventions
 
 Example prompt:
 ```
@@ -230,6 +244,7 @@ Help me identify:
 4. How are tests structured?
 5. What should my code look like to fit in?"
 ```
+
 ### Using instruction files (project context)
 
 The scenario: you want the AI to automatically follow your project's standards every time, without having to repeat context in every prompt.

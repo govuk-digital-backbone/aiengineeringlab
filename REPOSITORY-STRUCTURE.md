@@ -3,24 +3,18 @@
 
 # AI Engineering Lab repository
 
----
-
-> Central home for all AI Engineering Lab content across government departments.
-
----
+Central home for all AI Engineering Lab content across government departments.
 
 ## Overview
 
 This repository follows a structured approach designed to maintain clarity and scalability as the project grows. 
-
----
 
 ## Repository structure
 
 ```
 ├── README.md                    # Repository overview
 ├── CONTRIBUTING.md              # How to contribute to this repository
-├── REPOSITORY-STRUCTURE.md              # Repository structure
+├── REPOSITORY-STRUCTURE.md      # Repository structure
 │
 ├── assessment/                  # Readiness and maturity evaluation
 │   ├── maturity-assessment-framework.md

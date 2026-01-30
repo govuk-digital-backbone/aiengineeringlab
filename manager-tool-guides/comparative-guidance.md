@@ -329,7 +329,7 @@ Context: team building data pipelines with Python, SQL, and cloud services.
 
 Key requirements:
 
-- Python data libraries (for example pandas)
+- Python data libraries such as 'pandas'
 - SQL generation and optimisation
 - cloud service integration
 
@@ -433,13 +433,13 @@ The table below shows reviews to conduct and their frequency:
 
 ### Exit planning
 
-Regardless of tool selection, maintain exit capability:
+Regardless of tool selection, you should maintain exit capability by:
 
-- document tool-specific configurations
-- avoid deep proprietary integrations where possible
-- ensure code works without AI assistance
-- maintain tool-agnostic training materials
-- track contract end dates and renewal terms
+- documenting tool-specific configurations
+- avoiding deep proprietary integrations where possible
+- ensuring code works without AI assistance
+- maintaining tool-agnostic training materials
+- tracking contract end dates and renewal terms
 
 ---
 

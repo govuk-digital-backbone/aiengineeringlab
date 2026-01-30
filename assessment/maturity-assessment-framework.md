@@ -8,7 +8,7 @@
 
 This framework provides a consistent method for evaluating teams before AI Engineering Lab deployment. The assessment determines:
 
-- current team maturity level (starting, developing, or established)
+- current team maturity level at starting, developing, or established
 - appropriate support intensity from the programme
 - tailored adoption roadmap and training needs
 - specific risks and blockers to work on
@@ -40,13 +40,13 @@ Total assessment time is 5 working days per team.
 
 ### Assessment outputs
 
-The assessment produces 5 outputs:
+The assessment produces the following outputs.
 
-1. Maturity classification – starting, developing, or established.
-2. Adoption roadmap – tailored plan with milestones.
-3. Risk register entries – team-specific risks identified.
-4. Support allocation – FDE intensity and duration.
-5. Training plan – required training modules and format.
+1. Maturity classification, starting, developing, or established.
+2. Adoption roadmap, tailored plan with milestones.
+3. Risk register entries, team-specific risks identified.
+4. Support allocation, FDE intensity and duration.
+5. Training plan, required training modules and format.
 
 ---
 
@@ -54,9 +54,7 @@ The assessment produces 5 outputs:
 
 ### Level 1: starting
 
-Description: Teams with limited AI assistant experience, significant constraints, or substantial support needs.
-
-Characteristics:
+Teams with limited AI assistant experience, significant constraints, or substantial support needs.
 
 | Dimension | Indicators |
 |-----------|------------|
@@ -66,10 +64,10 @@ Characteristics:
 | Change capacity | Limited bandwidth due to delivery pressures |
 | Attitudes | Significant scepticism or resistance present |
 
-Support model:
+Support model includes:
 
-- embedded FDE support (dedicated FDE for 2 to 4 weeks)
-- intensive hands-on training (face-to-face workshops)
+- embedded FDE support, with a dedicated FDE for 2 to 4 weeks
+- intensive hands-on training, with face-to-face workshops
 - daily check-ins during initial adoption
 - high-touch change management
 
@@ -79,9 +77,7 @@ Typical duration to progress is 6 to 8 weeks to developing.
 
 ### Level 2: developing
 
-Description: Teams with some AI experience or good foundational capabilities, requiring moderate support to build proficiency.
-
-Characteristics:
+Teams with some AI experience or good foundational capabilities, requiring moderate support to build proficiency.
 
 | Dimension | Indicators |
 |-----------|------------|
@@ -91,10 +87,10 @@ Characteristics:
 | Change capacity | Reasonable bandwidth for adoption activities |
 | Attitudes | Generally positive, some concerns to work on |
 
-Support model:
+Support model includes:
 
-- shared FDE support (FDE covers multiple teams)
-- blended training (mix of self-paced and guided)
+- shared FDE support, with FDE covering multiple teams
+- blended training, with a mix of self-paced and guided
 - weekly check-ins
 - standard change management approach
 
@@ -104,7 +100,7 @@ Typical duration to progress is 4 to 6 weeks to established.
 
 ### Level 3: established
 
-Description: Teams ready for largely self-sufficient adoption with minimal direct support.
+Teams ready for largely self-sufficient adoption with minimal direct support.
 
 Characteristics:
 
@@ -116,14 +112,14 @@ Characteristics:
 | Change capacity | Good bandwidth, proactive about adoption |
 | Attitudes | Enthusiastic, potential champions identified |
 
-Support model:
+Support model includes:
 
 - self-service with on-demand FDE consultation
 - self-paced training with optional workshops
 - bi-weekly or monthly check-ins
 - light-touch change management
 
-Role in programme: Established teams often become role models and sources of champions for other teams.
+Established teams often become role models and sources of champions for other teams.
 
 ---
 
@@ -133,27 +129,27 @@ The assessment evaluates teams across six dimensions, each contributing to the o
 
 ### Dimension 1: technical environment
 
-What we assess: The technical constraints and enablers affecting AI assistant adoption.
+Technical constraints and enablers affecting AI assistant adoption are assessed.
 
 | Factor | Starting | Developing | Established |
 |--------|----------|------------|-------------|
 | IDE standardisation | Multiple IDEs, no standard | Preferred IDE with flexibility | Standardised IDE across team |
-| Source control | Complex branching, legacy VCS | Standard Git workflows | Modern Git practices, CI and CD |
+| Source control | Complex branching, legacy VCS | Standard Git workflows | Modern Git practices, CI/CD |
 | Code review process | Ad-hoc or no formal process | Basic PR reviews | Thorough reviews with standards |
 | Security tooling | Manual or no scanning | Basic SAST and dependency scanning | Comprehensive security pipeline |
 | Development environment | Complex local setup | Documented setup process | Containerised or automated setup |
 | Legacy code proportion | Over 70% legacy | 30% to 70% legacy | Under 30% legacy |
 
-Key questions:
+You should assess:
 
-- what IDEs does the team use
-- how is source control managed
+- which IDEs the team is using
+- how source control is managed
 - what security scanning is in place
 - how much of the codebase is legacy
 
 ### Dimension 2: team composition and skills
 
-What we assess: The team's skill levels and composition affecting adoption speed.
+The team's skill levels and composition affecting adoption speed are also assessed.
 
 | Factor | Starting | Developing | Established |
 |--------|----------|------------|-------------|
@@ -163,15 +159,15 @@ What we assess: The team's skill levels and composition affecting adoption speed
 | Pair programming | Rarely practiced | Sometimes practiced | Regular practice |
 | Knowledge sharing | Ad-hoc | Regular demos and sessions | Systematic knowledge transfer |
 
-Key questions:
+You should assess:
 
-- what is the team's seniority distribution
+- the team's seniority distribution
 - how many team members have used AI coding assistants
-- how does the team share knowledge
+- how the team shares knowledge
 
 ### Dimension 3: delivery context
 
-What we assess: Current delivery pressures and capacity for adoption activities.
+Current delivery pressures and capacity for adoption activities are also assessed.
 
 | Factor | Starting | Developing | Established |
 |--------|----------|------------|-------------|
@@ -181,15 +177,15 @@ What we assess: Current delivery pressures and capacity for adoption activities.
 | Management support | Limited or uncertain | Supportive | Actively championing |
 | Team stability | High turnover or recent changes | Some changes | Stable team |
 
-Key questions:
+You should assess:
 
-- what are the team's upcoming delivery commitments
-- has the team experienced significant recent changes
-- can the team allocate time for training
+- the team's upcoming delivery commitments
+- if the team has experienced significant recent changes
+- if the team can allocate time for training
 
 ### Dimension 4: security and compliance posture
 
-What we assess: Security requirements and constraints affecting tool deployment.
+Security requirements and constraints affecting tool deployment are also assessed.
 
 | Factor | Starting | Developing | Established |
 |--------|----------|------------|-------------|
@@ -198,15 +194,15 @@ What we assess: Security requirements and constraints affecting tool deployment.
 | Security team engagement | Security concerns unresolved | Security engaged | Security approved |
 | Air-gap requirements | Partial air-gap constraints | Network restrictions | Standard network access |
 
-Key questions:
+You should assess:
 
-- what classification of data does the team work with
-- are there specific security constraints
-- has security team been consulted
+- the classification of data that the team works with
+- any specific security constraints
+- if the security team been consulted
 
 ### Dimension 5: attitudes and change readiness
 
-What we assess: Team attitudes toward AI assistants and readiness for change.
+Team attitudes toward AI assistants and readiness for change are also assessed.
 
 | Factor | Starting | Developing | Established |
 |--------|----------|------------|-------------|
@@ -216,15 +212,15 @@ What we assess: Team attitudes toward AI assistants and readiness for change.
 | Previous AI experience | Negative or no experience | Neutral experience | Positive experience |
 | Job security concerns | Significant concerns | Some concerns | Concerns addressed |
 
-Key questions:
+You should assess:
 
-- how does the team feel about AI coding assistants
-- what concerns do team members have
-- are there potential champions in the team
+- how the team feels about AI coding assistants
+- concerns that team members have
+- if there are potential champions in the team
 
 ### Dimension 6: ways of working
 
-What we assess: Current development practices affecting AI integration.
+Current development practices affecting AI integration are also assessed.
 
 | Factor | Starting | Developing | Established |
 |--------|----------|------------|-------------|
@@ -234,11 +230,11 @@ What we assess: Current development practices affecting AI integration.
 | Refactoring habits | Rarely refactor | Occasional refactoring | Regular refactoring |
 | Technical debt | High technical debt | Moderate technical debt | Managed technical debt |
 
-Key questions:
+You should assess:
 
-- does the team have documented coding standards
-- what is the testing culture like
-- how is technical debt managed
+- if the team has documented coding standards
+- the team's testing culture
+- how technical debt is managed
 
 ---
 
@@ -246,7 +242,7 @@ Key questions:
 
 ### Dimension scoring
 
-Each dimension is scored 1 to 3 based on assessment findings:
+Each dimension is scored 1 to 3 based on the following assessment findings.
 
 | Score | Level | Description |
 |-------|-------|-------------|
@@ -256,7 +252,7 @@ Each dimension is scored 1 to 3 based on assessment findings:
 
 ### Overall classification
 
-Calculate the average score across all six dimensions:
+Calculate the average score across all six dimensions.
 
 | Average score | Classification |
 |---------------|----------------|
@@ -266,7 +262,7 @@ Calculate the average score across all six dimensions:
 
 ### Classification override rules
 
-Certain factors automatically constrain classification regardless of score:
+Certain factors automatically constrain classification regardless of score.
 
 | Condition | Maximum classification |
 |-----------|------------------------|
@@ -296,7 +292,7 @@ However, with a major release in 6 weeks, consider delaying intensive adoption o
 
 ### Step 1: preparation
 
-Before assessment begins:
+Use the following checklist before each assessment begins.
 
 - [ ] identify team to be assessed
 - [ ] confirm delivery manager and technical lead availability for interviews
@@ -304,7 +300,7 @@ Before assessment begins:
 - [ ] set deadline for questionnaire completion (48 hours)
 - [ ] schedule interview slots
 
-Information to gather in advance:
+Gather information on:
 
 - team size and composition
 - current project and delivery commitments
@@ -313,24 +309,22 @@ Information to gather in advance:
 
 ### Step 2: questionnaire completion
 
-Questionnaires:
-
 | Questionnaire | Recipient | Time required |
 |---------------|-----------|---------------|
 | 'Delivery manager assessment' | Delivery manager | 20 to 30 minutes |
 | 'Technical lead assessment' | Technical lead | 20 to 30 minutes |
 | 'Individual engineer assessment' | All engineers | 15 to 20 minutes |
 
-Questionnaire distribution:
+Distributed questionnaires should:
 
-- send via email or Teams with clear deadline
+- be sent via email or Teams with clear deadline
 - emphasise confidentiality of individual responses
 - explain purpose and how results will be used
 - provide contact for questions
 
 ### Step 3: interviews
 
-Delivery manager interview (45 minutes):
+An interview led by the delivery manager, lasting 45 minutes, should:
 
 - review questionnaire responses
 - explore delivery context and constraints
@@ -338,7 +332,7 @@ Delivery manager interview (45 minutes):
 - identify management support level
 - discuss realistic time allocation
 
-Technical lead interview (45 minutes):
+An interview led by the technical lead, lasting 45 minutes, should:
 
 - review questionnaire responses
 - deep-dive on technical environment
@@ -346,17 +340,17 @@ Technical lead interview (45 minutes):
 - identify technical blockers
 - discuss integration approach
 
-Interview tips:
+Interviews should:
 
 - use questionnaire responses as starting point
 - ask open-ended follow-up questions
-- listen for unstated concerns
+- identify unstated concerns
 - note specific examples given
 - identify potential champions
 
 ### Step 4: analysis and classification
 
-Analysis activities:
+Analysis activities should include the following.
 
 1. Aggregate individual engineer responses.
 2. Score each dimension based on all inputs.
@@ -365,7 +359,7 @@ Analysis activities:
 5. Identify specific risks and blockers.
 6. Draft initial roadmap recommendations.
 
-Classification review:
+Review each classification to:
 
 - discuss borderline cases with assessment team
 - consider qualitative factors not captured in scoring
@@ -373,7 +367,7 @@ Classification review:
 
 ### Step 5: roadmap planning session
 
-Session structure (60 to 90 minutes):
+Sessions should be structured as follows, lasting 60 to 90 minutes.
 
 | Segment | Duration | Content |
 |---------|----------|---------|
@@ -382,7 +376,7 @@ Session structure (60 to 90 minutes):
 | Roadmap drafting | 30 minutes | Agree milestones and support approach |
 | Next steps | 15 minutes | Confirm immediate actions |
 
-Roadmap elements to agree:
+Review roadmap elements, planning:
 
 - target go-live date for AI tools
 - training approach and scheduling
@@ -447,11 +441,11 @@ Teams are expected to progress through maturity levels during the programme.
 
 ### Reassessment process
 
-The reassessment process includes 3 types:
+The reassessment process includes:
 
-- formal reassessment: at 4-week intervals during active adoption
-- lightweight check: weekly during FDE engagement
-- progression decision: made jointly by FDE, delivery manager, and programme team
+- a formal reassessment every 4-weeks during active adoption
+- a lightweight check each week during FDE engagement
+- a progression decision, made jointly by FDE, delivery manager, and programme team
 
 ---
 
@@ -461,10 +455,10 @@ The reassessment process includes 3 types:
 
 Teams with significant security or technical constraints may require:
 
-- extended assessment period
-- security-focused deep-dive
-- custom guardrails development
-- delayed deployment pending approvals
+- an extended assessment period
+- a security-focused deep-dive
+- a custom guardrails development
+- a delayed deployment pending approvals
 
 ### Teams under delivery pressure
 
@@ -477,12 +471,12 @@ For teams with imminent deadlines:
 
 ### Distributed or multi-site teams
 
-Additional considerations:
+Consider and assess:
 
-- assess each location if practices differ
-- consider timezone impact on support
-- plan for remote training provision
-- ensure consistent tooling across sites
+- each location if practices differ
+- timezone impact on support
+- remote training provision
+- consistent tooling across sites
 
 ### Mixed-maturity teams
 
@@ -499,7 +493,7 @@ If assessment reveals significant variation within a team:
 
 ### Assessment outputs
 
-Each assessment produces:
+Each assessment should produce the following.
 
 | Output | Audience | Purpose |
 |--------|----------|---------|
@@ -512,18 +506,18 @@ Each assessment produces:
 
 Assessment data feeds into:
 
-- weekly dashboard: teams assessed, classifications, blockers
-- cohort analysis: patterns across similar teams
-- resource planning: FDE allocation and scheduling
-- risk reporting: aggregated risks across programme
+- a weekly dashboard, with teams assessed, classifications and blockers identified
+- a cohort analysis, with patterns identified across similar teams
+- resource planning, for FDE allocation and scheduling
+- risk reporting, identifying aggregated risks across programme
 
 ### Continuous improvement
 
-Assessment process improvements based on:
+Assessment process improvements are based on:
 
 - assessor feedback after each assessment
 - team feedback on assessment experience
-- accuracy of classifications (did support level prove appropriate)
+- accuracy of classifications, whether support level proved appropriate
 - time-to-proficiency by classification
 
 ---
@@ -537,5 +531,4 @@ Assessment process improvements based on:
 
 ## References
 
-- [DSIT AI Engineering Lab Programme Implementation Plan](/) - programme context
 - [Government Digital Service Capability Framework](https://www.gov.uk/government/collections/digital-data-and-technology-profession-capability-framework)

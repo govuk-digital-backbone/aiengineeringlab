@@ -142,14 +142,14 @@ Below is an example of a completed prompt using this template:
 
 ## Overview
 
-| Attribute | Value |
-|-----------|-------|
-| **Category** | testing |
-| **Tools** | All |
-| **Languages** | Language-agnostic (examples in TypeScript) |
-| **Difficulty** | Beginner |
-| **Contributed by** | AI Engineering Lab Programme Team |
-| **Last updated** | Jan 2026 |
+| Attribute | Value                                      |
+|-------|--------------------------------------------|
+| Category | testing                                    |
+| Tools | All                                        |
+| Languages | Language-agnostic (examples in TypeScript) |
+| Difficulty | Beginner                                   |
+| Contributed by | AI Engineering Lab programme team          |
+| Last updated | Jan 2026                                   |
 
 ## When to use
 
@@ -324,12 +324,6 @@ Function:
 | Missing edge cases for your domain | AI does not know domain specifics | Add "Also test for: [specific cases]" |
 | Tests are too verbose | Default style is comprehensive | Add "Keep tests concise" to prompt |
 | Mock syntax incorrect | Mocking library not specified | Specify both test framework and mock library |
-
-## Related prompts
-
-- [Integration test generation](testing/integration-tests.md) - for testing component interactions
-- [Test data generation](testing/test-data-generation.md) - for creating test fixtures
-- [BDD scenario generation](testing/bdd-scenarios.md) - for behaviour-driven tests
 
 ## Tags
 

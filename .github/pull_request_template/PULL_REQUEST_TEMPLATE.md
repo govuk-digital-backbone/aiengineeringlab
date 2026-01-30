@@ -10,7 +10,7 @@ Provide a brief description covering:
 - Any dependencies or related PRs
 -->
 
-**Related Issue:** <!-- Link to issue, e.g., Closes #123, or "N/A" for quick fixes -->
+Related Issue: <!-- Link to issue, e.g., Closes #123, or "N/A" for quick fixes -->
 
 ---
 
