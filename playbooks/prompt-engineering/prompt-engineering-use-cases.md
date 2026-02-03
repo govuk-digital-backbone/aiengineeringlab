@@ -64,7 +64,7 @@ Context:
 Act as a senior backend engineer."
 ```
 
-What happens: the AI asks clarifying questions. You answer them. This surfaces requirements you had not explicitly thought about - rate limiting, audit logging, what happens if the email is already taken by another user.
+What happens: the AI asks clarifying questions. You answer them. This surfaces requirements you had not explicitly thought about like rate limiting, audit logging, or what happens if the email is already taken by another user.
 
 Now you get a basic implementation that actually addresses real requirements.
 
@@ -98,7 +98,7 @@ Use specific exception types and meaningful error messages that do not expose in
 
 #### Round 4: security review - switch roles
 
-Here is where changing roles becomes powerful:
+This is when changing roles becomes powerful.
 
 Example prompt:
 ```
@@ -136,20 +136,20 @@ Notice our patterns:
 Now write the profile update function following these same patterns."
 ```
 
-Why this works: you get code that looks like it was written by your team, not generic AI code. It uses your error handling patterns, your logging approach, your response structure.
+This works because you get code that looks like it was written by your team, not generic AI code. It uses your error handling patterns, your logging approach and your response structure.
 
-Common mistakes to avoid:
+You should avoid:
 
-- trying to get everything in one prompt: "Write a complete, production-ready, secure, well-tested, documented function that does X". Result: generic code that does not fit your context
-- not providing examples: result is code that does not match your style and needs extensive refactoring
-- accepting code without understanding it: if you cannot explain what every line does, iterate until you can
+- trying to get everything in one promptby asking "Write a complete, production-ready, secure, well-tested, documented function that does X" as this results in generic code that does not fit your context
+- not providing examples as this results in code that does not match your style and needs extensive refactoring
+- accepting code without understanding it - if you cannot explain what every line does, iterate until you can
 
 The correct iterative approach:
 
-- build basics first
-- layer on complexity
-- switch roles for different perspectives
-- understand before moving to the next round
+- builds basics first
+- layers on complexity
+- switches roles for different perspectives
+- understands before moving to the next round
 
 ### Use case 2: refactoring complex code
 
@@ -183,13 +183,13 @@ Identify:
 Do not refactor yet - just analyse and explain what is wrong."
 ```
 
-Why analyse first: you need to understand what you are dealing with before you start changing it. The AI will spot things like:
+You should do the analysis first as you need to understand what you are dealing with before you start changing it. The AI will spot things like:
 
-- this function does 5 different things
-- it is mixing business logic with data access
-- error handling is inconsistent
-- it is making synchronous calls that could be async
-- there is duplicated logic that could be extracted
+- the function does 5 different things
+- mixed business logic with data access
+- inconsistent error handling
+- synchronous calls that could be async
+-duplicated logic that could be extracted
 
 #### Step 2: plan (create a refactoring strategy)
 
@@ -206,7 +206,7 @@ Example prompt:
 We need to do this incrementally - we cannot break production."
 ```
 
-The AI gives you a step-by-step plan. Maybe:
+The AI gives you a step-by-step plan.
 
 1. Extract database operations into a repository class.
 2. Extract validation into separate validator.
@@ -217,7 +217,7 @@ The AI gives you a step-by-step plan. Maybe:
 
 #### Step 3: execute (one step at a time)
 
-Now refactor incrementally:
+Now refactor incrementally.
 
 Example prompt:
 ```
@@ -251,19 +251,19 @@ Walk me through your reasoning, then show the refactored architecture."
 
 This surfaces the thought process, helping you understand not just the "what" but the "why" of the refactoring.
 
-Common refactoring mistakes:
+Common refactoring mistakes include:
 
-- refactoring without tests: you do not know if you broke something
-- trying to refactor everything at once: high risk of introducing bugs
-- refactoring without understanding the original behaviour: you might change functionality unintentionally
+- refactoring without tests so you do not know if you broke something
+- trying to refactor everything at once with high risk of introducing bugs
+- refactoring without understanding the original behaviour, meaning you might change functionality unintentionally
 
-The safe approach to follow:
+The safe approach to follow includes:
 
-- analyse first
-- plan incrementally
-- test after each step
-- keep backwards compatibility
-- deploy gradually
+- analysing first
+- planning incrementally
+- testing after each step
+- keeping backwards compatibility
+- deploying gradually
 
 ### Use case 3: "Something's broken - help me debug"
 
@@ -271,7 +271,7 @@ The scenario: your code worked yesterday. Now it does not. The error message is 
 
 #### The systematic debugging approach
 
-Provide complete context - do not just paste the error:
+Provide complete context - do not just paste the error.
 
 Example prompt:
 ```
@@ -299,13 +299,13 @@ Recent changes:
 Act as a senior debugger. What is likely causing this?"
 ```
 
-Why this works: you have given the AI the symptoms, context, timeline and expected vs actual behaviour - exactly what you would tell a human colleague.
+Why this works: you have given the AI the symptoms, context, timeline and expected vs actual behaviour. This is exactly what you would tell a human colleague.
 
 The AI will think through possibilities systematically, suggest tests for each hypothesis and help you identify the root cause. For complex issues, ask it to use chain of thought reasoning: "Walk me through 5 possible causes and how to test each one."
 
 #### The exploratory testing approach
 
-Before bugs happen, find them:
+Before bugs happen, find them.
 
 Example prompt:
 ```
@@ -327,7 +327,7 @@ For each, explain how it would fail and how to handle it."
 
 Note: run this before deployment. The AI will find edge cases you missed.
 
-Common debugging mistakes:
+Common debugging mistakes include:
 
 - jumping to solutions without understanding the problem: "just make it work" leads to band-aid fixes
 - not providing enough context: "why does not this work?" [pastes one line]
@@ -335,11 +335,11 @@ Common debugging mistakes:
 
 The correct systematic approach:
 
-- provide complete context
-- use chain of thought to explore hypotheses
-- test each hypothesis
-- understand the fix before applying it
-- add tests to prevent recurrence
+- provides complete context
+- uses chain of thought to explore hypotheses
+- tests each hypothesis
+- understands the fix before applying it
+- adds tests to prevent recurrence
 
 ### When AI gets it wrong (and what to do about it)
 
@@ -351,7 +351,7 @@ The problem: AI might suggest code that works perfectly in testing but contains 
 
 Example scenario: AI suggests using regex for input validation. The code works perfectly in testing, but when run through Open Web Application Security Project (OWASP) and SonarQube security checks, it flags a ReDoS (Regular Expression Denial of Service) vulnerability.
 
-The lesson: AI does not know your security standards. Always run generated code through your organisation's security checks:
+The lesson: AI does not know your security standards. Always run generated code through your organisation's security checks, for example:
 
 - SonarCloud for code quality
 - OWASP Dependency-Check for Common Vulnerabilities and Exposures (CVE) vulnerabilities
@@ -363,7 +363,7 @@ Treat AI-generated code the same way you would treat code from any new team memb
 
 The problem: AI suggests a fix. It does not work. You ask for another fix. That makes it worse. You keep iterating, and suddenly you are 20 minutes into solving what should have been a 2-minute problem.
 
-Warning signs you are in the loop:
+You may be in the loop if:
 
 - the AI's suggestions are getting increasingly complex
 - you are not understanding the changes anymore
@@ -378,20 +378,20 @@ The principle: if the AI is not helping after a few iterations, it is not going 
 
 Some tasks are faster without AI.
 
-Quick tasks your IDE handles better:
+Quick tasks your IDE handles better include:
 
 - simple variable renames (use IDE refactoring)
 - basic formatting (use your formatter)
 - obvious typo fixes
 
-Tasks requiring deep understanding:
+Tasks requiring deep understanding include:
 
 - hotfixes where you need to understand every character
 - authentication or payment processing logic
 - anything touching sensitive data handling
 - critical security-related code
 
-When you already know exactly what to do:
+You may already know exactly what to do, for example:
 
 - simple logic you have written dozens of times
 - standard patterns you know by heart
@@ -403,18 +403,17 @@ Remember: AI is a tool, not a requirement. Sometimes the simple approach is bett
 
 Best practice: integrate AI usage with your existing quality processes.
 
-AI-generated code checklist:
 
-Before committing AI-generated code:
+Before committing AI-generated code, you should check that:
 
-1. Code passes all unit tests.
-2. Security scan shows no new vulnerabilities.
-3. Code follows team style guidelines.
-4. You understand every line.
-5. Documentation is updated.
-6. New tests added for new functionality.
-7. Performance impact assessed.
-8. Accessibility requirements met (if UI code).
+- the code passes all unit tests
+- the security scan shows no new vulnerabilities
+- the code follows team style guidelines
+- you understand every line
+- the documentation is updated
+- new tests are added for new functionality
+- performance impact is assessed
+- accessibility requirements are met (if UI code)
 
 The principle: AI-generated code goes through the same quality gates as human-written code. No shortcuts.
 

@@ -16,7 +16,7 @@ Use this playbook to:
 - identify and respond to adoption issues
 - build the evidence base for future investment
 
-For the strategic measurement framework, see [Quality Strategy](quality-strategy.md).
+For the strategic measurement framework, read the [quality strategy](quality-strategy.md).
 
 ---
 
@@ -148,7 +148,7 @@ A healthy measurement approach includes both types. The following is the recomme
 - quality outcomes
 - business outcomes
 
-Common pitfall: over-reliance on lagging indicators. By the time defect rates rise or satisfaction drops, the damage is done. Prioritise leading indicators for day-to-day management.
+Common pitfalls include an over-reliance on lagging indicators. By the time defect rates rise or satisfaction drops, the damage is done. Prioritise leading indicators for day-to-day management.
 
 ### Leading indicator dashboard
 
@@ -510,7 +510,7 @@ Do not:
 - ignore quality in speed comparisons
 - extrapolate from small samples
 
-Productivity calculation example:
+Productivity calculation example.
 
 ```
 Task type: unit test creation for existing function
@@ -699,11 +699,11 @@ Problem: no access to survey tools, or surveys not permitted.
 Retrospective prompt:
 
 ```
-AI Engineering Lab check-in (5 minutes)
+AI Engineering Lab check-in (5 minutes):
 
-- What is working well with AI tools?
-- What is frustrating or not working?
-- What would help you use them more effectively?
+1. What is working well with the AI tools?
+2. What is frustrating or not working?
+3. What would help you use them more effectively?
 ```
 
 ---
@@ -733,9 +733,9 @@ Date: [Date]
 3. [Pain point 3]
 
 ### Time estimates for common tasks
-- Writing unit tests for a function: approximately [X] minutes
-- Understanding unfamiliar code: approximately [X] minutes
-- Writing boilerplate code: approximately [X] minutes
+- writing unit tests for a function: approximately [X] minutes
+- understanding unfamiliar code: approximately [X] minutes
+- writing boilerplate code: approximately [X] minutes
 
 ### Team sentiment on AI tools (pre-adoption)
 [Summary of expectations, concerns, attitudes]

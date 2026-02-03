@@ -433,7 +433,7 @@ Review vendor data handling policies and ensure they meet government requirement
 
 ### G-MA-03: Incident reporting
 
-Report the following to your security team:
+You must report the following incidents to your security team:
 
 - accidental exposure of classified or sensitive data
 - AI-generated code that introduced a security vulnerability
@@ -514,7 +514,7 @@ Rationale: [Why modification is needed]
 
 ### Self-assessment checklist
 
-Before using AI code assistants, verify the following.
+Before using AI code assistants, verify the following items.
 
 - [ ] I have completed AI code assistant training
 - [ ] I understand the data classification of my project
@@ -524,7 +524,7 @@ Before using AI code assistants, verify the following.
 
 ### Manager verification
 
-Team leads should verify the following.
+Team leads should verify the following items.
 
 - [ ] All team members have completed training
 - [ ] Department-specific guardrails are documented and communicated

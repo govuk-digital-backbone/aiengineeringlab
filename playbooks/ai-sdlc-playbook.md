@@ -20,7 +20,7 @@ It assumes basic familiarity with AI coding assistant tools but accommodates tea
 
 ## Before you start
 
-Before integrating AI coding assistants into your workflow, ensure you have completed the following:
+Before integrating AI coding assistants into your workflow, make sure you have:
 
 - completed your department's AI Engineering Lab onboarding and received tool access
 - reviewed the 'guardrails-base.md' for your organisation
@@ -78,7 +78,7 @@ Create spike documentation. When investigating unknowns, use AI coding assistant
 
 ### Anti-patterns to avoid
 
-Avoid these practices:
+You should avoid:
 
 - accepting AI-generated estimates without team validation
 - using AI coding assistants to write user stories without user research input
@@ -86,10 +86,10 @@ Avoid these practices:
 
 ### Quality indicators
 
-Good practice includes:
+You are following good practice if:
 
 - stories have clear acceptance criteria before development starts
-- technical approach is understood and agreed by the team
+- the technical approach is understood and agreed by the team
 - dependencies and risks are identified early
 
 ---
@@ -139,7 +139,7 @@ See 'context-engineering.md' for detailed guidance.
 
 ### Security considerations
 
-Remember these security practices:
+You should:
 
 - never paste secrets, credentials or API keys into AI coding assistant prompts
 - review generated code for security vulnerabilities before committing
@@ -150,7 +150,7 @@ Remember these security practices:
 
 ### Anti-patterns to avoid
 
-Avoid these practices:
+You should avoid:
 
 - accepting suggestions without understanding the code
 - ignoring security implications of generated code
@@ -160,10 +160,10 @@ Avoid these practices:
 
 ### Quality indicators
 
-Good practice includes:
+You are following good practice if:
 
-- code follows team conventions and passes linting
-- generated code has appropriate test coverage
+- the code follows team conventions and passes linting
+- the generated code has appropriate test coverage
 - security-sensitive code receives additional review
 - engineers can explain what their code does
 
@@ -198,7 +198,7 @@ Resolve dependency conflicts. When facing dependency issues, AI coding assistant
 
 ### Anti-patterns to avoid
 
-Avoid these practices:
+You should avoid:
 
 - applying suggested fixes without understanding the root cause
 - ignoring security warnings in dependency suggestions
@@ -206,12 +206,12 @@ Avoid these practices:
 
 ### Quality indicators
 
-Good practice includes:
+You are following good practice if:
 
-- builds complete successfully and consistently
+- builds are completed successfully and consistently
 - build times are reasonable and optimised
 - dependencies are up to date and secure
-- build process is documented and reproducible
+- the build process is documented and reproducible
 
 ---
 
@@ -260,7 +260,7 @@ AI-generated tests require careful review. Check that tests:
 
 ### Anti-patterns to avoid
 
-Avoid these practices:
+You should avoid:
 
 - generating tests purely to increase coverage metrics
 - accepting tests without verifying they test the right behaviour
@@ -269,7 +269,7 @@ Avoid these practices:
 
 ### Quality indicators
 
-Good practice includes:
+You are following good practice if:
 
 - tests verify actual requirements, not just implementation
 - coverage is meaningful, not just numerical
@@ -310,7 +310,7 @@ Prepare rollback procedures. Document rollback steps for each significant change
 
 ### Anti-patterns to avoid
 
-Avoid these practices:
+You should avoid:
 
 - publishing AI-generated release notes without review
 - automating release decisions without human approval
@@ -318,7 +318,7 @@ Avoid these practices:
 
 ### Quality indicators
 
-Good practice includes:
+You are following good practice if:
 
 - release notes are accurate and complete
 - deployment checklists are followed consistently
@@ -359,16 +359,16 @@ Generate deployment runbooks. Create step-by-step deployment guides for operatio
 
 ### Security considerations
 
-Remember these security practices:
+You should:
 
 - review all generated infrastructure code for security misconfigurations
 - never include credentials in infrastructure-as-code
 - validate network configurations and access controls
-- ensure logging and monitoring are properly configured
+- make sure logging and monitoring are properly configured
 
 ### Anti-patterns to avoid
 
-Avoid these practices:
+You should avoid:
 
 - deploying AI-generated infrastructure without security review
 - using overly permissive security configurations from suggestions
@@ -376,7 +376,7 @@ Avoid these practices:
 
 ### Quality indicators
 
-Good practice includes:
+You are following good practice if:
 
 - deployments are automated and repeatable
 - infrastructure follows security best practices
@@ -415,7 +415,7 @@ Optimise performance. Analyse performance data and suggest optimisation opportun
 
 ### Anti-patterns to avoid
 
-Avoid these practices:
+You should avoid:
 
 - relying solely on AI suggestions during critical incidents
 - implementing suggested fixes without understanding the problem
@@ -423,11 +423,11 @@ Avoid these practices:
 
 ### Quality indicators
 
-Good practice includes:
+You are following good practice if:
 
 - incidents are resolved quickly with clear documentation
 - runbooks are accurate and up to date
-- service meets availability and performance targets
+- the service meets availability and performance targets
 - on-call burden is manageable
 
 ---
@@ -463,7 +463,7 @@ Summarise user feedback. Analyse support tickets, feedback and error reports to 
 
 ### Anti-patterns to avoid
 
-Avoid these practices:
+You should avoid:
 
 - acting on AI-identified patterns without validation
 - creating excessive alerts based on suggestions
@@ -471,7 +471,7 @@ Avoid these practices:
 
 ### Quality indicators
 
-Good practice includes:
+You are following good practice if:
 
 - dashboards show actionable information
 - alerts indicate real problems requiring attention
@@ -486,8 +486,8 @@ Throughout all software development lifecycle phases, use Model Context Protocol
 
 - Technology Code of Practice: architecture and technology choices
 - Web Content Accessibility Guidelines 2.2 AA: accessibility requirements
-- National Cyber Security Centre guidelines: security practices
-- Government Service Standard: service design and delivery
+- National Cyber Security Centre (NCSC) guidelines: security practices
+- government service standard: service design and delivery
 
 Configure your AI Engineering Lab tools to reference these standards automatically, catching compliance issues during development rather than at assessment.
 
@@ -505,13 +505,13 @@ If you encounter challenges using AI coding assistants effectively, complete the
 ---
 
 ## Related resources
-
-- [Context engineering playbook](context-engineering.md)
-- [Model selection guidance](model-selection.md)
-- [Guardrails base configuration](../governance/guardrails-base.md)
-- [Government AI Playbook](https://www.gov.uk/government/publications/ai-playbook-for-the-uk-government)
-- [Service Manual](https://www.gov.uk/service-manual)
-- [Version1 UK Gov Example AI SDLC](https://github.com/Version1/uk-gov-example-ai-sdlc)
+Review useful resources, including:
+- [context engineering playbook](context-engineering.md)
+- [model selection guidance](model-selection.md)
+- [guardrails base configuration](../governance/guardrails-base.md)
+- [government AI Playbook](https://www.gov.uk/government/publications/ai-playbook-for-the-uk-government)
+- [service manual](https://www.gov.uk/service-manual)
+- [Version 1 UK Gov Example AI SDLC](https://github.com/Version1/uk-gov-example-ai-sdlc)
 
 ---
 

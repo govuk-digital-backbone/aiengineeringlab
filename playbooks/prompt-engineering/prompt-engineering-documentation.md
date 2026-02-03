@@ -43,11 +43,11 @@ Review this function and add inline comments only where the logic is not self-ev
 
 [paste function with complex business logic]
 
-Follow these principles:
-- do not comment what is obvious from the code
+You should:
+- not comment what is obvious from the code
 - explain why decisions were made, not what the code does
 - comment complex algorithms or non-obvious business rules
-- highlight gotchas or behaviour that might surprise
+- highlight behaviour that might surprise
 - explain workarounds for known issues
 
 Remove any existing comments that just restate the code.
@@ -109,9 +109,9 @@ Add Google-style docstrings to all functions and classes in this module:
 For each function, include:
 - one-line summary (imperative mood: 'Calculate', not 'Calculates')
 - detailed description of what it does and why it exists
-- Args with types and clear descriptions
-- Returns with type and description
-- Raises listing all exceptions (when and why they are raised)
+- args with types and clear descriptions
+- returns with type and description
+- raises listing all exceptions (when and why they are raised)
 - examples showing typical usage
 - notes for important behaviour or gotchas
 
@@ -171,7 +171,7 @@ Generate OpenAPI and Swagger documentation for these FastAPI endpoints:
 
 [paste endpoint code]
 
-Ensure the documentation includes:
+Make sure the documentation includes:
 - clear endpoint descriptions (what it does, why it exists)
 - request schema with example payloads
 - response schemas for success (200, 201) and all error cases (400, 401, 403, 404, 500)

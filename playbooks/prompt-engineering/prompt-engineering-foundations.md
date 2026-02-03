@@ -20,24 +20,24 @@ This guide applies to all engineers using AI code assistants, particularly:
 - anyone looking to improve the quality of AI-generated code
 
 
-### The Human Test: can someone else do this task
+### The human test: can someone else do this task
 
 Here is a simple test to check if your prompt has enough context.
 
 Imagine you are going on holiday for 2 weeks. You write down instructions for a colleague to complete a task while you are away. You hand them the note. Could they actually do it?
 
-If the answer is no - if they would need to interrupt your holiday to ask clarifying questions - then your AI prompt will not work either.
+If the answer is no and they would need to interrupt your holiday to ask clarifying questions, then your AI prompt will not work either.
 
 #### AI cannot read your mind, just as humans cannot
 
 The better your instructions, the better the output. This applies whether you are delegating to a junior engineer, a contractor or an AI assistant.
 
-Example of the Human Test in action:
+Example of the human test in action:
 ```
-Fails the Human Test:
+This prompt fails the human test:
 "Build the login system"
 
-Questions a human would ask:
+A human would ask:
 - which framework are we using?
 - how does authentication work in our other services?
 - where should user data be stored?
@@ -46,7 +46,7 @@ Questions a human would ask:
 - what error messages should we show?
 - how should this integrate with the existing system?
 
-Passes the Human Test:
+This prompt passes the human test:
 "Build a login endpoint for our FastAPI service that:
 - uses PostgreSQL (our existing user database)
 - follows the async pattern from our registration endpoint (see example below)
@@ -62,16 +62,16 @@ Passes the Human Test:
 
 #### What you need to give someone to complete a task properly
 
-Think about what a human needs:
+You should think about what a human needs, including:
 
-- the goal: what are they building and why
-- the environment: what tools, frameworks, databases are available
-- the constraints: what are the limits (performance, security, budget)
-- the examples: how have we solved similar problems before
-- the standards: what coding style, patterns, naming conventions
-- the integration points: what does this connect to
-- the edge cases: what special situations need handling
-- the success criteria: how will we know it is done correctly
+- the goal - what are they building and why
+- the environment - what tools, frameworks, databases are available
+- the constraints - what are the limits (performance, security, budget)
+- the examples - how have we solved similar problems before
+- the standards - what coding style, patterns, naming conventions
+- the integration points - what does this connect to
+- the edge cases - what special situations need handling
+- the success criteria - how will we know it is done correctly
 
 If you give this information to a human, they can complete the task. If you give it to AI, it can too.
 
@@ -85,25 +85,25 @@ If they could not, you are missing context. Add it before you prompt the AI.
 
 #### Why this matters for teams
 
-When everyone on your team applies the Human Test before prompting AI:
+When everyone on your team applies the human test before prompting AI:
 
 - code quality becomes consistent
 - AI-generated code fits existing patterns
-- less time wasted on back-and-forth revisions
+- less time is wasted on back-and-forth revisions
 - architecture standards are maintained
 - knowledge is not siloed (because context is explicit in prompts)
 
-Remember: AI is powerful, but it is not psychic. Treat it like you would treat a very capable colleague who has just joined your team - give them all the context they need to succeed.
+Remember: AI is powerful, but it is not psychic. Treat it like you would treat a very capable colleague who has just joined your team and give them all the context they need to succeed.
 
 ### The 5 core techniques
 
-Brief introduction to the techniques we will apply throughout:
+The 5 core techniques include:
 
-- chain of thought reasoning - getting AI to show its working. "Walk me through your thought process step by step..." or "Let's think through this systematically..."
-- few-shot prompting - teaching by example. "Reference this good example and make it look like that". Show the pattern you want repeated
-- reverse prompting - make the AI ask you questions first. "Before you get started, ask me for any information you need to do a good job". Uncover requirements before coding
-- role assignment - "Act as a senior Python engineer...". Changes expertise level and perspective
-- emphasis - add context about importance to improve output quality. "This is critical for production code that handles sensitive user data." or "Think carefully about edge cases - this function processes financial transactions." or "This is important for my team's code review - be thorough"
+- chain of thought reasoning - getting AI to show its working by asking "Walk me through your thought process step by step..." or "Let's think through this systematically..."
+- few-shot prompting - teaching by example by saying "Reference this good example and make it look like that" and show the pattern you want repeated
+- reverse prompting - make the AI ask you questions first by saying "Before you get started, ask me for any information you need to do a good job", uncovering requirements before coding
+- role assignment - saying "Act as a senior Python engineer...". changes expertise level and perspective
+- emphasis - add context about importance to improve output quality by saying "This is critical for production code that handles sensitive user data." or "Think carefully about edge cases - this function processes financial transactions." or "This is important for my team's code review - be thorough"
 
 Why this works: just as you would give a colleague more context about why something matters, AI responds to framing that indicates the stakes and required quality level.
 ### Combining techniques: the power prompt
@@ -114,21 +114,21 @@ The most effective prompts combine multiple techniques. Here is the formula:
 
 This is critical for [context about importance]. (Emphasis)
 
-Before you get started, ask me for any information you need to do a good job. (Reverse Prompting)
+Before you get started, ask me for any information you need to do a good job. (Reverse prompting)
 
-Here is an example of similar code from our codebase that shows our style: (Few-Shot Prompting)
+Here is an example of similar code from our codebase that shows our style: (Few-Shot prompting)
 [paste example]
 
-Walk me through your thought process step by step as you design the solution. (Chain of Thought)
+Walk me through your thought process step by step as you design the solution. (Chain of thought)
 
-Act as a senior [role] with expertise in [domain]. (Role Assignment)"
+Act as a senior [role] with expertise in [domain]. (Role assignment)"
 ```
 
 Real example:
 ```
 "Help me write a user authentication endpoint.
 
-This is critical for production - we handle 10,000+ logins daily.
+This is critical for production as we handle 10,000+ logins daily.
 
 Before you get started, ask me for any information you need to do a good job about security requirements, rate limiting, session management, and error handling.
 
@@ -151,57 +151,57 @@ What happens when you use the power prompt.
 7. AI writes code with appropriate expertise level (role).
 8. Code matches your existing patterns.
 
-Why this works:
+This works because:
 
 - emphasis ensures appropriate attention to quality
 - reverse prompting ensures you do not miss critical requirements
 - few-shot examples maintain consistency with your codebase
 - chain of thought catches logical errors early
 - role assignment gets appropriate expertise level and terminology
-- you spend 2 minutes setting up the prompt, save 30 minutes in revisions
+- you spend 2 minutes setting up the prompt and can save 30 minutes in revisions
 
 #### When to use which techniques
 
-You do not need all techniques every time. Here is a quick guide:
+You do not need all techniques every time. For:
 
-- simple, well-defined tasks: role and context is enough
-- new features with unknowns: reverse prompting and chain of thought
-- maintaining consistency: few-shot and context
-- complex logic: chain of thought and role assignment
-- critical code: all techniques combined
+- simple, well-defined tasks, role and context is enough
+- features with unknown, use reverse prompting and chain of thought
+- maintaining consistency, use few-shot and context
+- complex logic, use chain of thought and role assignment
+- critical code, use all techniques combined
 
 ### Context: the secret weapon
 
 The single biggest factor in getting quality output from AI assistants? Context.
 
-The difference between mediocre and excellent AI output is not which technique you use - it is how much relevant context you provide. The more context and clarity you provide, the more accurate and relevant the output will be.
+The difference between mediocre and excellent AI output is not which technique you use, it is how much relevant context you provide. The more context and clarity you provide, the more accurate and relevant the output will be.
 
 Think of context as all the information in your prompt that helps the Large Language Model (LLM) understand not just what you want, but how it should fit into your existing project. This includes your tech stack, coding standards, dependencies, constraints and the patterns you are already using.
 
 By providing clear and detailed instructions, you can get the model to generate functional, ready-to-use code. Use your domain expertise to make specific requests, mention the packages and dependencies you want, reference your existing patterns and be explicit about requirements.
 
-What to include in every prompt:
+In every prompt, you should include information about the:
 
-- tech stack: languages, frameworks, versions
-- architecture: how this fits into your system
-- constraints: performance, security, scalability requirements
-- standards: your team's coding style, naming conventions, accessibility requirements
-- dependencies: existing packages or libraries you are using
-- integration points: what this code needs to connect with
-- examples: existing code that demonstrates your patterns
-- compliance requirements: Government Digital Service (GDS) standards, Web Content Accessibility Guidelines (WCAG) guidelines, security classifications
+- tech stack including languages, frameworks, versions
+- architecture including how this fits into your system
+- constraints including performance, security, scalability requirements
+- standards including your team's coding style, naming conventions, accessibility requirements
+- dependencies including existing packages or libraries you are using
+- integration points including what this code needs to connect with
+- examples including existing code that demonstrates your patterns
+- compliance requirements, for example, Government Digital Service (GDS) standards, Web Content Accessibility Guidelines (WCAG) guidelines, security classifications
 
 Template for context-rich prompts:
 ```
-Project Context:
-- Language and Framework: [Python 3.11, FastAPI 0.104]
-- Database: [PostgreSQL with SQLAlchemy ORM]
-- Patterns we use: [async and await, dependency injection, Pydantic models]
-- Standards to follow: [GDS design patterns, WCAG 2.1 AA compliance]
-- This component will: [handle user authentication]
-- Must integrate with: [existing Redis session store, GOV.UK Verify]
-- Performance requirements: [less than 100ms response time]
-- Security requirements: [rate limiting, password hashing with bcrypt, audit logging]
+Project context:
+- language and framework: [Python 3.11, FastAPI 0.104]
+- database: [PostgreSQL with SQLAlchemy ORM]
+- patterns we use: [async and await, dependency injection, Pydantic models]
+- standards to follow: [GDS design patterns, WCAG 2.1 AA compliance]
+- this component will: [handle user authentication]
+- must integrate with: [existing Redis session store, GOV.UK Verify]
+- performance requirements: [less than 100ms response time]
+- security requirements: [rate limiting, password hashing with bcrypt, audit logging]
 
 Here is an example of our existing code structure:
 [paste example]
@@ -210,41 +210,40 @@ Task: [specific request]
 
 Before proceeding, ask me any clarifying questions about requirements, edge cases, or constraints.
 ```
+This transforms output quality because:
 
-Why this transforms output quality:
-
-- reduces back-and-forth iterations by 70% or more
-- produces code that fits your codebase immediately
-- avoids deprecated or incompatible solutions
-- gets you production-ready code faster
+- it reduces back-and-forth iterations by 70% or more
+- it produces code that fits your codebase immediately
+- it avoids deprecated or incompatible solutions
+- it gets you production-ready code faster
 - the AI makes fewer assumptions
 - you catch requirement gaps early
-- code meets compliance requirements from the start
+- the code meets compliance requirements from the start
 
 #### The context hierarchy
 
-Must have:
+You must include:
 
 - what you are building
-- tech stack and versions
+- the tech stack and versions
 - how it integrates with existing code
 - critical compliance requirements
 
-Should have:
+You should include:
 
 - example code demonstrating patterns
 - constraints and requirements
 - known edge cases
 - security and accessibility standards
 
-Nice to have:
+It's nice to include:
 
 - team conventions and style preferences
 - performance benchmarks
 - testing requirements
 - documentation standards
 
-For government projects, also include:
+For government projects, you should also include:
 
 - security classification level
 - data handling requirements

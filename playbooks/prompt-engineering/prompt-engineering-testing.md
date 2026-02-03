@@ -33,7 +33,7 @@ This guide applies to all engineers responsible for code quality:
 
 #### Unit tests - isolating individual components
 
-Example prompt for unit tests:
+Use this xample prompt for unit tests.
 ```
 Write unit tests for this user profile update function:
 
@@ -59,7 +59,7 @@ Follow AAA pattern (Arrange, Act, Assert) and include descriptive test names.
 
 #### Integration tests - testing components working together
 
-Example prompt for integration tests:
+Use this example prompt for integration tests.
 ```
 This API endpoint interacts with multiple systems:
 
@@ -88,7 +88,7 @@ Use pytest-asyncio for async testing and real test database (not mocks - we are 
 
 ### Security testing - critical for government projects
 
-Example prompt for security testing:
+Use this example prompt for security testing.
 ```
 Act as a security tester. Write tests that attempt to exploit this form submission endpoint:
 
@@ -131,7 +131,7 @@ Why this matters: government services handle sensitive citizen data. Security te
 
 ### Accessibility testing - meeting WCAG standards
 
-Example prompt for accessibility testing:
+Use this example prompt for accessibility testing.
 ```
 Write automated accessibility tests for this citizen-facing form:
 
@@ -167,7 +167,7 @@ Use pytest with playwright for browser testing and axe-core for automated access
 
 ### Performance testing
 
-Example prompt for performance testing:
+Use this example prompt for performance testing.
 ```
 Write performance tests for this public-facing endpoint:
 
@@ -207,7 +207,7 @@ Use locust for load testing and include:
 
 This is where AI really excels.
 
-Example prompt for edge case discovery:
+Use this example prompt for edge case discovery.
 ```
 Act as an expert QA engineer. For this function:
 
@@ -249,7 +249,7 @@ What you get: edge cases you never thought of. The AI combines common software f
 
 Tests rot as code evolves. Keep them fresh.
 
-Example prompt for updating tests after code changes:
+Use this example prompt for updating tests after code changes.
 ```
 I have refactored this function:
 
@@ -272,7 +272,7 @@ Changes needed:
 Mark obsolete tests clearly with comments explaining why they were removed.
 ```
 
-Example prompt for test coverage analysis:
+Use this example prompt for test coverage analysis.
 ```
 Here is my function and its tests:
 
@@ -296,21 +296,21 @@ Do not chase 100% coverage - some code (like __repr__ or logging statements) doe
 
 ### Common testing mistakes
 
-Mistakes to avoid:
+You should avoid:
 
-- only testing the happy path: real users find the unhappy paths
-- mocking everything in integration tests: then you are not actually testing integration
-- tests that depend on external services: tests should be reliable and fast
-- not testing accessibility: accessibility violations often surface in production
+- only testing the happy path as real users find the unhappy paths
+- mocking everything in integration tests as then you are not actually testing integration
+- tests that depend on external services as tests should be reliable and fast
+- not testing accessibility as accessibility violations often surface in production
 
-The comprehensive approach:
+The comprehensive approach includes:
 
-- test happy path and error cases
-- test edge cases exhaustively
-- test security implications
-- test accessibility requirements
-- keep tests maintainable and fast
-- update tests as code evolves
+- testing happy path and error cases
+- testing edge cases exhaustively
+- testing security implications
+- testing accessibility requirements
+- keeping tests maintainable and fast
+- updating tests as code evolves
 
 ---
 

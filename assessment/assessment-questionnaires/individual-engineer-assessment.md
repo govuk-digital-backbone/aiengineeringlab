@@ -54,7 +54,7 @@ What is your typical working arrangement?
 ## Your work
 
 ### 5. Time allocation
-How do you typically spend your time? (Estimate percentages - should total roughly 100%)
+How do you typically spend your time? (Estimate percentages, these should total roughly 100%)
 
 - Writing new code: _____%
 - Reviewing code: _____%

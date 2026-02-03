@@ -33,21 +33,16 @@ Understanding the difference and how your prompting approach should change.
 
 #### Chat-based assistants
 
-Chat-based assistants work like this:
-
-- you paste code snippets
-- AI suggests changes
-- you apply changes manually
-- full control over every modification
+1. You paste code snippets.
+2. AI suggests changes.
+3. You apply changes manually.
+4. You have full control over every modification.
 
 #### Agentic systems
-
-Agentic systems work like this:
-
-- AI can read and write multiple files
-- makes changes directly
-- greater automation
-- sees more project context
+1. AI can read and write multiple files.
+2. The AI makes changes directly.
+3. It has greater automation.
+4. It sees more project context.
 
 #### When to use each
 
@@ -110,9 +105,9 @@ Common agent mistakes include:
 
 Tech debt accumulates through:
 
-- accepting code without understanding
+- accepting code without understanding it
 - letting AI make decisions without guidance
-- not reviewing for consistency
+- not reviewing code for consistency
 - allowing quick fixes without proper solutions
 
 To prevent tech debt from AI-generated code, complete these steps after the agent makes changes.

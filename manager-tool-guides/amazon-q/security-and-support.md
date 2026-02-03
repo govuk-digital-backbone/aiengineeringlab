@@ -16,11 +16,11 @@ This guide provides engineering managers with practical guidance for implementin
 
 This guide is organised into the following sections.
 
-Operational guidance:
+1. Operational guidance
 - [security best practices](#security-best-practices) - policy configuration and daily security practices
 - [support and escalation](#support-and-escalation) - troubleshooting and support pathways
 
-Additional resources:
+2. Additional resources
 - [related resources](#related-resources) - links to official documentation, government guidance, and repository materials
 - [contributing](#contributing) - how to improve this guide
 - [support and contact](#support-and-contact) - getting help
@@ -62,7 +62,7 @@ Communication activities include:
 - promoting use of command before PRs
 ### For engineers
 
-Daily practices include:
+You should perform the following daily practices.
 1. Never accept suggestions containing API keys, passwords or tokens.
 2. Review all security-critical code (authentication, encryption, input validation) with extra scrutiny.
 3. Verify generated SQL queries for injection vulnerabilities.
@@ -71,12 +71,12 @@ Daily practices include:
 6. Run command before submitting PRs.
 7. Validate CloudFormation templates for security misconfigurations.
 
-When to avoid Amazon Q:
-1. Implementing cryptographic algorithms.
-2. Writing security controls (authentication, authorisation).
-3. Processing citizen data or personal information.
-4. Making critical infrastructure decisions without review.
-5. Configuring production IAM policies without validation.
+Avoid Amazon Q when:
+- implementing cryptographic algorithms
+- writing security controls (authentication, authorisation)
+- processing citizen data or personal information
+- making critical infrastructure decisions without review
+- configuring production IAM policies without validation
 
 AWS-specific security considerations include:
 - verifying S3 bucket policies do not allow public access
@@ -84,23 +84,24 @@ AWS-specific security considerations include:
 - ensuring security groups follow least-privilege network access
 - validating KMS key policies and encryption settings
 - reviewing CloudWatch logging and monitoring configurations
+
 ## Support and escalation
 
 ### Engineer support
 
-Tier 1 self-service resources:
+Tier 1 self-service resources include:
 - Amazon Q Engineer documentation
-- getting started guide
+- a getting started guide
 - AWS re:Post for Amazon Q
-- internal knowledge base (if established)
+- an internal knowledge base (if established)
 
-Tier 2 team support options:
-- internal Slack or Teams channel
-- champion network
+Tier 2 team support options include:
+- an internal Slack or Teams channel
+- a champion network
 - weekly office hours
 
-Tier 3 AWS support options:
-- AWS Support Center (requires AWS Support plan)
+Tier 3 AWS support options include:
+- the AWS Support Center (requires AWS Support plan)
 - response time depends on support tier (Engineer, Business, Enterprise)
 - Amazon Q engineer Pro includes enhanced support
 
@@ -110,7 +111,7 @@ Tier 3 AWS support options:
 
 Symptoms include:
 - no autocomplete suggestions while typing
-- extension appears inactive
+- the extension appearing inactive
 
 Follow these steps to resolve the issue.
 
@@ -124,7 +125,7 @@ Follow these steps to resolve the issue.
 #### Q Chat not responding
 
 Symptoms include:
-- chat window opens but no responses
+- the chat window opening but no responses
 - error messages in chat interface
 
 Follow these steps to resolve the issue.
@@ -139,9 +140,9 @@ Follow these steps to resolve the issue.
 #### Agent mode failures
 
 Symptoms include:
-- commands fail to complete
+- commands failing to complete
 - timeout errors or incomplete work
-- agent gets stuck in loops
+- agent getting stuck in loops
 
 Follow these steps to resolve the issue.
 
@@ -155,8 +156,8 @@ Follow these steps to resolve the issue.
 #### Security scan issues
 
 Symptoms include:
-- command fails or returns no results
-- scan takes very long time
+- the command failing or returning no results
+- scan taking a very long time
 - false positives in scan results
 
 Follow these steps to resolve the issue.
@@ -170,9 +171,9 @@ Follow these steps to resolve the issue.
 #### Authentication problems
 
 Symptoms include:
-- cannot connect to IAM Identity Center
+- being unable to connect to IAM Identity Center
 - 'Unauthorised' errors
-- license not recognised
+- an unrecognised license
 
 Follow these steps to resolve the issue.
 
@@ -187,9 +188,9 @@ Follow these steps to resolve the issue.
 #### Poor suggestion quality
 
 Symptoms include:
-- suggestions do not match project patterns
+- the suggestions not matching project patterns
 - irrelevant or incorrect code generated
-- AWS SDK calls use outdated patterns
+- AWS SDK calls using outdated patterns
 
 Follow these steps to resolve the issue.
 
@@ -267,7 +268,7 @@ Why it's better:  specifies exact resources, actions needed, and security princi
 
 General tips for better prompts with Amazon Q include:
 - being specific about AWS services and versions
--  resource names and ARNs when known
+- providing resource names and ARNs when known
 - mentioning error handling and edge cases
 - specifying IAM permission requirements
 - referencing AWS best practices explicitly
@@ -277,7 +278,7 @@ General tips for better prompts with Amazon Q include:
 
 Symptoms include:
 - slow suggestion generation
-- IDE lagging when Amazon Q active
+- the IDE lagging when Amazon Q active
 
 Follow these steps to resolve the issue.
 
@@ -291,7 +292,7 @@ Follow these steps to resolve the issue.
 #### Enterprise-specific issues
 
 Symptoms include:
-- license assignment not working
+- the license assignment not working
 - policy changes not taking effect
 - usage metrics not appearing
 
@@ -312,7 +313,7 @@ An engineer should report immediately if they discover or accept code containing
 - data protection violations
 - insecure AWS configurations
 
-Take the following immediate actions.
+They must take the following immediate actions.
 
 1. Do not commit the code.
 2. Report to your security team using standard incident process.
@@ -329,7 +330,7 @@ Follow-up activities include:
 ## Related resources
 
 ### Official AWS resources
-
+Official AWS resources include: 
 - Amazon Q Engineer documentation - complete official documentation
 - Amazon Q Engineer features - feature overview and capabilities
 - getting started with Amazon Q - initial setup guides
@@ -337,26 +338,26 @@ Follow-up activities include:
 - AWS re:Post for Amazon Q - community questions and answers
 
 ### Enterprise and security
-
+Enterprise and security resources include: 
 - managing Amazon Q in your organisation - IAM and access control
 - Amazon Q security - security features and best practices
 - content exclusions - configuring what Amazon Q can access
 - AWS Artifact - compliance reports and certifications
 
 ### Government procurement
-
+Government procurement resources include:
 - Crown Commercial Service G-Cloud 14 - UK government cloud services framework
 - AWS on G-Cloud - search for AWS services including Amazon Q
 - TechUK framework - alternative procurement route
 
 ### NCSC guidance
-
+NCSC guidance includes:
 - cloud security principles - assessing cloud services
 - secure development and deployment guidance - security best practices
 - vulnerability disclosure - handling security issues
 
 ### Repository resources
-
+Repository resources include:
 - AI SDLC playbook - integrating AI Engineering Lab tools across development lifecycle
 - model selection playbook - choosing appropriate tools for tasks
 - GitHub Copilot manager guide - complementary tool for inline completions

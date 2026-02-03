@@ -19,15 +19,15 @@ Use this library to:
 
 ### Finding prompts
 
-1. Browse by category - Navigate to the relevant folder for your task type.
-2. Search - Use repository search for specific keywords.
+1. Browse by category by navigating to the relevant folder for your task type.
+2. Use the repository search for specific keywords.
 
 ### Using prompts
 
-1. Read the full prompt entry - Understand the context and when to use it.
-2. Adapt to your situation - Replace placeholders, adjust for your codebase.
-3. Iterate - Use the prompt as a starting point, refine based on results.
-4. Provide context - Prompts work best with good surrounding context.
+1. Read the full prompt entry to understand the context and when to use it.
+2. Adapt to your situation by replacing placeholders text and adjusting for your codebase.
+3. Iterate by using the prompt as a starting point, refine based on results.
+4. Provide context as prompts work best with good surrounding context.
 
 ### Contributing prompts
 
@@ -110,59 +110,57 @@ Contribute a prompt when you have:
 | Format | Specify desired output structure |
 | Iteration | Refine based on initial results |
 
-See [Prompt Engineering - How to Get the Best Out of Your AI Code Assistant: A Complete Playbook](../playbooks/prompt-engineering.md) for further tips.
-
 ### Iterating on prompts
 
 If results are not what you expected:
 
-1. Check your context - Did you provide enough information?
-2. Clarify constraints - Were requirements explicit?
-3. Try rephrasing - Different wording may help.
-4. Break it down - Smaller requests may work better.
-5. Add examples - Show what you want.
-6. Try a different approach - Ask differently.
+1. Check your context, did you provide enough information?
+2. Clarify constraints, were requirements explicit?
+3. Try rephrasing, different wording may help.
+4. Break it down, smaller requests may work better.
+5. Add examples, show what you want.
+6. Try a different approach, ask differently.
 
 ---
 
 ## Tool-specific notes
 
-### GitHub Copilot:
-
+### GitHub Copilot
+You should use:
 - inline suggestions work best with clear code context
-- use comments to guide suggestions
+- comments to guide suggestions
 - chat mode for longer explanations and generation
 - Copilot Edits for multi-file changes
 
-### Claude Code:
-
+### Claude Code
+Claude Code:
 - excels at longer, more complex prompts
-- strong at explaining and documenting
-- good multi-file context awareness
-- use CLAUDE.md for project context
+- is strong at explaining and documenting
+- has good multi-file context awareness
+- can use CLAUDE.md for project context
 
 ### Amazon Q Engineer:
-
-- strong AWS service integration
-- good for infrastructure as code
-- security scanning built-in
-- effective for Java/.NET modernisation
+Amazon Q Engineer:
+- provides strong AWS service integration
+- is good for infrastructure as code
+- has security scanning built-in
+- is effective for Java/.NET modernisation
 
 ### Gemini Code Assist:
-
-- good for GCP-related tasks
-- strong code explanation capabilities
-- effective for large codebase understanding
-- use for code customisation with your repos
+Gemini Code Assist:
+- is good for GCP-related tasks
+- has strong code explanation capabilities
+- is effective for large codebase understanding
+- works well for code customisation with your repos
 
 ---
 
 ## Related documents
-
-- [Prompt template](prompt-template.md) - Template for contributing prompts
-- [Context engineering playbook](../playbooks/context-engineering.md) - Providing effective context
-- [AI-SDLC playbook](../playbooks/ai-sdlc-playbook.md) - Using AI in development workflow
-- [Guardrails base](../governance/guardrails-base.md) - Security boundaries for prompts
+Related documents include:
+- [prompt template](prompt-template.md) - template for contributing prompts
+- [context engineering playbook](../playbooks/context-engineering.md) - provides effective context
+- [AI-SDLC playbook](../playbooks/ai-sdlc-playbook.md) - using AI in development workflow
+- [guardrails base](../governance/guardrails-base.md) - security boundaries for prompts
 
 ## References
 

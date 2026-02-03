@@ -108,7 +108,7 @@ Best models: Claude 4.5 Haiku, Gemini 3 Pro or Flash.
 
 Characteristics: fast response times, solid code quality, medium agency.
 
-Use when:
+Use these models for:
 
 - making quick code changes
 - simple bug fixes
@@ -121,13 +121,13 @@ Best models: GPT-5.2, Claude Opus 4.5.
 
 Characteristics: very high curiosity, excellent at reasoning through complex problems.
 
-Use when:
+Use these models for:
 
 - approaching a new codebase
 - working on unfamiliar technologies
-- need broad exploration of solutions
+- broad exploration of solutions
 - complex architectural decisions
-- want the model to think outside the box
+- thinking outside the box
 
 ### Daily driver for most tasks
 
@@ -135,12 +135,12 @@ Best model: Claude 4.5 Sonnet.
 
 Characteristics: strong reasoning, excellent code generation, balanced agency.
 
-Use when:
+Use this model for:
 
 - general development work
 - building features
 - code reviews and explanations
-- most coding tasks that need reliable, high quality output
+- coding tasks that need reliable, high quality output
 
 ### Precise, instruction-following tasks
 
@@ -148,12 +148,12 @@ Best model: Claude 4.5 Sonnet or older versions for lower agency.
 
 Characteristics: balanced agency, executes what you ask for.
 
-Use when:
+Use this model for:
 
-- you want stricter adherence to requirements
+- stricter adherence to requirements
 - simple, well defined tasks
-- do not want the model to add extra features
-- need more predictable output
+- avoiding extra features
+- more predictable outputs
 
 ### Creative problem solving
 
@@ -161,12 +161,12 @@ Best models: Claude 4.5 Opus or GPT-5.2 (Thinking).
 
 Characteristics: higher agency, goes above and beyond, validates solutions.
 
-Use when:
+Use these models for:
 
-- want the model to suggest improvements
-- need alternative approaches explored
-- benefit from additional testing and validation
-- want comprehensive solutions
+- suggesting improvements
+- exploring alternative approaches
+- additional testing and validation
+- comprehensive solutions
 
 ---
 
@@ -204,28 +204,28 @@ Each model will evaluate and return analysis. This approach adds overhead but ca
 
 ### When you are unsure
 
-When you are unsure which model to use:
+When you are unsure which model to use, you should:
 
-- start with auto mode: many platforms offer automatic model selection based on task and capacity
-- use your daily driver: Claude 4.5 Sonnet works well for most tasks
-- switch mid conversation: if you are not getting the results you want, try a different model
+- start with auto mode as many platforms offer automatic model selection based on task and capacity
+- use your daily driver, for example, Claude 4.5 Sonnet works well for most tasks
+- switch models mid conversation if you are not getting the results you want
 
 ### Common switching scenarios
 
-You should switch models when:
+You should switch models when you:
 
-- stuck in a loop: switch to a different model for a fresh perspective
-- need more creativity: move from low agency to high agency models
-- want faster responses: switch to GPT-5.2 or Gemini 3.5 Pro
-- need deeper analysis: switch to Claude 4.5 Opus or other deep reasoning models
+- are stuck in a loop and need a different model for a fresh perspective
+- need more creativity from high agency models
+- want faster responses from GPT-5.2 or Gemini 3.5 Pro
+- need deeper analysis from Claude 4.5 Opus or other deep reasoning models
 
 ### Context and efficiency
 
-Consider these factors for context and efficiency:
+For context and efficiency, consider:
 
-- separate chat sessions: use different models for different types of tasks
-- consider response time: balance quality needs with speed requirements
-- match verbosity preference: some models are more verbose than others
+- separate chat sessions, using different models for different types of tasks
+- response time, balancing quality needs with speed requirements
+- matching verbosity preference, some models are more verbose than others
 
 ---
 
@@ -245,7 +245,7 @@ Credit allocation is based on team size and maturity, with monitoring set up to 
 
 The programme is designed to generate evidence-based recommendations for tool to task matching.
 
-The programme uses this approach:
+The programme is structured so that:
 
 - teams are cohorted by work type, including modernisation, application development, legacy maintenance, data projects and infrastructure
 - different tools are deployed across similar cohorts
@@ -262,26 +262,26 @@ Current status: comparative data collection is ongoing. This section will be upd
 
 Task-specific model recommendations include:
 
-- code explanation: high curiosity models such as Claude 4.5 Opus
-- bug fixing: balanced models such as Claude 4.5 Sonnet
-- feature implementation: lower agency models for precision
-- architecture design: high curiosity and high agency models
+- code explanation using high curiosity models such as Claude 4.5 Opus
+- bug fixing using balanced models such as Claude 4.5 Sonnet
+- feature implementation using lower agency models for precision
+- architecture design using high curiosity and high agency models
 
 ### Team considerations
 
 Team-level considerations include:
 
-- consistency: establish team standards for model selection
-- documentation: some models excel at generating comprehensive documentation
-- code reviews: models with higher agency can provide more thorough feedback
+- consistency by establishing team standards for model selection
+- documentation through models that excel at generating comprehensive documentation
+- code reviews by models with higher agency that can provide more thorough feedback
 
 ### Cost and capacity
 
 Cost and capacity factors include:
 
-- auto mode: considers model availability and cost
-- peak usage: have backup model preferences
-- budget constraints: balance model capability with usage costs
+- auto mode, considering model availability and cost
+- peak usage with backup model preferences
+- budget constraints that balance model capability with usage costs
 
 ---
 
@@ -296,21 +296,21 @@ Cost and capacity factors include:
 Remember: model selection is highly personal and task dependent. What works best for one developer or use case may not work for another. The important thing is experimentation and building familiarity with different model characteristics.
 
 ## Related documents
-
-- 'GitHub Copilot Guide' (../manager-tool-guides/copilot/README.md)
-- 'Amazon Q Engineer Guide' (../manager-tool-guides/amazon-q/README.md)
-- 'Tool Comparative Guidance' (../manager-tool-guides/comparative-guidance.md) to select appropriate tools
-- 'Prompt Library' (../prompt-library/README.md) for ready to use examples
+Review useful resources, including:
+- [GitHub Copilot guide](../manager-tool-guides/copilot/README.md)
+- [Amazon Q engineer guide](../manager-tool-guides/amazon-q/README.md)
+- [tool comparative guidance](../manager-tool-guides/comparative-guidance.md) to select appropriate tools
+- [prompt library](../prompt-library/README.md) for ready to use examples
 
 ---
 
 ### Vendor documentation
 
-- 'Claude API Documentation' (https://docs.anthropic.com/claude/docs) - official Anthropic Claude documentation
-- 'OpenAI API Documentation' (https://platform.openai.com/docs) - GPT models and API reference
-- 'Google AI Studio Documentation' (https://ai.google.dev/gemini-api/docs) - Gemini models documentation
-- 'Anthropic Prompt Engineering Guide' (https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering) - Claude specific prompting techniques
-- 'OpenAI Prompt Engineering Guide' (https://platform.openai.com/docs/guides/prompt-engineering) - best practices for GPT models
+- [Claude API Documentation](https://docs.anthropic.com/claude/docs) - official Anthropic Claude documentation
+- [OpenAI API Documentation](https://platform.openai.com/docs) - GPT models and API reference
+- [Google AI Studio Documentation](https://ai.google.dev/gemini-api/docs) - Gemini models documentation
+- [Anthropic Prompt Engineering Guide](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering) - Claude specific prompting techniques
+- [OpenAI Prompt Engineering Guide](https://platform.openai.com/docs/guides/prompt-engineering) - best practices for GPT models
 
 ## Contributing
 

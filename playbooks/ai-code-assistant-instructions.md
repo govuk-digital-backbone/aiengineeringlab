@@ -26,13 +26,13 @@ This playbook covers:
 
 ### Who should use this playbook
 
-Primary audience includes:
+The primary audience includes:
 
 - software engineers using AI code assistants on government projects
 - technical leads establishing coding standards
 - DevOps engineers setting up repositories
 
-Secondary audience includes:
+The secondary audience includes:
 
 - service owners ensuring compliance requirements are met
 - security teams reviewing AI tool usage
@@ -51,11 +51,11 @@ This playbook covers:
 
 Related documentation includes:
 
-- 'GDS Service Manual' at https://www.gov.uk/service-manual
-- 'Government Digital Service Standard' at https://www.gov.uk/service-manual/service-standard
-- 'GOV.UK Design System' at https://design-system.service.gov.uk/
-- 'WCAG 2.1 Guidelines' at https://www.w3.org/WAI/WCAG21/quickref/
-- 'NCSC Cloud Security Guidance' at https://www.ncsc.gov.uk/collection/cloud-security
+- [GDS Service Manual](https://www.gov.uk/service-manual)
+- [Government Digital Service Standard](https://www.gov.uk/service-manual/service-standard)
+- [GOV.UK Design System](https://design-system.service.gov.uk/)
+- [WCAG 2.1 Guidelines](https://www.w3.org/WAI/WCAG21/quickref/)
+- [NCSC Cloud Security Guidance](https://www.ncsc.gov.uk/collection/cloud-security)
 
 ## Safety and handling
 
@@ -102,11 +102,11 @@ Example snippet (copy and paste into a repo instruction file):
 
 ```markdown
 ## Government requirements
-- Digital Service Standard: https://www.gov.uk/service-manual/service-standard
-- Service Manual: https://www.gov.uk/service-manual
-- Accessibility: WCAG 2.1 AA (reference: https://www.w3.org/WAI/WCAG21/quickref/)
-- Security classification: OFFICIAL (do not include secrets or production data in prompts)
-- Data protection: no PII in application logs and minimise collected data
+- digital Service Standard: https://www.gov.uk/service-manual/service-standard
+- service manual: https://www.gov.uk/service-manual
+- accessibility: WCAG 2.1 AA (reference: https://www.w3.org/WAI/WCAG21/quickref/)
+- security classification: OFFICIAL (do not include secrets or production data in prompts)
+- data protection: no PII in application logs and minimise collected data
 ```
 
 If you need detailed organisational policy text, keep it in governance documents and link to it from the instruction file.
@@ -129,9 +129,9 @@ Use personal instructions for:
 
 Example content includes:
 
-- 'Use British English spelling'
-- 'Prefer functional programming patterns'
-- 'Always include JSDoc comments for public APIs'
+- 'use British English spelling'
+- 'prefer functional programming patterns'
+- 'always include JSDoc comments for public APIs'
 - 'I am experienced with Python but new to TypeScript'
 
 ### Repository custom instructions
@@ -149,11 +149,11 @@ Use repository instructions for:
 
 Example content includes:
 
-- 'This project uses FastAPI 0.104 with async and await patterns'
-- 'Always run `npm run lint` before committing'
-- 'Use the repository pattern for database access'
+- 'this project uses FastAPI 0.104 with async and await patterns'
+- 'always run `npm run lint` before committing'
+- 'use the repository pattern for database access'
 - 'API responses must be under 200ms'
-- 'Security classification: OFFICIAL'
+- 'security classification: OFFICIAL'
 
 ### Organisation custom instructions
 
@@ -170,10 +170,10 @@ Use organisation instructions for:
 
 Example content includes:
 
-- 'All projects must meet WCAG 2.1 AA standards'
-- 'Use GOV.UK Design System for public-facing services'
-- 'Follow GDS Service Manual guidance'
-- 'All user actions must be audit logged'
+- 'all projects must meet WCAG 2.1 AA standards'
+- 'use GOV.UK Design System for public-facing services'
+- 'follow GDS Service Manual guidance'
+- 'all user actions must be audit logged'
 
 ## Tool support and file locations
 
@@ -250,8 +250,8 @@ Security requirements include:
 Government and enterprise requirements include:
 
 - compliance standards (WCAG 2.1 AA, GDS, GDPR and similar)
-- Digital Service Standard requirements
-- GDS Service Manual alignment
+- digital service standard requirements
+- GDS service manual alignment
 - audit and logging requirements
 - data protection rules
 - branding guidelines (GOV.UK Design System)
@@ -302,16 +302,16 @@ Performance and quality includes:
 - [Your communication preferences]
 
 ## Coding preferences
-- [Your preferred languages and frameworks]
-- [Code style preferences]
-- [Documentation preferences]
+- [your preferred languages and frameworks]
+- [code style preferences]
+- [documentation preferences]
 
 ## My experience level
 - experienced with: [languages and tools you know well]
 - learning: [areas you're developing]
 
 ## Accessibility
-- [Any specific accessibility needs for how AI communicates with you]
+- [any specific accessibility needs for how AI communicates with you]
 ```
 
 ### Repository instructions template
@@ -326,14 +326,14 @@ Performance and quality includes:
 - digital service standard: [which points apply - reference https://www.gov.uk/service-manual/service-standard]
 - GDS service manual: [relevant sections - reference https://www.gov.uk/service-manual]
 - WCAG 2.1 AA compliance required
-- Security classification: [OFFICIAL, SECRET and similar]
+- security classification: [OFFICIAL, SECRET and similar]
 - GDPR compliance required
 
 ## Tech stack
-- [Language and version]
-- [Framework and version]
-- [Database]
-- [Key dependencies]
+- [language and version]
+- [framework and version]
+- [database]
+- [key dependencies]
 
 ## Critical requirements
 
@@ -346,11 +346,11 @@ All code must meet these requirements:
 - no PII in application logs
 
 ## Code style
-- [Style guide to follow - for example, PEP 8, Airbnb JavaScript]
+- [style guide to follow - for example, PEP 8, Airbnb JavaScript]
 - British English in all code comments and documentation
-- [Documentation requirements]
-- [Naming conventions]
-- [File organisation]
+- [documentation requirements]
+- [maming conventions]
+- [file organisation]
 
 ## Architecture and patterns
 [Description of important patterns - repositories, services and similar]
@@ -433,9 +433,9 @@ All projects within [Organisation] must follow these standards.
 - error messages must be actionable and clear
 
 ### Coding standards
-- [Style guides that apply to all projects]
-- [Documentation requirements]
-- [Code review process]
+- [style guides that apply to all projects]
+- [documentation requirements]
+- [code review process]
 - all code must be peer reviewed before merging
 
 ### Security policy
@@ -500,11 +500,11 @@ As your project evolves, keep the instructions current.
 
 Review activities include:
 
-- review instruction files quarterly or when standards change
-- check instructions against current codebase
-- update for new patterns that have emerged
-- remove outdated information
-- verify links to external documentation still work
+- reviewing instruction files quarterly or when standards change
+- checking instructions against current codebase
+- updating for new patterns that have emerged
+- removing outdated information
+- verifying links to external documentation still work
 
 ### Triggers for updates
 
@@ -521,10 +521,10 @@ Update instruction files when:
 
 Ownership and responsibility includes:
 
-- assign a maintainer for each instruction file
+- assigning a maintainer for each instruction file
 - repository instructions: technical lead for that project
 - organisation instructions: senior technical leadership
-- include ownership information in the instruction file itself
+- providing ownership information in the instruction file itself
 
 ## Getting started
 

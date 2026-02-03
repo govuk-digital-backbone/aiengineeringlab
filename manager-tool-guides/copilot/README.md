@@ -19,24 +19,24 @@ Advanced AI tools should be used by:
 
 This guide is organised into the following sections.
 
-Understanding GitHub Copilot:
+1. Understanding GitHub Copilot
 
 - [What GitHub Copilot does](#what-github-copilot-does) - core capabilities and interaction modes
 - [How it compares with other AI code assistants](#how-it-compares-with-other-ai-code-assistants) - feature comparison and when to use different tools
 - [Copilot models and task suitability](#copilot-models-and-task-suitability) - choosing the right model for different tasks
 
-Implementation planning:
+2. Implementation planning
 
 - [Government-specific considerations](#government-specific-considerations) - security classifications, data residency, and procurement
 - [Getting started](#getting-started) - licensing options and installation process
 - [Training requirements](#training-requirements) - engineer and manager training programmes
 
-Managing adoption:
+3. Managing adoption
 
 - [Measuring success](#measuring-success) - quality metrics and troubleshooting
 - [Policy configuration reference](#policy-configuration-reference) - content exclusions and IDE settings
 
-Additional resources:
+4. Additional resources
 
 - [Related resources](#related-resources) - links to official documentation, government guidance, and repository materials
 - [Contributing](#contributing) - how to improve this guide
@@ -74,7 +74,7 @@ GitHub Copilot offers several ways to interact with AI assistance, each suited f
 | Copilot Workspace | Plan and implement features from issues | Feature planning, task breakdown | Enterprise only |
 | Agent mode | Autonomous task execution with approval | Complex multi-step tasks, investigations | Enterprise only |
 
-Each mode is suited to specific tasks:
+Each mode is suited to specific tasks, including:
 
 - inline suggestions for daily coding, implementing known patterns, and writing tests
 - chat for understanding unfamiliar code, debugging errors, and generating documentation
@@ -159,13 +159,13 @@ GitHub Copilot uses different models depending on the task. Understanding which 
 
 In Copilot Chat, you can select models from the model picker dropdown. When using Auto mode, Copilot automatically selects the best model based on your task and current availability.
 
-Included models (no premium requests on paid plans):
+Included models (no premium requests on paid plans) are:
 
 - GPT-4.1
 - GPT-5 mini
 - Raptor mini
 
-Premium models (consume premium requests):
+Premium models (consume premium requests) are:
 
 - all Claude models (Haiku, Sonnet, Opus variants)
 - GPT-5, GPT-5.1, GPT-5.2
@@ -329,7 +329,7 @@ Symptoms include:
 - no autocomplete suggestions while typing
 - extension appears inactive
 
-To resolve this issue:
+Follow these steps to resolve the issue.
 
 1. Verify extension is enabled and authenticated in IDE settings.
 2. Check that file type is not excluded in Copilot settings.
@@ -341,10 +341,10 @@ To resolve this issue:
 
 Symptoms include:
 
-- chat window opens but no responses
+- the chat window opening with no responses
 - error messages in chat interface
 
-To resolve this issue:
+Follow these steps to resolve the issue.
 
 1. Check GitHub service status at [githubstatus.com](https://www.githubstatus.com/).
 2. Verify license is active in GitHub organisation settings.
@@ -356,10 +356,10 @@ To resolve this issue:
 
 Symptoms include:
 
-- agent tasks fail to complete
+- agent tasks failing to complete
 - timeout errors or incomplete work
 
-To resolve this issue:
+Follow these steps to resolve the issue.
 
 1. Break down complex tasks into smaller, more specific requests.
 2. Ensure agent has sufficient permissions for requested operations.
@@ -373,10 +373,10 @@ For detailed troubleshooting of Copilot agent mode specifically, see [Troublesho
 
 Symptoms include:
 
-- suggestions do not match project patterns
+- suggestions not matching project patterns
 - irrelevant or incorrect code generated
 
-To resolve this issue:
+Follow these steps to resolve the issue.
 
 1. Provide more context via descriptive comments and function signatures.
 2. Ensure relevant imports and dependencies are visible in file.
@@ -392,11 +392,11 @@ Understanding how to communicate with Copilot effectively can dramatically impro
 Symptoms include:
 
 - slow suggestion generation
-- IDE lagging when Copilot active
+- IDE lagging when Copilot is active
 
-To resolve this issue:
+Follow these steps to resolve the issue.
 
-1. Reduce number of active IDE extensions.
+1. Reduce the number of active IDE extensions.
 2. Check network connectivity and latency.
 3. Clear extension cache and reload IDE.
 4. Update to latest Copilot extension version.
@@ -410,7 +410,7 @@ Symptoms include:
 - policy changes not taking effect
 - usage metrics not appearing
 
-To resolve this issue:
+Follow these steps to resolve the issue.
 
 1. Verify user is member of correct GitHub organisation.
 2. Check seat assignment in organisation Copilot settings.
@@ -426,18 +426,18 @@ If an engineer discovers or accepts code containing:
 - known security vulnerabilities
 - data protection violations
 
-Immediate actions:
+They must take the following immediate actions.
 
 1. Do not commit the code.
 2. Report to your security team using standard incident process.
 3. Document the suggestion for analysis.
 4. Update content exclusions if pattern-based.
 
-Follow-up:
+They must follow-up by:
 
-- review similar code in recent commits
-- update team training materials
-- share learning without blame
+- reviewing similar code in recent commits
+- updating the team training materials
+- sharing learning without blame
 
 ## Policy configuration reference
 
@@ -499,7 +499,7 @@ Disable Copilot for specific file types where suggestions are not helpful or may
 
 ### Organisation-level settings
 
-To configure organisation-level settings:
+Configure your organisation-level settings.
 
 1. Navigate to Settings → Copilot.
 2. Enable Copilot for organisation.
@@ -510,33 +510,34 @@ To configure organisation-level settings:
 ## Related resources
 
 ### Official GitHub resources
+Official GitHub resources include:
 
 - [GitHub Copilot documentation](https://docs.github.com/en/copilot) - complete official documentation
 - [Copilot model comparison](https://docs.github.com/en/copilot/using-github-copilot/asking-github-copilot-questions-in-your-ide#ai-models-for-copilot-chat) - detailed model capabilities and selection
 - [Copilot Trust Center](https://resources.github.com/copilot-trust-center/) - security, privacy, and compliance information
-- [Getting started with Copilot](https://docs.github.com/en/copilot/getting-started-with-github-copilot) - initial setup guides
+- [getting started with Copilot](https://docs.github.com/en/copilot/getting-started-with-github-copilot) - initial setup guides
 - [Copilot best practices](https://github.blog/ai-and-ml/github-copilot/how-to-use-github-copilot-in-your-ide-tips-tricks-and-best-practices/) - tips and effective usage patterns
 
 ### Enterprise and security
-
+Enterprise and security resources include:
 - [Managing Copilot in your organisation](https://docs.github.com/en/copilot/managing-copilot/managing-github-copilot-in-your-organization) - policy configuration and administration
 - [Copilot content exclusions](https://docs.github.com/en/copilot/managing-copilot/managing-github-copilot-in-your-organization/setting-policies-for-copilot-in-your-organization/excluding-content-from-github-copilot) - configuring what Copilot can access
 - [Usage metrics and reporting](https://docs.github.com/en/copilot/managing-copilot/managing-github-copilot-in-your-organization/reviewing-usage-data-for-github-copilot-in-your-organization) - measuring adoption and impact
 
 ### Government procurement
-
+Government procurement resources include:
 - [Crown Commercial Service G-Cloud 14](https://www.crowncommercial.gov.uk/agreements/g-cloud-14) - UK government cloud services framework
 - [GitHub on G-Cloud](https://www.digitalmarketplace.service.gov.uk/) - search for GitHub Enterprise and Copilot offerings
 - [TechUK Software Reseller Framework](https://www.techuk.org/) - alternative procurement route
 
 ### NCSC guidance
-
+NCSC guidance includes:
 - [Cloud security principles](https://www.ncsc.gov.uk/collection/cloud/the-cloud-security-principles) - assessing cloud services
 - [Secure development and deployment guidance](https://www.ncsc.gov.uk/collection/developers-collection) - security best practices
 - [Vulnerability disclosure](https://www.ncsc.gov.uk/information/vulnerability-disclosure-toolkit) - handling security issues
 
 ### Repository resources
-
+Repository resources include:
 - [AI SDLC Playbook](../../playbooks/ai-sdlc-playbook.md) - integrating AI code assistants across development lifecycle
 - [Model Selection Playbook](../../playbooks/model-selection.md) - choosing appropriate models for tasks
 

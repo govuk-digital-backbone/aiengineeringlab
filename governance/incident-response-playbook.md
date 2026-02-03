@@ -74,8 +74,8 @@ The following table shows severity levels for incidents.
 
 If you discover an incident, take the following steps.
 
-1. Stop – do not continue the activity that caused or revealed the incident.
-2. Do not attempt to fix – preserve evidence and do not delete prompts, outputs or logs.
+1. Stop - do not continue the activity that caused or revealed the incident.
+2. Do not attempt to fix it - preserve evidence and do not delete prompts, outputs or logs.
 3. Report immediately through the appropriate channels in your department.
 4. Complete an initial report with the following information:
    - what happened (brief description)
@@ -107,14 +107,14 @@ The Security Team or designated incident handler will complete these steps.
 
 1. Acknowledge receipt to the reporter.
 2. Assign incident ID using format: AIENG-[YYYY]-[NNNN].
-3. Gather initial facts:
-   - confirm what occurred
-   - identify AI tool(s) involved
-   - determine data classification affected
-   - establish timeline
-4. Assign severity level using classification table above.
+3. Gather initial facts, including:
+   - confirming what occurred
+   - identifying AI tool(s) involved
+   - determining data classification affected
+   - establishing timeline
+4. Assign severity level using the classification table above.
 5. Identify incident owner responsible for resolution.
-6. Notify stakeholders per escalation matrix.
+6. Notify stakeholders using the escalation matrix.
 
 #### Escalation matrix
 
@@ -194,7 +194,7 @@ Data exposure (DE) means any incident where sensitive, confidential or personal 
 
 #### Containment verification
 
-Before proceeding to eradication, confirm:
+Before proceeding to eradication, you should confirm the following. 
 
 - [ ] Immediate threat has been neutralised
 - [ ] Affected systems or data have been isolated
@@ -250,7 +250,7 @@ Complete a post-incident report within:
 | P3 | 15 working days |
 | P4 | Included in monthly summary |
 
-Report contents:
+The report should include details about the incident.
 
 1. Executive summary – what happened, impact, resolution.
 2. Timeline – chronological sequence of events.
@@ -299,16 +299,16 @@ Scenario: An engineer accidentally includes real customer personally identifiabl
 
 #### Assessment
 
-Questions to consider:
+You should consider:
 
-- how many data subjects affected
+- how many data subjects are affected
 - what categories of personal data
-- is the AI tool provider a processor under GDPR
-- what does the vendor's DPA say about data retention
+- if the AI tool provider is a processor under GDPR
+- what the vendor's DPA says about data retention
 
 #### Containment
 
-Actions to take:
+You must:
 
 - request vendor delete session data (reference DPA terms)
 - assess notification requirements (ICO, data subjects)
@@ -333,28 +333,28 @@ Scenario: AI-generated code containing SQL injection vulnerability reaches produ
 
 #### Assessment
 
-Questions to consider:
+You should consider:
 
 - what data could be accessed via the vulnerability
 - how long has the vulnerability been in production
-- is there evidence of exploitation
+- if there is evidence of exploitation
 - what compensating controls exist (Web application firewall (WAF), input validation)
 
 #### Containment
 
-Actions to take:
+You must:
 
-- deploy hotfix or disable affected functionality
+- deploy a hotfix or disable the affected functionality
 - implement WAF rule if available
 - increase monitoring on affected endpoints
 
 #### Recovery
 
-Actions to complete:
+You must action:
 
-- full code review of AI-generated sections in the application
-- retrospective security testing
-- update code review checklist
+- a full code review of AI-generated sections in the application
+- a retrospective security testing
+- an update of the code review checklist
 
 ### Example C: API key committed to repository
 
@@ -362,16 +362,16 @@ Scenario: AI suggests code containing a hardcoded API key which is committed.
 
 #### Immediate actions
 
-1. Rotate the API key immediately – assume compromised.
+1. Rotate the API key immediately and assume it has been compromised.
 2. Check if repository is public or has been cloned.
 3. Remove from repository history (not just current version).
 
 #### Assessment
 
-Questions to consider:
+You should consider:
 
 - what does the API key provide access to
-- has the key been used since exposure
+- if the key been used since exposure
 - who has had access to the repository
 
 #### Containment
@@ -383,7 +383,7 @@ git filter-repo --invert-paths --path
 
 #### Prevention
 
-Actions to take:
+You must:
 
 - enable pre-commit hooks for secret detection
 - review Continuous Integration/Continuous Deployment (CI/CD) secret scanning configuration
@@ -402,23 +402,23 @@ Scenario: AI assistant produces unexpected output suggesting malicious prompt in
 
 #### Assessment
 
-Questions to consider:
+You should consider:
 
 - what triggered the unusual behaviour
-- was user input involved that could contain injection
-- is this a vulnerability in our application or the AI tool
+- if user input was involved that could contain injection
+- if this is a vulnerability in our application or the AI tool
 
 #### Containment
 
-Actions to take:
+You must:
 
-- review application for prompt injection vulnerabilities
+- review the application for prompt injection vulnerabilities
 - implement input sanitisation
 - consider rate limiting AI interactions
 
 #### Vendor notification
 
-Actions to take:
+You must:
 
 - report to AI tool vendor if it appears to be a tool vulnerability
 - share details (sanitised) with AI Engineering Lab for cross-government awareness

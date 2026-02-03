@@ -60,9 +60,9 @@ AI assistants receive context from multiple sources. Understanding the hierarchy
 
 ### Level 1: system and tool configuration
 
-This is organisation-wide settings and rules configured in the AI tool.
+These are organisation-wide settings and rules configured in the AI tool.
 
-How to use it:
+You should:
 
 - configure organisation coding standards
 - set up Model Context Protocol (MCP) servers for government standards (Technology Code of Practice (TCoP), Web Content Accessibility Guidelines (WCAG), National Cyber Security Centre (NCSC))
@@ -110,7 +110,7 @@ Key files to maintain:
 
 This is the broader project structure visible to the AI.
 
-Techniques:
+You should:
 
 - keep related files in logical directories
 - use consistent naming conventions
@@ -121,7 +121,7 @@ Techniques:
 
 This is the current file and its immediate relationships.
 
-Techniques:
+You should:
 
 - write clear imports at the top of files
 - include JSDoc or docstrings for functions
@@ -132,7 +132,7 @@ Techniques:
 
 This is your current prompt, selected code and cursor position.
 
-Techniques:
+You should:
 
 - be specific in your requests
 - select relevant code before prompting
@@ -174,9 +174,9 @@ src/
 ```
 
 ## Coding standards
-- [Link to or summary of coding standards]
-- [Important patterns used in this project]
-- [Testing requirements]
+- [link to or summary of coding standards]
+- [important patterns used in this project]
+- [testing requirements]
 
 ## Getting started
 [Setup instructions]
@@ -198,16 +198,16 @@ src/
 ## Design decisions
 
 ### Why [decision]
-- Context: [what situation led to this]
-- Decision: [what we chose]
-- Consequences: [trade-offs accepted]
+- context: [what situation led to this]
+- decision: [what we chose]
+- consequences: [trade-offs accepted]
 
 ## Component responsibilities
 
 ### [Component name]
-- Purpose: [what it does]
-- Interfaces: [how other components interact]
-- Patterns: [design patterns used]
+- purpose: [what it does]
+- interfaces: [how other components interact]
+- patterns: [design patterns used]
 
 ## Data flow
 [Description of how data moves through the system]
@@ -279,7 +279,7 @@ This is a [type] service for [department or purpose]. It handles [main functions
 
 ## Common tasks
 
-When asked to create a new endpoint:
+If you are asked to create a new endpoint, follow these steps.
 
 1. Add route in /src/routes.
 2. Create controller in /src/controllers.
@@ -304,10 +304,10 @@ Write a function to validate input
 
 Better prompt:
 ```
-Write a TypeScript function that validates a UK National Insurance number.
+Write a TypeScript function that validates a UK National Insurance number. It should:
 - accept a string parameter
 - return { valid: boolean, formatted: string | null }
-- valid format: Two letters, six digits, one letter (for example, AB123456C)
+- be in a valid format: Two letters, six digits, one letter (for example, AB123456C)
 - handle lowercase input
 - trim whitespace
 ```
@@ -337,13 +337,13 @@ Now convert this function:
 ### Technique 3: specify constraints
 
 ```
-Create a React component for a date picker with these constraints:
+Create a React component for a date picker that:
 - must work without JavaScript (progressive enhancement)
 - must be accessible (WCAG 2.2 AA)
 - must use GOV.UK Design System styling
-- no external dependencies beyond React
-- support date range: 1900-01-01 to today
-- locale: en-GB
+- has no external dependencies beyond React
+- supports the date range: 1900-01-01 to today
+- is in the locale: en-GB
 ```
 
 ### Technique 4: request specific output format
@@ -504,7 +504,7 @@ All repositories must include:
 
 ## Prompt standards
 
-When asking AI for code generation:
+When asking AI for code generation you should:
 
 - always specify the language and version
 - reference our coding standards document
@@ -512,12 +512,14 @@ When asking AI for code generation:
 - specify testing requirements
 
 ## Context hygiene
+You should:
 - review AI context files quarterly
 - update tool instructions when patterns change
 - remove outdated architectural decisions
 - keep examples current with latest conventions
 
 ## Security
+You should:
 - never paste code containing credentials
 - use placeholders for sensitive values
 - review AI output for accidental secret inclusion
@@ -681,7 +683,7 @@ Now create OrderRepository following the same pattern, with these methods:
 
 ### Pattern 4: the constraint-driven approach
 
-Specify what NOT to do:
+Specify what not to do:
 
 ```
 Refactor this function to improve performance.
@@ -714,15 +716,15 @@ Current function:
 ---
 
 ## Related documents
-
-- [AI-SDLC Playbook](ai-sdlc-playbook.md) - Integrating AI into development lifecycle
-- [Model Selection Playbook](model-selection.md) - Choosing the right model for tasks
-- [Prompt Library](../prompt-library/README.md) - Reusable prompt patterns
-- [Guardrails Base](../governance/guardrails-base.md) - Security boundaries
+Review useful resources, including:
+- [AI-SDLC playbook](ai-sdlc-playbook.md) - Integrating AI into development lifecycle
+- [model selection playbook](model-selection.md) - Choosing the right model for tasks
+- [prompt library](../prompt-library/README.md) - Reusable prompt patterns
+- [guardrails base](../governance/guardrails-base.md) - Security boundaries
 
 ## References
 
 - [Anthropic Prompt Engineering Guide](https://docs.anthropic.com/claude/docs/prompt-engineering)
-- [GitHub Copilot Best Practices](https://docs.github.com/en/copilot)
+- [GitHub Copilot documentation](https://docs.github.com/en/copilot)
 - [GOV.UK Design System](https://design-system.service.gov.uk/)
-- [GDS Way - Coding Standards](https://gds-way.cloudapps.digital/)
+- [GDS way - coding standards](https://gds-way.cloudapps.digital/)

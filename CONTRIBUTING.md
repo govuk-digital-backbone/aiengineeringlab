@@ -51,7 +51,7 @@ Security or governance reviews are required before merging for:
 
 ### Writing style
 
-All content must follow [GOV.UK content design principles](https://www.gov.uk/guidance/content-design/writing-for-gov-uk). Writers must:
+All content must follow [GOV.UK content design principles](https://www.gov.uk/guidance/content-design/writing-for-gov-uk). Contributors must:
 
 - use plain English, avoid jargon, and explain technical terms on first use
 - use active voice, such as 'Review the code' instead of 'The code should be reviewed'
@@ -73,16 +73,19 @@ Lists must use:
 - bullet points for unordered items
 - numbered lists for sequential steps only
 
-Numbered lists must:
+Numbered lists.
 
-- start each item with a capital letter
-- end each item with a full stop
-- not end with a question mark
+1. They must be a complete sentence.
+2. They must start with a capital letter.
+3. They must end with a full stop.
+4. They should not end with a question mark. 
 
 Bullet lists must:
 
+- have a lead in line which makes sense as a complete sentence with each individual bullet
+- be a complete sentence - use dashes rather than starting a new sentence
 - use lower case, including the first letter, unless that item is a proper noun
-- not use full stops at the end of list items, unless they are complete sentences
+- not end with a full stop
 
 Code examples must:
 
@@ -240,7 +243,7 @@ If you need assistance with contributing, contact gdsengineeringexcellence@dsit.
 
 ## Intellectual property
 
-Contributions must follow standards on intellectual property, ensuring that:
+Contributions must follow standards on intellectual property, making sure that:
 
 - your contribution is your own original work, or you have permission to submit it
 - you have the right to grant the licence below

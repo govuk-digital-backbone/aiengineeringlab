@@ -71,7 +71,7 @@ Forward deployed engineering support is appropriate for:
 - capturing learnings for repository enhancement
 
 To request forward deployed engineering support, contact gdsengineeringexcellence@dsit.gov.uk with:
-- completed readiness checklist
+- a completed readiness checklist
 - team details
 - specific support needs
 
@@ -81,13 +81,13 @@ To request forward deployed engineering support, contact gdsengineeringexcellenc
 
 To find what you need:
 
-- use the [quick start guides](#quick-start-by-role) above based on your role
+- use the [quick start guides](#quick-start-by-role) based on your role
 - browse the [repository structure](./REPOSITORY-STRUCTURE.md) for specific topics
 - use your browser or IDE search functionality within documents
 
 ### Staying current
 
-You can stay current by:
+You can stay up to date by:
 - subscribing to repository updates on GitHub
 - reviewing documents against their stated review dates
 

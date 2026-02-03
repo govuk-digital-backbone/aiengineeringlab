@@ -287,11 +287,11 @@ Certain conditions override the score-based classification.
 
 ### Borderline cases
 
-For teams scoring near classification boundaries, such as 1.7 to 1.8 or 2.4 to 2.5:
+For teams scoring near classification boundaries, such as 1.7 to 1.8 or 2.4 to 2.5, you should:
 
-- review qualitative factors, do interview notes suggest higher or lower?
-- consider trajectory, is the team improving or facing new challenges?
-- apply 'benefit of doubt', when uncertain, classify lower to ensure adequate support.
+- review qualitative factors, do interview notes suggest scores are higher or lower
+- consider trajectory, is the team improving or facing new challenges
+- apply 'benefit of doubt', when uncertain, classify lower to ensure adequate support
 - document rationale, record why borderline decision was made
 - plan early reassessment, schedule check-in at 2 weeks instead of 4
 
@@ -445,7 +445,7 @@ Clear Established classification. Focus on enabling existing enthusiasts as cham
 
 ### Communicating to teams
 
-When you share classification with teams:
+When you share classification with teams, you should:
 
 - explain what the classification means for support they will receive
 - frame as 'matching support to needs' not judgement
@@ -523,13 +523,13 @@ Questions? Contact [Name] at [email].
 
 ### Documenting progression
 
-Record:
+You should record:
 
-- previous classification and date
+- the previous classification and date
 - new classification and date
-- evidence supporting change
-- updated support plan
-- next reassessment date
+- evidence supporting the change
+- an updated support plan
+- the next reassessment date
 
 ---
 

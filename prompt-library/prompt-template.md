@@ -7,7 +7,7 @@
 ## Instructions
 
 1. Copy this template to the appropriate category folder.
-2. Name the file descriptively (for example, `unit-test-generation.md`, `sql-query-optimisation.md`).
+2. Name the file clearly (for example, `unit-test-generation.md`, `sql-query-optimisation.md`).
 3. Complete all required sections.
 4. Delete the instructions and optional sections you do not use.
 5. Submit via pull request following [contribution guidelines](../CONTRIBUTING.md).
@@ -309,8 +309,8 @@ Function:
 [paste code here]
 ```
 
-## Tips for best results:
-
+## Tips for best results
+You should: 
 - include the function's imports and type definitions for better context
 - specify your team's test naming conventions if different from standard
 - mention any specific edge cases you know are important

@@ -7,7 +7,7 @@ Practical techniques for prompting AI code assistants to get consistent, high-qu
 
 ## Purpose
 
-AI code assistants are powerful tools, but they require structured approaches to provide consistent value. This playbook teaches you prompt engineering - the techniques for communicating effectively with AI assistants to get better results, whether you are working solo or enabling an entire team.
+AI code assistants are powerful tools, but they require structured approaches to provide consistent value. This playbook teaches you prompt engineering and the techniques for communicating effectively with AI assistants to get better results, whether you are working solo or enabling an entire team.
 
 Use this playbook to:
 
@@ -30,21 +30,25 @@ This playbook applies to all technical personnel using AI code assistants on gov
 
 Your colleague asks an AI assistant to build an authentication system and gets production-ready code in minutes. You ask the same assistant for the same thing and get something that barely compiles.
 
-The difference is simpler than you might think: effective prompting - how you communicate your requirements to the AI.
+The difference is simpler than you might think: effective prompting relies on how you communicate your requirements to the AI.
 
-Whether you are generating code, learning new concepts, exploring design options or debugging issues, the quality of AI assistance depends on how you ask for it. This playbook teaches you prompt engineering - the structured techniques for getting consistent, high-quality results from AI assistants across all these tasks.
+Whether you are generating code, learning new concepts, exploring design options or debugging issues, the quality of AI assistance depends on how you ask for it. This playbook teaches you prompt engineering and the structured techniques for getting consistent, high-quality results from AI assistants across all these tasks.
 
 ### The AI adoption challenge
 
-Many organisations struggle with AI code assistant adoption, facing these common issues.
+Many organisations struggle with AI code assistant adoption and face these common issues. 
 
-Inconsistent results: engineers get vastly different quality outputs depending on their prompts and understanding of how Large Language Models (LLMs) work. Some copy and paste code without understanding what it does or whether it is even correct.
+#### 1. Inconsistent results
+Engineers get vastly different quality outputs depending on their prompts and understanding of how Large Language Models (LLMs) work. Some copy and paste code without understanding what it does or whether it is even correct.
 
-No shared standards: each team develops their own approach - some embrace AI assistants, others avoid them entirely, with wildly varying code quality as a result.
+#### 2. No shared standards
+Each team develops their own approach, with some embracing AI assistants, others avoiding them entirely, with wildly varying code quality as a result.
 
-Architecture drift: AI-generated code does not follow company standards, leading to inconsistent patterns across the codebase.
+#### 3. Architecture drift
+AI-generated code does not follow company standards, leading to inconsistent patterns across the codebase.
 
-Knowledge silos: when someone figures out how to get great results, that knowledge stays trapped in their head instead of spreading across teams.
+#### 4. Knowledge silos
+When someone figures out how to get great results, that knowledge stays trapped in their head instead of spreading across teams.
 
 ### The solution
 
@@ -71,7 +75,7 @@ Throughout this guide, you will see examples that demonstrate core principles. W
 ### Core content
 
 Part 1: Foundational prompting techniques
-- [The Human Test: can someone else do this task](./prompt-engineering-foundations.md#the-human-test-can-someone-else-do-this-task)
+- [The human test: can someone else do this task](./prompt-engineering-foundations.md#the-human-test-can-someone-else-do-this-task)
 - [The 5 core techniques](./prompt-engineering-foundations.md#the-5-core-techniques)
 - [Combining techniques: the power prompt](./prompt-engineering-foundations.md#combining-techniques-the-power-prompt)
 - [Context: the secret weapon](./prompt-engineering-foundations.md#context-the-secret-weapon)
@@ -130,17 +134,21 @@ Part 6: Prompt engineering for AI coding agents
 
 Remember the problems we started with? Here is how these techniques solve them.
 
-Inconsistent results: Fixed by establishing standard prompting patterns. When everyone uses the Human Test and provides rich context, output quality becomes consistent.
+#### 1. Inconsistent results
+Fixed by establishing standard prompting patterns. When everyone uses the human test and provides rich context, output quality becomes consistent.
 
-No shared standards: Create a team prompting guide based on these techniques. Share example prompts that work well. Review AI-generated code in pull requests just like human code.
+#### 2. No shared standards
+Create a team prompting guide based on these techniques. Share example prompts that work well. Review AI-generated code in pull requests just like human code.
 
-Architecture drift: Use few-shot prompting with your existing patterns. AI matches your team's style when you show it examples.
+#### 3. Architecture drift
+ Use few-shot prompting with your existing patterns. AI matches your team's style when you show it examples.
 
-Knowledge silos: Document your effective prompts. When someone discovers a great technique, add it to your team's playbook.
+#### 4. Knowledge silos
+Document your effective prompts. When someone discovers a great technique, add it to your team's playbook.
 
 ### The competitive advantage
 
-Engineers who thrive are not those who avoid AI or blindly trust it - they are the ones who:
+Engineers who thrive are not those who avoid AI or blindly trust it. They are the ones who:
 
 - communicate clearly and specifically
 - provide rich context
@@ -150,7 +158,7 @@ Engineers who thrive are not those who avoid AI or blindly trust it - they are t
 - understand before accepting
 - use AI to handle the tedious work while they focus on architecture, design and critical thinking
 
-AI coding assistants do not replace the need for skill - they amplify it. The better you understand software development, the better you can direct AI to help you.
+AI coding assistants do not replace the need for skill, they amplify it. The better you understand software development, the better you can direct AI to help you.
 
 ### Your next steps
 

@@ -17,19 +17,19 @@ This guide is for:
 
 ## Contents
 
-- [What Gemini Code Assist does](#what-gemini-code-assist-does)
-- [How it compares with other tools](#how-it-compares-with-other-ai-engineering-lab-tools)
-- [Government-specific considerations](#government-specific-considerations)
-- [Getting started](#getting-started)
-- [Phased rollout approach](#phased-rollout-approach)
-- [Training requirements](#training-requirements)
-- [Measuring success](#measuring-success)
-- [Common implementation challenges](#common-implementation-challenges)
-- [Integration with development workflow](#integration-with-development-workflow)
-- [Security best practices](#security-best-practices)
-- [Support and escalation](#support-and-escalation)
-- [Related resources](#related-resources)
-- [Contributing](#contributing) - how to improve this guide
+- [what Gemini Code Assist does](#what-gemini-code-assist-does)
+- [how it compares with other tools](#how-it-compares-with-other-ai-engineering-lab-tools)
+- [government-specific considerations](#government-specific-considerations)
+- [getting started](#getting-started)
+- [phased rollout approach](#phased-rollout-approach)
+- [training requirements](#training-requirements)
+- [measuring success](#measuring-success)
+- [common implementation challenges](#common-implementation-challenges)
+- [integration with development workflow](#integration-with-development-workflow)
+- [security best practices](#security-best-practices)
+- [support and escalation](#support-and-escalation)
+- [related resources](#related-resources)
+- [contributing](#contributing) - how to improve this guide
 
 ## Before you start
 
@@ -131,9 +131,9 @@ Check your department's data residency requirements before deployment.
 
 The AI Engineering Lab uses a central deployment model including:
 
-- central GCP enterprise account managed by the Department for Science, Innovation and Technology (DSIT)
-- users receive credentials to plug into their IDEs
-- individual departments control access and usage
+- a central GCP enterprise account managed by the Department for Science, Innovation and Technology (DSIT)
+- users receiving credentials to plug into their IDEs
+- individual departments controlling access and usage
 
 ### Intellectual property
 
@@ -145,24 +145,24 @@ Gemini Code Assist Enterprise includes IP indemnity. For government projects, us
 
 #### Standard
 
-$19 per user per month (annual commitment) or $22.80 per user per month (monthly commitment)
+$19 per user per month (annual commitment) or $22.80 per user per month (monthly commitment).
 
 Standard includes:
 
-1. AI coding assistance with enterprise-grade security.
-2. Code completion, generation, and chat
-agent mode.
+- AI coding assistance with enterprise-grade security
+- code completion, generation, and chat
+agent mode
 
 #### Enterprise
 
-$45 per user per month (annual commitment) or $54 per user per month (monthly commitment)
+$45 per user per month (annual commitment) or $54 per user per month (monthly commitment).
 
 Enterprise includes:
 
-1. All Standard features.
-2. Code customisation from private repositories.
-3. IP indemnity.
-4. Usage analytics and reporting.
+- all Standard features
+- code customisation from private repositories
+- IP indemnity
+- usage analytics and reporting
 
 Prices are listed in USD. If you pay in a currency other than USD, the prices listed in your currency on [Cloud Platform SKUs](https://cloud.google.com/skus) apply. Check [Gemini for Google Cloud pricing](https://cloud.google.com/products/gemini/pricing) for current rates.
 
@@ -183,8 +183,7 @@ For detailed installation steps, see the [Gemini Code Assist getting started gui
 
 Check the tool works and find any problems.
 
-
-Activities in this phase:
+#### Activities
 
 1. Select 5 to 10 engineers across different experience levels.
 2. Focus on GCP-related projects or cloud infrastructure work.
@@ -206,8 +205,6 @@ Scale to full engineering team.
 
 #### Activities
 
-Activities in this phase:
-
 1. Roll out to entire team in groups of 10 to 15.
 2. Deliver 60-minute training sessions per group.
 3. Share pilot user success stories, especially GCP and agent mode use cases.
@@ -227,8 +224,6 @@ Activities in this phase:
 Get the most from the tool and fix any problems.
 
 #### Activities
-
-Activities in this phase:
 
 1. Review monthly usage analytics via GCP console.
 2. Refine content exclusion policies based on incidents.
@@ -317,7 +312,7 @@ Quality metrics include:
 
 ### Qualitative feedback
 
-Run monthly surveys with engineers covering:
+You should run monthly surveys with engineers.
 
 1. How often do you use Gemini Code Assist?
 2. For which tasks is Gemini Code Assist most helpful?
@@ -332,8 +327,6 @@ Run monthly surveys with engineers covering:
 
 Symptoms include low activation rates, acceptance rates below 15%, and feedback that suggestions are not helpful.
 
-What to do:
-
 1. Check that content exclusions are not too restrictive.
 2. Provide pairing sessions with effective users.
 3. Share specific use case examples.
@@ -342,8 +335,6 @@ What to do:
 
 Symptoms include engineers questioning suggestions and reluctance to accept generated code.
 
-What to do:
-
 1. Clarify that the code review process remains unchanged.
 2. Share Google Cloud data protection commitments.
 3. Conduct a security workshop with examples.
@@ -351,8 +342,6 @@ What to do:
 ### Over-reliance on suggestions
 
 Symptoms include decreased code review thoroughness and accepting suggestions without understanding.
-
-What to do:
 
 1. Reinforce code review standards.
 2. Include 'understanding of implementation' in review checklists.
@@ -383,10 +372,10 @@ For persistent issues, contact your team's champion or raise a support ticket.
 
 If an engineer discovers code containing hardcoded secrets, vulnerabilities, or data protection issues:
 
-1. Do not commit the code.
-2. Report to your security team using the standard incident process.
-3. Document the suggestion for analysis.
-4. Update content exclusions if the issue is pattern-based.
+- do not commit the code
+- report to your security team using the standard incident process
+- document the suggestion for analysis
+- update content exclusions if the issue is pattern-based
 
 ## Integration with development workflow
 
@@ -397,8 +386,8 @@ Gemini Code Assist-generated code should pass through the same review process as
 Reviewers should check:
 
 - logic correctness and edge case handling
-- no hardcoded secrets or sensitive data
-- with the compliance with team coding standards
+- if there's hardcoded secrets or sensitive data
+- compliance with team coding standards
 - that the reviewer understands the implementation
 
 ### Git workflow
@@ -407,7 +396,7 @@ You do not need to change your Git workflow. Gemini Code Assist works in your ID
 
 ### Testing strategy
 
-Treat generated code as untested until you have tested it:
+Treat generated code as untested until you have tested it.
 
 1. Generate test scaffolding via Gemini, then review and enhance.
 2. Manually verify GCP service interactions.
@@ -467,7 +456,7 @@ For the full exclusion pattern list, see the [content exclusions documentation](
 
 ### Organisation-level settings
 
-Configure in GCP console:
+Configure the organisation-level settings in GCP console.
 
 1. Go to GCP Console, then Gemini Code Assist.
 2. Assign users via IAM.
@@ -484,7 +473,7 @@ Configure in GCP console:
 Self-service resources includes:
 
 - [Gemini Code Assist documentation](https://cloud.google.com/gemini/docs/codeassist)
-- [Getting started guide](https://cloud.google.com/gemini/docs/codeassist/getting-started)
+- [getting started guide](https://cloud.google.com/gemini/docs/codeassist/getting-started)
 - internal knowledge base (if established)
 
 #### Tier 2: team support
@@ -497,7 +486,7 @@ Team support options includes:
 
 #### Tier 3: DSIT and Google support
 
-For escalated issues:
+For escalated issues, contact:
 
 - DSIT project team for licence and access issues
 - Google Cloud Support via enterprise support plan
@@ -509,8 +498,8 @@ For escalated issues:
 Official Google resources include:
 
 - [Gemini Code Assist documentation](https://cloud.google.com/gemini/docs/codeassist)
-- [Getting started guide](https://cloud.google.com/gemini/docs/codeassist/getting-started)
-- [Agent mode documentation](https://developers.google.com/gemini-code-assist/docs/write-code-gemini)
+- [getting started guide](https://cloud.google.com/gemini/docs/codeassist/getting-started)
+- [agent mode documentation](https://developers.google.com/gemini-code-assist/docs/write-code-gemini)
 - [Gemini pricing](https://cloud.google.com/products/gemini/pricing)
 
 ### Government guidance

@@ -6,55 +6,53 @@ metadata:
   last_updated: "2026-01-23"
 ---
 
-# AI Engineering Lab Content Generator
+# AI Engineering Lab content generator
 
 Generate high-quality content for the AI Engineering Lab repository that meets government standards.
 
-## Quick Start
+## Quick start
 
-Seven rules for every piece of content:
+Seven rules for every piece of content.
 
-1. British English — analyse, organise, colour, programme (not American spellings)
-2. Terminology — "AI Engineering Lab" (not AICA), "REACH framework" (not ADKAR), no internal workstream references
-3. Sentence case headings — "How to configure servers" not "How To Configure Servers"
-4. Bullet list lead-in — Every bullet list needs a lead-in line ending with a colon
-5. Spell out acronyms — "Forward deployed engineer (FDE)" on first use, then "FDE"
-6. Audience first — Ask "who is reading this?" before writing
-7. Be specific — "92% activation in 48 hours" not "good progress"
+1. British English not American spelling, for example, "analyse" not "analyze" and "organise" not "organize".
+2. Terminology - "AI Engineering Lab" (not AICA), "REACH framework" (not ADKAR), don't reference our internal workstreams
+3. Sentence case everywhere, for example, "How to configure servers" not "How To Configure Servers"
+4. Structure [bullet points and and numbered steps](https://www.gov.uk/guidance/style-guide/a-to-z#bullet-points-steps) correctly
+5. Spell out acronyms on their first use, for example, "Forward deployed engineer (FDE)" on first use, then "FDE"
+6. Audience first - ask "who is reading this?" before writing
+7. Be specific, for example, "92% activation in 48 hours" not "good progress"
 
 For full guidance, continue reading. For quick contributions, follow these seven rules and use the relevant template below.
 
-## Before Creating Content
-
-Always ask two questions before starting:
+## Questions to ask before creating content
 
 1. "Who is the intended audience for this content?"
-   - FDEs / internal engineers → Technical, detailed, implementation-focused
-   - Government department stakeholders → Accessible, outcome-focused, jargon-explained
-   - External / senior leadership → Strategic, concise, impact-driven
-   - Mixed audience → Layer information with executive summary first
+   - for FDEs or internal engineers, content should be technical, detailed, implementation-focused
+   - for government department stakeholders, content should be accessible, outcome-focused, jargon-explained
+   - for external or senior leadership, content should be strategic, concise, impact-driven
+   - for a mixed audience, content should layer information with executive summary first
 
 2. "What type of content is being created?"
-   - Documentation → Follow documentation patterns
-   - Prompts → Follow prompt template
-   - Skills → Follow skill template
-   - Reports → Follow report structure
-   - Training materials → Follow learning design principles
+   - documentation should follow the documentation patterns
+   - prompts should follow the prompt template
+   - skills should follow the skill template
+   - reports should follow the report structure
+   - training materials should follow learning design principles
 
-## Core Content Standards
+## Core content standards
 
-### Content Design Principles
+### Content design principles
 
-Content design puts the user first. On average, people only read 20-28% of words on a page. Follow these principles:
+Content design puts the user first. On average, people only read 20-28% of words on a page. You must follow the following principles in your content:
 
-- Right place — Information where users expect it
-- Right time — When users need it
-- Right tone — Appropriate for context and audience
-- Right format — Text, graphic, video — whatever works best
+- right place - information where users expect it
+- right time - when users need it
+- right tone - appropriate for context and audience
+- right format - whatever meets the users needs whether text, graphic, or video 
 
 Reading age: the average reading age in the UK is 9 years old. Write for this level, considering users who speak English as a second language, have learning disabilities, or have dyslexia.
 
-### Language and Spelling
+### Language and spelling
 
 Critical: all content must use British English.
 
@@ -75,11 +73,11 @@ Critical: all content must use British English.
 | fill out a form | fill in a form |
 | percent | per cent |
 
-Note: American proper nouns keep American spelling (e.g., Pearl Harbor, 4th Mechanized Brigade).
+Note: American proper nouns keep American spelling (for example, Pearl Harbor, 4th Mechanized Brigade).
 
 ### Terminology
 
-Mandatory replacements — apply to all content:
+Mandatory replacements that apply to all content:
 
 | Old Term | New Term |
 |----------|----------|
@@ -89,9 +87,7 @@ Mandatory replacements — apply to all content:
 
 REACH framework components: Readiness, Engagement, Adoption, Capability, Habit
 
-### Do Not Include
-
-Internal structure references — never include these in customer-facing content:
+### Do not include
 
 To customers, we are one team. Do not reference internal organisational structures in any documentation, reports, or communications. Specifically, do not include:
 
@@ -100,9 +96,9 @@ To customers, we are one team. Do not reference internal organisational structur
 - any reference to internal team divisions or workstream boundaries
 - descriptions that suggest the AI Engineering Lab operates as separate sub-teams
 
-Why this matters: Customers engage with the AI Engineering Lab as a unified service. Exposing internal structures creates confusion, suggests fragmentation, and undermines the cohesive service experience we provide.
+This matters because customers engage with the AI Engineering Lab as a unified service. Exposing internal structures creates confusion, suggests fragmentation, and undermines the cohesive service experience we provide.
 
-What to do instead:
+Instead, you should:
 
 - refer to capabilities or phases of work, not team structures
 - describe what gets delivered, not who delivers it
@@ -124,7 +120,7 @@ Government department names (use these exact forms):
 
 Use "and" not "&" in full department names (ampersand only in logos).
 
-### Writing Style
+### Writing style
 
 | Principle | Application |
 |---------|-------------|
@@ -136,78 +132,78 @@ Use "and" not "&" in full department names (ampersand only in logos).
 | Concise | Remove unnecessary words; one idea per sentence |
 | Short sentences | Maximum 15-20 words; check any sentence over 25 words |
 
-### GDS Style Guide Essentials
+### GDS style guide essentials
 
-Abbreviations and acronyms — follow these rules:
+Abbreviations and acronyms
 
-- explain in full at first use: "Personal Independence Payment (PIP)"
-- no full stops: BBC not B.B.C.
-- well-known abbreviations need no explanation: UK, NHS, VAT, PDF, HTML, URL
+1. Explain them in full at first use, for example, "Personal Independence Payment (PIP)".
+2. Do not include full stops, for example, BBC not B.B.C.
+3. Do not explain abbreviations if they're well known, for example: UK, NHS, VAT, PDF, HTML, URL.
 
-Addressing users — apply these conventions:
+Addressing users
 
-- use "you" — direct and personal
-- gender neutral: "they", "their", "them"
-- never use gendered pronouns unless necessary
+1. Use "you" as it's direct and personal.
+2. Use gender neutral pronouns like "they", "their", "them".
+3. Never use gendered pronouns unless necessary.
 
-Contractions — avoid negative contractions:
+Contractions
 
-- use "cannot" not "can't", "do not" not "don't"
-- many users misread contractions as the opposite meaning
+1. Use "cannot" not "can't", "do not" not "don't".
+2. This is because many users misread contractions as the opposite meaning.
 
-Numbers — follow these conventions:
+Numbers 
 
-- write "one" in prose; use numerals for 2 and above
-- use numerals in steps, lists, and data: "in step 1", "2 developing hazards"
-- commas for thousands: 9,000
-- use % sign with numbers: 50%
-- spell out fractions: one-half, two-thirds
-- use "to" not hyphens for ranges: "500 to 900", "Monday to Friday"
+1. Write "one" in letters, use numerals for 2 and above.
+2. Use numerals in steps, lists, and data, for example, "in step 1", "2 developing hazards".
+3. Use commas for thousands: 9,000.
+4. Use the percentage % sign with numbers: 50%.
+5. Spell out fractions: one-half, two-thirds.
+6. Use "to" rather than hyphens for ranges: "500 to 900", "Monday to Friday".
 
-Dates — use these formats:
+Dates
 
-- 4 June 2017 (no comma between month and year)
-- use "to" in ranges: "tax year 2011 to 2012"
-- deadlines: "on or before 6 September 2025"
-- include date with "today": "The minister announced today (14 June 2012)..."
+1. Dates should be strutured like this: 4 June 2017 (no comma between month and year).
+2. Use "to" in ranges: "tax year 2011 to 2012".
+3. Deadlines: "on or before 6 September 2025".
+4. Include date with "today": "The minister announced today (14 June 2012)...".
 
-Times — use these formats:
+Times
 
-- 5:30pm not 1730hrs
-- use "to" in ranges: "10am to 11am" not "10-11am"
-- "midnight" and "midday" not "00:00" or "12 noon"
-- for deadlines, prefer "11:59pm" over "midnight" to avoid ambiguity
+1. Use 5:30pm not 1730hrs.
+2. Use "to" in ranges: "10am to 11am" not "10-11am".
+3. Use "midnight" and "midday" not "00:00" or "12 noon".
+4. For deadlines, use "11:59pm" over "midnight" to avoid ambiguity.
 
-Money — use these formats:
+Money
 
-- use £ symbol: £75
-- no decimals unless pence included: £75.50 but not £75.00
-- write out pence: "4 pence per minute"
+1. Use the pound sterling £ symbol: £75.
+2. Don't use decimals unless pence is included: £75.50 but not £75.00.
+3. Write out pence: "4 pence per minute".
 
-Capitalisation — follow these rules:
+Capitalisation
 
-- sentence case for everything, including titles
-- capitalise: specific job titles, department names, proper nouns
-- lower case: "government", "minister" (unless specific title), "department" (unless specific)
+1. Sentence case for everything, including titles.
+2. Capitalise specific job titles, department names, proper nouns.
+3. Use lower case for "government", "minister" (unless specific title), "department" (unless specific).
 
-Bold — use sparingly and only for these purposes:
+Bold
+Bold should be used sparingly and only for the following purposes:
 
 - interface elements in instructions: Select Start
 - use single quotes for interface elements in non-instructional text: "The 'Done' button"
-- never for emphasis — use front-loading, headings, or bullets instead
+- never for emphasis - use front-loading, headings, or bullets instead
 
-Links — follow these rules:
+Links
 
-- front-load link text with relevant terms
-- never use "click here" — describe the destination
-- link to online services first; offline alternatives after
+1. Front-load link text with relevant terms.
+2. Never use "click here", you should always clearly describe the destination of the link, aligning it to the title of the page where relevant.
+3. Link to online services first and offline alternatives after.
 
-Semicolons — do not use them:
+Semicolons
 
-- they are often misread
-- break into separate sentences instead
+Do not use semi-colons as they are often misread. Break the information into separate sentences instead.
 
-### Words to Avoid
+### Words to avoid
 
 Replace corporate jargon with plain alternatives:
 
@@ -224,9 +220,9 @@ Replace corporate jargon with plain alternatives:
 | impact (as verb) | affect, influence |
 | key (adjective) | important, main |
 
-## Documentation Patterns
+## Documentation patterns
 
-### Page Structure
+### Page structure
 
 Every documentation page should include these sections:
 
@@ -498,13 +494,13 @@ Content should support teams meeting the 14-point Service Standard:
 | 5. Everyone can use | Follow accessibility guidelines |
 | 12. Open source code | Assume public visibility |
 
-### WCAG 2.2 Accessibility
+### WCAG 2.2 accessibility
 
 Making content accessible means it can be used by as many people as possible. Remember there are different types of accessibility needs:
 
-- permanent — arm amputee, blind, deaf
-- temporary — broken arm, eye infection
-- situational — holding a baby, bright sunlight, noisy environment
+- permanent, for example, arm amputee, blind, deaf
+- temporary, for example, broken arm, eye infection
+- situational, for example, holding a baby, bright sunlight, noisy environment
 
 For content that will appear in digital formats:
 
@@ -515,14 +511,15 @@ For content that will appear in digital formats:
 | Understandable | Plain language; consistent formatting |
 | Robust | Semantic HTML; valid markup |
 
-Alt text:
+Examples of alt text include:
 
-- Poor: "image1.png" or "diagram"
-- Good: "Flowchart showing the department adoption journey: Foundation, Assessment, Engagement, and Community Support stages"
+- poor: "image1.png" or "diagram"
+- good: "Flowchart showing the department adoption journey: Foundation, Assessment, Engagement, and Community Support stages"
 
-Link text:
-- Poor: "Click here" or "Read more"
-- Good: "Read the MCP security guidance" — always describe the destination
+Examples of link text include:
+
+- poor: "Click here" or "Read more"
+- good: "Read the MCP security guidance" — always describe the destination
 
 ### NCSC Security
 
@@ -534,9 +531,9 @@ When documenting security-related content:
 | Defence in depth | Show multiple security layers |
 | Least privilege | Recommend minimal permissions |
 
-## Quality Assurance
+## Quality assurance
 
-### Self-Review Checklist
+### Self-review checklist
 
 Before submitting content, verify:
 
@@ -574,7 +571,7 @@ Compliance:
 - [ ] Meets accessibility requirements
 - [ ] No sensitive information exposed
 
-### Common Issues to Avoid
+### Common issues to avoid
 
 | Issue | Example | Fix |
 |-------|---------|-----|
@@ -592,7 +589,7 @@ Compliance:
 | Placeholder content | "[TBC]", "[placeholder]", "[scenario]" | Complete the content or remove the section |
 | Overly long pages | 2000+ words single page | Split into multiple pages or add contents section |
 
-## Output Format
+## Output format
 
 When generating content, structure the response as:
 
@@ -603,13 +600,13 @@ When generating content, structure the response as:
 
 ---
 
-## Content Metadata
+## Content metadata
 
 Type: [Documentation / Prompt / Skill / Report / Training]
 Audience: [Specified audience]
 Compliance: [Standards applied]
 
-## Quality Notes
+## Quality notes
 
 [Any assumptions made or areas that may need human review]
 ```
@@ -634,9 +631,9 @@ Note: This skill provides guidance but does not validate compliance automaticall
 
 ---
 
-## Appendix: Good vs Poor Content Examples
+## Appendix: good and poor content examples
 
-### Example 1: Documentation Overview
+### Example 1: documentation overview
 
 Poor:
 > This document provides information about MCP servers and how they can be used to help with various tasks in the development process.
@@ -646,7 +643,7 @@ Good:
 
 Why it's better: Specific, explains value, defines acronym, front-loads the key benefit.
 
-### Example 2: Prompt Description
+### Example 2: prompt description
 
 Poor:
 > A prompt that helps generate tests.
@@ -656,7 +653,7 @@ Good:
 
 Why it's better: Specifies language, framework, and what "comprehensive" means.
 
-### Example 3: Status Update
+### Example 3: status update
 
 Poor:
 > We made good progress this week and things are going well. Some teams are adopting the tools.

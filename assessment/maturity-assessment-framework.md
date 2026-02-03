@@ -64,7 +64,7 @@ Teams with limited AI assistant experience, significant constraints, or substant
 | Change capacity | Limited bandwidth due to delivery pressures |
 | Attitudes | Significant scepticism or resistance present |
 
-Support model includes:
+The support model includes:
 
 - embedded FDE support, with a dedicated FDE for 2 to 4 weeks
 - intensive hands-on training, with face-to-face workshops
@@ -87,7 +87,7 @@ Teams with some AI experience or good foundational capabilities, requiring moder
 | Change capacity | Reasonable bandwidth for adoption activities |
 | Attitudes | Generally positive, some concerns to work on |
 
-Support model includes:
+The support model includes:
 
 - shared FDE support, with FDE covering multiple teams
 - blended training, with a mix of self-paced and guided
@@ -112,7 +112,7 @@ Characteristics:
 | Change capacity | Good bandwidth, proactive about adoption |
 | Attitudes | Enthusiastic, potential champions identified |
 
-Support model includes:
+The support model includes:
 
 - self-service with on-demand FDE consultation
 - self-paced training with optional workshops
@@ -290,24 +290,24 @@ However, with a major release in 6 weeks, consider delaying intensive adoption o
 
 ## Assessment process
 
-### Step 1: preparation
+### 1. Preparation
 
 Use the following checklist before each assessment begins.
 
-- [ ] identify team to be assessed
-- [ ] confirm delivery manager and technical lead availability for interviews
-- [ ] distribute questionnaires to all team members
-- [ ] set deadline for questionnaire completion (48 hours)
-- [ ] schedule interview slots
+- [ ] Identify team to be assessed
+- [ ] Confirm delivery manager and technical lead availability for interviews
+- [ ] Distribute questionnaires to all team members
+- [ ] Set deadline for questionnaire completion (48 hours)
+- [ ] Schedule interview slots
 
-Gather information on:
+You should gather information on:
 
-- team size and composition
-- current project and delivery commitments
-- technology stack overview
+- the team size and composition
+- the current project and delivery commitments
+- the technology stack overview
 - any known constraints or concerns
 
-### Step 2: questionnaire completion
+### 2. Questionnaire completion
 
 | Questionnaire | Recipient | Time required |
 |---------------|-----------|---------------|
@@ -322,7 +322,7 @@ Distributed questionnaires should:
 - explain purpose and how results will be used
 - provide contact for questions
 
-### Step 3: interviews
+### 3. Interviews
 
 An interview led by the delivery manager, lasting 45 minutes, should:
 
@@ -348,9 +348,9 @@ Interviews should:
 - note specific examples given
 - identify potential champions
 
-### Step 4: analysis and classification
+### 4. Analysis and classification
 
-Analysis activities should include the following.
+Analysis activities should follow these steps. 
 
 1. Aggregate individual engineer responses.
 2. Score each dimension based on all inputs.
@@ -365,7 +365,7 @@ Review each classification to:
 - consider qualitative factors not captured in scoring
 - ensure classification feels right given overall picture
 
-### Step 5: roadmap planning session
+### 5. Roadmap planning session
 
 Sessions should be structured as follows, lasting 60 to 90 minutes.
 

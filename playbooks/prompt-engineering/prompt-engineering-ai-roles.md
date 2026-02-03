@@ -153,24 +153,24 @@ This same approach works for any decision: comparing libraries, choosing design 
 
 The Gang of Four patterns are fundamental design tools. Here is a quick reference.
 
-Creational patterns (how objects are created):
+Creational patterns are how objects are created. This includes:
 
-- singleton: ensure only one instance exists
-- factory: create objects without specifying exact class
-- builder: construct complex objects step by step
+- singleton that ensures only one instance exists
+- factory that creates objects without specifying exact class
+- builder that constructs complex objects step by step
 
-Structural patterns (how objects are composed):
+Structural patterns are how objects are composed. This includes:
 
-- adapter: make incompatible interfaces work together
-- decorator: add behaviour to objects dynamically
-- facade: provide simple interface to complex system
+- adapter that makes incompatible interfaces work together
+- decorator that adds behaviour to objects dynamically
+- facade that provides simple interface to complex system
 
-Behavioural patterns (how objects communicate):
+Behavioural patterns are how objects communicate. This includes:
 
-- strategy: select algorithm at runtime
-- template method: define skeleton, let subclasses fill details
-- observer: notify multiple objects of changes
-- command: encapsulate requests as objects
+- strategy that selects algorithm at runtime
+- template method that defines the skeleton, let subclasses fill details
+- observer that notifies multiple objects of changes
+- command that encapsulates requests as objects
 
 When you are unsure which pattern fits your problem, describe your use case to the AI and ask it to recommend appropriate patterns with reasoning.
 

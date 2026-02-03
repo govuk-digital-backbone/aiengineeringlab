@@ -242,7 +242,7 @@ PoC evaluation template:
 
 #### Step 4: make recommendation (Week 5)
 
-Document:
+You should make a recommendation that documents the following information.
 
 1. Evaluation criteria and weighting.
 2. PoC findings and scores.
@@ -295,13 +295,13 @@ For most departments, start with a single tool for initial adoption, then consid
 
 Context: team modernising legacy Java 8 applications to Java 17 and 21 with Spring Boot.
 
-Key requirements:
+Key requirements include:
 
 - strong Java and Spring understanding
 - refactoring capabilities
 - test generation
 
-Considerations:
+You should consider the following:
 
 - all tools have good Java support
 - Amazon Q has specific Java modernisation features
@@ -311,29 +311,29 @@ Considerations:
 
 Context: team building citizen-facing service using GOV.UK Frontend, Node.js backend.
 
-Key requirements:
+Key requirements include:
 
 - JavaScript and TypeScript excellence
 - understanding of GOV.UK patterns
 - accessibility awareness
 
-Considerations:
+You should consider the following:
 
-- consider MCP servers with GOV.UK standards for compliance
+- MCP servers with GOV.UK standards for compliance
 - all tools handle JS and TS well
-- may need custom context for GOV.UK Frontend patterns
+- you may need custom context for GOV.UK Frontend patterns
 
 ### Scenario 3: data engineering team
 
 Context: team building data pipelines with Python, SQL, and cloud services.
 
-Key requirements:
+Key requirements include:
 
 - Python data libraries such as 'pandas'
 - SQL generation and optimisation
 - cloud service integration
 
-Considerations:
+You should consider the following::
 
 - Amazon Q integrates well with AWS data services
 - Gemini integrates with BigQuery and GCP
@@ -343,34 +343,34 @@ Considerations:
 
 Context: team maintaining critical COBOL systems with occasional modernisation.
 
-Key requirements:
+Key requirements include:
 
 - COBOL understanding
 - mainframe context
 - modernisation assistance
 
-Considerations:
+You should consider the following:
 
 - Amazon Q has specific mainframe and COBOL features
-- limited COBOL support across other tools
-- may need specialised prompting
+- there's limited COBOL support across other tools
+- you may need specialised prompting
 
 ### Scenario 5: infrastructure and platform team
 
 Context: team managing cloud infrastructure with Terraform, Kubernetes, CI/CD.
 
-Key requirements:
+Key requirements include:
 
 - IaC support (Terraform, CloudFormation)
 - Kubernetes and Helm understanding
 - pipeline scripting
 
-Considerations:
+You should consider the following:
 
-- Amazon Q excellent for AWS CloudFormation
-- Gemini excellent for GCP resources
-- GitHub Copilot good for general Terraform
-- tool choice may align with cloud provider
+- Amazon Q is excellent for AWS CloudFormation
+- Gemini is excellent for GCP resources
+- GitHub Copilot is good for general Terraform
+- your tool choice may align with cloud provider
 
 ---
 
