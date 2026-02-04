@@ -5,12 +5,12 @@
 ## Summary
 <!-- 
 Provide a brief description covering:
-- What this PR adds or changes
-- Why this change is needed
-- Any dependencies or related PRs
+- what this PR adds or changes
+- why this change is needed
+- any dependencies or related PRs
 -->
 
-**Related Issue:** <!-- Link to issue, e.g., Closes #123, or "N/A" for quick fixes -->
+Related Issue: <!-- Link to issue, e.g., Closes #123, or "N/A" for quick fixes -->
 
 ---
 
@@ -66,5 +66,3 @@ Delete this section if not applicable
 
 ## Additional Notes
 <!-- Any other context reviewers should know -->
-
----
