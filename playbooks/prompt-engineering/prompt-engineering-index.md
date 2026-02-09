@@ -181,7 +181,7 @@ This playbook works best when combined with the wider resources in this reposito
 - [AI tool comparative guidance](../../manager-tool-guides/comparative-guidance.md) - choose an assistant and rollout approach
 
 ### Prompts and reuse
-- [Prompt library](../../prompt-library/README.md) - reusable prompts by task and language
+- [Prompt library](../../prompt-library/) - reusable prompts by task and language
 - [Prompt template](../../prompt-library/prompt-template.md) - standard structure for new prompts
 
 ### Quality and governance
@@ -192,6 +192,6 @@ This playbook works best when combined with the wider resources in this reposito
 - [Context engineering](../context-engineering.md) - advanced context techniques
 
 ### Tool guides (pick the one you use)
-- [GitHub Copilot guide](../../manager-tool-guides/copilot/README.md)
+- [GitHub Copilot guide](../../manager-tool-guides/github-copilot/)
 
 ---

@@ -1,5 +1,6 @@
 > **ALPHA**
-> This is a new service – your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
+> This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
+
 # AI Engineering Lab incident response playbook
 
 > Procedures for identifying, responding to and learning from incidents related to AI code assistant usage.
@@ -64,8 +65,6 @@ The following table shows severity levels for incidents.
 | Availability | AV | Service outage impacting operations |
 | Other | OT | Incidents not fitting other categories |
 
----
-
 ## Incident response process
 
 ### Phase 1: Detection and reporting
@@ -96,8 +95,6 @@ Incidents may be detected through:
 | Security monitoring | Anomaly detection in AI tool usage patterns |
 | External notification | Vendor, third party or security researcher report |
 | Audit | Periodic review identifies historical issues |
-
----
 
 ### Phase 2: Triage and assessment
 
@@ -143,8 +140,6 @@ Incident severity levels are:
 | Has the vulnerability been exploited | Assess actual versus potential harm |
 | Are other systems affected | Identify lateral impact |
 | Is the incident ongoing | Determine containment urgency |
-
----
 
 ### Phase 3: Containment
 
@@ -202,8 +197,6 @@ Before proceeding to eradication, you should confirm the following.
 - [ ] Spread has been prevented
 - [ ] Stakeholders have been notified
 
----
-
 ### Phase 4: Eradication and recovery
 
 #### Eradication activities
@@ -234,8 +227,6 @@ Before proceeding to eradication, you should confirm the following.
 | P2 | Security Lead |
 | P3 | Incident Owner |
 | P4 | Incident Owner |
-
----
 
 ### Phase 5: Post-incident activities
 
@@ -281,8 +272,6 @@ For P1 and P2 incidents, conduct a blameless post-incident review.
 | Share anonymised lessons | Cross-government | Within 15 days |
 | Update risk register | Programme governance | Within 5 days |
 | Brief champion network (if appropriate) | Champions | Next community session |
-
----
 
 ## Example incident playbooks
 
@@ -423,8 +412,6 @@ You must:
 - report to AI tool vendor if it appears to be a tool vulnerability
 - share details (sanitised) with AI Engineering Lab for cross-government awareness
 
----
-
 ## Roles and responsibilities
 
 | Role | Responsibilities |
@@ -437,8 +424,6 @@ You must:
 | DPO | Assess personal data impact, advise on ICO notification, ensure GDPR compliance |
 | SRO | Programme-level decisions, stakeholder communication, resource allocation |
 | Communications | Manage internal and external messaging if required |
-
----
 
 ## Communication templates
 
@@ -504,8 +489,6 @@ Lessons learned session: [Date and time - for P1 or P2]
 Questions: Contact [Incident Owner]
 ```
 
----
-
 ## Metrics and reporting
 
 ### Incident metrics to track
@@ -527,8 +510,6 @@ Questions: Contact [Incident Owner]
 | Incident summary | Weekly | Security Lead, SRO | Open incidents, key metrics |
 | Monthly report | Monthly | Programme Board | Trends, lessons learned, recommendations |
 | Quarterly review | Quarterly | SIRO, Senior Leadership | Strategic risks, control effectiveness |
-
----
 
 ## Related documents
 

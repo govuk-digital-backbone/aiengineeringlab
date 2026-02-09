@@ -1,5 +1,6 @@
 > **ALPHA**
-> This is a new service – your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
+> This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
+
 # AI Engineering Lab risk register template
 
 > A standardised template for documenting and managing risks associated with AI Engineering Lab adoption.
@@ -24,8 +25,6 @@ Use this template to:
 4. Assign owners for each risk.
 5. Review regularly (minimum monthly during active adoption).
 6. Escalate risks that exceed tolerance to programme governance.
-
----
 
 ## Risk assessment methodology
 
@@ -68,8 +67,6 @@ Use this template to:
 | Medium | 5 to 11 | Monitor and manage; include in regular reporting |
 | Low | 1 to 4 | Accept and monitor; review at next scheduled assessment |
 
----
-
 ## Risk register
 
 ### Deployment information
@@ -82,8 +79,6 @@ Use this template to:
 | Created date | To be confirmed |
 | Last reviewed | To be confirmed |
 | Next review due | To be confirmed |
-
----
 
 ### Category 1: data and information security risks
 
@@ -147,8 +142,6 @@ Use this template to:
 | Status | Open |
 | Last updated | To be confirmed |
 
----
-
 ### Category 2: code quality and security risks
 
 #### RISK-CODE-01: security vulnerabilities in generated code
@@ -211,8 +204,6 @@ Use this template to:
 | Status | Open |
 | Last updated | To be confirmed |
 
----
-
 ### Category 3: intellectual property and legal risks
 
 #### RISK-IP-01: licence compliance violations
@@ -254,8 +245,6 @@ Use this template to:
 | Target risk score | 4 (Low) |
 | Status | Open |
 | Last updated | To be confirmed |
-
----
 
 ### Category 4: adoption and operational risks
 
@@ -319,8 +308,6 @@ Use this template to:
 | Status | Open |
 | Last updated | To be confirmed |
 
----
-
 ### Category 5: service and vendor risks
 
 #### RISK-VEN-01: service availability and dependency
@@ -383,8 +370,6 @@ Use this template to:
 | Status | Open |
 | Last updated | To be confirmed |
 
----
-
 ## Adding deployment-specific risks
 
 Use this template for risks unique to your deployment.
@@ -407,8 +392,6 @@ Use this template for risks unique to your deployment.
 | Status | Open, mitigating, closed or accepted |
 | Last updated | Date |
 
----
-
 ## Risk review log
 
 | Review date | Reviewer | Changes made | Next review |
@@ -417,16 +400,12 @@ Use this template for risks unique to your deployment.
 | | | | |
 | | | | |
 
----
-
 ## Escalation record
 
 | Date | Risk ID | Escalated to | Reason | Outcome |
 |------|---------|--------------|--------|---------|
 | | | | | |
 | | | | | |
-
----
 
 ## Summary dashboard
 
@@ -446,8 +425,6 @@ Use this template for risks unique to your deployment.
 | Current | | | | | |
 | Previous | | | | | |
 | Change | | | | | ↑↓→ |
-
----
 
 ## Related documents
 

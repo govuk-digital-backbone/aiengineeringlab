@@ -1,18 +1,19 @@
 > **ALPHA**
-> This is a new service – your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
+> This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
+
 # Individual engineer assessment questionnaire
 
 ## Why we are asking for this information
 
 This questionnaire helps us understand your experience, work context and learning preferences so we can provide the right support for you to adopt AI Engineering Labs effectively. There is no right or wrong answer - we want to understand what will help you work better.
 
-What happens next: Your responses, combined with questionnaires from your delivery manager and technical lead, help us design training, resources and support that work for your specific needs and context.
+## What happens next
 
-Time needed: Approximately 10 to 15 minutes
+Your responses, combined with questionnaires from your delivery manager and technical lead, help us design training, resources and support that work for your specific needs and context.
 
-Confidentiality: Your individual responses are only seen by the programme team and used to design support. We will share aggregate patterns with your team leadership, but never individual responses.
+You will need approximately 10 to 15 minutes to complete this questionnaire.
 
----
+Your responses are confidential and will only seen by the programme team and used to design support. We will share aggregate patterns with your team leadership, but never individual responses.
 
 ## About you
 
@@ -48,8 +49,6 @@ What is your typical working arrangement?
 - [ ] Hybrid (mix of office and remote)
 - [ ] Part-time
 - [ ] Contractor or consultant
-
----
 
 ## Your work
 
@@ -92,8 +91,6 @@ How much do you work with others on code?
 - [ ] Frequent collaboration (regular pairing or mob programming)
 - [ ] Constantly collaborative (always working with others)
 - [ ] Varies by task or project
-
----
 
 ## Current AI tool experience
 
@@ -144,8 +141,6 @@ If you have used an AI coding assistant, select all the tasks you used them for.
 - [ ] Security vulnerability identification
 - [ ] Other (specify): _________________
 
----
-
 ## Your development environment
 
 ### 13. Primary programming languages
@@ -185,8 +180,6 @@ Where do you write code?
 - [ ] Secure environment with limited connectivity
 - [ ] Mix depending on project
 
----
-
 ## Learning and adaptation
 
 ### 16. Learning preferences
@@ -223,8 +216,6 @@ Select all the things you typically do when you are stuck or need help.
 Do you have any accessibility requirements or preferences we should consider when designing training and resources? (Open text - optional)
 
 _________________
-
----
 
 ## Confidence and concerns
 
@@ -274,8 +265,6 @@ Select all the things that would help you most in your day-to-day work right now
 - [ ] Reducing context switching
 - [ ] Other (specify): _________________
 
----
-
 ## Your adoption context
 
 ### 24. Time availability
@@ -305,12 +294,9 @@ Is there anything else about your work, experience or preferences that would hel
 
 _________________
 
----
 
-Thank you for completing this questionnaire.
+## Thank you for completing this questionnaire
 
 Your assessment lead will review your responses alongside your delivery manager and technical lead questionnaires to design support that works for your team and your individual needs.
 
 If you have any questions, contact the assessment lead.
-
----

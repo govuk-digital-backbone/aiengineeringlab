@@ -1,5 +1,5 @@
 > **ALPHA**
-> This is a new service — your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
+> This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 
 # Google Gemini Code Assist: manager tool guide
 
@@ -515,8 +515,8 @@ Government guidance includes:
 Repository resources include:
 
 - [AI SDLC playbook](../../playbooks/ai-sdlc-playbook.md)
-- [GitHub Copilot manager guide](../copilot/README.md)
-- [Amazon Q manager guide](../amazon-q/README.md)
+- [GitHub Copilot manager guide](../github-copilot/)
+- [Amazon Q manager guide](../amazon-q/)
 
 ## Contributing
 

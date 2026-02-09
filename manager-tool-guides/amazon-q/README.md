@@ -1,6 +1,7 @@
 > **ALPHA**
-> This is a new service – your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
-# Amazon Q - manager tool guide
+> This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
+
+# Amazon Q manager tool guide
 
 > Central home for Amazon Q best practices content across government departments.
 
@@ -750,7 +751,7 @@ IAM policy example for Amazon Q access:
 
 - [AI SDLC Playbook](../../playbooks/ai-sdlc-playbook.md) - integrating AI Engineering Lab tools across development lifecycle
 - [Model Selection Playbook](../../playbooks/model-selection.md) - choosing appropriate tools for tasks
-- [GitHub Copilot Manager Guide](../copilot/README.md) - complementary tool for inline completions
+- [GitHub Copilot Manager Guide](../github-copilot/) - complementary tool for inline completions
 
 ## Contributing
 

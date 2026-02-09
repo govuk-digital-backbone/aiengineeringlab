@@ -297,10 +297,10 @@ Remember: model selection is highly personal and task dependent. What works best
 
 ## Related documents
 Review useful resources, including:
-- [GitHub Copilot guide](../manager-tool-guides/copilot/README.md)
-- [Amazon Q engineer guide](../manager-tool-guides/amazon-q/README.md)
+- [GitHub Copilot guide](../manager-tool-guides/github-copilot/)
+- [Amazon Q engineer guide](../manager-tool-guides/amazon-q/)
 - [tool comparative guidance](../manager-tool-guides/comparative-guidance.md) to select appropriate tools
-- [prompt library](../prompt-library/README.md) for ready to use examples
+- [prompt library](../prompt-library/) for ready to use examples
 
 ---
 

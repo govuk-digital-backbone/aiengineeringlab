@@ -1,18 +1,19 @@
 > **ALPHA**
-> This is a new service – your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
+> This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
+
 # Technical lead assessment questionnaire
 
 ## Why we are asking for this information
 
 This questionnaire helps us understand your team's technical environment so we can design AI coding assistant adoption that works with your existing tools, practices and constraints. We are gathering information to tailor the right integration approach and guardrails for your specific context.
 
-What happens next: Your responses, along with questionnaires from your delivery manager and team engineers, help us determine how to integrate AI coding assistants into your workflows effectively and safely.
+## What happens next
 
-Time needed: Approximately 10 to 15 minutes
+Your responses, along with questionnaires from your delivery manager and team engineers, help us determine how to integrate AI coding assistants into your workflows effectively and safely.
 
-Confidentiality: Your responses are used only to design your team's adoption plan. No individual team data is shared beyond the programme team.
+You will need approximately 10 to 15 minutes to complete this questionnaire.
 
----
+Your responses are confidential and will only be used to design your team's adoption plan. No individual team data is shared beyond the programme team.
 
 ## Technical environment
 
@@ -62,8 +63,6 @@ What version control system does your team use?
 - [ ] Other version control system (specify): _________________
 - [ ] No version control system
 
----
-
 ## Development practices
 
 ### 5. Branching strategy
@@ -111,8 +110,6 @@ How does your team handle Continuous integration/Continuous deployment (CI/CD)?
 - [ ] Manual process - builds and deployments done manually
 - [ ] No formal CI/CD
 
----
-
 ## Code quality and standards
 
 ### 10. Code quality tools
@@ -147,8 +144,6 @@ How does your team handle technical debt?
 - [ ] Addressed opportunistically when touching code
 - [ ] Not formally tracked
 - [ ] Overwhelmed by technical debt
-
----
 
 ## System architecture and constraints
 
@@ -191,8 +186,6 @@ What compliance frameworks does your team work within? Select all that apply.
 - [ ] No specific compliance requirements
 - [ ] Other (specify): _________________
 
----
-
 ## Integration and tooling
 
 ### 18. Development workflow
@@ -220,8 +213,6 @@ If engineers currently use AI coding tools, how are they integrated?
 - [ ] Mix of approaches
 - [ ] Unsure
 
----
-
 ## Technical team capability
 
 ### 21. Team's technical practices maturity
@@ -245,8 +236,6 @@ Do legacy systems or technical constraints significantly limit what your team ca
 - [ ] Yes, moderate constraints (some limitations but workarounds exist)
 - [ ] Minor constraints (mostly modern stack with some legacy elements)
 - [ ] No significant constraints (modern tech stack)
-
----
 
 ## AI coding assistant integration
 
@@ -272,12 +261,8 @@ Is there anything else about your technical environment that would help us desig
 
 _________________
 
----
-
-Thank you for completing this questionnaire.
+## Thank you for completing this questionnaire
 
 Your assessment lead will review your responses alongside the delivery manager and individual engineer questionnaires to design your team's adoption approach.
 
 If you have any questions, contact the assessment lead.
-
----

@@ -1,18 +1,19 @@
 > **ALPHA**
-> This is a new service – your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
+> This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
+
 # Delivery manager assessment questionnaire
 
 ## Why we are asking for this information
 
 This questionnaire helps us understand your team's context so we can tailor the right support for adopting AI coding assistants. There are no right or wrong answers. We are gathering information to design an approach that works for your specific situation.
 
-What happens next: Your responses, along with questionnaires from your technical lead and team engineers, help us determine the most effective adoption approach for your team. This might include customised training, specific guardrails or additional hands-on support.
+## What happens next
 
-Time needed: Approximately 10 to 15 minutes
+Your responses, along with questionnaires from your technical lead and team engineers, help us determine the most effective adoption approach for your team. This might include customised training, specific guardrails or additional hands-on support.
 
-Confidentiality: We use your responses only to design your team's adoption plan. We do not share individual team data beyond the programme team.
+You will need approximately 10 to 15 minutes to complete this questionnaire.
 
----
+Your responses are confidential and will only be used to design your team's adoption plan. We do not share individual team data beyond the programme team.
 
 ## About your team
 
@@ -48,8 +49,6 @@ What is the mix of experience in your team?
 - [ ] Mix of mid and senior (3 to 10 and more years)
 - [ ] Mostly senior (7 and more years experience)
 
----
-
 ## What your team works on
 
 ### 5. Primary work type
@@ -75,8 +74,6 @@ How would you describe the criticality of the systems your team works on?
 - [ ] High importance (downtime affects many users or important services)
 - [ ] Moderate importance (downtime is disruptive but manageable)
 - [ ] Lower criticality (can tolerate some disruption)
-
----
 
 ## Delivery approach and pressures
 
@@ -112,8 +109,6 @@ Do you have any significant delivery milestones in the next 3 months?
 - [ ] Uncertain - requirements still emerging
 
 If yes, briefly describe: _________________
-
----
 
 ## Quality standards and practices
 
@@ -157,8 +152,6 @@ How would you describe your team's technical debt situation?
 - [ ] Moderate - some legacy issues but manageable
 - [ ] High - significant legacy constraints affecting delivery
 - [ ] Very high - technical debt dominates our work
-
----
 
 ## AI and governance context
 
@@ -209,8 +202,6 @@ What security constraints does your team work within? Select all that apply.
 - [ ] Standard corporate network with internet access
 - [ ] Unsure about specific constraints
 
----
-
 ## Change and learning context
 
 ### 19. Recent changes
@@ -239,8 +230,6 @@ Realistically, how much time can engineers dedicate to learning new tools over t
 - [ ] Less than 1 hour per week (very limited)
 - [ ] Essentially none - delivery pressures too high
 
----
-
 ## Support needs
 
 ### 22. Main concerns
@@ -268,9 +257,7 @@ Is there anything else about your team's context that would help us design the r
 
 _________________
 
----
-
-#### Thank you for completing this questionnaire
+## Thank you for completing this questionnaire
 
 Your assessment lead will review your responses alongside the technical lead and individual engineer questionnaires to design your team's adoption approach.
 

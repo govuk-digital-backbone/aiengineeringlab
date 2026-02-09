@@ -33,7 +33,7 @@ Before reading this guide, you should understand:
 - basic software development lifecycle concepts
 - your department's security classification requirements
 - the AI Engineering Lab maturity assessment framework (see 'maturity assessment framework' and 'team classification guide')
-- manager-tool-guides for [Amazon Q](../amazon-q/README.md)
+- manager-tool-guides for [Amazon Q](../amazon-q/)
 
 ## Security best practices
 
