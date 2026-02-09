@@ -1,5 +1,5 @@
 > **ALPHA**
-> This is a new service – your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
+> This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 
 # AI Engineering Lab guardrails - base configuration
 
@@ -26,8 +26,6 @@ Use the links below to navigate to each guardrail category.
 | [Usage boundaries](#usage-boundary-guardrails) | Where you should not use AI assistants |
 | [Output validation](#output-validation-guardrails) | How to verify AI-generated content |
 | [Monitoring and audit](#monitoring-and-audit-guardrails) | Tracking and accountability |
-
----
 
 ## Data handling guardrails
 
@@ -111,8 +109,6 @@ You must:
 - clear context explicitly when available in the tool
 - avoid mixing work across multiple departments in a single session
 
----
-
 ## Code security guardrails
 
 ### G-CS-01: Mandatory human review
@@ -187,8 +183,6 @@ When building systems that use AI, you should take the following precautions:
 - use parameterised prompts where possible
 - implement input length limits
 - monitor for unusual prompt patterns
-
----
 
 ## Usage boundary guardrails
 
@@ -291,8 +285,6 @@ For experimentation with restricted features, take the following steps.
 5. Log all agent actions for audit purposes.
 6. Review and commit all outputs manually.
 
----
-
 ## Output validation guardrails
 
 ### G-OV-01: Factual verification
@@ -338,8 +330,6 @@ Watch for common AI hallucination patterns.
 | Fabricated APIs | `response.get_secure_data()` (not a real method) | Check documentation |
 | Outdated syntax | Deprecated method calls | Verify against current version |
 | Invented configuration | Non-existent config options | Test in isolated environment |
-
----
 
 ## Ethical use guardrails
 
@@ -401,8 +391,6 @@ Examples requiring escalation include AI-generated code for algorithmic decision
 
 Outcomes of escalations should be recorded to support consistent handling of similar novel use cases across teams.
 
----
-
 ## Monitoring and audit guardrails
 
 ### G-MA-01: Usage logging
@@ -452,8 +440,6 @@ AI assistant usage should be reviewed according to the following schedule.
 | Security incidents | Monthly | AI-related incidents, near-misses |
 | Guardrails effectiveness | Quarterly | Policy compliance, gaps identified |
 | Tool accreditation | Annually | Continued suitability |
-
----
 
 ## Creating department-specific guardrails
 
@@ -508,8 +494,6 @@ Department modification: [How it differs]
 Rationale: [Why modification is needed]
 ```
 
----
-
 ## Checks before using AI coding assistants
 
 ### Self-assessment checklist
@@ -532,8 +516,6 @@ Team leads should verify the following items.
 - [ ] Code review processes include AI-generated code verification
 - [ ] Incident reporting channels are established
 
----
-
 ## Related documents
 
 - [Incident Response Playbook](incident-response-playbook.md) - security incident handling
@@ -550,5 +532,3 @@ Team leads should verify the following items.
 - [OWASP Secure Coding Practices](https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/)
 - [OWASP LLM Top 10](https://genai.owasp.org/llm-top-10/)
 - [OWASP Agentic AI Threats](https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/)
-
----

@@ -24,8 +24,8 @@ The DSIT AI Engineering Lab Programme Phase 1 includes licences for:
 
 For tool-specific implementation guidance, see:
 
-- [GitHub Copilot Guide](copilot/README.md)
-- [Amazon Q Engineer Guide](amazon-q/README.md)
+- [GitHub Copilot guide](github-copilot/)
+- [Amazon Q engineer guide](amazon-q/)
 
 ---
 
@@ -445,8 +445,8 @@ Regardless of tool selection, you should maintain exit capability by:
 
 ## Related documents
 
-- [GitHub Copilot Guide](copilot/README.md)
-- [Amazon Q Engineer Guide](amazon-q/README.md)
+- [GitHub Copilot Guide](github-copilot/)
+- [Amazon Q Engineer Guide](amazon-q/)
 - [Model Selection Playbook](../playbooks/model-selection.md)
 
 ## References

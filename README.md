@@ -11,15 +11,18 @@ This repository provides reusable guidance, templates, training materials, and p
 
 ## Quick navigation
 
-| Section                        | Description                                                |
-|--------------------------------|------------------------------------------------------------|
-| [Governance](./governance/)    | Guardrails, compliance, and department-specific frameworks |
-| [Playbooks](./playbooks/)      | AI SDLC, context engineering, and model selection guidance |
-| [Manager tool guides](./manager-tool-guides/) | Tool deployment and management guidance for leads          |
-| [Prompt library](./prompt-library/) | Tested prompts organised by task and language              |
-| [Training materials](./training-materials/) | Onboarding, scenarios, and guided learning paths           |
-| [Quality metrics](./quality-metrics/) | Quality strategy and measurement frameworks                |
-| [Repository Structure](REPOSITORY-STRUCTURE.md)    | Structure of the repository                                |
+| Section | Description |
+|---------|-------------|
+| [Code of conduct](CODE_OF_CONDUCT.md) | Contributor covenant code of conduct |
+| [Contributing](CONTRIBUTING.md) | How to contribute to the AI Engineering Lab repository |
+| [Repository structure](REPOSITORY-STRUCTURE.md) | Structure of the repository |
+| [Assessment](assessment/) | Readiness and maturity evaluation |
+| [Governance](governance/) | Guardrails, compliance, and department-specific frameworks |
+| [Manager tool guides](manager-tool-guides/) | Tool deployment and management guidance for leads |
+| [Playbooks](playbooks/) | AI SDLC, context engineering, and model selection guidance |
+| [Prompt library](prompt-library/) | Tested prompts organised by task and language |
+| [Quality metrics](quality-metrics/) | Quality strategy and measurement frameworks |
+| [Training materials](training-materials/) | Onboarding, scenarios, and guided learning paths |
 
 ## Audience
 
@@ -37,7 +40,7 @@ This repository is for:
 
 1. Read the [AI-SDLC Playbook](playbooks/ai-sdlc-playbook.md) for integration guidance.
 2. Review the [Guardrails](governance/guardrails-base.md) to understand usage boundaries.
-3. Explore the [Prompt Library](prompt-library/README.md) for proven patterns.
+3. Explore the [Prompt Library](prompt-library/) for proven patterns.
 
 ### I'm a technical lead setting up my team
 
@@ -45,11 +48,10 @@ This repository is for:
 2. Establish baseline metrics using the [Quality Strategy](quality-metrics/quality-strategy.md).
 3. Consider requesting [FDE support](#forward-deployed-engineering-support) for your rollout.
 
-
 ### I'm a manager selecting tools for my department
 
 1. Start with [Comparative Guidance](manager-tool-guides/comparative-guidance.md).
-2. Review tool-specific guides: [GitHub Copilot](manager-tool-guides/copilot/README.md) and [Amazon Q](manager-tool-guides/amazon-q/README.md).
+2. Review tool-specific guides: [GitHub Copilot](manager-tool-guides/github-copilot/) and [Amazon Q](manager-tool-guides/amazon-q/).
 3. Review the [Model Selection Playbook](playbooks/model-selection.md).
 
 ### I'm a senior responsible owner needing governance assurance
@@ -57,7 +59,6 @@ This repository is for:
 1. Review all governance documentation in the governance folder.
 2. Understand the 'Risk register template'.
 3. Review the 'Incident response playbook'.
-
 
 ## Forward deployed engineering support
 
@@ -71,6 +72,7 @@ Forward deployed engineering support is appropriate for:
 - capturing learnings for repository enhancement
 
 To request forward deployed engineering support, contact gdsengineeringexcellence@dsit.gov.uk with:
+
 - a completed readiness checklist
 - team details
 - specific support needs
@@ -82,7 +84,7 @@ To request forward deployed engineering support, contact gdsengineeringexcellenc
 To find what you need:
 
 - use the [quick start guides](#quick-start-by-role) based on your role
-- browse the [repository structure](./REPOSITORY-STRUCTURE.md) for specific topics
+- browse the [repository structure](REPOSITORY-STRUCTURE.md) for specific topics
 - use your browser or IDE search functionality within documents
 
 ### Staying current

@@ -166,4 +166,4 @@ This page is updated regularly. Last updated: 28 January 2026
 ## Related documents
 
 - [Context engineering playbook](../playbooks/context-engineering.md) - advanced techniques
-- [Prompt library](../prompt-library/README.md) - reusable prompts
+- [Prompt library](../prompt-library/) - reusable prompts

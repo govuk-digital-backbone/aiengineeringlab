@@ -2,4 +2,7 @@
 
 ## [0.0.2] - 2026-02-04
 
-- initial content release
+Initial content release.
+
+### Fixed
+- streamlined repository navigation
