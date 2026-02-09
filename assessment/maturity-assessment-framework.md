@@ -1,5 +1,6 @@
 > ALPHA
-> This is a new service – your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
+> This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
+
 # AI Engineering Lab maturity assessment framework
 
 > A structured approach to assessing team readiness and determining appropriate support levels for AI code assistant adoption.

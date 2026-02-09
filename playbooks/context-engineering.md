@@ -719,7 +719,7 @@ Current function:
 Review useful resources, including:
 - [AI-SDLC playbook](ai-sdlc-playbook.md) - Integrating AI into development lifecycle
 - [model selection playbook](model-selection.md) - Choosing the right model for tasks
-- [prompt library](../prompt-library/README.md) - Reusable prompt patterns
+- [prompt library](../prompt-library/) - Reusable prompt patterns
 - [guardrails base](../governance/guardrails-base.md) - Security boundaries
 
 ## References

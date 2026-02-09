@@ -1,7 +1,7 @@
 > **ALPHA**
-> This is a new service – your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
+> This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 
-# GitHub Copilot - manager tool guide
+# GitHub Copilot manager tool guide
 
 ## Purpose
 
@@ -385,7 +385,7 @@ Follow these steps to resolve the issue.
 5. Try using Copilot Chat for complex scenarios instead of inline.
 6. For Enterprise customers: verify custom model fine-tuning is configured.
 
-Understanding how to communicate with Copilot effectively can dramatically improve suggestion quality. See the [prompt library](../../prompt-library/README.md) for tested prompts and patterns.
+Understanding how to communicate with Copilot effectively can dramatically improve suggestion quality. See the [prompt library](../../prompt-library/) for tested prompts and patterns.
 
 #### Performance issues
 
