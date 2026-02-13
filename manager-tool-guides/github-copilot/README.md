@@ -7,13 +7,13 @@
 
 This guide provides engineering managers with practical guidance for implementing GitHub Copilot within UK government departments. It covers capabilities assessment, security considerations, phased rollout strategies, and success measurement to support informed decision-making and sustainable adoption.
 
-## Who this is for
+## Audience
 
-Advanced AI tools should be used by:
+This guide is for:
 
-- engineering managers
-- technical leads
-- delivery managers responsible for AI Engineering Lab adoption in their teams
+- engineering managers responsible for AI Engineering Lab adoption in their teams
+- technical leads overseeing tool implementation and developer workflows
+- delivery managers coordinating rollout and measuring adoption success
 
 ## What is in this guide
 
@@ -21,25 +21,26 @@ This guide is organised into the following sections.
 
 1. Understanding GitHub Copilot
 
-- [What GitHub Copilot does](#what-github-copilot-does) - core capabilities and interaction modes
-- [How it compares with other AI code assistants](#how-it-compares-with-other-ai-code-assistants) - feature comparison and when to use different tools
+- [what GitHub Copilot does](#what-github-copilot-does) - core capabilities and interaction modes
+- [how it compares with other AI code assistants](#how-it-compares-with-other-ai-code-assistants) - feature comparison and when to use different tools
 - [Copilot models and task suitability](#copilot-models-and-task-suitability) - choosing the right model for different tasks
 
 2. Implementation planning
 
-- [Government-specific considerations](#government-specific-considerations) - security classifications, data residency, and procurement
-- [Getting started](#getting-started) - licensing options and installation process
-- [Training requirements](#training-requirements) - engineer and manager training programmes
+- [government-specific considerations](#government-specific-considerations) - security classifications, data residency, and procurement
+- [safe usage guidance: prototyping vs production](../../user-tool-guides/github-copilot/safe-usage-prototyping-vs-production.md) - differentiated controls for different environments
+- [getting started](#getting-started) - licensing options and installation process
+- [training requirements](#training-requirements) - engineer and manager training programmes
 
 3. Managing adoption
 
-- [Measuring success](#measuring-success) - quality metrics and troubleshooting
-- [Policy configuration reference](#policy-configuration-reference) - content exclusions and IDE settings
+- [measuring success](#measuring-success) - quality metrics and troubleshooting
+- [policy configuration reference](#policy-configuration-reference) - content exclusions and IDE settings
 
 4. Additional resources
 
-- [Related resources](#related-resources) - links to official documentation, government guidance, and repository materials
-- [Contributing](#contributing) - how to improve this guide
+- [related resources](#related-resources) - links to official documentation, government guidance, and repository materials
+- [contributing](#contributing) - how to improve this guide
 
 ## Before you start
 
@@ -301,7 +302,7 @@ This module covers:
 - content exclusions and when they apply
 - integration with code review process
 
-Format: live demonstration with hands-on practice using real project examples.
+Format: This training should be delivered as a live demonstration with hands-on practice using real project examples.
 
 ### Manager briefing (30 minutes)
 
@@ -312,7 +313,7 @@ This briefing covers:
 - policy configuration and content exclusions
 - addressing team concerns about AI tools
 
-Format: presentation with Q&A session.
+Format: This briefing should be delivered as a presentation with a Q&A session.
 
 ## Measuring success
 
@@ -538,8 +539,10 @@ NCSC guidance includes:
 
 ### Repository resources
 Repository resources include:
+- [Safe usage guidance: prototyping vs production](../../user-tool-guides/github-copilot/safe-usage-prototyping-vs-production.md) - differentiated controls for prototyping and production environments
 - [AI SDLC Playbook](../../playbooks/ai-sdlc-playbook.md) - integrating AI code assistants across development lifecycle
 - [Model Selection Playbook](../../playbooks/model-selection.md) - choosing appropriate models for tasks
+- [Base guardrails](../../governance/guardrails-base.md) - foundational security controls for all AI tool usage
 
 ### Providing feedback
 

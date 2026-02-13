@@ -3,7 +3,7 @@
 
 # Playbooks
 
-Operational guidance.
+This section provides operational guidance.
 
 ## Quick navigation
 

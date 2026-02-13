@@ -3,7 +3,7 @@
 
 # Assessment
 
-DSIT assessment guides.
+This section includes the assessment guides used as part of your initial engagement with DSIT. They help us understand what support your department needs when adopting coding assistants.
 
 ## Quick navigation
 

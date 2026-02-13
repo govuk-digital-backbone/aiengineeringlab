@@ -3,7 +3,7 @@
 
 # Quality metrics
 
-Measurement and reporting.
+This section covers measurement and reporting for quality metrics when adopting AI coding assistants.
 
 ## Quick navigation
 

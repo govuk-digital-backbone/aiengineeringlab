@@ -145,8 +145,6 @@ Gemini Code Assist Enterprise includes IP indemnity. For government projects, us
 
 #### Standard
 
-$19 per user per month (annual commitment) or $22.80 per user per month (monthly commitment).
-
 Standard includes:
 
 - AI coding assistance with enterprise-grade security
@@ -155,16 +153,14 @@ agent mode
 
 #### Enterprise
 
-$45 per user per month (annual commitment) or $54 per user per month (monthly commitment).
-
-Enterprise includes:
+Enterprise is a paid plan and includes:
 
 - all Standard features
 - code customisation from private repositories
 - IP indemnity
 - usage analytics and reporting
 
-Prices are listed in USD. If you pay in a currency other than USD, the prices listed in your currency on [Cloud Platform SKUs](https://cloud.google.com/skus) apply. Check [Gemini for Google Cloud pricing](https://cloud.google.com/products/gemini/pricing) for current rates.
+Prices are listed on [Cloud Platform SKUs](https://cloud.google.com/skus). Check [Gemini for Google Cloud pricing](https://cloud.google.com/products/gemini/pricing) for current rates.
 
 ### Installation process
 
@@ -514,9 +510,12 @@ Government guidance includes:
 
 Repository resources include:
 
-- [AI SDLC playbook](../../playbooks/ai-sdlc-playbook.md)
+- [AI SDLC playbook](../../playbooks/ai-sdlc-playbook.md)ww- [safe usage guidance: prototyping vs production](../../user-tool-guides/gemini-code-assist/safe-usage-prototyping-vs-production.md)
+- [Developer Knowledge API and MCP server guidance](developer-knowledge-api-and-mcp-server-guidance.md)
 - [GitHub Copilot manager guide](../github-copilot/)
 - [Amazon Q manager guide](../amazon-q/)
+- [base guardrails](../../governance/guardrails-base.md)
+- [incident response playbook](../../governance/incident-response-playbook.md)
 
 ## Contributing
 
@@ -530,17 +529,6 @@ Before contributing, read [CONTRIBUTING.md](../../CONTRIBUTING.md) which covers:
 - review and approval process
 - accessibility requirements
 - how to submit changes
-
-## Support and contact
-
-| Need | Contact |
-|------|---------|
-| General enquiries | To be confirmed |
-| FDE support requests | To be confirmed |
-| Urgent issues | To be confirmed |
-| Content feedback | To be confirmed |
-
-Contact details to be confirmed.
 
 ## Licence
 

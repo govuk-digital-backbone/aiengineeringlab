@@ -23,8 +23,6 @@ This guide is organised into the following sections.
 2. Additional resources
 - [related resources](#related-resources) - links to official documentation, government guidance, and repository materials
 - [contributing](#contributing) - how to improve this guide
-- [support and contact](#support-and-contact) - getting help
-
 
 ## Prerequisites
 
@@ -373,17 +371,6 @@ Before contributing, read 'CONTRIBUTING.md' which covers:
 - review and approval process
 - accessibility requirements
 - how to submit changes
-
-## Support and contact
-
-Contact channels to be confirmed.
-
-| Need | Contact |
-|------|---------|
-| General enquiries | To be confirmed |
-| FDE support requests | To be confirmed |
-| Urgent issues | To be confirmed |
-| Content feedback | To be confirmed |
 
 ## Licence
 

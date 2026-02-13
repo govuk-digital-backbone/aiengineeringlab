@@ -1,9 +1,9 @@
 > ALPHA
 > This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 
-# Manage tool guides
+# Manager tool guides
 
-Tool selection and management.
+This section provides guidance on tool selection and management.
 
 ## Quick navigation
 
@@ -13,4 +13,4 @@ Tool selection and management.
 | [Amazon Kiro](amazon-kiro/) | A manager tool guide for Amazon Kiro |
 | [Amazon Q](amazon-q/) | A manager tool guide for Amazon Q |
 | [GitHub Copilot](github-copilot/) | A manager tool guide for GitHub Copilot |
-| [Google Gemini](google-gemini/) | A manager tool guide for Google Gemini |
+| [Google Gemini](gemini-code-assist/) | A manager tool guide for Google Gemini |

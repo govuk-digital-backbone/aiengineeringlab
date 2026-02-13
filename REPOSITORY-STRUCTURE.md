@@ -1,9 +1,9 @@
 > **ALPHA**
-> This is a new service – your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
+> This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 
 # AI Engineering Lab repository
 
-Central home for all AI Engineering Lab content across government departments.
+This repository is the central home for all AI Engineering Lab content across government departments.
 
 ## Overview
 
@@ -36,6 +36,7 @@ This repository follows a structured approach designed to maintain clarity and s
 ├── manager-tool-guides/         # Tool selection and management
 │   ├── README.md
 │   ├── comparative-guidance.md
+│   ├── data-residency.md
 │   ├── amazon-kiro/
 │   │   └── README.md
 │   ├── amazon-q/
@@ -43,8 +44,9 @@ This repository follows a structured approach designed to maintain clarity and s
 │   │   └── security-and-support.md
 │   ├── github-copilot/
 │   │   └── README.md
-│   └── google-gemini/
-│       └── README.md
+│   └── gemini-code-assist/
+│       ├── README.md
+│       └── developer-knowledge-api-and-mcp-server-guidance.md
 │
 ├── playbooks/                   # Operational guidance
 │   ├── README.md
@@ -83,6 +85,21 @@ This repository follows a structured approach designed to maintain clarity and s
 │   └── README.md
 │
 └── user-tool-guides/            # Developer user guides for AI tools
-    └── gemini/
-        └── README.md
+    ├── claude-code/
+    │   ├── README.md
+    │   ├── getting-started.md
+    │   ├── advanced-use.md
+    │   ├── customisation-guide.md
+    │   └── safe-usage-prototyping-vs-production.md
+    ├── github-copilot/
+    │   ├── README.md
+    │   ├── getting-started.md
+    │   ├── advanced-use.md
+    │   ├── customisation-guide.md
+    │   └── safe-usage-prototyping-vs-production.md
+    └── gemini-code-assist/
+        ├── README.md
+        ├── getting-started.md
+        ├── advanced-use.md
+        └── safe-usage-prototyping-vs-production.md
 ```
