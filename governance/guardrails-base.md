@@ -29,7 +29,7 @@ Use the links below to navigate to each guardrail category.
 
 ## Data handling guardrails
 
-### G-DH-01: Data classification limits
+### G-DH-01: data classification limits
 
 You must only use AI coding assistants with data classified at OFFICIAL or below, unless the specific tool has been accredited for higher classifications.
 
@@ -42,7 +42,7 @@ You must only use AI coding assistants with data classified at OFFICIAL or below
 
 Cloud-based AI assistants transmit data to external servers. Organisations handling OFFICIAL-SENSITIVE data must assess whether their AI tool's enterprise licence provides adequate security controls (such as data residency, encryption, access controls and audit logging) and ensure deployment aligns with the Government security policy framework and National cyber security centre (NCSC) cloud security principles.
 
-### G-DH-02: Prohibited data types
+### G-DH-02: prohibited data types
 
 You must never include the following data types in prompts, code comments or context provided to AI assistants.
 
@@ -62,7 +62,7 @@ You must never include the following data types in prompts, code comments or con
 
 If prohibited data is accidentally shared with an AI tool, report immediately through your department's security incident process and refer to the [Incident Response Playbook](incident-response-playbook.md).
 
-### G-DH-03: Code repository restrictions
+### G-DH-03: code repository restrictions
 
 Before using AI assistants with code from a repository, you must verify the following.
 
@@ -71,7 +71,7 @@ Before using AI assistants with code from a repository, you must verify the foll
 3. The repository is not subject to export control restrictions.
 4. You have authorisation to share the code with third-party services.
 
-### G-DH-04: Prompt hygiene
+### G-DH-04: prompt hygiene
 
 When creating prompts, you should use anonymised or synthetic data in examples and avoid exposing real system architecture or security-relevant patterns.
 
@@ -98,7 +98,7 @@ def get_case_details(case_id):
     ...
 ```
 
-### G-DH-05: Context window awareness
+### G-DH-05: context window awareness
 
 AI assistants may retain context within a session.
 
@@ -111,7 +111,7 @@ You must:
 
 ## Code security guardrails
 
-### G-CS-01: Mandatory human review
+### G-CS-01: mandatory human review
 
 You must review all AI-generated code before:
 
@@ -129,7 +129,7 @@ The minimum review scope should include:
 | Credential exposure | No hardcoded secrets or credentials |
 | Licence compliance | Compatible with project licensing |
 
-### G-CS-02: Security scanning requirements
+### G-CS-02: security scanning requirements
 
 AI-generated code must pass through the same security tooling as human-written code.
 
@@ -143,7 +143,7 @@ AI-generated code must pass through the same security tooling as human-written c
 
 Do not bypass security scanning because code was AI-generated. AI-generated code may contain vulnerabilities that automated tools can detect.
 
-### G-CS-03: Dependency verification
+### G-CS-03: dependency verification
 
 When AI assistants suggest external packages or libraries, you should take the following steps.
 
@@ -160,7 +160,7 @@ Warning signs to look out for include:
 - packages with known Common vulnerabilities and exposures (CVEs) in suggested version
 - packages from unofficial or mirrored repositories
 
-### G-CS-04: No AI in cryptographic implementations
+### G-CS-04: no AI in cryptographic implementations
 
 Do not use AI assistants to:
 
@@ -173,7 +173,7 @@ Cryptographic code requires specialist knowledge. Subtle errors can create sever
 
 Instead, use established, audited libraries and follow NCSC guidance on cryptographic implementations.
 
-### G-CS-05: Prompt injection awareness
+### G-CS-05: prompt injection awareness
 
 AI-generated code may be vulnerable to prompt injection if it processes user input that is later sent to AI systems.
 
@@ -186,7 +186,7 @@ When building systems that use AI, you should take the following precautions:
 
 ## Usage boundary guardrails
 
-### G-UB-01: Prohibited use cases
+### G-UB-01: prohibited use cases
 
 You must not use AI code assistants for the following purposes.
 
@@ -200,7 +200,7 @@ You must not use AI code assistants for the following purposes.
 | Circumventing security controls | Violation of security policy |
 | Air-gapped or isolated environments | Network connectivity restrictions |
 
-### G-UB-02: Appropriate use cases
+### G-UB-02: appropriate use cases
 
 AI code assistants are well-suited for the following purposes.
 
@@ -214,7 +214,7 @@ AI code assistants are well-suited for the following purposes.
 | Code review assistance | Secondary review, not replacement |
 | Prototyping and proofs of concept | Rapid iteration, non-production |
 
-### G-UB-03: Tool-specific boundaries
+### G-UB-03: tool-specific boundaries
 
 Some AI assistants have specific restrictions based on their accreditation status.
 
@@ -227,7 +227,7 @@ Some AI assistants have specific restrictions based on their accreditation statu
 
 Check with your department's security team for current accreditation status before deployment.
 
-### G-UB-04: Environment restrictions
+### G-UB-04: environment restrictions
 
 | Environment | AI assistant usage |
 |-------------|-------------------|
@@ -238,7 +238,7 @@ Check with your department's security team for current accreditation status befo
 | Air-gapped networks | Not permitted (no connectivity) |
 | Secure enclaves | Not permitted without specific accreditation |
 
-### G-UB-05: Agentic AI and autonomous features
+### G-UB-05: agentic AI and autonomous features
 
 Agentic AI refers to AI models that can execute multi-step tasks autonomously, interact with external systems or take actions without human approval at each step. This includes background agents, Bugbot, computer-using agents (CUAs) and similar capabilities.
 
@@ -287,7 +287,7 @@ For experimentation with restricted features, take the following steps.
 
 ## Output validation guardrails
 
-### G-OV-01: Factual verification
+### G-OV-01: factual verification
 
 AI assistants may generate plausible but incorrect information.
 
@@ -298,7 +298,7 @@ You must always verify:
 - security recommendations against NCSC or vendor guidance
 - regulatory claims against authoritative sources
 
-### G-OV-02: Code functionality testing
+### G-OV-02: code functionality testing
 
 You must test all AI-generated code before use.
 
@@ -311,7 +311,7 @@ You must test all AI-generated code before use.
 
 Do not assume AI-generated code is correct because it looks reasonable or compiles successfully.
 
-### G-OV-03: Licence compliance verification
+### G-OV-03: licence compliance verification
 
 AI-generated code may inadvertently reproduce licensed content. Before using generated code, take the following steps.
 
@@ -320,7 +320,7 @@ AI-generated code may inadvertently reproduce licensed content. Before using gen
 3. Document the AI tool used for provenance tracking.
 4. Consult legal team if uncertain about licence implications.
 
-### G-OV-04: Hallucination detection
+### G-OV-04: hallucination detection
 
 Watch for common AI hallucination patterns.
 
@@ -333,7 +333,7 @@ Watch for common AI hallucination patterns.
 
 ## Ethical use guardrails
 
-### G-ET-01: Ethical review triggers
+### G-ET-01: ethical review triggers
 
 Identify whether any teams work on systems that require additional ethical consideration.
 
@@ -350,7 +350,7 @@ Identify whether any teams work on systems that require additional ethical consi
 
 During assessment, record which teams work on these system types in the security posture review. Flag for additional controls in department-specific guardrails.
 
-### G-ET-02: Transparency and documentation
+### G-ET-02: transparency and documentation
 
 When AI code assistants are used in developing systems that affect citizens or public decisions, take the following actions.
 
@@ -362,7 +362,7 @@ When AI code assistants are used in developing systems that affect citizens or p
 
 Government has a responsibility to be transparent about how services are built. Departments should be able to answer questions about AI usage in service development.
 
-### G-ET-03: Human judgment requirements
+### G-ET-03: human judgment requirements
 
 AI code assistants support but do not replace professional judgment. Human review must be informed and contextual, meaning reviewers understand the system's purpose, limitations and potential impacts relevant to their decision.
 
@@ -378,7 +378,7 @@ You must make final decisions for the following areas.
 
 AI may assist with research, drafting, code generation, test creation and documentation. Humans must decide on architecture choices, compliance interpretations, policy implementation and safety-critical logic.
 
-### G-ET-04: Escalation for novel use cases
+### G-ET-04: escalation for novel use cases
 
 If a proposed use of AI code assistants raises ethical concerns not covered by these guardrails, take the following steps.
 
@@ -393,7 +393,7 @@ Outcomes of escalations should be recorded to support consistent handling of sim
 
 ## Monitoring and audit guardrails
 
-### G-MA-01: Usage logging
+### G-MA-01: usage logging
 
 Departments should maintain logs of AI assistant usage with the following elements.
 
@@ -406,7 +406,7 @@ Departments should maintain logs of AI assistant usage with the following elemen
 
 Do not log prompt content as it may contain sensitive information.
 
-### G-MA-02: Telemetry configuration
+### G-MA-02: telemetry configuration
 
 Configure AI assistant telemetry settings according to department policy.
 
@@ -419,7 +419,7 @@ Configure AI assistant telemetry settings according to department policy.
 
 Review vendor data handling policies and ensure they meet government requirements.
 
-### G-MA-03: Incident reporting
+### G-MA-03: incident reporting
 
 You must report the following incidents to your security team:
 
@@ -428,9 +428,9 @@ You must report the following incidents to your security team:
 - suspected prompt injection attempts
 - unusual AI behaviour or responses suggesting compromise
 
-Use existing security incident reporting channels. See [Incident Response Playbook](incident-response-playbook.md) for detailed procedures.
+Use existing security incident reporting channels. Read the [incident response playbook](incident-response-playbook.md) for detailed procedures.
 
-### G-MA-04: Periodic review
+### G-MA-04: periodic review
 
 AI assistant usage should be reviewed according to the following schedule.
 
@@ -516,19 +516,120 @@ Team leads should verify the following items.
 - [ ] Code review processes include AI-generated code verification
 - [ ] Incident reporting channels are established
 
-## Related documents
+## Agentic AI guardrails
 
-- [Incident Response Playbook](incident-response-playbook.md) - security incident handling
-- [Risk Register Template](risk-register-template.md) - risk documentation
-- [AI-SDLC Playbook](../playbooks/ai-sdlc-playbook.md) - development lifecycle integration
+This section provides security controls for AI coding tools with agentic capabilities. These are tools that operate autonomously, execute multi-step tasks, and make decisions without continuous human oversight.
+
+### G-AG-01: autonomy level classification
+
+You must classify AI coding tools by their autonomy level before use.
+
+| Level (L) | Name | Description | Examples |
+|-------|------|-------------|----------|
+| L1 | Suggestive | Human accepts each suggestion | Copilot inline |
+| L2 | Assistive | Human reviews before apply | Copilot Chat |
+| L3 | Collaborative | Multi-step with checkpoints | Copilot Edits, Cursor Composer |
+| L4 | Autonomous | Extended operation with check-ins | Amazon Kiro, Claude Code agentic |
+| L5 | Fully Autonomous | Hours/days operation | Devin |
+
+Level 5 tools require SIRO approval before deployment.
+
+### G-AG-02: proportionate controls
+
+Controls must be proportionate to the autonomy level.
+
+| Control | L1 to 2 | L3 | L4 | L5 |
+|---------|-------|----|----|-----|
+| Human review | Each suggestion | At checkpoints | At checkpoints and time | Continuous monitor |
+| Branch isolation | Not required | Recommended | Required | Required |
+| Time limits | None | 15 min | 30 min | 2 hours |
+| Kill switch | Not required | Recommended | Required and tested | Required and multiple |
+| SIRO approval | No | No | No | Yes |
+
+### G-AG-03: kill switch requirements
+
+For L4 and L5 tools, operators must have accessible kill switches.
+
+1. Primary: IDE/CLI kill command (Ctrl+C or equivalent)
+2. Secondary: session termination
+3. Tertiary: network disconnection
+
+Test kill switches before extended autonomous sessions.
+
+### G-AG-04: checkpoint requirements
+
+For L3 to L5 tools, checkpoints must occur after:
+
+- creating more than 5 files
+- modifying more than 10 files
+- deleting any files
+- any external API call
+- any dependency installation
+- the maximum time limit is reached
+
+### G-AG-05: prohibited agentic actions
+
+Regardless of autonomy level, agentic tools must not do any of the following actions.
+
+| Prohibited action | Rationale |
+|-------------------|-----------|
+| Deploy to production | Requires human approval |
+| Modify auth/authz code | Security-critical |
+| Access SECRET+ data | Classification restrictions |
+| Commit to main/master | Branch protection |
+| Bypass CI/CD checks | Quality gates |
+| Access .env files with secrets | Credential protection |
+
+### G-AG-06: human in the loop (HiTL) escalation matrix
+
+Human approval is required for the following triggers and autonomy levels.
+
+| Trigger | L3 | L4 | L5 |
+|---------|----|----|-----|
+| Security-sensitive file modification | Explicit approval | Explicit approval | Explicit approval |
+| CI/CD modification | Explicit approval | Explicit approval | Not permitted |
+| External API call | Approval | Approval | Approval |
+| Time limit (30 min) | - | Mandatory review | Mandatory review |
+| Time limit (2 hours) | - | - | Mandatory review |
+| Production deployment | Not permitted | Not permitted | Not permitted |
+
+### G-AG-07: meaningful human review
+
+For the human review to be meaningful:
+
+- you must allocate minimum 1 minute per 50 lines of changed code
+- the reviewer must be able to explain what the code does
+- the reviewer must verify no obvious security issues
+- the reviewer must confirm tests pass and are meaningful
+
+Rubber-stamping of AI output does not constitute meaningful review.
+
+### G-AG-08: session documentation
+
+For L4 and L5 sessions, you must document the:
+
+- session start time and purpose
+- autonomy level used
+- checkpoints and reviews
+- session end time
+- review attestation
 
 ## References
 
+### UK government (tier 1)
+
+- [UK AI Playbook for Government (2025)](https://www.gov.uk/government/publications/ai-playbook-for-the-uk-government/artificial-intelligence-playbook-for-the-uk-government-html) - replaces the CDDO GenAI Framework
 - [NCSC AI Security Guidance](https://www.ncsc.gov.uk/collection/ai)
 - [NCSC Cloud Security Principles](https://www.ncsc.gov.uk/collection/cloud-security)
+- [NCSC Zero Trust Architecture](https://www.ncsc.gov.uk/collection/zero-trust-architecture)
 - [NCSC Secure Development Guidance](https://www.ncsc.gov.uk/collection/developers-collection)
 - [Government Security Classifications](https://www.gov.uk/government/publications/government-security-classifications)
 - [Technology Code of Practice](https://www.gov.uk/guidance/the-technology-code-of-practice)
+- [Cyber Essentials Scheme](https://www.ncsc.gov.uk/cyberessentials/overview)
+
+### Standards (tier 3)
+
 - [OWASP Secure Coding Practices](https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/)
-- [OWASP LLM Top 10](https://genai.owasp.org/llm-top-10/)
+- [OWASP LLM Top 10 (2025)](https://genai.owasp.org/llm-top-10/)
 - [OWASP Agentic AI Threats](https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/)
+- [NIST AI RMF](https://www.nist.gov/itl/ai-risk-management-framework)

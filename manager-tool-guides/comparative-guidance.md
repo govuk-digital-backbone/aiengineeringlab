@@ -230,15 +230,17 @@ The table below shows activities to complete during your proof of concept:
 
 PoC evaluation template:
 
-| Criterion | Weight | Tool A score (1 to 5) | Tool B score (1 to 5) |
-|-----------|--------|--------------------|--------------------|
-| Code completion quality | 20% | to be confirmed | to be confirmed |
-| Security compliance | 25% | to be confirmed | to be confirmed |
-| Language support | 15% | to be confirmed | to be confirmed |
-| Integration ease | 15% | to be confirmed | to be confirmed |
-| Engineer satisfaction | 15% | to be confirmed | to be confirmed |
-| Support quality | 10% | to be confirmed | to be confirmed |
-| Weighted total | 100% | to be confirmed | to be confirmed |
+```
+| Criterion                | Weight | Tool A score (1 to 5) | Tool B score (1 to 5) |
+|--------------------------|--------|-----------------------|-----------------------|
+| Code completion quality  | 20%    | [score 1-5]           | [score 1-5]           |
+| Security compliance      | 25%    | [score 1-5]           | [score 1-5]           |
+| Language support         | 15%    | [score 1-5]           | [score 1-5]           |
+| Integration ease         | 15%    | [score 1-5]           | [score 1-5]           |
+| Engineer satisfaction    | 15%    | [score 1-5]           | [score 1-5]           |
+| Support quality          | 10%    | [score 1-5]           | [score 1-5]           |
+| Weighted total           | 100%   | [calculate]           | [calculate]           |
+```
 
 #### Step 4: make recommendation (Week 5)
 
@@ -293,7 +295,7 @@ For most departments, start with a single tool for initial adoption, then consid
 
 ### Scenario 1: Java modernisation team
 
-Context: team modernising legacy Java 8 applications to Java 17 and 21 with Spring Boot.
+Context: This example team is modernising legacy Java 8 applications to Java 17 and 21 with Spring Boot.
 
 Key requirements include:
 
@@ -309,7 +311,7 @@ You should consider the following:
 
 ### Scenario 2: full-stack GOV.UK service team
 
-Context: team building citizen-facing service using GOV.UK Frontend, Node.js backend.
+Context: This example team is building a citizen-facing service using GOV.UK Frontend and a Node.js backend.
 
 Key requirements include:
 
@@ -325,7 +327,7 @@ You should consider the following:
 
 ### Scenario 3: data engineering team
 
-Context: team building data pipelines with Python, SQL, and cloud services.
+Context: This example team is building data pipelines with Python, SQL, and cloud services.
 
 Key requirements include:
 
@@ -341,7 +343,7 @@ You should consider the following::
 
 ### Scenario 4: legacy COBOL maintenance
 
-Context: team maintaining critical COBOL systems with occasional modernisation.
+Context: This example team is maintaining critical COBOL systems with occasional modernisation.
 
 Key requirements include:
 
@@ -357,7 +359,7 @@ You should consider the following:
 
 ### Scenario 5: infrastructure and platform team
 
-Context: team managing cloud infrastructure with Terraform, Kubernetes, CI/CD.
+Context: This example team is managing cloud infrastructure with Terraform, Kubernetes, and CI/CD.
 
 Key requirements include:
 

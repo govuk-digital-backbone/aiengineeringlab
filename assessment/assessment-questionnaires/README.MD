@@ -1,9 +1,9 @@
 > ALPHA
 > This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 
-# Assessment Questionnaires
+# Assessment questionnaires
 
-DSIT assessments.
+This section includes the DSIT assessment questionnaires that are used to help us understand what support your department needs when adopting AI coding assistants.
 
 ## Quick navigation
 

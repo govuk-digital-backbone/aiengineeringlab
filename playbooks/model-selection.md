@@ -8,13 +8,17 @@
 
 This guide helps engineers and teams choose appropriate AI code assistants and models based on their work type, task requirements and cost considerations. It supports the programme's goal of optimising cost to use trade-offs while maintaining productivity gains.
 
+Note: The AI landscape changes rapidly. Always verify pricing and capabilities against vendor documentation before making decisions. Pricing shown in GBP is converted at approximately £0.74 per $1 USD.
+
+---
+
 ## Tools in scope
 
-The AI Engineering Lab programme includes 4 AI code assistants:
+The AI Engineering Lab programme includes 4 core AI code assistants:
 
 - GitHub Copilot Enterprise by Microsoft and GitHub
 - Claude Code by Anthropic
-- Amazon Q Engineer by AWS
+- Amazon Q Developer by AWS
 - Gemini Code Assist by Google
 
 Each tool has different strengths, pricing models and model options. This guide will be updated as comparative evidence emerges from programme deployments.
@@ -33,7 +37,7 @@ Evidence from deployments:
 
 | Project | Tool used | Task | Result |
 |---------|-----------|------|--------|
-| Celink Loan Boarding | Amazon Q | EGL to Java migration | 33 days saved, $17,000 net saving |
+| Celink Loan Boarding | Amazon Q | EGL to Java migration | 33 days saved, £12,580 net saving |
 | Sucden Financial | GitHub Copilot | Windows services to cloud microservices, SOAP to REST | 30% to 35% productivity gain |
 | SCA Project | Cursor (Claude 3.7) | VB6 to .NET and Blazor modernisation | 10% to 25% efficiency gains |
 
@@ -58,7 +62,7 @@ Evidence from deployments:
 |---------|-----------|------|--------|
 | Celink | Amazon Q | Manual test case writing | 30 days reduced to 10 to 12 days (60% saving) |
 | Department of Transport | GitHub Copilot | Test automation | 70% to 80% productivity gain |
-| NEPO | GitHub Copilot (Claude 3.7) | Unit testing | 1 day reduced to 1.5 to 2 hours (75% saving) |
+| NEPO | GitHub Copilot (Claude 3.7 Sonnet) | Unit testing | 1 day reduced to 1.5 to 2 hours (75% saving) |
 | Wood Project | GitHub Copilot | Unit testing | 20% to 30% gain |
 
 ### Legacy system maintenance
@@ -104,7 +108,7 @@ Model agency levels include:
 
 ### Fast, iterative development
 
-Best models: Claude 4.5 Haiku, Gemini 3 Pro or Flash.
+Best models: Claude 4.5 Haiku, Gemini 3 Flash, GPT-5.2 Instant.
 
 Characteristics: fast response times, solid code quality, medium agency.
 
@@ -114,12 +118,13 @@ Use these models for:
 - simple bug fixes
 - rapid prototyping
 - straightforward implementations
+- high-frequency iterative workflows
 
 ### Deep problem analysis and new projects
 
-Best models: GPT-5.2, Claude Opus 4.5.
+Best models: Claude Opus 4.6, Claude Opus 4.5.
 
-Characteristics: very high curiosity, excellent at reasoning through complex problems.
+Characteristics: very high curiosity, excellent at reasoning through complex problems, strong multimodal understanding.
 
 Use these models for:
 
@@ -128,6 +133,7 @@ Use these models for:
 - broad exploration of solutions
 - complex architectural decisions
 - thinking outside the box
+- long-horizon agentic tasks
 
 ### Daily driver for most tasks
 
@@ -157,7 +163,7 @@ Use this model for:
 
 ### Creative problem solving
 
-Best models: Claude 4.5 Opus or GPT-5.2 (Thinking).
+Best models: Claude 4.5 Opus, Claude Opus 4.6, GPT-5.3-Codex.
 
 Characteristics: higher agency, goes above and beyond, validates solutions.
 
@@ -168,17 +174,45 @@ Use these models for:
 - additional testing and validation
 - comprehensive solutions
 
+### Long-running agentic workflows
+
+Best models: Claude Opus 4.6, GPT-5.3-Codex.
+
+Characteristics: exceptional at sustained multi-step tasks, maintains context over extended sessions.
+
+Use these models for:
+
+- large refactors spanning multiple files
+- code migrations across codebases
+- complex feature builds requiring iteration
+- production-ready assistants for operational workflows
+
 ---
 
 ## Model personality comparison
 
 | Model | Speed | Curiosity | Agency | Best for |
 |-------|-------|-----------|---------|----------|
-| GPT-5.2 | Very fast | Medium | Medium | Rapid development |
-| Gemini 3.5 Pro | Very fast | Medium | Medium to high | Fast iterations, impulsive execution |
+| GPT-5.2 Instant | Very fast | Medium | Medium | Rapid development, everyday work |
+| GPT-5.2 Thinking | Medium | High | High | Complex reasoning, professional work |
+| GPT-5.2-Codex | Medium | High | High | Agentic coding, long-context tasks |
+| GPT-5.3-Codex | Fast | Very high | Very high | Long-running development, multi-day projects |
+| Gemini 3 Flash | Very fast | Medium | Medium to high | Speed-optimized coding, fast iterations |
+| Gemini 3 Pro | Fast | High | High | Complex multimodal tasks, reasoning-first workflows |
 | Claude 4.5 Haiku | Fast | Medium | Medium | Fast tasks with reasoning |
 | Claude 4.5 Sonnet | Medium | Medium | Medium | Stable, predictable coding |
-| Claude 4.5 Opus | Medium to slow | High | Very high | Comprehensive solutions |
+| Claude 4.5 Opus | Medium to slow | High | Very high | Comprehensive solutions, deep reasoning |
+| Claude Opus 4.6 | Medium | Very high | Very high | Enterprise agents, long-running workflows |
+
+### Model notes
+
+GPT-5.3-Codex (February 2026) is 25% faster than GPT-5.2-Codex and the first model to help build itself. API access being rolled out.
+
+Claude Opus 4.6 (February 2026) is the latest flagship, best for coding and enterprise agents. It includes agent team capabilities, 1M token context (beta) and discovered 500+ zero-day vulnerabilities in security testing.
+
+Gemini 3 Flash (January 2026) is 3x faster than Gemini 2.5 Pro while outperforming it.
+
+Gemini 3 Pro (November 2025) is a reasoning-first model with 1M token context window. It uses thinking levels (low/high) for controlling reasoning depth.
 
 ---
 
@@ -216,8 +250,9 @@ You should switch models when you:
 
 - are stuck in a loop and need a different model for a fresh perspective
 - need more creativity from high agency models
-- want faster responses from GPT-5.2 or Gemini 3.5 Pro
-- need deeper analysis from Claude 4.5 Opus or other deep reasoning models
+- want faster responses from GPT-5.2 Instant or Gemini 3 Flash
+- need deeper analysis from Claude Opus 4.6, GPT-5.3-Codex, or other deep reasoning models
+- require sustained multi-step work from GPT-5.3-Codex or Claude Opus 4.6
 
 ### Context and efficiency
 
@@ -226,6 +261,7 @@ For context and efficiency, consider:
 - separate chat sessions, using different models for different types of tasks
 - response time, balancing quality needs with speed requirements
 - matching verbosity preference, some models are more verbose than others
+- context window size: Gemini 3 Pro (1M), Claude Opus 4.6 (1M with beta), GPT-5.2 (400K)
 
 ---
 
@@ -262,10 +298,12 @@ Current status: comparative data collection is ongoing. This section will be upd
 
 Task-specific model recommendations include:
 
-- code explanation using high curiosity models such as Claude 4.5 Opus
+- code explanation using high curiosity models such as Claude 4.5 Opus or Claude Opus 4.6
 - bug fixing using balanced models such as Claude 4.5 Sonnet
 - feature implementation using lower agency models for precision
 - architecture design using high curiosity and high agency models
+- long-running refactors using GPT-5.3-Codex or Claude Opus 4.6
+- agentic workflows using Gemini 3 Pro or Claude Opus 4.6
 
 ### Team considerations
 
@@ -282,6 +320,9 @@ Cost and capacity factors include:
 - auto mode, considering model availability and cost
 - peak usage with backup model preferences
 - budget constraints that balance model capability with usage costs
+- batch processing for non-urgent tasks (50% cost savings available for GPT and Claude models)
+- prompt caching for repeated contexts (up to 90% savings on Claude models)
+- Gemini 3 thinking levels - use "low" for faster, cheaper responses when complex reasoning is not required
 
 ---
 
@@ -298,7 +339,7 @@ Remember: model selection is highly personal and task dependent. What works best
 ## Related documents
 Review useful resources, including:
 - [GitHub Copilot guide](../manager-tool-guides/github-copilot/)
-- [Amazon Q engineer guide](../manager-tool-guides/amazon-q/)
+- [Amazon Q Developer guide](../manager-tool-guides/amazon-q/)
 - [tool comparative guidance](../manager-tool-guides/comparative-guidance.md) to select appropriate tools
 - [prompt library](../prompt-library/) for ready to use examples
 

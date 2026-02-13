@@ -7,7 +7,11 @@
 
 ## Audience
 
-Engineering managers, technical leads, and delivery managers responsible for AI Engineering Lab adoption in their teams.
+This guide is for:
+
+- engineering managers responsible for AI Engineering Lab adoption in their teams
+- technical leads overseeing tool implementation and developer workflows
+- delivery managers coordinating rollout and measuring adoption success
 
 ## Purpose
 
@@ -17,7 +21,8 @@ This guide provides engineering managers with practical guidance for implementin
 
 This guide is organised into the following sections.
 
-1. Understanding Amazon Q
+1. Overview
+- [summary](#summary) - key considerations and capabilities at a glance
 - [what Amazon Q does](#what-amazon-q-does) - core capabilities and interaction modes
 - [how it compares with other AI Engineering Lab tools](#how-it-compares-with-other-ai-engineering-lab-tools) - feature comparison and when to use different tools
 - [Q models and task suitability](#q-models-and-task-suitability) - choosing the right model for different tasks
@@ -37,7 +42,7 @@ This guide is organised into the following sections.
 - [related resources](#related-resources) - links to official documentation, government guidance, and repository materials
 - [contributing](#contributing) - how to improve this guide
 
-## Prerequisites
+## Before you start
 
 Before reading this guide, you should understand:
 
@@ -45,6 +50,45 @@ Before reading this guide, you should understand:
 - basic software development lifecycle concepts
 - your department's security classification requirements
 - the AI Engineering Lab maturity assessment framework (see [maturity assessment framework](../../assessment/maturity-assessment-framework.md) and [team classification guide](../../assessment/team-classification-guide.md))
+
+## Summary
+
+Amazon Q Engineer is AWS's AI-powered code assistant, offering deep integration with AWS services and built-in security scanning. It is well-suited for government teams working primarily with AWS infrastructure.
+
+### Key considerations
+
+| Factor | Assessment |
+|--------|------------|
+| Recommended tier | Amazon Q Engineer Pro |
+| Security classification | OFFICIAL with content exclusions; OFFICIAL-SENSITIVE requires risk assessment |
+| IP indemnity | Yes (Pro tier only) |
+| Procurement route | G-Cloud 14, AWS Enterprise Agreement, or AWS Marketplace |
+| Pilot duration | 4 weeks recommended |
+| Training time | 60 minutes for engineers, 30 minutes for managers |
+
+### Capabilities at a glance
+
+| Capability | Availability |
+|------------|--------------|
+| Inline code completion | All tiers |
+| Chat assistance | All tiers |
+| Agent mode (autonomous tasks) | Pro only |
+| Security scanning | Pro only |
+| Code transformation (Java upgrades) | Pro only |
+| AWS service integration | Native |
+
+### When to choose Amazon Q
+
+Choose Amazon Q when your team:
+- works extensively with AWS services
+- needs integrated security scanning
+- has Java modernisation initiatives
+- requires AWS infrastructure as code assistance
+
+Consider alternatives when:
+- you need faster inline completions (GitHub Copilot)
+- you need complex reasoning capabilities (Claude Code)
+- you work primarily with non-AWS cloud providers
 
 ## What Amazon Q does
 
@@ -204,6 +248,10 @@ You can ask questions directly in Q chat. You can also:
 
 ## Government-specific considerations
 
+For detailed guidance on security, privacy, and compliance requirements for AI Engineering Lab tools, see the [Security, privacy and compliance guide](../../governance/README.md).
+
+This section covers Amazon Q-specific considerations.
+
 ### Security classification
 
 Amazon Q Engineer processes code snippets through AWS services. This means it is generally acceptable for OFFICIAL classification with appropriate content exclusions configured. OFFICIAL-SENSITIVE requires risk assessment and strict content exclusions. SECRET and above classifications are not appropriate for this tool.
@@ -251,6 +299,10 @@ Check your department's data residency requirements before deployment. For UK go
 Amazon Q Engineer Pro includes IP indemnity, meaning AWS provides legal protection if generated code infringes copyright. Free tier does not include this protection.
 
 For government projects, use Amazon Q Engineer Pro only.
+
+### Risk management
+
+When implementing Amazon Q, follow your department's risk management processes. For guidance on handling AI-related incidents, see the [Incident response playbook](../../governance/incident-response-playbook.md).
 
 ## Getting started
 
@@ -321,7 +373,7 @@ Test installation by checking these indicators.
 
 ### Phase 1: pilot (weeks 1 to 4)
 
-Objective: validate effectiveness and identify issues
+Objective: The objective of this phase is to validate effectiveness and identify issues.
 
 #### Activities
 
@@ -340,7 +392,7 @@ Objective: validate effectiveness and identify issues
 
 ### Phase 2: team expansion (weeks 5 to 12)
 
-Objective: scale to full engineering team
+Objective: The objective of this phase is to scale to the full engineering team.
 
 #### Activities
 
@@ -359,7 +411,7 @@ Objective: scale to full engineering team
 
 ### Phase 3: optimisation (ongoing)
 
-Objective: maximise value and address friction
+Objective: The objective of this phase is to maximise value and address friction.
 
 #### Activities
 
@@ -411,7 +463,7 @@ This module covers:
 - content exclusions and when they apply
 - integration with code review process
 
-Format: live demonstration with hands-on practice using real AWS projects.
+Format: This training should be delivered as a live demonstration with hands-on practice using real AWS projects.
 
 ### Manager briefing (30 minutes)
 
@@ -424,7 +476,7 @@ This briefing covers:
 - addressing team concerns about AI tools
 - security scanning and compliance features
 
-Format: presentation with Q&A session.
+Format: This briefing should be delivered as a presentation with a Q&A session.
 
 ## Measuring success
 
@@ -543,7 +595,7 @@ Interventions.
 
 ### Code review process
 
-Amazon Q-generated code should pass through the same review process as human-written code. You should check the following things. 
+Amazon Q-generated code should pass through the same review process as human-written code. You should check the following things.
 
 1. Logic correctness and edge case handling.
 2. No hardcoded secrets or sensitive data.
@@ -765,17 +817,6 @@ Before contributing, read [CONTRIBUTING.md](../../CONTRIBUTING.md) which covers:
 - review and approval process
 - accessibility requirements
 - how to submit changes
-
-## Support and contact
-
-| Need | Contact |
-|------|---------|
-| General enquiries | To be confirmed |
-| FDE support requests | To be confirmed |
-| Urgent issues | To be confirmed |
-| Content feedback | To be confirmed |
-
-Contact details to be confirmed.
 
 ## Licence
 

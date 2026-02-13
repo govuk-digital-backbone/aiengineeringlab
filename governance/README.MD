@@ -3,7 +3,7 @@
 
 # Governance
 
-DSIT policy and guardrails.
+This section includes DSIT policy and guardrails for using AI coding assistants. 
 
 ## Quick navigation
 

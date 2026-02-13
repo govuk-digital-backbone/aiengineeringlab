@@ -277,7 +277,7 @@ For P1 and P2 incidents, conduct a blameless post-incident review.
 
 ### Example A: Personal data exposed to AI tool
 
-Scenario: An engineer accidentally includes real customer personally identifiable information (PII) in a prompt.
+Scenario: In this example, an engineer accidentally includes real customer personally identifiable information (PII) in a prompt.
 
 #### Immediate actions
 
@@ -312,7 +312,7 @@ You must:
 
 ### Example B: Security vulnerability deployed to production
 
-Scenario: AI-generated code containing SQL injection vulnerability reaches production.
+Scenario: In this example, AI-generated code containing an SQL injection vulnerability reaches production.
 
 #### Immediate actions
 
@@ -347,7 +347,7 @@ You must action:
 
 ### Example C: API key committed to repository
 
-Scenario: AI suggests code containing a hardcoded API key which is committed.
+Scenario: In this example, the AI suggests code containing a hardcoded API key, which is then committed.
 
 #### Immediate actions
 
@@ -380,7 +380,7 @@ You must:
 
 ### Example D: Suspected prompt injection attack
 
-Scenario: AI assistant produces unexpected output suggesting malicious prompt injection.
+Scenario: In this example, the AI assistant produces unexpected output suggesting a malicious prompt injection.
 
 #### Immediate actions
 

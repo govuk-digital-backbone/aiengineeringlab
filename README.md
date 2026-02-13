@@ -3,11 +3,7 @@
 
 # AI Engineering Lab repository
 
-Central home for all AI Engineering Lab content across government departments.
-
-## About this repository
-
-This repository provides reusable guidance, templates, training materials, and practices for safely and effectively adopting AI code assistants across government.
+Central home for all AI Engineering Lab content across government departments. It provides reusable guidance, templates, training materials, and practices for safely and effectively adopting AI code assistants.
 
 ## Quick navigation
 
@@ -19,9 +15,11 @@ This repository provides reusable guidance, templates, training materials, and p
 | [Assessment](assessment/) | Readiness and maturity evaluation |
 | [Governance](governance/) | Guardrails, compliance, and department-specific frameworks |
 | [Manager tool guides](manager-tool-guides/) | Tool deployment and management guidance for leads |
+| [User tool guides](user-tool-guides/) | Developer user guides for AI tools |
 | [Playbooks](playbooks/) | AI SDLC, context engineering, and model selection guidance |
 | [Prompt library](prompt-library/) | Tested prompts organised by task and language |
 | [Quality metrics](quality-metrics/) | Quality strategy and measurement frameworks |
+| [Sustainable AI](sustainable-ai/) | AI environmental sustainability |
 | [Training materials](training-materials/) | Onboarding, scenarios, and guided learning paths |
 
 ## Audience
