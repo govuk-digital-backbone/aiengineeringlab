@@ -163,10 +163,10 @@ Clear context when:
 
 Manage context proactively by:
 
-- committing frequently: each commit creates a natural boundary
-- compacting at milestones: after features, fixes, or merges
-- clearing between tasks: when switching to unrelated work
-- monitoring regularly: check `/status` for token usage
+- committing frequently, as each commit creates a natural boundary
+- compacting at milestones, including after features, fixes, or merges
+- clearing between tasks when switching to unrelated work
+- monitoring regularly by checking `/status` for token usage
 
 ### Break complex tasks into steps
 
@@ -246,7 +246,7 @@ Read more about [security in Claude Code](https://code.claude.com/docs/en/securi
 
 ### Never include in prompts
 
-Never include these in prompts:
+Never include the following in prompts:
 
 - API keys, passwords, authentication tokens
 - real citizen data or personal information
@@ -254,7 +254,7 @@ Never include these in prompts:
 - security configuration details
 - SSH keys, certificates or cryptographic material
 
-Use these instead:
+Instead, use:
 
 - placeholder values: `<API_KEY>`, `<DATABASE_URL>`, `<SECRET>`
 - synthetic test data following realistic formats
