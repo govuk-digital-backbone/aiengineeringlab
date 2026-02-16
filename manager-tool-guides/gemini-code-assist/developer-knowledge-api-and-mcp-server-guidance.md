@@ -46,7 +46,7 @@ End users do not need to configure this. Once set up, developers can access Goog
 
 MCP is an open standard developed by Anthropic that enables AI assistants to securely access external data sources. The protocol is gaining adoption across the industry, with support from OpenAI, Google DeepMind, Microsoft, AWS and Cloudflare.
 
-Key benefits:
+Key benefits include:
 
 - standardised integration across different AI coding tools
 - consistent approach to tool discovery and usage
@@ -70,9 +70,9 @@ The Developer Knowledge API provides access to approximately 400,000 pages of Go
 The service covers public documentation only. It does not access private repositories, GitHub, blogs, or YouTube content.
 
 The MCP server provides three tools that Gemini uses automatically:
-- search_documents - Search the documentation corpus
-- get_document - Retrieve specific pages
-- batch_get_documents - Retrieve multiple pages
+- search_documents - search the documentation corpus
+- get_document - retrieve specific pages
+- batch_get_documents - retrieve multiple pages
 
 ## How it works
 
@@ -113,13 +113,10 @@ Note: You need a Google Cloud project with billing enabled. For UK Government de
 
 Once you have a Google Cloud project:
 
-Open the [Developer Knowledge API page](https://console.cloud.google.com/start/api?id=developerknowledge.googleapis.com) in the Google APIs library.
-
-Check that you have the correct project selected.
-
-Select Enable.
-
-No specific IAM roles are required to enable or use the API beyond standard Google Cloud project access.
+1. Open the [Developer Knowledge API page](https://console.cloud.google.com/start/api?id=developerknowledge.googleapis.com) in the Google APIs library.
+2. Check that you have the correct project selected.
+3. Select Enable.
+4. No specific IAM roles are required to enable or use the API beyond standard Google Cloud project access.
 
 ### Step 2: create an API key
 
@@ -315,7 +312,7 @@ You do not need to explicitly invoke the MCP server. Simply ask questions in age
 
 ### Effective prompts
 
-For best results, be specific about Google services and error codes:
+For best results, be specific about Google services and error codes.
 
 Good: "How do I deploy a Flask app to Google Cloud Run?"  
 Poor: "How do I deploy a web app?"
@@ -408,7 +405,7 @@ For guidance on measuring adoption and value within your team, see [Metrics Coll
 
 ### Setup and configuration issues
 
-Problem: "gcloud command not found" when enabling MCP server
+Problem: "gcloud command not found" when enabling MCP server.
 
 Solutions:
 1. Install Google Cloud CLI from [cloud.google.com/sdk/docs/install](https://cloud.google.com/sdk/docs/install).
@@ -416,7 +413,7 @@ Solutions:
 3. Run `gcloud init` to authenticate.
 4. Verify installation: `gcloud --version`.
 
-Problem: Settings file doesn't exist
+Problem: Settings file doesn't exist.
 
 Solutions:
 
@@ -442,7 +439,7 @@ For IntelliJ:
   New-Item -Path "$env:USERPROFILE\.gemini\mcp.json" -ItemType File
   ```
 
-Problem: JSON syntax errors in configuration
+Problem: JSON syntax errors in configuration.
 
 Solutions:
 1. Validate your JSON using an online validator like [jsonlint.com](https://jsonlint.com).
@@ -452,11 +449,11 @@ Solutions:
    - Incorrect quote marks (use straight quotes `"`, not curly quotes `"`)
    - Mismatched brackets `{}` or braces `[]`
 
-Problem: "Gemini CLI command not found"
+Problem: "Gemini CLI command not found".
 
 Solution: The `gemini mcp add` command requires [Gemini CLI](https://github.com/google-gemini/gemini-cli) to be installed separately. If you don't have it, use the manual JSON configuration method instead.
 
-Problem: MCP server not appearing in `/mcp` list
+Problem: MCP server not appearing in `/mcp` list.
 
 Solutions:
 1. Ensure you've restarted your IDE after configuration changes.
@@ -467,7 +464,7 @@ Solutions:
 
 ### Connection issues
 
-Problem: "Failed to connect to MCP server"
+Problem: "Failed to connect to MCP server".
 
 Solutions:
 1. Verify your API key is correct in the configuration file.
@@ -478,7 +475,7 @@ Solutions:
 
 ### Authentication errors
 
-Problem: 403 PERMISSION_DENIED errors
+Problem: 403 PERMISSION_DENIED errors.
 
 Solutions:
 1. Verify your API key has the Developer Knowledge API enabled in restrictions.
@@ -490,7 +487,7 @@ The Developer Knowledge MCP server only returns public documentation from truste
 
 ### Query issues
 
-Problem: Gemini is not using the Developer Knowledge server
+Problem: Gemini is not using the Developer Knowledge server.
 
 Solutions:
 1. Verify you are in agent mode (not standard chat).
@@ -498,7 +495,7 @@ Solutions:
 3. Check the MCP server is connected using `/mcp`.
 4. Try explicitly mentioning the Google service: "According to Google Cloud documentation..."
 
-Problem: Receiving outdated documentation
+Problem: Receiving outdated documentation.
 
 Solutions:
 1. Google's re-indexing goal is within 24 hours, so very recent changes may not yet be available.
@@ -507,7 +504,7 @@ Solutions:
 
 ### Rate limiting
 
-Problem: "Quota exceeded" errors
+Problem: "Quota exceeded" errors.
 
 Solutions:
 1. Check current quota usage in Google Cloud Console.
