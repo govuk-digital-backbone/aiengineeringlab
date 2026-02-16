@@ -134,7 +134,7 @@ Unlike the EU, UK uses principle-based regulatory approach, regulated through ex
 
 Regulatory Context: AI must align with broad expectations that regulators will apply within existing legal regimes. Its Key principles include: safety, security, transparency, fairness, accountability and governance.
 
-AI Playbook for the UK Government: Government departments must follow the following principles.
+AI Playbook for the UK Government: government departments must follow the following principles:
 
 - using AI lawfully, ethically and responsibly
 
