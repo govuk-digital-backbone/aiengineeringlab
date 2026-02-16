@@ -146,14 +146,14 @@ AI Playbook for the UK Government: government departments must follow the follow
 
 - applying ethical considerations at each stage
 
-Transparency & Algorithmic Accountability: If an AI system influences decisions in public services, departments often must register it under frameworks like the Algorithmic Transparency Recording Standard(ATRS).
+Transparency and algorithmic accountability: If an AI system influences decisions in public services, departments often must register it under frameworks like the Algorithmic Transparency Recording Standard(ATRS).
 Failing to document or disclose systems undermines public trust and may violate transparency expectations for public authorities.
 
-Data Protection Laws (General Data Protection Regulation(GDPR) & Data Protection Act 2018): Use of AI tools must comply with UK GDPR, which governs personal data processing. You must justify why personal data is processed and justifications are necessary. Only provide minimum data needed to Kiro and avoid feeding unnecessary personal data into language models. If AI processing is likely to pose high risk to individuals’ rights and freedom, a Data Protection Impact Assessments(DPIA) is required.
+Data protection laws (General Data Protection Regulation(GDPR) & Data Protection Act 2018): Use of AI tools must comply with UK GDPR, which governs personal data processing. You must justify why personal data is processed and justifications are necessary. Only provide minimum data needed to Kiro and avoid feeding unnecessary personal data into language models. If AI processing is likely to pose high risk to individuals’ rights and freedom, a Data Protection Impact Assessments(DPIA) is required.
 
-Ethics & Human Control: Critical decisions should involve meaningful human review and it should be fair use.
+Ethics and human control: Critical decisions should involve meaningful human review and it should be fair use.
 
-Security & Risk Management: Protect infrastructure and data, evaluate and mitigate risks early through robust risk management frameworks to ensure AI tools does not expose sensitive government data or jeopardise system integrity.
+Security and risk management: Protect infrastructure and data, evaluate and mitigate risks early through robust risk management frameworks to ensure AI tools does not expose sensitive government data or jeopardise system integrity.
 
 Consult your departmental security team before deployment. Reference [NCSC guidance on cloud services](https://www.ncsc.gov.uk/collection/cloud/the-cloud-security-principles) for risk assessment.
 
@@ -179,7 +179,7 @@ Amazon Kiro supports configurable file‑access denial patterns. AWS documentati
   }
 }
 ```
-### Exclusion Patterns for Government Projects
+### Exclusion patterns for government projects
 ```yaml
 # Credential & Secret Files: Highly sensitive and always excluded
 **/*.pem
@@ -232,7 +232,7 @@ config/*.secret.json
 **/build/**
 ```
 
-**Amazon Kiro Data Residency in the UK**
+**Amazon Kiro data residency in the UK**
 
 Amazon Kiro does not currently store data in a UK-based AWS Region. Kiro’s supported data‑storage regions are documented under “Supported Regions” according to the official Kiro documentation. This complies with EU/EEA data residency requirements but not strict UK‑sovereign residency.
 
@@ -240,7 +240,7 @@ The supported regions are:
 - US East (N. Virginia)
 - Europe (Frankfurt)
 
-**Intellectual Property for Amazon Kiro**
+**Intellectual property for Amazon Kiro**
 
 Amazon Kiro’s IP framework is governed by AWS licensing terms, which define ownership, usage rights, and IP protections for both Amazon and the user.
 
@@ -253,18 +253,18 @@ According to the official Kiro license:
 
 # Getting started
 
-Amazon Kiro is not a standalone CLI or package you install like Terraform or Docker. It is an AI-powered development environment / IDE experience that integrates with AWS services and is accessed through supported IDEs and AWS authentication. So the installation is environment setup + access enablement + IDE configuration.
+Amazon Kiro is not a standalone CLI or package you install like Terraform or Docker. It is an AI-powered development environment and IDE experience that integrates with AWS services and is accessed through supported IDEs and AWS authentication. So the installation is environment setup + access enablement + IDE configuration.
 
 Below is the complete, step‑by‑step Amazon Kiro installation guide.
 
-Step 1: System Requirements
+Step 1: System requirements
 - supported OS: Windows 10/11 (64‑bit), macOS (Intel & Apple Silicon), Linux (Ubuntu 18.04+, Fedora 32+, or similar)
 - memory: Minimum 4GB RAM (8GB+ recommended)
 - storage: ~500MB free space
 - internet: Required for AI features (Bedrock inference, updates)
 - some advanced workflows require Node.js 20+ (optional but recommended for dev tasks)
 
-Step 2: AWS Account
+Step 2: AWS account
 - you need an active AWS account
 - permissions to use Amazon Bedrock, create IAM roles/policies and access developer tools
 
@@ -273,7 +273,7 @@ Note: In enterprises/government, this usually means going through your cloud/pla
 Step 3: Amazon Kiro
 - download the installer for: Windows, macOS (Intel/ARM), Linux (Deb/Ubuntu or universal)
 
-Step 4: Supported Operating System
+Step 4: Supported operating system
 - macOS
 - linux
 - windows
@@ -289,16 +289,16 @@ Step 6: Kiro runs on Amazon Bedrock, this is mandatory
 - create or use an IAM role/user with least privilege
 - read/write access to code repositories (locally)
 
-Step 7: Configure AWS Credentials Locally
+Step 7: Configure AWS credentials locally
 - aws configure
 - or use AWS SSO, Environment variables, Credential profiles and Verify: aws sts get-caller-identity
 
-Step 8: Install the Amazon Kiro IDE Extension
+Step 8: Install the Amazon Kiro IDE extension
 - in VS Code, search for Amazon Kiro and install the extension
 - restart VS Code and Kiro panel / sidebar appears
 - open a project repository and verify
 
-Step 9: Common Installation Issues (and Fixes)
+Step 9: Common installation issues (and fixes)
 - "Model access denied": Bedrock not enabled or model access not approved
 - "AWS credentials not found": Fix aws configure or SSO login
 - "Kiro can’t see my files": Open the project folder correctly in VS Code
@@ -306,22 +306,22 @@ Step 9: Common Installation Issues (and Fixes)
 # Training requirements
 These are mandatory foundational requirements before a user can begin using Kiro effectively.
 
-Module 1: Environment Preparation Training (60 minutes)
+Module 1: environment preparation training (60 minutes)
 - AWS account + access setup
 - Kiro IDE or Kiro CLI installation
 - optional DevOps / advanced setup
 
-Module 2: Core Skills Training (90 minutes)
+Module 2: core skills training (90 minutes)
 - understanding Kiro’s core workflow – specs, hooks, steering
 - hands‑on first project
 
-Module 3: Feature‑Focused Learning Tracks (120 minutes, flexible)
+Module 3: feature‑focused learning tracks (120 minutes, flexible)
 - beginner track – foundations
 - intermediate track – specs, hooks, context
 - advanced track – production workflows
 
-### Total Training Time Estimate
-| Level | Time Required | Who Needs It |
+### Total training time estimate
+| Level | Time required | Who needs it |
 |-------|---------------|--------------|
 | Basic / Getting Started | 1–2 hours | Individual developers | 
 | Core Kiro Workflow | 1.5–3 hours | All users | 
@@ -331,11 +331,11 @@ Module 3: Feature‑Focused Learning Tracks (120 minutes, flexible)
 
 # Measuring success
 Measuring success in Kiro is based on three primary dimensions
-- usage & activity metrics (quantitative tracking)
+- usage and activity metrics (quantitative tracking)
 - developer productivity & workflow outcomes
 - quality, automation, and DevOps improvements
 
-### Using Kiro’s Built‑In User Activity Metrics
+### Using Kiro’s built‑in user activity metrics
 - daily user activity, per individual
 - detailed usage metrics for each developer
 - frequency of Kiro interactions
@@ -343,23 +343,23 @@ Measuring success in Kiro is based on three primary dimensions
 - Kiro outputs daily CSV analytics to an S3 bucket (s3://bucketName/prefix/AWSLogs/accountId/KiroLogs/)
 - this helps measure success by measuring adoption rate, feature usage distribution, user productivity patterns over time and team‑level gaps
 
-### Productivity & Delivery Metrics
-| Metric | What to Measure |
+### Productivity and delivery metrics
+| Metric | What to measure |
 |--------|-----------------|
 | Lead time for changes | Time from code start → production |
 | Cycle time | Time per feature or story |
 | PR turnaround time | Time to review and merge |
 | Deployment frequency | How often code ships |
 
-### Code Quality & Maintainability
-| Metric | Why It Matters |
+### Code quality and maintainability
+| Metric | Why it matters |
 |--------|----------------|
 | Unit test coverage | Kiro often generates tests |
 | Test failure rate	| Quality of generated code |
 | Lint / static analysis issues	| Consistency |
 | Defect rate post-release | Real quality signal |
 
-### Security & Compliance Metrics
+### Security and compliance metrics
 | Metric | Measurement |
 |--------|-------------|
 | Security findings per PR | Static/IaC scans |
@@ -367,7 +367,7 @@ Measuring success in Kiro is based on three primary dimensions
 | Policy violations | Coding or infra standards |
 | DPIA / audit findings	| Governance health |
 
-### Documentation and Knowledge Quality Metrics
+### Documentation and knowledge quality metrics
 | Metric | Indicator |
 |--------|-----------|
 | README completeness | Up-to-date docs |
@@ -378,7 +378,7 @@ Measuring success in Kiro is based on three primary dimensions
 Success with Amazon Kiro is measured across productivity, code quality, security, governance, and developer experience. Key indicators include reduced delivery time, improved test coverage and documentation, stable or improved security outcomes, effective human oversight, and positive developer feedback, not just faster code generation.
 
 # Common troubleshooting scenarios
-- #### Authentication / Access issues
+- #### Authentication or access issues
     Symptoms: 
     - can’t sign in, not authorized, feature disabled
 
@@ -429,14 +429,14 @@ Success with Amazon Kiro is measured across productivity, code quality, security
     Solutions:
     - run: curl https://baidu.com
 
-- #### Session Timeouts (Enterprise Users): Forced logout after ~8 hours
+- #### Session timeouts (enterprise users): forced logout after ~8 hours
     Symptoms: 
     - identity center default timeout
 
     Solutions:
     - admin can increase session duration in IAM identity center settings
 
-- #### MCP / CLI Integration Issues
+- #### MCP / CLI integration issues
     Symptoms: 
     - MCP server not connecting
 
@@ -489,8 +489,8 @@ Success with Amazon Kiro is measured across productivity, code quality, security
     - semgrep (application code scanning)
     - bandit (Python security scanning)
 
-### Kiro Policy Types
-| Policy Type | Location | Purpose | Source |
+### Kiro policy types
+| Policy type | Location | Purpose | Source |
 | ------------| ---------| -------| -------|
 | IAM Identity-Based |IAM console | Admin/user permissions for Kiro console & subscription management | [kiro.dev] |
 | Service-Linked Roles | IAM | Allows Kiro backend to call AWS services securely | [kiro.dev] | 
@@ -521,8 +521,8 @@ Kiro → MCP → External Tool → Result Returned into IDE
 ```
 CI/CD → Kiro CLI → Generate IaC → Validate → Deploy
 ```
-### Kiro Integrates Into Dev Workflows
-| Workflow Area | How Kiro Integrates | Sources | 
+### Kiro integrates into dev workflows
+| Workflow area | How Kiro integrates | Sources | 
 | --------------| --------------------| --------|
 | Planning | Specs (requirements → tasks) | [github.com] | 
 | Active Development | Agent chat + code generation|  [geeky-gadgets.com] |
