@@ -65,7 +65,7 @@ Reference: [Sustainability Mag](https://sustainabilitymag.com/news/could-ai-help
 
 AI emissions include cloud based models and satellite data processing.
 
-Benefits achieved:
+The benefits achieved were:
 
 - 30% reduction in water use
 - reduced pumping energy
