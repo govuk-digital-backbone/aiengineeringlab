@@ -5,8 +5,6 @@
 
 ## Purpose
 
-Here’s a plainer-language version that aligns more closely with GDS tone:
-
 This guidance explains how to use Claude Code safely in both prototyping and production environments across UK government departments. It sets different controls for each, allowing teams to experiment quickly during prototyping while maintaining strong security for production systems.
 
 ## Who this is for
@@ -159,7 +157,7 @@ You must:
 - use separate, isolated environments for prototyping
 - not test with credentials that have production access
 
-You may:
+You can:
 
 - use publicly available datasets for testing
 - create mock data that resembles production structure
@@ -200,7 +198,7 @@ You should:
 
 ### P-04: AI assistant usage
 
-You may:
+You can:
 
 - use Claude Code's chat, CLI and agentic features
 - experiment with code transformation for migration planning
@@ -254,7 +252,7 @@ A prototype transitioning to production must be treated as new production code a
 
 ### Purpose of strict controls
 
-Production environments serve real users and handle operational data. Controls ensure that Claude Code enhances—rather than undermines—code quality, security and reliability.
+Production environments serve real users and handle operational data. Controls ensure that Claude Code enhances, rather than undermines, code quality, security and reliability.
 
 ### PR-01: data handling in production
 
@@ -633,7 +631,7 @@ Document your answers and retain them for audit purposes. Escalate concerns to y
 
 **Appropriate controls**
 
-You may:
+You can:
 - use Claude Code's reasoning capabilities to explore options
 - discuss architectural trade-offs with Claude
 - generate proof-of-concept code to test approaches
