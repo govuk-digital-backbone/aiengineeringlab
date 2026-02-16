@@ -141,7 +141,7 @@ You must:
 - not include real user data in code, comments or prompts
 - not test with credentials that have production access
 
-You may:
+You can:
 
 - use faker libraries to generate realistic test data
 - create minimal mock datasets for proof of concepts
@@ -178,7 +178,7 @@ You should:
 
 ### P-04: AI assistant usage
 
-You may:
+You can:
 
 - use all GitHub Copilot features (inline suggestions, chat, edits)
 - experiment with agentic or autonomous modes (where available)
@@ -490,7 +490,7 @@ Document your answers and retain them for audit purposes. Escalate concerns to y
 
 **Appropriate controls**
 
-You may:
+You can:
 - use test API keys provided by the vendor
 - use GitHub Copilot to generate integration code rapidly
 - test with mock responses or sandbox environment
@@ -512,7 +512,7 @@ You must not:
 
 **Appropriate controls**
 
-You may:
+You can:
 - use GitHub Copilot to generate components quickly
 - use fake data for examples
 - focus on speed over code quality
@@ -716,14 +716,14 @@ Do not use tools on the denied list under any circumstances. Contact your securi
 
 ### Annual governance review
 
-Departments should review AI tool governance annually:
+Departments should review AI tool governance annually by:
 
-- review approved tool list for continued compliance
-- assess changes to terms and conditions of approved tools
-- review training and awareness effectiveness
-- analyse incidents and near-misses
-- update policies based on lessons learned
-- produce annual report on AI usage and compliance
+- reviewing the approved tool list for continued compliance
+- assessing changes to terms and conditions of approved tools
+- reviewing training and awareness effectiveness
+- analysing incidents and near-misses
+- updating policies based on lessons learned
+- producing annual reports on AI usage and compliance
 
 This ensures governance keeps pace with evolving AI technology and risks.
 
@@ -758,7 +758,7 @@ Configure GitHub Copilot to exclude these repository patterns from providing sug
 **/ansible/vault/**
 ```
 
-This reduces risk of accidentally exposing sensitive configurations.
+This reduces the risk of accidentally exposing sensitive configurations.
 
 ---
 
