@@ -168,7 +168,7 @@ You must:
 - use private repositories for all prototype work
 - not commit secrets, API keys or credentials (even for development)
 - enable secret scanning on prototype repositories
-- clearly label repositories as "PROTOTYPE - NOT FOR PRODUCTION"
+- clearly label repositories as 'PROTOTYPE - NOT FOR PRODUCTION'
 
 You should:
 
@@ -459,7 +459,7 @@ Rather than directly promoting prototype code, you should:
 2. Do incremental migration, moving small, well-tested components over time.
 3. Take a hybrid approach, keeping the prototype running alongside production during validation phase.
 
-Do not simply rename "prototype" repositories to "production" without applying appropriate controls.
+Do not simply rename 'prototype' repositories to 'production' without applying appropriate controls.
 
 ### Pre-use due diligence checklist
 
@@ -545,7 +545,7 @@ You must:
 
 You must not:
 - accept large AI-generated refactors without thorough review
-- skip tests because "code behaviour is unchanged"
+- skip tests because 'code behaviour is unchanged'
 
 ---
 
@@ -667,7 +667,7 @@ If your department lacks an ethics review process, escalate to your chief techno
 
 ### Approved tool lists
 
-Your department should maintain an approved AI tool list ("allow list") specifying:
+Your department should maintain an approved AI tool list ('allow list') specifying:
 
 - which AI tools are approved for use
 - what data classifications each tool is approved for

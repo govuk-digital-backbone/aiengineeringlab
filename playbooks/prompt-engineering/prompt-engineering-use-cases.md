@@ -5,11 +5,11 @@
 
 # Prompt engineering for common development tasks
 
-Real-world examples of using AI assistants for common development tasks - writing functions, refactoring code and debugging.
+Real world examples of using AI assistants for common development tasks - writing functions, refactoring code and debugging.
 
 ## Purpose
 
-This guide provides practical, step-by-step workflows for using AI assistants in your daily development work. Learn how to write effective prompts to iteratively build features, refactor messy code and debug issues effectively.
+This guide provides practical, step by step workflows for using AI assistants in your daily development work. Learn how to write effective prompts to iteratively build features, refactor messy code and debug issues effectively.
 
 Use this guide to learn how to prompt AI for:
 
@@ -17,7 +17,7 @@ Use this guide to learn how to prompt AI for:
 - refactoring legacy code systematically and safely
 - debugging issues by providing structured context to AI
 - recognising when AI is not helping and what to do about it
-- reviewing AI-generated code against quality standards
+- reviewing AI generated code against quality standards
 
 ## Who this applies to
 
@@ -26,12 +26,12 @@ This guide applies to engineers working on government projects:
 - engineers building new features
 - engineers maintaining legacy systems
 - anyone debugging production issues
-- code reviewers assessing AI-generated code
+- code reviewers assessing AI generated code
 
 
-### Use case 1: "I need to write a new function"
+### Use case 1: 'I need to write a new function'
 
-The scenario: you are building a new feature. The requirements are clear-ish, but you know from experience that "clear-ish" means you will discover edge cases as you go.
+The scenario: you are building a new feature. The requirements are clear-ish, but you know from experience that 'clear-ish' means you will discover edge cases as you go.
 
 This is where the iterative approach shines. Do not try to get perfect code in one prompt. Instead, build it up systematically, switching roles to get different perspectives.
 
@@ -43,7 +43,7 @@ Start with reverse prompting to uncover what you might have missed:
 ```
 Example prompt:
 
-"Help me write an async function to update user profile information including email, phone, and address.
+'Help me write an async function to update user profile information including email, phone, and address.
 
 This is critical for production code that handles sensitive user data.
 
@@ -61,7 +61,7 @@ Context:
 - here is an example of our existing user creation endpoint:
 [paste example showing your patterns]
 
-Act as a senior backend engineer."
+Act as a senior backend engineer.'
 ```
 
 What happens: the AI asks clarifying questions. You answer them. This surfaces requirements you had not explicitly thought about like rate limiting, audit logging, or what happens if the email is already taken by another user.
@@ -74,26 +74,26 @@ Do not try to do everything at once. Now that the basic logic works, add validat
 
 Example prompt:
 ```
-"Now add comprehensive input validation using Pydantic models:
+'Now add comprehensive input validation using Pydantic models:
 - email: valid format, deliverability check
 - phone: international format (E.164), optional field
 - address: structured fields (line1, line2, city, postcode)
 - required vs optional fields
 
-Return clear validation errors with field-level detail."
+Return clear validation errors with field level detail.'
 ```
 
 #### Round 3: add proper error handling
 
 Example prompt:
 ```
-"Add comprehensive error handling for:
+'Add comprehensive error handling for:
 - database connection failures
 - duplicate email addresses (unique constraint violation)
 - invalid data formats
 - transaction rollbacks
 
-Use specific exception types and meaningful error messages that do not expose internal implementation details."
+Use specific exception types and meaningful error messages that do not expose internal implementation details.'
 ```
 
 #### Round 4: security review - switch roles
@@ -102,7 +102,7 @@ This is when changing roles becomes powerful.
 
 Example prompt:
 ```
-"Act as a security expert reviewing this function.
+'Act as a security expert reviewing this function.
 
 Identify vulnerabilities:
 - input sanitisation issues
@@ -110,18 +110,18 @@ Identify vulnerabilities:
 - data exposure in error messages
 - authentication and authorisation gaps
 
-Rate each by severity and provide secure refactored code."
+Rate each by severity and provide secure refactored code.'
 ```
 
 Note: the AI might flag things you missed. A security expert role often catches that you are returning too much information in error messages, or that you are not properly sanitising inputs even though Pydantic is handling validation.
 
-#### Using few-shot for consistency
+#### Using few shot for consistency
 
 If you have got existing code that follows your team's patterns, use it:
 
 Example prompt:
 ```
-"Here are 2 existing endpoints from our codebase:
+'Here are 2 existing endpoints from our codebase:
 
 [Example 1: User creation endpoint]
 [Example 2: Password update endpoint]
@@ -133,14 +133,14 @@ Notice our patterns:
 - docstring style (Google format)
 - response format
 
-Now write the profile update function following these same patterns."
+Now write the profile update function following these same patterns.'
 ```
 
 This works because you get code that looks like it was written by your team, not generic AI code. It uses your error handling patterns, your logging approach and your response structure.
 
 You should avoid:
 
-- trying to get everything in one promptby asking "Write a complete, production-ready, secure, well-tested, documented function that does X" as this results in generic code that does not fit your context
+- trying to get everything in one prompt by asking 'Write a complete, production ready, secure, well tested, documented function that does X' as this results in generic code that does not fit your context
 - not providing examples as this results in code that does not match your style and needs extensive refactoring
 - accepting code without understanding it - if you cannot explain what every line does, iterate until you can
 
@@ -153,17 +153,17 @@ The correct iterative approach:
 
 ### Use case 2: refactoring complex code
 
-The scenario: you have inherited a 300-line function that does everything. It is untested, undocumented and somehow critical to production. Sound familiar?
+The scenario: you have inherited a 300 line function that does everything. It is untested, undocumented and somehow critical to production. Sound familiar?
 
 AI excels at systematic refactoring, but you need to guide it through the process methodically.
 
-#### The 3-step refactoring approach
+#### The 3 step refactoring approach
 
 Step 1: analyse (do not touch the code yet).
 
 Example prompt:
 ```
-"Act as a code reviewer analysing this function:
+'Act as a code reviewer analysing this function:
 
 [paste the monolithic function]
 
@@ -174,13 +174,13 @@ Context:
 - performance has degraded as traffic increased
 
 Identify:
-- code smells and anti-patterns
+- code smells and anti patterns
 - responsibilities this function has (it should have one)
 - complexity issues
 - testability problems
 - performance concerns
 
-Do not refactor yet - just analyse and explain what is wrong."
+Do not refactor yet - just analyse and explain what is wrong.'
 ```
 
 You should do the analysis first as you need to understand what you are dealing with before you start changing it. The AI will spot things like:
@@ -195,7 +195,7 @@ You should do the analysis first as you need to understand what you are dealing 
 
 Example prompt:
 ```
-"Based on your analysis, create a refactoring plan:
+'Based on your analysis, create a refactoring plan:
 
 1. What patterns should we apply? (for example, repository pattern, dependency injection)
 2. What is the order of changes? (safest to riskiest)
@@ -203,10 +203,10 @@ Example prompt:
 4. What new tests do we need?
 5. What are the risks at each step?
 
-We need to do this incrementally - we cannot break production."
+We need to do this incrementally - we cannot break production.'
 ```
 
-The AI gives you a step-by-step plan.
+The AI gives you a step by step plan.
 
 1. Extract database operations into a repository class.
 2. Extract validation into separate validator.
@@ -221,14 +221,14 @@ Now refactor incrementally.
 
 Example prompt:
 ```
-"Let's implement step 1 from your plan: extract database operations into a repository class.
+'Let us implement step 1 from your plan: extract database operations into a repository class.
 
 Show me:
 - the new repository class
 - the refactored function using the repository
 - what changed and why
 - how to test this in isolation
-- how this maintains backwards compatibility with existing callers"
+- how this maintains backwards compatibility with existing callers'
 ```
 
 After implementing step 1, test it. Make sure nothing broke. Then move to step 2.
@@ -237,7 +237,7 @@ After implementing step 1, test it. Make sure nothing broke. Then move to step 2
 
 Example prompt:
 ```
-"I want to refactor this class [paste code]. Let's think through it step by step:
+'I want to refactor this class [paste code]. Let us think through it step by step:
 
 1. What are all the responsibilities of this class?
 2. Which responsibilities violate single responsibility principle?
@@ -246,10 +246,10 @@ Example prompt:
 5. How would dependency injection work here?
 6. What is the migration path from old to new?
 
-Walk me through your reasoning, then show the refactored architecture."
+Walk me through your reasoning, then show the refactored architecture.'
 ```
 
-This surfaces the thought process, helping you understand not just the "what" but the "why" of the refactoring.
+This surfaces the thought process, helping you understand not just the 'what' but the 'why' of the refactoring.
 
 Common refactoring mistakes include:
 
@@ -265,7 +265,7 @@ The safe approach to follow includes:
 - keeping backwards compatibility
 - deploying gradually
 
-### Use case 3: "Something's broken - help me debug"
+### Use case 3: 'Something's broken - help me debug'
 
 The scenario: your code worked yesterday. Now it does not. The error message is cryptic. You have been staring at it for 30 minutes. Time to bring in a systematic debugging partner.
 
@@ -275,7 +275,7 @@ Provide complete context - do not just paste the error.
 
 Example prompt:
 ```
-"I am getting this error:
+'I am getting this error:
 
 [full error message and stack trace]
 
@@ -296,12 +296,12 @@ Recent changes:
 - added rate limiting to email sending
 - changed Redis connection pool settings
 
-Act as a senior debugger. What is likely causing this?"
+Act as a senior debugger. What is likely causing this?'
 ```
 
 Why this works: you have given the AI the symptoms, context, timeline and expected vs actual behaviour. This is exactly what you would tell a human colleague.
 
-The AI will think through possibilities systematically, suggest tests for each hypothesis and help you identify the root cause. For complex issues, ask it to use chain of thought reasoning: "Walk me through 5 possible causes and how to test each one."
+The AI will think through possibilities systematically, suggest tests for each hypothesis and help you identify the root cause. For complex issues, ask it to use chain of thought reasoning: 'Walk me through 5 possible causes and how to test each one.'
 
 #### The exploratory testing approach
 
@@ -309,7 +309,7 @@ Before bugs happen, find them.
 
 Example prompt:
 ```
-"Act as a QA engineer trying to break this function:
+'Act as a QA engineer trying to break this function:
 
 [function code]
 
@@ -322,15 +322,15 @@ List edge cases and error conditions that could cause problems:
 - network failures
 - invalid data combinations
 
-For each, explain how it would fail and how to handle it."
+For each, explain how it would fail and how to handle it.'
 ```
 
 Note: run this before deployment. The AI will find edge cases you missed.
 
 Common debugging mistakes include:
 
-- jumping to solutions without understanding the problem: "just make it work" leads to band-aid fixes
-- not providing enough context: "why does not this work?" [pastes one line]
+- jumping to solutions without understanding the problem: 'just make it work' leads to band aid fixes
+- not providing enough context: 'why does not this work?' [pastes one line]
 - ignoring the AI's questions: if it asks for logs, there is a reason
 
 The correct systematic approach:
@@ -343,7 +343,7 @@ The correct systematic approach:
 
 ### When AI gets it wrong (and what to do about it)
 
-AI-generated code is not automatically good code. Understanding when and how AI fails helps you catch problems early and know when to step away.
+AI generated code is not automatically good code. Understanding when and how AI fails helps you catch problems early and know when to step away.
 
 #### Security vulnerabilities
 
@@ -354,10 +354,10 @@ Example scenario: AI suggests using regex for input validation. The code works p
 The lesson: AI does not know your security standards. Always run generated code through your organisation's security checks, for example:
 
 - SonarCloud for code quality
-- OWASP Dependency-Check for Common Vulnerabilities and Exposures (CVE) vulnerabilities
+- OWASP Dependency Check for Common Vulnerabilities and Exposures (CVE) vulnerabilities
 - your organisation's standard security scanning tools
 
-Treat AI-generated code the same way you would treat code from any new team member: review it, test it, scan it.
+Treat AI generated code the same way you would treat code from any new team member: review it, test it, scan it.
 
 #### The loop of despair
 
@@ -389,7 +389,7 @@ Tasks requiring deep understanding include:
 - hotfixes where you need to understand every character
 - authentication or payment processing logic
 - anything touching sensitive data handling
-- critical security-related code
+- critical security related code
 
 You may already know exactly what to do, for example:
 
@@ -397,14 +397,14 @@ You may already know exactly what to do, for example:
 - standard patterns you know by heart
 - quick bug fixes in familiar code
 
-Remember: AI is a tool, not a requirement. Sometimes the simple approach is better than the AI-powered one. Use your judgment about when AI adds value and when it is just adding overhead.
+Remember: AI is a tool, not a requirement. Sometimes the simple approach is better than the AI powered one. Use your judgment about when AI adds value and when it is just adding overhead.
 
 #### Quality gate integration
 
 Best practice: integrate AI usage with your existing quality processes.
 
 
-Before committing AI-generated code, you should check that:
+Before committing AI generated code, you should check that:
 
 - the code passes all unit tests
 - the security scan shows no new vulnerabilities
@@ -415,7 +415,7 @@ Before committing AI-generated code, you should check that:
 - performance impact is assessed
 - accessibility requirements are met (if UI code)
 
-The principle: AI-generated code goes through the same quality gates as human-written code. No shortcuts.
+The principle: AI generated code goes through the same quality gates as human written code. No shortcuts.
 
 ---
 

@@ -1,17 +1,17 @@
-> ALPHA
+> **ALPHA**
 > This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us improve it.
 
 # Sustainable AI overview
 
-This document outlines DSIT's approach to sustainable AI. It addresses environmental impacts across the [three industry-standard greenhouse gas (GHG) protocol scopes](https://www.nationalgrid.com/stories/energy-explained/what-are-scope-1-2-3-carbon-emissions).
+This document outlines DSIT's approach to sustainable AI. It addresses environmental impacts across the [three industry standard greenhouse gas (GHG) protocol scopes](https://www.nationalgrid.com/stories/energy-explained/what-are-scope-1-2-3-carbon-emissions).
 
 | Scope | Summary | Description |
 |-------|---------|-------------|
 | Scope 1 | Direct emissions | Emissions from sources owned or controlled by the organisation |
 | Scope 2 | Energy indirect emissions | Emissions from purchased electricity, heating, and cooling |
-| Scope 3 | Other indirect emissions | All other indirect emissions in the value chain, including cloud providers, software vendors, and end-user computing |
+| Scope 3 | Other indirect emissions | All other indirect emissions in the value chain, including cloud providers, software vendors, and end user computing |
 
-Understanding AI's environmental impact across these three scopes enables DSIT to make informed decisions. These decisions align with the UK government's net-zero commitments and [Technology Code of Practice Point 12](https://www.gov.uk/guidance/the-technology-code-of-practice#make-your-technology-sustainable), 'Make your technology sustainable'.
+Understanding AI's environmental impact across these three scopes enables DSIT to make informed decisions. These decisions align with the UK government's net zero commitments and [Technology Code of Practice Point 12](https://www.gov.uk/guidance/the-technology-code-of-practice#make-your-technology-sustainable), 'Make your technology sustainable'.
 
 ## Environmental context
 
@@ -27,13 +27,13 @@ Scope 1 emissions are minimal as the programme does not operate data centres or 
 
 Engineer workstations consume energy. The programme should act to:
 
-- encourage energy-efficient hardware procurement aligned with Government Buying Standards
+- encourage energy efficient hardware procurement aligned with Government Buying Standards
 - promote power management settings
 - support responsible device lifecycle management
 
 Facility operations should minimise emissions through:
 
-- energy-efficient office equipment
+- energy efficient office equipment
 - video conferencing to reduce travel
 - alignment with departmental environmental policies
 
@@ -44,10 +44,10 @@ Scope 2 covers emissions from electricity consumed by programme operations and e
 Operational infrastructure for monitoring, reporting, and knowledge sharing should be:
 
 - prioritised by cloud providers with renewable energy commitments
-- selected by region powered by low-carbon electricity grids
-- right-sized for compute resources and shutdown when not in use
+- selected by region powered by low carbon electricity grids
+- right sized for compute resources and shutdown when not in use
 
-As adoption scales, aggregate electricity consumption increases. End-user computing actions should include:
+As adoption scales, aggregate electricity consumption increases. End user computing actions should include:
 
 - monitoring usage patterns
 - encouraging efficient use
@@ -67,9 +67,9 @@ Training emissions for models in GitHub Copilot, Amazon Q, Claude Code, and Gemi
 
 ### Cloud computing infrastructure
 
-Most AI inference occurs in third-party clouds. Strategies include:
+Most AI inference occurs in third party clouds. Strategies include:
 
-- selection of providers with net-zero targets
+- selection of providers with net zero targets
 - deployment in regions with cleaner energy grids where security allows
 - implementation of caching and batching to reduce redundant API calls
 
@@ -92,24 +92,24 @@ Programme training generates emissions from:
 Mitigation includes:
 
 - prioritisation of virtual delivery
-- consolidation of in-person sessions
-- use of digital-first repositories
+- consolidation of in person sessions
+- use of digital first repositories
 
 ### Supply chain
 
 Hardware and software licences carry embedded carbon. The programme:
 
-- applies whole-life costing incorporating carbon impact
+- applies whole life costing incorporating carbon impact
 - extends hardware lifecycles
 - selects suppliers with environmental commitments
 
-## Programme-specific measures
+## Programme specific measures
 
 Measurement and monitoring should:
 
 - track usage intensity (API calls, tokens, compute time)
 - include carbon footprint in tool comparison analysis
-- report department-level environmental impact
+- report department level environmental impact
 - define intervention triggers for unsustainable usage
 
 Creating an AI Engineering Lab repository that includes:
@@ -147,7 +147,7 @@ The programme commits to:
 
 - including sustainability metrics in transparency reports
 - requesting annual carbon updates from vendors
-- contributing lessons to cross-government forums
+- contributing lessons to cross government forums
 - ensuring engineers understand environmental context
 
 ## Continuous improvement
@@ -161,7 +161,7 @@ The programme will:
 
 ## Conclusion
 
-As the AI Engineering Lab scales across UK government, environmental sustainability remains a core consideration. By addressing impacts across all three GHG protocol scopes, DSIT demonstrates responsible stewardship and alignment with net-zero commitments. Scope 1 covers direct emissions, scope 2 covers energy indirect emissions, and scope 3 covers value chain emissions.
+As the AI Engineering Lab scales across UK government, environmental sustainability remains a core consideration. By addressing impacts across all three GHG protocol scopes, DSIT demonstrates responsible stewardship and alignment with net zero commitments. Scope 1 covers direct emissions, scope 2 covers energy indirect emissions, and scope 3 covers value chain emissions.
 
 The programme balances significant productivity benefits with environmental responsibility through informed procurement, efficient operations, transparent monitoring and continuous improvement. Technology transformation and environmental responsibility are complementary obligations. Government should lead by example in sustainable AI deployment.
 
@@ -169,15 +169,15 @@ The programme balances significant productivity benefits with environmental resp
 
 [Sustainable AI use](ai-use.md), a best practice guide to reduce environmental impact.
 
-[Carbon footprint of AI coding-assistants](carbon-footprint.md), a comparison of the environmental impact of different AI toolsets.
+[Carbon footprint of AI coding assistants](carbon-footprint.md), a comparison of the environmental impact of different AI toolsets.
 
-[Sustainable AI net benefit](net-benefit.md), a consideration of net benefit over time,  societal vs environmental benefits.
+[Sustainable AI net benefit](net-benefit.md), a consideration of net benefit over time, societal or environmental benefits.
 
 [Technology Code of Practice Point 12](https://www.gov.uk/guidance/the-technology-code-of-practice#make-your-technology-sustainable), government sustainability standards.
 
 [Environmental Reporting Guidelines](https://assets.publishing.service.gov.uk/media/67161e8696def6d27a4c9ab3/environmental-reporting-guidance-secr-march-2019.pdf), government guidance including streamlined energy and carbon reporting.
 
-[Industry-standard greenhouse gas (GHG) protocol scopes](https://www.nationalgrid.com/stories/energy-explained/what-are-scope-1-2-3-carbon-emissions), a description of the 3 scopes published by National Grid.
+[Industry standard greenhouse gas (GHG) protocol scopes](https://www.nationalgrid.com/stories/energy-explained/what-are-scope-1-2-3-carbon-emissions), a description of the 3 scopes published by National Grid.
 
 [Streamlined Energy and Carbon Reporting (SECR) framework](https://energy.drax.com/insights/streamlined-energy-and-carbon-reporting-framework/), how UK organisations know about the government's streamlined energy and carbon reporting (SECR) framework.
 

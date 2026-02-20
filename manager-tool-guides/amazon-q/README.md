@@ -15,7 +15,7 @@ This guide is for:
 
 ## Purpose
 
-This guide provides engineering managers with practical guidance for implementing Amazon Q within UK government departments. It covers capabilities assessment, security considerations, phased rollout strategies, and success measurement to support informed decision-making and sustainable adoption.
+This guide provides engineering managers with practical guidance for implementing Amazon Q within UK government departments. It covers capabilities assessment, security considerations, phased rollout strategies, and success measurement to support informed decision making and sustainable adoption.
 
 ## What's in this guide
 
@@ -53,7 +53,7 @@ Before reading this guide, you should understand:
 
 ## Summary
 
-Amazon Q Engineer is AWS's AI-powered code assistant, offering deep integration with AWS services and built-in security scanning. It is well-suited for government teams working primarily with AWS infrastructure.
+Amazon Q Engineer is AWS's AI powered code assistant, offering deep integration with AWS services and built in security scanning. It is well suited for government teams working primarily with AWS infrastructure.
 
 ### Key considerations
 
@@ -88,11 +88,11 @@ Choose Amazon Q when your team:
 Consider alternatives when:
 - you need faster inline completions (GitHub Copilot)
 - you need complex reasoning capabilities (Claude Code)
-- you work primarily with non-AWS cloud providers
+- you work primarily with non AWS cloud providers
 
 ## What Amazon Q does
 
-Amazon Q Engineer provides AI-powered code assistance integrated with AWS services and development workflows. It generates code suggestions, explains existing code, and helps with AWS-specific tasks directly in your IDE and command line.
+Amazon Q Engineer provides AI powered code assistance integrated with AWS services and development workflows. It generates code suggestions, explains existing code, and helps with AWS specific tasks directly in your IDE and command line.
 
 Its primary capabilities include:
 
@@ -110,12 +110,12 @@ Amazon Q offers several ways to interact with AI assistance, each suited for dif
 
 | Mode | Description | Best for | Available in |
 |------|-------------|----------|--------------|
-| Inline suggestions | Real-time completions as you type | Quick code completion, boilerplate | All tiers |
+| Inline suggestions | Real time completions as you type | Quick code completion, boilerplate | All tiers |
 | Q Chat | Conversational interface in IDE | Explanations, debugging, AWS questions | All tiers |
-| Agent mode | Autonomous multi-step task execution | Feature implementation, refactoring, testing | Engineer Pro |
-| Command line | Terminal-based AI assistance | CLI workflows, script generation | All tiers |
+| Agent mode | Autonomous multistep task execution | Feature implementation, refactoring, testing | Engineer Pro |
+| Command line | Terminal based AI assistance | CLI workflows, script generation | All tiers |
 | Code reviews | Automated security and quality scanning | PR reviews, security analysis | Engineer Pro |
-| Code transformation | Large-scale code upgrades | Java version upgrades, framework migrations | Engineer Pro |
+| Code transformation | Large scale code upgrades | Java version upgrades, framework migrations | Engineer Pro |
 
 Each mode is suited to specific tasks, including:
 
@@ -131,12 +131,12 @@ Amazon Q is best suited for:
 - teams working extensively with AWS services
 - projects requiring AWS infrastructure as code
 - Java application modernisation initiatives
-- security-conscious development workflows
+- security conscious development workflows
 - teams needing integrated code scanning
 
 Amazon Q is not designed for:
 
-- non-AWS cloud provider specific tasks
+- non AWS cloud provider specific tasks
 - complex architectural decisions without human oversight
 - replacing comprehensive security audits
 - fully autonomous production deployments
@@ -147,10 +147,10 @@ Amazon Q is not designed for:
 |---|---|---|---|
 | Inline completion | Good | Excellent | Not available |
 | Chat assistance | Good | Good | Excellent |
-| Codebase understanding | Repository-wide | Current file only | Multi-file context |
+| Codebase understanding | Repository-wide | Current file only | Multifile context |
 | Execution capability | Limited | No | No |
 | AWS integration | Native | Limited | Via API |
-| Security scanning | Built-in | Separate tool | Not available |
+| Security scanning | Built in | Separate tool | Not available |
 | Code transformation | Java upgrades | Not available | Manual |
 | Primary use case | AWS workflows | Fast completion | Reasoning tasks |
 
@@ -159,13 +159,13 @@ Choose Amazon Q when:
 - your team primarily works with AWS services
 - you need integrated security scanning in your workflow
 - Java modernisation is a priority
-- you want built-in code review capabilities
+- you want built in code review capabilities
 - your infrastructure is primarily AWS-based
 - you need assistance with AWS CLI and CloudFormation
 
 Consider combining with other tools to:
 
-- use GitHub Copilot for faster inline completions in non-AWS contexts
+- use GitHub Copilot for faster inline completions in non AWS contexts
 - use Claude Code for complex architectural reasoning
 - use Claude with AWS MCP server for enhanced AWS resource management
 - combine Q's security scanning with manual security reviews
@@ -187,21 +187,21 @@ AWS MCP server capabilities include:
 1. Engineer uses Amazon Q inline suggestions for AWS SDK code.
 2. Engineer uses Q Chat for CloudFormation template generation.
 3. Engineering manager uses Claude with AWS MCP server to review infrastructure security.
-4. Claude analyses IAM policies and suggests least-privilege improvements.
+4. Claude analyses IAM policies and suggests least privilege improvements.
 5. Manager reviews AI analysis and implements approved changes.
 
 #### Setting up AWS MCP server
 
-The AWS MCP server is available for use with Claude and other MCP-compatible AI assistants. For configuration details, see [AWS MCP server documentation](https://github.com/modelcontextprotocol/servers/tree/main/src/aws).
+The AWS MCP server is available for use with Claude and other MCP compatible AI assistants. For configuration details, see [AWS MCP server documentation](https://github.com/modelcontextprotocol/servers/tree/main/src/aws).
 
-#### Government considerations:
+#### Government considerations
 
 The AWS MCP server requires IAM credentials with appropriate permissions. You should:
-- use IAM roles with least-privilege access
-- configure resource-level permissions to limit scope
+- use IAM roles with least privilege access
+- configure resource level permissions to limit scope
 - review data handling policies with your security team
 - ensure compliance with your department's AWS usage policies
-- consider using read-only permissions for analysis tasks
+- consider using read only permissions for analysis tasks
 
 ## Q models and task suitability
 
@@ -220,16 +220,16 @@ Amazon Q uses AWS's proprietary models optimised for code generation and AWS ser
 
 | Task | Recommended approach | Why |
 |---|---|---|
-| Autocomplete as you type | Inline suggestions | Optimised for fast, context-aware completions |
+| Autocomplete as you type | Inline suggestions | Optimised for fast, context aware completions |
 | Generate unit tests | Agent mode (Pro) | Can create comprehensive test suites |
 | Debug AWS integration issues | Q Chat | Direct access to AWS documentation and patterns |
 | Write CloudFormation templates | Q Chat | Trained on AWS infrastructure patterns |
-| Refactor legacy code | Agent mode (Pro) | Multi-file understanding and modification |
-| Security code review | Code review feature (Pro) | Built-in security scanning |
+| Refactor legacy code | Agent mode (Pro) | Multifile understanding and modification |
+| Security code review | Code review feature (Pro) | Built in security scanning |
 | Upgrade Java applications | Code transformation (Pro) | Specialised for Java version migrations |
 | Generate documentation | Q Chat | Good natural language generation |
 | Implement AWS SDK calls | Inline suggestions | Trained on AWS SDK patterns |
-| Optimise AWS costs | Q Chat | Can suggest cost-effective alternatives |
+| Optimise AWS costs | Q Chat | Can suggest cost effective alternatives |
 
 ### Controlling feature usage
 
@@ -244,7 +244,7 @@ IDE commands include:
 
 You can ask questions directly in Q chat. You can also:
 - reference workspace with `@workspace`
-- get AWS-specific help with service names
+- get AWS specific help with service names
 
 ## Government-specific considerations
 
@@ -302,7 +302,7 @@ For government projects, use Amazon Q Engineer Pro only.
 
 ### Risk management
 
-When implementing Amazon Q, follow your department's risk management processes. For guidance on handling AI-related incidents, see the [Incident response playbook](../../governance/incident-response-playbook.md).
+When implementing Amazon Q, follow your department's risk management processes. For guidance on handling AI related incidents, see the [Incident response playbook](../../governance/incident-response-playbook.md).
 
 ## Getting started
 
@@ -348,10 +348,10 @@ code --install-extension amazonwebservices.aws-toolkit-vscode
 ```
 
 For JetBrains IDEs:
-- Settings → Plugins → Search "AWS Toolkit" → Install
+- Settings then Plugins then Search "AWS Toolkit" then Install
 
 For Visual Studio:
-- Extensions → Manage Extensions → Search "AWS Toolkit" → Install
+- Extensions then Manage Extensions then Search "AWS Toolkit" then Install
 
 Engineers authenticate using IAM Identity Center.
 
@@ -359,7 +359,7 @@ Engineers authenticate using IAM Identity Center.
 2. Click "Connect to AWS".
 3. Select "Use IAM Identity Center".
 4. Enter your organisation's start URL.
-5. Complete browser-based authentication.
+5. Complete browser based authentication.
 6. Select AWS Builder ID or IAM Identity Center profile.
 
 Test installation by checking these indicators.
@@ -373,12 +373,12 @@ Test installation by checking these indicators.
 
 ### Phase 1: pilot (weeks 1 to 4)
 
-Objective: The objective of this phase is to validate effectiveness and identify issues.
+Objective: the objective of this phase is to validate effectiveness and identify issues.
 
 #### Activities
 
 1. Select 5 to 10 engineers across different experience levels.
-2. Focus on AWS-related projects or infrastructure work.
+2. Focus on AWS related projects or infrastructure work.
 3. Schedule weekly feedback sessions.
 4. Document effective usage patterns, especially for AWS tasks.
 5. Test security scanning features on real code.
@@ -392,12 +392,12 @@ Objective: The objective of this phase is to validate effectiveness and identify
 
 ### Phase 2: team expansion (weeks 5 to 12)
 
-Objective: The objective of this phase is to scale to the full engineering team.
+Objective: the objective of this phase is to scale to the full engineering team.
 
 #### Activities
 
 1. Roll out to entire team in groups of 10 to 15.
-2. Deliver 45-minute training sessions per group.
+2. Deliver 45 minute training sessions per group.
 3. Share pilot user success stories, especially AWS use cases.
 4. Establish support channels (Slack, Teams, or email).
 5. Create internal knowledge base of effective prompts.
@@ -411,7 +411,7 @@ Objective: The objective of this phase is to scale to the full engineering team.
 
 ### Phase 3: optimisation (ongoing)
 
-Objective: The objective of this phase is to maximise value and address friction.
+Objective: the objective of this phase is to maximise value and address friction.
 
 #### Activities
 
@@ -422,7 +422,7 @@ Objective: The objective of this phase is to maximise value and address friction
 5. Explore advanced features (agent mode, transformations).
 
 #### Success criteria
-1. Consistent month-on-month usage.
+1. Consistent month on month usage.
 2. Declining support tickets.
 3. Measurable productivity improvements.
 4. Positive engineer satisfaction scores.
@@ -442,7 +442,7 @@ This module covers:
 - when to use Q versus manual coding
 - understanding suggestion confidence levels
 
-Module 2: AWS-specific features (20 minutes)
+Module 2: AWS specific features (20 minutes)
 
 This module covers:
 
@@ -463,20 +463,20 @@ This module covers:
 - content exclusions and when they apply
 - integration with code review process
 
-Format: This training should be delivered as a live demonstration with hands-on practice using real AWS projects.
+Format: this training should be delivered as a live demonstration with hands on practice using real AWS projects.
 
 ### Manager briefing (30 minutes)
 
 This briefing covers:
 
 - capability overview and realistic expectations
-- AWS-specific advantages and use cases
+- AWS specific advantages and use cases
 - usage metrics and how to interpret them (via AWS console)
 - policy configuration and content exclusions
 - addressing team concerns about AI tools
 - security scanning and compliance features
 
-Format: This briefing should be delivered as a presentation with a Q&A session.
+Format: this briefing should be delivered as a presentation with a Q and A session.
 
 ## Measuring success
 
@@ -507,9 +507,9 @@ You should conduct monthly engineer surveys.
 
 1. How often do you use Amazon Q? (Daily, Weekly, Rarely, Never)
 2. For which tasks is Amazon Q most helpful?
-3. How helpful are the AWS-specific features?
+3. How helpful are the AWS specific features?
 4. Has Amazon Q affected your productivity? (Much faster, Somewhat faster, No change, Slower)
-5. Do you feel confident reviewing Q-generated code?
+5. Do you feel confident reviewing Q generated code?
 6. How useful is the security scanning feature?
 
 ## Common implementation challenges
@@ -541,7 +541,7 @@ Interventions.
 
 1. Clarify that code review process remains unchanged.
 2. Demonstrate content exclusion configuration.
-3. Show built-in security scanning features.
+3. Show built in security scanning features.
 4. Reference IP indemnity coverage.
 5. Share NCSC guidance compliance.
 6. Demonstrate that Q helps identify security issues.
@@ -561,7 +561,7 @@ Interventions.
 4. Pair junior engineers with seniors during adoption.
 5. Emphasise security scanning as complement, not replacement.
 
-### Challenge: AWS-specific confusion
+### Challenge: AWS specific confusion
 
 Symptoms include:
 - suggestions do not match team's AWS patterns
@@ -570,7 +570,7 @@ Symptoms include:
 
 Interventions.
 
-1. Provide AWS-specific training on Q usage.
+1. Provide AWS specific training on Q usage.
 2. Create internal library of effective AWS prompts.
 3. Document team's AWS architecture patterns.
 4. Use Q Chat to ask clarifying questions about AWS services.
@@ -589,13 +589,13 @@ Interventions.
 2. Ensure relevant code is visible in workspace.
 3. Use Q Chat for complex scenarios instead of inline.
 4. Check if content exclusions are blocking helpful context.
-5. Use agent mode for multi-file context understanding.
+5. Use agent mode for multifile context understanding.
 
 ## Integration with development workflow
 
 ### Code review process
 
-Amazon Q-generated code should pass through the same review process as human-written code. You should check the following things.
+Amazon Q generated code should pass through the same review process as human written code. You should check the following things.
 
 1. Logic correctness and edge case handling.
 2. No hardcoded secrets or sensitive data.
@@ -605,9 +605,9 @@ Amazon Q-generated code should pass through the same review process as human-wri
 6. AWS best practices followed.
 7. Test coverage adequate.
 8. Performance and cost characteristics acceptable.
-9. IAM permissions follow least-privilege principle.
+9. IAM permissions follow least privilege principle.
 
-Using Q's built-in code review:
+Using Q's built in code review:
 
 Before submitting PRs, engineers should run:
 ```
@@ -618,7 +618,7 @@ This triggers Amazon Q's security and code quality scan, which checks for securi
 
 Responsible use guidance involves:
 
-- reviewing all AI-generated code with the same rigour as human-written code
+- reviewing all AI generated code with the same rigour as human written code
 - understanding the code before accepting it into your codebase
 - testing thoroughly, especially AWS integrations and error conditions
 - being aware of potential security vulnerabilities in suggestions
@@ -642,12 +642,12 @@ This is optional and should align with your team's commit message conventions.
 
 ### Testing strategy
 
-Treat Amazon Q-generated code as untested until proven otherwise.
+Treat Amazon Q generated code as untested until proven otherwise.
 
 1. Unit tests: use `/test` command to generate test scaffolding, then review and enhance.
 2. Integration tests: manually verify AWS service interactions.
 3. Security tests: run `/review` and SAST tools on all code.
-4. AWS-specific tests: test IAM permissions, resource limits, error handling.
+4. AWS specific tests: test IAM permissions, resource limits, error handling.
 5. Manual review: code review remains mandatory.
 
 ### CI/CD pipeline
@@ -657,7 +657,7 @@ Amazon Q does not require changes to your pipeline. Ensure existing quality gate
 - linting and formatting checks
 - unit test execution and coverage thresholds
 - static analysis and security scanning
-- integration and end-to-end test suites
+- integration and end to end test suites
 - AWS resource validation (CloudFormation linting, and similar)
 
 Generated code must pass all gates before merging.
@@ -703,7 +703,7 @@ Configure in AWS console under Amazon Q Engineer settings:
 /security-groups/production/
 ```
 
-### IDE-level settings
+### IDE level settings
 
 Example VS Code configuration:
 
@@ -733,15 +733,15 @@ Disable Amazon Q for specific file types where suggestions are not helpful:
 }
 ```
 
-### Organisation-level settings
+### Organisation level settings
 
 Configure in AWS console.
 
-1. Navigate to IAM Identity Center → Applications → Amazon Q Engineer.
+1. Navigate to IAM Identity Center then Applications then Amazon Q Engineer.
 2. Assign users and groups.
-3. Configure content exclusions (Settings → Content Exclusions).
+3. Configure content exclusions (Settings then Content Exclusions).
 4. Set up usage analytics (CloudWatch integration).
-5. Configure sharing preferences (opt-out of telemetry if required).
+5. Configure sharing preferences (opt out of telemetry if required).
 
 IAM policy example for Amazon Q access:
 

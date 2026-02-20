@@ -89,7 +89,7 @@ Use conventional commits: feat:, fix:, refactor:, test:, docs:, chore:
 
 ### Best practices
 
-Keep CLAUDE.md concise and focused. For each line, ask: "Would removing this cause Claude to make mistakes?" If not, remove it.
+Keep CLAUDE.md concise and focused. For each line, ask: 'Would removing this cause Claude to make mistakes?' If not, remove it.
 
 #### What to include
 

@@ -1,4 +1,4 @@
-> ALPHA
+> **ALPHA**
 > This is a new service – your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 
 # Using instruction files for AI code assistants
@@ -65,7 +65,7 @@ You must:
 
 - never include credentials, secrets, API keys or production data
 - keep content at the correct security classification for the repository
-- review AI-generated changes as you would any other code (peer review, tests, threat modelling where appropriate)
+- review AI generated changes as you would any other code (peer review, tests, threat modelling where appropriate)
 
 You should:
 
@@ -141,11 +141,11 @@ Repository instructions apply to everyone working on a specific repository. Thes
 Use repository instructions for:
 
 - tech stack and versions
-- project-specific patterns and architecture
+- project specific patterns and architecture
 - build, test and deployment processes
 - code quality standards for this project
 - integration points and APIs
-- project-specific compliance requirements
+- project specific compliance requirements
 
 Example content includes:
 
@@ -161,23 +161,23 @@ Organisation instructions apply to all repositories within your organisation. Th
 
 Use organisation instructions for:
 
-- organisation-wide coding standards
+- organisation wide coding standards
 - compliance and regulatory requirements
 - security policies that apply to all projects
 - branding and documentation guidelines
 - common tools and frameworks
-- cross-cutting government standards
+- cross cutting government standards
 
 Example content includes:
 
 - 'all projects must meet WCAG 2.1 AA standards'
-- 'use GOV.UK Design System for public-facing services'
+- 'use GOV.UK Design System for public facing services'
 - 'follow GDS Service Manual guidance'
 - 'all user actions must be audit logged'
 
 ## Tool support and file locations
 
-Different AI code assistants look for different repository instruction files. To avoid repetition, keep one canonical set of repository instructions and (if needed) mirror it into the tool-specific filename(s).
+Different AI code assistants look for different repository instruction files. To avoid repetition, keep one canonical set of repository instructions and (if needed) mirror it into the tool specific filename(s).
 
 | Tool | Repository instruction file | Notes |
 | --- | --- | --- |
@@ -187,7 +187,7 @@ Different AI code assistants look for different repository instruction files. To
 | Gemini (IDEs) | `.gemini-instructions.md` | Good for structured context - Keep it short and specific |
 | Web chat tools (no repo awareness) | `AI_INSTRUCTIONS.md` | These tools do not automatically read your repo - Paste the relevant sections at the start of a session |
 
-### Quick setup (repository-level)
+### Quick setup (repository level)
 
 1. Create the relevant file for your tool (see table).
 2. Add tech stack, most important patterns, links to standards and handling rules (no secrets, no production data).
@@ -206,9 +206,9 @@ Technical standards include:
 - architectural patterns
 - dependencies and package management
 
-### Frontend-specific instructions
+### Frontend specific instructions
 
-Frontend-specific instructions include:
+Frontend specific instructions include:
 
 - framework and version (React, Vue, Angular and similar)
 - component patterns and structure
@@ -219,9 +219,9 @@ Frontend-specific instructions include:
 - browser support requirements
 - performance budgets
 
-### Backend-specific instructions
+### Backend specific instructions
 
-Backend-specific instructions include:
+Backend specific instructions include:
 
 - framework and language version
 - API design patterns (REST, GraphQL and similar)
@@ -308,7 +308,7 @@ Performance and quality includes:
 
 ## My experience level
 - experienced with: [languages and tools you know well]
-- learning: [areas you're developing]
+- learning: [areas you are developing]
 
 ## Accessibility
 - [any specific accessibility needs for how AI communicates with you]
@@ -393,8 +393,8 @@ All code must meet these requirements:
 ## Security guidelines
 - input validation: all user input must be validated
 - SQL injection prevention: use parameterised queries only
-- XSS prevention: escape all user-generated content
-- CSRF protection: required on all state-changing operations
+- XSS prevention: escape all user generated content
+- CSRF protection: required on all state changing operations
 - rate limiting: [rules]
 
 ## Data protection
@@ -403,7 +403,7 @@ All code must meet these requirements:
 - data retention: [period]
 - encryption: at rest and in transit
 
-## When you're not sure
+## When you are not sure
 
 1. Check existing code in [directory or file].
 2. Refer to [team wiki or documentation].
@@ -428,8 +428,8 @@ All projects within [Organisation] must follow these standards.
 
 ### Language and tone
 - British English spelling in all code and documentation
-- plain language for user-facing content (reading age 9 to 12)
-- no jargon in citizen-facing interfaces
+- plain language for user facing content (reading age 9 to 12)
+- no jargon in citizen facing interfaces
 - error messages must be actionable and clear
 
 ### Coding standards
@@ -443,7 +443,7 @@ All projects within [Organisation] must follow these standards.
 - no credentials or secrets in code repositories
 - all secrets stored in approved secret management tools
 - follow NCSC Cloud Security Principles: https://www.ncsc.gov.uk/collection/cloud-security
-- multi-factor authentication required for all access
+- multi factor authentication required for all access
 
 ### Data protection (GDPR)
 - data minimisation: collect only what's needed
@@ -461,7 +461,7 @@ All projects within [Organisation] must follow these standards.
 - reference: https://www.w3.org/WAI/WCAG21/quickref/
 
 ### Design and branding
-- use GOV.UK design system for citizen-facing services: https://design-system.service.gov.uk/
+- use GOV.UK design system for citizen facing services: https://design-system.service.gov.uk/
 - use GOV.UK frontend toolkit
 - internal services should follow [internal design system]
 - crown copyright notice on all appropriate content
@@ -541,8 +541,8 @@ Official documentation includes:
 
 - 'Configure Custom Instructions for GitHub Copilot' at https://docs.github.com/en/copilot/customizing-copilot/configure-custom-instructions-for-github-copilot - overview of custom instructions at all levels
 - 'Adding Personal Custom Instructions' at https://docs.github.com/en/copilot/customizing-copilot/adding-personal-custom-instructions-for-github-copilot - set up your personal preferences
-- 'Adding Repository Custom Instructions' at https://docs.github.com/en/copilot/customizing-copilot/adding-custom-instructions-for-github-copilot - detailed guide to repository-level instructions
-- 'Adding Organisation Custom Instructions' at https://docs.github.com/en/copilot/customizing-copilot/adding-organization-custom-instructions-for-github-copilot - organisation-wide standards
+- 'Adding Repository Custom Instructions' at https://docs.github.com/en/copilot/customizing-copilot/adding-custom-instructions-for-github-copilot - detailed guide to repository level instructions
+- 'Adding Organisation Custom Instructions' at https://docs.github.com/en/copilot/customizing-copilot/adding-organization-custom-instructions-for-github-copilot - organisation wide standards
 
 ### Government standards
 

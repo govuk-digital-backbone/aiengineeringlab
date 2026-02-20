@@ -118,7 +118,7 @@ Use these models for:
 - simple bug fixes
 - rapid prototyping
 - straightforward implementations
-- high-frequency iterative workflows
+- high frequency iterative workflows
 
 ### Deep problem analysis and new projects
 
@@ -133,7 +133,7 @@ Use these models for:
 - broad exploration of solutions
 - complex architectural decisions
 - thinking outside the box
-- long-horizon agentic tasks
+- long horizon agentic tasks
 
 ### Daily driver for most tasks
 
@@ -174,18 +174,18 @@ Use these models for:
 - additional testing and validation
 - comprehensive solutions
 
-### Long-running agentic workflows
+### Long running agentic workflows
 
 Best models: Claude Opus 4.6, GPT-5.3-Codex.
 
-Characteristics: exceptional at sustained multi-step tasks, maintains context over extended sessions.
+Characteristics: exceptional at sustained multi step tasks, maintains context over extended sessions.
 
 Use these models for:
 
 - large refactors spanning multiple files
 - code migrations across codebases
 - complex feature builds requiring iteration
-- production-ready assistants for operational workflows
+- production ready assistants for operational workflows
 
 ---
 
@@ -195,14 +195,14 @@ Use these models for:
 |-------|-------|-----------|---------|----------|
 | GPT-5.2 Instant | Very fast | Medium | Medium | Rapid development, everyday work |
 | GPT-5.2 Thinking | Medium | High | High | Complex reasoning, professional work |
-| GPT-5.2-Codex | Medium | High | High | Agentic coding, long-context tasks |
-| GPT-5.3-Codex | Fast | Very high | Very high | Long-running development, multi-day projects |
-| Gemini 3 Flash | Very fast | Medium | Medium to high | Speed-optimized coding, fast iterations |
-| Gemini 3 Pro | Fast | High | High | Complex multimodal tasks, reasoning-first workflows |
+| GPT-5.2-Codex | Medium | High | High | Agentic coding, long context tasks |
+| GPT-5.3-Codex | Fast | Very high | Very high | Long running development, multi day projects |
+| Gemini 3 Flash | Very fast | Medium | Medium to high | Speed optimized coding, fast iterations |
+| Gemini 3 Pro | Fast | High | High | Complex multimodal tasks, reasoning first workflows |
 | Claude 4.5 Haiku | Fast | Medium | Medium | Fast tasks with reasoning |
 | Claude 4.5 Sonnet | Medium | Medium | Medium | Stable, predictable coding |
 | Claude 4.5 Opus | Medium to slow | High | Very high | Comprehensive solutions, deep reasoning |
-| Claude Opus 4.6 | Medium | Very high | Very high | Enterprise agents, long-running workflows |
+| Claude Opus 4.6 | Medium | Very high | Very high | Enterprise agents, long running workflows |
 
 ### Model notes
 
@@ -212,17 +212,17 @@ Claude Opus 4.6 (February 2026) is the latest flagship, best for coding and ente
 
 Gemini 3 Flash (January 2026) is 3x faster than Gemini 2.5 Pro while outperforming it.
 
-Gemini 3 Pro (November 2025) is a reasoning-first model with 1M token context window. It uses thinking levels (low/high) for controlling reasoning depth.
+Gemini 3 Pro (November 2025) is a reasoning first model with 1M token context window. It uses thinking levels (low/high) for controlling reasoning depth.
 
 ---
 
-## Multi-model approach
+## Multi model approach
 
 For complex problems, consider using multiple models to validate solutions.
 
 Technique: present the same problem to different AI assistants, then have each evaluate the other's solution.
 
-To use multi-model validation, complete these steps.
+To use multi model validation, complete these steps.
 
 1. Present the problem to Model A, for example GitHub Copilot.
 2. Present the same problem to Model B, for example Claude.
@@ -252,7 +252,7 @@ You should switch models when you:
 - need more creativity from high agency models
 - want faster responses from GPT-5.2 Instant or Gemini 3 Flash
 - need deeper analysis from Claude Opus 4.6, GPT-5.3-Codex, or other deep reasoning models
-- require sustained multi-step work from GPT-5.3-Codex or Claude Opus 4.6
+- require sustained multi step work from GPT-5.3-Codex or Claude Opus 4.6
 
 ### Context and efficiency
 
@@ -279,7 +279,7 @@ Credit allocation is based on team size and maturity, with monitoring set up to 
 
 ## Comparative analysis
 
-The programme is designed to generate evidence-based recommendations for tool to task matching.
+The programme is designed to generate evidence based recommendations for tool to task matching.
 
 The programme is structured so that:
 
@@ -296,13 +296,13 @@ Current status: comparative data collection is ongoing. This section will be upd
 
 ### Task specific optimisation
 
-Task-specific model recommendations include:
+Task specific model recommendations include:
 
 - code explanation using high curiosity models such as Claude 4.5 Opus or Claude Opus 4.6
 - bug fixing using balanced models such as Claude 4.5 Sonnet
 - feature implementation using lower agency models for precision
 - architecture design using high curiosity and high agency models
-- long-running refactors using GPT-5.3-Codex or Claude Opus 4.6
+- long running refactors using GPT-5.3-Codex or Claude Opus 4.6
 - agentic workflows using Gemini 3 Pro or Claude Opus 4.6
 
 ### Team considerations
@@ -322,7 +322,7 @@ Cost and capacity factors include:
 - budget constraints that balance model capability with usage costs
 - batch processing for non-urgent tasks (50% cost savings available for GPT and Claude models)
 - prompt caching for repeated contexts (up to 90% savings on Claude models)
-- Gemini 3 thinking levels - use "low" for faster, cheaper responses when complex reasoning is not required
+- Gemini 3 thinking levels - use 'low' for faster, cheaper responses when complex reasoning is not required
 
 ---
 

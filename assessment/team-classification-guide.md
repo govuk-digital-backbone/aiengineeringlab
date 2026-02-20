@@ -1,4 +1,4 @@
-> ALPHA
+> **ALPHA**
 > This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 
 # Team classification guide
@@ -22,15 +22,15 @@ For the full assessment process, see [Maturity assessment framework](maturity-as
 
 | Level | Description | Support model | Typical programme duration |
 |-------|-------------|---------------|---------------------------|
-| Starting | Teams needing intensive support to begin adoption | Embedded forward deployed engineer (FDE), high-touch | 6 to 8 weeks to developing |
+| Starting | Teams needing intensive support to begin adoption | Embedded forward deployed engineer (FDE), high touch | 6 to 8 weeks to developing |
 | Developing | Teams building proficiency with moderate support | Shared FDE, blended | 4 to 6 weeks to established |
-| Established | Teams ready for self-sufficient adoption | On-demand consultation | Ongoing self-service |
+| Established | Teams ready for self sufficient adoption | On-demand consultation | Ongoing self-service |
 
 ## Starting classification
 
 ### Profile summary
 
-Starting teams have limited AI assistant experience, face significant constraints, or have substantial barriers to adoption. They need intensive, hands-on support to successfully begin using AI coding assistants.
+Starting teams have limited AI assistant experience, face significant constraints, or have substantial barriers to adoption. They need intensive, hands on support to successfully begin using AI coding assistants.
 
 ### Identifying characteristics
 
@@ -41,7 +41,7 @@ Starting teams have limited AI assistant experience, face significant constraint
 | Complex legacy environment | Mainframe, COBOL, outdated frameworks, minimal tooling |
 | Non-standard development setup | No consistent IDE, complex local environment requirements |
 | Limited CI/CD maturity | Manual deployments, no automated testing pipeline |
-| Security constraints | Air-gapped networks, complex approval processes, OFFICIAL-SENSITIVE and above data |
+| Security constraints | Air gapped networks, complex approval processes, OFFICIAL-SENSITIVE and above data |
 | Poor documentation | Tribal knowledge, outdated or missing architecture docs |
 
 #### Team indicators
@@ -49,7 +49,7 @@ Starting teams have limited AI assistant experience, face significant constraint
 | Indicator | What it looks like |
 |-----------|-------------------|
 | Limited AI experience | Less than 20% of team have used any AI coding tools |
-| Junior-heavy composition | More than 50% of team are junior engineers |
+| Junior heavy composition | More than 50% of team are junior engineers |
 | High turnover | Significant team changes in past 6 months |
 | Knowledge silos | One to 2 individuals hold key knowledge |
 | Limited learning culture | No time allocated for learning, no knowledge sharing |
@@ -79,9 +79,9 @@ Starting teams have limited AI assistant experience, face significant constraint
 | Element | Approach |
 |---------|----------|
 | FDE model | Embedded (dedicated FDE for 2 to 4 weeks) |
-| Training | Face-to-face workshops, guided hands-on |
-| Check-ins | Daily during first 2 weeks |
-| Change management | High-touch, address resistance directly |
+| Training | Face to face workshops, guided hands on |
+| Check ins | Daily during first 2 weeks |
+| Change management | High touch, address resistance directly |
 | Focus | Build basic confidence, quick wins, address concerns |
 
 ### What starting teams need to progress
@@ -146,8 +146,8 @@ Developing teams have foundational capabilities or some AI experience. They need
 | Element | Approach |
 |---------|----------|
 | FDE model | Shared (FDE across 2 to 3 teams, 2 to 3 days per week) |
-| Training | Blended (self-paced and facilitated sessions) |
-| Check-ins | Weekly |
+| Training | Blended (self paced and facilitated sessions) |
+| Check ins | Weekly |
 | Change management | Standard approach, address concerns as they arise |
 | Focus | Build proficiency, advanced techniques, identify champions |
 
@@ -165,7 +165,7 @@ To progress to established classification, developing teams need to demonstrate:
 
 ### Profile summary
 
-Established teams are ready for self-sufficient AI Engineering Lab adoption. They have strong foundational practices, experienced team members, and positive attitudes. They need minimal direct support and can serve as role models for other teams.
+Established teams are ready for self sufficient AI Engineering Lab adoption. They have strong foundational practices, experienced team members, and positive attitudes. They need minimal direct support and can serve as role models for other teams.
 
 ### Identifying characteristics
 
@@ -177,7 +177,7 @@ Established teams are ready for self-sufficient AI Engineering Lab adoption. The
 | Mature CI/CD | Comprehensive automated testing, continuous deployment |
 | Well-maintained codebase | Low technical debt, regular refactoring |
 | Clear security posture | Security requirements clear and met |
-| Strong documentation | Up-to-date docs, architecture decision records |
+| Strong documentation | Up to date docs, architecture decision records |
 
 #### Team indicators
 
@@ -213,9 +213,9 @@ Established teams are ready for self-sufficient AI Engineering Lab adoption. The
 | Element | Approach |
 |---------|----------|
 | FDE model | On-demand consultation |
-| Training | Self-paced with optional advanced workshops |
-| Check-ins | Bi-weekly or monthly |
-| Change management | Light-touch, team self-manages |
+| Training | Self paced with optional advanced workshops |
+| Check ins | Bi weekly or monthly |
+| Change management | Light touch, team self manages |
 | Focus | Optimisation, advanced use cases, champion development |
 
 ### Role of established teams in programme
@@ -274,7 +274,7 @@ Consider using dimension scoring from the [Maturity Assessment Framework](maturi
 
 ### Override conditions
 
-Certain conditions override the score-based classification.
+Certain conditions override the score based classification.
 
 | Condition | Override |
 |-----------|----------|
@@ -282,7 +282,7 @@ Certain conditions override the score-based classification.
 | Critical deadline within 4 weeks | Maximum: starting |
 | More than 50% active resistance | Maximum: starting |
 | No management support | Maximum: starting |
-| Air-gapped environment (cloud tools) | Not suitable for cloud AI tools |
+| Air gapped environment (cloud tools) | Not suitable for cloud AI tools |
 | Active champions and more than 80% daily usage | Minimum: developing |
 
 ### Borderline cases
@@ -293,7 +293,7 @@ For teams scoring near classification boundaries, such as 1.7 to 1.8 or 2.4 to 2
 - consider trajectory, is the team improving or facing new challenges
 - apply 'benefit of doubt', when uncertain, classify lower to ensure adequate support
 - document rationale, record why borderline decision was made
-- plan early reassessment, schedule check-in at 2 weeks instead of 4
+- plan early reassessment, schedule check in at 2 weeks instead of 4
 
 ## Dimension-specific guidance
 
@@ -364,13 +364,13 @@ Team maintaining 15-year-old Java application, planning modernisation.
 
 Average: 2.0 leading to developing classification.
 
-Despite legacy technical environment, team is stable, has capacity, and sees AI as helpful for modernisation. Developing classification with focus on legacy-specific techniques.
+Despite legacy technical environment, team is stable, has capacity, and sees AI as helpful for modernisation. Developing classification with focus on legacy specific techniques.
 
 ---
 
-### Scenario 2: High-pressure delivery team
+### Scenario 2: high-pressure delivery team
 
-Team building new citizen-facing service with go-live in 6 weeks.
+Team building new citizen facing service with go live in 6 weeks.
 
 | Assessment | Score | Description |
 |------------|-------|-------------|
@@ -387,9 +387,9 @@ However, critical deadline override applies.
 
 Classification: starting (deferred).
 
-Despite strong indicators, team cannot allocate time for adoption. Recommend deferring intensive adoption until after go-live, with self-service resources available for interested individuals now.
+Despite strong indicators, team cannot allocate time for adoption. Recommend deferring intensive adoption until after go live, with self-service resources available for interested individuals now.
 
-### Scenario 3: Security-constrained team
+### Scenario 3: security-constrained team
 
 Team working on law enforcement system with strict security requirements.
 
@@ -406,7 +406,7 @@ Average: 2.2 leading to developing classification.
 
 Developing classification but with security-focused onboarding. FDE engagement should focus on guardrails configuration and security-safe workflows. May need extended timeline for security approvals.
 
-### Scenario 4: Resistant team
+### Scenario 4: resistant team
 
 Team where engineers are sceptical about AI tools.
 
@@ -423,7 +423,7 @@ Average: 2.3 leading to Developing classification.
 
 Despite good technical foundations, attitude score pulls down average. Developing classification with heavy change management focus. FDE should work with resistant individuals, demonstrating value, and building from the 30% who are positive.
 
-### Scenario 5: Champion-ready team
+### Scenario 5: champion-ready team
 
 Team with several AI enthusiasts already experimenting.
 
@@ -439,7 +439,7 @@ Team with several AI enthusiasts already experimenting.
 
 Average: 3.0 leading to Established classification.
 
-Clear Established classification. Focus on enabling existing enthusiasts as champions, capturing their patterns for AI Engineering Lab repository, and connecting them to community. Light-touch support only.
+Clear Established classification. Focus on enabling existing enthusiasts as champions, capturing their patterns for AI Engineering Lab repository, and connecting them to community. Light touch support only.
 
 ## Classification communication
 
@@ -489,7 +489,7 @@ Your support plan.
 
 1. FDE model: [Embedded, Shared, or On-demand]
 2. Training: [Approach]
-3. Check-in frequency: [Frequency]
+3. Check in frequency: [Frequency]
 
 Next steps.
 

@@ -80,11 +80,11 @@ Contribute a prompt when you have:
 
 ### Contribution process
 
-1. Use the template - Copy [prompt-template.md](prompt-template.md).
-2. Complete all sections - Ensure the prompt is well-documented.
-3. Test thoroughly - Verify the prompt works across scenarios.
-4. Submit PR - Follow [contribution guidelines](../CONTRIBUTING.md).
-5. Peer review - Champions or maintainers review before merge.
+1. Copy the template from [prompt-template.md](prompt-template.md).
+2. Complete all sections to ensure the prompt is well documented.
+3. Test the prompt thoroughly to verify it works across scenarios.
+4. Submit a PR following the [contribution guidelines](../CONTRIBUTING.md).
+5. Request peer review from champions or maintainers before merge.
 
 ### Quality criteria
 
@@ -115,29 +115,29 @@ Contribute a prompt when you have:
 
 If results are not what you expected:
 
-1. Check your context, did you provide enough information?
-2. Clarify constraints, were requirements explicit?
-3. Try rephrasing, different wording may help.
-4. Break it down, smaller requests may work better.
-5. Add examples, show what you want.
-6. Try a different approach, ask differently.
+1. Check your context to see if you provided enough information.
+2. Clarify constraints to ensure requirements were explicit.
+3. Try rephrasing as different wording may help.
+4. Break down the request as smaller requests may work better.
+5. Add examples to show what you want.
+6. Try a different approach by asking differently.
 
 ---
 
-## Tool-specific notes
+## Tool specific notes
 
 ### GitHub Copilot
 You should use:
 - inline suggestions work best with clear code context
 - comments to guide suggestions
 - chat mode for longer explanations and generation
-- Copilot Edits for multi-file changes
+- Copilot Edits for multi file changes
 
 ### Claude Code
 Claude Code:
 - excels at longer, more complex prompts
 - is strong at explaining and documenting
-- has good multi-file context awareness
+- has good multi file context awareness
 - can use CLAUDE.md for project context
 
 ### Amazon Q Engineer:
@@ -149,7 +149,7 @@ Amazon Q Engineer:
 
 ### Gemini Code Assist:
 Gemini Code Assist:
-- is good for GCP-related tasks
+- is good for GCP related tasks
 - has strong code explanation capabilities
 - is effective for large codebase understanding
 - works well for code customisation with your repos

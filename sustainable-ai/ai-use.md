@@ -1,9 +1,9 @@
-> ALPHA
+> **ALPHA**
 > This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 
 # Sustainable AI use: reducing environmental impact through better practice
 
-Sustainable AI use is not about using AI less, it's about using it better. Clear prompts, appropriate model selection, and efficient workflows reduce environmental impact whilst improving your results.
+Sustainable AI use is not about using AI less, it is about using it better. Clear prompts, appropriate model selection, and efficient workflows reduce environmental impact whilst improving your results.
 
 Every AI interaction consumes compute resources. Better practices mean fewer wasted tokens, less energy consumed, and reduced environmental impact, whilst also saving time and money.
 
@@ -29,14 +29,14 @@ AI models run on data centres that consume significant amounts of electricity, a
 AI energy consumption is driven by:
 
 - token generation where every word the model produces costs compute
-- failed iterations where unclear prompts lead to back-and-forth cycles that multiply consumption
+- failed iterations where unclear prompts lead to back and forth cycles that multiply consumption
 - model size where larger premium models consume more resources than smaller ones.
 
 The good news is that the practices that reduce environmental impact also save time and improve output quality.
 
 ## Principle 1: good prompting equals fewer wasted tokens
 
-A vague prompt leads to multiple rounds of clarification. Each round generates thousands of tokens. A clear, context-rich prompt gets the right answer first time.
+A vague prompt leads to multiple rounds of clarification. Each round generates thousands of tokens. A clear, context rich prompt gets the right answer first time.
 
 ### The human test
 
@@ -79,7 +79,7 @@ Total: 900 tokens in one exchange
 
 The efficient prompt uses 65% fewer tokens whilst producing better results.
 
-### High-impact prompting practices
+### High impact prompting practices
 
 | Practice | Impact | Why it reduces waste |
 |----------|--------|---------------------|
@@ -91,7 +91,7 @@ The efficient prompt uses 65% fewer tokens whilst producing better results.
 
 ### The 70% rule
 
-Good prompts reduce back-and-forth iterations by 70% or more. Five minutes spent crafting a detailed prompt saves hours of revision and thousands of tokens.
+Good prompts reduce back and forth iterations by 70% or more. Five minutes spent crafting a detailed prompt saves hours of revision and thousands of tokens.
 
 ## Principle 2: right model for the right task
 
@@ -108,7 +108,7 @@ Premium models (GPT-4, Claude Opus) consume significantly more compute than smal
 | Test scaffolding | Smaller or faster model | Repetitive structure |
 | Syntax questions, quick lookups | Smaller or faster model or skip AI entirely | Often faster to search docs |
 
-### Prompt-chaining for efficiency
+### Prompt chaining for efficiency
 
 For complex tasks, chain prompts across model types.
 
@@ -134,7 +134,7 @@ Avoid common patterns that waste premium model compute, such as:
 Consider if you:
 
 - need AI for this, or is it faster to do directly
-- provided enough context for a first-time-right response
+- provided enough context for a first time right response
 - are using the right model for this task's complexity
 
 ### Development
@@ -160,7 +160,7 @@ Track these metrics to understand your team's AI efficiency:
 | Metric | What it indicates |
 |--------|-------------------|
 | Average prompts per task | Lower equals more efficient prompting |
-| First-response acceptance rate | Higher equals better initial prompts |
+| First response acceptance rate | Higher equals better initial prompts |
 | Model tier distribution | Should match task complexity distribution |
 | Tokens per completed task | Overall efficiency measure |
 
@@ -194,6 +194,6 @@ Model selection checklist.
 
 [Foundational Prompting Techniques](../playbooks/prompt-engineering/prompt-engineering-foundations.md), a detailed guide on writing effective prompts.
 
-[Model Selection Guidance](../manager-tool-guides/comparative-guidance.md), tool-specific recommendations.
+[Model Selection Guidance](../manager-tool-guides/comparative-guidance.md), tool specific recommendations.
 
 [Prompt Library](../prompt-library/), reusable prompts that work.

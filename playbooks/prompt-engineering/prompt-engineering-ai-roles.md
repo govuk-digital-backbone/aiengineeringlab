@@ -39,29 +39,29 @@ Explain: ask the AI to explain the concept.
 
 Example prompt:
 ```
-"Explain how to stream audio responses from an API in Angular.
+'Explain how to stream audio responses from an API in Angular.
 
 What is the difference between returning a blob vs a ReadableStream?
-When would I use each approach?"
+When would I use each approach?'
 ```
 
 Demonstrate: ask for a concrete example.
 
 Example prompt:
 ```
-"Show me a simple example of an Angular service method that streams audio.
+'Show me a simple example of an Angular service method that streams audio.
 
 Include:
 - HTTP POST to API
 - handling the stream response
-- basic error handling"
+- basic error handling'
 ```
 
 Imitate: create something similar with guidance.
 
 Example prompt:
 ```
-"Now help me write a streaming method for our audio service.
+'Now help me write a streaming method for our audio service.
 
 Context:
 [paste existing non-streaming method for reference]
@@ -70,19 +70,19 @@ Requirements:
 - stream audio from Azure Speech API
 - use fetch API (not HttpClient) for streaming support
 - include authentication token handling
-- follow our existing service patterns"
+- follow our existing service patterns'
 ```
 
 Practise: apply it independently with review.
 
 Example prompt:
 ```
-"Review this streaming method I wrote:
+'Review this streaming method I wrote:
 [paste implementation]
 
 Does it follow best practices?
 How is the error handling?
-Any potential issues with memory or performance?"
+Any potential issues with memory or performance?'
 ```
 
 Why this works: it mirrors how we naturally learn - understand the concept, see it in action, try it yourself, then refine through practice. It also naturally combines the prompting techniques in this playbook (for example: reverse prompting when asking for explanations, few-shot prompting when requesting examples and step-by-step reasoning when reviewing your attempt).
@@ -91,7 +91,7 @@ Why this works: it mirrors how we naturally learn - understand the concept, see 
 
 Example prompt:
 ```
-"Explain what this function does in simple terms:
+'Explain what this function does in simple terms:
 
 [paste complex function]
 
@@ -99,34 +99,34 @@ Then explain:
 1. What design pattern is being used here?
 2. Why would someone choose this approach?
 3. What are the potential downsides?
-4. Can you suggest a simpler alternative for a beginner?"
+4. Can you suggest a simpler alternative for a beginner?'
 ```
 
 #### Learning new concepts
 
 Example prompt:
 ```
-"I am new to async and await in Python. 
+'I am new to async and await in Python. 
 
 Explain:
 1. What problem does it solve?
 2. When should I use it vs regular functions?
 3. Show me a simple example.
 4. Then show me a more realistic example with error handling.
-5. What are common mistakes beginners make?"
+5. What are common mistakes beginners make?'
 ```
 
 #### Understanding frameworks
 
 Example prompt:
 ```
-"I need to understand how FastAPI's dependency injection works.
+'I need to understand how FastAPI's dependency injection works.
 
 Explain it like I am coming from Flask background:
 1. What is different from Flask?
 2. Show me a simple example.
 3. Show me a realistic example with database connections.
-4. What are the benefits of this approach?"
+4. What are the benefits of this approach?'
 ```
 
 ### As a design consultant
@@ -137,17 +137,17 @@ The scenario: you are at a decision point. Should you use pattern A or pattern B
 
 Example prompt:
 ```
-"I need to implement a notification system that handles email, SMS, and push notifications.
+'I need to implement a notification system that handles email, SMS, and push notifications.
 
 Give me 3 different architectural approaches:
 1. For each approach, explain the design.
 2. List pros and cons.
 3. Consider: scalability, maintainability, testing ease.
 4. Recommend which approach for a team of 5 engineers.
-5. Highlight the trade-offs I am making with each choice."
+5. Highlight the trade offs I am making with each choice.'
 ```
 
-This same approach works for any decision: comparing libraries, choosing design patterns, evaluating architectural styles. The AI gives you expert-level analysis without the bias of "we have always done it this way."
+This same approach works for any decision: comparing libraries, choosing design patterns, evaluating architectural styles. The AI gives you expert level analysis without the bias of 'we have always done it this way.'
 
 #### Understanding design patterns
 
@@ -174,7 +174,7 @@ Behavioural patterns are how objects communicate. This includes:
 
 When you are unsure which pattern fits your problem, describe your use case to the AI and ask it to recommend appropriate patterns with reasoning.
 
-### For fast-track onboarding
+### For fast track onboarding
 
 The scenario: you have just joined a team with an unfamiliar codebase. Instead of spending weeks building up context, use AI to accelerate your understanding.
 
@@ -184,7 +184,7 @@ Using instruction files for consistency: rather than providing context in every 
 
 Example prompt:
 ```
-"I am new to this codebase. Here is the main application file:
+'I am new to this codebase. Here is the main application file:
 
 [paste code]
 
@@ -193,14 +193,14 @@ Help me understand:
 2. What are the main components and their responsibilities?
 3. What frameworks and libraries is it using?
 4. What are the patterns I should understand?
-5. What would be a good starting point to make my first contribution?"
+5. What would be a good starting point to make my first contribution?'
 ```
 
 #### Tracing through flows
 
 Example prompt:
 ```
-"I need to understand how user authentication works in this system.
+'I need to understand how user authentication works in this system.
 
 Here are the relevant files:
 - auth.py: [paste]
@@ -212,28 +212,28 @@ Walk me through:
 2. How are sessions managed?
 3. Where is authentication checked?
 4. How would I add a new authentication method (for example, OAuth)?
-5. What are the security considerations in this implementation?"
+5. What are the security considerations in this implementation?'
 ```
 
 #### Understanding architectural decisions
 
 Example prompt:
 ```
-"This codebase uses [specific pattern or approach].
+'This codebase uses [specific pattern or approach].
 
 Explain:
 1. Why might the previous engineers have chosen this approach?
 2. What problem does it solve?
 3. What are the downsides?
 4. How does this affect how I should write new features?
-5. What should I be careful about when modifying this code?"
+5. What should I be careful about when modifying this code?'
 ```
 
 #### Learning team conventions
 
 Example prompt:
 ```
-"Looking at these 3 files from the codebase:
+'Looking at these 3 files from the codebase:
 
 [paste examples]
 
@@ -242,7 +242,7 @@ Help me identify:
 2. How is error handling done?
 3. What is the logging pattern?
 4. How are tests structured?
-5. What should my code look like to fit in?"
+5. What should my code look like to fit in?'
 ```
 
 ### Using instruction files (project context)

@@ -5,19 +5,19 @@
 
 # Foundational prompting techniques
 
-Core techniques for writing effective prompts that produce high-quality, context-aware code from AI assistants.
+Core techniques for writing effective prompts that produce high quality, context aware code from AI assistants.
 
 ## Purpose
 
-Understanding foundational prompting techniques is essential for getting consistent, high-quality results from AI code assistants. This guide introduces the core concepts that underpin all effective AI interactions.
+Understanding foundational prompting techniques is essential for getting consistent, high quality results from AI code assistants. This guide introduces the core concepts that underpin all effective AI interactions.
 
 ## Who this applies to
 
 This guide applies to all engineers using AI code assistants, particularly:
 
-- engineers new to AI-assisted development
+- engineers new to AI assisted development
 - teams establishing AI adoption standards
-- anyone looking to improve the quality of AI-generated code
+- anyone looking to improve the quality of AI generated code
 
 
 ### The human test: can someone else do this task
@@ -35,19 +35,19 @@ The better your instructions, the better the output. This applies whether you ar
 Example of the human test in action:
 ```
 This prompt fails the human test:
-"Build the login system"
+'Build the login system'
 
 A human would ask:
 - which framework are we using?
 - how does authentication work in our other services?
 - where should user data be stored?
 - what is our password policy?
-- do we need 2-factor authentication (2FA)?
+- do we need 2 factor authentication (2FA)?
 - what error messages should we show?
 - how should this integrate with the existing system?
 
 This prompt passes the human test:
-"Build a login endpoint for our FastAPI service that:
+'Build a login endpoint for our FastAPI service that:
 - uses PostgreSQL (our existing user database)
 - follows the async pattern from our registration endpoint (see example below)
 - implements JSON Web Token (JWT) tokens matching our auth service pattern
@@ -57,7 +57,7 @@ This prompt passes the human test:
 - logs all attempts for audit trail
 - integrates with our Redis session store
 
-[paste example of existing auth endpoint]"
+[paste example of existing auth endpoint]'
 ```
 
 #### What you need to give someone to complete a task properly
@@ -88,8 +88,8 @@ If they could not, you are missing context. Add it before you prompt the AI.
 When everyone on your team applies the human test before prompting AI:
 
 - code quality becomes consistent
-- AI-generated code fits existing patterns
-- less time is wasted on back-and-forth revisions
+- AI generated code fits existing patterns
+- less time is wasted on back and forth revisions
 - architecture standards are maintained
 - knowledge is not siloed (because context is explicit in prompts)
 
@@ -99,34 +99,34 @@ Remember: AI is powerful, but it is not psychic. Treat it like you would treat a
 
 The 5 core techniques include:
 
-- chain of thought reasoning - getting AI to show its working by asking "Walk me through your thought process step by step..." or "Let's think through this systematically..."
-- few-shot prompting - teaching by example by saying "Reference this good example and make it look like that" and show the pattern you want repeated
-- reverse prompting - make the AI ask you questions first by saying "Before you get started, ask me for any information you need to do a good job", uncovering requirements before coding
-- role assignment - saying "Act as a senior Python engineer...". changes expertise level and perspective
-- emphasis - add context about importance to improve output quality by saying "This is critical for production code that handles sensitive user data." or "Think carefully about edge cases - this function processes financial transactions." or "This is important for my team's code review - be thorough"
+- chain of thought reasoning - getting AI to show its working by asking 'Walk me through your thought process step by step' or 'Let us think through this systematically'
+- few shot prompting - teaching by example by saying 'Reference this good example and make it look like that' and show the pattern you want repeated
+- reverse prompting - make the AI ask you questions first by saying 'Before you get started, ask me for any information you need to do a good job', uncovering requirements before coding
+- role assignment - saying 'Act as a senior Python engineer' changes expertise level and perspective
+- emphasis - add context about importance to improve output quality by saying 'This is critical for production code that handles sensitive user data' or 'Think carefully about edge cases - this function processes financial transactions' or 'This is important for my team's code review - be thorough'
 
 Why this works: just as you would give a colleague more context about why something matters, AI responds to framing that indicates the stakes and required quality level.
 ### Combining techniques: the power prompt
 
 The most effective prompts combine multiple techniques. Here is the formula:
 ```
-"Help me write a [specific task].
+'Help me write a [specific task].
 
 This is critical for [context about importance]. (Emphasis)
 
 Before you get started, ask me for any information you need to do a good job. (Reverse prompting)
 
-Here is an example of similar code from our codebase that shows our style: (Few-Shot prompting)
+Here is an example of similar code from our codebase that shows our style: (Few shot prompting)
 [paste example]
 
 Walk me through your thought process step by step as you design the solution. (Chain of thought)
 
-Act as a senior [role] with expertise in [domain]. (Role assignment)"
+Act as a senior [role] with expertise in [domain]. (Role assignment)'
 ```
 
 Real example:
 ```
-"Help me write a user authentication endpoint.
+'Help me write a user authentication endpoint.
 
 This is critical for production as we handle 10,000+ logins daily.
 
@@ -137,7 +137,7 @@ Here is an example of another endpoint from our codebase:
 
 Once you understand the requirements, walk me through your design approach step by step before writing the code.
 
-Act as a senior backend engineer with FastAPI and security expertise."
+Act as a senior backend engineer with FastAPI and security expertise.'
 ```
 
 What happens when you use the power prompt.
@@ -145,7 +145,7 @@ What happens when you use the power prompt.
 1. AI understands the stakes (emphasis).
 2. AI asks clarifying questions (reverse prompting).
 3. You answer, filling in requirement gaps.
-4. AI references your example (few-shot).
+4. AI references your example (few shot).
 5. AI explains its design approach (chain of thought).
 6. You catch issues before any code is written.
 7. AI writes code with appropriate expertise level (role).
@@ -155,7 +155,7 @@ This works because:
 
 - emphasis ensures appropriate attention to quality
 - reverse prompting ensures you do not miss critical requirements
-- few-shot examples maintain consistency with your codebase
+- few shot examples maintain consistency with your codebase
 - chain of thought catches logical errors early
 - role assignment gets appropriate expertise level and terminology
 - you spend 2 minutes setting up the prompt and can save 30 minutes in revisions
@@ -164,9 +164,9 @@ This works because:
 
 You do not need all techniques every time. For:
 
-- simple, well-defined tasks, role and context is enough
+- simple, well defined tasks, role and context is enough
 - features with unknown, use reverse prompting and chain of thought
-- maintaining consistency, use few-shot and context
+- maintaining consistency, use few shot and context
 - complex logic, use chain of thought and role assignment
 - critical code, use all techniques combined
 
@@ -178,7 +178,7 @@ The difference between mediocre and excellent AI output is not which technique y
 
 Think of context as all the information in your prompt that helps the Large Language Model (LLM) understand not just what you want, but how it should fit into your existing project. This includes your tech stack, coding standards, dependencies, constraints and the patterns you are already using.
 
-By providing clear and detailed instructions, you can get the model to generate functional, ready-to-use code. Use your domain expertise to make specific requests, mention the packages and dependencies you want, reference your existing patterns and be explicit about requirements.
+By providing clear and detailed instructions, you can get the model to generate functional, ready to use code. Use your domain expertise to make specific requests, mention the packages and dependencies you want, reference your existing patterns and be explicit about requirements.
 
 In every prompt, you should include information about the:
 
@@ -191,7 +191,7 @@ In every prompt, you should include information about the:
 - examples including existing code that demonstrates your patterns
 - compliance requirements, for example, Government Digital Service (GDS) standards, Web Content Accessibility Guidelines (WCAG) guidelines, security classifications
 
-Template for context-rich prompts:
+Template for context rich prompts:
 ```
 Project context:
 - language and framework: [Python 3.11, FastAPI 0.104]
@@ -212,10 +212,10 @@ Before proceeding, ask me any clarifying questions about requirements, edge case
 ```
 This transforms output quality because:
 
-- it reduces back-and-forth iterations by 70% or more
+- it reduces back and forth iterations by 70% or more
 - it produces code that fits your codebase immediately
 - it avoids deprecated or incompatible solutions
-- it gets you production-ready code faster
+- it gets you production ready code faster
 - the AI makes fewer assumptions
 - you catch requirement gaps early
 - the code meets compliance requirements from the start
@@ -236,7 +236,7 @@ You should include:
 - known edge cases
 - security and accessibility standards
 
-It's nice to include:
+It is nice to include:
 
 - team conventions and style preferences
 - performance benchmarks
@@ -252,7 +252,7 @@ For government projects, you should also include:
 - audit and logging requirements
 - user research findings that inform the feature
 
-Remember: 5 minutes spent providing context saves hours of revision. Code never comes without bugs, whether it is AI-generated or human-written, but good context dramatically improves the starting point.
+Remember: 5 minutes spent providing context saves hours of revision. Code never comes without bugs, whether it is AI generated or human written, but good context dramatically improves the starting point.
 
 ---
 

@@ -19,7 +19,7 @@ This guide is for:
 
 - [what Gemini Code Assist does](#what-gemini-code-assist-does)
 - [how it compares with other tools](#how-it-compares-with-other-ai-engineering-lab-tools)
-- [government-specific considerations](#government-specific-considerations)
+- [government specific considerations](#government-specific-considerations)
 - [getting started](#getting-started)
 - [phased rollout approach](#phased-rollout-approach)
 - [training requirements](#training-requirements)
@@ -29,7 +29,7 @@ This guide is for:
 - [security best practices](#security-best-practices)
 - [support and escalation](#support-and-escalation)
 - [related resources](#related-resources)
-- [contributing](#contributing) - how to improve this guide
+- [contributing](#contributing) (how to improve this guide)
 
 ## Before you start
 
@@ -98,7 +98,7 @@ Choose Gemini Code Assist when:
 
 Consider combining with other tools to:
 
-- use GitHub Copilot for faster inline completions in non-GCP contexts
+- use GitHub Copilot for faster inline completions in non GCP contexts
 - use Claude Code for complex architectural reasoning
 
 ## Government specific considerations
@@ -145,6 +145,8 @@ Gemini Code Assist Enterprise includes IP indemnity. For government projects, us
 
 #### Standard
 
+$19 per user per month (annual commitment) or $22.80 per user per month (monthly commitment).
+
 Standard includes:
 
 - AI coding assistance with enterprise grade security
@@ -153,14 +155,16 @@ Standard includes:
 
 #### Enterprise
 
-Enterprise is a paid plan and includes:
+$45 per user per month (annual commitment) or $54 per user per month (monthly commitment).
+
+Enterprise includes:
 
 - all Standard features
 - code customisation from private repositories
 - IP indemnity
 - usage analytics and reporting
 
-Prices are listed on [Cloud Platform SKUs](https://cloud.google.com/skus). Check [Gemini for Google Cloud pricing](https://cloud.google.com/products/gemini/pricing) for current rates.
+Prices are listed in USD. If you pay in a currency other than USD, the prices listed in your currency on [Cloud Platform SKUs](https://cloud.google.com/skus) apply. Check [Gemini for Google Cloud pricing](https://cloud.google.com/products/gemini/pricing) for current rates.
 
 ### Installation process
 
@@ -202,7 +206,7 @@ Scale to full engineering team.
 #### Activities
 
 1. Roll out to entire team in groups of 10 to 15.
-2. Deliver 60-minute training sessions per group.
+2. Provide 60 minute training sessions per group.
 3. Share pilot user success stories, especially GCP and agent mode use cases.
 4. Establish support channels (Slack, Teams, or email).
 5. Create internal knowledge base of effective prompts.
@@ -229,7 +233,7 @@ Get the most from the tool and fix any problems.
 
 #### Success criteria
 
-- [ ] Consistent month-on-month usage
+- [ ] Consistent month on month usage
 - [ ] Fewer support tickets
 - [ ] Measurable productivity improvements
 - [ ] Positive engineer satisfaction scores
@@ -314,7 +318,7 @@ You should run monthly surveys with engineers.
 2. For which tasks is Gemini Code Assist most helpful?
 3. How helpful are the GCP specific features?
 4. Has Gemini Code Assist affected your productivity?
-5. Do you feel confident reviewing Gemini-generated code?
+5. Do you feel confident reviewing Gemini generated code?
 6. How useful is agent mode for complex tasks?
 
 ## Common implementation challenges
@@ -371,7 +375,7 @@ If an engineer discovers code containing hardcoded secrets, vulnerabilities, or 
 - do not commit the code
 - report to your security team using the standard incident process
 - document the suggestion for analysis
-- update content exclusions if the issue is pattern-based
+- update content exclusions if the issue is pattern based
 
 ## Integration with development workflow
 
@@ -464,9 +468,9 @@ Configure the organisation level settings in GCP console.
 
 ### Support tiers
 
-#### Tier 1: self-service
+#### Tier 1: self service
 
-Self-service resources includes:
+Self service resources includes:
 
 - [Gemini Code Assist documentation](https://cloud.google.com/gemini/docs/codeassist)
 - [getting started guide](https://cloud.google.com/gemini/docs/codeassist/getting-started)
@@ -511,12 +515,8 @@ Government guidance includes:
 Repository resources include:
 
 - [AI SDLC playbook](../../playbooks/ai-sdlc-playbook.md)
-- [safe usage guidance: prototyping vs production](../../user-tool-guides/gemini-code-assist/safe-usage-prototyping-vs-production.md)
-- [developer Knowledge API and MCP server guidance](developer-knowledge-api-and-mcp-server-guidance.md)
 - [GitHub Copilot manager guide](../github-copilot/)
 - [Amazon Q manager guide](../amazon-q/)
-- [base guardrails](../../governance/guardrails-base.md)
-- [incident response playbook](../../governance/incident-response-playbook.md)
 
 ## Contributing
 
@@ -530,6 +530,17 @@ Before contributing, read [CONTRIBUTING.md](../../CONTRIBUTING.md) which covers:
 - review and approval process
 - accessibility requirements
 - how to submit changes
+
+## Support and contact
+
+| Need | Contact |
+|------|---------|
+| General enquiries | To be confirmed |
+| FDE support requests | To be confirmed |
+| Urgent issues | To be confirmed |
+| Content feedback | To be confirmed |
+
+Contact details to be confirmed.
 
 ## Licence
 

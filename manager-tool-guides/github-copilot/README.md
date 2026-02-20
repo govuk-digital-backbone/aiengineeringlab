@@ -5,7 +5,7 @@
 
 ## Purpose
 
-This guide provides engineering managers with practical guidance for implementing GitHub Copilot within UK government departments. It covers capabilities assessment, security considerations, phased rollout strategies, and success measurement to support informed decision-making and sustainable adoption.
+This guide provides engineering managers with practical guidance for implementing GitHub Copilot within UK government departments. It covers capabilities assessment, security considerations, phased rollout strategies, and success measurement to support informed decision making and sustainable adoption.
 
 ## Audience
 
@@ -53,7 +53,7 @@ Before reading this guide, you should understand:
 
 ## What GitHub Copilot does
 
-GitHub Copilot provides real-time code suggestions directly in your team's development environment. It generates code completions, entire functions, tests, and documentation based on context from the current file.
+GitHub Copilot provides real time code suggestions directly in your team's development environment. It generates code completions, entire functions, tests, and documentation based on context from the current file.
 
 Primary capabilities include:
 
@@ -69,13 +69,11 @@ GitHub Copilot offers several ways to interact with AI assistance, each suited f
 
 | Mode | Description | Best for | Available in |
 |------|-------------|----------|--------------|
-| Inline suggestions | Real-time completions as you type | Quick code completion, boilerplate | All tiers |
+| Inline suggestions | Real time completions as you type | Quick code completion, boilerplate | All tiers |
 | Copilot Chat | Conversational interface in IDE | Explanations, debugging, questions | All tiers |
-| Copilot Edits | Multi-file editing with AI assistance | Refactoring across files, applying patterns | Business and Enterprise |
+| Copilot Edits | Multi file editing with AI assistance | Refactoring across files, applying patterns | Business and Enterprise |
 | Copilot Workspace | Plan and implement features from issues | Feature planning, task breakdown | Enterprise only |
-| Agent mode | Autonomous task execution with approval | Complex multi-step tasks, investigations | Enterprise only |
-
-Each mode is suited to specific tasks, including:
+| Agent mode | Autonomous task execution with approval | Complex multi step tasks, investigations | Enterprise only |
 
 - inline suggestions for daily coding, implementing known patterns, and writing tests
 - chat for understanding unfamiliar code, debugging errors, and generating documentation
@@ -96,10 +94,10 @@ GitHub Copilot is best suited for:
 
 GitHub Copilot is not designed for:
 
-- complex architectural decisions requiring codebase-wide understanding
-- security-critical code generation without thorough review
+- complex architectural decisions requiring codebase wide understanding
+- security critical code generation without thorough review
 - replacing code review and quality assurance processes
-- full-stack application generation from requirements
+- full stack application generation from requirements
 
 ## How it compares with other AI code assistants
 
@@ -110,8 +108,8 @@ For a detailed comparison of GitHub Copilot with other AI code assistants, see t
 Consider combining GitHub Copilot with other tools when:
 
 - you need Claude Code for complex refactoring or architectural questions
-- you need Claude with GitHub MCP server for AI-assisted code reviews, pull request analysis, and issue management
-- you need Amazon Q for AWS-specific deployment tasks
+- you need Claude with GitHub MCP server for AI assisted code reviews, pull request analysis, and issue management
+- you need Amazon Q for AWS specific deployment tasks
 - you need government MCP servers with Claude for standards compliance checking
 
 ### MCP servers and extended workflows
@@ -128,17 +126,17 @@ GitHub Copilot uses different models depending on the task. Understanding which 
 |---|---|---|---|---|
 | GPT-4.1 | OpenAI | General coding, fast completions | Included | No premium requests on paid plans |
 | GPT-5 mini | OpenAI | Balanced speed and capability | Included | No premium requests on paid plans |
-| GPT-5 | OpenAI | Complex code generation, debugging | 1x | Strong general-purpose model |
+| GPT-5 | OpenAI | Complex code generation, debugging | 1x | Strong general purpose model |
 | GPT-5.1 | OpenAI | Latest OpenAI capabilities | 1x | Enhanced reasoning |
 | GPT-5.2 | OpenAI | Most advanced OpenAI model | 1x | Best for complex tasks |
-| Claude Haiku 4.5 | Anthropic | Fast responses, simple tasks | 0.33x | Cost-effective option |
-| Claude Sonnet 4 | Anthropic | Balanced reasoning and speed | 1x | Good all-rounder |
+| Claude Haiku 4.5 | Anthropic | Fast responses, simple tasks | 0.33x | Cost effective option |
+| Claude Sonnet 4 | Anthropic | Balanced reasoning and speed | 1x | Good all rounder |
 | Claude Sonnet 4.5 | Anthropic | Advanced coding tasks | 1x | Strong code understanding |
 | Claude Opus 4.1 | Anthropic | Deep reasoning, complex refactoring | 10x | Best for architectural decisions |
 | Claude Opus 4.5 | Anthropic | Most advanced Claude model | 3x | Superior reasoning capabilities |
 | Gemini 2.5 Pro | Google | Multimodal tasks, large context | 1x | Good for visual and code tasks |
 | Grok Code Fast 1 | xAI | Fast code generation | 0.25x | Currently complimentary |
-| Raptor mini | Fine-tuned GPT-5 mini | Optimised completions | Included | Preview - tuned for coding |
+| Raptor mini | Fine tuned GPT-5 mini | Optimised completions | Included | Preview tuned for coding |
 
 ### Recommended models by task
 
@@ -147,13 +145,13 @@ GitHub Copilot uses different models depending on the task. Understanding which 
 | Autocomplete as you type | GPT-4.1 or Raptor mini (default) | Fast response, no premium cost |
 | Generate unit tests | GPT-5 or Claude Sonnet 4.5 | Better understanding of edge cases |
 | Debug complex issues | Claude Opus 4.5 or GPT-5.2 | Superior reasoning about code behaviour |
-| Write boilerplate code | GPT-5 mini or Claude Haiku 4.5 | Sufficient for repetitive patterns, cost-effective |
+| Write boilerplate code | GPT-5 mini or Claude Haiku 4.5 | Sufficient for repetitive patterns, cost effective |
 | Refactor legacy code | Claude Opus 4.1 or GPT-5.1 | Needs deep understanding of code structure |
 | Implement algorithms | GPT-5.2 | Optimised for mathematical reasoning |
 | Generate documentation | GPT-5 or Claude Sonnet 4 | Strong natural language generation |
 | SQL query generation | GPT-5.1 | Better syntax accuracy and optimisation |
 | Security code review | Claude Sonnet 4.5 | Strong pattern recognition for vulnerabilities |
-| API client generation | GPT-5 mini | Template-based, does not need premium model |
+| API client generation | GPT-5 mini | Template based, does not need premium model |
 | Multimodal tasks (images and code) | Gemini 2.5 Pro | Best multimodal support |
 
 ### Controlling model selection
@@ -175,13 +173,15 @@ Premium models (consume premium requests) are:
 
 Model availability depends on your license tier. Business and Enterprise tiers have access to all models. Premium model usage counts towards your organisation's monthly allowance.
 
+For detailed guidance on managing premium request budgets, preventing unexpected costs, and understanding what happens when teams exceed their allowance, see [Premium credit management](../../user-tool-guides/github-copilot/premium-credit-management.md).
+
 ### Adding additional models
 
 You can add more models beyond those available by default using your own API keys. This allows access to:
 
 - additional model versions
 - models from other providers
-- local or self-hosted models
+- local or self hosted models
 
 For configuration details, see [Changing the AI model for GitHub Copilot Chat](https://docs.github.com/en/copilot/how-tos/use-ai-models/change-the-chat-model).
 
@@ -190,7 +190,7 @@ For detailed model capabilities and limitations, see:
 - [GitHub Copilot supported models](https://docs.github.com/en/copilot/reference/ai-models/supported-models)
 - [AI model comparison](https://docs.github.com/en/copilot/reference/ai-models/model-comparison)
 
-## Government-specific considerations
+## Government specific considerations
 
 ### Security classification
 
@@ -261,11 +261,11 @@ code --install-extension GitHub.copilot-chat
 
 For JetBrains IDEs:
 
-- Settings → Plugins → Search "GitHub Copilot" → Install
+- Settings → Plugins → Search 'GitHub Copilot' → Install
 
 #### Step 3: authentication
 
-Engineers authenticate using their GitHub accounts. If using Enterprise Managed Users, configure SAML single sign-on through your identity provider.
+Engineers authenticate using their GitHub accounts. If using Enterprise Managed Users, configure SAML single sign on through your identity provider.
 
 #### Step 4: verification
 
@@ -302,7 +302,7 @@ This module covers:
 - content exclusions and when they apply
 - integration with code review process
 
-Format: This training should be delivered as a live demonstration with hands-on practice using real project examples.
+This training should be delivered as a live demonstration with hands on practice using real project examples.
 
 ### Manager briefing (30 minutes)
 
@@ -313,7 +313,7 @@ This briefing covers:
 - policy configuration and content exclusions
 - addressing team concerns about AI tools
 
-Format: This briefing should be delivered as a presentation with a Q&A session.
+This briefing should be delivered as a presentation with a question and answer session.
 
 ## Measuring success
 
@@ -365,7 +365,7 @@ Follow these steps to resolve the issue.
 1. Break down complex tasks into smaller, more specific requests.
 2. Ensure agent has sufficient permissions for requested operations.
 3. Check repository size and complexity (very large repos may struggle).
-4. Review task requirements - agent works best with clear, bounded objectives.
+4. Review task requirements. Agent works best with clear, bounded objectives.
 5. Monitor agent progress and provide clarifications when requested.
 
 For detailed troubleshooting of Copilot agent mode specifically, see [Troubleshooting GitHub Copilot coding agent](https://docs.github.com/en/copilot/using-github-copilot/using-github-copilot-coding-agent-in-your-ide/troubleshooting-github-copilot-coding-agent).
@@ -384,7 +384,7 @@ Follow these steps to resolve the issue.
 3. Use more specific variable and function names.
 4. Check if content exclusions are blocking helpful context.
 5. Try using Copilot Chat for complex scenarios instead of inline.
-6. For Enterprise customers: verify custom model fine-tuning is configured.
+6. For Enterprise customers, verify custom model fine tuning is configured.
 
 Understanding how to communicate with Copilot effectively can dramatically improve suggestion quality. See the [prompt library](../../prompt-library/) for tested prompts and patterns.
 
@@ -403,7 +403,7 @@ Follow these steps to resolve the issue.
 4. Update to latest Copilot extension version.
 5. Check system resources (CPU, memory).
 
-#### Enterprise-specific issues
+#### Enterprise specific issues
 
 Symptoms include:
 
@@ -432,7 +432,7 @@ They must take the following immediate actions.
 1. Do not commit the code.
 2. Report to your security team using standard incident process.
 3. Document the suggestion for analysis.
-4. Update content exclusions if pattern-based.
+4. Update content exclusions if pattern based.
 
 They must follow-up by:
 
@@ -474,7 +474,7 @@ They must follow-up by:
 /deprecated/
 ```
 
-### IDE-level settings
+### IDE level settings
 
 Example VS Code configuration:
 
@@ -498,9 +498,9 @@ Example VS Code configuration:
 
 Disable Copilot for specific file types where suggestions are not helpful or may be risky.
 
-### Organisation-level settings
+### Organisation level settings
 
-Configure your organisation-level settings.
+Configure your organisation level settings.
 
 1. Navigate to Settings → Copilot.
 2. Enable Copilot for organisation.
@@ -540,6 +540,7 @@ NCSC guidance includes:
 ### Repository resources
 Repository resources include:
 - [Safe usage guidance: prototyping vs production](../../user-tool-guides/github-copilot/safe-usage-prototyping-vs-production.md) - differentiated controls for prototyping and production environments
+- [Premium credit management](../../user-tool-guides/github-copilot/premium-credit-management.md) - managing budgets, understanding costs, and preventing surprise bills
 - [AI SDLC Playbook](../../playbooks/ai-sdlc-playbook.md) - integrating AI code assistants across development lifecycle
 - [Model Selection Playbook](../../playbooks/model-selection.md) - choosing appropriate models for tasks
 - [Base guardrails](../../governance/guardrails-base.md) - foundational security controls for all AI tool usage

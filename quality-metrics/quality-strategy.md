@@ -32,7 +32,7 @@ Use this strategy to:
 - understand programme success criteria and targets
 - align departmental measurement with programme goals
 - report consistently across the programme
-- make evidence-based decisions about adoption approach
+- make evidence based decisions about adoption approach
 
 For practical implementation guidance, read the [measurement playbook](measurement-playbook.md).
 
@@ -48,13 +48,13 @@ The AI Engineering Lab programme aims to achieve the following five strategic ob
 | Productivity | Measurable improvement in engineer efficiency | Core value proposition of AI assistants |
 | Quality | Code quality maintained or improved | Speed must not sacrifice quality |
 | Satisfaction | Positive engineer and stakeholder experience | Sustainable adoption requires satisfaction |
-| Sustainability | Adoption continues beyond programme support | Long-term value, not temporary uplift |
+| Sustainability | Adoption continues beyond programme support | Long term value, not temporary uplift |
 
 ---
 
 ## Success criteria
 
-### Programme-level targets
+### Programme level targets
 
 These targets apply across the AI Engineering Lab programme.
 
@@ -129,7 +129,7 @@ Analyse adoption by:
 
 ---
 
-## Tier 2: Productivity metrics
+## Tier 2: productivity metrics
 
 Question answered: are engineers more efficient?
 
@@ -154,7 +154,7 @@ Question answered: are engineers more efficient?
 
 ### Measurement cautions
 
-Compare teams to their own baselines, not each other. Account for sprint-to-sprint variation. Control for team changes, holidays, major releases. Balance speed metrics with quality metrics.
+Compare teams to their own baselines, not each other. Account for sprint to sprint variation. Control for team changes, holidays, major releases. Balance speed metrics with quality metrics.
 
 ---
 
@@ -179,16 +179,16 @@ Question answered: is the code good and work reliable?
 |--------|--------|-----------|
 | Defect density | Reduce by 15% to 20% | AI should reduce errors, not increase them |
 | Change failure rate | Maintain or reduce | Speed must not sacrifice stability |
-| Test coverage | Maintain or increase by 5% to 10% | AI-assisted test generation should improve coverage |
+| Test coverage | Maintain or increase by 5% to 10% | AI assisted test generation should improve coverage |
 | Technical debt | Reduce remediation cost by 20% | AI helps address debt faster |
 
 ### Quality safeguards
 
 | Safeguard | Implementation |
 |-----------|----------------|
-| Mandatory code review | All AI-generated code reviewed by human |
+| Mandatory code review | All AI generated code reviewed by human |
 | Security scanning | AI code passes same security checks |
-| Test requirements | AI-generated code must include tests |
+| Test requirements | AI generated code must include tests |
 | Quality gates | CI/CD gates unchanged or strengthened |
 
 ---
@@ -206,7 +206,7 @@ Question answered: is the programme providing organisational value?
 | Effective capacity | Work completed without headcount increase | Increasing | Quarterly |
 | Contractor dependency | Contractor ratio or spend | Decreasing | Quarterly |
 | Engineer retention | Turnover rate | Maintaining or improving | Annually |
-| Service improvements | User-facing service metrics | Improving | Quarterly |
+| Service improvements | User facing service metrics | Improving | Quarterly |
 
 ### Business case alignment
 
@@ -217,7 +217,7 @@ Question answered: is the programme providing organisational value?
 | Civil service capability | Skills development, contractor reduction |
 | Service quality | Defect rates, service metrics |
 
-### Long-term value indicators
+### Long term value indicators
 
 | Indicator | Measurement | Target |
 |-----------|-------------|--------|
@@ -240,7 +240,7 @@ Question answered: how do people feel about it?
 | Net promoter score | 'Would you recommend to a colleague?' (on a scale from -100 to +100) | Positive | Monthly |
 | Confidence level | 'How confident are you using AI tools?' (on a scale of 1 to 10) | Increasing | Monthly |
 | Workflow integration | 'AI tools fit well into my workflow' (on a scale of 1 to 5) | 4.0 or more | Monthly |
-| Training satisfaction | Post-training survey score | 8.0 or more | Post-training |
+| Training satisfaction | Post training survey score | 8.0 or more | Post training |
 
 ### Stakeholder satisfaction
 
@@ -266,7 +266,7 @@ Beyond scores, track qualitative sentiment.
 
 ## Adaptability metrics
 
-Beyond measuring adoption and productivity, tracking adaptability helps make sure teams and the programme can respond to change and sustain success long-term.
+Beyond measuring adoption and productivity, tracking adaptability helps make sure teams and the programme can respond to change and sustain success long term.
 
 ### Why measure adaptability
 
@@ -285,17 +285,17 @@ Question answered: how flexibly can teams respond to changing needs?
 
 | Metric | Definition | Leading or lagging | Target |
 |--------|------------|-----------------|--------|
-| Cross-tool proficiency | Percentage of engineers proficient in 2 or more AI tools | Leading | Over 30% by programme end |
+| Cross tool proficiency | Percentage of engineers proficient in 2 or more AI tools | Leading | Over 30% by programme end |
 | Team onboarding time | Days to onboard new team to AI tools | Lagging | Decreasing trend |
 | FDE redeployment speed | Days to redeploy FDE to new team | Leading | Less than 5 days |
-| Support request resolution | Time to resolve AI-related issues | Lagging | Decreasing trend |
+| Support request resolution | Time to resolve AI related issues | Lagging | Decreasing trend |
 | Practice adoption speed | Time from new practice introduced to team adoption | Lagging | Decreasing trend |
 
 The following are some operational agility indicators.
 
 | Indicator | What it signals | How to measure |
 |-----------|-----------------|----------------|
-| Teams sharing practices | Knowledge flows across teams | Cross-team contributions to repository |
+| Teams sharing practices | Knowledge flows across teams | Cross team contributions to repository |
 | Self-service resolution | Teams solve problems independently | Percentage of issues resolved without FDE |
 | Rapid experimentation | Teams try new AI features or techniques | New feature adoption within 2 weeks of release |
 
@@ -303,7 +303,7 @@ The following are some operational agility indicators.
 
 #### Workforce readiness
 
-Question answered: are people equipped for current and future AI-assisted development?
+Question answered: are people equipped for current and future AI assisted development?
 
 | Metric | Definition | Leading or lagging | Target |
 |--------|------------|-----------------|--------|
@@ -363,7 +363,7 @@ Add these questions to periodic team assessments:
 
 | Metric | Current | Target | Trend |
 |--------|---------|--------|-------|
-| Cross-tool proficiency | X% | Over 30% | Increasing, decreasing or stable |
+| Cross tool proficiency | X% | Over 30% | Increasing, decreasing or stable |
 | Average team onboarding time | X days | Less than 10 days | Increasing, decreasing or stable |
 | Champion density | X per 100 | 2 or more per 100 | Increasing, decreasing or stable |
 | Self-service resolution rate | X% | Over 70% | Increasing, decreasing or stable |
@@ -388,7 +388,7 @@ Target: move all teams to at least 'responsive' by programme end, with 30% at 'P
 
 | Metric gap | Intervention |
 |------------|--------------|
-| Low cross-tool proficiency | Introduce secondary tool familiarisation |
+| Low cross tool proficiency | Introduce secondary tool familiarisation |
 | Slow team onboarding | Create onboarding playbook, assign buddy |
 | Low champion density | Targeted champion recruitment and enablement |
 | Low willingness to change | Address concerns, showcase benefits, involve sceptics |
@@ -399,7 +399,7 @@ Target: move all teams to at least 'responsive' by programme end, with 30% at 'P
 
 ## Comparative analysis
 
-### Cross-tool comparison
+### Cross tool comparison
 
 Where teams use different tools, the following should be compared.
 
@@ -413,7 +413,7 @@ Where teams use different tools, the following should be compared.
 
 Caution: control for team differences. Tool comparisons require similar team contexts.
 
-### Cross-department comparison
+### Cross department comparison
 
 Compare departments on the following dimensions.
 
@@ -444,7 +444,7 @@ Use for identifying transferable practices, not ranking departments.
 
 | Report | Frequency | Audience | Focus |
 |--------|-----------|----------|-------|
-| Operational dashboard | Real-time | Programme team | Adoption alerts, daily metrics |
+| Operational dashboard | Real time | Programme team | Adoption alerts, daily metrics |
 | Weekly summary | Weekly | Programme team, delivery managers | Progress, issues, actions |
 | Monthly report | Monthly | Programme board | Trends, insights, decisions |
 | Quarterly review | Quarterly | Senior responsible owners, senior leadership | Business outcomes, strategic direction |
@@ -588,17 +588,17 @@ Use for identifying transferable practices, not ranking departments.
 
 | Requirement | Implementation |
 |-------------|----------------|
-| Privacy | Team-level aggregation minimum, no individual reporting |
+| Privacy | Team level aggregation minimum, no individual reporting |
 | Security | Data classification official, secure storage |
 | Retention | Retain for programme duration plus 2 years |
-| Access | Role-based access to dashboards and data |
+| Access | Role based access to dashboards and data |
 
 ---
 
 ## Related documents
 Related documents include:
 - [measurement playbook](measurement-playbook.md) - Practical implementation guidance
-- [maturity assessment framework](../assessment/maturity-assessment-framework.md) - Team-level assessment
+- [maturity assessment framework](../assessment/maturity-assessment-framework.md) - Team level assessment
 
 ## References
 

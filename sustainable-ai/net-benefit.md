@@ -1,7 +1,5 @@
-
-> Alpha
-> This is a new service. Your feedback will help us to improve it.
-> https://github.com/govuk-digital-backbone/aiengineeringlab/discussions
+> **ALPHA**
+> This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us improve it.
 
 # Sustainable AI net benefit
 
@@ -309,9 +307,9 @@ You should:
 
 [MIT thesis on Net Climate Impact Score methodology](https://dspace.mit.edu/bitstream/handle/1721.1/163428/The_Net_Climate_Impact_of_AI__Balancing_Current_Costs_with_Future_Climate_Benefits___v2%20(1).pdf?sequence=1&isAllowed=y)
 
-[Nature and LSE and Systemiq comprehensive modelling study - "Green and intelligent: the role of AI in the climate transition"](https://www.nature.com/articles/s44168-025-00252-3)
+[Nature and LSE and Systemiq comprehensive modelling study - 'Green and intelligent: the role of AI in the climate transition'](https://www.nature.com/articles/s44168-025-00252-3)
 
-[PwC framework for economy-wide efficiency analysis - "Value in Motion" report](https://www.pwc.com/gx/en/news-room/press-releases/2025/ai-adoption-could-boost-global-gdp-by-an-additional-15-percentage.html)
+[PwC framework for economy wide efficiency analysis - 'Value in Motion' report](https://www.pwc.com/gx/en/news-room/press-releases/2025/ai-adoption-could-boost-global-gdp-by-an-additional-15-percentage.html)
 
 ### Sector-specific case studies
 

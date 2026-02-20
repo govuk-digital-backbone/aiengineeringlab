@@ -67,7 +67,7 @@ The following table shows severity levels for incidents.
 
 ## Incident response process
 
-### Phase 1: Detection and reporting
+### Phase 1: detection and reporting
 
 #### How to report an incident
 
@@ -96,7 +96,7 @@ Incidents may be detected through:
 | External notification | Vendor, third party or security researcher report |
 | Audit | Periodic review identifies historical issues |
 
-### Phase 2: Triage and assessment
+### Phase 2: triage and assessment
 
 #### Initial triage (within 30 minutes of report)
 
@@ -141,7 +141,7 @@ Incident severity levels are:
 | Are other systems affected | Identify lateral impact |
 | Is the incident ongoing | Determine containment urgency |
 
-### Phase 3: Containment
+### Phase 3: containment
 
 #### Immediate containment actions by incident type
 
@@ -197,7 +197,7 @@ Before proceeding to eradication, you should confirm the following.
 - [ ] Spread has been prevented
 - [ ] Stakeholders have been notified
 
-### Phase 4: Eradication and recovery
+### Phase 4: eradication and recovery
 
 #### Eradication activities
 
@@ -228,7 +228,7 @@ Before proceeding to eradication, you should confirm the following.
 | P3 | Incident Owner |
 | P4 | Incident Owner |
 
-### Phase 5: Post-incident activities
+### Phase 5: post-incident activities
 
 #### Incident report
 
@@ -275,9 +275,9 @@ For P1 and P2 incidents, conduct a blameless post-incident review.
 
 ## Example incident playbooks
 
-### Example A: Personal data exposed to AI tool
+### Example A: personal data exposed to AI tool
 
-Scenario: In this example, an engineer accidentally includes real customer personally identifiable information (PII) in a prompt.
+Scenario: in this example, an engineer accidentally includes real customer personally identifiable information (PII) in a prompt.
 
 #### Immediate actions
 
@@ -310,9 +310,9 @@ You must:
 | Risk to individuals | Document in breach register |
 | Unlikely risk | Document decision not to notify |
 
-### Example B: Security vulnerability deployed to production
+### Example B: security vulnerability deployed to production
 
-Scenario: In this example, AI-generated code containing an SQL injection vulnerability reaches production.
+Scenario: in this example, AI-generated code containing an SQL injection vulnerability reaches production.
 
 #### Immediate actions
 
@@ -347,7 +347,7 @@ You must action:
 
 ### Example C: API key committed to repository
 
-Scenario: In this example, the AI suggests code containing a hardcoded API key, which is then committed.
+Scenario: in this example, the AI suggests code containing a hardcoded API key, which is then committed.
 
 #### Immediate actions
 
@@ -378,9 +378,9 @@ You must:
 - review Continuous Integration/Continuous Deployment (CI/CD) secret scanning configuration
 - reinforce training on secret management
 
-### Example D: Suspected prompt injection attack
+### Example D: suspected prompt injection attack
 
-Scenario: In this example, the AI assistant produces unexpected output suggesting a malicious prompt injection.
+Scenario: in this example, the AI assistant produces unexpected output suggesting a malicious prompt injection.
 
 #### Immediate actions
 

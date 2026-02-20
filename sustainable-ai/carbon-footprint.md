@@ -1,7 +1,5 @@
-
-> Alpha
-> This is a new service. Your feedback will help us to improve it.
-> https://github.com/govuk-digital-backbone/aiengineeringlab/discussions
+> **ALPHA**
+> This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us improve it.
 
 # Carbon footprint of AI coding assistants
 
@@ -231,7 +229,7 @@ Actual emissions vary by prompt complexity, response length, grid intensity and 
 
 Carbon footprints vary across AI coding assistants. Gemini Code Assist shows the lowest emissions. Claude Code shows the highest. Programme scale use across 500 engineers results in annual emissions between 0.17 and 4.4 tonnes CO2e depending on tool choice.
 
-While these emissions are modest compared to other organisational activities (equivalent to 1 to 28 return trips from London to Edinburgh), they represent an opportunity for informed decision-making. As AI adoption scales across government, tool selection based on efficiency, combined with optimised usage patterns, can meaningfully reduce environmental impact while maintaining productivity gains.
+While these emissions are modest compared to other organisational activities (equivalent to 1 to 28 return trips from London to Edinburgh), they represent an opportunity for informed decision making. As AI adoption scales across government, tool selection based on efficiency, combined with optimised usage patterns, can meaningfully reduce environmental impact while maintaining productivity gains.
 
 You should:
 
@@ -254,7 +252,7 @@ You should:
 
 ### Claude Code
 
-['How Hungry is AI? Benchmarking Energy, Water, and Carbon Footprint of LLM Inference.'](https://www.researchgate.net/publication/391741710_How_Hungry_is_AI_Benchmarking_Energy_Water_and_Carbon_Footprint_of_LLM_Inference), Claude 3.7 Sonnet eco-efficiency score: 0.825, 17.045 Wh for long-form input. Independent academic benchmarking of Claude models across energy, water, and carbon metrics.
+['How Hungry is AI? Benchmarking Energy, Water, and Carbon Footprint of LLM Inference.'](https://www.researchgate.net/publication/391741710_How_Hungry_is_AI_Benchmarking_Energy_Water_and_Carbon_Footprint_of_LLM_Inference), Claude 3.7 Sonnet eco-efficiency score: 0.825, 17.045 Wh for long form input. Independent academic benchmarking of Claude models across energy, water, and carbon metrics.
 
 ### GitHub Copilot
 
@@ -266,15 +264,15 @@ OpenAI CEO Sam Altman (June 2025). ChatGPT query estimate: 0.34 Wh per query. Ci
 
 ### Amazon Q
 
-Amazon Sustainability Report (July 2025). General sustainability commitments and AWS renewable energy targets. No per-query emissions data published for Amazon Q. Multiple citations including [Main sustainability page](https://sustainability.aboutamazon.com/), [Report (2024)](https://sustainability.aboutamazon.com/2024-amazon-sustainability-report.pdf), [Sustainability in the Cloud](https://sustainability.aboutamazon.com/environment/the-cloud) and [Progress](https://sustainability.aboutamazon.com/progress).
+Amazon Sustainability Report (July 2025). General sustainability commitments and AWS renewable energy targets. No per query emissions data published for Amazon Q. Multiple citations including [Main sustainability page](https://sustainability.aboutamazon.com/), [Report (2024)](https://sustainability.aboutamazon.com/2024-amazon-sustainability-report.pdf), [Sustainability in the Cloud](https://sustainability.aboutamazon.com/environment/the-cloud) and [Progress](https://sustainability.aboutamazon.com/progress).
 
 AWS has committed to 100% renewable energy by 2025 (mentioned in multiple sustainability reports).
 
-Estimates extrapolated from industry benchmarks for similar-sized models on AWS infrastructure.
+Estimates extrapolated from industry benchmarks for similar sized models on AWS infrastructure.
 
 ### General AI emissions research
 
-['What's the carbon footprint of using ChatGPT or Gemini?'](https://hannahritchie.substack.com/p/ai-footprint-august-2025), an analysis of AI emissions estimates and methodology comparison.
+['What is the carbon footprint of using ChatGPT or Gemini?'](https://hannahritchie.substack.com/p/ai-footprint-august-2025), an analysis of AI emissions estimates and methodology comparison.
 
 ['Carbon Footprint Evaluation of Code Generation through LLM as a Service.'](https://link.springer.com/chapter/10.1007/978-3-658-45010-6_15), a framework for evaluating embodied and operational carbon in code generation.
 
@@ -284,7 +282,7 @@ Multiple sources (2023 to 2025). Industry consensus that inference now represent
 
 | Vendor | Notes |
 |--------|-------|
-| Google (Gemini) | Only vendor with published, peer-reviewed methodology and actual measured data (not estimates) |
+| Google (Gemini) | Only vendor with published, peer reviewed methodology and actual measured data (not estimates) |
 | Anthropic (Claude) | Limited emissions data. Estimates based on independent academic benchmarking. |
 | GitHub and Microsoft (Copilot) | No direct emissions disclosure. Estimates based on underlying GPT-4o and 4.1 model data. |
-| Amazon (Q) | No published per-query emissions data. Estimates based on AWS infrastructure sustainability reports and industry benchmarks |
+| Amazon (Q) | No published per query emissions data. Estimates based on AWS infrastructure sustainability reports and industry benchmarks |

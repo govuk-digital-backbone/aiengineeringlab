@@ -12,7 +12,7 @@ This document provides a structured threat model for AI coding assistant deploym
 - assets requiring protection
 - threat actors and their capabilities
 - attack vectors and techniques (mapped to MITRE ATLAS and OWASP)
-- tool-type specific deployment architectures and data flows
+- tool type specific deployment architectures and data flows
 - risk assessment per threat
 - control mappings to [Guardrails Base](../governance/guardrails-base.md)
 
@@ -26,10 +26,10 @@ This threat model aligns with NCSC Machine Learning Security Principles and the 
 
 | System Type | Examples | Autonomy Level |
 |-------------|----------|----------------|
-| **Cloud-hosted AI assistants** | GitHub Copilot, Amazon Q Developer, Gemini Code Assist, Claude.ai | L1-L2 |
-| **IDE-integrated agents** | Cursor, Windsurf, GitHub Copilot (extension), Amazon Kiro, Claude Code | L2-L4 |
+| **Cloud hosted AI assistants** | GitHub Copilot, Amazon Q Developer, Gemini Code Assist, Claude.ai | L1-L2 |
+| **IDE integrated agents** | Cursor, Windsurf, GitHub Copilot (extension), Amazon Kiro, Claude Code | L2-L4 |
 | **Autonomous agents** | Devin, Amazon Kiro (frontier mode), Claude Code (agentic) | L4-L5 |
-| **Self-hosted solutions** | Ollama, LocalAI, LM Studio, private model hosting | L1-L4 |
+| **Self hosted solutions** | Ollama, LocalAI, LM Studio, private model hosting | L1-L4 |
 
 ### Data flows overview
 
@@ -39,7 +39,7 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 
 ## Deployment architectures and data flows by tool type
 
-### Architecture 1: cloud-hosted AI assistant
+### Architecture 1: cloud hosted AI assistant
 
 **Example tools:** GitHub Copilot, Amazon Q Developer, Gemini Code Assist, Claude.ai
 
@@ -110,7 +110,7 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 
 **Unique threats:**
 - T-DE-01: sensitive data in prompts (HIGH)
-- T-CH-01: multi-tenant data leakage (MEDIUM)
+- T-CH-01: multi tenant data leakage (MEDIUM)
 - T-CH-02: data residency violation (MEDIUM)
 - T-SC-02: compromised AI provider (CRITICAL)
 - T-AV-01: service dependency (MEDIUM)
@@ -119,13 +119,13 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 
 - **data in transit -** all communication over TLS 1.3; certificate validation mandatory
 - **data at rest -** vendor storage security; data residency requirements
-- **multi-tenancy -** tenant isolation at provider; enterprise licensing reduces shared infrastructure risk
+- **multi tenancy -** tenant isolation at provider; enterprise licensing reduces shared infrastructure risk
 - **training data -** opt-out from training data collection where possible
 - **availability -** dependency on vendor uptime; business continuity planning needed
 
 ---
 
-### Architecture 2: IDE-integrated agent (Hybrid: Local + Cloud)
+### Architecture 2: IDE integrated agent (Hybrid: Local + Cloud)
 
 **Example tools:** Cursor, Windsurf, GitHub Copilot (IDE extension), Amazon Kiro, Claude Code
 
@@ -184,7 +184,7 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 | 4 | Context selection | Cloud filter | Selected snippets | Privacy filtering |
 | 5 | IDE | AI Provider | Filtered context + prompt | Inference request |
 | 6 | AI Provider | IDE | Suggestions | Response |
-| 7 | User | IDE | Review + accept | Human-in-loop |
+| 7 | User | IDE | Review + accept | Human in loop |
 | 8 | IDE | Repository | Accepted code | Commit |
 
 **Trust boundaries:**
@@ -195,9 +195,9 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 | TB-03 | Local cache | Cache contains sensitive codebase data | Encryption at rest, secure permissions, cache clearing |
 
 **Unique threats:**
-- T-DE-01: sensitive data in prompts (MEDIUM-HIGH)
+- T-DE-01: sensitive data in prompts (MEDIUM HIGH)
 - T-DE-03: context window leakage (MEDIUM)
-- T-IDE-01: malicious IDE extension (LOW-MEDIUM)
+- T-IDE-01: malicious IDE extension (LOW MEDIUM)
 - T-IDE-02: local cache compromise (MEDIUM)
 - T-PI-02: indirect prompt injection (MEDIUM)
 
@@ -281,27 +281,27 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 |------|------|----|----- |---------|
 | 1 | Operator | Control console | Task definition, constraints | Initialize session |
 | 2 | Control console | Agent runtime | Task, steering files | Agent setup |
-| 3 | Agent | AI Model | Plan, sub-tasks | Multi-step reasoning |
+| 3 | Agent | AI Model | Plan, sub tasks | Multi step reasoning |
 | 4 | Agent | Dev repo clone | Code changes | Autonomous development |
 | 5 | Agent | Test environment | Tests, validation | Verification |
 | 6 | Agent | Audit log | All actions | Accountability |
 | 7 | Agent | Control console | Checkpoint status | Human review point |
 | 8 | Operator | Agent | Continue/pause/abort | Human decision |
 | 9 | Agent | Pull request | Completed work | Submit for review |
-| 10 | Reviewers (2) | Pull request | Approval | Dual-approval gate |
+| 10 | Reviewers (2) | Pull request | Approval | Dual approval gate |
 
 **Trust boundaries:**
 
 | ID | Boundary | Risk | Controls |
 |----|----------|------|----------|
 | TB-01 | Operator ↔ Sandbox | Command injection, task definition attacks | Input validation, authentication |
-| TB-04 | Sandbox output ↔ Production | Malicious or vulnerable code reaching production | Dual-approval, security scanning, human review |
+| TB-04 | Sandbox output ↔ Production | Malicious or vulnerable code reaching production | Dual approval, security scanning, human review |
 | TB-05 | Agent ↔ External systems | Uncontrolled agent actions, privilege escalation | Restricted network, least privilege, action logging |
 
 **Unique threats:**
-- T-AG-01: uncontrolled autonomous action (HIGH-CRITICAL)
+- T-AG-01: uncontrolled autonomous action (HIGH CRITICAL)
 - T-AG-02: privilege escalation via agent (HIGH)
-- T-AG-03: agent-to-agent attack propagation (MEDIUM)
+- T-AG-03: agent to agent attack propagation (MEDIUM)
 - T-AG-04: agent persistence and evasion (CRITICAL if successful)
 - T-PI-02: indirect prompt injection (HIGH)
 - T-SC-01: malicious dependency suggestion (HIGH)
@@ -314,20 +314,20 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 - **checkpoint controls -** mandatory human review at intervals (G-AG-04)
 - **kill switch -** multiple methods tested before session (G-AG-03)
 - **time limits -** maximum session duration enforced (G-AG-02)
-- **dual-approval -** all PRs require two human reviewers
+- **dual approval -** all PRs require two human reviewers
 - **audit logging -** comprehensive, immutable logs of all agent actions
 - **SIRO approval -** required for L5 autonomous agents (PS-05)
 
 ---
 
-### Architecture 4: self-hosted LLM (air-gapped)
+### Architecture 4: self hosted LLM (air gapped)
 
 **Example tools:** Ollama, LocalAI, LM Studio, private model hosting on isolated networks
 
 **Architecture diagram:**
 
 ┌────────────────────────────────────────────────────────────────┐
-│ Air-Gapped Development Environment │
+│ Air Gapped Development Environment │
 │ (Physically Isolated Network) │
 │ │
 │ ┌──────────────┐ ┌──────────────┐ │
@@ -358,7 +358,7 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 │ [NO EXTERNAL TRUST BOUNDARIES - All contained locally] │
 │ │
 │ ┌──────────────────────────────────────────────────────────┐ │
-│ │ Model Transfer Process (One-Way) │ │
+│ │ Model Transfer Process (One Way) │ │
 │ │ │ │
 │ │ External Approved Security Hash │ │
 │ │ Network ───▶ Removable ───▶ Review ───▶ Verify ─▶│ │
@@ -366,7 +366,7 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 │ │ (USB/DVD) │ │
 │ │ │ │ │
 │ │ ▼ │ │
-│ │ Load to Air-Gap │ │
+│ │ Load to Air Gap │ │
 │ │ Network │ │
 │ └──────────────────────────────────────────────────────────┘ │
 │ │
@@ -390,11 +390,11 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 | 3 | Inference server | LLM model (local) | Tokenized input | Processing |
 | 4 | LLM model | Inference server | Generated tokens | Response |
 | 5 | Inference server | IDE | Code suggestions | Display |
-| 6 | User | IDE | Review + accept | Human-in-loop |
+| 6 | User | IDE | Review + accept | Human in loop |
 | 7 | IDE | Repository (local) | Code | Commit |
 | All | Applications | Syslog (local) | Logs | Audit trail |
 
-**Model transfer process (one-way into air-gap):**
+**Model transfer process (one way into air gap):**
 
 | Step | Location | Process | Security Control |
 |------|----------|---------|------------------|
@@ -402,8 +402,8 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 | 2 | Connected workstation | Save to removable media | Antivirus scan |
 | 3 | Security review station | Verify cryptographic hash | SHA-256 against published hash |
 | 4 | Security review station | Scan for malware | Multiple AV engines |
-| 5 | Air-gap transfer point | Physical transfer to isolated network | One-way media transfer process |
-| 6 | Air-gap network | Load model to inference server | No return path |
+| 5 | Air gap transfer point | Physical transfer to isolated network | One way media transfer process |
+| 6 | Air gap network | Load model to inference server | No return path |
 
 **Trust boundaries:**
 
@@ -413,17 +413,17 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 | TB-TRANSFER | Model transfer process | Compromised model file introduction | Hash verification, AV scanning, approved sources only |
 
 **Unique threats:**
-- T-SA-01: compromised model file (MEDIUM-HIGH before transfer)
-- T-SA-02: model poisoning in fine-tuning (LOW unless fine-tuning)
+- T-SA-01: compromised model file (MEDIUM HIGH before transfer)
+- T-SA-02: model poisoning in fine tuning (LOW unless fine tuning)
 - T-SA-03: infrastructure compromise (MEDIUM)
-- T-SA-04: air-gap violation (LOW if properly implemented)
+- T-SA-04: air gap violation (LOW if properly implemented)
 - T-CS-01: vulnerable code generation (HIGH - no provider filtering)
 
 **Key security considerations are:**
 
 - **no external dependencies -** complete autonomy from cloud providers
-- **air-gap integrity -** physical network isolation; no wireless connections
-- **model provenance -** critical - only approved, hash-verified models
+- **air gap integrity -** physical network isolation; no wireless connections
+- **model provenance -** critical - only approved, hash verified models
 - **local security -** infrastructure hardening, patching, access controls
 - **no telemetry -** all update checks, analytics disabled
 - **resource limits -** CPU/GPU/memory limits to prevent resource exhaustion
@@ -444,8 +444,8 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 | A-06 | AI model access | M | H | M | Abuse prevention, cost control |
 | A-07 | Development infrastructure | H | H | H | Build systems, repositories, CI/CD |
 | A-08 | Audit logs | M | C | H | Accountability, forensics, compliance |
-| A-09 | Classified information | C | C | H | OFFICIAL-SENSITIVE and above |
-| A-10 | Local model files (self-hosted) | M | H | M | Model IP, potential backdoors |
+| A-09 | Classified information | C | C | H | OFFICIAL SENSITIVE and above |
+| A-10 | Local model files (self hosted) | M | H | M | Model IP, potential backdoors |
 | A-11 | Agent runtime state | M | C | M | Autonomous agent session state, decisions |
 
 **Key:** C = Critical, H = High, M = Medium, L = Low
@@ -456,14 +456,14 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 
 | ID | Actor | Motivation | Capability | Likelihood | Primary Targets |
 |----|-------|------------|------------|------------|-----------------|
-| TA-01 | Nation-state APT | Espionage, disruption, IP theft | Very High | Medium | A-01, A-03, A-05, A-09 |
+| TA-01 | Nation state APT | Espionage, disruption, IP theft | Very High | Medium | A-01, A-03, A-05, A-09 |
 | TA-02 | Organised crime | Financial gain, ransomware | High | Medium | A-03, A-04, A-07 |
 | TA-03 | Malicious insider | Grievance, financial, ideology | Medium | Low | A-01, A-03, A-09 |
 | TA-04 | Compromised supply chain | Access, espionage, sabotage | High | Medium | A-01, A-07, A-10 |
 | TA-05 | AI provider (unintentional) | N/A (data handling issues) | High | Medium | A-01, A-02, A-04 |
-| TA-06 | Opportunistic attacker | Various (exposed credentials) | Low-Medium | High | A-03 (exposed credentials) |
-| TA-07 | AI worm / automated attack | Propagation, crypto-mining | Medium | Low | A-07, A-08, A-11 |
-| TA-08 | Malicious AI model creator | Backdoor, data exfiltration | Medium-High | Low | A-10 (self-hosted models) |
+| TA-06 | Opportunistic attacker | Various (exposed credentials) | Low Medium | High | A-03 (exposed credentials) |
+| TA-07 | AI worm or automated attack | Propagation, crypto mining | Medium | Low | A-07, A-08, A-11 |
+| TA-08 | Malicious AI model creator | Backdoor, data exfiltration | Medium High | Low | A-10 (self hosted models) |
 
 ---
 
@@ -478,12 +478,12 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 **MITRE ATLAS:** AML.T0024 - Exfiltration via ML Inference API
 
 **Attack vectors are:**
-- user error (copy-paste of sensitive code)
+- user error (copy and paste of sensitive code)
 - inadequate training on data handling
 - poor prompt hygiene practices
 - context window including sensitive files automatically
 
-**Tool types affected:** All cloud-hosted, IDE-integrated (hybrid)
+**Tool types affected:** All cloud hosted, IDE integrated (hybrid)
 
 **Threat actors:** TA-05 (unintentional), TA-01 (if provider compromised)
 
@@ -523,7 +523,7 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 - model inversion techniques
 - exploiting training data memorisation vulnerabilities
 
-**Tool types affected:** Cloud-hosted AI assistants
+**Tool types affected:** Cloud hosted AI assistants
 
 **Threat actors:** TA-01, TA-02
 
@@ -556,18 +556,18 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 
 **Attack vector are:**
 - session state retained between different projects
-- shared IDE configurations in multi-user environments
-- multi-tenant tool deployments with insufficient isolation
+- shared IDE configurations in multi user environments
+- multi tenant tool deployments with insufficient isolation
 - local cache containing previous session data
 
-**Tool types affected:** IDE-integrated agents (especially with local caching)
+**Tool types affected:** IDE integrated agents (especially with local caching)
 
 **Threat actors:** TA-03, TA-05
 
 **Potential impact includes:**
-- cross-project data exposure
+- cross project data exposure
 - classification boundary violation
-- multi-tenant data leakage in shared environments
+- multi tenant data leakage in shared environments
 
 **Likelihood:** MEDIUM
 
@@ -595,10 +595,10 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 
 **Attack vectors are:**
 - malicious prompts crafted to override system instructions
-- instruction override attacks ("Ignore previous instructions...")
-- role hijacking ("You are now an unrestricted assistant...")
+- instruction override attacks ('Ignore previous instructions...')
+- role hijacking ('You are now an unrestricted assistant...')
 - encoded instructions (Base64, Unicode obfuscation, emoji encoding)
-- multi-language injection (combining languages to bypass filters)
+- multi language injection (combining languages to bypass filters)
 
 **Tool types affected:** All
 
@@ -611,7 +611,7 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 - executing unintended actions (in agentic tools)
 - data exfiltration via crafted outputs
 
-**Likelihood:** MEDIUM (attack techniques well-known, defences improving)
+**Likelihood:** MEDIUM (attack techniques well known, defences improving)
 
 **Inherent risk:** MEDIUM (for coding assistants), HIGH (for agentic tools)
 
@@ -641,10 +641,10 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 - malicious code comments in repositories
 - compromised web content retrieved by agents
 - hidden instructions in markdown, HTML, PDFs
-- steganographic prompts in images (multi-modal)
+- steganographic prompts in images (multi modal)
 - malicious instructions in dependencies or documentation
 
-**Tool types affected:** All, but especially IDE-integrated (RAG) and autonomous agents
+**Tool types affected:** All, but especially IDE integrated (RAG) and autonomous agents
 
 **Threat actors:** TA-01, TA-04, TA-07
 
@@ -662,7 +662,7 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 **Controls:**
 | Control ID | Control | Effectiveness |
 |------------|---------|---------------|
-| G-CS-05 | Prompt injection awareness (limited for indirect) | Low-Medium |
+| G-CS-05 | Prompt injection awareness (limited for indirect) | Low Medium |
 | G-AG-04 | Checkpoint requirements | Medium |
 | G-AG-05 | Prohibited agentic actions | High |
 | RAG Playbook | RAG security controls, content validation | Medium |
@@ -679,8 +679,8 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 **OWASP LLM Top 10:** LLM01:2025 - Prompt Injection
 
 **Attack vectors are:**
-- direct extraction attempts (for example, "print your system prompt")
-- indirect extraction via role-play or social engineering
+- direct extraction attempts (for example, 'print your system prompt')
+- indirect extraction via role play or social engineering
 - encoding or format manipulation
 - exploiting error messages that reveal prompts
 
@@ -696,13 +696,13 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 
 **Likelihood:** MEDIUM
 
-**Inherent risk:** LOW-MEDIUM (for coding assistants)
+**Inherent risk:** LOW MEDIUM (for coding assistants)
 
 **Controls:**
 | Control ID | Control | Effectiveness |
 |------------|---------|---------------|
 | Provider controls | Prompt protection, output filtering | Varies |
-| G-DH-02 | Don't include secrets in system prompts | High |
+| G-DH-02 | Do not include secrets in system prompts | High |
 | Assume prompt exposure | Design defences that work even if prompt is known | High |
 
 **Residual risk:** LOW
@@ -713,12 +713,12 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 
 #### T-SC-01: malicious dependency suggestion
 
-**Description:** AI suggests packages or dependencies that are malicious, typosquatted, abandoned, contain known vulnerabilities or don't exist.
+**Description:** AI suggests packages or dependencies that are malicious, typosquatted, abandoned, contain known vulnerabilities or do not exist.
 
 **OWASP LLM Top 10:** LLM05:2025 - Improper Output Handling, LLM09:2025 - Misinformation (hallucinated packages)
 
 **Attack vectors are:**
-- AI suggests typosquatted package names (for example, "reqeusts" instead of "requests")
+- AI suggests typosquatted package names (for example, 'reqeusts' instead of 'requests')
 - hallucinated packages that do not exist (but an attacker could register)
 - outdated packages with known CVEs
 - packages from untrusted or unofficial sources
@@ -762,9 +762,9 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 - model tampering affecting outputs systematically
 - backdoor in provider infrastructure
 - insider threat at provider organization
-- state-sponsored compromise of provider
+- state sponsored compromise of provider
 
-**Tool types affected:** All cloud-hosted, IDE-integrated (hybrid)
+**Tool types affected:** All cloud hosted, IDE integrated (hybrid)
 
 **Threat actors:** TA-01, TA-04
 
@@ -799,12 +799,12 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 **MITRE ATLAS:** AML.T0020 - Poison Training Data
 
 **Attack vectors are:**
-- poisoned open-source training data with malicious patterns
-- backdoors in publicly available pre-trained models
+- poisoned open source training data with malicious patterns
+- backdoors in publicly available pre trained models
 - bias introduced via training data selection
 - supply chain attack on model distribution (for example, a compromised model hub)
 
-**Tool types affected:** All, especially self-hosted using community models
+**Tool types affected:** All, especially self hosted using community models
 
 **Threat actors:** TA-01, TA-04, TA-08
 
@@ -814,7 +814,7 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 - bias in code suggestions (security versus functionality trade-offs)
 - difficult to detect (as it appears as normal code)
 
-**Likelihood:** LOW (for major commercial providers), MEDIUM (for self-hosted community models)
+**Likelihood:** LOW (for major commercial providers), MEDIUM (for self hosted community models)
 
 **Inherent risk:** HIGH
 
@@ -822,7 +822,7 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 | Control ID | Control | Effectiveness |
 |------------|---------|---------------|
 | PS-09 | Vendor assessment (training practices) | Low |
-| PS-11 | Model provenance verification (self-hosted) | Medium |
+| PS-11 | Model provenance verification (self hosted) | Medium |
 | G-CS-02 | Security scanning (detect patterns) | Medium |
 | G-CS-01 | Human security review | Medium |
 
@@ -854,7 +854,7 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 - unintended system access or resource consumption
 - resource exhaustion (cost, compute)
 - security control bypass
-- difficult-to-trace actions requiring forensic investigation
+- difficult to trace actions requiring forensic investigation
 
 **Likelihood:** MEDIUM (for L4-L5 tools without proper controls)
 
@@ -871,7 +871,7 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 | PS-05 | SIRO approval for L5 | High |
 | Sandbox | Isolated environment | High |
 
-**Residual risk:** LOW (L1-L3), MEDIUM (L4), MEDIUM-HIGH (L5)
+**Residual risk:** LOW (L1-L3), MEDIUM (L4), MEDIUM HIGH (L5)
 
 ---
 
@@ -884,7 +884,7 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 **Attack vectors are:**
 - agent granted excessive initial permissions
 - agent discovers and exploits credentials in files or environment
-- agent accesses security-sensitive files without proper controls
+- agent accesses security sensitive files without proper controls
 - agent modifies authentication or authorization code
 - agent exploits misconfigured access controls
 
@@ -899,14 +899,14 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 - data exfiltration
 - lateral movement potential
 
-**Likelihood:** LOW-MEDIUM (depends on sandbox implementation)
+**Likelihood:** LOW MEDIUM (depends on sandbox implementation)
 
 **Inherent risk:** HIGH
 
 **Controls:**
 | Control ID | Control | Effectiveness |
 |------------|---------|---------------|
-| G-AG-05 | Prohibited actions (security-sensitive files) | High |
+| G-AG-05 | Prohibited actions (security sensitive files) | High |
 | G-AG-04 | Approval required for credential access | High |
 | G-UB-01 | Prohibited use cases | High |
 | Tool config | Least privilege permissions | High |
@@ -921,26 +921,26 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 
 **Description:** Prompt injection or malicious content propagates through chained AI agents, amplifying impact across multiple systems.
 
-**OWASP Agentic AI:** Cascading Hallucination Attacks, Multi-Agent Poisoning
+**OWASP Agentic AI:** Cascading Hallucination Attacks, Multi Agent Poisoning
 
 **Attack vectors are:**
 - prompt injection in Agent A output consumed as input by Agent B
 - malicious content in shared context or intermediate artifacts
 - poisoned data in agent communication layer
-- worm-like propagation across agent network
+- worm like propagation across agent network
 
-**Tool types affected:** Autonomous agents with chaining or multi-agent scenarios
+**Tool types affected:** Autonomous agents with chaining or multi agent scenarios
 
 **Threat actors:** TA-01, TA-07 (AI worm - emerging threat)
 
 **Potential impact includes:**
-- multi-system compromise
+- multi system compromise
 - difficult to trace attack origin
 - amplified damage across toolchain
 - potential for exponential propagation
 - cascading failures
 
-**Likelihood:** LOW (emerging threat, limited multi-agent deployments currently)
+**Likelihood:** LOW (emerging threat, limited multi agent deployments currently)
 
 **Inherent risk:** HIGH
 
@@ -948,9 +948,9 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 | Control ID | Control | Effectiveness |
 |------------|---------|---------------|
 | G-AG-04 | Checkpoints between agent handoffs | Medium |
-| G-CS-05 | Prompt injection awareness | Low-Medium |
+| G-CS-05 | Prompt injection awareness | Low Medium |
 | Architecture | Limit agent chaining depth | High |
-| Sandbox | Per-agent isolation | Medium |
+| Sandbox | Per agent isolation | Medium |
 | Monitoring | Anomaly detection across agent network | Medium |
 
 **Residual risk:** MEDIUM
@@ -977,7 +977,7 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 **Potential impact includes:**
 - persistent compromise surviving session termination
 - evaded detection during and after operation
-- long-term access for attacker
+- long term access for attacker
 - difficult remediation
 
 **Likelihood:** LOW (requires sophisticated attack and poor controls)
@@ -987,7 +987,7 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 **Controls:**
 | Control ID | Control | Effectiveness |
 |------------|---------|---------------|
-| G-AG-05 | Prohibited actions (CI/CD, security files, cron) | High |
+| G-AG-05 | Prohibited actions (CI or CD, security files, cron) | High |
 | G-MA-01 | Monitoring and logging (immutable logs) | High |
 | G-AG-04 | Checkpoints for suspicious actions | High |
 | Sandbox | Isolated, ephemeral environment | High |
@@ -1011,7 +1011,7 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 - AI trained on vulnerable code patterns from public repositories
 - AI lacks security context for the specific application
 - AI optimises for functionality not security
-- hallucinated security controls that don't actually work
+- hallucinated security controls that do not actually work
 
 **Tool types affected:** All
 
@@ -1070,9 +1070,9 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 | Control ID | Control | Effectiveness |
 |------------|---------|---------------|
 | G-CS-01 | Human review with security expertise | High |
-| G-CS-04 | No AI for crypto/auth/security-critical | High |
+| G-CS-04 | No AI for crypto or auth or security critical | High |
 | G-UB-01 | Prohibited use cases | High |
-| Testing | Security testing of AI-generated controls | High |
+| Testing | Security testing of AI generated controls | High |
 | PS-04 | Penetration testing | High |
 
 **Residual risk:** LOW
@@ -1117,7 +1117,7 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 
 ### Category 6: availability and abuse
 
-#### T-AV-01: service dependency and vendor lock-in
+#### T-AV-01: service dependency and vendor lock in
 
 **Description:** Critical development workflows become dependent on AI tool availability, creating single points of failure and business continuity risks.
 
@@ -1128,7 +1128,7 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 - geopolitical access restrictions
 - provider business failure
 
-**Tool types affected:** Cloud-hosted, IDE-integrated (hybrid)
+**Tool types affected:** Cloud hosted, IDE integrated (hybrid)
 
 **Threat actors:** N/A (operational risk), TA-01 (targeted DoS against provider)
 
@@ -1146,10 +1146,10 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 **Controls:**
 | Control ID | Control | Effectiveness |
 |------------|---------|---------------|
-| Business continuity | Multi-vendor strategy | High |
+| Business continuity | Multi vendor strategy | High |
 | PS-06 | Developer proficiency without AI (training) | Medium |
-| Fallback | Local/offline alternatives (self-hosted) | Medium |
-| Contractual | SLA commitments from vendor | Low-Medium |
+| Fallback | Local or offline alternatives (self hosted) | Medium |
+| Contractual | SLA commitments from vendor | Low Medium |
 
 **Residual risk:** LOW
 
@@ -1166,7 +1166,7 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 - misconfigured quotas or rate limits
 - malicious insider deliberately exhausting resources
 
-**Tool types affected:** Cloud-hosted, IDE-integrated, Autonomous agents
+**Tool types affected:** Cloud hosted, IDE integrated, Autonomous agents
 
 **Threat actors:** TA-03 (insider), TA-02 (credential theft), TA-01
 
@@ -1195,15 +1195,15 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 
 ### Category 7: model usage risks
 
-#### T-MU-01: over-trust in AI output
+#### T-MU-01: over trust in AI output
 
-**Description:** Users accept AI-generated code without adequate review, leading to quality, security and maintainability issues.
+**Description:** Users accept AI generated code without adequate review, leading to quality, security and maintainability issues.
 
 **Attack vectors are:**
 - automation bias (meaning trusting a machine over human judgment)
 - time pressure reducing review thoroughness
 - lack of security expertise to identify issues
-- plausible-looking output creating false confidence
+- plausible looking output creating false confidence
 
 **Tool types affected:** All
 
@@ -1212,7 +1212,7 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 **Potential impact includes:**
 - vulnerabilities deployed to production
 - logic errors causing functional issues
-- maintenance burden from low-quality code
+- maintenance burden from low quality code
 - technical debt accumulation
 - security incidents from unreviewed code
 
@@ -1227,7 +1227,7 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 | G-AG-07 | Meaningful review requirements defined | High |
 | PS-06 | Training on AI limitations and risks | Medium |
 | PS-03 | Policy mandate for human oversight | High |
-| Culture | Security-aware development culture | Medium |
+| Culture | Security aware development culture | Medium |
 
 **Residual risk:** MEDIUM
 
@@ -1235,7 +1235,7 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 
 #### T-MU-02: hallucination acceptance
 
-**Description:** User accepts AI-generated content that is factually incorrect, including non-existent APIs, incorrect security guidance, fabricated references or impossible configurations.
+**Description:** User accepts AI generated content that is factually incorrect, including non existent APIs, incorrect security guidance, fabricated references or impossible configurations.
 
 **OWASP LLM Top 10:** LLM09:2025 - Misinformation
 
@@ -1253,7 +1253,7 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 **Potential impact includes:**
 - incorrect implementations wasting development time
 - security misconfigurations based on bad advice
-- wasted effort on non-existent solutions
+- wasted effort on non existent solutions
 - technical debt from fundamentally wrong approaches
 
 **Likelihood:** HIGH
@@ -1272,9 +1272,9 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 
 ---
 
-### Category 8: cloud-hosted specific threats (T-CH-XX)
+### Category 8: cloud hosted specific threats (T-CH-XX)
 
-#### T-CH-01: multi-tenant data leakage
+#### T-CH-01: multi tenant data leakage
 
 **Description:** In shared cloud infrastructure, data from one tenant (customer) leaks to another tenant due to insufficient isolation.
 
@@ -1288,7 +1288,7 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 
 **Threat actors:** TA-05 (unintentional), TA-01 (if deliberately exploited)
 
-**Potential impact includes:** Cross-organization data exposure, compliance violations
+**Potential impact includes:** Cross organization data exposure, compliance violations
 
 **Likelihood:** LOW (providers implement isolation, but risk exists)
 
@@ -1309,13 +1309,13 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 
 **Description:** Government data processed or stored in non-approved jurisdictions, violating data sovereignty requirements or regulations.
 
-**Tools affected:** All cloud-hosted tools
+**Tools affected:** All cloud hosted tools
 
 **Attack vectors are:**
-- provider processes data in non-UK/EU regions
+- provider processes data in non UK or EU regions
 - backup or disaster recovery in unapproved locations
 - training data collection processed in other regions
-- sub-processors in unapproved jurisdictions
+- sub processors in unapproved jurisdictions
 
 **Threat actors:** TA-05 (unintentional compliance violation)
 
@@ -1341,7 +1341,7 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 
 ---
 
-### Category 9: IDE-integrated specific threats (T-IDE-XX)
+### Category 9: IDE integrated specific threats (T-IDE-XX)
 
 #### T-IDE-01: malicious IDE extension
 
@@ -1364,16 +1364,16 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 - persistent access to development environment
 - supply chain attack vector
 
-**Likelihood:** LOW-MEDIUM (growing threat, recent incidents)
+**Likelihood:** LOW MEDIUM (growing threat, recent incidents)
 
-**Inherent risk:** MEDIUM-HIGH
+**Inherent risk:** MEDIUM HIGH
 
 **Controls:**
 | Control ID | Control | Effectiveness |
 |------------|---------|---------------|
 | PS-11 | Extension vetting process | High |
 | PS-09 | Vendor security assessment | Medium |
-| G-CS-03 | Source code review (open-source extensions) | High |
+| G-CS-03 | Source code review (open source extensions) | High |
 | Monitoring | Extension behavior monitoring | Medium |
 | IAM | Least privilege extension permissions | Medium |
 
@@ -1412,24 +1412,24 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 | Encryption | Full disk encryption mandatory | High |
 | File permissions | Secure cache directory permissions | Medium |
 | G-DH-05 | Cache clearing on project switch | High |
-| Monitoring | File access monitoring | Low-Medium |
+| Monitoring | File access monitoring | Low Medium |
 | Physical security | Device security controls | Medium |
 
 **Residual risk:** LOW
 
 ---
 
-### Category 10: self-hosted specific threats (T-SA-XX)
+### Category 10: self hosted specific threats (T-SA-XX)
 
 #### T-SA-01: Compromised Model File
 
 **Description:** Downloaded model file contains backdoor, malicious behavior or has been tampered with.
 
-**Tools affected:** All self-hosted LLM deployments (Ollama, LocalAI, LM Studio)
+**Tools affected:** All self hosted LLM deployments (Ollama, LocalAI, LM Studio)
 
 **Attack vectors are:**
 - model downloaded from untrusted or compromised source
-- man-in-the-middle during model download
+- man in the middle during model download
 - compromised model repository (for example, Hugging Face)
 - model file replaced after download but before deployment
 - malicious model uploaded with similar name
@@ -1442,7 +1442,7 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 - covert channels in generated code
 - persistent compromise
 
-**Likelihood:** MEDIUM (for non-verified sources), LOW (for verified official sources)
+**Likelihood:** MEDIUM (for non verified sources), LOW (for verified official sources)
 
 **Inherent risk:** HIGH
 
@@ -1453,20 +1453,20 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 | PS-11 | Cryptographic hash validation (SHA-256) | High |
 | PS-11 | Approved model sources only | High |
 | ML-BOM | Supply chain documentation | Medium |
-| Antivirus | Malware scanning of model files | Low-Medium |
+| Antivirus | Malware scanning of model files | Low Medium |
 
 **Residual risk:** LOW (with controls)
 
 ---
 
-#### T-SA-02: model poisoning in self-hosted fine-tuning
+#### T-SA-02: model poisoning in self hosted fine tuning
 
-**Description:** If fine-tuning models locally, poisoned training data introduces backdoors or biases.
+**Description:** If fine tuning models locally, poisoned training data introduces backdoors or biases.
 
-**Tools affected:** Self-hosted deployments with fine-tuning capability
+**Tools affected:** Self hosted deployments with fine tuning capability
 
 **Attack vectors are:**
-- compromised fine-tuning training data
+- compromised fine tuning training data
 - insider adds malicious training examples
 - automated data collection inadvertently includes poisoned data
 - backdoor triggers embedded in training data
@@ -1478,27 +1478,27 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 - backdoors triggered by specific inputs
 - bias in security vs functionality trade-offs
 
-**Likelihood:** LOW (only if fine-tuning is performed, many self-hosted deployments use pre-trained only)
+**Likelihood:** LOW (only if fine tuning is performed, many self hosted deployments use pre trained only)
 
-**Inherent risk:** HIGH (if fine-tuning)
+**Inherent risk:** HIGH (if fine tuning)
 
 **Controls:**
 | Control ID | Control | Effectiveness |
 |------------|---------|---------------|
 | Training data | Provenance tracking for all training data | High |
-| Data validation | Security review before fine-tuning | Medium |
-| G-CS-01 | Human review of fine-tuned outputs | Medium |
-| Testing | Adversarial testing of fine-tuned models | Medium |
+| Data validation | Security review before fine tuning | Medium |
+| G-CS-01 | Human review of fine tuned outputs | Medium |
+| Testing | Adversarial testing of fine tuned models | Medium |
 
 **Residual risk:** MEDIUM
 
 ---
 
-#### T-SA-03: self-hosted infrastructure compromise
+#### T-SA-03: self hosted infrastructure compromise
 
-**Description:** Hosting infrastructure for self-hosted LLM is compromised, affecting model integrity, availability or confidentiality.
+**Description:** Hosting infrastructure for self hosted LLM is compromised, affecting model integrity, availability or confidentiality.
 
-**Tools affected:** All self-hosted deployments
+**Tools affected:** All self hosted deployments
 
 **Attack vector:**
 - unpatched inference server software
@@ -1535,9 +1535,9 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 
 #### T-SA-04: air-gap violation
 
-**Description:** Supposedly air-gapped system has network connectivity, enabling data exfiltration or external attack.
+**Description:** Supposedly air gapped system has network connectivity, enabling data exfiltration or external attack.
 
-**Tools affected:** Air-gapped self-hosted deployments
+**Tools affected:** Air gapped self hosted deployments
 
 **Attack vectors are:**
 - misconfigured network isolation (e.g., bridged VMs)
@@ -1550,7 +1550,7 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 
 **Potential impact includes:**
 - data breach from classified environment
-- loss of air-gap security benefit
+- loss of air gap security benefit
 - compliance violations
 - potential compromise of sensitive systems
 
@@ -1562,7 +1562,7 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 | Control ID | Control | Effectiveness |
 |------------|---------|---------------|
 | Physical | Physical network isolation verification | High |
-| PS-11 | Air-gap compliance checks (quarterly) | High |
+| PS-11 | Air gap compliance checks (quarterly) | High |
 | Removable media | Unidirectional transfer process | High |
 | Wireless | Wireless disabled/removed physically | High |
 | Monitoring | Network traffic monitoring for anomalies | Medium |
@@ -1573,17 +1573,17 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 
 ### Category 11: network architecture threats (T-NET-XX)
 
-#### T-NET-01: man-in-the-middle attack
+#### T-NET-01: man in the middle attack
 
 **Description:** Network traffic between user and AI provider is intercepted or modified by attacker.
 
-**Tools affected:** All cloud-hosted and IDE-integrated (hybrid) tools
+**Tools affected:** All cloud hosted and IDE integrated (hybrid) tools
 
 **Attack vectors are:**
 - compromised network infrastructure
 - certificate validation bypass or disabled
 - DNS hijacking redirecting to malicious endpoint
-- rogue Wi-Fi access point
+- rogue Wi Fi access point
 - BGP hijacking at ISP level
 
 **Threat actors:** TA-01, TA-02
@@ -1602,7 +1602,7 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 | Control ID | Control | Effectiveness |
 |------------|---------|---------------|
 | TLS | TLS 1.3 mandatory | High |
-| Certificate validation | Certificate pinning where possible | Medium-High |
+| Certificate validation | Certificate pinning where possible | Medium High |
 | Network security | Network security monitoring | Medium |
 | VPN | Corporate VPN for remote workers | Medium |
 
@@ -1610,17 +1610,17 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 
 ---
 
-#### T-NET-02: VPN/proxy bypass
+#### T-NET-02: VPN or proxy bypass
 
 **Description:** AI tool traffic bypasses corporate network controls (proxy, DLP, monitoring), evading security visibility.
 
-**Tools affected:** IDE-integrated tools, desktop applications
+**Tools affected:** IDE integrated tools, desktop applications
 
 **Attack vectors are:**
 - tool configured to bypass system proxy
 - split tunneling misconfiguration allowing direct internet
 - user circumventing corporate network controls
-- tool using hard-coded DNS or alternative ports
+- tool using hard coded DNS or alternative ports
 
 **Threat actors:** TA-03 (insider circumventing controls), TA-05 (misconfiguration)
 
@@ -1641,7 +1641,7 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 | PS-11 | Tool configuration review | Medium |
 | DLP | Data loss prevention monitoring | Medium |
 | Network ACLs | Block direct internet for sensitive systems | High |
-| Training | User awareness of policy requirements | Low-Medium |
+| Training | User awareness of policy requirements | Low Medium |
 
 **Residual risk:** LOW-MEDIUM
 
@@ -1651,16 +1651,16 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 
 | ID | Threat | Likelihood | Impact | Inherent Risk | Primary Controls | Residual Risk | Tool Types |
 |----|--------|------------|--------|---------------|------------------|---------------|------------|
-| T-DE-01 | Data in prompts | High | High | HIGH | G-DH-01,02,04,05 | MEDIUM | All cloud/hybrid |
-| T-DE-02 | Training extraction | Low | Medium | MEDIUM | PS-09, Provider | LOW | Cloud-hosted |
-| T-DE-03 | Context leakage | Medium | Medium | MEDIUM | G-DH-05, Encryption | LOW | IDE-integrated |
-| T-PI-01 | Direct injection | Medium | Medium | MEDIUM | G-CS-05, G-CS-01 | LOW-MEDIUM | All |
+| T-DE-01 | Data in prompts | High | High | HIGH | G-DH-01,02,04,05 | MEDIUM | All cloud or hybrid |
+| T-DE-02 | Training extraction | Low | Medium | MEDIUM | PS-09, Provider | LOW | Cloud hosted |
+| T-DE-03 | Context leakage | Medium | Medium | MEDIUM | G-DH-05, Encryption | LOW | IDE integrated |
+| T-PI-01 | Direct injection | Medium | Medium | MEDIUM | G-CS-05, G-CS-01 | LOW MEDIUM | All |
 | T-PI-02 | Indirect injection | Medium | High | HIGH | G-AG-04, G-AG-05 | MEDIUM | IDE/Agents |
-| T-PI-03 | Prompt extraction | Medium | Low | LOW-MEDIUM | Provider, Assume exposure | LOW | All |
+| T-PI-03 | Prompt extraction | Medium | Low | LOW MEDIUM | Provider, Assume exposure | LOW | All |
 | T-SC-01 | Malicious deps | Medium | High | HIGH | G-CS-03, G-CS-02 | LOW | All |
 | T-SC-02 | Provider compromise | Low | Critical | CRITICAL | PS-09, Multi-vendor | MEDIUM | Cloud/hybrid |
 | T-SC-03 | Model poisoning | Low | High | HIGH | G-CS-02, G-CS-01 | MEDIUM | All |
-| T-AG-01 | Uncontrolled action | Medium | High/Crit | HIGH-CRIT | G-AG-01-05, Sandbox | LOW-MEDIUM | Agents |
+| T-AG-01 | Uncontrolled action | Medium | High or Crit | HIGH CRIT | G-AG-01-05, Sandbox | LOW MEDIUM | Agents |
 | T-AG-02 | Privilege escalation | Low-Med | High | HIGH | G-AG-05, Sandbox | LOW | Agents |
 | T-AG-03 | Agent propagation | Low | High | HIGH | G-AG-04, Arch | MEDIUM | Agents |
 | T-AG-04 | Agent persistence | Low | Critical | CRITICAL | G-AG-05, Sandbox | LOW | Agents L5 |
@@ -1670,17 +1670,17 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 | T-AV-01 | Service dependency | Medium | Medium | MEDIUM | Business continuity | LOW | Cloud/hybrid |
 | T-AV-02 | Cost abuse | Medium | Medium | MEDIUM | G-AG-02,03, Quotas | LOW | Cloud/agents |
 | T-MU-01 | Over-trust | High | High | HIGH | G-CS-01, G-AG-07 | MEDIUM | All |
-| T-MU-02 | Hallucination | High | Medium | MEDIUM | G-CS-01, G-CS-03 | LOW-MEDIUM | All |
-| T-CH-01 | Multi-tenant leak | Low | Medium | MEDIUM | Enterprise license | LOW | Cloud SaaS |
-| T-CH-02 | Data residency | Medium | Medium | MEDIUM | PS-11, Contract | LOW | Cloud-hosted |
-| T-IDE-01 | Malicious extension | Low-Med | Medium-High | MEDIUM-HIGH | PS-11, Vetting | LOW | IDE-integrated |
-| T-IDE-02 | Local cache compromise | Medium | Medium | MEDIUM | Encryption, G-DH-05 | LOW | IDE-integrated |
-| T-SA-01 | Compromised model | Medium | High | HIGH | PS-11, Hash verify | LOW | Self-hosted |
-| T-SA-02 | Model poisoning (FT) | Low | High | HIGH | Data provenance | MEDIUM | Self-hosted |
-| T-SA-03 | Infrastructure compromise | Medium | Medium-High | MEDIUM-HIGH | PS-11, Hardening | LOW | Self-hosted |
-| T-SA-04 | Air-gap violation | Low | Critical | CRITICAL | Physical, PS-11 | LOW | Self-hosted AG |
+| T-MU-02 | Hallucination | High | Medium | MEDIUM | G-CS-01, G-CS-03 | LOW MEDIUM | All |
+| T-CH-01 | Multi tenant leak | Low | Medium | MEDIUM | Enterprise license | LOW | Cloud SaaS |
+| T-CH-02 | Data residency | Medium | Medium | MEDIUM | PS-11, Contract | LOW | Cloud hosted |
+| T-IDE-01 | Malicious extension | Low Med | Medium High | MEDIUM HIGH | PS-11, Vetting | LOW | IDE integrated |
+| T-IDE-02 | Local cache compromise | Medium | Medium | MEDIUM | Encryption, G-DH-05 | LOW | IDE integrated |
+| T-SA-01 | Compromised model | Medium | High | HIGH | PS-11, Hash verify | LOW | Self hosted |
+| T-SA-02 | Model poisoning (FT) | Low | High | HIGH | Data provenance | MEDIUM | Self hosted |
+| T-SA-03 | Infrastructure compromise | Medium | Medium High | MEDIUM HIGH | PS-11, Hardening | LOW | Self hosted |
+| T-SA-04 | Air gap violation | Low | Critical | CRITICAL | Physical, PS-11 | LOW | Self hosted AG |
 | T-NET-01 | MITM | Low | Medium | MEDIUM | TLS 1.3, Cert | LOW | Cloud/hybrid |
-| T-NET-02 | Proxy bypass | Medium | Medium | MEDIUM | Network policy | LOW-MEDIUM | IDE-integrated |
+| T-NET-02 | Proxy bypass | Medium | Medium | MEDIUM | Network policy | LOW MEDIUM | IDE integrated |
 
 ---
 
@@ -1723,7 +1723,7 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 
 ## Tool-type risk profiles
 
-### Cloud-hosted AI assistants
+### Cloud hosted AI assistants
 
 **Tools:** GitHub Copilot, Amazon Q Developer, Gemini Code Assist, Claude.ai
 
@@ -1734,7 +1734,7 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 | Supply Chain | MEDIUM | T-SC-02, T-SC-03 | PS-09, Vendor assessment |
 | Availability | MEDIUM | T-AV-01 | Business continuity plan |
 | Over-Trust | HIGH | T-MU-01, T-MU-02 | G-CS-01, PS-06 training |
-| Network Security | LOW-MEDIUM | T-NET-01, T-NET-02 | TLS 1.3, Network policy |
+| Network Security | LOW MEDIUM | T-NET-01, T-NET-02 | TLS 1.3, Network policy |
 
 **Recommended deployment:** General development on OFFICIAL data, OFFICIAL-SENSITIVE with enterprise licensing and enhanced controls.
 
@@ -1747,15 +1747,15 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 
 ---
 
-### IDE-integrated agents
+### IDE integrated agents
 
 **Tools:** Cursor, Windsurf, GitHub Copilot (extension), Amazon Kiro, Claude Code
 
 | Risk Category | Level | Key Threats | Key Controls |
 |---------------|-------|-------------|--------------|
-| Data Exfiltration | MEDIUM-HIGH | T-DE-01, T-DE-03 | G-DH-05, Local filtering, Privacy mode |
+| Data Exfiltration | MEDIUM HIGH | T-DE-01, T-DE-03 | G-DH-05, Local filtering, Privacy mode |
 | Prompt Injection | MEDIUM | T-PI-01, T-PI-02 | G-CS-05, Context validation |
-| Supply Chain | MEDIUM-HIGH | T-IDE-01, T-SC-01 | PS-11 extension vetting, G-CS-03 |
+| Supply Chain | MEDIUM HIGH | T-IDE-01, T-SC-01 | PS-11 extension vetting, G-CS-03 |
 | Local Compromise | MEDIUM | T-IDE-02 | Full disk encryption, Permissions |
 | Over-Trust | HIGH | T-MU-01 | G-CS-01, Training |
 | Network Security | MEDIUM | T-NET-02 | Proxy enforcement |
@@ -1784,7 +1784,7 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 | Agent Propagation | MEDIUM | T-AG-03 | Architecture, Isolation |
 | Supply Chain | MEDIUM | T-SC-01 | G-CS-03, Scanning |
 | Cost Abuse | MEDIUM | T-AV-02 | G-AG-02,03, Quotas, Kill switch |
-| Code Security | MEDIUM-HIGH | T-CS-01, T-CS-02 | G-CS-02 SAST, Dual-approval |
+| Code Security | MEDIUM HIGH | T-CS-01, T-CS-02 | G-CS-02 SAST, Dual approval |
 
 **Recommended deployment:** Complex refactoring tasks, approved use cases only, with SIRO approval for L5.
 
@@ -1799,18 +1799,18 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 
 ---
 
-### Self-hosted solutions
+### Self hosted solutions
 
 **Tools:** Ollama, LocalAI, LM Studio, private model hosting, air-gapped deployments
 
 | Risk Category | Level | Key Threats | Key Controls |
 |---------------|-------|-------------|--------------|
-| Model Compromise | MEDIUM-HIGH | T-SA-01 | PS-11 provenance, Hash verification |
+| Model Compromise | MEDIUM HIGH | T-SA-01 | PS-11 provenance, Hash verification |
 | Infrastructure | MEDIUM | T-SA-03 | PS-11 baseline, Hardening, Patching |
 | Air-Gap Violation | LOW (if implemented) | T-SA-04 | Physical controls, Verification |
 | Vulnerable Code | HIGH | T-CS-01 | G-CS-02 SAST, Human review |
 | No Provider Security | N/A | - | Self-managed responsibility |
-| Fine-Tuning Risk | LOW-HIGH | T-SA-02 | Data provenance, Validation |
+| Fine Tuning Risk | LOW HIGH | T-SA-02 | Data provenance, Validation |
 
 **Recommended deployment:** Sensitive projects, data sovereignty requirements, air-gapped environments, projects with high security needs.
 
@@ -1833,12 +1833,12 @@ The following threats are emerging or anticipated in the next 12-24 months:
 | Threat | Description | Timeline | Preparation Needed |
 |--------|-------------|----------|-------------------|
 | AI worms | Self-propagating prompt injection across agent networks | Near-term (6-12 mo) | Limit agent chaining, enhanced monitoring |
-| Multi-modal injection | Attacks via images, audio, video in context | Current | Input validation across modalities, content sanitization |
+| Multi modal injection | Attacks via images, audio, video in context | Current | Input validation across modalities, content sanitization |
 | Model theft via API | Extracting model weights through API queries | Current | Provider responsibility, query monitoring |
 | Regulatory non-compliance | EU AI Act, future UK AI regulation | Near-term (6-12 mo) | Maintain compliance posture, risk classification |
-| Agentic malware | Self-modifying, AI-driven malware | Medium-term (12-24 mo) | Detection research, behavioral analysis |
-| Deepfake code attribution | False attribution of malicious code | Medium-term | Code signing, stronger attribution |
-| Quantum threats | Post-quantum crypto vulnerabilities | Long-term (5+ yrs) | Follow NCSC quantum guidance |
+| Agentic malware | Self modifying, AI driven malware | Medium term (12 to 24 mo) | Detection research, behavioral analysis |
+| Deepfake code attribution | False attribution of malicious code | Medium term | Code signing, stronger attribution |
+| Quantum threats | Post quantum crypto vulnerabilities | Long term (5+ yrs) | Follow NCSC quantum guidance |
 
 ---
 
@@ -1865,8 +1865,8 @@ The following threats are emerging or anticipated in the next 12-24 months:
 
 ### Governance
 
-- [Security Policies](security-policies.md) - Governance mandate and policy framework
-- [Guardrails Base](../governance/guardrails-base.md) - Technical control implementation
+- [Security Policies](security-policies.md) - governance mandate and policy framework
+- [Guardrails Base](../governance/guardrails-base.md) - technical control implementation
 
 
 ---
@@ -1891,8 +1891,8 @@ The following threats are emerging or anticipated in the next 12-24 months:
 
 ### Research (Tier 5)
 
-- Greshake et al. (2023) - "Not What You've Signed Up For: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection"
-- Zou et al. (2023) - "Universal and Transferable Adversarial Attacks on Aligned Language Models"
+- Greshake et al. (2023) - 'Not What You've Signed Up For: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection'
+- Zou et al. (2023) - 'Universal and Transferable Adversarial Attacks on Aligned Language Models'
 - Simon Willison - Prompt Injection Research Collection (https://simonwillison.net/tags/promptinjection/)
 
 ---

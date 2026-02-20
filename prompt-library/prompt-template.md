@@ -22,7 +22,7 @@ Copy everything below this line:
 
 # [Prompt name]
 
-> [One-line description of what this prompt does]
+> [one line description of what this prompt does]
 
 ## Overview
 
@@ -30,7 +30,7 @@ Copy everything below this line:
 |-----------|-------|
 | Category | [code-generation or testing or refactoring or documentation or debugging or security-review or accessibility or gov-uk-patterns or workflow] |
 | Tools | [All or GitHub Copilot or Claude or Amazon Q or Gemini or specific combinations] |
-| Languages | [Language-agnostic or specific languages] |
+| Languages | [language agnostic or specific languages] |
 | Difficulty | [Beginner or Intermediate or Advanced] |
 | Last updated | [Date] |
 
@@ -146,7 +146,7 @@ Below is an example of a completed prompt using this template:
 |-------|--------------------------------------------|
 | Category | testing                                    |
 | Tools | All                                        |
-| Languages | Language-agnostic (examples in TypeScript) |
+| Languages | language agnostic (examples in TypeScript) |
 | Difficulty | Beginner                                   |
 | Contributed by | AI Engineering Lab programme team          |
 | Last updated | Jan 2026                                   |
@@ -174,9 +174,9 @@ Requirements:
 - test the happy path with typical inputs
 - test edge cases: null or undefined, empty values, boundary conditions
 - test error cases: invalid inputs, exception scenarios
-- use descriptive test names following the pattern: "should [expected behaviour] when [condition]"
+- use descriptive test names following the pattern: 'should [expected behaviour] when [condition]'
 - follow Arrange-Act-Assert pattern
-- include comments explaining non-obvious test cases
+- include comments explaining non obvious test cases
 
 Testing framework: [framework]
 Language: [language]
@@ -270,7 +270,7 @@ describe('isValidUKPostcode', () => {
 
 - specific requirements guided comprehensive coverage
 - framework specification ensured correct syntax
-- the function was self-contained with clear inputs and outputs
+- the function was self contained with clear inputs and outputs
 
 ## Variations
 
@@ -321,8 +321,8 @@ You should:
 | Issue | Cause | Fix |
 |-------|-------|-----|
 | Tests use wrong assertion syntax | Framework not specified clearly | Explicitly state framework and version |
-| Missing edge cases for your domain | AI does not know domain specifics | Add "Also test for: [specific cases]" |
-| Tests are too verbose | Default style is comprehensive | Add "Keep tests concise" to prompt |
+| Missing edge cases for your domain | AI does not know domain specifics | Add 'Also test for: [specific cases]' |
+| Tests are too verbose | Default style is comprehensive | Add 'Keep tests concise' to prompt |
 | Mock syntax incorrect | Mocking library not specified | Specify both test framework and mock library |
 
 ## Tags

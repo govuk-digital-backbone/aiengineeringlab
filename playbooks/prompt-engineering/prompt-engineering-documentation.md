@@ -5,11 +5,11 @@
 
 # Prompt engineering for code documentation
 
-How to write effective prompts to generate and maintain high-quality code documentation using AI assistants.
+How to write effective prompts to generate and maintain high quality code documentation using AI assistants.
 
 ## Purpose
 
-Good documentation is essential for maintainable code, but it is often neglected. This guide teaches you how to write effective prompts to get AI assistants to generate comprehensive, high-quality documentation efficiently.
+Good documentation is essential for maintainable code, but it is often neglected. This guide teaches you how to write effective prompts to get AI assistants to generate comprehensive, high quality documentation efficiently.
 
 Use this guide to learn how to prompt AI for:
 
@@ -26,7 +26,7 @@ This guide applies to engineers responsible for code maintainability:
 - developers documenting their code
 - technical writers working with development teams
 - team leads establishing documentation standards
-- open-source contributors on government projects
+- open source contributors on government projects
 
 
 ### The documentation hierarchy
@@ -39,14 +39,14 @@ The first rule of comments: your code should explain what it does. Comments expl
 
 Example prompt for adding comments:
 ```
-Review this function and add inline comments only where the logic is not self-evident:
+Review this function and add inline comments only where the logic is not self evident:
 
 [paste function with complex business logic]
 
 You should:
 - not comment what is obvious from the code
 - explain why decisions were made, not what the code does
-- comment complex algorithms or non-obvious business rules
+- comment complex algorithms or non obvious business rules
 - highlight behaviour that might surprise
 - explain workarounds for known issues
 
@@ -82,7 +82,7 @@ for batch in chunk(users, size=100):
 
 Prompt for comment review:
 ```
-"Analyse the comments in this code:
+'Analyse the comments in this code:
 
 [paste code with comments]
 
@@ -93,7 +93,7 @@ Identify:
 - comments that should be moved to docstrings
 - places where refactoring would eliminate need for comments
 
-Provide specific suggestions for improvements."
+Provide specific suggestions for improvements.'
 ```
 
 ### Level 2: docstrings - the primary documentation
@@ -107,7 +107,7 @@ Add Google-style docstrings to all functions and classes in this module:
 [paste code]
 
 For each function, include:
-- one-line summary (imperative mood: 'Calculate', not 'Calculates')
+- one line summary (imperative mood: 'Calculate', not 'Calculates')
 - detailed description of what it does and why it exists
 - args with types and clear descriptions
 - returns with type and description
@@ -180,7 +180,7 @@ Make sure the documentation includes:
 - rate limiting information
 - deprecation warnings if applicable
 
-Write descriptions in plain English suitable for both technical and non-technical stakeholders.
+Write descriptions in plain English suitable for both technical and non technical stakeholders.
 ```
 
 ### Maintaining documentation
@@ -220,7 +220,7 @@ Update:
 - return value descriptions
 - examples (ensure they work with new implementation)
 - notes about changed behaviour
-- cross-references to renamed functions
+- cross references to renamed functions
 
 Maintain the same docstring style (Google format).
 Flag any examples that are now invalid.

@@ -31,14 +31,13 @@ Advanced AI tools should be used by:
 
 Understanding the difference and how your prompting approach should change.
 
-#### Chat-based assistants
-
+Chat based assistants:
 1. You paste code snippets.
 2. AI suggests changes.
 3. You apply changes manually.
 4. You have full control over every modification.
 
-#### Agentic systems
+Agentic systems:
 1. AI can read and write multiple files.
 2. The AI makes changes directly.
 3. It has greater automation.
@@ -46,7 +45,7 @@ Understanding the difference and how your prompting approach should change.
 
 #### When to use each
 
-Use chat-based for:
+Use chat based for:
 
 - learning and exploration
 - complex business logic
@@ -80,10 +79,10 @@ Before accepting agentic code changes, complete these steps.
 
 Agents struggle in these areas:
 
-- context beyond code - business logic, domain knowledge, user intent
-- non-obvious dependencies - implicit contracts, external integrations
-- style consistency - your team's specific preferences
-- testing implications - what additional tests are now needed
+- context beyond code (business logic, domain knowledge, user intent)
+- non obvious dependencies (implicit contracts, external integrations)
+- style consistency (your team's specific preferences)
+- testing implications (what additional tests are now needed)
 
 Common agent mistakes include:
 
@@ -96,10 +95,10 @@ Common agent mistakes include:
 ### How to prompt agents safely
 
 1. Start with specific instructions, such as 'Add type hints to all functions in the auth/ directory using Python 3.11 syntax' instead of just 'Improve this codebase'.
-2. Review changes incrementally by asking the agent to make changes one file at a time, stopping after each file for your review before proceeding.
-3. Test between changes by instructing the agent to ensure all tests pass after each refactoring before moving to the next change.
-4. Understand changes before accepting them by asking questions like 'Why did you change this specific code, what problem does this solve, and are there any risks or trade-offs with this approach' if you see something unclear.
-5. Preserve important context by providing constraints upfront, such as telling the agent 'Before refactoring, note that we have this important business rule, this performance requirement, and this integration constraint, so ensure your changes respect these'.
+2. Review changes incrementally by asking the agent to make changes one file at a time. Stop after each file for your review before proceeding.
+3. Test between changes by instructing the agent to ensure all tests pass after each refactoring. Do this before moving to the next change.
+4. Understand changes before accepting them. Ask questions like 'Why did you change this specific code?' and 'What problem does this solve?' and 'Are there any risks or trade offs with this approach?' if you see something unclear.
+5. Preserve important context by providing constraints upfront. Tell the agent 'Before refactoring, note that we have this important business rule, this performance requirement, and this integration constraint, so ensure your changes respect these'.
 
 ### Tech debt from AI
 
@@ -110,7 +109,7 @@ Tech debt accumulates through:
 - not reviewing code for consistency
 - allowing quick fixes without proper solutions
 
-To prevent tech debt from AI-generated code, complete these steps after the agent makes changes.
+To prevent tech debt from AI generated code, complete these steps after the agent makes changes.
 
 1. Run your linter and formatter.
 2. Check for new TODO comments.

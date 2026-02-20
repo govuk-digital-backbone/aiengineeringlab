@@ -1,4 +1,4 @@
-> ALPHA
+> **ALPHA**
 > This is a new service – your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 
 # Context engineering for AI code assistants
@@ -11,9 +11,9 @@ AI code assistants are only as good as the context they receive. This playbook p
 
 Use this playbook to:
 
-- improve the quality and relevance of AI-generated code
+- improve the quality and relevance of AI generated code
 - reduce hallucinations and incorrect suggestions
-- establish team standards for AI-assisted development
+- establish team standards for AI assisted development
 - optimise context window usage across different tools
 
 ## Who this applies to
@@ -28,10 +28,10 @@ Unlike simple prompting (asking a question), context engineering considers:
 
 | Aspect | Description |
 |--------|-------------|
-| What the AI knows | Information in its training data |
-| What you provide | Files, instructions, examples in the current session |
-| How you structure it | Organisation, prioritisation, format of context |
-| What you exclude | Irrelevant information that wastes context space |
+| What the AI knows | information in its training data |
+| What you provide | files, instructions, examples in the current session |
+| How you structure it | organisation, prioritisation, format of context |
+| What you exclude | irrelevant information that wastes context space |
 
 Good context engineering dramatically improves AI output quality while reducing iterations and corrections.
 
@@ -101,9 +101,9 @@ Key files to maintain:
 | README.md | Project overview, setup, architecture | Primary context source |
 | CONTRIBUTING.md | Coding standards, conventions | Style guidance |
 | ARCHITECTURE.md | System design, patterns, decisions | Structural understanding |
-| .github/copilot-instructions.md | Copilot-specific guidance | Tool-specific rules |
-| claude.md or CLAUDE.md | Claude-specific guidance | Tool-specific rules |
-| cursor-rules.md | Cursor-specific rules | Tool-specific rules |
+| .github/copilot-instructions.md | Copilot specific guidance | Tool specific rules |
+| claude.md or CLAUDE.md | Claude specific guidance | Tool specific rules |
+| cursor-rules.md | Cursor specific rules | Tool specific rules |
 | docs/adr/ | Architecture Decision Records | Design rationale |
 
 ### Level 3: project and workspace context
@@ -216,7 +216,7 @@ src/
 [External systems and how we integrate]
 ```
 
-### Tool-specific configuration files
+### Tool specific configuration files
 
 #### GitHub Copilot instructions
 
@@ -247,7 +247,7 @@ Create .github/copilot-instructions.md:
 - mock external dependencies
 
 ## Government standards
-- all user-facing content must meet WCAG 2.2 AA
+- all user facing content must meet WCAG 2.2 AA
 - follow GOV.UK Design System components
 - use GOV.UK Frontend for styling
 ```
@@ -263,7 +263,7 @@ Create CLAUDE.md in repository root:
 This is a [type] service for [department or purpose]. It handles [main functions].
 
 ## Important conventions
-- British English for all user-facing text
+- British English for all user facing text
 - ISO 8601 dates (YYYY-MM-DD)
 - metric units throughout
 
@@ -472,17 +472,17 @@ Create context files that summarise important information:
 
 #### Strategy 4: progressive disclosure
 
-Start with high-level context, then drill down:
+Start with high level context, then drill down:
 
 ```
-Prompt 1: "I am adding a new payment provider. Here is our current architecture:
-[paste architecture summary]. What integration points do I need?"
+Prompt 1: 'I am adding a new payment provider. Here is our current architecture:
+[paste architecture summary]. What integration points do I need?'
 
-Prompt 2: "Good. Now here is the PaymentGateway interface we use:
-[paste interface]. Can you suggest the implementation structure?"
+Prompt 2: 'Good. Now here is the PaymentGateway interface we use:
+[paste interface]. Can you suggest the implementation structure?'
 
-Prompt 3: "Here is my first attempt at the implementation:
-[paste code]. Review and suggest improvements."
+Prompt 3: 'Here is my first attempt at the implementation:
+[paste code]. Review and suggest improvements.'
 ```
 
 ## Team context standards
@@ -499,7 +499,7 @@ Create a shared document defining how your team uses AI context:
 All repositories must include:
 
 - [ ] README.md with project overview and structure
-- [ ] Tool-specific instructions file (.github/copilot-instructions.md, CLAUDE.md)
+- [ ] Tool specific instructions file (.github/copilot-instructions.md, CLAUDE.md)
 - [ ] ARCHITECTURE.md for services with 3 or more components
 
 ## Prompt standards
@@ -525,10 +525,10 @@ You should:
 - review AI output for accidental secret inclusion
 ```
 
-### Code review checklist for AI-assisted code
+### Code review checklist for AI assisted code
 
 ```markdown
-## AI-generated code review checklist
+## AI generated code review checklist
 
 ### Context verification
 - [ ] Was appropriate context provided to the AI

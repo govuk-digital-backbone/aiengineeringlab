@@ -1,13 +1,13 @@
-> ALPHA
-> This is a new service – your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
+> **ALPHA**
+> This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 
 # AI Engineering Lab comparative guidance
 
-> A tool-agnostic framework for evaluating, selecting, and managing AI Engineering Labs across government.
+> A tool agnostic framework for evaluating, selecting, and managing AI Engineering Labs across government.
 
 ## Purpose
 
-This guide helps technical leads, delivery managers, and senior decision-makers evaluate AI Engineering Labs for their teams and departments. It provides objective comparison criteria, questions to ask vendors, and guidance on matching tools to team contexts.
+This guide helps technical leads, delivery managers, and senior decision makers evaluate AI Engineering Labs for their teams and departments. It provides objective comparison criteria, questions to ask vendors, and guidance on matching tools to team contexts.
 
 This guide does not recommend specific tools. Instead, it equips you to make informed decisions based on your team's needs, security requirements, and ways of working.
 
@@ -22,7 +22,7 @@ The DSIT AI Engineering Lab Programme Phase 1 includes licences for:
 | Amazon Kiro or Q Engineer | AWS | CLI, IDE extension, console |
 | Gemini Code Assist | Google | IDE extension, cloud console |
 
-For tool-specific implementation guidance, see:
+For tool specific implementation guidance, see:
 
 - [GitHub Copilot guide](github-copilot/)
 - [Amazon Q engineer guide](amazon-q/)
@@ -41,8 +41,8 @@ The table below shows criteria you should consider when evaluating security and 
 | Data retention | How long are prompts and code retained? Can retention be disabled? | high |
 | Training data usage | Is your code used to train models? Can this be disabled? | high |
 | Security certifications | ISO 27001, SOC 2 Type II, Cyber Essentials Plus? | high |
-| Government accreditation | Approved on G-Cloud? Any department-specific approvals? | high |
-| Encryption | In-transit and at-rest encryption standards? | medium |
+| Government accreditation | Approved on G-Cloud? Any department specific approvals? | high |
+| Encryption | In transit and at rest encryption standards? | medium |
 | Access controls | SSO integration, MFA support, RBAC capabilities? | medium |
 | Audit logging | What usage logs are available? Export capabilities? | medium |
 | Vulnerability disclosure | Clear process for reporting and handling security issues? | medium |
@@ -60,11 +60,11 @@ The table below shows criteria you should consider when evaluating capabilities 
 | Code completion | Inline suggestions quality and speed? | high |
 | Chat interface | Natural language interaction for explanations and refactoring? | high |
 | Context awareness | How much codebase context can it use? | high |
-| Multi-file editing | Can it modify multiple files in one operation? | medium |
+| Multi file editing | Can it modify multiple files in one operation? | medium |
 | Test generation | Quality of generated unit and integration tests? | medium |
 | Documentation | Can it generate meaningful documentation? | medium |
 | Code review | Can it review PRs and suggest improvements? | medium |
-| Agentic capabilities | Can it run multi-step tasks autonomously? | low to medium |
+| Agentic capabilities | Can it run multi step tasks autonomously? | low to medium |
 | Custom instructions | Can you configure coding standards and preferences? | medium |
 
 The 'weight' column indicates the relative importance of each criterion when making your evaluation decision.
@@ -76,7 +76,7 @@ The 'weight' column indicates the relative importance of each criterion when mak
 | Inline completion | strong | via IDE | strong | strong |
 | Chat interface | Copilot Chat | native | Q Chat | Gemini Chat |
 | Codebase context | repo indexing | large context | workspace | code customisation |
-| Multi-file edits | Copilot Edits | native | limited | limited |
+| Multi file edits | Copilot Edits | native | limited | limited |
 | Test generation | good | strong | good | good |
 | PR review | native | manual | native | limited |
 | Agentic mode | Copilot Agent | strong | preview | limited |
@@ -114,7 +114,7 @@ The 'weight' column indicates the relative importance of each criterion when mak
 | Terraform | good | good | excellent (AWS) | good (GCP) |
 | GOV.UK Frontend | moderate | moderate | limited | limited |
 
-Note: quality varies by specific use case. Conduct proof-of-concept testing with your actual codebase.
+Note: quality varies by specific use case. Conduct proof of concept testing with your actual codebase.
 
 ---
 
@@ -151,11 +151,11 @@ The table below shows criteria you should consider when evaluating cost and lice
 
 | Criterion | Questions to consider | Weight |
 |-----------|----------------------|--------|
-| Licence model | Per-user, per-organisation, consumption-based? | high |
+| Licence model | Per user, per organisation, consumption based? | high |
 | Tier options | Different tiers for different needs? | medium |
 | Premium features | What requires additional payment? | medium |
 | Volume discounts | Available for large deployments? | medium |
-| True-up process | How are additional users handled? | low |
+| True up process | How are additional users handled? | low |
 
 The 'weight' column indicates the relative importance of each criterion when making your evaluation decision.
 
@@ -180,7 +180,7 @@ The table below shows criteria you should consider when evaluating support and e
 | Vendor support | SLA, support channels, response times? | high |
 | Documentation | Quality and currency of documentation? | medium |
 | Community | Active community, forums, resources? | medium |
-| Training resources | Vendor-provided training available? | medium |
+| Training resources | Vendor provided training available? | medium |
 | Partner ecosystem | Integration partners, consultancies? | low |
 
 The 'weight' column indicates the relative importance of each criterion when making your evaluation decision.
@@ -195,7 +195,7 @@ Different tools suit different contexts. The table below shows factors to consid
 
 | Factor | Implications |
 |--------|--------------|
-| Existing ecosystem | Teams on Azure and GitHub may benefit from Copilot. AWS-heavy teams may benefit from Q. |
+| Existing ecosystem | Teams on Azure and GitHub may benefit from Copilot. AWS heavy teams may benefit from Q. |
 | Primary languages | Some tools excel at specific languages |
 | Work type | Greenfield compared to legacy modernisation compared to maintenance |
 | Security posture | Some departments have stricter requirements |
@@ -204,19 +204,19 @@ Different tools suit different contexts. The table below shows factors to consid
 
 ### Recommended evaluation approach
 
-#### Step 1: define requirements (Week 1)
+#### Step 1: define requirements (week 1)
 
-1. Document must-have security requirements.
+1. Document must have security requirements.
 2. List primary languages and frameworks.
 3. Identify integration requirements (IDE, Git, CI and CD).
 4. Determine budget constraints.
-5. Capture any department-specific restrictions.
+5. Capture any department specific restrictions.
 
-#### Step 2: shortlist tools (Week 1)
+#### Step 2: shortlist tools (week 1)
 
 Using this guide and security requirements, identify one to 2 tools for proof of concept.
 
-#### Step 3: conduct proof of concept (Weeks 2 to 4)
+#### Step 3: conduct proof of concept (weeks 2 to 4)
 
 The table below shows activities to complete during your proof of concept:
 
@@ -232,17 +232,17 @@ PoC evaluation template:
 
 ```
 | Criterion                | Weight | Tool A score (1 to 5) | Tool B score (1 to 5) |
-|--------------------------|--------|-----------------------|-----------------------|
-| Code completion quality  | 20%    | [score 1-5]           | [score 1-5]           |
-| Security compliance      | 25%    | [score 1-5]           | [score 1-5]           |
-| Language support         | 15%    | [score 1-5]           | [score 1-5]           |
-| Integration ease         | 15%    | [score 1-5]           | [score 1-5]           |
-| Engineer satisfaction    | 15%    | [score 1-5]           | [score 1-5]           |
-| Support quality          | 10%    | [score 1-5]           | [score 1-5]           |
-| Weighted total           | 100%   | [calculate]           | [calculate]           |
+|--------------------------|--------|------------------------|-----------------------|
+| Code completion quality  | 20%    | [score 1 to 5]         | [score 1 to 5]        |
+| Security compliance      | 25%    | [score 1 to 5]         | [score 1 to 5]        |
+| Language support         | 15%    | [score 1 to 5]         | [score 1 to 5]        |
+| Integration ease         | 15%    | [score 1 to 5]         | [score 1 to 5]        |
+| Engineer satisfaction    | 15%    | [score 1 to 5]         | [score 1 to 5]        |
+| Support quality          | 10%    | [score 1 to 5]         | [score 1 to 5]        |
+| Weighted total           | 100%   | [calculate]            | [calculate]           |
 ```
 
-#### Step 4: make recommendation (Week 5)
+#### Step 4: make recommendation (week 5)
 
 You should make a recommendation that documents the following information.
 
@@ -255,7 +255,7 @@ You should make a recommendation that documents the following information.
 
 ---
 
-## Multi-tool strategies
+## Multi tool strategies
 
 ### When to consider multiple tools
 
@@ -264,11 +264,11 @@ The table below shows scenarios where multiple tools may be appropriate:
 | Scenario | Rationale |
 |----------|-----------|
 | Different team needs | Legacy team needs COBOL support. Modern team needs agentic features. |
-| Risk mitigation | Avoid single-vendor dependency |
-| Best-of-breed | Use each tool for its strengths |
+| Risk mitigation | Avoid single vendor dependency |
+| Best of breed | Use each tool for its strengths |
 | Pilot comparison | Test tools before standardising |
 
-### Multi-tool considerations
+### Multi tool considerations
 
 The table below shows considerations when using multiple tools:
 
@@ -309,9 +309,9 @@ You should consider the following:
 - Amazon Q has specific Java modernisation features
 - Claude Code's agentic mode suits large refactoring
 
-### Scenario 2: full-stack GOV.UK service team
+### Scenario 2: full stack GOV.UK service team
 
-Context: This example team is building a citizen-facing service using GOV.UK Frontend and a Node.js backend.
+Context: This example team is building a citizen facing service using GOV.UK Frontend and a Node.js backend.
 
 Key requirements include:
 
@@ -354,7 +354,7 @@ Key requirements include:
 You should consider the following:
 
 - Amazon Q has specific mainframe and COBOL features
-- there's limited COBOL support across other tools
+- there is limited COBOL support across other tools
 - you may need specialised prompting
 
 ### Scenario 5: infrastructure and platform team
@@ -394,7 +394,7 @@ You should consider the following:
 1. What is the context window size for code understanding?
 2. How does the tool handle large monorepos?
 3. What languages and frameworks have the best support?
-4. Can custom instructions and rules be configured organisation-wide?
+4. Can custom instructions and rules be configured organisation wide?
 5. What API access is available for custom integrations?
 6. How often are the underlying models updated?
 
@@ -437,10 +437,10 @@ The table below shows reviews to conduct and their frequency:
 
 Regardless of tool selection, you should maintain exit capability by:
 
-- documenting tool-specific configurations
+- documenting tool specific configurations
 - avoiding deep proprietary integrations where possible
 - ensuring code works without AI assistance
-- maintaining tool-agnostic training materials
+- maintaining tool agnostic training materials
 - tracking contract end dates and renewal terms
 
 ---

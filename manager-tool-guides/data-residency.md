@@ -122,9 +122,9 @@ Gemini Code is UK resident for storage and processing. High confidence option fo
 
 [Gemini Enterprise locations & data residency](https://docs.cloud.google.com/gemini/enterprise/docs/locations)
 
-[Google Cloud blog – UK ML processing for Gemini](https://blog.google/company-news/inside-google/around-the-globe/google-europe/united-kingdom/data-residency-machine-learning-processing-uk/)
+[Google Cloud blog: UK ML processing for Gemini](https://blog.google/company-news/inside-google/around-the-globe/google-europe/united-kingdom/data-residency-machine-learning-processing-uk/)
 
-[IT Pro – Google Cloud announces UK Gemini residency](https://www.itpro.com/cloud/cloud-computing/google-cloud-announces-new-data-residency-flexibility-for-uk-firms-accelerator-for-regional-startups)
+[IT Pro: Google Cloud announces UK Gemini residency](https://www.itpro.com/cloud/cloud-computing/google-cloud-announces-new-data-residency-flexibility-for-uk-firms-accelerator-for-regional-startups)
 
 ## Claude Code
 
@@ -140,7 +140,7 @@ Regional data residency options are limited at present. UK data residency is not
 
 ### Verdict
 
-Not UK-resident today. EU regional support is planned but not yet in GA.
+Not UK resident today. EU regional support is planned but not yet in GA.
 
 ### References
 

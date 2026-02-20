@@ -1,7 +1,7 @@
-> ALPHA
+> **ALPHA**
 > This is a new service – your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 
-# AI-assisted software development lifecycle
+# AI assisted software development lifecycle
 
 This playbook provides guidance on integrating AI coding assistants across all phases of the software development lifecycle. It is designed for UK government teams providing digital services and complements the 'Government Service Manual' and 'AI Playbook for the UK Government'.
 
@@ -31,11 +31,11 @@ Before integrating AI coding assistants into your workflow, make sure you have:
 
 When using AI coding assistants throughout the software development lifecycle, apply these principles consistently.
 
-Human oversight remains essential. AI coding assistants accelerate work but do not replace professional judgement. All AI-generated outputs require human review, particularly for security-sensitive code, architectural decisions and user-facing content.
+Human oversight remains essential. AI coding assistants accelerate work but do not replace professional judgement. All AI generated outputs require human review, particularly for security sensitive code, architectural decisions and user facing content.
 
 Context drives quality. The effectiveness of AI coding assistant outputs depends directly on the context you provide. Invest time in context engineering to achieve better results.
 
-Verify before committing. Never commit AI-generated code without understanding what it does. Run tests, review logic and validate against requirements.
+Verify before committing. Never commit AI generated code without understanding what it does. Run tests, review logic and validate against requirements.
 
 Continuous compliance. Use Model Context Protocol (MCP) servers and guardrails to embed government standards (Technology Code of Practice, Web Content Accessibility Guidelines (WCAG), National Cyber Security Centre (NCSC), Government Service Standard) into your workflow from the start, not as an afterthought.
 
@@ -61,13 +61,13 @@ Analyse user stories and acceptance criteria. Share user stories with your AI co
 
 ```
 Example prompt:
-"Review this user story and acceptance criteria. Identify any ambiguities, 
+'Review this user story and acceptance criteria. Identify any ambiguities, 
 missing edge cases, or technical considerations we should clarify before 
 development begins.
 
 User story: [paste story]
 Acceptance criteria: [paste criteria]
-Our tech stack: [brief description]"
+Our tech stack: [brief description]'
 ```
 
 Generate technical approach options. When facing implementation decisions, ask your AI coding assistant to outline alternative approaches with trade-offs. Use this as input to team discussions, not as the final decision.
@@ -80,7 +80,7 @@ Create spike documentation. When investigating unknowns, use AI coding assistant
 
 You should avoid:
 
-- accepting AI-generated estimates without team validation
+- accepting AI generated estimates without team validation
 - using AI coding assistants to write user stories without user research input
 - skipping human review of technical approach recommendations
 
@@ -110,14 +110,14 @@ Generate boilerplate with context. When creating new components, provide your co
 
 ```
 Example prompt:
-"Create a Spring Boot REST controller for managing [resource]. 
+'Create a Spring Boot REST controller for managing [resource]. 
 Follow these patterns:
 - use constructor injection
 - apply our standard error handling approach
 - include OpenAPI annotations
 - follow National Cyber Security Centre secure coding guidelines
 
-Existing controller for reference: [paste example]"
+Existing controller for reference: [paste example]'
 ```
 
 Explain and document existing code. When working with legacy or unfamiliar code, use AI coding assistants to generate explanations and documentation. Always verify accuracy against the actual behaviour.
@@ -143,8 +143,8 @@ You should:
 
 - never paste secrets, credentials or API keys into AI coding assistant prompts
 - review generated code for security vulnerabilities before committing
-- use static application security testing tools to validate AI-generated code
-- be cautious with AI-generated SQL, authentication and authorisation code
+- use static application security testing tools to validate AI generated code
+- be cautious with AI generated SQL, authentication and authorisation code
 - validate input handling and output encoding in generated code
 - configure coding agents to exclude sensitive files (agentic coding tools should be configured to avoid reading .env files, .env.local, credential files or any other files containing environment variables or secrets - add these patterns to your agent's ignore configuration to prevent accidental exposure of sensitive data)
 
@@ -164,7 +164,7 @@ You are following good practice if:
 
 - the code follows team conventions and passes linting
 - the generated code has appropriate test coverage
-- security-sensitive code receives additional review
+- security sensitive code receives additional review
 - engineers can explain what their code does
 
 ---
@@ -183,11 +183,11 @@ Diagnose build failures. Share build error logs with your AI coding assistant to
 
 ```
 Example prompt:
-"This Maven build is failing with the following error. Explain the cause 
+'This Maven build is failing with the following error. Explain the cause 
 and suggest how to fix it.
 
 Error log: [paste log]
-Relevant pom.xml section: [paste section]"
+Relevant pom.xml section: [paste section]'
 ```
 
 Optimise build configuration. AI coding assistants can suggest improvements to build scripts, dependency management and continuous integration pipeline configuration.
@@ -229,7 +229,7 @@ Generate unit tests from implementation. After writing code, use AI coding assis
 
 ```
 Example prompt:
-"Generate JUnit 5 tests for this service class. Include:
+'Generate JUnit 5 tests for this service class. Include:
 - happy path scenarios
 - edge cases and boundary conditions
 - error handling paths
@@ -237,7 +237,7 @@ Example prompt:
 - follow AAA (Arrange-Act-Assert) pattern
 
 Class to test: [paste class]
-Dependencies to mock: [list]"
+Dependencies to mock: [list]'
 ```
 
 Identify missing test scenarios. Share your code and existing tests, asking the AI coding assistant to identify gaps in coverage.
@@ -246,11 +246,11 @@ Generate test data. Create realistic test data sets that cover various scenarios
 
 Write behaviour-driven development scenarios. Generate Gherkin scenarios from requirements, ensuring comprehensive coverage of user journeys.
 
-Create accessibility test cases. Generate test cases that verify Web Content Accessibility Guidelines compliance for user-facing components.
+Create accessibility test cases. Generate test cases that verify Web Content Accessibility Guidelines compliance for user facing components.
 
 ### Test quality considerations
 
-AI-generated tests require careful review. Check that tests:
+AI generated tests require careful review. Check that tests:
 
 - actually verify meaningful behaviour, not just achieve coverage
 - use appropriate assertions (not just checking for no exceptions)
@@ -264,7 +264,7 @@ You should avoid:
 
 - generating tests purely to increase coverage metrics
 - accepting tests without verifying they test the right behaviour
-- using AI-generated test data that contains realistic personal data
+- using AI generated test data that contains realistic personal data
 - skipping review of test assertions
 
 ### Quality indicators
@@ -292,14 +292,14 @@ Generate release notes. Summarise changes from commit history or ticket descript
 
 ```
 Example prompt:
-"Generate release notes for version [X.Y.Z] based on these changes. 
+'Generate release notes for version [X.Y.Z] based on these changes. 
 Write for a technical audience but keep it clear and scannable.
 
 Changes:
 [paste commit messages or ticket summaries]
 
 Previous version notes for style reference:
-[paste previous notes]"
+[paste previous notes]'
 ```
 
 Create deployment checklists. Generate environment-specific checklists to ensure consistent, safe deployments.
@@ -312,7 +312,7 @@ Prepare rollback procedures. Document rollback steps for each significant change
 
 You should avoid:
 
-- publishing AI-generated release notes without review
+- publishing AI generated release notes without review
 - automating release decisions without human approval
 - skipping rollback planning for complex changes
 
@@ -333,7 +333,7 @@ Purpose: put your service live for users safely and reliably.
 
 ### How AI coding assistants help
 
-AI coding assistants work with infrastructure configuration, deployment scripts and troubleshooting deployment issues. They can generate and review infrastructure-as-code.
+AI coding assistants work with infrastructure configuration, deployment scripts and troubleshooting deployment issues. They can generate and review infrastructure as code.
 
 ### Recommended activities
 
@@ -341,28 +341,28 @@ Generate infrastructure configuration. Create Terraform, CloudFormation or Kuber
 
 ```
 Example prompt:
-"Generate a Terraform configuration for an AWS ECS service with:
+'Generate a Terraform configuration for an AWS ECS service with:
 - application load balancer
 - auto-scaling based on CPU utilisation
 - cloudWatch logging
 - security groups following least-privilege principles
 - tags for cost allocation
 
-Follow National Cyber Security Centre cloud security principles."
+Follow National Cyber Security Centre cloud security principles.'
 ```
 
 Review infrastructure changes. Before applying infrastructure changes, use AI coding assistants to review configurations for security issues and best practices.
 
 Troubleshoot deployment failures. Share deployment logs and configuration to diagnose issues quickly.
 
-Generate deployment runbooks. Create step-by-step deployment guides for operations teams.
+Generate deployment runbooks. Create step by step deployment guides for operations teams.
 
 ### Security considerations
 
 You should:
 
 - review all generated infrastructure code for security misconfigurations
-- never include credentials in infrastructure-as-code
+- never include credentials in infrastructure as code
 - validate network configurations and access controls
 - make sure logging and monitoring are properly configured
 
@@ -370,7 +370,7 @@ You should:
 
 You should avoid:
 
-- deploying AI-generated infrastructure without security review
+- deploying AI generated infrastructure without security review
 - using overly permissive security configurations from suggestions
 - skipping testing of deployment scripts
 
@@ -399,12 +399,12 @@ Analyse incidents. During incidents, use AI coding assistants to quickly interpr
 
 ```
 Example prompt:
-"We're experiencing increased latency on our API. Analyse these logs 
+'We're experiencing increased latency on our API. Analyse these logs 
 and metrics to suggest likely causes and investigation steps.
 
 Error logs: [paste relevant logs]
 Metrics: [describe current vs normal values]
-Recent changes: [list recent deployments]"
+Recent changes: [list recent deployments]'
 ```
 
 Generate runbooks. Create operational runbooks for common scenarios, including monitoring alerts and their remediation steps.
@@ -428,7 +428,7 @@ You are following good practice if:
 - incidents are resolved quickly with clear documentation
 - runbooks are accurate and up to date
 - the service meets availability and performance targets
-- on-call burden is manageable
+- on call burden is manageable
 
 ---
 
@@ -446,13 +446,13 @@ Analyse usage patterns. Use AI coding assistants to identify trends, anomalies a
 
 ```
 Example prompt:
-"Analyse these service metrics from the past month. Identify:
+'Analyse these service metrics from the past month. Identify:
 - unusual patterns or anomalies
 - performance degradation trends
 - opportunities for optimisation
 - potential capacity concerns
 
-Metrics data: [paste or describe data]"
+Metrics data: [paste or describe data]'
 ```
 
 Generate dashboards. Create monitoring dashboard configurations that surface the most important metrics.

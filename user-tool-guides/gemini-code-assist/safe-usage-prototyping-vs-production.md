@@ -591,7 +591,7 @@ Rather than directly promoting prototype code:
 2. Do incremental migration, moving small, well-tested components over time.
 3. Take a hybrid approach, keeping the prototype running alongside production during validation phase.
 
-Do not simply rename "prototype" repositories or GCP projects to "production" without applying appropriate controls.
+Do not simply rename 'prototype' repositories or GCP projects to 'production' without applying appropriate controls.
 
 ### Pre-use due diligence checklist
 
@@ -850,7 +850,7 @@ If your department lacks an ethics review process, escalate to your chief techno
 
 ### Approved tool lists
 
-Your department should maintain an approved AI tool list ("allow list") specifying:
+Your department should maintain an approved AI tool list ('allow list') specifying:
 
 - which AI tools are approved for use
 - what data classifications each tool is approved for

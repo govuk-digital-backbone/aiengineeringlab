@@ -175,7 +175,7 @@ export AWS_ACCESS_KEY_ID=your-access-key
 export AWS_SECRET_ACCESS_KEY=your-secret-key
 ```
 
-Note: When using Bedrock, the `/login` and `/logout` commands are not available. AWS credentials handle authentication.
+Note: when using Bedrock, the `/login` and `/logout` commands are not available. AWS credentials handle authentication.
 
 Essential guide: [Claude Code on Amazon Bedrock](https://code.claude.com/docs/en/amazon-bedrock)
 
@@ -206,7 +206,7 @@ gcloud config set project your-project-id
 gcloud services enable aiplatform.googleapis.com
 ```
 
-Note: When using Vertex AI, the `/login` and `/logout` commands are not available. Google Cloud credentials handle authentication.
+Note: when using Vertex AI, the `/login` and `/logout` commands are not available. Google Cloud credentials handle authentication.
 
 Essential guide: [Claude Code on Google Vertex AI](https://code.claude.com/docs/en/google-vertex-ai)
 
