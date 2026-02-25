@@ -7,13 +7,19 @@ A practical guide to customising GitHub Copilot through instructions, custom age
 
 ## Contents
 
-1. [Instructions](#instructions)
-2. [Custom agents](#custom-agents)
-3. [Subagents](#subagents)
-4. [Hooks](#hooks)
-5. [Skills](#skills)
-6. [How they work together](#how-they-work-together)
-7. [Quick start checklist](#quick-start-checklist)
+[Instructions](#instructions)
+
+[Custom agents](#custom-agents)
+
+[Subagents](#subagents)
+
+[Hooks](#hooks)
+
+[Skills](#skills)
+
+[How they work together](#how-they-work-together)
+
+[Quick start checklist](#quick-start-checklist)
 
 ## Instructions
 
@@ -34,10 +40,10 @@ Path specific instructions use `*.instructions.md` and apply to files matching a
 
 ```markdown
 ---
-applyTo: "**/*.test.ts"
+applyTo: '**/*.test.ts'
 ---
 # Test guidelines
-- Use descriptive names: "should [behaviour] when [condition]"
+- Use descriptive names: 'should [behaviour] when [condition]'
 - Always include negative test cases
 ```
 
@@ -160,7 +166,7 @@ In Copilot Chat, select the agents dropdown, then select your agent.
 
 #### CLI
 
-Use `copilot --agent=test-specialist --prompt "Add authentication tests"` or use `/agent test-specialist` interactively.
+Use `copilot --agent=test-specialist --prompt 'Add authentication tests'` or use `/agent test-specialist` interactively.
 
 ## Subagents
 
@@ -181,13 +187,13 @@ You can invoke subagents using three methods.
 Method 1 uses an explicit request:
 
 ```
-"Use #runSubagent to research React 18 best practices and return a summary"
+'Use #runSubagent to research React 18 best practices and return a summary'
 ```
 
 Method 2 invokes a custom agent as a subagent:
 
 ```
-"Use @documentation-reader as a subagent to fetch and summarise the migration guide"
+'Use @documentation-reader as a subagent to fetch and summarise the migration guide'
 ```
 
 Method 3 configures agents to use subagents through agent instructions:
@@ -240,11 +246,11 @@ Focus on summarisation and not on implementation.
 Usage:
 
 ```
-User: "Implement pagination in our React app"
+User: 'Implement pagination in our React app'
 
-Main Agent: "Let me research first..."
+Main Agent: 'Let me research first...'
 [Invokes @documentation-reader subagent]
-"Fetch React 18 pagination best practices"
+'Fetch React 18 pagination best practices'
 
 [Subagent loads docs, returns summary]
 [Main agent implements with fresh context]
@@ -610,22 +616,8 @@ Refine your configuration based on usage patterns.
 3. Gather team feedback.
 4. Refine and update configurations.
 
-## Resources
+## Further reading
 
-For more information, read the following documentation.
+The [GitHub Copilot documentation](https://docs.github.com/copilot) covers [custom instructions](https://docs.github.com/copilot/how-tos/configure-custom-instructions), [custom agents](https://docs.github.com/copilot/how-tos/use-copilot-agents/coding-agent/create-custom-agents), [hooks](https://docs.github.com/en/copilot/reference/hooks-configuration) and [skills](https://docs.github.com/copilot/concepts/agents/about-agent-skills). For community examples see the [Awesome Copilot repository](https://github.com/github/awesome-copilot) and for the cross-tool format see the [AGENTS.md standard](https://agents.md/).
 
-[GitHub Copilot documentation](https://docs.github.com/copilot)
-
-[Custom instructions guidance](https://docs.github.com/copilot/how-tos/configure-custom-instructions)
-
-[Custom agents guidance](https://docs.github.com/copilot/how-tos/use-copilot-agents/coding-agent/create-custom-agents)
-
-[Hooks reference](https://docs.github.com/en/copilot/reference/hooks-configuration)
-
-[Agent skills guidance](https://docs.github.com/copilot/concepts/agents/about-agent-skills)
-
-[Awesome Copilot repository](https://github.com/github/awesome-copilot) for community examples.
-
-[AGENTS.md standard](https://agents.md/) for cross-tool format.
-
-Some features are in public preview and subject to change. Check the [official GitHub Copilot documentation](https://docs.github.com/copilot) for the latest information.
+Some features are in public preview and subject to change. Check the [official documentation](https://docs.github.com/copilot) for the latest information.

@@ -51,15 +51,9 @@ You can use Claude Code:
 
 ## Getting help
 
-You can get help in the following ways:
+You can get help by:
 
-- in Claude Code by typing `/help` for available commands
+- typing `/help` in Claude Code for available commands
 - browsing the [official Claude Code docs](https://code.claude.com/docs)
-- by visiting the [support centre](https://support.claude.com)
-- by typing `/bug` in Claude Code or visiting[GitHub discussions](https://github.com/anthropics/claude-code/discussions) to resolve issues
-
-## Contributing
-
-We encourage contributions from across government to keep this repository current and comprehensive. Share your team's experience, lessons learned, and effective practices to help other government departments.
-
-See the [contribution guidelines](../../CONTRIBUTING.md) before submitting changes.
+- visiting the [support centre](https://support.claude.com)
+- typing `/bug` in Claude Code or visiting [GitHub discussions](https://github.com/anthropics/claude-code/discussions) to resolve issues

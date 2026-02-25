@@ -50,7 +50,7 @@ AI coding assistants use large language models that produce output through proba
 
 Traditional software assurance relies on reproducibility. If a build is reproducible, auditors can verify that the deployed code matches the reviewed code. AI-generated code breaks this assumption.
 
-The specific impacts on assurance include:
+As a result, assurance is impacted because:
 
 - audit evidence cannot demonstrate that a specific prompt will always produce the same code
 - regression testing of the AI tool itself is not possible in the traditional sense
@@ -80,7 +80,7 @@ Not all AI coding assistants expose these settings. Where settings are not avail
 
 Consistent context improves output consistency. Teams should:
 
-- use repository instruction files to provide consistent project context (see AI code assistant instructions playbook)
+- use repository instruction files, such as the [AI code assistant instructions playbook](../playbooks/ai-code-assistant-instructions.md), to provide consistent project context
 - start new sessions for distinct tasks to avoid context contamination
 - provide explicit requirements in prompts rather than relying on implicit context
 - document the model and version used when generating significant code sections
@@ -117,7 +117,7 @@ The reviewer must:
 - check that tests are meaningful and cover the intended behaviour
 - document the review decision in the version control system
 
-This aligns with the meaningful review requirements in G-AG-07.
+This aligns with the meaningful review requirements in [G-AG-07](./guardrails-base.md#g-ag-07-meaningful-human-review).
 
 ### Treating AI output as external contribution
 
@@ -200,7 +200,7 @@ This position is consistent with the existing requirement in G-CS-01 that a huma
 
 ---
 
-## Related documents
+## Further guidance
 
 [Guardrails base](guardrails-base.md) for G-CS-01 (human review), G-CS-02 (security scanning), G-OV-04 (hallucination detection).
 
@@ -209,8 +209,6 @@ This position is consistent with the existing requirement in G-CS-01 that a huma
 [Secure by Design AI evidence](secure-by-design-ai-evidence.md) for evidence framework for AI-assisted code.
 
 [AI-assisted software development lifecycle](../playbooks/ai-sdlc-playbook.md) for SDLC integration guidance.
-
-[AI code assistant instructions](../playbooks/ai-code-assistant-instructions.md) for instruction files for consistency.
 
 ## References
 

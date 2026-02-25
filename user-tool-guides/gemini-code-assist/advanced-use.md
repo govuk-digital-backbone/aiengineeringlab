@@ -1,4 +1,4 @@
-> **ALPHA**
+> ALPHA
 > This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 
 # Google Gemini Code Assist: advanced use guide
@@ -20,14 +20,21 @@ This guide is for:
 
 ## Contents
 
-- [Advanced features](#advanced-features)
-- [Data science and analytics](#data-science-and-analytics)
-- [Development for GCP](#development-for-gcp)
-- [Customisation](#customisation)
-- [Security considerations](#security-considerations)
-- [Troubleshooting](#troubleshooting)
-- [Prompt engineering tips](#prompt-engineering-tips)
-- [Related resources](#related-resources)
+[Advanced features](#advanced-features)
+
+[Data science and analytics](#data-science-and-analytics)
+
+[Development for GCP](#development-for-gcp)
+
+[Customisation](#customisation)
+
+[Security considerations](#security-considerations)
+
+[Troubleshooting](#troubleshooting)
+
+[Prompt engineering tips](#prompt-engineering-tips)
+
+[Further reading](#further-reading)
 
 ## Advanced features
 
@@ -192,6 +199,7 @@ Write a BigQuery SQL query to:
 
 ```
 Generate code to:
+
 1. Package my scikit-learn model for Vertex AI.
 2. Upload to Model Registry.
 3. Deploy as an endpoint.
@@ -233,8 +241,6 @@ The Data Science Agent takes a text prompt describing your analysis goal and gen
 
 #### Example prompts
 
-Example prompts include:
-
 - 'Help me perform exploratory data analysis and get insights about this dataset'
 - 'Create visualisations showing trends over time grouped by region'
 - 'Train a classification model to predict claim approval and evaluate its performance'
@@ -266,6 +272,7 @@ For sensitive data, never include real citizen data in prompts. Use synthetic or
 
 ```
 Create Terraform code for:
+
 - Cloud Run service for a Python FastAPI application
 - Cloud SQL PostgreSQL instance with read replicas
 - Cloud Storage bucket for file uploads
@@ -329,9 +336,17 @@ The syntax follows glob patterns. Gemini also respects `.gitignore` patterns, wi
 
 These settings apply to standard chat and code completion across both IDEs.
 
-Custom commands (Prompt Library): Create reusable prompt shortcuts. In VS Code: Settings, Extensions, Gemini Code Assist, Custom Commands. In JetBrains: Settings, Tools, Gemini, Prompt Library. Access via Quick Pick menu (Ctrl+I or Cmd+I).
+Custom commands (Prompt Library): Create reusable prompt shortcuts. 
 
-Rules: Instructions Gemini follows for every prompt. In VS Code: Settings, Extensions, Gemini Code Assist, Rules. In JetBrains: Settings, Tools, Gemini, Rules. Rules are stored locally, not in version control.
+In VS Code: Settings, Extensions, Gemini Code Assist, Custom Commands. 
+
+In JetBrains: Settings, Tools, Gemini, Prompt Library. Access via Quick Pick menu (Ctrl+I or Cmd+I).
+
+Instructions Gemini follows for every prompt. 
+
+In VS Code: Settings, Extensions, Gemini Code Assist, Rules. 
+
+In JetBrains: Settings, Tools, Gemini, Rules. Rules are stored locally, not in version control.
 
 ### Agent mode customisation (VS Code)
 
@@ -384,13 +399,13 @@ Enterprise subscribers can index private repositories through the Google Cloud C
 
 ### Limitations
 
-GEMINI.md is agent-mode only: Context files do not affect standard chat or code completions.
+GEMINI.md is agent-mode only. Context files do not affect standard chat or code completions.
 
-VS Code has more features: IntelliJ lacks tool control and slash commands.
+VS Code has more features. IntelliJ lacks tool control and slash commands.
 
-IDE settings are not shareable: Rules and custom commands are stored locally.
+IDE settings are not shareable. Rules and custom commands are stored locally.
 
-Agent mode is preview: Features may change.
+Agent mode is preview. Features may change.
 
 ## Security considerations
 
@@ -411,11 +426,11 @@ For authentication, database queries, or citizen data handling, add extra scruti
 
 ### Security incident response
 
-If you discover a security issue in generated code:
+If you discover a security issue in generated code, use the following steps.
 
 1. Do not commit the code.
 2. Report to your security team immediately.
-3. Document the issue (save the prompt and response).
+3. Document the issue, saving the prompt and response.
 4. Alert your team so they can check their code.
 
 ## Troubleshooting
@@ -442,6 +457,7 @@ For persistent issues, contact your team's champion or raise a support ticket.
 
 ```
 Create a Python function that:
+
 - reads CSV files from Cloud Storage
 - validates UK postcodes and National Insurance numbers
 - filters out records with missing required fields
@@ -462,48 +478,21 @@ Then: 'Add unit tests including edge cases'
 
 ### High-value use cases
 
-Based on research with developers, these provide the most time savings:
+Based on research with developers, the greatest time savings are achieved with:
 
-1. Stack trace analysis to paste error messages for diagnosis.
-2. Refactoring existing code to modernise and improve legacy code.
-3. Test case generation for comprehensive test suites quickly.
-4. Complex query writing for SQL, regex, and CLI commands.
-5. Learning new techniques to understand unfamiliar patterns.
-6. Code documentation to generate docstrings and comments.
+- stack trace analysis to paste error messages for diagnosis
+- refactoring existing code to modernise and improve legacy code
+- test case generation for comprehensive test suites quickly
+- complex query writing for SQL, regex, and CLI commands
+- learning new techniques to understand unfamiliar patterns
+- code documentation to generate docstrings and comments
 
 For detailed prompt engineering techniques and strategies, see the [Prompt engineering playbooks](../../playbooks/prompt-engineering/prompt-engineering-index.md).
 
-## Related resources
+## Further reading
 
-### Official Google documentation
+For Gemini Code Assist, see the [documentation](https://cloud.google.com/gemini/docs/codeassist), [getting started guide](https://cloud.google.com/gemini/docs/codeassist/getting-started), [agent mode](https://developers.google.com/gemini-code-assist/docs/use-agentic-chat-pair-programmer), [MCP configuration](https://docs.cloud.google.com/gemini/docs/codeassist/configure-mcp-servers), [GitHub customisation](https://developers.google.com/gemini-code-assist/docs/customize-gemini-behavior-github), and [chat and custom commands](https://developers.google.com/gemini-code-assist/docs/chat-gemini).
 
-- [Gemini Code Assist documentation](https://cloud.google.com/gemini/docs/codeassist)
-- [Getting started guide](https://cloud.google.com/gemini/docs/codeassist/getting-started)
-- [Agent mode documentation](https://developers.google.com/gemini-code-assist/docs/use-agentic-chat-pair-programmer)
-- [Model Context Protocol (MCP) configuration](https://docs.cloud.google.com/gemini/docs/codeassist/configure-mcp-servers)
-- [GitHub customisation](https://developers.google.com/gemini-code-assist/docs/customize-gemini-behavior-github)
-- [Chat and custom commands](https://developers.google.com/gemini-code-assist/docs/chat-gemini)
+For government and security guidance, see the [NCSC secure development guidance](https://www.ncsc.gov.uk/collection/developers-collection), [Government Design System](https://design-system.service.gov.uk/), and [Service Manual: Technology](https://www.gov.uk/service-manual/technology).
 
-### Government guidance
-
-- [NCSC secure development guidance](https://www.ncsc.gov.uk/collection/developers-collection)
-- [Government Design System](https://design-system.service.gov.uk/)
-- [Service Manual: Technology](https://www.gov.uk/service-manual/technology)
-
-### AI Engineering Lab resources
-
-- [AI SDLC playbook](../../playbooks/ai-sdlc-playbook.md)
-- [Getting started guide](getting-started.md)
-
-## Contributing
-
-See the [contribution guidelines](../../CONTRIBUTING.md) before submitting changes.
-
-We encourage contributions from across government to keep this repository current and comprehensive. Share your team's experience, lessons learned, and effective practices to help other government departments.
-
-The [contribution guidelines](../../CONTRIBUTING.md) include:
-
-- content standards and style guide
-- review and approval process
-- accessibility requirements
-- how to submit changes
+Related internal resources: [AI SDLC playbook](../../playbooks/ai-sdlc-playbook.md) and [Getting started guide](getting-started.md).

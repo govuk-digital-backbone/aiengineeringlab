@@ -1,5 +1,5 @@
-> **ALPHA**
-> This is a new service – your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
+> ALPHA
+> This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 # AI Engineering Lab quality strategy
 
 > Strategic framework for measuring success and demonstrating value across the AI Engineering Lab programme.
@@ -20,8 +20,7 @@
 - [governance and accountability](#governance-and-accountability)
 - [continuous improvement](#continuous-improvement)
 - [data quality and integrity](#data-quality-and-integrity)
-- [related documents](#related-documents)
-- [references](#references)
+- [further reading](#further-reading)
 
 ## Purpose
 
@@ -32,7 +31,7 @@ Use this strategy to:
 - understand programme success criteria and targets
 - align departmental measurement with programme goals
 - report consistently across the programme
-- make evidence based decisions about adoption approach
+- make evidence-based decisions about adoption approach
 
 For practical implementation guidance, read the [measurement playbook](measurement-playbook.md).
 
@@ -48,13 +47,13 @@ The AI Engineering Lab programme aims to achieve the following five strategic ob
 | Productivity | Measurable improvement in engineer efficiency | Core value proposition of AI assistants |
 | Quality | Code quality maintained or improved | Speed must not sacrifice quality |
 | Satisfaction | Positive engineer and stakeholder experience | Sustainable adoption requires satisfaction |
-| Sustainability | Adoption continues beyond programme support | Long term value, not temporary uplift |
+| Sustainability | Adoption continues beyond programme support | Long-term value, not temporary uplift |
 
 ---
 
 ## Success criteria
 
-### Programme level targets
+### Programme-level targets
 
 These targets apply across the AI Engineering Lab programme.
 
@@ -122,7 +121,7 @@ Question answered: are people using the tools?
 Analyse adoption by:
 
 - department
-- team maturity level (starting, developing or established)
+- [team maturity level](../assessment/maturity-assessment-framework.md) (starting, developing or established)
 - tool (Copilot, Claude, Q or Gemini)
 - role (engineer, tech lead, or another suitable role)
 - work type (modernisation, greenfield or maintenance)
@@ -140,7 +139,7 @@ Question answered: are engineers more efficient?
 | Suggestion acceptance rate | AI suggestions accepted and suggestions shown | Baseline and positive trend | Weekly |
 | Time on task | Time to complete comparable tasks | Decreasing versus baseline | Sprint |
 | Code commit frequency | Commits per engineer per day | Increasing versus baseline | Weekly |
-| Lead time for changes | Time from commit to production | Decreasing versus baseline | Sprint |
+| [Lead time for changes](https://dora.dev/) | Time from commit to production | Decreasing versus baseline | Sprint |
 | Engineer velocity | Story points per engineer per sprint | Baseline and improvement | Sprint |
 
 ### Productivity targets (indicative)
@@ -179,16 +178,16 @@ Question answered: is the code good and work reliable?
 |--------|--------|-----------|
 | Defect density | Reduce by 15% to 20% | AI should reduce errors, not increase them |
 | Change failure rate | Maintain or reduce | Speed must not sacrifice stability |
-| Test coverage | Maintain or increase by 5% to 10% | AI assisted test generation should improve coverage |
+| Test coverage | Maintain or increase by 5% to 10% | AI-assisted test generation should improve coverage |
 | Technical debt | Reduce remediation cost by 20% | AI helps address debt faster |
 
 ### Quality safeguards
 
 | Safeguard | Implementation |
 |-----------|----------------|
-| Mandatory code review | All AI generated code reviewed by human |
+| Mandatory code review | All AI-generated code reviewed by human |
 | Security scanning | AI code passes same security checks |
-| Test requirements | AI generated code must include tests |
+| Test requirements | AI-generated code must include tests |
 | Quality gates | CI/CD gates unchanged or strengthened |
 
 ---
@@ -206,7 +205,7 @@ Question answered: is the programme providing organisational value?
 | Effective capacity | Work completed without headcount increase | Increasing | Quarterly |
 | Contractor dependency | Contractor ratio or spend | Decreasing | Quarterly |
 | Engineer retention | Turnover rate | Maintaining or improving | Annually |
-| Service improvements | User facing service metrics | Improving | Quarterly |
+| Service improvements | User-facing service metrics | Improving | Quarterly |
 
 ### Business case alignment
 
@@ -217,7 +216,7 @@ Question answered: is the programme providing organisational value?
 | Civil service capability | Skills development, contractor reduction |
 | Service quality | Defect rates, service metrics |
 
-### Long term value indicators
+### Long-term value indicators
 
 | Indicator | Measurement | Target |
 |-----------|-------------|--------|
@@ -240,7 +239,7 @@ Question answered: how do people feel about it?
 | Net promoter score | 'Would you recommend to a colleague?' (on a scale from -100 to +100) | Positive | Monthly |
 | Confidence level | 'How confident are you using AI tools?' (on a scale of 1 to 10) | Increasing | Monthly |
 | Workflow integration | 'AI tools fit well into my workflow' (on a scale of 1 to 5) | 4.0 or more | Monthly |
-| Training satisfaction | Post training survey score | 8.0 or more | Post training |
+| Training satisfaction | Post-training survey score | 8.0 or more | Post-training |
 
 ### Stakeholder satisfaction
 
@@ -266,7 +265,7 @@ Beyond scores, track qualitative sentiment.
 
 ## Adaptability metrics
 
-Beyond measuring adoption and productivity, tracking adaptability helps make sure teams and the programme can respond to change and sustain success long term.
+Beyond measuring adoption and productivity, tracking adaptability helps make sure teams and the programme can respond to change and sustain success long-term.
 
 ### Why measure adaptability
 
@@ -285,17 +284,17 @@ Question answered: how flexibly can teams respond to changing needs?
 
 | Metric | Definition | Leading or lagging | Target |
 |--------|------------|-----------------|--------|
-| Cross tool proficiency | Percentage of engineers proficient in 2 or more AI tools | Leading | Over 30% by programme end |
+| Cross-tool proficiency | Percentage of engineers proficient in 2 or more AI tools | Leading | Over 30% by programme end |
 | Team onboarding time | Days to onboard new team to AI tools | Lagging | Decreasing trend |
 | FDE redeployment speed | Days to redeploy FDE to new team | Leading | Less than 5 days |
-| Support request resolution | Time to resolve AI related issues | Lagging | Decreasing trend |
+| Support request resolution | Time to resolve AI-related issues | Lagging | Decreasing trend |
 | Practice adoption speed | Time from new practice introduced to team adoption | Lagging | Decreasing trend |
 
 The following are some operational agility indicators.
 
 | Indicator | What it signals | How to measure |
 |-----------|-----------------|----------------|
-| Teams sharing practices | Knowledge flows across teams | Cross team contributions to repository |
+| Teams sharing practices | Knowledge flows across teams | Cross-team contributions to repository |
 | Self-service resolution | Teams solve problems independently | Percentage of issues resolved without FDE |
 | Rapid experimentation | Teams try new AI features or techniques | New feature adoption within 2 weeks of release |
 
@@ -303,7 +302,7 @@ The following are some operational agility indicators.
 
 #### Workforce readiness
 
-Question answered: are people equipped for current and future AI assisted development?
+Question answered: are people equipped for current and future AI-assisted development?
 
 | Metric | Definition | Leading or lagging | Target |
 |--------|------------|-----------------|--------|
@@ -363,7 +362,7 @@ Add these questions to periodic team assessments:
 
 | Metric | Current | Target | Trend |
 |--------|---------|--------|-------|
-| Cross tool proficiency | X% | Over 30% | Increasing, decreasing or stable |
+| Cross-tool proficiency | X% | Over 30% | Increasing, decreasing or stable |
 | Average team onboarding time | X days | Less than 10 days | Increasing, decreasing or stable |
 | Champion density | X per 100 | 2 or more per 100 | Increasing, decreasing or stable |
 | Self-service resolution rate | X% | Over 70% | Increasing, decreasing or stable |
@@ -388,7 +387,7 @@ Target: move all teams to at least 'responsive' by programme end, with 30% at 'P
 
 | Metric gap | Intervention |
 |------------|--------------|
-| Low cross tool proficiency | Introduce secondary tool familiarisation |
+| Low cross-tool proficiency | Introduce secondary tool familiarisation |
 | Slow team onboarding | Create onboarding playbook, assign buddy |
 | Low champion density | Targeted champion recruitment and enablement |
 | Low willingness to change | Address concerns, showcase benefits, involve sceptics |
@@ -399,7 +398,7 @@ Target: move all teams to at least 'responsive' by programme end, with 30% at 'P
 
 ## Comparative analysis
 
-### Cross tool comparison
+### Cross-tool comparison
 
 Where teams use different tools, the following should be compared.
 
@@ -413,7 +412,7 @@ Where teams use different tools, the following should be compared.
 
 Caution: control for team differences. Tool comparisons require similar team contexts.
 
-### Cross department comparison
+### Cross-department comparison
 
 Compare departments on the following dimensions.
 
@@ -422,7 +421,7 @@ Compare departments on the following dimensions.
 | Adoption trajectory | Identify fast or slow adopters |
 | Support efficiency | FDE time to achieve outcomes |
 | Pattern effectiveness | Which approaches work best |
-| Maturity progression | Speed through starting, developing and established |
+| [Maturity progression](../assessment/maturity-assessment-framework.md) | Speed through starting, developing and established |
 
 Use for identifying transferable practices, not ranking departments.
 
@@ -444,11 +443,11 @@ Use for identifying transferable practices, not ranking departments.
 
 | Report | Frequency | Audience | Focus |
 |--------|-----------|----------|-------|
-| Operational dashboard | Real time | Programme team | Adoption alerts, daily metrics |
+| Operational dashboard | Real-time | Programme team | Adoption alerts, daily metrics |
 | Weekly summary | Weekly | Programme team, delivery managers | Progress, issues, actions |
 | Monthly report | Monthly | Programme board | Trends, insights, decisions |
 | Quarterly review | Quarterly | Senior responsible owners, senior leadership | Business outcomes, strategic direction |
-| Final evaluation | Programme end | DSIT, senior stakeholders | Overall impact, lessons, recommendations |
+| [Final evaluation](https://www.gov.uk/government/publications/the-magenta-book) | Programme end | DSIT, senior stakeholders | Overall impact, lessons, recommendations |
 
 ### Dashboard design principles
 
@@ -588,20 +587,13 @@ Use for identifying transferable practices, not ranking departments.
 
 | Requirement | Implementation |
 |-------------|----------------|
-| Privacy | Team level aggregation minimum, no individual reporting |
+| Privacy | Team-level aggregation minimum, no individual reporting |
 | Security | Data classification official, secure storage |
 | Retention | Retain for programme duration plus 2 years |
-| Access | Role based access to dashboards and data |
+| Access | Role-based access to dashboards and data |
 
 ---
 
-## Related documents
-Related documents include:
-- [measurement playbook](measurement-playbook.md) - Practical implementation guidance
-- [maturity assessment framework](../assessment/maturity-assessment-framework.md) - Team level assessment
+## Further reading
 
-## References
-
-- [DORA State of DevOps](https://dora.dev/) - Industry benchmarks
-- [GDS Service Manual - Measuring success](https://www.gov.uk/service-manual/measuring-success)
-- [HM Treasury Magenta Book](https://www.gov.uk/government/publications/the-magenta-book) - Evaluation guidance
+The [GDS service manual section on measuring success](https://www.gov.uk/service-manual/measuring-success) covers how to set performance metrics and define success criteria for government digital services.

@@ -1,25 +1,25 @@
-> **ALPHA**
+> ALPHA
 > This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 
 # Amazon Q getting started guide
 
-> Autonomous AI development environment that works alongside developers through specification driven workflows and persistent context.
+> Autonomous AI development environment that works alongside developers through specification-driven workflows and persistent context.
     
 ## Purpose
-This guide provides engineers with getting started guidance for implementing Amazon Q within UK government departments. It covers system requirements, supported IDE, licence and installation guide to support informed decision making and sustainable adoption.
+This guide provides engineers with getting started guidance for implementing Amazon Q within UK government departments. It covers system requirements, supported IDE, licence and installation guide to support informed decision-making and sustainable adoption.
 
 ## Who this is for
 
 Advanced AI tools should be used by:
 
-- software engineers working on complex, long lived applications
+- software engineers working on complex, long-lived applications
 - technical leads evaluating autonomous coding tools
 - API engineers and backend teams requiring structured development
-- engineering teams needing persistent, context aware AI assistance
+- engineering teams needing persistent, context-aware AI assistance
 - delivery managers responsible for AI Engineering Lab adoption in their teams
 
 ## Getting started
-Amazon Q Developer is AWS' AI powered coding assistant that helps with software development tasks throughout the entire development lifecycle. It evolved from Amazon CodeWhisperer and now includes enhanced capabilities like agentic coding, autonomous task execution, and multilanguage support. It works inside IDEs, on the command line, and inside the AWS Console.
+[Amazon Q Developer](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/what-is-amazon-q-developer.html) is AWS' AI powered coding assistant that helps with software development tasks throughout the entire development lifecycle. It evolved from Amazon CodeWhisperer and now includes enhanced capabilities like agentic coding, autonomous task execution, and multi-language support. It works inside IDEs, on the command line, and inside the AWS Console.
 
 ## Amazon Q system requirements
 
@@ -29,7 +29,7 @@ For Amazon Q Developer IDE integration:
 - JetBrains IDEs (IntelliJ, PyCharm, WebStorm, GoLand, CLion, PhpStorm, RubyMine, Rider, WebStorm, DataGrip) minimum version 2024.3
 - VS Code minimum version 1.85.0
 - Visual Studio (Windows only) such as Visual Studio 2022 v17.7 and above (all editions)
-- AWS Cloud9 with built in support
+- AWS Cloud9 with built-in support
 
 For Amazon Q CLI (Command Line Interface) installation:
 
@@ -47,7 +47,7 @@ Authentication requirements:
 
 - AWS builder ID 
 - AWS IAM identity center credentials
-- an internet connection (cloud based service)
+- an internet connection (cloud-based service)
 - AWS CLI v2 and above if executing AWS commands
 
 ## Installation procedures
@@ -99,7 +99,7 @@ Amazon Q authentication procedure.
 2. Sign in using either AWS builder ID or IAM identity center.
 3. For builder ID, you will be directed to create a free account.
 4. For IAM identity center, you will need the start URL provided by your organisation's administrator.
-5. Follow the browser based authentication flow to complete the login process.
+5. Follow the browser-based authentication flow to complete the login process.
 6. Once authenticated, Amazon Q will be ready to use.
 
 ## Licensing and pricing
@@ -122,7 +122,4 @@ Pro tier:
 - provides customisation based on your organisation's code repositories, usage analytics dashboard, policy controls for managing code suggestions and IP indemnity protection
 - subscription is charged per user per month
 
-## Official Amazon Q links for reference
-
-- https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/what-is-amazon-q-developer.html
-- https://aws.amazon.com/q/developer/
+Current pricing is available on the [Amazon Q Developer product page](https://aws.amazon.com/q/developer/).

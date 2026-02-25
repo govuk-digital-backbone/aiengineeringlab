@@ -1,5 +1,5 @@
-> **ALPHA**
-> This is a new service – your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
+> ALPHA
+> This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 
 # Using instruction files for AI code assistants
 
@@ -9,14 +9,14 @@ This playbook provides practical guidance on creating and managing instruction f
 
 Key benefits include:
 
-- consistency - AI suggestions align with government standards (GDS Service Manual, Digital Service Standard, Web Content Accessibility Guidelines (WCAG))
-- efficiency - reduce time spent explaining context in each prompt
-- compliance - embed regulatory requirements directly into AI workflows
-- quality - maintain code quality and architectural patterns across teams
+- consistency such as advising on AI suggestions to align with government standards including GDS Service Manual, Digital Service Standard, and Web Content Accessibility Guidelines (WCAG)
+- efficiency such as how to reduce time spent explaining context in each prompt
+- compliance such as embedding regulatory requirements directly into AI workflows
+- quality such as maintaining code quality and architectural patterns across teams
 
 This playbook covers:
 
-- three levels of instructions (personal, repository, organisation)
+- personal, repository, organisation levels of instructions
 - what to include for government projects
 - integration with GDS Service Manual and Digital Service Standard
 - security and compliance considerations
@@ -47,15 +47,7 @@ This playbook covers:
 - integrating government standards and compliance requirements
 - templates and examples for common scenarios
 
-### Related documentation
-
-Related documentation includes:
-
-- [GDS Service Manual](https://www.gov.uk/service-manual)
-- [Government Digital Service Standard](https://www.gov.uk/service-manual/service-standard)
-- [GOV.UK Design System](https://design-system.service.gov.uk/)
-- [WCAG 2.1 Guidelines](https://www.w3.org/WAI/WCAG21/quickref/)
-- [NCSC Cloud Security Guidance](https://www.ncsc.gov.uk/collection/cloud-security)
+See the [GDS Service Manual](https://www.gov.uk/service-manual) and [Digital Service Standard](https://www.gov.uk/service-manual/service-standard) for government delivery guidance. For design, refer to the [GOV.UK Design System](https://design-system.service.gov.uk/). For compliance, see [WCAG 2.1 Guidelines](https://www.w3.org/WAI/WCAG21/quickref/) and [NCSC Cloud Security Guidance](https://www.ncsc.gov.uk/collection/cloud-security).
 
 ## Safety and handling
 
@@ -65,18 +57,18 @@ You must:
 
 - never include credentials, secrets, API keys or production data
 - keep content at the correct security classification for the repository
-- review AI generated changes as you would any other code (peer review, tests, threat modelling where appropriate)
+- review AI-generated changes as you would any other code (peer review, tests, threat modelling where appropriate)
 
 You should:
 
 - prefer linking to authoritative guidance rather than copying long policy text
 - assign an owner and review cadence (for example, quarterly or when standards change)
 
-For fuller guidance on risks and mitigations, link to your governance and security material (for example, 'governance/guardrails-base.md' and 'mcp-servers/mcp-security-risks-and-mitigations.md').
+For further guidance on risks and mitigations, link to your governance and security material. For example, [guardrails](../governance/guardrails-base.md) and [MCP security, risks and mitigations](../mcp-servers/mcp-security-risks-and-mitigations.md).
 
 ## Introduction
 
-The scenario: you want AI assistants to automatically follow your project's standards every time, without having to repeat context in every prompt.
+You want AI assistants to automatically follow your project's standards every time, without having to repeat context in every prompt.
 
 Instruction files are configuration files that tell AI assistants about your coding standards, patterns and requirements. They ensure consistency across your team and reduce the need to provide the same context repeatedly.
 
@@ -141,11 +133,11 @@ Repository instructions apply to everyone working on a specific repository. Thes
 Use repository instructions for:
 
 - tech stack and versions
-- project specific patterns and architecture
+- project-specific patterns and architecture
 - build, test and deployment processes
 - code quality standards for this project
 - integration points and APIs
-- project specific compliance requirements
+- project-specific compliance requirements
 
 Example content includes:
 
@@ -161,33 +153,35 @@ Organisation instructions apply to all repositories within your organisation. Th
 
 Use organisation instructions for:
 
-- organisation wide coding standards
+- organisation-wide coding standards
 - compliance and regulatory requirements
 - security policies that apply to all projects
 - branding and documentation guidelines
 - common tools and frameworks
-- cross cutting government standards
+- cross-cutting government standards
 
 Example content includes:
 
 - 'all projects must meet WCAG 2.1 AA standards'
-- 'use GOV.UK Design System for public facing services'
+- 'use GOV.UK Design System for public-facing services'
 - 'follow GDS Service Manual guidance'
 - 'all user actions must be audit logged'
 
 ## Tool support and file locations
 
-Different AI code assistants look for different repository instruction files. To avoid repetition, keep one canonical set of repository instructions and (if needed) mirror it into the tool specific filename(s).
+Different AI code assistants look for different repository instruction files. To avoid repetition, keep one canonical set of repository instructions and (if needed) mirror it into the tool-specific filename(s).
 
 | Tool | Repository instruction file | Notes |
 | --- | --- | --- |
-| GitHub Copilot | `.github/copilot-instructions.md` | Supports personal and organisation instructions in settings - Combines instructions with priority Personal then Repository then Organisation |
-| Claude Code (Cline) | `.clinerules` (and optionally `.clineignore`) | Reads automatically on each interaction - Good for detailed engineering and architecture rules |
-| Amazon Q | `.amazonq/instructions.md` | Useful for AWS patterns (IAM, CDK and CloudFormation, Well-Architected) |
-| Gemini (IDEs) | `.gemini-instructions.md` | Good for structured context - Keep it short and specific |
+| Tool | Repository instruction file | Notes |
+| --- | --- | --- |
+| GitHub Copilot | [`.github/copilot-instructions.md`](https://docs.github.com/en/copilot/customizing-copilot/adding-custom-instructions-for-github-copilot) | Supports personal and organisation instructions in settings - Combines instructions with priority Personal then Repository then Organisation |
+| Claude Code (Cline) | [`.clinerules`](https://docs.cline.bot/features/clinerules) (and optionally `.clineignore`) | Reads automatically on each interaction - Good for detailed engineering and architecture rules |
+| Amazon Q | [`.amazonq/instructions.md`](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/customizing-q.html) | Useful for AWS patterns (IAM, CDK and CloudFormation, Well-Architected) |
+| Gemini (IDEs) | [`.gemini-instructions.md`](https://developers.google.com/gemini-api/docs) | Good for structured context - Keep it short and specific |
 | Web chat tools (no repo awareness) | `AI_INSTRUCTIONS.md` | These tools do not automatically read your repo - Paste the relevant sections at the start of a session |
 
-### Quick setup (repository level)
+### Quick setup (repository-level)
 
 1. Create the relevant file for your tool (see table).
 2. Add tech stack, most important patterns, links to standards and handling rules (no secrets, no production data).
@@ -206,9 +200,9 @@ Technical standards include:
 - architectural patterns
 - dependencies and package management
 
-### Frontend specific instructions
+### Frontend-specific instructions
 
-Frontend specific instructions include:
+Frontend-specific instructions include:
 
 - framework and version (React, Vue, Angular and similar)
 - component patterns and structure
@@ -219,9 +213,9 @@ Frontend specific instructions include:
 - browser support requirements
 - performance budgets
 
-### Backend specific instructions
+### Backend-specific instructions
 
-Backend specific instructions include:
+Backend-specific instructions include:
 
 - framework and language version
 - API design patterns (REST, GraphQL and similar)
@@ -393,8 +387,8 @@ All code must meet these requirements:
 ## Security guidelines
 - input validation: all user input must be validated
 - SQL injection prevention: use parameterised queries only
-- XSS prevention: escape all user generated content
-- CSRF protection: required on all state changing operations
+- XSS prevention: escape all user-generated content
+- CSRF protection: required on all state-changing operations
 - rate limiting: [rules]
 
 ## Data protection
@@ -428,8 +422,8 @@ All projects within [Organisation] must follow these standards.
 
 ### Language and tone
 - British English spelling in all code and documentation
-- plain language for user facing content (reading age 9 to 12)
-- no jargon in citizen facing interfaces
+- plain language for user-facing content (reading age 9 to 12)
+- no jargon in citizen-facing interfaces
 - error messages must be actionable and clear
 
 ### Coding standards
@@ -443,7 +437,7 @@ All projects within [Organisation] must follow these standards.
 - no credentials or secrets in code repositories
 - all secrets stored in approved secret management tools
 - follow NCSC Cloud Security Principles: https://www.ncsc.gov.uk/collection/cloud-security
-- multi factor authentication required for all access
+- multi-factor authentication required for all access
 
 ### Data protection (GDPR)
 - data minimisation: collect only what's needed
@@ -461,7 +455,7 @@ All projects within [Organisation] must follow these standards.
 - reference: https://www.w3.org/WAI/WCAG21/quickref/
 
 ### Design and branding
-- use GOV.UK design system for citizen facing services: https://design-system.service.gov.uk/
+- use GOV.UK design system for citizen-facing services: https://design-system.service.gov.uk/
 - use GOV.UK frontend toolkit
 - internal services should follow [internal design system]
 - crown copyright notice on all appropriate content
@@ -533,27 +527,9 @@ Ownership and responsibility includes:
 3. Add handling rules: classification, 'no secrets' and 'no production data'.
 4. Review regularly: set an owner and a review date.
 
-## Useful links and resources
+## Further reading
 
-### Official documentation
+For GitHub Copilot, see the official docs on [custom instructions overview](https://docs.github.com/en/copilot/customizing-copilot/configure-custom-instructions-for-github-copilot), [personal instructions](https://docs.github.com/en/copilot/customizing-copilot/adding-personal-custom-instructions-for-github-copilot), [repository instructions](https://docs.github.com/en/copilot/customizing-copilot/adding-custom-instructions-for-github-copilot) and [organisation instructions](https://docs.github.com/en/copilot/customizing-copilot/adding-organization-custom-instructions-for-github-copilot). For real-world examples, see [GitHub Awesome Copilot](https://github.com/github/awesome-copilot/tree/main/instructions).
 
-Official documentation includes:
+For government standards, refer to the [GDS Service Manual](https://www.gov.uk/service-manual), [Digital Service Standard](https://www.gov.uk/service-manual/service-standard), [GOV.UK Design System](https://design-system.service.gov.uk/), [WCAG 2.1 Quick Reference](https://www.w3.org/WAI/WCAG21/quickref/) and [NCSC Cloud Security Guidance](https://www.ncsc.gov.uk/collection/cloud-security).
 
-- 'Configure Custom Instructions for GitHub Copilot' at https://docs.github.com/en/copilot/customizing-copilot/configure-custom-instructions-for-github-copilot - overview of custom instructions at all levels
-- 'Adding Personal Custom Instructions' at https://docs.github.com/en/copilot/customizing-copilot/adding-personal-custom-instructions-for-github-copilot - set up your personal preferences
-- 'Adding Repository Custom Instructions' at https://docs.github.com/en/copilot/customizing-copilot/adding-custom-instructions-for-github-copilot - detailed guide to repository level instructions
-- 'Adding Organisation Custom Instructions' at https://docs.github.com/en/copilot/customizing-copilot/adding-organization-custom-instructions-for-github-copilot - organisation wide standards
-
-### Government standards
-
-Government standards include:
-
-- 'GDS Service Manual' at https://www.gov.uk/service-manual - guidance for building government services
-- 'Government Digital Service Standard' at https://www.gov.uk/service-manual/service-standard - the 14-point standard
-- 'GOV.UK Design System' at https://design-system.service.gov.uk/ - design patterns and components
-- 'WCAG 2.1 Quick Reference' at https://www.w3.org/WAI/WCAG21/quickref/ - accessibility guidelines
-- 'NCSC Cloud Security Guidance' at https://www.ncsc.gov.uk/collection/cloud-security - security principles for cloud
-
-### Example instruction files
-
-- 'GitHub Awesome Copilot - Instructions Examples' at https://github.com/github/awesome-copilot/tree/main/instructions - collection of real-world copilot-instructions.md examples from various projects

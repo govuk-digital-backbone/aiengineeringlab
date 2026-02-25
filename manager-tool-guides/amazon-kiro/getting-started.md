@@ -1,9 +1,9 @@
-> **ALPHA**
+> ALPHA
 > This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 
 # Amazon Kiro getting started guide
 
-> Amazon Kiro is an autonomous AI development environment that works alongside developers through specification driven workflows and persistent context.
+> Amazon Kiro is an autonomous AI development environment that works alongside developers through specification-driven workflows and persistent context.
     
 ## Purpose
 This guide provides engineers with getting started guidance for implementing Amazon Kiro within UK government departments. It covers system requirements, supported IDE, Installation guide and success measurements to support informed decision-making and sustainable adoption.
@@ -12,15 +12,15 @@ This guide provides engineers with getting started guidance for implementing Ama
 
 Advanced AI tools should be used by:
 
-- software engineers working on complex, long lived applications
+- software engineers working on complex, long-lived applications
 - technical leads evaluating autonomous coding tools
 - API engineers and backend teams requiring structured development
-- engineering teams needing persistent, context aware AI assistance
+- engineering teams needing persistent, context-aware AI assistance
 - delivery managers responsible for AI Engineering Lab adoption in their teams
 
 ## Getting started
 
-Kiro is an agentic IDE that helps you do your best work with features such as specs, steering, and hooks.
+Kiro is an agentic IDE that helps you do your best work with features such as [specs, steering, and hooks](https://kiro.dev/docs/).
 This section provides everything you need to begin your journey with Kiro.
  
 ## Kiro IDE system requirements for Windows
@@ -35,7 +35,7 @@ This section provides everything you need to begin your journey with Kiro.
 
 ## Installation
 
-1. Download the Windows executable installer from the official [Kiro.dev](https://kiro.dev/) downloads page. 
+1. Download the Windows executable installer from the [official Kiro downloads page](https://kiro.dev/downloads/).
 2. Run installer.
 3. Follow setup prompts.
 
@@ -121,9 +121,9 @@ For macOS, you must have:
   
 ## Installing Kiro IDE on macOS
 
-1. Visit the official download page at https://kiro.dev/downloads/.
+1. Visit the [official Kiro downloads page](https://kiro.dev/downloads/).
 2. Select the macOS download button.
-3. If you have Apple Silicon ('M series chips' or 'newer Apple Silicon chips'), download the ARM64 version.
+3. If you have Apple Silicon ('M-series chips' or 'newer Apple Silicon chips'), download the ARM64 version.
 4. If you have an Intel Mac, download the x86_64 version.
 5. Save the .dmg file to your computer.
 6. Open the .dmg file you downloaded.
@@ -140,7 +140,7 @@ If you see 'App cannot be opened because it is from an unidentified developer', 
 
 If Open Anyway is not available:
 
-1. In Finder, right click the Kiro app.
+1. In Finder, right-click the Kiro app.
 2. Select Open.
 3. In the dialog box, select Open.
 
@@ -224,7 +224,7 @@ You must have:
 
 ## Installing Kiro IDE on Linux
 
-1. Visit the official download page at https://kiro.dev/downloads/.
+1. Visit the [official Kiro downloads page](https://kiro.dev/downloads/).
 2. Select the Linux download button.
 3. Choose your preferred format:
     - .deb package (for Ubuntu, Debian, Linux Mint)
@@ -368,6 +368,3 @@ If AppImage does not run, run the following command:
   ./Kiro-*.AppImage --appimage-extract
   ./squashfs-root/kiro
   ```
-      
-## Official Kiro references
-Read the [official Kiro documentation](https://kiro.dev/docs/).

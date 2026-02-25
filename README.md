@@ -1,5 +1,5 @@
-> **ALPHA**
-> This is a new service – your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
+> ALPHA
+> This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 
 # AI Engineering Lab repository
 

@@ -1,12 +1,12 @@
-> **ALPHA**
-> This is a new service – your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
+> ALPHA
+> This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 # AI Engineering Lab measurement playbook
 
 > Practical guidance for implementing measurement and demonstrating the value of AI Engineering Lab adoption.
 
 ## Purpose
 
-This playbook provides step by step guidance for collecting, analysing, and reporting metrics related to AI Engineering Lab adoption. It helps teams and programmes demonstrate value, identify issues early, and make data driven decisions.
+This playbook provides step-by-step guidance for collecting, analysing, and reporting metrics related to AI Engineering Lab adoption. It helps teams and programmes demonstrate value, identify issues early, and make data-driven decisions.
 
 Use this playbook to:
 
@@ -73,7 +73,7 @@ Principle: monitor leading indicators to prevent problems and track lagging indi
 |--------|------|-----|
 | Suggestion acceptance rate | Leading | High acceptance predicts productivity gains, declining rate signals issues |
 | Time on task | Lagging | Confirms productivity improvement after adoption |
-| Cycle time | Lagging | Outcome measure of delivery speed |
+| [Cycle time](https://dora.dev/guides/dora-metrics-four-keys/) | Lagging | Outcome measure of delivery speed, from [Accelerate](https://itrevolution.com/product/accelerate/) research |
 | Throughput (velocity) | Lagging | Confirms sustained productivity improvement |
 | Code commit frequency | Leading | Early signal of changed working patterns |
 
@@ -85,8 +85,8 @@ Principle: monitor leading indicators to prevent problems and track lagging indi
 | Test coverage | Leading | Coverage predicts defect detection capability |
 | Security scan results | Leading | Vulnerabilities found early predict production security |
 | Defect rate | Lagging | Confirms quality outcomes |
-| Change failure rate | Lagging | Confirms deployment reliability |
-| Technical debt score | Lagging | Confirms long term code health |
+| [Change failure rate](https://dora.dev/guides/dora-metrics-four-keys/) | Lagging | Confirms deployment reliability |
+| Technical debt score | Lagging | Confirms long-term code health |
 
 #### Satisfaction metrics
 
@@ -114,7 +114,7 @@ Leading indicators enable proactive management, thresholds and response should b
 
 | Leading indicator | Warning threshold | Action threshold | Response |
 |-------------------|-------------------|------------------|----------|
-| Licence activation | Less than 90% at 48 hours | Less than 80% at 1 week | Direct outreach to non activated users |
+| Licence activation | Less than 90% at 48 hours | Less than 80% at 1 week | Direct outreach to non-activated users |
 | Daily active users | Less than 75% for 3 days | Less than 60% for 1 week | FDE intervention, identify blockers |
 | Training attendance | Less than 60% at week 2 | Less than 50% at week 3 | Delivery manager escalation, reschedule sessions |
 | Acceptance rate trend | Declining 2 weeks | Declining 3 weeks | Context engineering support |
@@ -148,7 +148,7 @@ A healthy measurement approach includes both types. The following is the recomme
 - quality outcomes
 - business outcomes
 
-Common pitfalls include an over reliance on lagging indicators. By the time defect rates rise or satisfaction drops, the damage is done. Prioritise leading indicators for day to day management.
+Common pitfalls include an over-reliance on lagging indicators. By the time defect rates rise or satisfaction drops, the damage is done. Prioritise leading indicators for day-to-day management.
 
 ### Leading indicator dashboard
 
@@ -159,7 +159,7 @@ For operational monitoring, prioritise the following leading indicators.
 | Activation rate | 100% within 48 hours | Daily during rollout | Immediate if less than 80% |
 | Daily active users | More than 80% | Daily | After 3 days less than 70% |
 | Acceptance rate trend | Stable or improving | Weekly | After 2 weeks declining |
-| Engineer confidence | 3.5 out of 5 or higher | Bi weekly | If less than 3.0 |
+| Engineer confidence | 3.5 out of 5 or higher | Bi-weekly | If less than 3.0 |
 | Training completion | 70% or higher | Weekly | If less than 50% at midpoint |
 | Code review issues | Stable or improving | Weekly | If increasing 2 sprints |
 
@@ -222,11 +222,11 @@ Purpose: how do people feel about it?
 | Metric | Definition | Target | Collection method |
 |--------|------------|--------|-------------------|
 | Engineer satisfaction | Survey score on AI tool experience | 8.0 out of 10 or higher | Survey |
-| Training satisfaction | Survey score on training quality | 8.0 out of 10 or higher | Post training survey |
+| Training satisfaction | Survey score on training quality | 8.0 out of 10 or higher | Post-training survey |
 | NPS | Would you recommend to a colleague? | Positive NPS | Survey |
-| Confidence level | Self reported confidence using tools | Increasing | Survey |
+| Confidence level | Self-reported confidence using tools | Increasing | Survey |
 
-Why it matters: satisfied engineers adopt more deeply and sustain usage long term.
+Why it matters: satisfied engineers adopt more deeply and sustain usage long-term.
 
 ---
 
@@ -319,7 +319,7 @@ Set up automated and manual data collection.
 | Data source | Metrics | Collection method |
 |-------------|---------|-------------------|
 | Engineer surveys | Satisfaction, confidence, NPS | Regular survey (monthly recommended) |
-| Training feedback | Training satisfaction | Post training survey |
+| Training feedback | Training satisfaction | Post-training survey |
 | FDE observations | Qualitative insights | Engagement reports |
 | Team retrospectives | Adoption feedback | Retro notes |
 
@@ -371,7 +371,7 @@ Create dashboards for ongoing visibility.
 | Section | Content | Audience |
 |---------|---------|----------|
 | Adoption summary | Activation percentage, daily active users, trend | All |
-| Team breakdown | Per team adoption metrics | Programme team |
+| Team breakdown | Per-team adoption metrics | Programme team |
 | Productivity indicators | Acceptance rate, throughput trend | Technical leads |
 | Quality indicators | Defect trend, coverage trend | Technical leads |
 | Alerts | Teams below thresholds | Programme team |
@@ -399,7 +399,7 @@ Set up regular reporting rhythms.
 
 | Report | Frequency | Audience | Content |
 |--------|-----------|----------|---------|
-| Adoption dashboard | Real time | Programme team | Current metrics, alerts |
+| Adoption dashboard | Real-time | Programme team | Current metrics, alerts |
 | Weekly summary | Weekly | Programme team, delivery managers | Important metrics, issues, actions |
 | Monthly report | Monthly | Programme board, senior responsible owners | Trends, insights, decisions needed |
 | Quarterly review | Quarterly | Senior leadership | Business impact, strategic recommendations |
@@ -458,8 +458,8 @@ Turn data into insights and actions.
 |---------|-----------------|---------------------|
 | High activation, low daily usage | Tool not integrated into workflow, concerns, friction | FDE engagement, workflow integration support |
 | Declining acceptance rate | Poor context, wrong use cases, frustration | Context engineering training, prompt improvement |
-| Low satisfaction despite usage | Quality issues, forced adoption, unmet expectations | Survey deep dive, address specific concerns |
-| Quality metrics declining | Over reliance without review, inadequate testing | Reinforce review practices, quality training |
+| Low satisfaction despite usage | Quality issues, forced adoption, unmet expectations | Survey deep-dive, address specific concerns |
+| Quality metrics declining | Over-reliance without review, inadequate testing | Reinforce review practices, quality training |
 | Team variation | Different maturity, tech stacks, support levels | Investigate outliers, share successful patterns |
 
 #### Escalation criteria
@@ -468,7 +468,7 @@ Turn data into insights and actions.
 |-----------|-------------|
 | Single team below thresholds | FDE and delivery manager |
 | Multiple teams below thresholds | Programme board |
-| Programme wide metric decline | Senior responsible owner |
+| Programme-wide metric decline | Senior responsible owner |
 | Security or quality incident | Security lead, senior responsible owner |
 
 ---
@@ -483,7 +483,7 @@ For early pilot teams, collect richer data including detailed time tracking on s
 
 | Phase | Duration | Focus |
 |-------|----------|-------|
-| Baseline | 2 weeks | Establish pre AI metrics |
+| Baseline | 2 weeks | Establish pre-AI metrics |
 | Onboarding | 1 week | Track activation, initial issues |
 | Early adoption | 2 to 4 weeks | Monitor learning curve, quick wins |
 | Steady state | 4 weeks or more | Measure sustainable impact |
@@ -527,7 +527,7 @@ Conclusion: 60% time reduction for unit test creation, quality maintained
 
 ---
 
-## Tool specific measurement
+## Tool-specific measurement
 
 ### GitHub Copilot metrics
 
@@ -585,7 +585,7 @@ Before starting, identify what you can and cannot collect.
 
 | Question | If no | Impact |
 |----------|-------|--------|
-| Do you have admin access to AI tool console? | Cannot collect tool native usage metrics | Use self reported usage |
+| Do you have admin access to AI tool console? | Cannot collect tool-native usage metrics | Use self-reported usage |
 | Do you have Git or CI analytics? | Cannot automate delivery metrics | Use manual sampling or proxy metrics |
 | Do you have issue tracker access? | Cannot automate quality metrics | Use manual defect tracking |
 | Can you run engineer surveys? | Cannot collect satisfaction data | Use informal feedback channels |
@@ -598,11 +598,11 @@ If resources are constrained, focus on the essential metrics.
 | Metric | Why essential | Simplest collection method |
 |--------|---------------|---------------------------|
 | Licence activation | Confirms tools are accessible | Manual count from admin console |
-| Weekly active usage | Confirms tools are being used | Brief weekly team check in |
-| Engineer sentiment | Early warning of issues | Monthly 3 question survey |
+| Weekly active usage | Confirms tools are being used | Brief weekly team check-in |
+| Engineer sentiment | Early warning of issues | Monthly 3-question survey |
 | Qualitative feedback | Context for numbers | Retrospective discussions |
 
-#### Three question minimum survey
+#### Three-question minimum survey |
 
 ```
 1. How often did you use the AI assistant this week?
@@ -621,12 +621,12 @@ Problem: cannot see usage data from tool admin console.
 
 | Alternative | How to implement |
 |-------------|------------------|
-| Self reported usage | Weekly survey asking frequency of use |
+| Self-reported usage | Weekly survey asking frequency of use |
 | Spot checks | Periodic observation during pairing sessions |
 | Proxy metrics | IDE extension installed (yes or no), tool visible in screenshots |
 | FDE observation | FDE reports on usage during engagement |
 
-Limitations: self reported data may be less accurate. Triangulate with multiple sources.
+Limitations: self-reported data may be less accurate. Triangulate with multiple sources.
 
 ---
 
@@ -637,7 +637,7 @@ Problem: cannot automatically measure commits, cycle time, deployment frequency.
 | Alternative | How to implement |
 |-------------|------------------|
 | Manual sampling | Review 10 PRs per sprint, record metrics manually |
-| Sprint level tracking | Use velocity from sprint ceremonies |
+| Sprint-level tracking | Use velocity from sprint ceremonies |
 | Team estimation | Ask team to estimate time spent on tasks |
 | Project milestones | Track feature delivery dates |
 
@@ -691,7 +691,7 @@ Problem: no access to survey tools, or surveys not permitted.
 | Alternative | How to implement |
 |-------------|------------------|
 | Retrospective feedback | Add AI tools as standing retro topic |
-| Informal check ins | Delivery manager asks team members during 1 to 1s |
+| Informal check-ins | Delivery manager asks team members during 1 to 1s |
 | Show of hands | Quick poll in team meetings |
 | Champion feedback | Champion collects informal feedback |
 | FDE observations | FDE reports on team sentiment |
@@ -699,7 +699,7 @@ Problem: no access to survey tools, or surveys not permitted.
 Retrospective prompt:
 
 ```
-AI Engineering Lab check in (5 minutes):
+AI Engineering Lab check-in (5 minutes):
 
 1. What is working well with the AI tools?
 2. What is frustrating or not working?
@@ -737,7 +737,7 @@ Date: [Date]
 - understanding unfamiliar code: approximately [X] minutes
 - writing boilerplate code: approximately [X] minutes
 
-### Team sentiment on AI tools (pre adoption)
+### Team sentiment on AI tools (pre-adoption)
 [Summary of expectations, concerns, attitudes]
 ```
 
@@ -751,9 +751,9 @@ Problem: team cannot dedicate time to measurement overhead.
 |-------------|------------------|
 | Automate everything possible | Prioritise metrics from automated sources |
 | Sample do not census | Measure subset of work, not everything |
-| Lightweight rituals | 5 minute metrics check in, not lengthy analysis |
+| Lightweight rituals | 5-minute metrics check-in, not lengthy analysis |
 | Combine with existing | Add to existing retrospectives, not separate meetings |
-| Programme level collection | Central team collects, reducing team burden |
+| Programme-level collection | Central team collects, reducing team burden |
 
 The following table can be used to help with time budget guide.
 
@@ -770,9 +770,9 @@ The following table can be used to help with time budget guide.
 
 When primary metrics are not available, use these substitutes:
 
-| Primary metric | Substitute | Trade off |
+| Primary metric | Substitute | Trade-off |
 |----------------|------------|-----------|
-| Daily active users (from tool) | Self reported usage frequency | Less accurate, potential bias |
+| Daily active users (from tool) | Self-reported usage frequency | Less accurate, potential bias |
 | Acceptance rate (from tool) | Engineer perception of usefulness | Subjective, but still valuable |
 | Cycle time (from Git) | Sprint velocity trend | Less granular, but directional |
 | Code coverage (from tools) | Tests added per story | Less precise, but indicates effort |
@@ -822,7 +822,7 @@ Always document what you can and cannot measure:
 | Gaming metrics | Behaviour changes to hit targets, not improve | Use balanced scorecard approach |
 | Individual measurement | Creates fear, resistance, gaming | Always measure at team level |
 | Ignoring context | Misleading comparisons | Compare teams to own baseline |
-| Delayed measurement | Issues discovered too late | Real time adoption metrics |
+| Delayed measurement | Issues discovered too late | Real-time adoption metrics |
 | No baseline | Cannot demonstrate improvement | Always baseline first |
 
 ---
@@ -833,7 +833,7 @@ Always document what you can and cannot measure:
 
 | Principle | Implementation |
 |-----------|----------------|
-| Team level reporting | Never report individual engineer metrics |
+| Team-level reporting | Never report individual engineer metrics |
 | Aggregation | Minimum group size of 5 for reporting |
 | Transparency | Tell engineers what is measured and why |
 | Consent | Obtain consent for surveys and detailed tracking |
@@ -864,13 +864,6 @@ Do not say:
 
 ---
 
-## Related documents
+## Further reading
 
-- [Quality strategy](quality-strategy.md) - strategic measurement framework
-- [Maturity assessment framework](../assessment/maturity-assessment-framework.md) - team assessment metrics
-
-## References
-
-- [DORA metrics](https://dora.dev/guides/dora-metrics-four-keys/) - software delivery performance
-- [GDS service manual - Measuring success](https://www.gov.uk/service-manual/measuring-success)
-- [Accelerate (Forsgren, Humble, Kim)](https://itrevolution.com/product/accelerate/) - DevOps metrics research
+The [maturity assessment framework](../assessment/maturity-assessment-framework.md) provides a structured method for evaluating team readiness before AI Engineering Lab deployment. The metrics in this playbook draw on the [DORA four keys](https://dora.dev/guides/dora-metrics-four-keys/) for software delivery performance. The research published in [Accelerate](https://itrevolution.com/product/accelerate/) by Forsgren, Humble and Kim provides the evidence base for these measures. The [GDS service manual section on measuring success](https://www.gov.uk/service-manual/measuring-success) provides broader guidance on measuring government digital service performance.

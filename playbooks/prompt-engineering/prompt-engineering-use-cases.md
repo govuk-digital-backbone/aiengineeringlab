@@ -1,15 +1,13 @@
-[← Back to Index](./prompt-engineering-index.md)
-
-> **ALPHA**
-> This is a new service – your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
+> ALPHA
+> This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 
 # Prompt engineering for common development tasks
 
-Real world examples of using AI assistants for common development tasks - writing functions, refactoring code and debugging.
+Real-world examples of using AI assistants for common development tasks - writing functions, refactoring code and debugging.
 
 ## Purpose
 
-This guide provides practical, step by step workflows for using AI assistants in your daily development work. Learn how to write effective prompts to iteratively build features, refactor messy code and debug issues effectively.
+This guide provides practical, step-by-step workflows for using AI assistants in your daily development work. Learn how to write effective prompts to iteratively build features, refactor messy code and debug issues effectively.
 
 Use this guide to learn how to prompt AI for:
 
@@ -17,7 +15,7 @@ Use this guide to learn how to prompt AI for:
 - refactoring legacy code systematically and safely
 - debugging issues by providing structured context to AI
 - recognising when AI is not helping and what to do about it
-- reviewing AI generated code against quality standards
+- reviewing AI-generated code against quality standards
 
 ## Who this applies to
 
@@ -26,7 +24,7 @@ This guide applies to engineers working on government projects:
 - engineers building new features
 - engineers maintaining legacy systems
 - anyone debugging production issues
-- code reviewers assessing AI generated code
+- code reviewers assessing AI-generated code
 
 
 ### Use case 1: 'I need to write a new function'
@@ -80,7 +78,7 @@ Example prompt:
 - address: structured fields (line1, line2, city, postcode)
 - required vs optional fields
 
-Return clear validation errors with field level detail.'
+Return clear validation errors with field-level detail.'
 ```
 
 #### Round 3: add proper error handling
@@ -115,7 +113,7 @@ Rate each by severity and provide secure refactored code.'
 
 Note: the AI might flag things you missed. A security expert role often catches that you are returning too much information in error messages, or that you are not properly sanitising inputs even though Pydantic is handling validation.
 
-#### Using few shot for consistency
+#### Using few-shot for consistency
 
 If you have got existing code that follows your team's patterns, use it:
 
@@ -157,7 +155,7 @@ The scenario: you have inherited a 300 line function that does everything. It is
 
 AI excels at systematic refactoring, but you need to guide it through the process methodically.
 
-#### The 3 step refactoring approach
+#### The 3-step refactoring approach
 
 Step 1: analyse (do not touch the code yet).
 
@@ -174,7 +172,7 @@ Context:
 - performance has degraded as traffic increased
 
 Identify:
-- code smells and anti patterns
+- code smells and anti-patterns
 - responsibilities this function has (it should have one)
 - complexity issues
 - testability problems
@@ -206,7 +204,7 @@ Example prompt:
 We need to do this incrementally - we cannot break production.'
 ```
 
-The AI gives you a step by step plan.
+The AI gives you a step-by-step plan.
 
 1. Extract database operations into a repository class.
 2. Extract validation into separate validator.
@@ -237,7 +235,7 @@ After implementing step 1, test it. Make sure nothing broke. Then move to step 2
 
 Example prompt:
 ```
-'I want to refactor this class [paste code]. Let us think through it step by step:
+'I want to refactor this class [paste code]. Let us think through it step-by-step:
 
 1. What are all the responsibilities of this class?
 2. Which responsibilities violate single responsibility principle?
@@ -343,7 +341,7 @@ The correct systematic approach:
 
 ### When AI gets it wrong (and what to do about it)
 
-AI generated code is not automatically good code. Understanding when and how AI fails helps you catch problems early and know when to step away.
+AI-generated code is not automatically good code. Understanding when and how AI fails helps you catch problems early and know when to step away.
 
 #### Security vulnerabilities
 
@@ -357,7 +355,7 @@ The lesson: AI does not know your security standards. Always run generated code 
 - OWASP Dependency Check for Common Vulnerabilities and Exposures (CVE) vulnerabilities
 - your organisation's standard security scanning tools
 
-Treat AI generated code the same way you would treat code from any new team member: review it, test it, scan it.
+Treat AI-generated code the same way you would treat code from any new team member: review it, test it, scan it.
 
 #### The loop of despair
 
@@ -389,7 +387,7 @@ Tasks requiring deep understanding include:
 - hotfixes where you need to understand every character
 - authentication or payment processing logic
 - anything touching sensitive data handling
-- critical security related code
+- critical security-related code
 
 You may already know exactly what to do, for example:
 
@@ -397,14 +395,13 @@ You may already know exactly what to do, for example:
 - standard patterns you know by heart
 - quick bug fixes in familiar code
 
-Remember: AI is a tool, not a requirement. Sometimes the simple approach is better than the AI powered one. Use your judgment about when AI adds value and when it is just adding overhead.
+Remember: AI is a tool, not a requirement. Sometimes the simple approach is better than the AI-powered one. Use your judgment about when AI adds value and when it is just adding overhead.
 
 #### Quality gate integration
 
 Best practice: integrate AI usage with your existing quality processes.
 
-
-Before committing AI generated code, you should check that:
+Before committing AI-generated code, you should check that:
 
 - the code passes all unit tests
 - the security scan shows no new vulnerabilities
@@ -415,10 +412,4 @@ Before committing AI generated code, you should check that:
 - performance impact is assessed
 - accessibility requirements are met (if UI code)
 
-The principle: AI generated code goes through the same quality gates as human written code. No shortcuts.
-
----
-
-Previous: [Prompt engineering for different AI assistant roles](./prompt-engineering-ai-roles.md)
-
-Next: [Prompt engineering for testing: getting comprehensive coverage](./prompt-engineering-testing.md)
+The principle: AI-generated code goes through the same quality gates as human-written code. No shortcuts.

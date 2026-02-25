@@ -1,5 +1,5 @@
-> **ALPHA**
-> This is a new service – your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
+> ALPHA
+> This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 # Prompt template
 
 > Use this template when contributing new prompts to the library.
@@ -22,7 +22,7 @@ Copy everything below this line:
 
 # [Prompt name]
 
-> [one line description of what this prompt does]
+> [one-line description of what this prompt does]
 
 ## Overview
 
@@ -30,7 +30,7 @@ Copy everything below this line:
 |-----------|-------|
 | Category | [code-generation or testing or refactoring or documentation or debugging or security-review or accessibility or gov-uk-patterns or workflow] |
 | Tools | [All or GitHub Copilot or Claude or Amazon Q or Gemini or specific combinations] |
-| Languages | [language agnostic or specific languages] |
+| Languages | [language-agnostic or specific languages] |
 | Difficulty | [Beginner or Intermediate or Advanced] |
 | Last updated | [Date] |
 
@@ -146,7 +146,7 @@ Below is an example of a completed prompt using this template:
 |-------|--------------------------------------------|
 | Category | testing                                    |
 | Tools | All                                        |
-| Languages | language agnostic (examples in TypeScript) |
+| Languages | language-agnostic (examples in TypeScript) |
 | Difficulty | Beginner                                   |
 | Contributed by | AI Engineering Lab programme team          |
 | Last updated | Jan 2026                                   |
@@ -176,7 +176,7 @@ Requirements:
 - test error cases: invalid inputs, exception scenarios
 - use descriptive test names following the pattern: 'should [expected behaviour] when [condition]'
 - follow Arrange-Act-Assert pattern
-- include comments explaining non obvious test cases
+- include comments explaining non-obvious test cases
 
 Testing framework: [framework]
 Language: [language]
@@ -270,7 +270,7 @@ describe('isValidUKPostcode', () => {
 
 - specific requirements guided comprehensive coverage
 - framework specification ensured correct syntax
-- the function was self contained with clear inputs and outputs
+- the function was self-contained with clear inputs and outputs
 
 ## Variations
 

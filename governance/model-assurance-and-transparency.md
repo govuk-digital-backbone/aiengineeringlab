@@ -22,8 +22,8 @@ This document defines:
 
 This guidance is for:
 
-- Senior Information Risk Owners (SIROs) accepting residual risk from model opacity
-- AI Security Leads conducting vendor assessments
+- Senior information risk owners (SIROs) accepting residual risk from model opacity
+- AI security leads conducting vendor assessments
 - security teams evaluating AI coding assistant deployments
 - procurement teams drafting vendor contracts
 
@@ -31,9 +31,9 @@ This guidance is for:
 
 ## The assurance problem
 
-AI coding assistants depend on large language models (LLMs) that present unique assurance challenges. Unlike traditional software dependencies, government cannot audit AI models through conventional means.
+AI coding assistants depend on large language models (LLMs), so they present unique assurance challenges. This means that, unlike traditional software dependencies, the government cannot audit AI models through conventional means.
 
-AI models function as unassured code dependencies in the software supply chain. An AI model introduces code patterns into government systems through a process that government cannot independently inspect. This is unlike a software library that can be pinned, scanned, and audited. This is an explicit limitation acknowledged in the National Cyber Security Centre (NCSC) Principles for the Security of Machine Learning, particularly lifecycle phase 2 (model development and training). The consuming organisation has no visibility into how a vendor built the model. They also cannot see what data it was trained on. They cannot determine what biases or vulnerabilities may have been introduced during training.
+AI models function as unassured code dependencies in the software supply chain. An AI model introduces code patterns into government systems through a process that government cannot independently inspect. This is unlike a software library that can be pinned, scanned, and audited. This is an explicit limitation acknowledged in the [National Cyber Security Centre (NCSC) Principles for the Security of Machine Learning](https://www.ncsc.gov.uk/files/Principles-for-the-security-of-machine-learning.pdf), particularly lifecycle phase 2 (model development and training). The consuming organisation has no visibility into how a vendor built the model. They also cannot see what data it was trained on. They cannot determine what biases or vulnerabilities may have been introduced during training.
 
 The following characteristics distinguish AI models from traditional software components:
 
@@ -77,7 +77,7 @@ Vendors must confirm in writing:
 - what anonymisation or differential privacy techniques vendors apply to training pipelines
 - whether training data includes content subject to export controls or classification restrictions
 
-Where vendors cannot provide adequate transparency on training data, the AI Security Lead must document this as a residual risk in the risk register. The SIRO must accept this risk before approving the tool.
+Where vendors cannot provide adequate transparency on training data, the AI security lead must document this as a residual risk in the risk register. The SIRO must accept this risk before approving the tool.
 
 ### Data handling attestation
 
@@ -110,12 +110,12 @@ Vendors must notify government customers of model changes according to the follo
 
 | Change type | Notification requirement | Minimum notice |
 |-------------|--------------------------|----------------|
-| Major model replacement, such as moving from one model family to another | Written notification to AI Security Lead | 30 days before change |
+| Major model replacement, such as moving from one model family to another | Written notification to AI security lead | 30 days before change |
 | Significant model update affecting code generation behaviour | Notification via release notes or changelog | 14 days before change |
 | Minor model update, such as bug fixes or safety improvements | Notification via release notes | At time of change |
 | Emergency security patch to the model | Notification as soon as practicable | Within 24 hours |
 
-Where vendors do not provide adequate change notification, the AI Security Lead must assess whether the tool remains suitable for government use.
+Where vendors do not provide adequate change notification, the AI security lead must assess whether the tool remains suitable for government use.
 
 ### Version pinning and rollback
 
@@ -203,7 +203,7 @@ Where available, government should request an ML-BOM from AI coding assistant ve
 - licensing terms for model outputs
 - security testing results or certifications
 
-Where vendors cannot provide an ML-BOM, the AI Security Lead should document the available information and note the gap.
+Where vendors cannot provide an ML-BOM, the AI security lead should document the available information and note the gap.
 
 ### Supply chain risk mitigations
 
@@ -222,44 +222,16 @@ The following mitigations reduce supply chain risk from AI model dependencies:
 
 | Activity | Frequency | Owner | Scope |
 |----------|-----------|-------|-------|
-| Vendor security certification review | Annually | AI Security Lead | SOC 2, ISO 27001, Cyber Essentials |
-| Vendor DPA and sub-processor review | Annually and on change | AI Security Lead | Data handling, residency, secondary use |
-| Model update impact assessment | Per significant update | AI Security Lead | Output quality, security patterns |
+| Vendor security certification review | Annually | AI security lead | SOC 2, ISO 27001, Cyber Essentials |
+| Vendor DPA and sub-processor review | Annually and on change | AI security lead | Data handling, residency, secondary use |
+| Model update impact assessment | Per significant update | AI security lead | Output quality, security patterns |
 | Output quality monitoring | Monthly | Development team leads | Code review findings, SAST results |
-| ML-BOM request and review | Annually | AI Security Lead | Model provenance documentation |
+| ML-BOM request and review | Annually | AI security lead | Model provenance documentation |
 | Residual risk review | Annually | SIRO | Risk acceptance for model opacity |
-| Contractual compliance audit | Annually | AI Security Lead with procurement | Vendor obligations met |
+| Contractual compliance audit | Annually | AI security lead with procurement | Vendor obligations met |
 
 ---
 
-## Related documents
+## Further reading
 
-[Security policies](../security/security-policies.md) - PS-09 (third-party and supply chain).
-
-[Threat model](../security/threat-modelling.md) - T-SC-02 (compromised AI provider), T-SC-03 (model poisoning).
-
-[Guardrails base](guardrails-base.md) - G-CS-01 through G-CS-04 (code security controls).
-
-[Vendor contract security requirements](vendor-contract-security-requirements.md) - contractual obligations.
-
-[Comparative guidance](../manager-tool-guides/comparative-guidance.md) - vendor evaluation framework.
-
-## References
-
-### UK government
-
-[NCSC Principles for the Security of Machine Learning](https://www.ncsc.gov.uk/files/Principles-for-the-security-of-machine-learning.pdf).
-
-[NCSC Supply Chain Security](https://www.ncsc.gov.uk/collection/supply-chain-security).
-
-[NCSC Cloud Security Principles](https://www.ncsc.gov.uk/collection/cloud-security).
-
-[UK AI Playbook for Government (2025)](https://www.gov.uk/government/publications/ai-playbook-for-the-uk-government).
-
-### Standards
-
-[National Institute of Standards and Technology (NIST) AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework).
-
-[ISO/International Electrotechnical Commission (IEC) 42001:2023 AI Management System](https://www.iso.org/standard/81230.html).
-
-[Open Web Application Security Project (OWASP) Large Language Model (LLM) Top 10 (2025)](https://genai.owasp.org/llm-top-10/).
+The [NCSC Cloud Security Principles](https://www.ncsc.gov.uk/collection/cloud-security) provide relevant guidance on assuring cloud-hosted AI services, including data handling and supply chain controls. The [UK AI Playbook for Government (2025)](https://www.gov.uk/government/publications/ai-playbook-for-the-uk-government) sets out the broader policy context for AI adoption across the public sector. For risk management frameworks applicable to AI systems, the [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework) and [ISO/IEC 42001:2023](https://www.iso.org/standard/81230.html) provide internationally recognised standards. The [OWASP LLM Top 10 (2025)](https://genai.owasp.org/llm-top-10/) covers the most critical security risks specific to large language model applications.

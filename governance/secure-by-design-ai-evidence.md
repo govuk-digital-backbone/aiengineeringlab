@@ -1,21 +1,21 @@
 > ALPHA
-> This is a new service - your feedback will help us to improve it.
+> This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 
-# Secure by design evidence for AI assisted development
+# Secure by Design (SbD) evidence for AI-assisted development
 
 > Guidance on evidence, audit and forensics for software that uses AI assistants.
 
 ## Purpose and scope
 
-You must evidence that teams build and run software in line with secure by design principles. AI assistants change how code is written and reviewed. This guidance sets out what evidence to record, how to maintain an audit trail, and how to run incident forensics when AI assisted code is involved. It aligns with National Cyber Security Centre guidance on secure development and design, and with cross government security standards. 
+You must evidence that teams build and run software in line with SbD principles. AI assistants change how code is written and reviewed. This guidance sets out what evidence to record, how to maintain an audit trail, and how to run incident forensics when AI-assisted code is involved. This document aligns with National Cyber Security Centre guidance on secure development and design, and with cross government security standards. 
 
 This document covers:
 
-- how to apply secure by design to AI assisted development
-- what evidence to record and how to attribute AI generated code
+- how to apply SbD to AI-assisted development
+- what evidence to record and how to attribute AI-generated code
 - what auditors can and cannot see and how to handle the audit gap
 - the governance position on prompt content logging
-- how to run incident forensics for AI related issues
+- how to run incident forensics for AI-related issues
 - the assurance artefacts you must keep by sprint, release and assessment
 
 ## Who this guidance is for
@@ -27,13 +27,13 @@ This guidance is for you if you work in:
 - audit and risk
 - incident response
 
-## Secure by design principles applied to AI assisted development
+## SbD principles applied to AI-assisted development
 
-You must apply secure by design and secure development principles to work that uses AI assistants. The National Cyber Security Centre sets out principles for secure development and design. Use them to guide threat modelling, architecture, coding and testing.
+You must apply SbD and secure development principles to work that uses AI assistants. The National Cyber Security Centre sets out principles for secure development and design. Use them to guide threat modelling, architecture, coding and testing.
 
 The following practices apply.
 
-| Secure by design principle | How it applies to AI-assisted code | Evidence required |
+| SbD principle | How it applies to AI-assisted code | Evidence required |
 |----------------------------|-------------------------------------|-------------------|
 | Security ownership | The developer and reviewer remain responsible for all code, including AI-generated code | Code review records showing human approval |
 | Threat understanding | Teams document threats specific to AI-generated code in the threat model | Threat model entries for AI-specific threats, T-CS series |
@@ -46,9 +46,9 @@ The following practices apply.
 
 These practices reflect secure development and monitoring guidance.
 
-## Evidence framework for AI assisted code
+## Evidence framework for AI-assisted code
 
-You must record evidence that shows secure by design in practice for AI assisted changes.
+You must record evidence that shows SbD in practice for AI-assisted changes.
 
 ### What to record
 
@@ -63,8 +63,8 @@ For each change you should record:
 
 This aligns with secure development and deployment guidance.
 
-### How to attribute AI generated code in version control
-Use a consistent commit and pull request format so teams can search for AI assisted changes and build reports.
+### How to attribute AI-generated code in version control
+Use a consistent commit and pull request format so teams can search for AI-assisted changes and build reports.
 
 Example commit message template:
 
@@ -79,9 +79,9 @@ Record the same fields in the pull request description. This supports traceabili
 
 ### Per release evidence package
 
-You must show the security posture of code that includes AI assisted changes. Build a release evidence package with:
+You must show the security posture of code that includes AI-assisted changes. Build a release evidence package with:
 
-- a summary of AI assisted changes in the release
+- a summary of AI-assisted changes in the release
 - aggregate static analysis results
 - code review completion records
 - a test coverage report
@@ -108,8 +108,6 @@ In most deployments you cannot see full prompt content or the original AI sugges
 
 Apply the following controls to balance privacy and accountability and to meet monitoring expectations:
 
-You must balance privacy and accountability and to meet monitoring expectations. You should apply:
-
 - a mandatory human code review with clear approval records
 - automated security scanning and tests in the pipeline
 - AI attribution in commits and pull requests
@@ -122,7 +120,7 @@ These controls align with secure development and monitoring guidance and with go
 
 ### Position statement
 
-You do not need to log prompt content by default. Prompt content can include sensitive business logic or personal data. Logging would create a second store of sensitive data and new risks. Most enterprise tools do not expose prompt level logs. The control benefit is limited when you apply the other measures in this guidance. This position is consistent with a risk based approach in government security standards.
+You do not need to log prompt content by default. Prompt content can include sensitive business logic or personal data. Logging would create a second store of sensitive data and new risks. Most enterprise tools do not expose prompt level logs. The control benefit is limited when you apply the other measures in this guidance. This position is consistent with a risk-based approach in government security standards.
 
 ### When prompt logging may be appropriate
 
@@ -132,9 +130,9 @@ Only consider prompt logging:
 - as a time bound pilot with explicit participant consent and a data protection assessment
 - where a governance board requires it and you can apply proportionate safeguards
 
-## Incident forensics for AI assisted code
+## Incident forensics for AI-assisted code
 
-You must plan for incident response that includes AI assisted changes. This follows NCSC incident management guidance.
+You must plan for incident response that includes AI-assisted changes. This follows NCSC incident management guidance.
 
 ### Forensic capability and known limitations
 
@@ -149,7 +147,7 @@ Limits include missing prompt content, missing original suggestions, non determi
 
 ### Evidence preservation requirements
 
-Take these steps when an incident may involve AI assisted code.
+Take these steps when an incident may involve AI-assisted code.
 
 1. Freeze the version control history for the affected repositories.
 2. Preserve pipeline logs and security scan artefacts for all related builds.
@@ -176,7 +174,7 @@ Use this checklist to prepare for assurance reviews.
 
 ### Per sprint evidence
 
-- [ ] AI attributed commits with review records
+- [ ] AI-attributed commits with review records
 - [ ] Static analysis results for all commits
 - [ ] Test coverage for new and changed code
 - [ ] Security review findings and resolution status if applicable
@@ -196,28 +194,6 @@ Use this checklist to prepare for assurance reviews.
 - [ ] Guardrails compliance review
 - [ ] Training completion records
 
-## Related documents
+## Further reading
 
-[Security policies](../policy), PS-03 (mandatory human oversight), PS-04 (secure development), PS-08 (monitoring and audit).
-
-[Guardrails base](guardrails-base.md), G-CS-01 (human review), G-CS-02 (security scanning), G-MA-01 (usage logging).
-
-[Incident response playbook](incident-response-playbook.md), incident classification and response procedures.
-
-[Non-deterministic code assurance](non-deterministic-code-assurance.md), evidence for non-deterministic output
-
-[Threat model](../policy), T-CS series (code security threats).
-
-[AI-assisted SDLC playbook](../playbooks/ai-sdlc-playbook.md), SDLC integration.
-
-## References
-
-[NCSC Secure Development and Deployment](https://www.ncsc.gov.uk/collection/developers-collection)
-
-[UK Government Secure by Design](https://www.security.gov.uk/policy-and-guidance/secure-by-design/)
-
-[NCSC Cyber Security Design Principles](https://www.ncsc.gov.uk/collection/cyber-security-design-principles)
-
-[UK AI Playbook for Government (2025)](https://www.gov.uk/government/publications/ai-playbook-for-the-uk-government), Principle 4 (meaningful human control).
-
-[Government Functional Standard GovS 007: Security](https://www.gov.uk/government/publications/government-functional-standard-govs-007-security)
+The [NCSC Secure Development and Deployment](https://www.ncsc.gov.uk/collection/developers-collection) guidance covers version control, peer review and security testing as core controls for development teams. The [NCSC Cyber Security Design Principles](https://www.ncsc.gov.uk/collection/cyber-security-design-principles) underpin the SbD approach applied throughout this document. The [UK Government Secure by Design policy](https://www.security.gov.uk/policy-and-guidance/secure-by-design/) sets out the cross-government requirement to embed security from the outset of service delivery. The [Government Functional Standard GovS 007: Security](https://www.gov.uk/government/publications/government-functional-standard-govs-007-security) provides the broader security governance framework within which this guidance sits. The [UK AI Playbook for Government (2025)](https://www.gov.uk/government/publications/ai-playbook-for-the-uk-government) sets out Principle 4 on meaningful human control, which this guidance operationalises for AI-assisted development. For related internal guidance, see the [security policies](../policy) covering PS-03, PS-04 and PS-08, the [guardrails base](guardrails-base.md) for code security and usage logging controls, the [incident response playbook](incident-response-playbook.md) for incident classification and response procedures, the [non-deterministic code assurance](non-deterministic-code-assurance.md) guidance for evidence on non-deterministic output, the [threat model](../policy) for the T-CS series of code security threats, and the [AI-assisted SDLC playbook](../playbooks/ai-sdlc-playbook.md) for SDLC integration.

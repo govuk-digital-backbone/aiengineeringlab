@@ -1,7 +1,5 @@
-[← Back to Index](./prompt-engineering-index.md)
-
-> **ALPHA**
-> This is a new service – your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
+> ALPHA
+> This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 
 # Prompt engineering for different AI assistant roles
 
@@ -144,7 +142,7 @@ Give me 3 different architectural approaches:
 2. List pros and cons.
 3. Consider: scalability, maintainability, testing ease.
 4. Recommend which approach for a team of 5 engineers.
-5. Highlight the trade offs I am making with each choice.'
+5. Highlight the trade-offs I am making with each choice.'
 ```
 
 This same approach works for any decision: comparing libraries, choosing design patterns, evaluating architectural styles. The AI gives you expert level analysis without the bias of 'we have always done it this way.'
@@ -174,7 +172,7 @@ Behavioural patterns are how objects communicate. This includes:
 
 When you are unsure which pattern fits your problem, describe your use case to the AI and ask it to recommend appropriate patterns with reasoning.
 
-### For fast track onboarding
+### For fast-track onboarding
 
 The scenario: you have just joined a team with an unfamiliar codebase. Instead of spending weeks building up context, use AI to accelerate your understanding.
 
@@ -250,9 +248,3 @@ Help me identify:
 The scenario: you want the AI to automatically follow your project's standards every time, without having to repeat context in every prompt.
 
 This topic is covered in its own playbook in this repository.
-
----
-
-Previous: [Foundational prompting techniques](./prompt-engineering-foundations.md)
-
-Next: [Prompt engineering for common development tasks](./prompt-engineering-use-cases.md)

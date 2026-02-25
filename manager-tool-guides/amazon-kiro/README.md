@@ -1,9 +1,9 @@
-> **ALPHA**
+> ALPHA
 > This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 
 # Amazon Kiro manager tool guide
 
-> Autonomous AI development environment that works alongside developers through specification driven workflows and persistent context.
+> Autonomous AI development environment that works alongside developers through specification-driven workflows and persistent context.
     
 ## Purpose
 This guide provides engineering managers with practical guidance for implementing Amazon Kiro within UK government departments. It covers capabilities assessment, security considerations, phased rollout strategies, and success measurement to support informed decision-making and sustainable adoption.
@@ -12,13 +12,13 @@ This guide also explains how it differs from other AI code assistants, and how t
 ## Who this is for
 This guide is for:
 
-- software engineers working on complex, long lived applications
+- software engineers working on complex, long-lived applications
 - technical leads evaluating autonomous coding tools
 - API developers and backend teams requiring structured development
-- engineering teams needing persistent, context aware AI assistance
+- engineering teams needing persistent, context-aware AI assistance
     
     
-## What is in this guide
+## What's in this guide
     
 This guide is organised into the following sections.
 
@@ -30,7 +30,7 @@ Understanding Amazon Kiro:
     
 Implementation planning:
 
-- [UK government specific considerations](#uk-government-specific-considerations) - security classifications, data residency, and procurement
+- [UK government-specific considerations](#uk-government-specific-considerations) - security classifications, data residency, and procurement
 - [Getting started](#getting-started) - licensing options and installation process
 - [Training requirements](#training-requirements) - engineer and manager training programmes
 
@@ -41,10 +41,6 @@ Managing adoption:
 - [Policy configuration reference](#policy-configuration-reference) - content exclusions and IDE settings
 - [Integration with development workflow](#integration-with-development-workflow) - code review, Git workflow, testing, and CI and CD
 
-Additional resources:
-- [Related resources](#related-resources) - links to official documentation, government guidance, and repository materials
-- [Contributing](#contributing) - how to improve this guide
-- [Licence](#licence) - open licences
     
 ## Before you start
 You need:
@@ -65,7 +61,7 @@ It understands software development workflows, not just code autocomplete.
 Kiro's primary capabilities include:
 
 - providing autonomous task execution 
-- supporting specification driven development 
+- supporting specification-driven development 
 - turning ideas into engineering specs 
 - generating and modifying code 
 - creating tests and documentation 
@@ -85,7 +81,7 @@ Amazon Kiro supports multiple interaction modes. Each is designed for a differen
 | Code Generation / Edit Mode | Kiro directly writes or modifies code in your repository | Creating new files, adding features, refactoring existing code, fixing bugs |
 | Test Generation Mode | Focused on generating tests alongside code | Unit tests, test scaffolding, edge-case coverage |
 | Documentation Mode | Generates or updates developer documentation | README sections, API documentation, Inline comments, design docs |
-| Agentic and multi-step task mode | Kiro acts as an agent | Plan a task, execute multiple steps, iterate based on feedback, this is task oriented |
+| Agentic and multi-step task mode | Kiro acts as an agent | Plan a task, execute multiple steps, iterate based on feedback, this is task-oriented |
 
 When to use each mode:
 
@@ -102,7 +98,7 @@ Quick comparison matrix:
 
 | AI Tool | What it is | Strengths |
 |---------|------------|-----------|
-| Amazon Kiro | AI first IDE and CLI with spec driven workflow | Specs to design to tasks, agent hooks, Model Context Protocol (MCP), autopilot, VS Code settings and plugins compatibility |
+| Amazon Kiro | AI-first IDE and CLI with spec-driven workflow | Specs to design to tasks, agent hooks, Model Context Protocol (MCP), autopilot, VS Code settings and plugins compatibility |
 | Amazon Q Developer | AWS coding assistant in IDE, CLI and AWS console help | AWS native software development lifecycle (SDLC) help, IDE and CLI, transformation capabilities (Java and .NET), governance features |
 | GitHub Copilot | Ubiquitous AI assistant inside many IDEs and GitHub | Broad IDE support, agent and chat, multiple model choices, strong GitHub workflow integration |
 | Cursor | AI first VS Code style editor | AI native editor, agents, Bugbot, usage based model API pricing approach |
@@ -132,9 +128,10 @@ For detailed model capabilities and limitations, see:
 
 - [Amazon Kiro supported models](https://kiro.dev/)
 - [AI model comparison](https://docs.github.com/en/copilot/reference/ai-models/model-comparison)
+- [Model selection playbook](../../playbooks/model-selection.md) - choosing appropriate models for tasks
 
-# UK government specific considerations
-Unlike the EU, UK uses principle based regulatory approach. This is regulated through existing legal frameworks and sector specific guidance. There is additional guidance for public sector AI ethics and governance.
+# UK government-specific considerations
+Unlike the EU, UK uses a [principle-based regulatory approach](https://commonslibrary.parliament.uk/research-briefings/cbp-10003/). This is regulated through existing legal frameworks and [sector specific guidance](https://www.lawgazette.co.uk/practice-points/ai-regulation-what-uk-businesses-need-to-know/5123086.article). There is additional guidance for public sector AI ethics and governance.
 
 ### Security classification
 
@@ -142,19 +139,19 @@ Regulatory context
 
 AI must align with broad expectations that regulators will apply within existing legal regimes. Its key principles include safety, security, transparency, fairness, accountability and governance.
 
-AI Playbook for the UK Government
+[AI Playbook for the UK Government](https://www.gov.uk/government/publications/ai-playbook-for-the-uk-government/artificial-intelligence-playbook-for-the-uk-government-html)
 
-Government departments must follow the following principles:
+Government departments must:
 
-- using AI lawfully, ethically and responsibly
+- use AI lawfully, ethically and responsibly
 
-- maintaining human oversight
+- maintain human oversight
 
-- understanding and managing the AI lifecycle
+- understand and manage the AI lifecycle
 
-- being open and transparent about AI use
+- be open and transparent about AI use
 
-- applying ethical considerations at each stage
+- apply ethical considerations at each stage
 
 Transparency and algorithmic accountability: if an AI system influences decisions in public services, departments often must register it. This is under frameworks like the Algorithmic Transparency Recording Standard (ATRS). Failing to document or disclose systems undermines public trust. It may violate transparency expectations for public authorities.
 
@@ -164,10 +161,10 @@ Ethics and human control: critical decisions should involve meaningful human rev
 
 Security and risk management: protect infrastructure and data. Evaluate and mitigate risks early through comprehensive risk management frameworks. This ensures AI tools do not expose sensitive government data or jeopardise system integrity.
 
-Consult your departmental security team before deployment. Reference [NCSC guidance on cloud services](https://www.ncsc.gov.uk/collection/cloud/the-cloud-security-principles) for risk assessment.
+Consult your departmental security team before deployment. Reference [NCSC guidance on cloud services](https://www.ncsc.gov.uk/collection/cloud/the-cloud-security-principles) for risk assessment and [NCSC secure development and deployment guidance](https://www.ncsc.gov.uk/collection/developers-collection) for security best practices.
 
 ### Content exclusions
-Amazon Kiro supports configurable file access denial patterns. AWS documentation confirms that Kiro relies on AWS security and follows a shared responsibility model. Users are responsible for protecting sensitive files within their project workspace.
+Amazon Kiro supports configurable file-access denial patterns. AWS documentation confirms that Kiro relies on AWS security and follows a [shared responsibility model](https://kiro.dev/docs/privacy-and-security/). Users are responsible for protecting sensitive files within their project workspace.
 
 ### Sensitive file exclusion patterns in Kiro 
 ```yaml
@@ -236,7 +233,7 @@ config/*.secret.json
 **/sysinfo/**
 **/.git/**
 
-# Build artifacts and third party code (unnecessary and may include embedded secrets)
+# Build artifacts and third-party code (unnecessary and may include embedded secrets)
 **/node_modules/**
 **/dist/**
 **/build/**
@@ -244,7 +241,7 @@ config/*.secret.json
 
 ### Amazon Kiro data residency in the UK
 
-Amazon Kiro does not currently store data in a UK based AWS Region. Kiro's supported data storage regions are documented under 'Supported Regions' according to the official Kiro documentation. This complies with EU and EEA data residency requirements but not strict UK sovereign residency.
+Amazon Kiro does not currently store data in a UK-based AWS Region. Kiro's supported data storage regions are documented under '[Supported Regions](https://kiro.dev/docs/enterprise/supported-regions/)' in the official Kiro documentation. This complies with EU and EEA data residency requirements but not strict UK-sovereign residency.
 
 The supported regions are:
 - US East (N. Virginia)
@@ -259,14 +256,14 @@ According to the official Kiro license:
 - Kiro IDE and Kiro CLI are owned by Amazon and are licensed as AWS content under AWS IP license
 - you retain ownership of your own code, data, prompts, and project files
 - you own the output generated by Kiro
-- Kiro uses open source libraries under their own licenses
+- Kiro uses open-source libraries under their own licenses
 - Amazon maintains a comprehensive IP protection framework that extends to AWS services
 
 # Getting started
 
-Amazon Kiro is not a standalone CLI or package you install like Terraform or Docker. It is an AI powered development environment and IDE experience. It integrates with AWS services and is accessed through supported IDEs and AWS authentication. So the installation is environment setup, access enablement and IDE configuration.
+Amazon Kiro is not a standalone CLI or package you install like Terraform or Docker. It is an AI-powered development environment and IDE experience. It integrates with AWS services and is accessed through supported IDEs and AWS authentication. So the installation is environment setup, access enablement and IDE configuration.
 
-Below is the complete, step by step Amazon Kiro installation guide.
+Below is the complete, step-by-step Amazon Kiro installation guide. For a faster 10-minute introduction, the [Kiro quick start guide](https://kiro.directory/quickstart/) covers the core workflow.
 
 Step 1: system requirements
 - supported OS: Windows 10 or 11 (64 bit), macOS (Intel and Apple Silicon), Linux (Ubuntu 18.04 or later, Fedora 32 or later, or similar)
@@ -326,9 +323,9 @@ Module 1 - environment preparation training (60 minutes):
 Module 2 - core skills training (90 minutes):
 
 - understanding Kiro's core workflow which includes specs, hooks, steering
-- hands on first project
+- hands-on first project
 
-Module 3 - feature focused learning tracks (120 minutes, flexible):
+Module 3 - feature-focused learning tracks (120 minutes, flexible):
 
 - beginner track which covers foundations
 - intermediate track which covers specs, hooks, context
@@ -340,9 +337,9 @@ Module 3 - feature focused learning tracks (120 minutes, flexible):
 
 Module 2: core skills training (90 minutes)
 - understanding Kiro's core workflow which includes specs, hooks, steering
-- hands on first project
+- hands-on first project
 
-Module 3: feature focused learning tracks (120 minutes, flexible)
+Module 3: feature-focused learning tracks (120 minutes, flexible)
 - beginner track which covers foundations
 - intermediate track – specs, hooks, context
 - advanced track – production workflows
@@ -362,7 +359,7 @@ Measuring success in Kiro is based on three primary dimensions:
 - developer productivity and workflow outcomes
 - quality, automation, and DevOps improvements
 
-### Using Kiro's built in user activity metrics
+### Using Kiro's built-in user activity metrics
 - daily user activity, per individual
 - detailed usage metrics for each developer
 - frequency of Kiro interactions
@@ -503,7 +500,7 @@ Success with Amazon Kiro is measured across productivity, code quality, security
        }
       }
 - automation and execution control policies (operational policy configuration):
-    - autopilot mode means Kiro executes multi step actions automatically, creates, modifies, deletes files and runs shell commands without asking.
+    - autopilot mode means Kiro executes multi-step actions automatically, creates, modifies, deletes files and runs shell commands without asking.
     - supervised mode means requires user approval for each action and prevents unauthorized changes.
 
 - data protection and security policies
@@ -511,7 +508,7 @@ Success with Amazon Kiro is measured across productivity, code quality, security
     - URL fetching security policy
     - enterprise data residency and IAM identity center
 
-- real time security validation policies (using MCP servers) which run automatically while coding using MCP:
+- real-time security validation policies (using MCP servers) which run automatically while coding using MCP:
     - checkov (IaC scanning)
     - semgrep (application code scanning)
     - bandit (Python security scanning)
@@ -519,42 +516,49 @@ Success with Amazon Kiro is measured across productivity, code quality, security
 ### Kiro policy types
 | Policy type | Location | Purpose | Source |
 | ------------| ---------| -------| -------|
-| IAM identity based |IAM console | Admin and user permissions for Kiro console and subscription management | [kiro.dev] |
-| Service linked roles | IAM | Allows Kiro backend to call AWS services securely | [kiro.dev] | 
+| IAM identity-based |IAM console | Admin and user permissions for Kiro console and subscription management | [kiro.dev] |
+| Service-linked roles | IAM | Allows Kiro backend to call AWS services securely | [kiro.dev] | 
 | Steering policies | .kiro/steering/ | Coding standards, rules, conventions | [kiro.directory] |
-| MCP policies | .kiro/settings/mcp.json | Tool permissions, auto approvals, server connections | [github.com] |
+| MCP policies | .kiro/settings/mcp.json | Tool permissions, auto-approvals, server connections | [github.com] |
 | Runtime modes | User settings | Execution safety (autopilot compared to supervised) | [kiro.dev] |
 | Data protection policies | AWS account and Kiro console | Data location, URL ingestion, compliance alignment | [kiro.dev] | 
 | Security validation policies | MCP server configs | Static analysis, IaC scanning, vulnerability checking |  [docs.aws.amazon.com] | 
 
 # Integration with development workflow
- 
+
+The [AI SDLC playbook](../../playbooks/ai-sdlc-playbook.md) covers integrating AI coding assistants across the full software development lifecycle.
+
 - Kiro as an agentic IDE integrated into the dev workflow
-- specs integrate into the workflow (planning to execution to review)
 
-```
-Developer Prompt to Spec Generation to Task List to Code Generation to Tests to Documentation
-```
+Specs integrate into the workflow from planning through to execution and review.
 
-- agent hooks event driven workflow automation
-- steering integration project standards as policy
+1. Developer prompt.
+2. Spec generation.
+3. Task list.
+4. Code generation.
+5. Tests.
+6. Documentation.
 
-```
-Steering Files to AI Behavior to Code Consistency Across the Project
-```
+Agent hooks provide event-driven workflow automation through the following stages.
 
-- MCP servers integration with external tools in the workflow
+1. Steering files.
+2. AI behavior.
+3. Code consistency across the project.
 
-```
-Kiro to MCP to External Tool to Result Returned into IDE
-```
+MCP servers connect Kiro to external tools in the following sequence.
 
-- agentic chat conversational development integrated into the workflow
-- CLI integration terminal and DevOps workflow automation
+1. Kiro.
+2. MCP.
+3. External tool.
+4. Result returned into IDE.
 
-```
-CI and CD to Kiro CLI to Generate IaC to Validate to Deploy
-```
+The CLI automates DevOps and deployment workflows in the following order.
+
+1. CI/CD.
+2. Kiro CLI.
+3. Generate IaC.
+4. Validate.
+5. Deploy.
 ### Kiro integrates into dev workflows
 | Workflow area | How Kiro integrates | Sources | 
 | --------------| --------------------| --------|
@@ -565,64 +569,8 @@ CI and CD to Kiro CLI to Generate IaC to Validate to Deploy
 | Tooling | MCP servers (GitHub, AWS, Docker, security) | [kiro.dev], [d1.awsstatic.com] |
 | DevOps | CLI automates deployments and IaC | [aws.amazon.com] |
 
-# Related resources
-
-Links to official Amazon Kiro resources:
-
-- [Kiro quick start guide - get started in 10 minutes | Kiro Directory](https://kiro.directory/quickstart/)
-- https://commonslibrary.parliament.uk/research-briefings/cbp-10003/
-- https://www.lawgazette.co.uk/practice-points/ai-regulation-what-uk-businesses-need-to-know/5123086.article
-- https://www.gov.uk/government/publications/ai-playbook-for-the-uk-government/artificial-intelligence-playbook-for-the-uk-government-html
-- https://kiro.dev/docs/enterprise/supported-regions/
-- https://kiro.dev/docs/privacy-and-security/
-- [Crown Commercial Service G-Cloud 14](https://www.crowncommercial.gov.uk/agreements/g-cloud-14) - UK government cloud services framework
-- [TechUK software reseller framework](https://www.techuk.org/) - alternative procurement route
-
-### NCSC guidance
-
-Links to NCSC guidance:
-
-- [Cloud security principles](https://www.ncsc.gov.uk/collection/cloud/the-cloud-security-principles) - assessing cloud services
-- [Secure development and deployment guidance](https://www.ncsc.gov.uk/collection/developers-collection) - security best practices
-- [Vulnerability disclosure](https://www.ncsc.gov.uk/information/vulnerability-disclosure-toolkit) - handling security issues
-
-### Repository resources
-
-Links to repository resources:
-
-- [AI SDLC Playbook](../../playbooks/ai-sdlc-playbook.md) - integrating AI code assistants across development lifecycle
-- [Model Selection Playbook](../../playbooks/model-selection.md) - choosing appropriate models for tasks
-
-## Providing feedback
-
-We welcome feedback to improve these materials. You can:
-
-- raise an issue in the issue tracker (location to be confirmed)
-- submit improvements via pull request (see [CONTRIBUTING.md](../../CONTRIBUTING.md))
-- contact the team at the team email address (to be confirmed)
-- use the feedback mechanism in your department's AI engineering lab community
-
 ## Contributing
-
-See [CONTRIBUTING.md](../../CONTRIBUTING.md) for contribution guidelines.
 
 We encourage contributions from across government to keep this repository current and comprehensive. Share your team's experience, lessons learned, and effective practices to help other government departments.
 
-Before contributing, read [CONTRIBUTING.md](../../CONTRIBUTING.md) which covers:
-
-- content standards and style guide
-- review and approval process
-- accessibility requirements
-- how to submit changes
-
-## Licence
-
-This repository is published under the [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/).
-
-You are encouraged to use and adapt these materials for your own government context.
-
-When reusing content:
-
-- maintain attribution to this repository
-- share improvements back via contribution
-- ensure adaptations remain suitable for government use
+See the [contribution guidelines](../../CONTRIBUTING.md) before submitting changes.

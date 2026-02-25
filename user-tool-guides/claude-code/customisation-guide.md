@@ -7,27 +7,36 @@ A practical guide to customising Claude Code through CLAUDE.md files, custom sla
 
 ## Contents
 
-1. [Before you start](#before-you-start)
-2. [CLAUDE.md files](#claudemd-files)
-3. [Custom slash commands](#custom-slash-commands)
-4. [Skills](#skills)
-5. [Hooks](#hooks)
-6. [Model Context Protocol (MCP) integration](#model-context-protocol-mcp-integration)
-7. [Agent orchestration](#agent-orchestration)
-8. [Background processes](#background-processes)
-9. [How customisations work together](#how-customisations-work-together)
-10. [Quick start checklist](#quick-start-checklist)
+[Before you start](#before-you-start)
+
+[CLAUDE.md files](#claudemd-files)
+
+[Custom slash commands](#custom-slash-commands)
+
+[Skills](#skills)
+
+[Hooks](#hooks)
+
+[Model Context Protocol (MCP) integration](#model-context-protocol-mcp-integration)
+
+[Agent orchestration](#agent-orchestration)
+
+[Background processes](#background-processes)
+
+[How customisations work together](#how-customisations-work-together)
+
+ [Quick start checklist](#quick-start-checklist)
 
 ## Before you start
 
 This guide assumes you:
 
-- have completed the [Getting started guide](getting-started.md)
+- have completed the [getting started guide](getting-started.md)
 - are comfortable using Claude Code for daily tasks
 - understand your team's workflows and standards
 - have appropriate permissions to configure customisations
 
-Customisations help teams:
+Customisations help teams to:
 
 - enforce coding standards automatically
 - reduce repeated prompting
@@ -65,11 +74,13 @@ Read more about [using CLAUDE.md files to customise Claude Code](https://claude.
 # Project: Claim Processing Service
 
 ## Technology stack
+
 - Node.js 20 with TypeScript 5.3
 - Express 4.18, Prisma 5.x, PostgreSQL 15
 - Jest for testing, GOV.UK Notify for emails
 
 ## Coding standards
+
 - use async/await, not callbacks
 - all functions must have JSDoc comments
 - follow GOV.UK naming conventions
@@ -77,6 +88,7 @@ Read more about [using CLAUDE.md files to customise Claude Code](https://claude.
 - use 2-space indentation
 
 ## Government requirements
+
 - all dates in ISO 8601 format
 - postcodes - Royal Mail Postcode Address File (PAF) format
 - National Insurance numbers - AA 12 34 56 A (example format)
@@ -101,7 +113,7 @@ Keep CLAUDE.md concise and focused. For each line, ask: 'Would removing this cau
 | Repository conventions (branch naming, pull request process) | Information that changes frequently |
 | Architectural decisions specific to your project | Long explanations or tutorials |
 | Developer environment quirks (required environment variables) | File-by-file descriptions of the codebase |
-| Common gotchas or non-obvious behaviour | Self-evident practices like "write clean code" |
+| Common gotchas or non-obvious behaviour | Self-evident practices like 'write clean code' |
 
 If Claude ignores instructions, the file may be too long. If Claude asks questions answered in CLAUDE.md, rephrase for clarity.
 
@@ -193,9 +205,7 @@ Hooks are shell commands that execute at specific points in Claude's lifecycle. 
 - enforce policies, for example, running tests before commits
 - integrate with external systems, for example, logging to compliance database
 
-Hooks are the only customisation feature that can block Claude's actions.
-
-Read more about[hooks](https://code.claude.com/docs/en/hooks).
+Hooks are the only customisation feature that can block Claude's actions. Read [more about hooks](https://code.claude.com/docs/en/hooks).
 
 ### Hook types
 
@@ -295,7 +305,6 @@ Edit `~/.claude/settings.json`:
 | Slack | Team communication | Sending notifications |
 | PostgreSQL | Database access | Querying data directly |
 | Figma | Design integration | Fetching design specs |
-
 
 ## Agent orchestration
 
@@ -413,7 +422,7 @@ Result
 
 ### Example workflow
 
-**Task:** Add comprehensive tests for the authentication module.
+Add comprehensive tests for the authentication module.
 
 1. Review the `CLAUDE.md` file for project context.
 
@@ -425,29 +434,32 @@ Result
 2. Ask Claude to generate a plan for adding tests.
 
    The `unit-testing` skill activates automatically and:
+
    - loads test templates
    - accesses test runner scripts
 
 3. Run the implementation.
 
    Hooks enforce project policies and:
+
    - use `PreToolUse` to validate file permissions
    - use `PostToolUse` to run the linter on test files
 
 4. If MCP integration is configured, retrieve supporting information.
 
    This can include:
+
    - related GitHub issues
    - existing test coverage from the database
 
 5. Review the completed test suite.
 
    Check that it:
+
    - follows project conventions in `CLAUDE.md`
    - uses the provided templates
    - passes policy checks
    - reflects relevant external data
-
 
 ### Comparison of customisation features
 
@@ -470,13 +482,12 @@ Start by establishing your project context.
 1. Create `.claude/CLAUDE.md`.
 
    Include:
+
    - technology stack
    - coding standards
    - testing approach
 
 2. Check that Claude references this context in its responses.
-
----
 
 ### Phase 2: Repeated workflows
 
@@ -488,8 +499,6 @@ Add custom commands for common tasks.
 
 3. Share the commands with your team using version control.
 
----
-
 ### Phase 3: Governance
 
 Implement hooks to enforce policies.
@@ -499,8 +508,6 @@ Implement hooks to enforce policies.
 2. Add `PreToolUse` hooks for security validation, if needed.
 
 3. Test hook scripts locally before deploying them.
-
----
 
 ### Phase 4: Automation
 
@@ -514,8 +521,6 @@ Create skills for complex workflows.
 
 4. Write clear `SKILL.md` descriptions.
 
----
-
 ### Phase 5: Integration
 
 Connect external tools using MCP.
@@ -527,8 +532,6 @@ Connect external tools using MCP.
 3. Test the connections independently.
 
 4. Document the configuration for your team.
-
----
 
 ### Phase 6: Validation
 
@@ -544,11 +547,6 @@ Test that your customisations work correctly.
 
 5. Validate that MCP integrations return correct data.
 
----
-
-##
-
-
 ## Working with customisations in teams
 
 When customising Claude Code in team environments:
@@ -561,17 +559,6 @@ When customising Claude Code in team environments:
 
 Customisations should support collaboration, not create silos.
 
-## Resources
+## Further reading
 
-The official Claude Code documentation includes:
-
-- [Claude Code documentation](https://code.claude.com/docs)
-- [quickstart guide](https://code.claude.com/docs/en/quickstart)
-- [installation and setup](https://code.claude.com/docs/en/setup)
-- [CLI reference](https://code.claude.com/docs/en/cli-reference)
-
-## Contributing
-
-We encourage contributions from across government to keep this repository current and comprehensive. Share your team's experience, lessons learned, and effective practices to help other government departments.
-
-See the [contribution guidelines](../../CONTRIBUTING.md) before submitting changes.
+The official [Claude Code documentation](https://code.claude.com/docs) covers [quickstart](https://code.claude.com/docs/en/quickstart), [installation and setup](https://code.claude.com/docs/en/setup), and the [CLI reference](https://code.claude.com/docs/en/cli-reference).

@@ -1,4 +1,4 @@
-> **ALPHA**
+> ALPHA
 > This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 
 # Prompt library overview
@@ -94,7 +94,7 @@ Contribute a prompt when you have:
 | Documented | Clear explanation of when and how to use |
 | Tested | Verified across multiple scenarios |
 | Generalised | Useful beyond one specific situation |
-| Safe | No security or data concerns |
+| [Safe](../governance/guardrails-base.md) | No security or data concerns |
 
 ---
 
@@ -105,7 +105,7 @@ Contribute a prompt when you have:
 | Factor | Guidance |
 |--------|----------|
 | Specificity | Be precise about what you want |
-| Context | Provide relevant background information |
+| [Context](../playbooks/context-engineering.md) | Provide relevant background information |
 | Constraints | State boundaries and requirements clearly |
 | Examples | Show what good output looks like |
 | Format | Specify desired output structure |
@@ -156,14 +156,6 @@ Gemini Code Assist:
 
 ---
 
-## Related documents
-Related documents include:
-- [prompt template](prompt-template.md) - template for contributing prompts
-- [context engineering playbook](../playbooks/context-engineering.md) - provides effective context
-- [AI-SDLC playbook](../playbooks/ai-sdlc-playbook.md) - using AI in development workflow
-- [guardrails base](../governance/guardrails-base.md) - security boundaries for prompts
+## Further reading
 
-## References
-
-- [Anthropic prompt engineering overview](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview)
-- [GitHub Copilot documentation](https://docs.github.com/en/copilot)
+To contribute a new prompt, use the [prompt template](prompt-template.md), which provides a structured format with all required sections. The [context engineering playbook](../playbooks/context-engineering.md) provides techniques for structuring information and managing context windows to improve AI output quality. The [AI-SDLC playbook](../playbooks/ai-sdlc-playbook.md) covers how AI coding assistants fit into each phase of the software development lifecycle. Before using or sharing prompts in a government context, check the [guardrails base](../governance/guardrails-base.md), which defines the security and usage boundaries for all AI Engineering Lab deployments. The [GitHub Copilot documentation](https://docs.github.com/en/copilot) covers the full range of Copilot features and configuration options. Anthropic's [prompt engineering guide](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview) covers techniques specific to Claude.

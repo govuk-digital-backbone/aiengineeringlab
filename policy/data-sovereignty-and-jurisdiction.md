@@ -1,4 +1,4 @@
-﻿> **ALPHA**
+﻿> ALPHA
 > This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 
 # Data sovereignty and jurisdiction
@@ -7,7 +7,7 @@
 
 ## Purpose
 
-AI coding assistants transmit prompt data to cloud based inference services. US headquartered providers predominantly operate these services. This creates jurisdiction, sovereignty, and data handling questions that government departments must address before adoption.
+AI coding assistants transmit prompt data to cloud-based inference services. US-headquartered providers predominantly operate these services. This creates jurisdiction, sovereignty, and data handling questions that government departments must address before adoption.
 
 This document defines:
 
@@ -33,7 +33,7 @@ This guidance is for:
 
 ### Government position statement
 
-The AI Engineering Lab programme acknowledges that current AI coding assistant inference services are predominantly provided by US headquartered companies. Complete UK sovereign processing for AI inference is not currently available at equivalent capability for all tools. 
+The AI Engineering Lab programme acknowledges that current AI coding assistant inference services are predominantly provided by US-headquartered companies. Complete UK sovereign processing for AI inference is not currently available at equivalent capability for all tools. 
 
 UK or European Economic Area (EEA) data residency is the minimum requirement for government AI coding assistant use at OFFICIAL classification. International transfers of personal data must be assessed in accordance with UK GDPR Chapter V and current ICO guidance.
 
@@ -53,19 +53,19 @@ The Act also introduced a comity mechanism allowing providers to challenge order
 
 ### How the CLOUD Act applies to AI inference services
 
-AI coding assistants process prompt content, code context, and related metadata to deliver inference responses. Where the provider is US headquartered, this data may be considered under the provider's possession, custody, or control.
+AI coding assistants process prompt content, code context, and related metadata to deliver inference responses. Where the provider is US-headquartered, this data may be considered under the provider's possession, custody, or control.
 
 As a result, hosting inference workloads in UK or EEA regions reduces data residency risk but does not eliminate exposure to US legal process under the CLOUD Act.
 
 ### Relationship to the UK US Data Access Agreement
 
-The UK US Bilateral Data Access Agreement (signed 2019, in force 2022) establishes a reciprocal framework for law enforcement access to electronic data for serious crime investigations. It does not remove CLOUD Act exposure, but provides additional safeguards and procedural structure for cross border requests.
+The UK US Bilateral Data Access Agreement (signed 2019, in force 2022) establishes a reciprocal framework for law enforcement access to electronic data for serious crime investigations. It does not remove CLOUD Act exposure, but provides additional safeguards and procedural structure for cross-border requests.
 
 ### Risk assessment for government use
 | Risk factor | Assessment |
 |------------|------------|
-| Likelihood | Generally low for typical development prompts, or higher where sensitive operational or security relevant content is included |
-| Impact | Low for public or non sensitive code, or higher for infrastructure, security logic, or incident related data |
+| Likelihood | Generally low for typical development prompts, or higher where sensitive operational or security-relevant content is included |
+| Impact | Low for public or non-sensitive code, or higher for infrastructure, security logic, or incident-related data |
 | Mitigations | Prompt hygiene, data minimisation, no classified data, enterprise contracts, encryption, retention limits |
 | Residual risk | Low to medium for OFFICIAL, or medium for OFFICIAL SENSITIVE without UK sovereign processing |
 
@@ -75,14 +75,14 @@ For OFFICIAL data, CLOUD Act risk may be accepted where appropriate guardrails a
 
 For OFFICIAL SENSITIVE data, additional justification is required and UK sovereign processing should be used where proportionate and available.
 
-Vendor contracts must include commitments to challenge over broad legal requests, provide notification where legally permitted, and prohibit secondary use of government data.
+Vendor contracts must include commitments to challenge over-broad legal requests, provide notification where legally permitted, and prohibit secondary use of government data.
 
 ## UK sovereign processing
 
 ### Current state of UK sovereign AI inference
 
 ### Current state
-UK sovereign AI inference is available primarily through self hosted or government hosted open source models. Commercial tools provided by US vendors may offer UK regional hosting but remain subject to US jurisdiction.
+UK sovereign AI inference is available primarily through self-hosted or government-hosted open-source models. Commercial tools provided by US vendors may offer UK regional hosting but remain subject to US jurisdiction.
 
 ### When UK sovereign processing is required
 
@@ -94,7 +94,7 @@ UK sovereign AI inference is available primarily through self hosted or governme
 
 ### Roadmap
 
-The programme will monitor UK based providers, open source model maturity, and government cloud offerings to expand UK sovereign options over time.
+The programme will monitor UK-based providers, open-source model maturity, and government cloud offerings to expand UK sovereign options over time.
 
 ## Data residency requirements
 
@@ -114,7 +114,7 @@ Approved jurisdictions for personal data are the UK, EEA, and countries covered 
 ### Verification process
 
 1. Obtain written confirmation of processing and storage locations.
-2. Review data processing agreements and sub processor lists.
+2. Review data processing agreements and sub-processor lists.
 3. Verify regional configuration and contractual commitments.
 4. Record evidence in the approval decision.
 5. Reverify annually.
@@ -136,7 +136,7 @@ Contracts must specify retention limits, automated deletion, right to early dele
 
 ## Secondary use prohibitions
 
-Government prompt data must not be used for model training, fine tuning, benchmarking, or product improvement beyond delivering the contracted service.
+Government prompt data must not be used for model training, fine-tuning, benchmarking, or product improvement beyond delivering the contracted service.
 
 Contracts must include explicit prohibitions and audit rights.
 
@@ -151,16 +151,16 @@ Contracts must include explicit prohibitions and audit rights.
 | Retention | Within defined limits |
 | Secondary use | Prohibited |
 | Deletion | Automated and verifiable |
-| Sub processors | Fully disclosed |
+| Sub-processors | Fully disclosed |
 | NCSC principles | Evidence of alignment |
 
-### Non compliance
+### Non-compliance
 
-Non compliance may result in corrective action, suspension of use, or contract termination depending on severity.
+Non-compliance may result in corrective action, suspension of use, or contract termination depending on severity.
 
 ## Related documents
 
-[Security policies](../policy), PS-02 (data classification), PS-09 (third party and supply chain), PS-11 (tool type specific requirements).
+[Security policies](../policy), PS-02 (data classification), PS-09 (third-party and supply chain), PS-11 (tool-type-specific requirements).
 
 [Data Protection Impact Assessment (DPIA)](dpia-ai-coding-assistants.md), international transfer assessment.
 

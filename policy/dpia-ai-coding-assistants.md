@@ -1,4 +1,4 @@
-﻿> **ALPHA**
+﻿> ALPHA
 > This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 
 # Data protection impact assessment guidance for AI coding assistants
@@ -37,7 +37,7 @@ A DPIA is required when processing is likely to result in a high risk to the rig
 | Development teams working on systems that process citizen personal data, where code context may contain data structures, schemas, or sample data referencing Personally Identifiable Information (PII) | Yes | Personal data may be included in prompts sent to AI providers |
 | Development teams working on anonymised or synthetic data only, with no PII in code or comments | Unlikely, but assessment should still be documented | Low risk, but new technology factor may still apply |
 | Development teams using AI tools with enterprise agreements that contractually exclude data retention | Recommended as good practice | Reduced risk, but international transfer considerations remain |
-| Any use of AI coding assistants where prompt data is transmitted to a non UK jurisdiction | Yes | International transfer of potentially personal data |
+| Any use of AI coding assistants where prompt data is transmitted to a non-UK jurisdiction | Yes | International transfer of potentially personal data |
 
 ### ICO criteria for DPIA requirement
 
@@ -46,8 +46,8 @@ The Information Commissioner's Office (ICO) identifies criteria that indicate wh
 | ICO criterion | Applicability to AI coding assistants |
 |---------------|---------------------------------------|
 | New technologies | Yes, because AI coding assistants are a new technology in government development |
-| Automated decision-making | Generally no, AI coding assistants suggest code but do not make decisions about individuals, but this criterion may apply to the wider system if AI generated code is used in automated decision-making systems |
-| Large scale processing | Depending on context, such as many developers submitting prompts containing personal data, which could constitute large scale processing |
+| Automated decision-making | Generally no, AI coding assistants suggest code but do not make decisions about individuals, but this criterion may apply to the wider system if AI-generated code is used in automated decision-making systems |
+| Large-scale processing | Depending on context, such as many developers submitting prompts containing personal data, which could constitute large-scale processing |
 | Systematic monitoring | Generally no, unless AI tool usage logging constitutes monitoring of employees |
 
 Even where a formal DPIA is not strictly required, conducting one is recommended as good practice for AI coding assistant deployments. This demonstrates accountability and supports governance approval.
@@ -61,7 +61,7 @@ UK GDPR requires that processing of personal data is proportionate to the legiti
 Proportionality is supported by:
 
 - AI coding assistants, which improves developer productivity, enabling faster delivery of government digital services to citizens
-- improved code quality and security testing, which reduces the risk of vulnerabilities in citizen facing systems
+- improved code quality and security testing, which reduces the risk of vulnerabilities in citizen-facing systems
 - the programme implementing comprehensive guardrails (G-DH-01 through G-DH-05), which minimises personal data exposure
 - enterprise licensing agreements, which provides contractual protection for data handling
 
@@ -69,8 +69,8 @@ Arguments that governance committees may raise against proportionality include:
 
 Governance committees may have an issue with the proportionality argument if:
 
-- personal data is transmitted to third party providers outside departmental control
-- data is processed in non UK jurisdictions
+- personal data is transmitted to third-party providers outside departmental control
+- data is processed in non-UK jurisdictions
 - the degree of personal data exposure is dependent on individual developer behaviour, which is variable
 - vendor data handling practices are not fully transparent
 
@@ -81,7 +81,7 @@ The necessity test asks whether the same objective could be achieved with less i
 | Alternative | Assessment |
 |-------------|------------|
 | Do not use AI coding assistants | Achieves zero data processing risk but sacrifices significant productivity and quality benefits, which is not proportionate where guardrails adequately mitigate risk |
-| Use self hosted AI models only | Eliminates data transfer to third parties, though current self hosted models are significantly less capable, which may still be appropriate for Tier 3 departments |
+| Use self-hosted AI models only | Eliminates data transfer to third parties, though current self-hosted models are significantly less capable, which may still be appropriate for Tier 3 departments |
 | Restrict AI use to codebases with no personal data | Reduces risk but limits the benefit of AI tools which may be appropriate as an initial adoption measure |
 | Use AI tools with enterprise agreements and guardrails | Balances productivity benefits with data protection controls, which is the approach adopted by this programme |
 
@@ -93,10 +93,10 @@ Departments should complete the following template to document their proportiona
 |---------|---------------------|
 | Legitimate aim | Improving developer productivity and code quality for government digital services |
 | Necessity | AI coding assistants provide capabilities not achievable through alternative means at comparable cost and speed |
-| Data minimisation measures | Guardrails G-DH-01 to G-DH-05 prohibit personal data in prompts, with training completed by all users and pre commit scanning for secrets |
+| Data minimisation measures | Guardrails G-DH-01 to G-DH-05 prohibit personal data in prompts, with training completed by all users and pre-commit scanning for secrets |
 | Safeguards | Enterprise licensing, contractual data handling terms, security scanning and human code review |
 | Balancing test outcome | Benefits to government service delivery outweigh residual data protection risks given the safeguards in place |
-| Less intrusive alternatives considered | Self hosted models (insufficient capability), restricted use (disproportionate limitation) and no use (disproportionate to aim) |
+| Less intrusive alternatives considered | Self-hosted models (insufficient capability), restricted use (disproportionate limitation) and no use (disproportionate to aim) |
 | Residual risk | Variable developer behaviour may result in incidental personal data in prompts despite guardrails which can be mitigated with training, monitoring and incident response |
 
 ## Lawful basis analysis
@@ -237,34 +237,14 @@ When consulting the DPO, you must provide:
 - department specific guardrails if applicable
 - incident response procedures for data exposure
 
-## Related documents
+## Further guidance
 
-[Security policies](../policy), PS-02 (data classification compliance).
+Use the following sources when completing the DPIA and related governance steps.
 
-[Guardrails base](../governance/guardrails-base.md), G-DH-01 to G-DH-05 (data handling) and G-ET-01 (ethical review triggers).
-
-[Incident response playbook](../governance/incident-response-playbook.md), GDPR breach procedures.
-
-[Data sovereignty and jurisdiction](data-sovereignty-and-jurisdiction.md), international transfer guidance.
-
-[Vendor contract security requirements](../governance/vendor-contract-security-requirements.md), DPA requirements.
-
-## References
-
-### UK government
-
-[ICO Guide to Data Protection Impact Assessments](https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/accountability-and-governance/data-protection-impact-assessments-dpias/)
-
-[ICO Legitimate Interests Assessment](https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/lawful-basis/legitimate-interests/)
-
-[UK GDPR](https://www.legislation.gov.uk/eur/2016/679/contents)
-
-[Data Protection Act 2018](https://www.legislation.gov.uk/ukpga/2018/12/contents)
-
-[UK AI Playbook for Government (2025)](https://www.gov.uk/government/publications/ai-playbook-for-the-uk-government)
-
-### Standards
-
-[NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
-
-[ISO/IEC 42001:2023 AI Management System](https://www.iso.org/standard/81230.html)
+| Assessment | Source | How to apply  |
+|---|---|---|
+| Determine whether a DPIA is required and how to structure it | [ICO Guide to Data Protection Impact Assessments](https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/accountability-and-governance/data-protection-impact-assessments-dpias/) | Use ICO trigger criteria, process steps, and documentation expectations to evidence the DPIA decision. |
+| Assess lawful basis where public task does not apply | [ICO Legitimate Interests Assessment guidance](https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/lawful-basis/legitimate-interests/) | Complete and record a Legitimate Interests Assessment (purpose, necessity, and balancing test). |
+| Confirm legal basis and statutory obligations | [UK GDPR](https://www.legislation.gov.uk/eur/2016/679/contents) and [Data Protection Act 2018](https://www.legislation.gov.uk/ukpga/2018/12/contents) | Validate controller/processor roles, Article 6 basis, Article 28 processor terms, and data subject rights obligations. |
+| Align with public sector AI delivery expectations | [UK AI Playbook for Government (2025)](https://www.gov.uk/government/publications/ai-playbook-for-the-uk-government) | Cross-check delivery, assurance, procurement, and responsible AI practices for government deployments. |
+| Align risk and management controls | [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework) and [ISO/IEC 42001:2023 AI Management System](https://www.iso.org/standard/81230.html) | Map technical and organisational controls to recognised AI risk and management system practices. |

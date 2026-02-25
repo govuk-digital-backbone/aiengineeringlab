@@ -1,5 +1,5 @@
 > ALPHA
-> This is a new service. Your https://github.com/govuk-digital-backbone/aiengineeringlab/discussions will help us to improve it.
+> This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us improve it.
 
 # Getting started with GitHub Copilot
 
@@ -32,13 +32,15 @@ Essential reading: [GitHub Copilot documentation](https://docs.github.com/en/cop
 
 ## Contents
 
-Use the following steps.
+[Access, licensing and public sector considerations](#1-access-licensing-and-public-sector-considerations)
 
-1. Understand access, licensing and public sector considerations.
-2. Set up GitHub Copilot in your IDE.
-3. Learn how to generate code in your IDE.
-4. Use Copilot safely and responsibly.
-5. Go deeper based on your experience level.
+[Set up GitHub Copilot in your IDE](#2-set-up-github-copilot-in-your-ide)
+
+[Generate code in your IDE](#3-generate-code-in-your-ide)
+
+[Use Copilot safely and responsibly](#4-use-copilot-safely-and-responsibly)
+
+[Next steps](#5-next-steps)
 
 ## 1. Access, licensing and public sector considerations
 
@@ -52,10 +54,7 @@ You should know:
 - Copilot Business and Enterprise data is not used to train models
 - privacy and security settings can be centrally managed
 
-Essential reading:
-
-- [GitHub Copilot Trust Center](https://copilot.github.trust.page/faq)
-- [How to responsibly adopt GitHub Copilot with the GitHub Copilot Trust Center](https://github.blog/news-insights/policy-news-and-insights/how-to-responsibly-adopt-github-copilot-with-the-github-copilot-trust-center/)
+Read the [GitHub Copilot Trust Center](https://copilot.github.trust.page/faq) and this guide on [responsibly adopting GitHub Copilot](https://github.blog/news-insights/policy-news-and-insights/how-to-responsibly-adopt-github-copilot-with-the-github-copilot-trust-center/).
 
 ## 2. Set up GitHub Copilot in your IDE
 
@@ -75,7 +74,8 @@ Use the following steps if you work in Visual Studio Code.
 2. Sign in using your GitHub account.
 3. Confirm Copilot is enabled in the status bar.
 
-Essential guide: [Set up GitHub Copilot in VS Code](https://code.visualstudio.com/docs/copilot/setup)
+See the [VS Code Copilot setup guide](https://code.visualstudio.com/docs/copilot/setup) for full installation instructions.
+
 
 ### Set up JetBrains IDEs
 
@@ -85,7 +85,7 @@ Use the following steps if you work in IntelliJ IDEA, PyCharm or another JetBrai
 2. Sign in using your GitHub account.
 3. Enable the plugin for your current project.
 
-Essential guide: [Installing the GitHub Copilot extension in your environment](https://docs.github.com/en/copilot/how-tos/set-up/install-copilot-extension)
+See the [JetBrains Copilot setup guide](https://docs.github.com/en/copilot/how-tos/set-up/install-copilot-extension) for full installation instructions.
 
 ## 3. Generate code in your IDE
 
@@ -105,7 +105,7 @@ You can improve how you work in Visual Studio Code by:
 - using comments to describe intent rather than exact syntax
 - using Copilot Chat to explain existing code before changing it
 
-Reference: [Get started with GitHub Copilot in VS Code](https://code.visualstudio.com/docs/copilot/getting-started)
+See [Get started with GitHub Copilot in VS Code](https://code.visualstudio.com/docs/copilot/getting-started) for a practical walkthrough.
 
 ### Generate code in JetBrains IDEs
 
@@ -134,7 +134,8 @@ You should use Copilot responsibly by:
 - avoiding secrets or sensitive data in prompts
 - following your organisation’s coding standards
 
-Reference: [GitHub Copilot Fundamentals Part 1 of 2](https://learn.microsoft.com/training/paths/copilot/)
+For structured learning, complete [GitHub Copilot Fundamentals Part 1 of 2](https://learn.microsoft.com/training/paths/copilot/) on Microsoft Learn.
+
 
 ## 5. Next steps
 

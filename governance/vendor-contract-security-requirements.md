@@ -1,5 +1,5 @@
 > ALPHA
-> This is a new service - your feedback will help us to improve it.
+> This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 
 # Vendor contract security requirements for AI coding assistants
 
@@ -15,7 +15,7 @@ This guidance:
 
 - applies to AI coding assistant inference services only
 - does not apply to vendor research and development or general model training
-- can be used with G-Cloud, Digital Outcomes and Specialists or bespoke contracts
+- can be used with G-Cloud, Digital Outcomes and Specialists, or bespoke contracts
 - sets mandatory minimum requirements
 
 Any deviation from these requirements needs written approval from the senior information risk owner.
@@ -72,9 +72,9 @@ You must require suppliers to provide:
 
 Suppliers must provide assurance through one or more of the following:
 
-- SOC 2 Type II covering security, availability and confidentiality
-- ISO IEC 27001 for the service
-- Cyber Essentials Plus for systems supporting the service
+- [ISO 27001:2022 Information Security Management](https://www.iso.org/standard/27001)
+- [SOC 2 Type 2 (American Institute of Certified Public Accountants - AICPA)](https://www.aicpa-cima.com/topic/audit-assurance/audit-and-assurance-greater-than-soc-2)
+- [Cyber Essentials Plus](https://www.ncsc.gov.uk/cyberessentials/overview)
 
 You may accept equivalent assurance only if you record your justification.
 
@@ -208,7 +208,7 @@ The following roles review supplier contracts.
 | Role | Responsibility |
 |------|----------------|
 | AI security lead | Reviews security clauses and evidence |
-| Data Protection Officer | Reviews data protection clauses |
+| Data protection officer | Reviews data protection clauses |
 | Procurement lead | Checks framework compliance |
 | Legal adviser | Checks enforceability |
 | Senior information risk owner | Accepts residual risk |
@@ -242,38 +242,6 @@ You can attach this schedule to framework call off contracts. If there is a conf
 | SEC08 | Data deletion on exit | Deletion certificate | On termination |
 | SEC09 | NCSC Cloud Security Principles alignment | Self assessment | Annual |
 
-## Related documents
+## Further reading
 
-[Security policies](../policy), Policy statement (PS)-09 (third-party and supply chain), PS-11 (tool-type specific requirements).
-
-[Data sovereignty and jurisdiction](../policy/data-sovereignty-and-jurisdiction.md), data residency and retention requirements.
-
-[Model assurance and transparency](model-assurance-and-transparency.md), vendor transparency requirements.
-
-[Comparative guidance](../manager-tool-guides/comparative-guidance.md), vendor evaluation framework.
-
-[Risk register template](risk-register-template.md), vendor risk documentation.
-
-[Data Protection Impact Assessment (DPIA) guidance](../policy/dpia-ai-coding-assistants.md), DPA requirements for data protection.
-
-## References
-
-### UK government
-
-[Crown Commercial Service (CCS) G-Cloud Framework](https://www.crowncommercial.gov.uk/agreements/RM1557.14)
-
-[Government Commercial Function - Commercial Playbooks](https://www.gov.uk/government/publications/ppn-011-the-commercial-playbooks)
-
-[NCSC Cloud Security Principles](https://www.ncsc.gov.uk/collection/cloud-security)
-
-[NCSC Supply Chain Security](https://www.ncsc.gov.uk/collection/supply-chain-security)
-
-[Government Security Classifications](https://www.gov.uk/government/publications/government-security-classifications)
-
-### Standards
-
-[ISO 27001:2022 Information Security Management](https://www.iso.org/standard/27001)
-
-[SOC 2 Type 2 (American Institute of Certified Public Accountants - AICPA)](https://www.aicpa-cima.com/topic/audit-assurance/audit-and-assurance-greater-than-soc-2)
-
-[Cyber Essentials Plus](https://www.ncsc.gov.uk/cyberessentials/overview)
+The [Crown Commercial Service G-Cloud Framework](https://www.crowncommercial.gov.uk/agreements/RM1557.14) and [Government Commercial Function Commercial Playbooks](https://www.gov.uk/government/publications/ppn-011-the-commercial-playbooks) provide the procurement framework within which these contract requirements sit. The [NCSC Supply Chain Security](https://www.ncsc.gov.uk/collection/supply-chain-security) guidance covers the broader risk management approach for third-party dependencies. For related internal guidance, see the [security policies](../policy) covering PS-09 and PS-11, the [data sovereignty and jurisdiction](../policy/data-sovereignty-and-jurisdiction.md) guidance for data residency and retention requirements, the [model assurance and transparency](model-assurance-and-transparency.md) document for vendor transparency requirements, the [comparative guidance](../manager-tool-guides/comparative-guidance.md) for vendor evaluation, the [risk register template](risk-register-template.md) for vendor risk documentation, and the [DPIA guidance](../policy/dpia-ai-coding-assistants.md) for data protection requirements.

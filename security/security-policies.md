@@ -1,4 +1,4 @@
-> **ALPHA**
+> ALPHA
 > This is a new service - your feedback will help us to improve it.
 
 # AI Coding Assistant Security Policy
@@ -15,7 +15,7 @@ This document establishes the security policy framework for AI coding assistant 
 - compliance and assurance requirements
 - exception and escalation processes
 
-This policy governs the [guardrails base](../governance/guardrails-base.md) and all department specific extensions. The guardrails provide technical controls. This policy provides the governance mandate.
+This policy governs the [guardrails base](../governance/guardrails-base.md) and all department-specific extensions. The guardrails provide technical controls. This policy provides the governance mandate.
 
 ---
 
@@ -23,10 +23,10 @@ This policy governs the [guardrails base](../governance/guardrails-base.md) and 
 
 | Document | Purpose | Audience |
 |----------|---------|----------|
-| **This policy** | Mandates and governance | SROs, SIROs, Security Leads |
+| This policy | Mandates and governance | SROs, SIROs, Security Leads |
 | [Threat model](threat-modelling.md) | Risk assessment and threat catalogue | Security teams |
 | [Guardrails base](../governance/guardrails-base.md) | Technical controls | All users |
-| Tool guides | Tool specific implementation | Users of specific tools |
+| Tool guides | Tool-specific implementation | Users of specific tools |
 | Playbooks | Operational procedures | Security practitioners |
 
 ---
@@ -39,7 +39,7 @@ This policy applies to the following categories.
 
 | Category | Details |
 |----------|---------|
-| Tools | All AI coding assistants including GitHub Copilot, Amazon Q Developer, Amazon Kiro, Cursor, Windsurf, Devin, Claude Code, Claude.ai, Gemini Code Assist, GitLab Duo, JetBrains AI Assistant, self hosted LLM solutions |
+| Tools | All AI coding assistants including GitHub Copilot, Amazon Q Developer, Amazon Kiro, Cursor, Windsurf, Devin, Claude Code, Claude.ai, Gemini Code Assist, GitLab Duo, JetBrains AI Assistant, self-hosted LLM solutions |
 | Personnel | Civil servants, contractors, and suppliers with access to government code repositories or development environments |
 | Environments | Development, test, staging, and production adjacent environments |
 | Data | All data classifications up to OFFICIAL-SENSITIVE (with appropriate controls) |
@@ -48,7 +48,7 @@ This policy applies to the following categories.
 
 | Category | Notes |
 |----------|-------|
-| Non coding AI systems | Covered by separate AI governance policies |
+| Non-coding AI systems | Covered by separate AI governance policies |
 | SECRET and above | Requires separate policy with enhanced controls |
 | Isolated research sandboxes | Where no government data is present and no connection to government systems exists |
 
@@ -91,11 +91,11 @@ Responsibilities include:
 - approving deployment of L5 (fully autonomous) AI tools
 - accepting residual risk after controls are applied
 - approving exceptions to this policy
-- ensuring risk register includes AI related risks
+- ensuring risk register includes AI-related risks
 
 ### AI security lead
 
-The AI Security Lead provides day to day security oversight.
+The AI Security Lead provides day-to-day security oversight.
 
 Responsibilities include:
 
@@ -114,7 +114,7 @@ Responsibilities include:
 
 - verifying team members have completed required training
 - implementing guardrails in team workflows
-- reviewing AI generated code before merge
+- reviewing AI-generated code before merge
 - escalating security incidents
 - maintaining team level risk awareness
 
@@ -125,8 +125,8 @@ All users of AI coding assistants must comply with this policy.
 Responsibilities include:
 
 - completing mandatory training before using AI tools
-- following guardrails and tool specific guidance
-- reviewing all AI generated code before committing
+- following guardrails and tool-specific guidance
+- reviewing all AI-generated code before committing
 - reporting security incidents promptly
 - maintaining awareness of data classification requirements
 
@@ -136,9 +136,9 @@ Responsibilities include:
 
 ### PS-01: tool approval required
 
-**Statement:** AI coding assistants must be approved before use on government projects.
+ AI coding assistants must be approved before use on government projects.
 
-**Requirements:**
+#### Requirements
 
 | Requirement | Details |
 |-------------|---------|
@@ -148,26 +148,26 @@ Responsibilities include:
 | Configuration | Tool must be configurable to meet guardrails |
 | Audit capability | Tool must provide adequate logging for accountability |
 
-**Authority:** AI Security Lead approves tools; SIRO approves L5 autonomous tools.
+Authority: AI Security Lead approves tools; SIRO approves L5 autonomous tools.
 
-**Reference:** UK AI Playbook Principle 6 (Right tool for the job)
+This requirement ensures that organisations select AI coding assistants appropriate to their specific security context, as outlined in the [UK AI Playbook for Government](https://www.gov.uk/government/publications/ai-playbook-for-the-uk-government/artificial-intelligence-playbook-for-the-uk-government-html) Principle 6.
 
 ---
 
 ### PS-02: data classification compliance
 
-**Statement:** AI coding assistants must only be used with data appropriate to their accreditation level.
+AI coding assistants must only be used with data appropriate to their accreditation level.
 
-**Requirements:**
+#### Requirements
 
 | Classification | Requirement |
 |----------------|-------------|
 | OFFICIAL | Permitted with standard controls (guardrails-base) |
-| OFFICIAL-SENSITIVE | Permitted only with enterprise licence providing enhanced controls, and tool specific accreditation |
+| OFFICIAL-SENSITIVE | Permitted only with enterprise licence providing enhanced controls, and tool-specific accreditation |
 | SECRET | Not permitted with any current AI coding assistant |
 | TOP SECRET | Not permitted with any current AI coding assistant |
 
-**Prohibited data types (regardless of classification):**
+#### Prohibited data types include (regardless of classification):
 
 - authentication credentials, API keys, tokens, certificates
 - personal data (PII) unless anonymised
@@ -175,17 +175,18 @@ Responsibilities include:
 - active case or investigation data
 - export controlled content
 
-**Controls:** G-DH-01 through G-DH-05
+#### Controls
+ G-DH-01 through G-DH-05
 
-**Reference:** Government Security Classifications, NCSC Cloud Security Principles
+This policy enforces [Government Security Classifications](https://www.gov.uk/government/publications/government-security-classifications) boundaries and implements [NCSC Cloud Security Principles](https://www.ncsc.gov.uk/collection/cloud-security) for data handling.
 
 ---
 
 ### PS-03: mandatory human oversight
 
-**Statement:** AI generated code must be reviewed by a human before deployment.
+AI-generated code must be reviewed by a human before deployment.
 
-**Requirements:**
+#### Requirements
 
 | Autonomy level (L) | Human oversight requirement |
 |----------------|----------------------------|
@@ -203,39 +204,41 @@ Meaningful review means the reviewer:
 
 Rubber stamping of AI output does not constitute meaningful review.
 
-**Controls:** G-CS-01, G-AG-06, G-AG-07
+Controls: G-CS-01, G-AG-06, G-AG-07
 
-**Reference:** UK AI Playbook Principle 4 (Human control at the right stage), NCSC ML Security Principles 1.2
+
+This policy aligns with the [UK AI Playbook for Government](https://www.gov.uk/government/publications/ai-playbook-for-the-uk-government/artificial-intelligence-playbook-for-the-uk-government-html) Principle 4 (Human control at the right stage) and the [NCSC ML Security Principles](https://www.ncsc.gov.uk/files/Principles-for-the-security-of-machine-learning.pdf) section 1.2 on human oversight.
+
 
 ---
 
 ### PS-04: secure development integration
 
-**Statement:** AI generated code must pass through the same security controls as human written code.
+AI-generated code must pass through the same security controls as human-written code.
 
-**Requirements:**
+#### Requirements
 
 | Control type | Requirement |
 |--------------|-------------|
 | Static analysis (SAST) | Mandatory before merge |
 | Dependency scanning | Mandatory before merge |
-| Secret detection | Mandatory (pre commit hook preferred) |
+| Secret detection | Mandatory (pre-commit hook preferred) |
 | Dynamic analysis (DAST) | Where applicable, before production deployment |
 | Container scanning | Where applicable, before deployment |
 
-AI generated code must not bypass security gates. The origin of code (human or AI) does not exempt it from security requirements.
+AI-generated code must not bypass security gates. The origin of code (human or AI) does not exempt it from security requirements.
 
-**Controls:** G-CS-02
+Controls: G-CS-02
 
-**Reference:** NCSC Secure Development and Deployment, OWASP Secure Coding Practices
+AI-generated code must be treated identically to human-written code throughout the secure development lifecycle, as outlined in [NCSC Secure Development and Deployment](https://www.ncsc.gov.uk/collection/developers-collection) and [OWASP Secure Coding Practices](https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/).
 
 ---
 
 ### PS-05: agentic AI governance
 
-**Statement:** AI tools with autonomous capabilities must be governed proportionate to their autonomy level.
+AI tools with autonomous capabilities must be governed proportionate to their autonomy level.
 
-**Requirements:**
+#### Requirements
 
 | Autonomy level (L)| Governance requirement |
 |----------------|----------------------|
@@ -246,85 +249,85 @@ AI generated code must not bypass security gates. The origin of code (human or A
 
 L5 tools are not approved for general use without explicit SIRO approval and dedicated security assessment.
 
-**Controls:** G-AG-01 through G-AG-08
+Controls: G-AG-01 through G-AG-08
 
-**Reference:** UK AI Playbook Principle 4, Anthropic Responsible Scaling Policy, OWASP Agentic AI Threats
+This policy aligns with the [UK AI Playbook for Government](https://www.gov.uk/government/publications/ai-playbook-for-the-uk-government/artificial-intelligence-playbook-for-the-uk-government-html) Principle 4 on human control, the [Anthropic Responsible Scaling Policy](https://www.anthropic.com/news/anthropics-responsible-scaling-policy) on AI safety, and [OWASP Agentic AI Threats and Mitigations](https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/) guidance on autonomous system security.
 
 ---
 
 ### PS-06: training requirements
 
-**Statement:** personnel must complete AI security training before using AI coding assistants.
+Personnel must complete AI security training before using AI coding assistants.
 
-**Requirements:**
+#### Requirements
 
 | Training | Audience | Frequency |
 |----------|----------|-----------|
 | AI coding assistant security awareness | All users | Before first use, then annually |
 | Prompt injection awareness | All users | Before first use |
-| Tool specific training | Users of specific tools | Before using that tool |
+| Tool-specific training | Users of specific tools | Before using that tool |
 | Agentic AI security | Users of L4 to L5 tools | Before using agentic features |
 | Security lead training | AI Security Leads | Before assuming role, then annually |
 
 Training completion must be recorded and verifiable.
 
-**Reference:** UK AI Playbook Principle 9 (Skills and expertise), NCSC ML Security Principles 1.1
+This requirement aligns with [UK AI Playbook for Government](https://www.gov.uk/government/publications/ai-playbook-for-the-uk-government/artificial-intelligence-playbook-for-the-uk-government-html) Principle 9 (Skills and expertise) and [NCSC ML Security Principles](https://www.ncsc.gov.uk/files/Principles-for-the-security-of-machine-learning.pdf) section 1.1 on secure development practices.
 
 ---
 
 ### PS-07: incident reporting
 
-**Statement:** security incidents involving AI coding assistants must be reported promptly.
+Security incidents involving AI coding assistants must be reported promptly.
 
-**Requirements:**
+#### Requirements
 
 | Incident type | Reporting timeframe | Report to |
 |---------------|--------------------|-----------| 
 | Data breach (credentials, PII, classified) | Immediately | Security team, then SIRO |
 | Suspected prompt injection | Within 4 hours | AI Security Lead |
 | Unexpected autonomous action | Immediately (after kill switch) | AI Security Lead |
-| Vulnerability in AI generated code | Within 24 hours | Security team |
+| Vulnerability in AI-generated code | Within 24 hours | Security team |
 | Near miss events | Within 48 hours | AI Security Lead |
 
-**The response must:**
+#### The response must:
 
 - follow [Incident Response Playbook](../governance/incident-response-playbook.md)
 - preserve evidence (do not delete AI output)
 - document timeline and actions taken
 
-**Reference:** NCSC Incident Management, NCSC ML Security Principles 4.3
+This requirement aligns with [NCSC Incident Management](https://www.ncsc.gov.uk/collection/incident-management) guidance and [NCSC ML Security Principles](https://www.ncsc.gov.uk/files/Principles-for-the-security-of-machine-learning.pdf) section 4.3 on incident response procedures.
 
 ---
 
 ### PS-08: audit and accountability
 
-**Statement:** AI coding assistant usage must be auditable.
+AI coding assistant usage must be auditable.
 
-**Requirements:**
+#### Requirements
 
 | Requirement | Details |
 |-------------|---------|
 | Usage logging | Tools must log who used them, when, and for what purpose |
-| Code attribution | AI generated code should be identifiable in version control |
+| Code attribution | AI-generated code should be identifiable in version control |
 | Prompt retention | Organisations should consider prompt logging (balancing privacy) |
 | Audit access | Security teams must have access to logs |
 | Retention period | Logs retained per organisational retention policy (minimum 12 months recommended) |
 
-**Sensitive data in logs:**
+#### Sensitive data in logs
 
 Logs themselves must not contain sensitive data. Prompt logging must be balanced against data protection requirements.
 
-**Controls:** G-MA-01, G-MA-02
+Controls: G-MA-01, G-MA-02
 
-**Reference:** UK AI Playbook Principle 10 (Organisational policies and assurance), NCSC ML Security Principles 3.2
+This policy aligns with the [UK AI Playbook for Government](https://www.gov.uk/government/publications/ai-playbook-for-the-uk-government/artificial-intelligence-playbook-for-the-uk-government-html) Principle 10 on organisational policies and assurance, and the [NCSC ML Security Principles](https://www.ncsc.gov.uk/files/Principles-for-the-security-of-machine-learning.pdf) section 3.2 on audit and accountability.
 
 ---
 
 ### PS-09: third party and supply chain
 
-**Statement:** AI coding assistant supply chains must be assessed and managed.
+AI coding assistant supply chains must be assessed and managed.
 
-**Requirements:**
+#### Requirements
 
 | Requirement | Details |
 |-------------|---------|
@@ -334,17 +337,17 @@ Logs themselves must not contain sensitive data. Prompt logging must be balanced
 | Contract requirements | Contracts must address data handling, security, and exit provisions |
 | Exit strategy | Plans must exist for tool discontinuation |
 
-**Controls:** G-CS-03
+Controls: G-CS-03
 
-**Reference:** UK AI Playbook Principle 8 (Commercial considerations), NCSC Supply Chain Security, NCSC ML Security Principles 2.1
+This policy aligns with the [UK AI Playbook for Government](https://www.gov.uk/government/publications/ai-playbook-for-the-uk-government/artificial-intelligence-playbook-for-the-uk-government-html) Principle 8 on commercial considerations, [NCSC Supply Chain Security](https://www.ncsc.gov.uk/collection/supply-chain-security) guidance, and [NCSC ML Security Principles](https://www.ncsc.gov.uk/files/Principles-for-the-security-of-machine-learning.pdf) section 2.1 on supply chain risk management.
 
 ---
 
 ### PS-10: continuous improvement
 
-**Statement:** this policy and associated controls must be continuously improved.
+This policy and associated controls must be continuously improved.
 
-**Requirements:**
+#### Requirements
 
 | Activity | Frequency | Owner |
 |----------|-----------|-------|
@@ -354,32 +357,35 @@ Logs themselves must not contain sensitive data. Prompt logging must be balanced
 | Lessons learned review | After significant incidents | AI Security Lead |
 | Corpus update monitoring | Monthly | AI Security Lead |
 
-**Triggers for immediate review include:**
+Triggers for immediate review include:
 
 - major security incident involving AI tools
 - new NCSC or UK Government guidance
 - significant new threat disclosed (e.g., new prompt injection technique)
 - major new tool capability (e.g., new autonomy features)
 
-**Reference:** UK AI Playbook Principle 7 (Open and collaborative), NCSC ML Security Principles 5.2
+This policy aligns with the [UK AI Playbook for Government](https://www.gov.uk/government/publications/ai-playbook-for-the-uk-government/artificial-intelligence-playbook-for-the-uk-government-html) Principle 7 on open and collaborative practices and the [NCSC ML Security Principles](https://www.ncsc.gov.uk/files/Principles-for-the-security-of-machine-learning.pdf) section 5.2 on continuous improvement and governance.
+
 
 ---
 
-### PS-11: tool type specific requirements
+### PS-11: tool-type-specific requirements
 
-**Statement:** different types of AI coding assistants have specific security requirements appropriate to their architecture and risk profile.
+Different types of AI coding assistants have specific security requirements appropriate to their architecture and risk profile.
 
 This policy recognises four distinct tool categories, each with unique security considerations.
 
 ---
 
-#### 11.1 Cloud hosted AI assistants
+#### 11.1 Cloud-hosted AI assistants
 
-**Tools in category:** GitHub Copilot, Amazon Q Developer, Gemini Code Assist, Claude.ai
+#### Tools in category
+ GitHub Copilot, Amazon Q Developer, Gemini Code Assist, Claude.ai
 
-**Architecture:** code context sent to external cloud provider for inference; suggestions returned to IDE.
+#### Architecture
+ Code context sent to external cloud provider for inference; suggestions returned to IDE.
 
-**Requirements:**
+#### Requirements
 
 | Requirement | Details |
 |-------------|---------|
@@ -391,7 +397,7 @@ This policy recognises four distinct tool categories, each with unique security 
 | Monitoring | Usage analytics enabled for compliance and security monitoring |
 | Data retention | Provider data retention policies reviewed and approved |
 
-**Tool specific notes**
+#### Tool-specific notes
 
 GitHub Copilot must have:
   - enterprise cloud or GitHub Enterprise Server required for government
@@ -416,39 +422,43 @@ Gemini Code Assist must have:
   - data retention controls configured (no training on prompts)
   - usage tracked via API keys per team
 
-**Primary threats:** T-DE-01, T-CH-01, T-CH-02, T-SC-02
+#### Primary threats
+ T-DE-01, T-CH-01, T-CH-02, T-SC-02
 
-**Key controls:** G-DH-01-05, PS-09, PS-11
+#### Key controls
+ G-DH-01-05, PS-09, PS-11
 
 ---
 
 #### 11.2 IDE integrated agents
 
-**Tools in category:** Cursor, Windsurf, GitHub Copilot (IDE extension), Amazon Kiro, Claude Code
+#### Tools in category
+Cursor, Windsurf, GitHub Copilot (IDE extension), Amazon Kiro, Claude Code
 
-**Architecture:** hybrid model with local context processing and selective cloud API calls; may include local caching/indexing.
+#### Architecture
+Hybrid model with local context processing and selective cloud API calls; may include local caching/indexing.
 
-**Requirements:**
+#### Requirements
 
 | Requirement | Details |
 |-------------|---------|
 | IDE security baseline | IDE must meet minimum security requirements (patching, authentication) |
 | Extension vetting | All IDE extensions undergo security review before approval |
-| Context isolation | Per project context isolation; no cross project leakage |
+| Context isolation | Per-project context isolation; no cross-project leakage |
 | Local cache security | Encrypted storage for local cache/index data |
 | Network controls | All cloud communication via approved corporate proxy/VPN |
 | Audit logging | IDE level logging where available (VS Code audit logs, etc.) |
 
-**Extension vetting process:**
+#### Extension vetting process
 
 | Extension type | Review requirement |
 |----------------|-------------------|
 | Open source | Source code security review; supply chain assessment |
 | Closed source | Vendor security questionnaire; SOC 2 / ISO 27001 certification |
 | Official tool extensions | Standard vendor assessment (PS-09) |
-| Third party extensions | Enhanced scrutiny; SIRO approval for OFFICIAL-SENSITIVE use |
+| Third-party extensions | Enhanced scrutiny; SIRO approval for OFFICIAL-SENSITIVE use |
 
-**Tool specific notes**
+#### Tool-specific notes
 
 Cursor must have:
   - team plan required for government use
@@ -480,19 +490,23 @@ Claude Code must have:
   - tool use requires explicit approval per tool
   - filesystem access scoped to project directory only
 
-**Primary threats:** T-DE-01, T-DE-03, T-IDE-01, T-IDE-02, T-PI-02
+#### Primary threats
+ T-DE-01, T-DE-03, T-IDE-01, T-IDE-02, T-PI-02
 
-**Key controls:** G-DH-05, G-CS-03, PS-11, full disk encryption
+#### Key controls
+ G-DH-05, G-CS-03, PS-11, full disk encryption
 
 ---
 
 #### 11.3 autonomous agents
 
-**Tools in category:** Devin, Amazon Kiro (frontier agent mode), Claude Code (agentic mode with extended permissions)
+#### Tools in category
+Devin, Amazon Kiro (frontier agent mode), Claude Code (agentic mode with extended permissions)
 
-**Architecture:** extended autonomous operation; can execute multi step tasks, run tests, create branches, and interact with external systems over minutes to hours.
+#### Architecture
+Architecture extended autonomous operation; can execute multi-step tasks, run tests, create branches, and interact with external systems over minutes to hours.
 
-**Requirements (beyond L4/L5 controls in G-AG-XX):**
+#### Requirements (beyond L4/L5 controls in G-AG-XX)
 
 | Requirement | Details |
 |-------------|---------|
@@ -505,7 +519,7 @@ Claude Code must have:
 | Post session review | Security review of all actions after session completion |
 | Incident response | Pre approved incident response plan specific to tool |
 
-**Sandbox environment requirements:**
+####  Sandbox environment requirements
 
 | Component | Requirement |
 |-----------|-------------|
@@ -513,10 +527,10 @@ Claude Code must have:
 | Network | Network isolated from production; internet access restricted to allowlist |
 | Credentials | No production credentials; dev or test credentials only; time limited |
 | Resources | Resource limits enforced (compute, storage, API call quotas) |
-| Monitoring | Enhanced logging and monitoring; real time alerts |
+| Monitoring | Enhanced logging and monitoring; real-time alerts |
 | Data | Clone of production data (anonymised); or synthetic data only |
 
-**Tool specific notes:**
+#### Tool-specific notes
 
 Devin must have:
   - dedicated tenant (not shared infrastructure)
@@ -531,7 +545,7 @@ Amazon Kiro (frontier agent mode) must have:
   - steering files must be security reviewed before use
   - agent hooks reviewed and approved per session
   - spec driven mode preferred over vibe driven mode
-  - multi model routing: only approved models may be used
+  - multi-model routing: only approved models may be used
   - AWS resource tagging for cost tracking and kill switch
   - CloudWatch alarms for unexpected API usage
   
@@ -542,19 +556,23 @@ Claude Code (agentic mode with extended permissions) must have:
   - extended thinking operations monitored for loops
   - session recording for audit purposes
 
-**Primary threats:** T-AG-01, T-AG-02, T-AG-03, T-AG-04, T-PI-02, T-AV-02
+#### Primary threats
+ T-AG-01, T-AG-02, T-AG-03, T-AG-04, T-PI-02, T-AV-02
 
-**Key controls:** G-AG-01-08, PS-05, Sandbox architecture, Kill switch, Dual approval
+#### Key controls 
+G-AG-01-08, PS-05, Sandbox architecture, Kill switch, Dual approval
 
 ---
 
-#### 11.4 self hosted solutions
+#### 11.4 self-hosted solutions
 
-**Tools in category:** Local LLM deployments, Ollama, LocalAI, LM Studio, private model hosting, air gapped deployments
+#### Tools in category
+Local LLM deployments, Ollama, LocalAI, LM Studio, private model hosting, air-gapped deployments
 
-**Architecture:** model and inference engine hosted on government controlled infrastructure. No external API calls.
+#### Architecture
+ The model and inference engine hosted on government controlled infrastructure. No external API calls.
 
-**Requirements:**
+#### Requirements
 
 | Category | Details |
 |----------|---------|
@@ -565,28 +583,28 @@ Claude Code (agentic mode with extended permissions) must have:
 | Access controls | Least privilege; MFA where applicable |
 | Monitoring | Local logging and monitoring; no external telemetry |
 
-**Infrastructure baseline requirements:**
+#### Infrastructure baseline requirements
 
 | Component | Requirement |
 |-----------|-------------|
 | Compute | Dedicated infrastructure; not shared with other workloads |
 | Storage | Encrypted at rest (model files, cache, logs) |
-| Network | Isolated VLAN or air gapped as appropriate to data classification |
+| Network | Isolated VLAN or air-gapped as appropriate to data classification |
 | Operating system | Hardened OS; CIS benchmarks applied; regular patching |
 | Access | Bastion/jump host for administrative access; MFA required |
 
-**Model provenance requirements:**
+#### Model provenance requirements
 
 | Requirement | Details |
 |-------------|---------|
 | Approved sources | Hugging Face (verified publishers), vendor official repos, approved academic sources |
 | Verification | SHA-256 hash verification of model files against published hashes |
 | License review | Model license compatible with government use |
-| Supply chain | Document model training data sources, fine tuning data if applicable |
+| Supply chain | Document model training data sources, fine-tuning data if applicable |
 | ML-BOM | Machine Learning Bill of Materials documenting all components |
 | Security audit | For models used with OFFICIAL-SENSITIVE: security audit of model origin |
 
-**Update management:**
+####  Update management
 
 | Component | Frequency | Process |
 |-----------|-----------|---------|
@@ -595,7 +613,7 @@ Claude Code (agentic mode with extended permissions) must have:
 | Operating system | Monthly | Standard patching process; inference engine compatibility verified |
 | Dependencies | Monthly | Dependency scanning; vulnerability assessment |
 
-**Air gap deployment additional requirements:**
+####  Air gap deployment additional requirements
 
 | Requirement | Details |
 |-------------|---------|
@@ -606,26 +624,26 @@ Claude Code (agentic mode with extended permissions) must have:
 | Documentation | Air gap compliance verification documented quarterly |
 | Maintenance | Scheduled maintenance windows for physical media transfers |
 
-**Approved self hosted model sources:**
+#### Approved self-hosted model sources:
 
 *(To be defined per department risk appetite; examples below)*
 
 | Source | Trust Level | Use Cases |
 |--------|-------------|-----------|
 | Vendor official (OpenAI, Anthropic, etc.) | High | General use if licensed |
-| Hugging Face (verified publishers) | Medium high | Open source models |
-| Meta Llama official releases | High | Open source, community vetted |
-| Mistral official releases | High | Open source, commercial options |
+| Hugging Face (verified publishers) | Medium-high | Open-source models |
+| Meta Llama official releases | High | Open-source, community vetted |
+| Mistral official releases | High | Open-source, commercial options |
 | Academic (after review) | Medium | Research, experimentation |
 
-**Prohibited self hosted scenarios include:**
+#### Prohibited self-hosted scenarios include:
 
 - models from unknown or unverified sources
 - models without license verification
-- fine tuning on unvetted training data
-- internet connected 'self hosted' without network controls
+- fine-tuning on unvetted training data
+- internet-connected 'self-hosted' without network controls
 
-**Tool specific notes**
+#### Tool-specific notes
 
 Ollama must have:
   - model library restricted to approved models
@@ -639,9 +657,11 @@ LocalAI / LM Studio must have:
   - API endpoint authentication enabled
   - logging configured to central syslog
 
-**Primary threats:** T-SA-01, T-SA-02, T-SA-03, T-SA-04, T-CS-01
+#### Primary threats
+T-SA-01, T-SA-02, T-SA-03, T-SA-04, T-CS-01
 
-**Key controls:** PS-11 (provenance), G-CS-02 (scanning), Infrastructure hardening, Air gap controls
+#### Key controls
+ PS-11 (provenance), G-CS-02 (scanning), Infrastructure hardening, Air gap controls
 
 ---
 
@@ -659,17 +679,17 @@ LocalAI / LM Studio must have:
 
 ### Self assessment checklist
 
-Teams should verify:
+Teams should verify that:
 
 - [ ] all team members have completed required training
 - [ ] approved tools only are in use
 - [ ] security scanning is integrated in CI/CD pipeline
-- [ ] code review process includes AI generated code verification
+- [ ] code review process includes AI-generated code verification
 - [ ] incident reporting channels are known and accessible
 - [ ] department specific guardrails are documented (if applicable)
-- [ ] tool type specific requirements met (PS-11)
+- [ ] tool-type-specific requirements met (PS-11)
 
-### Non compliance
+### Non-compliance
 
 | Severity | Examples | Response |
 |----------|----------|----------|
@@ -686,10 +706,10 @@ Teams should verify:
 
 Exceptions may be considered when:
 
-- business requirement cannot be met within policy constraints
-- risk is understood, documented, and accepted
+- a business requirement cannot be met within policy constraints
+- the risk is understood, documented, and accepted
 - compensating controls are in place
-- exception is time limited
+- the exception is time limited
 
 Exceptions should not be granted for:
 
@@ -754,51 +774,39 @@ Exceptions must be recorded in the risk register.
 
 ---
 
-## References
+## Further information and research
 
-### UK Government (tier 1)
+### UK Government frameworks
 
-- [UK AI Playbook for Government (2025)](https://www.gov.uk/government/publications/ai-playbook-for-the-uk-government/artificial-intelligence-playbook-for-the-uk-government-html)
+- [UK AI Playbook for government (2025)](https://www.gov.uk/government/publications/ai-playbook-for-the-uk-government/artificial-intelligence-playbook-for-the-uk-government-html)
 - [NCSC Guidelines for Secure AI System Development](https://www.ncsc.gov.uk/collection/guidelines-secure-ai-system-development)
-- [NCSC Principles for the Security of Machine Learning](https://www.ncsc.gov.uk/files/Principles-for-the-security-of-machine-learning.pdf)
-- [NCSC Cloud Security Principles](https://www.ncsc.gov.uk/collection/cloud-security)
-- [NCSC Secure Development and Deployment](https://www.ncsc.gov.uk/collection/developers-collection)
+- [NCSC Machine Learning Security Principles](https://www.ncsc.gov.uk/files/Principles-for-the-security-of-machine-learning.pdf)
 - [Government Security Classifications](https://www.gov.uk/government/publications/government-security-classifications)
 - [Technology Code of Practice](https://www.gov.uk/guidance/the-technology-code-of-practice)
 - [Cyber Essentials Scheme](https://www.ncsc.gov.uk/cyberessentials/overview)
+- [NCSC Cloud Security Principles](https://www.ncsc.gov.uk/collection/cloud-security)
+- [NCSC Secure Development and Deployment](https://www.ncsc.gov.uk/collection/developers-collection)
+- [NCSC Incident Management](https://www.ncsc.gov.uk/collection/incident-management)
+- [NCSC Supply Chain Security](https://www.ncsc.gov.uk/collection/supply-chain-security)
 
-### Standards (tier 3)
+### Industry standards and frameworks
 
-- [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
-- [ISO/IEC 42001:2023 AI Management System](https://www.iso.org/standard/81230.html)
-- [OWASP LLM Top 10 (2025)](https://genai.owasp.org/llm-top-10/)
+- [OWASP Secure Coding Practices](https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/)
 - [OWASP Agentic AI Threats and Mitigations](https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/)
-- [MITRE ATLAS](https://atlas.mitre.org/)
-
-### Vendor (tier 4)
-
+- [OWASP LLM Top 10 (2025)](https://genai.owasp.org/llm-top-10/)
 - [Anthropic Responsible Scaling Policy](https://www.anthropic.com/news/anthropics-responsible-scaling-policy)
+- [Nist AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
+- [MITRE ATLAS](https://atlas.mitre.org/)
+- [ISO/IEC 42001:2023 AI Management System](https://www.iso.org/standard/81230.html)
+
+### Security resources
+
 - [GitHub Copilot Trust Center](https://resources.github.com/copilot-trust-center/)
-
----
-
-## Document control
-
-| Field | Value |
-|-------|-------|
-| Version | 1.0.0 |
-| Status | Draft |
-| Classification | OFFICIAL |
-| Owner | AI Security Lead |
-| Approved by | [SIRO - pending] |
-| Created | 2026-02-05 |
-| Updated | 2026-02-10 |
-| Review date | 2027-02-09 |
 
 ### Version history
 
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
 | 0.1.0 | 2026-02-05 | AI Security Lead | Initial draft |
-| 1.0.0 | 2026-02-09 | AI Security Lead | Added PS-11 comprehensive tool type requirements covering all 4 categories |
+| 1.0.0 | 2026-02-09 | AI Security Lead | Added PS-11 comprehensive tool-type requirements covering all 4 categories |
 | 1.0.1 | 2026-02-10 | AI Security Lead | Applied GDS style guide formatting: bullet points start with lower case |

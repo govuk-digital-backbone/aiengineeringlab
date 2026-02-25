@@ -1,4 +1,4 @@
-> **ALPHA**
+> ALPHA
 > This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 
 # AI Engineering Lab incident response playbook
@@ -19,7 +19,7 @@ Use this playbook when:
 
 ## Key terms and acronyms
 
-Senior information risk owner (SIRO) – is accountable for information risk and approves major decisions.
+Senior information risk owner (SIRO) – accountable for information risk and approves major decisions.
 
 Senior responsible owner (SRO) – AI Engineering Lab programme lead.
 
@@ -82,7 +82,7 @@ If you discover an incident, take the following steps.
    - which AI tool was involved
    - what data or systems may be affected
    - your contact details
-   
+
 #### Detection sources
 
 Incidents may be detected through:
@@ -189,7 +189,7 @@ Data exposure (DE) means any incident where sensitive, confidential or personal 
 
 #### Containment verification
 
-Before proceeding to eradication, you should confirm the following. 
+Before proceeding to eradication, you should confirm the following.
 
 - [ ] Immediate threat has been neutralised
 - [ ] Affected systems or data have been isolated
@@ -277,7 +277,7 @@ For P1 and P2 incidents, conduct a blameless post-incident review.
 
 ### Example A: personal data exposed to AI tool
 
-Scenario: in this example, an engineer accidentally includes real customer personally identifiable information (PII) in a prompt.
+Scenario: an engineer accidentally includes real customer personally identifiable information (PII) in a prompt.
 
 #### Immediate actions
 
@@ -312,7 +312,7 @@ You must:
 
 ### Example B: security vulnerability deployed to production
 
-Scenario: in this example, AI-generated code containing an SQL injection vulnerability reaches production.
+Scenario: AI-generated code containing an SQL injection vulnerability reaches production.
 
 #### Immediate actions
 
@@ -327,7 +327,7 @@ You should consider:
 - what data could be accessed via the vulnerability
 - how long has the vulnerability been in production
 - if there is evidence of exploitation
-- what compensating controls exist (Web application firewall (WAF), input validation)
+- what compensating controls exist (web application firewall (WAF), input validation)
 
 #### Containment
 
@@ -347,7 +347,7 @@ You must action:
 
 ### Example C: API key committed to repository
 
-Scenario: in this example, the AI suggests code containing a hardcoded API key, which is then committed.
+Scenario: the AI suggests code containing a hardcoded API key, which is then committed.
 
 #### Immediate actions
 
@@ -375,12 +375,12 @@ git filter-repo --invert-paths --path
 You must:
 
 - enable pre-commit hooks for secret detection
-- review Continuous Integration/Continuous Deployment (CI/CD) secret scanning configuration
+- review continuous integration/continuous deployment (CI/CD) secret scanning configuration
 - reinforce training on secret management
 
 ### Example D: suspected prompt injection attack
 
-Scenario: in this example, the AI assistant produces unexpected output suggesting a malicious prompt injection.
+Scenario: the AI assistant produces unexpected output suggesting a malicious prompt injection.
 
 #### Immediate actions
 
@@ -403,7 +403,7 @@ You must:
 
 - review the application for prompt injection vulnerabilities
 - implement input sanitisation
-- consider rate limiting AI interactions
+- consider rate-limiting AI interactions
 
 #### Vendor notification
 
@@ -511,13 +511,6 @@ Questions: Contact [Incident Owner]
 | Monthly report | Monthly | Programme Board | Trends, lessons learned, recommendations |
 | Quarterly review | Quarterly | SIRO, Senior Leadership | Strategic risks, control effectiveness |
 
-## Related documents
+## Further reading
 
-- [Guardrails Base](guardrails-base.md) - Security controls to prevent incidents
-- [Risk Register Template](risk-register-template.md) - Risk documentation
-
-## References
-
-- [NCSC Incident Management Guidance](https://www.ncsc.gov.uk/collection/incident-management)
-- [ICO Personal Data Breach Guidance](https://ico.org.uk/for-organisations/report-a-breach/)
-- [Government Security Classifications](https://www.gov.uk/government/publications/government-security-classifications)
+The [NCSC incident management guidance](https://www.ncsc.gov.uk/collection/incident-management) provides practical advice on preparing for and responding to incidents. If personal data is involved, the [ICO personal data breach guidance](https://ico.org.uk/for-organisations/report-a-breach/) covers when and how to notify the regulator. The [government security classifications](https://www.gov.uk/government/publications/government-security-classifications) framework underpins the severity and data classification approach used throughout this playbook. For related internal guidance, see the [guardrails base](guardrails-base.md) for security controls that help prevent incidents, and the [risk register template](risk-register-template.md) for documenting and tracking risk.

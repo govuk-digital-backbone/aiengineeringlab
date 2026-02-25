@@ -1,7 +1,7 @@
-> **ALPHA**
-> This is a new service – your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
+> ALPHA
+> This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 
-# AI assisted software development lifecycle
+# AI-assisted software development lifecycle
 
 This playbook provides guidance on integrating AI coding assistants across all phases of the software development lifecycle. It is designed for UK government teams providing digital services and complements the 'Government Service Manual' and 'AI Playbook for the UK Government'.
 
@@ -31,25 +31,21 @@ Before integrating AI coding assistants into your workflow, make sure you have:
 
 When using AI coding assistants throughout the software development lifecycle, apply these principles consistently.
 
-Human oversight remains essential. AI coding assistants accelerate work but do not replace professional judgement. All AI generated outputs require human review, particularly for security sensitive code, architectural decisions and user facing content.
+Human oversight remains essential. AI coding assistants accelerate work but do not replace professional judgement. All AI-generated outputs require human review, particularly for security-sensitive code, architectural decisions and user-facing content.
 
 Context drives quality. The effectiveness of AI coding assistant outputs depends directly on the context you provide. Invest time in context engineering to achieve better results.
 
-Verify before committing. Never commit AI generated code without understanding what it does. Run tests, review logic and validate against requirements.
+Verify before committing. Never commit AI-generated code without understanding what it does. Run tests, review logic and validate against requirements.
 
 Continuous compliance. Use Model Context Protocol (MCP) servers and guardrails to embed government standards (Technology Code of Practice, Web Content Accessibility Guidelines (WCAG), National Cyber Security Centre (NCSC), Government Service Standard) into your workflow from the start, not as an afterthought.
-
----
 
 ## Software development lifecycle phases
 
 The following sections describe how to use AI coding assistants effectively at each phase of the software development lifecycle. Each phase includes practical guidance, example prompts and anti-patterns to avoid.
 
----
-
 ## Plan
 
-Purpose: decide what to build next and break work into deliverable units.
+Decide what to build next and break work into deliverable units.
 
 ### How AI coding assistants help
 
@@ -80,7 +76,7 @@ Create spike documentation. When investigating unknowns, use AI coding assistant
 
 You should avoid:
 
-- accepting AI generated estimates without team validation
+- accepting AI-generated estimates without team validation
 - using AI coding assistants to write user stories without user research input
 - skipping human review of technical approach recommendations
 
@@ -92,11 +88,9 @@ You are following good practice if:
 - the technical approach is understood and agreed by the team
 - dependencies and risks are identified early
 
----
-
 ## Code
 
-Purpose: write software that solves user problems while meeting government standards.
+Write software that solves user problems while meeting government standards.
 
 ### How AI coding assistants help
 
@@ -135,7 +129,7 @@ The quality of AI coding assistant code suggestions depends heavily on context. 
 - intent context: what you are trying to achieve and why
 - constraint context: security requirements, performance needs, accessibility standards
 
-See 'context-engineering.md' for detailed guidance.
+See [context engineering](context-engineering.md) for detailed guidance.
 
 ### Security considerations
 
@@ -143,10 +137,12 @@ You should:
 
 - never paste secrets, credentials or API keys into AI coding assistant prompts
 - review generated code for security vulnerabilities before committing
-- use static application security testing tools to validate AI generated code
-- be cautious with AI generated SQL, authentication and authorisation code
+- use static application security testing tools to validate AI-generated code
+- be cautious with AI-generated SQL, authentication and authorisation code
 - validate input handling and output encoding in generated code
-- configure coding agents to exclude sensitive files (agentic coding tools should be configured to avoid reading .env files, .env.local, credential files or any other files containing environment variables or secrets - add these patterns to your agent's ignore configuration to prevent accidental exposure of sensitive data)
+- configure coding agents to exclude sensitive files
+
+Agentic coding tools should be configured to avoid reading .env files, .env.local, credential files or any other files containing environment variables or secrets. Add these patterns to your agent's ignore configuration to prevent accidental exposure of sensitive data.
 
 ### Anti-patterns to avoid
 
@@ -164,14 +160,12 @@ You are following good practice if:
 
 - the code follows team conventions and passes linting
 - the generated code has appropriate test coverage
-- security sensitive code receives additional review
+- security-sensitive code receives additional review
 - engineers can explain what their code does
-
----
 
 ## Build
 
-Purpose: prepare code changes for testing by compiling, packaging and validating.
+Prepare code changes for testing by compiling, packaging and validating.
 
 ### How AI coding assistants help
 
@@ -213,11 +207,9 @@ You are following good practice if:
 - dependencies are up to date and secure
 - the build process is documented and reproducible
 
----
-
 ## Test
 
-Purpose: ensure everything works properly and meets quality standards.
+Ensure everything works properly and meets quality standards.
 
 ### How AI coding assistants help
 
@@ -246,11 +238,11 @@ Generate test data. Create realistic test data sets that cover various scenarios
 
 Write behaviour-driven development scenarios. Generate Gherkin scenarios from requirements, ensuring comprehensive coverage of user journeys.
 
-Create accessibility test cases. Generate test cases that verify Web Content Accessibility Guidelines compliance for user facing components.
+Create accessibility test cases. Generate test cases that verify Web Content Accessibility Guidelines compliance for user-facing components.
 
 ### Test quality considerations
 
-AI generated tests require careful review. Check that tests:
+AI-generated tests require careful review. Check that tests:
 
 - actually verify meaningful behaviour, not just achieve coverage
 - use appropriate assertions (not just checking for no exceptions)
@@ -264,7 +256,7 @@ You should avoid:
 
 - generating tests purely to increase coverage metrics
 - accepting tests without verifying they test the right behaviour
-- using AI generated test data that contains realistic personal data
+- using AI-generated test data that contains realistic personal data
 - skipping review of test assertions
 
 ### Quality indicators
@@ -276,11 +268,9 @@ You are following good practice if:
 - tests run reliably without flakiness
 - edge cases and error paths are covered
 
----
-
 ## Release
 
-Purpose: coordinate launching new features safely.
+Coordinate launching new features safely.
 
 ### How AI coding assistants help
 
@@ -312,7 +302,7 @@ Prepare rollback procedures. Document rollback steps for each significant change
 
 You should avoid:
 
-- publishing AI generated release notes without review
+- publishing AI-generated release notes without review
 - automating release decisions without human approval
 - skipping rollback planning for complex changes
 
@@ -325,15 +315,13 @@ You are following good practice if:
 - breaking changes are communicated in advance
 - rollback procedures are tested and documented
 
----
-
 ## Deploy
 
-Purpose: put your service live for users safely and reliably.
+Put your service live for users safely and reliably.
 
 ### How AI coding assistants help
 
-AI coding assistants work with infrastructure configuration, deployment scripts and troubleshooting deployment issues. They can generate and review infrastructure as code.
+AI coding assistants work with infrastructure configuration, deployment scripts and troubleshooting deployment issues. They can generate and review infrastructure-as-code.
 
 ### Recommended activities
 
@@ -355,14 +343,14 @@ Review infrastructure changes. Before applying infrastructure changes, use AI co
 
 Troubleshoot deployment failures. Share deployment logs and configuration to diagnose issues quickly.
 
-Generate deployment runbooks. Create step by step deployment guides for operations teams.
+Generate deployment runbooks. Create step-by-step deployment guides for operations teams.
 
 ### Security considerations
 
 You should:
 
 - review all generated infrastructure code for security misconfigurations
-- never include credentials in infrastructure as code
+- never include credentials in infrastructure-as-code
 - validate network configurations and access controls
 - make sure logging and monitoring are properly configured
 
@@ -370,7 +358,7 @@ You should:
 
 You should avoid:
 
-- deploying AI generated infrastructure without security review
+- deploying AI-generated infrastructure without security review
 - using overly permissive security configurations from suggestions
 - skipping testing of deployment scripts
 
@@ -383,11 +371,9 @@ You are following good practice if:
 - rollback procedures work reliably
 - deployment time is minimised
 
----
-
 ## Operate
 
-Purpose: keep your service running smoothly for users.
+Keep your service running smoothly for users.
 
 ### How AI coding assistants help
 
@@ -428,13 +414,11 @@ You are following good practice if:
 - incidents are resolved quickly with clear documentation
 - runbooks are accurate and up to date
 - the service meets availability and performance targets
-- on call burden is manageable
-
----
+- on-call burden is manageable
 
 ## Monitor
 
-Purpose: learn from real usage to improve the service.
+Learn from real usage to improve the service.
 
 ### How AI coding assistants help
 
@@ -478,8 +462,6 @@ You are following good practice if:
 - service improvements are driven by data
 - user satisfaction is measured and improving
 
----
-
 ## Continuous compliance
 
 Throughout all software development lifecycle phases, use Model Context Protocol servers to maintain continuous compliance with government standards. This includes:
@@ -491,30 +473,15 @@ Throughout all software development lifecycle phases, use Model Context Protocol
 
 Configure your AI Engineering Lab tools to reference these standards automatically, catching compliance issues during development rather than at assessment.
 
----
-
 ## Getting help
 
-If you encounter challenges using AI coding assistants effectively, complete these steps.
+If you encounter challenges using AI coding assistants effectively, complete the following steps.
 
 1. Check the prompt library for tested prompts for common scenarios.
 2. Consult your team's AI Engineering Lab champion for guidance.
 3. Raise questions in the cross-government AI Engineering Lab community channels.
 4. Request support from the Forward Deployed Engineering team for complex adoption challenges.
 
----
+## Further reading
 
-## Related resources
-Review useful resources, including:
-- [context engineering playbook](context-engineering.md)
-- [model selection guidance](model-selection.md)
-- [guardrails base configuration](../governance/guardrails-base.md)
-- [government AI Playbook](https://www.gov.uk/government/publications/ai-playbook-for-the-uk-government)
-- [service manual](https://www.gov.uk/service-manual)
-- [Version 1 UK Gov Example AI SDLC](https://github.com/Version1/uk-gov-example-ai-sdlc)
-
----
-
-## Contributing
-
-To suggest improvements or report issues, see [CONTRIBUTING.md](../CONTRIBUTING.md).
+The [context engineering playbook](context-engineering.md) and [model selection guidance](model-selection.md) provide deeper guidance on getting the best from AI coding assistants. The [guardrails base configuration](../governance/guardrails-base.md) defines your organisation's constraints. For broader context, refer to the [government AI Playbook](https://www.gov.uk/government/publications/ai-playbook-for-the-uk-government) and [service manual](https://www.gov.uk/service-manual). The [Version 1 UK Gov Example AI SDLC](https://github.com/Version1/uk-gov-example-ai-sdlc) provides a worked example.

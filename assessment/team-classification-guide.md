@@ -1,4 +1,4 @@
-> **ALPHA**
+> ALPHA
 > This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 
 # Team classification guide
@@ -7,7 +7,7 @@
 
 ## Purpose
 
-This guide provides detailed criteria for classifying teams following the maturity assessment. It helps assessors make consistent classification decisions and helps teams understand what their classification means.
+This guide provides detailed criteria for classifying teams following the [maturity assessment](maturity-assessment-framework.md). It helps assessors make consistent classification decisions and helps teams understand what their classification means.
 
 Use this guide to:
 
@@ -22,15 +22,15 @@ For the full assessment process, see [Maturity assessment framework](maturity-as
 
 | Level | Description | Support model | Typical programme duration |
 |-------|-------------|---------------|---------------------------|
-| Starting | Teams needing intensive support to begin adoption | Embedded forward deployed engineer (FDE), high touch | 6 to 8 weeks to developing |
+| Starting | Teams needing intensive support to begin adoption | Embedded forward deployed engineer (FDE), high-touch | 6 to 8 weeks to developing |
 | Developing | Teams building proficiency with moderate support | Shared FDE, blended | 4 to 6 weeks to established |
-| Established | Teams ready for self sufficient adoption | On-demand consultation | Ongoing self-service |
+| Established | Teams ready for self-sufficient adoption | On-demand consultation | Ongoing self-service |
 
 ## Starting classification
 
 ### Profile summary
 
-Starting teams have limited AI assistant experience, face significant constraints, or have substantial barriers to adoption. They need intensive, hands on support to successfully begin using AI coding assistants.
+Starting teams have limited AI assistant experience, face significant constraints, or have substantial barriers to adoption. They need intensive, hands-on support to successfully begin using AI coding assistants.
 
 ### Identifying characteristics
 
@@ -41,17 +41,17 @@ Starting teams have limited AI assistant experience, face significant constraint
 | Complex legacy environment | Mainframe, COBOL, outdated frameworks, minimal tooling |
 | Non-standard development setup | No consistent IDE, complex local environment requirements |
 | Limited CI/CD maturity | Manual deployments, no automated testing pipeline |
-| Security constraints | Air gapped networks, complex approval processes, OFFICIAL-SENSITIVE and above data |
+| Security constraints | Air-gapped networks, complex approval processes, OFFICIAL-SENSITIVE and above data |
 | Poor documentation | Tribal knowledge, outdated or missing architecture docs |
 
 #### Team indicators
 
-| Indicator | What it looks like |
-|-----------|-------------------|
-| Limited AI experience | Less than 20% of team have used any AI coding tools |
-| Junior heavy composition | More than 50% of team are junior engineers |
-| High turnover | Significant team changes in past 6 months |
-| Knowledge silos | One to 2 individuals hold key knowledge |
+| Indicator | What it looks like                                   |
+|-----------|------------------------------------------------------|
+| Limited AI experience | Less than 20% of team have used any AI coding tools  |
+| Junior-heavy composition | More than 50% of team are junior engineers           |
+| High turnover | Significant team changes in past 6 months            |
+| Knowledge silos | One to two individuals hold important knowledge      |
 | Limited learning culture | No time allocated for learning, no knowledge sharing |
 
 #### Delivery indicators
@@ -79,9 +79,9 @@ Starting teams have limited AI assistant experience, face significant constraint
 | Element | Approach |
 |---------|----------|
 | FDE model | Embedded (dedicated FDE for 2 to 4 weeks) |
-| Training | Face to face workshops, guided hands on |
-| Check ins | Daily during first 2 weeks |
-| Change management | High touch, address resistance directly |
+| Training | Face-to-face workshops, guided hands-on |
+| Check-ins | Daily during first 2 weeks |
+| Change management | High-touch, address resistance directly |
 | Focus | Build basic confidence, quick wins, address concerns |
 
 ### What starting teams need to progress
@@ -133,21 +133,21 @@ Developing teams have foundational capabilities or some AI experience. They need
 
 #### Attitude indicators
 
-| Indicator | What it looks like |
-|-----------|-------------------|
-| Cautiously positive | Open to trying, want to see results |
-| Some concerns | Questions about quality, security, workflow |
-| Mixed enthusiasm | Some keen, some neutral, few resistant |
-| Pragmatic mindset | 'Show me it works' attitude |
-| Potential champions | 1 or 2 people who could become champions |
+| Indicator | What it looks like                           |
+|-----------|----------------------------------------------|
+| Cautiously positive | Open to trying, want to see results          |
+| Some concerns | Questions about quality, security, workflow  |
+| Mixed enthusiasm | Some keen, some neutral, few resistant       |
+| Pragmatic mindset | 'Show me it works' attitude                  |
+| Potential champions | One or two people who could become champions |
 
-### Support approach for Developing teams
+### Support approach for developing teams
 
 | Element | Approach |
 |---------|----------|
 | FDE model | Shared (FDE across 2 to 3 teams, 2 to 3 days per week) |
-| Training | Blended (self paced and facilitated sessions) |
-| Check ins | Weekly |
+| Training | Blended (self-paced and facilitated sessions) |
+| Check-ins | Weekly |
 | Change management | Standard approach, address concerns as they arise |
 | Focus | Build proficiency, advanced techniques, identify champions |
 
@@ -165,7 +165,7 @@ To progress to established classification, developing teams need to demonstrate:
 
 ### Profile summary
 
-Established teams are ready for self sufficient AI Engineering Lab adoption. They have strong foundational practices, experienced team members, and positive attitudes. They need minimal direct support and can serve as role models for other teams.
+Established teams are ready for self-sufficient AI Engineering Lab adoption. They have strong foundational practices, experienced team members, and positive attitudes. They need minimal direct support and can serve as role models for other teams.
 
 ### Identifying characteristics
 
@@ -213,9 +213,9 @@ Established teams are ready for self sufficient AI Engineering Lab adoption. The
 | Element | Approach |
 |---------|----------|
 | FDE model | On-demand consultation |
-| Training | Self paced with optional advanced workshops |
-| Check ins | Bi weekly or monthly |
-| Change management | Light touch, team self manages |
+| Training | Self-paced with optional advanced workshops |
+| Check-ins | Bi-weekly or monthly |
+| Change management | Light-touch, team self-manages |
 | Focus | Optimisation, advanced use cases, champion development |
 
 ### Role of established teams in programme
@@ -274,7 +274,7 @@ Consider using dimension scoring from the [Maturity Assessment Framework](maturi
 
 ### Override conditions
 
-Certain conditions override the score based classification.
+Certain conditions override the score-based classification.
 
 | Condition | Override |
 |-----------|----------|
@@ -282,7 +282,7 @@ Certain conditions override the score based classification.
 | Critical deadline within 4 weeks | Maximum: starting |
 | More than 50% active resistance | Maximum: starting |
 | No management support | Maximum: starting |
-| Air gapped environment (cloud tools) | Not suitable for cloud AI tools |
+| Air-gapped environment (cloud tools) | Not suitable for cloud AI tools |
 | Active champions and more than 80% daily usage | Minimum: developing |
 
 ### Borderline cases
@@ -293,7 +293,7 @@ For teams scoring near classification boundaries, such as 1.7 to 1.8 or 2.4 to 2
 - consider trajectory, is the team improving or facing new challenges
 - apply 'benefit of doubt', when uncertain, classify lower to ensure adequate support
 - document rationale, record why borderline decision was made
-- plan early reassessment, schedule check in at 2 weeks instead of 4
+- plan early reassessment, schedule check-in at 2 weeks instead of 4
 
 ## Dimension-specific guidance
 
@@ -364,13 +364,13 @@ Team maintaining 15-year-old Java application, planning modernisation.
 
 Average: 2.0 leading to developing classification.
 
-Despite legacy technical environment, team is stable, has capacity, and sees AI as helpful for modernisation. Developing classification with focus on legacy specific techniques.
+Despite legacy technical environment, team is stable, has capacity, and sees AI as helpful for modernisation. Developing classification with focus on legacy-specific techniques.
 
 ---
 
 ### Scenario 2: high-pressure delivery team
 
-Team building new citizen facing service with go live in 6 weeks.
+Team building new citizen-facing service with go-live in 6 weeks.
 
 | Assessment | Score | Description |
 |------------|-------|-------------|
@@ -387,7 +387,7 @@ However, critical deadline override applies.
 
 Classification: starting (deferred).
 
-Despite strong indicators, team cannot allocate time for adoption. Recommend deferring intensive adoption until after go live, with self-service resources available for interested individuals now.
+Despite strong indicators, team cannot allocate time for adoption. Recommend deferring intensive adoption until after go-live, with self-service resources available for interested individuals now.
 
 ### Scenario 3: security-constrained team
 
@@ -419,9 +419,9 @@ Team where engineers are sceptical about AI tools.
 | Attitudes | 1 | 40% resistant, 30% neutral, 30% positive |
 | Ways of working | 3 | Strong |
 
-Average: 2.3 leading to Developing classification.
+Average: 2.3 leading to developing classification.
 
-Despite good technical foundations, attitude score pulls down average. Developing classification with heavy change management focus. FDE should work with resistant individuals, demonstrating value, and building from the 30% who are positive.
+Despite good technical foundations, attitude score pulls down average. Developing classification with heavy change management emphasis. FDE should work with resistant individuals, demonstrating value, and building from the 30% who are positive.
 
 ### Scenario 5: champion-ready team
 
@@ -437,9 +437,9 @@ Team with several AI enthusiasts already experimenting.
 | Ways of working | 3 | Strong practices |
 
 
-Average: 3.0 leading to Established classification.
+Average: 3.0 leading to established classification.
 
-Clear Established classification. Focus on enabling existing enthusiasts as champions, capturing their patterns for AI Engineering Lab repository, and connecting them to community. Light touch support only.
+Clear established classification. Focus on enabling existing enthusiasts as champions, capturing their patterns for AI Engineering Lab repository, and connecting them to community. Light-touch support only.
 
 ## Classification communication
 
@@ -470,11 +470,11 @@ Team: [Name]
 Classification: [Starting, Developing, or Established]
 Assessment date: [Date]
 
-What this means.
+What this means:
 
 [2 to 3 sentences explaining the classification and support model]
 
-Key strengths identified.
+Main strengths identified.
 
 1. [Strength 1]
 2. [Strength 2]
@@ -533,9 +533,6 @@ You should record:
 
 ---
 
-## Related documents
+## Further reading
 
-- [Maturity Assessment Framework](maturity-assessment-framework.md) - full assessment process
-- [Delivery Manager Assessment](assessment-questionnaires/delivery-manager-assessment.md) - delivery manager questionnaire
-- [Technical Lead Assessment](assessment-questionnaires/technical-lead-assessment.md) - tech lead questionnaire
-- [Individual Engineer Assessment](assessment-questionnaires/individual-engineer-assessment.md) - engineer questionnaire
+The [delivery manager assessment](assessment-questionnaires/delivery-manager-assessment.md), [technical lead assessment](assessment-questionnaires/technical-lead-assessment.md), and [individual engineer assessment](assessment-questionnaires/individual-engineer-assessment.md) questionnaires are the assessment instruments used alongside this guide to gather the evidence needed to make classification decisions.

@@ -1,7 +1,5 @@
-[← Back to Index](./prompt-engineering-index.md)
-
-> **ALPHA**
-> This is a new service – your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
+> ALPHA
+> This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 
 # Prompt engineering for testing: getting comprehensive test coverage
 
@@ -311,9 +309,3 @@ The comprehensive approach includes:
 - testing accessibility requirements
 - keeping tests maintainable and fast
 - updating tests as code evolves
-
----
-
-Previous: [Practical use cases](./prompt-engineering-use-cases.md)
-
-Next: [Prompt engineering for code documentation](./prompt-engineering-documentation.md)

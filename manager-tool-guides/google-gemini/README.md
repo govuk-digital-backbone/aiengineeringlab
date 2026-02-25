@@ -1,4 +1,4 @@
-> **ALPHA**
+> ALPHA
 > This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 
 # Google Gemini Code Assist: manager tool guide
@@ -19,7 +19,7 @@ This guide is for:
 
 - [what Gemini Code Assist does](#what-gemini-code-assist-does)
 - [how it compares with other tools](#how-it-compares-with-other-ai-engineering-lab-tools)
-- [government specific considerations](#government-specific-considerations)
+- [government-specific considerations](#government-specific-considerations)
 - [getting started](#getting-started)
 - [phased rollout approach](#phased-rollout-approach)
 - [training requirements](#training-requirements)
@@ -28,7 +28,6 @@ This guide is for:
 - [integration with development workflow](#integration-with-development-workflow)
 - [security best practices](#security-best-practices)
 - [support and escalation](#support-and-escalation)
-- [related resources](#related-resources)
 - [contributing](#contributing) (how to improve this guide)
 
 ## Before you start
@@ -42,7 +41,7 @@ Before reading this guide, you should understand:
 
 ## What Gemini Code Assist does
 
-Google Gemini Code Assist provides AI powered assistance throughout the software development lifecycle. It generates code suggestions, explains existing code, and helps with development tasks directly in your integrated development environment (IDE). It has deep integration with Google Cloud Platform (GCP) services.
+Google Gemini Code Assist provides AI-powered assistance throughout the software development lifecycle. It generates code suggestions, explains existing code, and helps with development tasks directly in your integrated development environment (IDE). It has deep integration with Google Cloud Platform (GCP) services.
 
 Gemini Code Assist can:
 
@@ -69,11 +68,11 @@ Gemini Code Assist can:
 | Inline suggestions | Daily coding, implementing patterns, writing boilerplate |
 | Next edit predictions | Related changes across a file |
 | Gemini Chat | Explanations, debugging, architecture questions |
-| Agent mode | Complex multi file refactoring, feature implementation |
+| Agent mode | Complex multi-file refactoring, feature implementation |
 
 ### Agent mode
 
-Agent mode handles complex tasks spanning multiple files. It analyses your codebase, proposes a plan for your review, then executes changes with your oversight at each step.
+Agent mode handles complex tasks spanning multiple files. It analyses your codebase, proposes a plan for your review, then executes changes with your oversight at each step. The [agent mode documentation](https://developers.google.com/gemini-code-assist/docs/write-code-gemini) covers the full range of capabilities.
 
 Gemini Code Assist tools were deprecated on 14 October 2025. External service integrations now use Model Context Protocol (MCP) servers in agent mode.
 
@@ -84,7 +83,7 @@ Gemini Code Assist tools were deprecated on 14 October 2025. External service in
 | Inline completion | Excellent | Excellent | Good | Not available |
 | Chat assistance | Excellent | Good | Good | Excellent |
 | Agent mode | Yes | Yes (preview) | Limited | Yes |
-| Codebase understanding | Up to 2 million tokens | Current file focus | Repository wide | Multi file context |
+| Codebase understanding | Up to 2 million tokens | Current file focus | Repository-wide | Multi-file context |
 | GCP integration | Native | Limited | Limited | Via MCP |
 | AWS integration | Limited | Limited | Native | Via MCP |
 | Primary use case | GCP workflows | Fast completion | AWS workflows | Reasoning tasks |
@@ -92,16 +91,17 @@ Gemini Code Assist tools were deprecated on 14 October 2025. External service in
 Choose Gemini Code Assist when:
 
 - your team primarily works with Google Cloud Platform
-- you need agent mode for complex, multi step coding tasks
-- you need large scale code transformation for migrations
-- your infrastructure is GCP based
+- you need agent mode for complex, multi-step coding tasks
+- you need large-scale code transformation for migrations
+- your infrastructure is GCP-based
 
 Consider combining with other tools to:
 
-- use GitHub Copilot for faster inline completions in non GCP contexts
+- use [GitHub Copilot](../github-copilot/) for faster inline completions in non-GCP contexts
 - use Claude Code for complex architectural reasoning
+- use [Amazon Q Developer](../amazon-q/) for teams primarily working with AWS services
 
-## Government specific considerations
+## Government-specific considerations
 
 ### Security classification
 
@@ -111,7 +111,7 @@ Gemini Code Assist processes code through Google Cloud Platform services. The fo
 - OFFICIAL-SENSITIVE: requires risk assessment and strict content exclusions
 - SECRET and above: not appropriate
 
-Check with your security team before you start. Reference [National Cyber Security Centre (NCSC) guidance on cloud services](https://www.ncsc.gov.uk/collection/cloud/the-cloud-security-principles) for risk assessment.
+Check with your security team before you start. Reference [NCSC guidance on cloud services](https://www.ncsc.gov.uk/collection/cloud/the-cloud-security-principles) for risk assessment and [NCSC secure development guidance](https://www.ncsc.gov.uk/collection/developers-collection) for security best practices.
 
 ### Content exclusions
 
@@ -149,7 +149,7 @@ $19 per user per month (annual commitment) or $22.80 per user per month (monthly
 
 Standard includes:
 
-- AI coding assistance with enterprise grade security
+- AI coding assistance with enterprise-grade security
 - code completion, generation, and chat
 - agent mode
 
@@ -164,7 +164,7 @@ Enterprise includes:
 - IP indemnity
 - usage analytics and reporting
 
-Prices are listed in USD. If you pay in a currency other than USD, the prices listed in your currency on [Cloud Platform SKUs](https://cloud.google.com/skus) apply. Check [Gemini for Google Cloud pricing](https://cloud.google.com/products/gemini/pricing) for current rates.
+Prices are listed in USD. If you pay in a currency other than USD, the prices listed in your currency on [Cloud Platform SKUs](https://cloud.google.com/skus) apply. Check [Gemini for Google Cloud pricing](https://cloud.google.com/products/gemini/pricing) for current rates. Gemini Code Assist is available to government departments through [Crown Commercial Service G-Cloud 14](https://www.crowncommercial.gov.uk/agreements/RM1557.14).
 
 ### Installation process
 
@@ -186,7 +186,7 @@ Check the tool works and find any problems.
 #### Activities
 
 1. Select 5 to 10 engineers across different experience levels.
-2. Focus on GCP related projects or cloud infrastructure work.
+2. Focus on GCP-related projects or cloud infrastructure work.
 3. Schedule weekly feedback sessions.
 4. Document effective usage patterns, especially for GCP tasks.
 5. Test agent mode and code transformation features on real codebases.
@@ -233,7 +233,7 @@ Get the most from the tool and fix any problems.
 
 #### Success criteria
 
-- [ ] Consistent month on month usage
+- [ ] Consistent month-on-month usage
 - [ ] Fewer support tickets
 - [ ] Measurable productivity improvements
 - [ ] Positive engineer satisfaction scores
@@ -251,7 +251,7 @@ Module 1 covers:
 - using Gemini Chat for questions
 - keyboard shortcuts
 
-#### Module 2: GCP specific features (20 minutes)
+#### Module 2: GCP-specific features (20 minutes)
 
 Module 2 covers:
 
@@ -262,11 +262,11 @@ Module 2 covers:
 
 Module 3 covers:
 
-- using agent mode for multi step tasks
+- using agent mode for multi-step tasks
 - reviewing generated code critically
 - content exclusions
 
-Training is delivered as a live demonstration with hands on practice. Multiple formats are available including in person bootcamps, self paced videos, and hackathons.
+Training is delivered as a live demonstration with hands-on practice. Multiple formats are available including in-person bootcamps, self-paced videos, and hackathons.
 
 ### Manager briefing (30 minutes)
 
@@ -278,7 +278,7 @@ This briefing covers:
 
 ## Measuring success
 
-For in depth information on measuring quality metrics, refer to the [monitoring and evaluation framework](../../quality-metrics/measurement-playbook.md).
+For in-depth information on measuring quality metrics, refer to the [monitoring and evaluation framework](../../quality-metrics/measurement-playbook.md).
 
 ### Quantitative metrics
 
@@ -316,9 +316,9 @@ You should run monthly surveys with engineers.
 
 1. How often do you use Gemini Code Assist?
 2. For which tasks is Gemini Code Assist most helpful?
-3. How helpful are the GCP specific features?
+3. How helpful are the GCP-specific features?
 4. Has Gemini Code Assist affected your productivity?
-5. Do you feel confident reviewing Gemini generated code?
+5. Do you feel confident reviewing Gemini-generated code?
 6. How useful is agent mode for complex tasks?
 
 ## Common implementation challenges
@@ -339,7 +339,7 @@ Symptoms include engineers questioning suggestions and reluctance to accept gene
 2. Share Google Cloud data protection commitments.
 3. Conduct a security workshop with examples.
 
-### Over reliance on suggestions
+### Over-reliance on suggestions
 
 Symptoms include decreased code review thoroughness and accepting suggestions without understanding.
 
@@ -375,13 +375,15 @@ If an engineer discovers code containing hardcoded secrets, vulnerabilities, or 
 - do not commit the code
 - report to your security team using the standard incident process
 - document the suggestion for analysis
-- update content exclusions if the issue is pattern based
+- update content exclusions if the issue is pattern-based
 
 ## Integration with development workflow
 
+The [AI SDLC playbook](../../playbooks/ai-sdlc-playbook.md) covers integrating AI coding assistants across the full software development lifecycle.
+
 ### Code review process
 
-Gemini Code Assist generated code should pass through the same review process as human written code.
+Gemini Code Assist-generated code should pass through the same review process as human-written code.
 
 Reviewers should check:
 
@@ -424,7 +426,7 @@ Managers should:
 Engineers should:
 
 - never accept suggestions containing API keys, passwords, or tokens
-- review security critical code with extra scrutiny
+- review security-critical code with extra scrutiny
 - verify generated SQL queries for injection vulnerabilities
 - review agent mode plans before approval
 - only use MCP servers from your department's approved registry
@@ -454,9 +456,9 @@ Exclude the following:
 
 For the full exclusion pattern list, see the [content exclusions documentation](https://cloud.google.com/gemini/docs/codeassist/content-exclusions).
 
-### Organisation level settings
+### Organisation-level settings
 
-Configure the organisation level settings in GCP console.
+Configure the organisation-level settings in GCP console.
 
 1. Go to GCP Console, then Gemini Code Assist.
 2. Assign users via IAM.
@@ -468,9 +470,9 @@ Configure the organisation level settings in GCP console.
 
 ### Support tiers
 
-#### Tier 1: self service
+#### Tier 1: self-service
 
-Self service resources includes:
+Self-service resources includes:
 
 - [Gemini Code Assist documentation](https://cloud.google.com/gemini/docs/codeassist)
 - [getting started guide](https://cloud.google.com/gemini/docs/codeassist/getting-started)
@@ -491,65 +493,6 @@ For escalated issues, contact:
 - DSIT project team for licence and access issues
 - Google Cloud Support via enterprise support plan
 
-## Related resources
-
-### Official Google resources
-
-Official Google resources include:
-
-- [Gemini Code Assist documentation](https://cloud.google.com/gemini/docs/codeassist)
-- [getting started guide](https://cloud.google.com/gemini/docs/codeassist/getting-started)
-- [agent mode documentation](https://developers.google.com/gemini-code-assist/docs/write-code-gemini)
-- [Gemini pricing](https://cloud.google.com/products/gemini/pricing)
-
-### Government guidance
-
-Government guidance includes:
-
-- [Crown Commercial Service G-Cloud 14](https://www.crowncommercial.gov.uk/agreements/g-cloud-14)
-- [NCSC cloud security principles](https://www.ncsc.gov.uk/collection/cloud/the-cloud-security-principles)
-- [NCSC secure development guidance](https://www.ncsc.gov.uk/collection/developers-collection)
-
-### Repository resources
-
-Repository resources include:
-
-- [AI SDLC playbook](../../playbooks/ai-sdlc-playbook.md)
-- [GitHub Copilot manager guide](../github-copilot/)
-- [Amazon Q manager guide](../amazon-q/)
-
 ## Contributing
 
-See [CONTRIBUTING.md](../../CONTRIBUTING.md) for contribution guidelines.
-
-We encourage contributions from across government to keep this repository current and comprehensive. Standard contributions are improvements to existing content, such as updating outdated information, fixing errors, or clarifying explanations. Share your team's experience, lessons learned, and effective practices to help other government departments.
-
-Before contributing, read [CONTRIBUTING.md](../../CONTRIBUTING.md) which covers:
-
-- content standards and style guide
-- review and approval process
-- accessibility requirements
-- how to submit changes
-
-## Support and contact
-
-| Need | Contact |
-|------|---------|
-| General enquiries | To be confirmed |
-| FDE support requests | To be confirmed |
-| Urgent issues | To be confirmed |
-| Content feedback | To be confirmed |
-
-Contact details to be confirmed.
-
-## Licence
-
-This repository is published under the [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/).
-
-You are encouraged to use and adapt these materials for your own government context.
-
-When reusing content:
-
-- maintain attribution to this repository
-- share improvements back via contribution
-- ensure adaptations remain suitable for government use
+See the [contribution guidelines](../../CONTRIBUTING.md) before submitting changes. We encourage contributions from across government to keep this repository current.

@@ -1,4 +1,4 @@
-> **ALPHA**
+> ALPHA
 > This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 
 # Safe usage guidance: prototyping vs production environments
@@ -25,20 +25,27 @@ Before using this guidance, ensure you have:
 - understood your team's data classification levels
 - identified which environments your team uses
 
-## Quick navigation
+## Contents
 
-| Section | Purpose |
-|---------|---------|
-| [Environment definitions](#environment-definitions) | Understand prototyping vs production environments |
-| [Data classification and environment matrix](#data-classification-and-environment-matrix) | Determine which GitHub Copilot usage is permitted |
-| [Prototyping environment controls](#prototyping-environment-controls) | 6 controls for rapid experimentation |
-| [Production environment controls](#production-environment-controls) | 11 controls for production systems |
-| [Transition from prototype to production](#transition-from-prototype-to-production) | Checklist and process for promotion |
-| [Common scenarios](#common-scenarios-and-guidance) | Practical examples and guidance |
-| [Ethics review framework](#ethics-review-framework) | When and how to seek ethics approval |
-| [Departmental AI tool governance](#departmental-ai-tool-governance) | Tool approval and exception processes |
-| [Policy configuration](#policy-configuration-recommendations) | GitHub Copilot enterprise settings |
-| [Measuring compliance](#measuring-safe-usage-compliance) | Compliance indicators and metrics |
+[Environment definitions](#environment-definitions)
+
+[Data classification and environment matrix](#data-classification-and-environment-matrix)
+
+[Prototyping environment controls](#prototyping-environment-controls)
+
+[Production environment controls](#production-environment-controls)
+
+[Transition from prototype to production](#transition-from-prototype-to-production)
+
+[Common scenarios](#common-scenarios-and-guidance)
+
+[Ethics review framework](#ethics-review-framework)
+
+[Departmental AI tool governance](#departmental-ai-tool-governance)
+
+[Policy configuration](#policy-configuration-recommendations)
+
+[Measuring compliance](#measuring-safe-usage-compliance)
 
 ## Environment definitions
 
@@ -80,16 +87,15 @@ Examples include:
 
 ### Intermediate environments
 
-Pre-production environments (such as development, test, staging, integration) should follow production-level controls unless they meet all the criteria for prototyping environments.
+Pre-production environments such as development, test, staging, integration should follow production-level controls unless they meet all the criteria for prototyping environments.
 
 If an environment contains:
+
 - production-like data (even if anonymised)
 - connections to production systems
 - code that will be promoted to production
 
 Then apply production-level controls.
-
----
 
 ## Data classification and environment matrix
 
@@ -105,26 +111,31 @@ The table below defines which GitHub Copilot usage is permitted based on data cl
 ### Notes on classifications
 
 #### OFFICIAL prototyping
+
 Standard controls apply. You should:
+
 - use synthetic or anonymised data
 - follow core guardrails
 
 #### OFFICIAL production
+
 Enhanced controls apply. You must:
+
 - ensure all generated code passes security scanning
 - perform a mandatory peer review before merging
 
 #### OFFICIAL-SENSITIVE (both environments)
+
 Requires enterprise GitHub Copilot with:
+
 - data residency controls (UK or approved regions)
 - audit logging enabled
 - code suggestions filtered by organisation policy
 - no training on your code (opt-out enforced)
 
 #### SECRET and above
-GitHub Copilot must not be used with any data classified SECRET or above in any environment.
 
----
+GitHub Copilot must not be used with any data classified SECRET or above in any environment.
 
 ## Prototyping environment controls
 
@@ -166,7 +177,7 @@ You are not required to:
 You must:
 
 - use private repositories for all prototype work
-- not commit secrets, API keys or credentials (even for development)
+- not commit secrets, API keys or credentials, even for development
 - enable secret scanning on prototype repositories
 - clearly label repositories as 'PROTOTYPE - NOT FOR PRODUCTION'
 
@@ -180,14 +191,14 @@ You should:
 
 You can:
 
-- use all GitHub Copilot features (inline suggestions, chat, edits)
-- experiment with agentic or autonomous modes (where available)
+- use all GitHub Copilot features such as inline suggestions, chat, edits
+- experiment with agentic or autonomous modes, where available
 - iterate rapidly without extensive documentation
 - ask broad exploratory questions
 
 You must:
 
-- still follow data classification limits (no SECRET data)
+- still follow data classification limits, with no SECRET data
 - not share restricted intellectual property
 - validate any dependencies suggested by Copilot
 - review generated code for obvious security anti-patterns
@@ -217,8 +228,6 @@ Before moving prototype code to production, you must:
 - apply all production-level code standards
 
 A prototype transitioning to production must be treated as new production code and cannot skip any production controls.
-
----
 
 ## Production environment controls
 
@@ -305,7 +314,7 @@ For these areas, use established libraries or consult security specialists.
 
 #### Computer-using agents and autonomous features
 
-GitHub Copilot and other AI tools increasingly offer autonomous or "agentic" features that can execute actions on your behalf. You must not:
+GitHub Copilot and other AI tools increasingly offer autonomous or agentic features that can execute actions on your behalf. You must not:
 
 - grant AI agents access to production accounts or credentials
 - allow autonomous features to make commits, deployments or configuration changes without human approval
@@ -313,6 +322,7 @@ GitHub Copilot and other AI tools increasingly offer autonomous or "agentic" fea
 - enable AI features that can execute terminal commands on production infrastructure
 
 All agentic actions must:
+
 - require explicit human approval before execution
 - be logged and auditable
 - be scoped to minimal necessary permissions
@@ -322,8 +332,8 @@ All agentic actions must:
 
 Engineers working with AI-generated code should be familiar with:
 
-- [OWASP LLM Top 10](https://genai.owasp.org/llm-top-10/) - top security risks for large language model applications
-- [OWASP Agentic AI Threats and Mitigations](https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/) - security considerations for autonomous AI systems
+- [OWASP LLM Top 10](https://genai.owasp.org/llm-top-10/) top security risks for large language model applications
+- [OWASP Agentic AI Threats and Mitigations](https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/), security considerations for autonomous AI systems
 
 These resources help identify vulnerabilities specific to AI-generated code and applications that integrate AI.
 
@@ -364,7 +374,7 @@ Do not accept AI-generated tests without reviewing them for quality and coverage
 AI-generated production code must include:
 
 - inline comments explaining complex logic or non-obvious decisions
-- API documentation (OpenAPI/Swagger for REST APIs)
+- API documentation such as OpenAPI/Swagger for REST APIs
 - README updates if new features or dependencies are added
 - architectural decision records (ADRs) for significant choices
 - runbooks for operational processes
@@ -419,8 +429,6 @@ General principles include:
 
 Consult your department's data protection officer before deploying AI-assisted features that process personal data.
 
----
-
 ## Transition from prototype to production
 
 ### When to apply production controls
@@ -438,18 +446,18 @@ Before promoting prototype code to production, complete this checklist.
 
 | Area | Requirement | Status |
 |------|-------------|--------|
-| **Security review** | Full security review by engineering team | ☐ |
-| **Threat modelling** | Threat model completed or updated | ☐ |
-| **Code standards** | Code refactored to meet department standards | ☐ |
-| **Test coverage** | Adequate automated tests written and passing | ☐ |
-| **Security scanning** | All scans (SAST, dependency, secrets) passing | ☐ |
-| **Dependency audit** | All dependencies verified and approved | ☐ |
-| **Documentation** | Production-quality documentation completed | ☐ |
-| **Accessibility** | WCAG 2.2 AA compliance verified (if user-facing) | ☐ |
-| **Data handling** | All mock/synthetic data replaced with production-ready code | ☐ |
-| **Architecture review** | Technical architect or lead engineer approval | ☐ |
-| **Peer review** | Detailed code review by at least 2 engineers | ☐ |
-| **Operational readiness** | Monitoring, logging, alerting configured | ☐ |
+| Security review | Full security review by engineering team | [ ] |
+| Threat modelling | Threat model completed or updated | [ ] |
+| Code standards | Code refactored to meet department standards | [ ] |
+| Test coverage | Adequate automated tests written and passing | [ ] |
+| Security scanning | All scans (SAST, dependency, secrets) passing | [ ] |
+| Dependency audit | All dependencies verified and approved | [ ] |
+| Documentation | Production-quality documentation completed | [ ] |
+| Accessibility | WCAG 2.2 AA compliance verified (if user-facing) | [ ] |
+| Data handling | All mock/synthetic data replaced with production-ready code | [ ] |
+| Architecture review | Technical architect or lead engineer approval | [ ] |
+| Peer review | Detailed code review by at least 2 engineers | [ ] |
+| Operational readiness | Monitoring, logging, alerting configured | [ ] |
 
 ### Recommended transition approach
 
@@ -478,65 +486,63 @@ Before using GitHub Copilot in any environment, complete this due diligence asse
 
 Document your answers and retain them for audit purposes. Escalate concerns to your technical lead or security team.
 
----
-
 ## Common scenarios and guidance
 
 ### Scenario 1: spike for API integration
 
-**Context**: engineer needs to explore integrating with a third-party API.
+Context: engineer needs to explore integrating with a third-party API.
 
-**Environment**: prototyping
+Environment: prototyping
 
-**Appropriate controls**
+#### Appropriate controls
 
 You can:
+
 - use test API keys provided by the vendor
 - use GitHub Copilot to generate integration code rapidly
 - test with mock responses or sandbox environment
 - document findings in a spike report
 
 You must not:
+
 - use production API keys
 - commit API keys to repository (even test keys)
 
-**Transition**: if integrating, rewrite integration with production keys from secrets manager, add error handling, monitoring and alerting.
-
----
+Transition: if integrating, rewrite integration with production keys from secrets manager, add error handling, monitoring and alerting.
 
 ### Scenario 2: building GOV.UK frontend prototype
 
-**Context**: team building prototype for user research using GOV.UK Design System.
+Context: team building prototype for user research using GOV.UK Design System.
 
-**Environment**: prototyping (if no real user data collected)
+Environment: prototyping (if no real user data collected)
 
-**Appropriate controls**
+#### Appropriate controls
 
 You can:
+
 - use GitHub Copilot to generate components quickly
 - use fake data for examples
 - focus on speed over code quality
 
-You should:
-- ensure accessibility basics (for representative testing)
+You should ensure accessibility basics (for representative testing).
 
 You must not:
+
 - collect real user data without production controls
 - use production analytics or tracking
 
-**Transition**: rebuild with production code standards, full WCAG 2.2 AA compliance, production security headers, analytics and operational monitoring.
-
----
+Transition: rebuild with production code standards, full WCAG 2.2 AA compliance, production security headers, analytics and operational monitoring.
 
 ### Scenario 3: refactoring production code
 
-**Context**: engineer refactoring production codebase for improved maintainability.
+Context: engineer refactoring production codebase for improved maintainability.
 
-**Environment**: production
+Environment: production
 
-**Required controls**
+#### Required controls
 
 You must:
+
 - apply all production code review requirements
 - maintain or improve test coverage
 - ensure backward compatibility or planned migration
@@ -544,35 +550,34 @@ You must:
 - document architectural changes in ADRs
 
 You must not:
+
 - accept large AI-generated refactors without thorough review
 - skip tests because 'code behaviour is unchanged'
 
----
-
 ### Scenario 4: creating test data generators
 
-**Context**: engineer building data generators for testing.
+Context: engineer building data generators for testing.
 
-**Environment**: depends on data classification
+Environment: depends on data classification
 
-**Guidance includes**:
+Follow guidance:
+
 - if generators create synthetic data for prototypes, refer to prototyping controls
 - if generators create test data for pre-production environments, refer to production controls
-- ensure generated data does not inadvertently resemble real users
-- do not use AI to synthesise data based on production datasets
-- use established libraries (Faker, Bogus) over custom AI-generated approaches
-
----
+- to ensure generated data does not inadvertently resemble real users
+- to not use AI to synthesise data based on production datasets
+- to use established libraries (Faker, Bogus) over custom AI-generated approaches
 
 ### Scenario 5: infrastructure as code (IaC)
 
-**Context**: engineer using GitHub Copilot to write Terraform or CloudFormation.
+Context: engineer using GitHub Copilot to write Terraform or CloudFormation.
 
-**Environment**: production (infrastructure is always production)
+Environment: production (infrastructure is always production)
 
-**Required controls**
+#### Required controls
 
 You must:
+
 - apply all production code review requirements
 - validate all permissions and security group rules
 - ensure least privilege access configured
@@ -580,12 +585,9 @@ You must:
 - use department-approved base modules where available
 - pay special attention to Identity and Access Management (IAM) policies and network configurations
 
-You must not:
-- accept infrastructure code without security review
+You must not accept infrastructure code without security review.
 
-**Rationale**: infrastructure misconfigurations can expose entire systems.
-
----
+Rationale: infrastructure misconfigurations can expose entire systems.
 
 ## Ethics review framework
 
@@ -594,11 +596,13 @@ You must not:
 Seek ethics review from your department's governance board or senior leadership before using GitHub Copilot in these scenarios:
 
 When AI is replacing or augmenting human decision-making, seek a review for:
+
 - code that automates decisions affecting citizens (benefits, licensing, enforcement)
 - systems that triage, prioritise or route cases or applications
 - algorithms that score, rank or classify individuals or organisations
 
 For ethically sensitive domains, seek review for:
+
 - healthcare and medical systems
 - law enforcement and criminal justice
 - immigration and border control
@@ -607,13 +611,14 @@ For ethically sensitive domains, seek review for:
 - military and defence systems
 
 For politically or socially sensitive applications, seek review for:
+
 - systems subject to public debate or controversy
 - use cases at odds with government values (fairness, transparency, accountability)
 - applications that may face legal challenge or judicial review
 
 ### Ethics assessment questions
 
-When submitting for ethics review, address these questions:
+When submitting for ethics review, address the following questions.
 
 | Question | Why it matters |
 |----------|----------------|
@@ -629,23 +634,23 @@ When submitting for ethics review, address these questions:
 
 Government use of AI should adhere to the following principles.
 
-1. Fairness.
+#### 1. Fairness
 
 AI must not discriminate or create unjust outcomes. Consider impact on protected characteristics (age, disability, race, religion, sex, etc.).
 
-2. Accountability.
+#### 2. Accountability
 
 Humans remain responsible for AI-assisted decisions. AI is a tool, not a decision-maker.
 
-3. Transparency. 
+#### 3. Transparency 
 
 Be open about where and how AI is used. Provide meaningful explanations of AI-assisted decisions.
 
-4. Safety and security.
+#### 4. Safety and security
 
 Ensure AI systems are reliable, secure and fail safely. Protect against manipulation or misuse.
 
-5. Proportionality.
+#### 5. Proportionality
 
  Use AI only where benefits outweigh risks. Consider less intrusive alternatives.
 
@@ -660,8 +665,6 @@ Follow these steps if you believe an ethics review is needed.
 5. Document the decision and any conditions imposed.
 
 If your department lacks an ethics review process, escalate to your chief technology officer or equivalent senior responsible officer.
-
----
 
 ## Departmental AI tool governance
 
@@ -688,15 +691,17 @@ Engineers must only use tools on the approved list unless an exception has been 
 8. Tool added to approved list with conditions.
 
 ### Exception and waiver process
-If GitHub Copilot is not on the approved list, you should consider the following things.
+If GitHub Copilot is not on the approved list, you should consider the following.
 
 For prototyping and research:
+
 - unapproved tools may be used for non-production activities (training, proof of concept, research)
 - no department or citizen data must be used
 - document the tool use and purpose
 - results must not be deployed to production
 
 For production use:
+
 - submit exception request to AI governance board or equivalent
 - provide business justification and risk mitigation
 - obtain senior management approval
@@ -727,8 +732,6 @@ Departments should review AI tool governance annually by:
 
 This ensures governance keeps pace with evolving AI technology and risks.
 
----
-
 ## Policy configuration recommendations
 
 ### GitHub Copilot enterprise policy settings
@@ -737,11 +740,11 @@ For UK government departments, configure GitHub Copilot enterprise policies as f
 
 | Setting | Prototyping | Production | Rationale |
 |---------|-------------|------------|-----------|
-| **Suggestions matching public code** | Allowed | Blocked | Prevents licence issues in production |
-| **Data opt-out** | Enabled | Enabled | Prevents training on your code |
-| **Content exclusions** | Minimal | Comprehensive | Protects production repositories |
-| **Audit log retention** | 90 days | 12+ months | Compliance and incident investigation |
-| **Allowed IDE extensions** | Default | Approved list only | Reduces supply chain risk |
+| Suggestions matching public code | Allowed | Blocked | Prevents licence issues in production |
+| Data opt-out | Enabled | Enabled | Prevents training on your code |
+| Content exclusions | Minimal | Comprehensive | Protects production repositories |
+| Audit log retention | 90 days | 12+ months | Compliance and incident investigation |
+| Allowed IDE extensions | Default | Approved list only | Reduces supply chain risk |
 
 ### Content exclusion patterns for production
 
@@ -759,8 +762,6 @@ Configure GitHub Copilot to exclude these repository patterns from providing sug
 ```
 
 This reduces the risk of accidentally exposing sensitive configurations.
-
----
 
 ## Measuring safe usage compliance
 
@@ -788,81 +789,22 @@ Escalate immediately if you identify:
 - prototype code deployed to production without transition process
 - OFFICIAL-SENSITIVE or higher data shared with GitHub Copilot
 
----
-
 ## Roles and responsibilities
 
 | Role | Prototyping responsibilities | Production responsibilities |
 |------|------------------------------|----------------------------|
-| **Engineer** | Follow prototyping controls, document findings, delete unused prototypes | Follow all production controls, complete security scanning, thorough code review |
-| **Technical lead** | Review prototype direction, approve transition to production | Approve production code, ensure compliance, participate in security reviews |
-| **Engineering manager** | Ensure team trained on safe usage, allocate time for compliance | Enforce production controls, track compliance metrics, escalate issues |
-| **Security team** | Review transition plans, advise on risk | Review production security scanning, investigate incidents, audit compliance |
-| **Service owner** | Decide whether prototypes progress to production | Accountable for service security and compliance |
+| Engineer | Follow prototyping controls, document findings, delete unused prototypes | Follow all production controls, complete security scanning, thorough code review |
+| Technical lead | Review prototype direction, approve transition to production | Approve production code, ensure compliance, participate in security reviews |
+| Engineering manager | Ensure team trained on safe usage, allocate time for compliance | Enforce production controls, track compliance metrics, escalate issues |
+| Security team | Review transition plans, advise on risk | Review production security scanning, investigate incidents, audit compliance |
+| Service owner | Decide whether prototypes progress to production | Accountable for service security and compliance |
 
----
+## Further reading
 
-## Related resources
+The [base guardrails](../../governance/guardrails-base.md) define foundational security controls. The [AI SDLC playbook](../../playbooks/ai-sdlc-playbook.md) covers integrating AI tools across the development lifecycle, and the [incident response playbook](../../governance/incident-response-playbook.md) covers responding to AI tool incidents. The [GitHub Copilot manager guide](../../manager-tool-guides/github-copilot/README.md) provides broader implementation guidance.
 
-### Internal documentation
+The [Government Service Manual](https://www.gov.uk/service-manual) and [Government Service Standard](https://www.gov.uk/service-manual/service-standard) set the baseline for service delivery. The [Technology Code of Practice](https://www.gov.uk/guidance/the-technology-code-of-practice) and [Government Security Classifications](https://www.gov.uk/government/publications/government-security-classifications) define technical and security standards. The [NCSC Cloud Security Principles](https://www.ncsc.gov.uk/collection/cloud/the-cloud-security-principles) cover cloud-specific security requirements.
 
-- [base guardrails](../../governance/guardrails-base.md) - foundational security controls
-- [AI SDLC playbook](../../playbooks/ai-sdlc-playbook.md) - integrating AI tools across development lifecycle
-- [incident response playbook](../../governance/incident-response-playbook.md) - responding to AI tool incidents
-- [GitHub Copilot manager guide](../../manager-tool-guides/github-copilot/README.md) - broader implementation guidance
+The [GitHub Copilot Trust Center](https://resources.github.com/copilot-trust-center/) covers GitHub's security and privacy commitments. [Data security for GitHub Copilot Business](https://docs.github.com/en/copilot/overview-of-github-copilot/about-github-copilot-business#data-security) details data handling, and [managing Copilot policies](https://docs.github.com/en/copilot/managing-copilot/managing-policies-for-copilot-in-your-organization) explains organisation-level configuration options.
 
-### Government guidance
-
-- [Government Service Manual](https://www.gov.uk/service-manual)
-- [Government Service Standard](https://www.gov.uk/service-manual/service-standard)
-- [Technology Code of Practice](https://www.gov.uk/guidance/the-technology-code-of-practice)
-- [Government Security Classifications](https://www.gov.uk/government/publications/government-security-classifications)
-- [NCSC Cloud Security Principles](https://www.ncsc.gov.uk/collection/cloud/the-cloud-security-principles)
-
-### GitHub resources
-
-- [GitHub Copilot Trust Center](https://resources.github.com/copilot-trust-center/)
-- [GitHub Copilot for Business Security](https://docs.github.com/en/copilot/overview-of-github-copilot/about-github-copilot-business#data-security)
-- [Managing GitHub Copilot policies](https://docs.github.com/en/copilot/managing-copilot/managing-policies-for-copilot-in-your-organization)
-
-### AI security resources
-
-- [OWASP LLM Top 10](https://genai.owasp.org/llm-top-10/) - top security risks for large language model applications
-- [OWASP Agentic AI Threats and Mitigations](https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/) - security considerations for autonomous AI systems
-- [NCSC AI and Machine Learning Security](https://www.ncsc.gov.uk/collection/machine-learning) - UK guidance on securing AI systems
-
----
-
-## Feedback
-
-This is an alpha service. Your feedback helps improve this guidance.
-
-Share feedback through:
-- [GitHub discussions](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions)
-- Your department's AI Engineering Lab community channel
-- The AI Engineering Lab team
-
----
-
-## Contributing
-
-See [CONTRIBUTING.md](../../CONTRIBUTING.md) for contribution guidelines.
-
-We encourage contributions from across government to keep this repository current and comprehensive. Share your team's experience, lessons learned, and effective practices to help other government departments.
-
-Before contributing, read [CONTRIBUTING.md](../../CONTRIBUTING.md) which covers:
-- content standards and style guide
-- review and approval process
-- accessibility requirements
-- how to submit changes
-
-## Licence
-
-This repository is published under the [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/).
-
-You are encouraged to use and adapt these materials for your own government context.
-
-When reusing content you should:
-- maintain attribution to this repository
-- share improvements back via contribution
-- ensure adaptations remain suitable for government use
+The [OWASP LLM Top 10](https://genai.owasp.org/llm-top-10/) covers top security risks for large language model applications. [OWASP Agentic AI Threats and Mitigations](https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/) addresses security considerations for autonomous AI systems. The [NCSC AI and Machine Learning Security](https://www.ncsc.gov.uk/collection/machine-learning) collection provides UK guidance on securing AI systems.

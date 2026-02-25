@@ -1,4 +1,4 @@
-> **ALPHA**
+> ALPHA
 > This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 
 # Google Developer Knowledge API and MCP Server
@@ -15,15 +15,14 @@ A guide to configuring and using Google's Developer Knowledge API through Model 
 - [Security and governance](#security-and-governance)
 - [Performance and metrics](#performance-and-metrics)
 - [Troubleshooting](#troubleshooting)
-- [Resources](#resources)
 
 ## Overview
 
 ### What and when
 
-The Google Developer Knowledge API provides programmatic access to official Google developer documentation through a Model Context Protocol (MCP) server. Use it when your team needs:
+The [Google Developer Knowledge API](https://developers.google.com/knowledge/api) provides programmatic access to official Google developer documentation through a Model Context Protocol (MCP) server. Use it when your team needs:
 
-- up to date Google Cloud, Firebase, or Android documentation
+- up-to-date Google Cloud, Firebase, or Android documentation
 - implementation guidance based on current best practices
 - troubleshooting help for Google API errors
 - comparative analysis between Google services
@@ -44,7 +43,7 @@ End users do not need to configure this. Once set up, developers can access Goog
 
 ### Model Context Protocol (MCP)
 
-MCP is an open standard developed by Anthropic that enables AI assistants to securely access external data sources. The protocol is gaining adoption across the industry, with support from OpenAI, Google DeepMind, Microsoft, AWS and Cloudflare.
+The [MCP](https://modelcontextprotocol.io) is an open standard developed by Anthropic that enables AI assistants to securely access external data sources. The protocol is gaining adoption across the industry, with support from OpenAI, Google DeepMind, Microsoft, AWS and Cloudflare.
 
 Key benefits include:
 
@@ -69,7 +68,7 @@ The Developer Knowledge API provides access to approximately 400,000 pages of Go
 
 The service covers public documentation only. It does not access private repositories, GitHub, blogs, or YouTube content.
 
-The MCP server provides three tools that Gemini uses automatically:
+The [MCP server](https://developers.google.com/knowledge/mcp) provides three tools that Gemini uses automatically:
 - search_documents - search the documentation corpus
 - get_document - retrieve specific pages
 - batch_get_documents - retrieve multiple pages
@@ -208,7 +207,7 @@ gemini mcp add -t http \
 
 Note: This requires [Gemini CLI](https://github.com/google-gemini/gemini-cli) to be installed separately.
 
-Configuration note: the Developer Knowledge MCP server uses HTTP transport (Server Sent Events), which is why we use `httpUrl` in the configuration.
+Configuration note: the Developer Knowledge MCP server uses HTTP transport (Server-Sent Events), which is why we use `httpUrl` in the configuration.
 
 #### IntelliJ and JetBrains IDEs
 
@@ -239,9 +238,9 @@ Replace `YOUR_API_KEY` with your API key.
 
 Important: MCP server support in Gemini Code Assist requires agent mode, not standard chat mode. Ensure you switch to the Agent tab after configuration.
 
-#### Project level configuration
+#### Project-level configuration
 
-For team wide consistency, add MCP configuration to your repository by creating `.gemini/settings.json` in your project root.
+For team-wide consistency, add MCP configuration to your repository by creating `.gemini/settings.json` in your project root.
 
 Important security considerations:
 
@@ -336,7 +335,7 @@ To optimise performance:
 
 ### Security model
 
-The Developer Knowledge API and MCP server have a low risk security profile:
+The Developer Knowledge API and MCP server have a low-risk security profile:
 
 What it accesses:
 - public documentation only
@@ -380,7 +379,7 @@ The Developer Knowledge MCP server is appropriate for:
 It is not suitable for:
 
 - SECRET or TOP SECRET classified work (requires internet access to external API)
-- air gapped environments
+- air-gapped environments
 - systems with strict prohibitions on external API access
 
 All documentation accessed through the API is publicly available on Google's developer sites. No classified or sensitive information is transmitted.
@@ -395,7 +394,7 @@ The Developer Knowledge API operates under Google Cloud's standard terms of serv
 
 Google's evaluations show the Developer Knowledge MCP server delivers:
 - 65% improvement in responses to Google developer prompts
-- 50% reduction in Gemini CLI end to end latency
+- 50% reduction in Gemini CLI end-to-end latency
 
 These metrics demonstrate the value of providing AI assistants with direct access to current documentation.
 
@@ -515,14 +514,6 @@ Solutions:
 4. Ensure API key is not being used outside your team.
 
 For quota management, go to IAM & Admin > Quotas & System Limits in Google Cloud Console, select Service, then filter for Developer Knowledge API.
-
-## Resources
-
-Google documentation:
-- [Developer Knowledge API documentation](https://developers.google.com/knowledge/api)
-- [Developer Knowledge MCP server guide](https://developers.google.com/knowledge/mcp)
-- [Corpus reference](https://developers.google.com/knowledge/reference/corpus-reference) (list of included documentation)
-- [Model Context Protocol specification](https://modelcontextprotocol.io)
 
 ## Contributing
 

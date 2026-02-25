@@ -1,5 +1,5 @@
-> **ALPHA**
-> This is a new service – your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
+> ALPHA
+> This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 
 # Prompt engineering for AI code assistants: a complete playbook
 
@@ -71,7 +71,6 @@ For organisations: adapt these techniques to your context. Create internal guide
 
 Throughout this guide, you will see examples that demonstrate core principles. While the specific technologies may differ from yours, the prompting patterns and techniques apply universally.
 
-
 ### Core content
 
 Part 1: Foundational prompting techniques
@@ -116,8 +115,6 @@ Part 6: Prompt engineering for AI coding agents
 - [The human in the loop principle](./prompt-engineering-agents.md#the-human-in-the-loop-principle)
 - [How to prompt agents safely](./prompt-engineering-agents.md#how-to-prompt-agents-safely)
 - [Tech debt from AI](./prompt-engineering-agents.md#tech-debt-from-ai)
-
----
 
 ## Conclusion: the professional's AI workflow
 
@@ -170,8 +167,6 @@ AI coding assistants do not replace the need for skill, they amplify it. The bet
 
 The future belongs to engineers who can think clearly, communicate precisely and use AI effectively.
 
----
-
 ## Useful resources
 
 This playbook works best when combined with the wider resources in this repository.
@@ -194,4 +189,3 @@ This playbook works best when combined with the wider resources in this reposito
 ### Tool guides (pick the one you use)
 - [GitHub Copilot guide](../../manager-tool-guides/github-copilot/)
 
----

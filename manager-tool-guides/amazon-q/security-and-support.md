@@ -1,4 +1,4 @@
-> **ALPHA**
+> ALPHA
 > This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 # Amazon Q - security and support guidance
 
@@ -43,7 +43,7 @@ Policy configuration requires the following steps.
 2. Review exclusion patterns quarterly or after incidents.
 3. Enable usage analytics via AWS console.
 4. Establish clear escalation path for security concerns.
-5. Configure IAM policies with least privilege access.
+5. Configure IAM policies with least-privilege access.
 
 Monitoring activities include:
 - reviewing usage patterns in AWS CloudWatch
@@ -62,10 +62,10 @@ Communication activities include:
 
 You should perform the following daily practices.
 1. Never accept suggestions containing API keys, passwords or tokens.
-2. Review all security critical code (authentication, encryption, input validation) with extra scrutiny.
+2. Review all security-critical code (authentication, encryption, input validation) with extra scrutiny.
 3. Verify generated SQL queries for injection vulnerabilities.
 4. Check generated AWS SDK calls for proper error handling.
-5. Ensure IAM policies follow least privilege principle.
+5. Ensure IAM policies follow least-privilege principle.
 6. Run command before submitting PRs.
 7. Validate CloudFormation templates for security misconfigurations.
 
@@ -76,10 +76,10 @@ Avoid Amazon Q when:
 - making critical infrastructure decisions without review
 - configuring production IAM policies without validation
 
-AWS specific security considerations include:
+AWS-specific security considerations include:
 - verifying S3 bucket policies do not allow public access
 - checking IAM roles have appropriate trust relationships
-- ensuring security groups follow least privilege network access
+- ensuring security groups follow least-privilege network access
 - validating KMS key policies and encryption settings
 - reviewing CloudWatch logging and monitoring configurations
 
@@ -87,7 +87,7 @@ AWS specific security considerations include:
 
 ### Engineer support
 
-Tier 1 self service resources include:
+Tier 1 self-service resources include:
 - Amazon Q Engineer documentation
 - a getting started guide
 - AWS re:Post for Amazon Q
@@ -231,8 +231,8 @@ Resources:
 Good prompt:
 ```yaml
 # CloudFormation template for serverless API: API Gateway REST API with
-# Lambda integration, DynamoDB table with on demand billing, CloudWatch
-# Logs with 7 day retention, IAM roles with least privilege permissions.
+# Lambda integration, DynamoDB table with on-demand billing, CloudWatch
+# Logs with 7-day retention, IAM roles with least-privilege permissions.
 # Include outputs for API endpoint and table name. Use AWS::Serverless
 # transform for simplified syntax.
 AWSTemplateFormatVersion: '2010-09-09'
@@ -256,7 +256,7 @@ Good prompt:
 # IAM policy for Lambda function to: read from S3 bucket 'data-input-bucket'
 # with prefix 'incoming/', write to DynamoDB table 'ProcessedRecords',
 # write logs to CloudWatch Logs group '/aws/lambda/data-processor'.
-# Follow least privilege principle with resource level permissions.
+# Follow least-privilege principle with resource-level permissions.
 {
   "Version": "2012-10-17",
   "Statement": [
@@ -287,7 +287,7 @@ Follow these steps to resolve the issue.
 5. Check system resources (CPU, memory).
 6. Verify no proxy issues affecting AWS connectivity.
 
-#### Enterprise specific issues
+#### Enterprise-specific issues
 
 Symptoms include:
 - the license assignment not working
@@ -316,10 +316,10 @@ They must take the following immediate actions.
 1. Do not commit the code.
 2. Report to your security team using standard incident process.
 3. Document the suggestion for analysis.
-4. Update content exclusions if pattern based.
+4. Update content exclusions if pattern-based.
 5. Run command to check for similar issues.
 
-Follow up activities include:
+Follow-up activities include:
 - reviewing similar code in recent commits
 - updating team training materials
 - sharing learning without blame
@@ -362,23 +362,6 @@ Repository resources include:
 
 ## Contributing
 
-See 'CONTRIBUTING.md' for contribution guidelines.
-
 We encourage contributions from across government to keep this repository current and comprehensive. Share your team's experience, lessons learned, and effective practices to help other government departments.
 
-Before contributing, read 'CONTRIBUTING.md' which covers:
-- content standards and style guide
-- review and approval process
-- accessibility requirements
-- how to submit changes
-
-## Licence
-
-This repository is published under the 'Open Government Licence v3.0'.
-
-You are encouraged to use and adapt these materials for your own government context.
-
-When reusing content you should:
-- maintain attribution to this repository
-- share improvements back via contribution
-- ensure adaptations remain suitable for government use
+See the [contribution guidelines](../../CONTRIBUTING.md) before submitting changes.

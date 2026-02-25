@@ -20,18 +20,17 @@ Before using this guidance, you should:
 - understand your organisation's billing structure
 - have administrator or owner permissions to manage policies
 
-For essential reading, see [About billing for GitHub Copilot in organisations and enterprises](https://docs.github.com/en/copilot/concepts/billing/organizations-and-enterprises)
+See also [billing for GitHub Copilot in organisations and enterprises](https://docs.github.com/en/copilot/concepts/billing/organizations-and-enterprises).
 
 ## Contents
 
-Use the following sections to navigate this guide.
+[What are enterprise premium credits](#what-are-enterprise-premium-credits)
 
-1. [What are enterprise premium credits](#what-are-enterprise-premium-credits)
-2. [Managing premium credits](#managing-premium-credits)
-3. [When you run out of credits](#when-you-run-out-of-credits)
-4. [Monitoring and optimising usage](#monitoring-and-optimising-usage)
+[Managing premium credits](#managing-premium-credits)
 
----
+[When you run out of credits](#when-you-run-out-of-credits)
+
+[Monitoring and optimising usage](#monitoring-and-optimising-usage)
 
 ## What are enterprise premium credits
 
@@ -58,7 +57,7 @@ Your monthly premium request allowance includes:
 
 The included models (GPT-5 mini, GPT-4.1, GPT-4o) do not consume premium requests on paid plans, so you can use them unlimited times for everyday coding tasks.
 
-Reference: [Requests in GitHub Copilot](https://docs.github.com/en/copilot/concepts/billing/copilot-requests)
+For more detail on how requests are counted and billed, see [Requests in GitHub Copilot](https://docs.github.com/en/copilot/concepts/billing/copilot-requests).
 
 ### Plans and premium request allowances
 
@@ -74,7 +73,7 @@ All prices are shown in US dollars (USD).
 | Business | $19 USD | 300 premium requests |
 | Enterprise | $39 USD | 1,000 premium requests |
 
-Essential reading: [Plans for GitHub Copilot](https://github.com/features/copilot/plans)
+For a full comparison of plans and allowances, see [Plans for GitHub Copilot](https://github.com/features/copilot/plans).
 
 ### What consumes premium requests
 
@@ -109,7 +108,7 @@ Enterprise owners can define model policies that apply across the entire enterpr
 
 If you need access to a specific model that is not available, contact your organisation administrator or Copilot administrator.
 
-Reference: [GitHub Copilot policies to control availability of features and models](https://docs.github.com/en/copilot/concepts/policies)
+For details on controlling which models and features are available to your users, see [GitHub Copilot policies](https://docs.github.com/en/copilot/concepts/policies).
 
 Note: Model availability and multipliers may change. Check the model picker in your IDE for current options.
 
@@ -128,7 +127,7 @@ The table below shows which features consume premium requests and whether you ca
 | Spark | GitHub.com | No | 4 requests per prompt (fixed) |
 | Spaces | GitHub.com | No | 1 request per message |
 
-Note: costs shown are before model multipliers. Premium models multiply the base cost (for example, Claude Opus 4.6 at 3× means 3 requests per use).
+Costs shown are before model multipliers. Premium models multiply the base cost (for example, Claude Opus 4.6 at 3× means 3 requests per use).
 
 ### Understanding agent mode vs coding agent
 
@@ -146,8 +145,6 @@ Copilot CLI does not support included models. When you run out of premium reques
 
 Copilot coding agent pricing [changed in July 2025](https://github.com/orgs/community/discussions/165798) from 30 to 100+ requests per session to just 1 request per session, making it much more cost-effective.
 
----
-
 ## Managing premium credits
 
 Enterprise administrators should configure policies and budgets to control spending. Development teams should monitor their individual usage.
@@ -158,19 +155,21 @@ Before making changes, [download a usage report](https://docs.github.com/en/bill
 
 ### Step 2: configure billing policies
 
-Navigate to your [enterprise or organisation policy settings](https://docs.github.com/en/copilot/how-tos/manage-and-track-spending/manage-request-allowances) and review the 'Premium request paid usage' policy. Policy options:
+Navigate to your [enterprise or organisation policy settings](https://docs.github.com/en/copilot/how-tos/manage-and-track-spending/manage-request-allowances) and review the 'Premium request paid usage' policy.
 
-- enabled (default) allows users to exceed their allowance with charges at $0.04 USD per request
-- enabled for specific products enables paid usage only for selected AI tools (Copilot, Spark, coding agent)
-- disabled blocks all premium requests beyond the included allowance
+Policy option can be:
+
+- enabled (default) to allow users to exceed their allowance with charges at $0.04 USD per request
+- enabled for specific products to allow paid usage only for selected AI tools (Copilot, Spark, coding agent)
+- disabled to block all premium requests beyond the included allowance
 
 ### Step 3: set budgets
 
-[Set up budgets](https://docs.github.com/en/billing/tutorials/set-up-budgets) to control spending. You have 2 options:
+[Set up budgets](https://docs.github.com/en/billing/tutorials/set-up-budgets) to control spending.
 
-Bundled premium requests budget (recommended) - manages all premium request stock keeping units (SKUs) together in one unified view.
+Bundled premium requests budget (recommended). This manages all premium request stock keeping units (SKUs) together in one unified view.
 
-Individual stock keeping unit (SKU) budgets - set separate budgets for each AI tool (Copilot, Spark, coding agent) for granular control and cost allocation.
+Individual stock keeping unit (SKU) budgets. This sets separate budgets for each AI tool (Copilot, Spark, coding agent) for granular control and cost allocation.
 
 ### Step 4: choose hard or soft limits
 
@@ -208,11 +207,9 @@ When first configuring Copilot:
 
 Without budget limits, users continue using premium models beyond their allowance and charges accrue throughout the billing cycle. You will not receive notification until the bill arrives at the end of the cycle. Set budget caps and alerts immediately to regain control.
 
-### Important: accounts created before August 2025
+### Accounts created before August 2025
 
 Accounts created before 22 August 2025 have a default $0 USD budget that automatically blocks premium requests over the allowance. [GitHub will remove all $0 USD budgets starting 2 December 2025](https://github.com/orgs/community/discussions/173899). After removal, paid overages will be enabled by default. Review your budget settings before December 2025.
-
----
 
 ## When you run out of credits
 
@@ -231,7 +228,7 @@ Benefits include predictable costs, no unexpected billing and clear spending con
 
 Considerations include that it may disrupt workflows if limits are reached unexpectedly, it requires active budget management and it needs clear communication to users.
 
-### Without a budget cap (soft limit - default)
+### Without a budget cap (soft limit by default)
 
 When no budget cap is set or 'Stop usage when budget limit is reached' is disabled:
 
@@ -246,7 +243,7 @@ Considerations include that costs can escalate without monitoring, it requires c
 
 You will see this message in your IDE:
 
-> "You have exceeded your premium request allowance. We have automatically switched you to an included model (GPT-5 mini, GPT-4.1, or GPT-4o). Enable additional paid premium requests to continue using premium models."
+> 'You have exceeded your premium request allowance. We have automatically switched you to an included model (GPT-5 mini, GPT-4.1, or GPT-4o). Enable additional paid premium requests to continue using premium models.'
 
 This is not an error. It is how the system maintains service availability whilst controlling costs.
 
@@ -297,8 +294,6 @@ With $200 USD budget cap:
 - once reached: premium features stop, basic features continue
 - total: $950 USD subscription + $200 USD budget = $1,150 USD (controlled)
 ```
----
-
 ## Monitoring and optimising usage
 
 Control costs whilst maintaining developer productivity through monitoring and smart model selection.
@@ -306,9 +301,11 @@ Control costs whilst maintaining developer productivity through monitoring and s
 ### Track your usage
 
 #### In your IDE
+
 Click the Copilot status icon to view current consumption, see which models you are using, and check remaining allowance.
 
 #### On GitHub.com 
+
 Navigate to Settings → Copilot to view your [monthly usage dashboard](https://docs.github.com/en/copilot/how-tos/manage-and-track-spending/monitor-premium-requests), download reports, and configure billing preferences.
 
 ### Optimise your usage
@@ -333,33 +330,14 @@ Coding agent uses one request per session, making it cost-effective for complex 
 
 Download usage reports monthly to identify high consumers. Contact them to understand workflows and share best practices. Explain to your teams how premium requests work, when to use included vs premium models, and cost implications of different choices.
 
----
 GitHub Copilot models, pricing, and features are subject to change. This guidance was last updated February 2026. Always verify current information on the [official GitHub Copilot documentation](https://docs.github.com/en/copilot).
 
 GitHub Copilot is billed in US dollars (USD). UK government departments should apply current exchange rates when converting to pounds (GBP) for budget planning. All pricing in this document is shown in USD as per GitHub's official pricing.
 
-## Related resources
+## Further reading
 
-### GitHub Copilot documentation
+See [Plans for GitHub Copilot](https://github.com/features/copilot/plans) for pricing and plan comparisons, and [Requests in GitHub Copilot](https://docs.github.com/en/copilot/concepts/billing/copilot-requests) for how premium requests work. To configure allowances, see [Managing the premium request allowance](https://docs.github.com/en/copilot/how-tos/manage-and-track-spending/manage-request-allowances). For budget configuration and tracking, see [Setting up budgets](https://docs.github.com/en/billing/tutorials/set-up-budgets) and [Monitoring usage](https://docs.github.com/en/copilot/how-tos/manage-and-track-spending/monitor-premium-requests).
 
-[Plans for GitHub Copilot](https://github.com/features/copilot/plans) - pricing and plan comparisons.
+For the latest feature updates, see the [GitHub Copilot changelog](https://github.blog/changelog/label/copilot/).
 
-[Requests in GitHub Copilot](https://docs.github.com/en/copilot/concepts/billing/copilot-requests) - how premium requests work.
-
-[Managing the premium request allowance](https://docs.github.com/en/copilot/how-tos/manage-and-track-spending/manage-request-allowances) - configuration guidance.
-
-[Setting up budgets](https://docs.github.com/en/billing/tutorials/set-up-budgets) - budget configuration.
-
-[Monitoring usage](https://docs.github.com/en/copilot/how-tos/manage-and-track-spending/monitor-premium-requests) - usage tracking
-
-### Change log and updates
-
-[GitHub Copilot changelog](https://github.blog/changelog/label/copilot/) - latest feature updates
-
-### Related guidance
-
-[GitHub Copilot getting started guide](getting-started.md) - initial setup and safe usage.
-
-[GitHub Copilot advanced use guide](advanced-use.md) - advanced features and techniques.
-
-[GitHub Copilot customisation guide](customisation-guide.md) - custom instructions and configuration.
+See the [GitHub Copilot getting started guide](getting-started.md) for initial setup and safe usage, the [advanced use guide](advanced-use.md) for advanced features and techniques, and the [customisation guide](customisation-guide.md) for custom instructions and configuration.

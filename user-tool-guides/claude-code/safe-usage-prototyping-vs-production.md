@@ -1,4 +1,4 @@
-> **ALPHA**
+> ALPHA
 > This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 
 # Safe usage guidance: prototyping vs production environments
@@ -18,27 +18,34 @@ This guidance is for:
 
 ## Before you start
 
-Before using this guidance, make sure you have:
+Before using this guidance, make sure you:
 
 - read the [base guardrails](../../governance/guardrails-base.md)
-- completed department-specific AI tool onboarding
-- understood your team's data classification levels
-- identified which environments your team uses
+- complete department-specific AI tool onboarding
+- understand your team's data classification levels
+- identify which environments your team uses
 
 ## Quick navigation
 
-| Section | Purpose |
-|---------|---------|
-| [Environment definitions](#environment-definitions) | Understand prototyping vs production environments |
-| [Data classification and environment matrix](#data-classification-and-environment-matrix) | Determine which Claude Code usage is permitted |
-| [Prototyping environment controls](#prototyping-environment-controls) | 6 controls for rapid experimentation |
-| [Production environment controls](#production-environment-controls) | 13 controls for production systems |
-| [Transition from prototype to production](#transition-from-prototype-to-production) | Checklist and process for promotion |
-| [Common scenarios](#common-scenarios-and-guidance) | Practical examples and guidance |
-| [Ethics review framework](#ethics-review-framework) | When and how to seek ethics approval |
-| [Departmental AI tool governance](#departmental-ai-tool-governance) | Tool approval and exception processes |
-| [Policy configuration](#policy-configuration-recommendations) | Claude Code settings and configuration |
-| [Measuring compliance](#measuring-safe-usage-compliance) | Compliance indicators and metrics |
+[Environment definitions](#environment-definitions)
+
+[Data classification and environment matrix](#data-classification-and-environment-matrix)
+
+[Prototyping environment controls](#prototyping-environment-controls)
+
+[Production environment controls](#production-environment-controls)
+
+[Transition from prototype to production](#transition-from-prototype-to-production)
+
+[Common scenarios](#common-scenarios-and-guidance)
+
+[Ethics review framework](#ethics-review-framework)
+
+[Departmental AI tool governance](#departmental-ai-tool-governance)
+
+[Policy configuration](#policy-configuration-recommendations)
+
+[Measuring compliance](#measuring-safe-usage-compliance)
 
 ## Environment definitions
 
@@ -50,7 +57,7 @@ A prototyping environment is characterised by:
 - code not intended for production deployment
 - limited or no access to production data or systems
 - short-lived codebases (typically days to weeks)
-- isolated from production systems and networks
+- systems and networks isolated from production
 
 Examples include:
 
@@ -86,15 +93,12 @@ Examples include:
 
 Pre-production environments (such as development, test, staging, integration) should follow production-level controls unless they meet all the criteria for prototyping environments.
 
-If an environment contains:
+Apply production-level controls if an environment contains:
+
 - production-like data (even if anonymised)
 - connections to production systems or services
 - code that will be promoted to production
 - infrastructure that mirrors production architecture
-
-Then apply production-level controls.
-
----
 
 ## Data classification and environment matrix
 
@@ -133,13 +137,11 @@ A risk assessment is required. It must include:
 - audit logging requirements
 - controls for large context windows
 - restrictions on agentic features when handling sensitive data
-- review of the CLAUDE.md file for sensitive information
+- a review of the CLAUDE.md file for sensitive information
 
 #### SECRET and above
 
 You must not use Claude Code with data classified as SECRET or above in any environment.
-
----
 
 ## Prototyping environment controls
 
@@ -186,7 +188,7 @@ You must:
 - use private repositories for all prototype work
 - not commit secrets, API keys, authentication tokens or credentials
 - enable secret scanning on prototype repositories
-- clearly label repositories as "PROTOTYPE - NOT FOR PRODUCTION"
+- clearly label repositories as 'PROTOTYPE - NOT FOR PRODUCTION'
 - review CLAUDE.md files for sensitive information before committing
 
 You should:
@@ -245,8 +247,6 @@ Before moving prototype code to production, you must:
 - sanitise CLAUDE.md files of any prototype-specific context
 
 A prototype transitioning to production must be treated as new production code and cannot skip any production controls.
-
----
 
 ## Production environment controls
 
@@ -328,6 +328,7 @@ You should:
 Claude Code's large context window (up to 1 million tokens, with 2 million tokens in beta) requires careful management in production:
 
 You must:
+
 - limit context to only necessary files for the task
 - exclude sensitive configuration files from context
 - avoid including entire production codebases unnecessarily
@@ -336,6 +337,7 @@ You must:
 - understand that all context is sent to Anthropic's servers (United States by default)
 
 You should:
+
 - use targeted file selection rather than workspace-wide context
 - configure .gitignore-style exclusions for sensitive files
 - regularly audit which files are being used for context
@@ -346,18 +348,21 @@ You should:
 Claude Code has strong agentic capabilities that can execute multi-step tasks.
 
 Before enabling agentic features, you must:
+
 - make sure the engineer understands what actions Claude can take
 - verify workspace does not contain production credentials or secrets
 - confirm appropriate scope and boundaries are set
 - review and approve execution plan before starting
 
 During agentic execution, you must:
+
 - monitor progress and be prepared to cancel if needed
 - review each significant change before approval
 - maintain version control with clean git state for easy rollback
 - not leave agentic tasks running unattended
 
 Never allow agentic mode to:
+
 - access production systems or databases
 - modify production infrastructure
 - execute commands with privileged credentials
@@ -375,6 +380,7 @@ You must not:
 - allow agents to access production databases or APIs
 
 All agent actions must:
+
 - require explicit human approval of execution plans before proceeding
 - be logged and auditable
 - be scoped to minimal necessary permissions
@@ -384,8 +390,8 @@ All agent actions must:
 
 Engineers working with AI-generated code should be familiar with:
 
-- [OWASP LLM Top 10](https://genai.owasp.org/llm-top-10/) - top security risks for large language model applications
-- [OWASP Agentic AI Threats and Mitigations](https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/) - security considerations for autonomous AI systems
+- [OWASP LLM Top 10](https://genai.owasp.org/llm-top-10/) top security risks for large language model applications
+- [OWASP Agentic AI Threats and Mitigations](https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/), security considerations for autonomous AI systems
 
 These resources help identify vulnerabilities specific to AI-generated code and applications that integrate AI.
 
@@ -410,6 +416,7 @@ For these areas, use established libraries or consult security specialists.
 The CLAUDE.md file provides project context to Claude Code. In production repositories, you must meet the following requirements.
 
 For content restrictions, you must:
+
 - never include production credentials, API keys or secrets
 - avoid detailed security architecture information
 - not include production system URLs or endpoints
@@ -417,6 +424,7 @@ For content restrictions, you must:
 - avoid listing production environment details
 
 You should include:
+
 - general architectural patterns and conventions
 - coding standards and style guidelines
 - common development workflows
@@ -425,6 +433,7 @@ You should include:
 - British English and GDS Service Standard requirements
 
 For reviews, you must:
+
 - treat CLAUDE.md as code and subject to peer review
 - scan CLAUDE.md for secrets before committing
 - regularly audit content for appropriateness
@@ -481,19 +490,22 @@ Claude can help draft documentation, but it must be reviewed for accuracy and co
 
 When using Claude Code for production systems, you must consider the following requirements.
 
-Data residency requirements include:
+Data residency requirements where:
+
 - Claude Code processes data in the United States by default
 - EU regional option is planned but not currently in general availability
 - UK data residency is not currently available
 - all prompts and code sent to Claude transit through Anthropic's infrastructure
 
 Risk assessments must:
+
 - determine if United States data processing is acceptable for your classification
 - document data residency considerations in your risk register
 - consider alternative tools if UK or EU residency is mandatory
 - review your department's data protection impact assessment (DPIA) requirements
 
 You should escalate when:
+
 - OFFICIAL-SENSITIVE data requires UK or EU residency
 - contractual obligations require specific data residency
 - department policy mandates UK-only processing
@@ -551,8 +563,6 @@ General principles include:
 
 Consult your department's data protection officer before deploying AI-assisted features that process personal data.
 
----
-
 ## Transition from prototype to production
 
 ### When to apply production controls
@@ -570,34 +580,32 @@ Before promoting prototype code to production, complete this checklist.
 
 | Area | Requirement | Status |
 |------|-------------|--------|
-| **Security review** | Full security review by engineering team | ☐ |
-| **Threat modelling** | Threat model completed or updated | ☐ |
-| **Code standards** | Code refactored to meet department standards | ☐ |
-| **Test coverage** | Adequate automated tests written and passing | ☐ |
-| **Security scanning** | All scans (SAST, dependency, secrets) passing | ☐ |
-| **Dependency audit** | All dependencies verified and approved | ☐ |
-| **Documentation** | Production-quality documentation completed | ☐ |
-| **Accessibility** | WCAG 2.2 AA compliance verified (if user-facing) | ☐ |
-| **Data handling** | All mock or synthetic data replaced with production-ready code | ☐ |
-| **Architecture review** | Technical architect or lead engineer approval | ☐ |
-| **Data residency** | Data residency requirements assessed and met | ☐ |
-| **CLAUDE.md sanitised** | Project context file reviewed for sensitive information | ☐ |
-| **Context window review** | Verified appropriate file scope for production use | ☐ |
-| **Agentic features review** | Assessed and configured appropriate boundaries | ☐ |
-| **Peer review** | Detailed code review by at least 2 engineers | ☐ |
-| **Operational readiness** | Monitoring, logging, alerting configured | ☐ |
+| Security review | Full security review by engineering team | [ ] |
+| Threat modelling | Threat model completed or updated | [ ] |
+| Code standards | Code refactored to meet department standards | [ ] |
+| Test coverage | Adequate automated tests written and passing | [ ] |
+| Security scanning | All scans (SAST, dependency, secrets) passing | [ ] |
+| Dependency audit | All dependencies verified and approved | [ ] |
+| Documentation | Production-quality documentation completed | [ ] |
+| Accessibility | WCAG 2.2 AA compliance verified (if user-facing) | [ ] |
+| Data handling | All mock or synthetic data replaced with production-ready code | [ ] |
+| Architecture review | Technical architect or lead engineer approval | [ ] |
+| Data residency | Data residency requirements assessed and met | [ ] |
+| CLAUDE.md sanitised | Project context file reviewed for sensitive information | [ ] |
+| Context window review | Verified appropriate file scope for production use | [ ] |
+| Agentic features review | Assessed and configured appropriate boundaries | [ ] |
+| Peer review | Detailed code review by at least 2 engineers | [ ] |
+| Operational readiness | Monitoring, logging, alerting configured | [ ] |
 
 ### Recommended transition approach
 
-Rather than directly promoting prototype code, you should:
+Instead of directly promoting prototype code, you should:
 
 - rewrite with production intent, using the prototype as a reference implementation but write production code with full controls
-
 - do incremental migration, moving small, well-tested components over time
-
 - take a hybrid approach, keeping the prototype running alongside production during validation phase
 
-Do not simply rename "prototype" repositories to "production" without applying appropriate controls.
+Do not simply rename 'prototype' repositories to 'production' without applying appropriate controls.
 
 ### Pre-use due diligence checklist
 
@@ -619,19 +627,18 @@ Before using Claude Code in any environment, complete this due diligence assessm
 
 Document your answers and retain them for audit purposes. Escalate concerns to your technical lead or security team.
 
----
-
 ## Common scenarios and guidance
 
 ### Scenario 1: architectural design exploration
 
-**Context**: engineer exploring microservices architecture options for new service.
+Engineer exploring microservices architecture options for new service.
 
-**Environment**: prototyping
+Environment: prototyping
 
-**Appropriate controls**
+#### Appropriate controls
 
 You can:
+
 - use Claude Code's reasoning capabilities to explore options
 - discuss architectural trade-offs with Claude
 - generate proof-of-concept code to test approaches
@@ -639,24 +646,24 @@ You can:
 - document findings in architectural decision records
 
 You must not:
+
 - include production system details in context
 - share sensitive security requirements
 - include real production configurations
 - use production credentials for testing
 
-**Transition**: if proceeding, conduct formal architecture review, complete threat model, and rebuild with production controls.
-
----
+Transition: if proceeding, conduct formal architecture review, complete threat model, and rebuild with production controls.
 
 ### Scenario 2: code migration from legacy framework
 
-**Context**: team migrating large Python 2.7 codebase to Python 3.12.
+Team migrating large Python 2.7 codebase to Python 3.12.
 
-**Environment**: production (upgrading existing production code)
+Environment: production (upgrading existing production code)
 
-**Appropriate controls**
+#### Appropriate controls
 
 You must:
+
 - use Claude's agentic capabilities in non-production environment first
 - review all transformed code thoroughly
 - test extensively before deploying to production
@@ -667,30 +674,30 @@ You must:
 - review execution plans before approving multi-file changes
 
 You should:
+
 - pilot transformation on smaller, less critical components first
 - document transformation decisions and any manual changes required
 - involve your technical architect in the migration strategy
 - break large transformations into smaller, reviewable chunks
 - use Claude's large context window to understand codebase relationships
 
-**Special considerations**
 Special considerations include:
+
 - code transformation operates at scale, increasing review burden
 - automated transformation may not catch all compatibility issues
 - legacy code patterns may require manual intervention
 - large context windows useful but require careful scoping
 
----
-
 ### Scenario 3: building GOV.UK service with test-driven development
 
-**Context**: engineer implementing new feature using test-driven development approach.
+Engineer implementing new feature using test-driven development approach.
 
-**Environment**: production
+Environment: production
 
-**Required controls**
+#### Required controls
 
 You must:
+
 - generate tests before implementation code
 - review all generated tests for quality and coverage
 - ensure tests follow GDS Service Manual guidance
@@ -700,29 +707,29 @@ You must:
 - document approach in CLAUDE.md for consistency
 
 You should:
+
 - use Claude to generate comprehensive test cases including edge cases
 - use Claude's reasoning to identify security test scenarios
 - have Claude explain test rationale for complex cases
 - use British English in all test descriptions and messages
 
-**Special considerations**
 Special considerations include:
+
 - AI-generated tests may pass without adequately validating behaviour
 - review test assertions carefully for meaningful checks
 - ensure accessibility tests actually verify WCAG compliance
 - consider using Claude to explain existing test patterns before generating new ones
 
----
-
 ### Scenario 4: infrastructure as code development
 
-**Context**: engineer creating Terraform modules for new infrastructure.
+Engineer creating Terraform modules for new infrastructure.
 
-**Environment**: production (infrastructure is always production)
+Environment: production (infrastructure is always production)
 
-**Required controls**
+#### Required controls
 
 You must:
+
 - apply all production code review requirements
 - validate with terraform validate and tflint
 - check for security misconfigurations (public access, open ports)
@@ -733,30 +740,31 @@ You must:
 - document infrastructure decisions in ADRs
 
 You should:
+
 - use department-approved infrastructure patterns where available
 - follow cloud provider best practices (AWS Well-Architected, GCP Architecture Framework, Azure Well-Architected)
 - implement cost controls and resource tagging
 - use Claude to understand infrastructure best practices before implementing
 
 You must not:
+
 - accept infrastructure code without security review
 - deploy infrastructure directly to production without testing
 - include production credentials in CLAUDE.md
 - share sensitive network topology in context
 
-**Rationale**: infrastructure misconfigurations can expose entire systems and generate unexpected costs.
-
----
+Infrastructure misconfigurations can expose entire systems and generate unexpected costs.
 
 ### Scenario 5: API security review
 
-**Context**: using Claude Code to review existing API for security vulnerabilities.
+using Claude Code to review existing API for security vulnerabilities.
 
-**Environment**: production
+Environment: production
 
-**Required controls**
+#### Required controls
 
 You must:
+
 - sanitise any production code examples before sharing with Claude
 - not include production API keys or authentication tokens
 - not share specific vulnerability details in external systems
@@ -764,6 +772,7 @@ You must:
 - not rely solely on AI for security assurance
 
 You should:
+
 - use Claude's reasoning to understand potential attack vectors
 - ask Claude to explain OWASP Top 10 risks in your context
 - review authentication and authorisation logic carefully
@@ -771,14 +780,13 @@ You should:
 - document security findings and remediation
 
 You must not:
+
 - paste production code with embedded secrets
 - share details of active vulnerabilities before remediation
 - use Claude as sole security review mechanism
 - assume AI-identified issues are comprehensive
 
-**Rationale**: security review requires human expertise; AI is a tool to augment, not replace, security analysis.
-
----
+Security review requires human expertise; AI is a tool to augment, not replace, security analysis.
 
 ## Ethics review framework
 
@@ -787,11 +795,13 @@ You must not:
 Seek ethics review from your department's governance board or senior leadership before using Claude Code in the following scenarios.
 
 When AI is replacing or augmenting human decision-making, seek a review for:
+
 - code that automates decisions affecting citizens (benefits, licensing, enforcement)
 - systems that triage, prioritise or route cases or applications
 - algorithms that score, rank or classify individuals or organisations
 
 For ethically sensitive domains, you should seek review for:
+
 - healthcare and medical systems
 - law enforcement and criminal justice
 - immigration and border control
@@ -800,11 +810,13 @@ For ethically sensitive domains, you should seek review for:
 - military and defence systems
 
 For politically or socially sensitive applications, you should seek review for:
+
 - systems subject to public debate or controversy
 - use cases at odds with government values (fairness, transparency, accountability)
 - applications that may face legal challenge or judicial review
 
-For agentic features in sensitive contexts, you should seek review for:
+For agentic features in sensitive contexts, you should seek review when:
+
 - enabling agentic mode for systems handling vulnerable populations data
 - using autonomous features in decision-making systems
 
@@ -827,23 +839,23 @@ When submitting for ethics review, you must address these questions.
 
 Government use of AI should adhere to the following principles.
 
-1. Fairness.
+#### 1. Fairness
 
 AI must not discriminate or create unjust outcomes. Consider impact on protected characteristics (age, disability, race, religion, sex, etc.).
 
-2. Accountability.
+#### 2. Accountability
 
 Humans remain responsible for AI-assisted decisions. AI is a tool, not a decision-maker.
 
-3. Transparency. 
+#### 3. Transparency
 
 Be open about where and how AI is used. Provide meaningful explanations of AI-assisted decisions.
 
-4. Safety and security.
+#### 4. Safety and security
 
 Ensure AI systems are reliable, secure and fail safely. Protect against manipulation or misuse.
 
-5. Proportionality.
+#### 5. Proportionality
 
  Use AI only where benefits outweigh risks. Consider less intrusive alternatives.
 
@@ -859,13 +871,11 @@ Follow these steps if you believe an ethics review is needed.
 
 If your department lacks an ethics review process, escalate to your chief technology officer or equivalent senior responsible officer.
 
----
-
 ## Departmental AI tool governance
 
 ### Approved tool lists
 
-Your department should maintain an approved AI tool list ("allow list") specifying:
+Your department should maintain an approved AI tool 'allow list' specifying:
 
 - which AI tools are approved for use
 - what data classifications each tool is approved for
@@ -890,6 +900,7 @@ Engineers must only use tools on the approved list unless an exception has been 
 If Claude Code is not on your departments approved list, you should consider the following things. 
 
 For prototyping and research:
+
 - unapproved AI tools may be used for non-production activities (training, proof of concept, research)
 - no department or citizen data must be used
 - no production systems may be accessed
@@ -898,6 +909,7 @@ For prototyping and research:
 - results must not be deployed to production
 
 For production use:
+
 - submit exception request to AI governance board or equivalent
 - provide business justification and risk mitigation
 - obtain senior management approval
@@ -928,8 +940,6 @@ Departments should review AI tool governance annually, to:
 
 This ensures governance keeps pace with evolving AI technology and risks.
 
----
-
 ## Policy configuration recommendations
 
 ### Claude Code settings
@@ -938,18 +948,19 @@ For UK government departments, configure Claude Code as follows.
 
 | Setting | Prototyping | Production | Rationale |
 |---------|-------------|------------|-----------|
-| **Edition** | Pro | Pro or Team/Enterprise | Advanced features and higher limits needed |
-| **Context window** | Moderate | Strictly limited | Controls data exposure |
-| **Agentic features** | Enabled with caution | Enabled with strict controls | Powerful but requires oversight |
-| **CLAUDE.md** | Project-specific | Sanitised, no secrets | Provides context without exposing sensitive data |
-| **Extended thinking** | Enabled | Enabled for complex tasks | Useful for reasoning but review outputs |
-| **CLI access** | Enabled | Controlled | Convenient but requires audit |
+| Edition | Pro | Pro or Team/Enterprise | Advanced features and higher limits needed |
+| Context window | Moderate | Strictly limited | Controls data exposure |
+| Agentic features | Enabled with caution | Enabled with strict controls | Powerful but requires oversight |
+| CLAUDE.md | Project-specific | Sanitised, no secrets | Provides context without exposing sensitive data |
+| Extended thinking | Enabled | Enabled for complex tasks | Useful for reasoning but review outputs |
+| CLI access | Enabled | Controlled | Convenient but requires audit |
 
 ### CLAUDE.md recommendations
 
 Create a CLAUDE.md file in your repository root with appropriate project context.
 
 You should include:
+
 - general architectural patterns
 - coding standards and conventions
 - testing requirements
@@ -959,6 +970,7 @@ You should include:
 - common workflow guidance
 
 You must not include:
+
 - production credentials or API keys
 - production URLs or endpoints
 - detailed security architecture
@@ -985,8 +997,6 @@ Configure exclusions (similar to .gitignore) to protect these patterns:
 **/.gcp/credentials
 **/service-account-keys/**
 ```
-
----
 
 ## Measuring safe usage compliance
 
@@ -1019,98 +1029,32 @@ Escalate immediately if you identify:
 - large context windows used without justification exposing sensitive data
 - data residency requirements violated
 
----
-
 ## Roles and responsibilities
 
 | Role | Prototyping responsibilities | Production responsibilities |
 |------|------------------------------|----------------------------|
-| **Engineer** | Follow prototyping controls, document findings, delete unused prototypes | Follow all production controls, complete security scanning, thorough code review, manage context windows appropriately, review agentic execution plans |
-| **Technical lead** | Review prototype direction, approve transition to production | Approve production code, ensure compliance, participate in security reviews, approve agentic feature usage, review CLAUDE.md content |
-| **Engineering manager** | Ensure team trained on safe usage, allocate time for compliance | Enforce production controls, track compliance metrics, escalate issues, approve architectural changes, oversee agentic feature governance |
-| **Security team** | Review transition plans, advise on risk, assess data residency implications | Review production security scanning, investigate incidents, audit compliance, validate architectures, audit CLAUDE.md files |
-| **Service owner** | Decide whether prototypes progress to production | Accountable for service security, compliance and data protection |
-
----
-
-## Related resources
-
-### Internal documentation
-
-- [base guardrails](../../governance/guardrails-base.md) - foundational security controls
-- [AI SDLC playbook](../../playbooks/ai-sdlc-playbook.md) - integrating AI tools across development lifecycle
-- [incident response playbook](../../governance/incident-response-playbook.md) - responding to AI tool incidents
-- [model selection guide](../../playbooks/model-selection.md) - choosing appropriate AI models
-- [context engineering](../../playbooks/context-engineering.md) - managing CLAUDE.md and project context
-
-### Government guidance
-
-- [Government Service Manual](https://www.gov.uk/service-manual)
-- [Government Service Standard](https://www.gov.uk/service-manual/service-standard)
-- [Technology Code of Practice](https://www.gov.uk/guidance/the-technology-code-of-practice)
-- [Government Security Classifications](https://www.gov.uk/government/publications/government-security-classifications)
-- [NCSC Cloud Security Principles](https://www.ncsc.gov.uk/collection/cloud/the-cloud-security-principles)
-
-### Claude Code resources
-
-- [Anthropic documentation](https://docs.anthropic.com/)
-- [Claude Code best practices](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview)
-- [Anthropic security and privacy](https://www.anthropic.com/security)
-- [Claude regional compliance](https://claude.com/regional-compliance)
-- [CLAUDE.md guidance](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/use-case-guides/code-assistant)
-
-### AI security resources
-
-- [OWASP LLM Top 10](https://genai.owasp.org/llm-top-10/) - top security risks for large language model applications
-- [OWASP Agentic AI Threats and Mitigations](https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/) - security considerations for autonomous AI systems
-- [NCSC AI and Machine Learning Security](https://www.ncsc.gov.uk/collection/machine-learning) - UK guidance on securing AI systems
-
----
+| Engineer | Follow prototyping controls, document findings, delete unused prototypes | Follow all production controls, complete security scanning, thorough code review, manage context windows appropriately, review agentic execution plans |
+| Technical lead | Review prototype direction, approve transition to production | Approve production code, ensure compliance, participate in security reviews, approve agentic feature usage, review CLAUDE.md content |
+| Engineering manager | Ensure team trained on safe usage, allocate time for compliance | Enforce production controls, track compliance metrics, escalate issues, approve architectural changes, oversee agentic feature governance |
+| Security team | Review transition plans, advise on risk, assess data residency implications | Review production security scanning, investigate incidents, audit compliance, validate architectures, audit CLAUDE.md files |
+| Service owner | Decide whether prototypes progress to production | Accountable for service security, compliance and data protection |
 
 ## Keeping this guidance up to date
 
 AI tools evolve rapidly. This guidance should be reviewed:
 
-- every 6 months (minimum)
+- every 6 months as a minimum
 - after major Claude Code feature releases
 - following incidents involving AI-generated code
 - when government policy or security guidance changes
 - when data residency options change (monitor EU regional availability)
 
-To suggest updates, see the [contributing guidance](../../CONTRIBUTING.md).
+## Further reading
 
----
+Read the [base guardrails](../../governance/guardrails-base.md), [AI SDLC playbook](../../playbooks/ai-sdlc-playbook.md), [incident response playbook](../../governance/incident-response-playbook.md), [model selection guide](../../playbooks/model-selection.md) and [context engineering guide](../../playbooks/context-engineering.md) alongside this guidance.
 
-## Feedback
+For UK government standards, refer to the [Government Service Manual](https://www.gov.uk/service-manual), [Service Standard](https://www.gov.uk/service-manual/service-standard), [Technology Code of Practice](https://www.gov.uk/guidance/the-technology-code-of-practice), [Government Security Classifications](https://www.gov.uk/government/publications/government-security-classifications) and [NCSC Cloud Security Principles](https://www.ncsc.gov.uk/collection/cloud/the-cloud-security-principles).
 
-This is an alpha service. Your feedback helps improve this guidance.
+For Anthropic-specific guidance, see the [Anthropic documentation](https://docs.anthropic.com/), [security and privacy information](https://www.anthropic.com/security) and [regional compliance details](https://claude.com/regional-compliance).
 
-Share feedback through:
-- [GitHub discussions](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions)
-- Your department's AI Engineering Lab community channel
-- The AI Engineering Lab team
-
----
-
-## Contributing
-
-See [CONTRIBUTING.md](../../CONTRIBUTING.md) for contribution guidelines.
-
-We encourage contributions from across government to keep this repository current and comprehensive. Share your team's experience, lessons learned, and effective practices to help other government departments.
-
-Before contributing, read [CONTRIBUTING.md](../../CONTRIBUTING.md) which covers:
-- content standards and style guide
-- review and approval process
-- accessibility requirements
-- how to submit changes
-
-## Licence
-
-This repository is published under the [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/).
-
-You are encouraged to use and adapt these materials for your own government context.
-
-When reusing content you should:
-- maintain attribution to this repository
-- share improvements back via contribution
-- ensure adaptations remain suitable for government use
+For AI security risks, consult the [OWASP LLM Top 10](https://genai.owasp.org/llm-top-10/), [OWASP Agentic AI Threats and Mitigations](https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/) and [NCSC AI and Machine Learning Security](https://www.ncsc.gov.uk/collection/machine-learning) guidance.

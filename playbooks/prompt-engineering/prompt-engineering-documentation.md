@@ -1,7 +1,5 @@
-[← Back to Index](./prompt-engineering-index.md)
-
-> **ALPHA**
-> This is a new service – your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
+> ALPHA
+> This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 
 # Prompt engineering for code documentation
 
@@ -285,9 +283,3 @@ The good documentation approach:
 - keep it current as code evolves
 - add context about system integration
 - warn about security and Personally Identifiable Information (PII) considerations
-
----
-
-Previous: [Testing - Getting comprehensive coverage](./prompt-engineering-testing.md)
-
-Next: [Prompt engineering for AI coding agents](./prompt-engineering-agents.md)
