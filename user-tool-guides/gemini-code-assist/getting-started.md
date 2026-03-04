@@ -1,4 +1,4 @@
-> **ALPHA**
+> ALPHA
 > This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 
 # Google Gemini Code Assist: getting started guide
@@ -19,18 +19,29 @@ This guide is for:
 
 ## Contents
 
-- [Quick start](#quick-start)
-- [Before you start](#before-you-start)
-- [What Gemini Code Assist does](#what-gemini-code-assist-does)
-- [Getting started](#getting-started)
-- [Understanding suggestion quality](#understanding-suggestion-quality)
-- [Daily coding workflows](#daily-coding-workflows)
-- [Tips for better results](#tips-for-better-results)
-- [Code quality and review](#code-quality-and-review)
-- [Security essentials](#security-essentials)
-- [Limitations and known issues](#limitations-and-known-issues)
-- [Troubleshooting](#troubleshooting)
-- [Related resources](#related-resources)
+[Quick start](#quick-start)
+
+[Before you start](#before-you-start)
+
+[What Gemini Code Assist does](#what-gemini-code-assist-does)
+
+[Getting started](#getting-started)
+
+[Understanding suggestion quality](#understanding-suggestion-quality)
+
+[Daily coding workflows](#daily-coding-workflows)
+
+[Tips for better results](#tips-for-better-results)
+
+[Code quality and review](#code-quality-and-review)
+
+[Security essentials](#security-essentials)
+
+[Limitations and known issues](#limitations-and-known-issues)
+
+[Troubleshooting](#troubleshooting)
+
+[Further reading](#further-reading)
 
 ## Quick start
 
@@ -115,14 +126,14 @@ Your department provides credentials through the central Google Cloud Platform (
 
 Learn to recognise good and poor suggestions.
 
-### Accept suggestions when they
+Accept suggestions when they:
 
 - follow your project's existing patterns
 - handle edge cases appropriately
 - include error handling
 - match your team's coding style
 
-### Reject or review carefully suggestions that
+Reject or review carefully suggestions that:
 
 - are generic and do not fit your context
 - lack error handling or validation
@@ -153,26 +164,25 @@ You must always get human review for:
 #### Step 2: Review and refine
 
 Accept the basic structure, then iterate:
-- 'Add error handling for malformed CSV rows'
-- 'Add type hints'
-- 'Handle Scottish postcodes and British Forces Post Office (BFPO) formats'
+
+- 'add error handling for malformed CSV rows'
+- 'add type hints'
+- 'handle Scottish postcodes and British Forces Post Office (BFPO) formats'
 
 #### Step 3: Generate tests
 
 Select the function, then in Gemini Chat:
+
 > 'Generate unit tests covering happy path and error cases, including edge cases for UK-specific data formats'
 
 ### Understanding unfamiliar code
 
 When you encounter legacy code, do the following.
 
-1. Get a high-level overview: select the file and ask 'Explain what this module does and its main responsibilities'.
-
-2. Understand specific sections: select a complex function and ask 'Explain this function step-by-step, focusing on the business logic'.
-
-3. Identify issues: ask 'What are the main issues or technical debt in this code?'.
-
-4. Get refactoring suggestions: ask 'How could this be refactored to be more maintainable?'.
+1. Get a high-level overview by selecting the file and asking 'Explain what this module does and its main responsibilities'.
+2. Understand specific sections by selecting a complex function and asking 'Explain this function step-by-step, focusing on the business logic'.
+3. Identify issues by asking 'What are the main issues or technical debt in this code?'
+4. Get refactoring suggestions by asking 'How could this be refactored to be more maintainable?'
 
 ### Debugging issues
 
@@ -241,7 +251,7 @@ Open related files in your IDE so Gemini can see your existing patterns, types, 
 
 ## Code quality and review
 
-### Your responsibilities
+### Responsibilities
 
 You are responsible for all code you commit. Gemini suggestions are not pre-approved. Standard code review processes apply.
 
@@ -266,23 +276,23 @@ You are responsible for all code you commit. Gemini suggestions are not pre-appr
 
 ## Security essentials
 
-Never include in prompts:
+In prompts, you should never include:
 
 - application programming interface (API) keys, passwords, or tokens
 - real citizen data or personal information
 - production connection strings
 - security configuration details
 
-Use instead: placeholder values (`YOUR_API_KEY`, `example@example.com`), synthetic data, generic descriptions.
+Instead, use placeholder values (`YOUR_API_KEY`, `example@example.com`), synthetic data, generic descriptions.
 
 ### Content exclusions
 
-Gemini automatically excludes files matching patterns in `.aiexclude` or `.gitignore`. Files typically excluded are:
+Gemini automatically excludes files matching patterns in `.aiexclude` or `.gitignore`. Typical exclusions include:
 
 - `.env` files and environment configurations
 - `secrets/` directories
 - service account JSON files
-- production configuration
+- production configuration files
 - files in `.gitignore`
 
 Configuring `.aiexclude` and `.gitignore` settings is supported in VS Code. In JetBrains IDEs, only `.gitignore` exclusions apply automatically. Check with your manager if you are unsure what is excluded.
@@ -321,33 +331,10 @@ For persistent issues, contact your team's champion or raise a support ticket.
 
 For advanced troubleshooting including Agent mode and MCP issues, see the [advanced use guide](advanced-use.md).
 
-## Related resources
+## Further reading
 
-### Official Google documentation
+The [Gemini Code Assist documentation](https://cloud.google.com/gemini/docs/codeassist) and [getting started guide](https://cloud.google.com/gemini/docs/codeassist/getting-started) cover the full feature set.
 
-- [Gemini Code Assist documentation](https://cloud.google.com/gemini/docs/codeassist)
-- [Getting started guide](https://cloud.google.com/gemini/docs/codeassist/getting-started)
+For secure development, see [NCSC secure development guidance](https://www.ncsc.gov.uk/collection/developers-collection). For building government services, refer to the [Government Design System](https://design-system.service.gov.uk/) and [Service Manual: Technology](https://www.gov.uk/service-manual/technology).
 
-### Government guidance
-
-- [NCSC secure development guidance](https://www.ncsc.gov.uk/collection/developers-collection)
-- [Government Design System](https://design-system.service.gov.uk/)
-- [Service Manual: Technology](https://www.gov.uk/service-manual/technology)
-
-### AI Engineering Lab resources
-
-- [AI SDLC playbook](../../playbooks/ai-sdlc-playbook.md)
-- [Advanced use guide](advanced-use.md)
-
-## Contributing
-
-See the [contribution guidelines](../../CONTRIBUTING.md) before submitting changes.
-
-We encourage contributions from across government to keep this repository current and comprehensive. Share your team's experience, lessons learned, and effective practices to help other government departments.
-
-The [contribution guidelines](../../CONTRIBUTING.md) include:
-
-- content standards and style guide
-- review and approval process
-- accessibility requirements
-- how to submit changes
+For AI-specific development practices, see the [AI SDLC playbook](../../playbooks/ai-sdlc-playbook.md) and [advanced use guide](advanced-use.md).

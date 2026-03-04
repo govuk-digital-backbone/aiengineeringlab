@@ -1,4 +1,4 @@
-> **ALPHA**
+> ALPHA
 > This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 
 # Prompt library overview
@@ -80,11 +80,11 @@ Contribute a prompt when you have:
 
 ### Contribution process
 
-1. Use the template - Copy [prompt-template.md](prompt-template.md).
-2. Complete all sections - Ensure the prompt is well-documented.
-3. Test thoroughly - Verify the prompt works across scenarios.
-4. Submit PR - Follow [contribution guidelines](../CONTRIBUTING.md).
-5. Peer review - Champions or maintainers review before merge.
+1. Copy the template from [prompt-template.md](prompt-template.md).
+2. Complete all sections to ensure the prompt is well documented.
+3. Test the prompt thoroughly to verify it works across scenarios.
+4. Submit a PR following the [contribution guidelines](../CONTRIBUTING.md).
+5. Request peer review from champions or maintainers before merge.
 
 ### Quality criteria
 
@@ -94,7 +94,7 @@ Contribute a prompt when you have:
 | Documented | Clear explanation of when and how to use |
 | Tested | Verified across multiple scenarios |
 | Generalised | Useful beyond one specific situation |
-| Safe | No security or data concerns |
+| [Safe](../governance/guardrails-base.md) | No security or data concerns |
 
 ---
 
@@ -105,7 +105,7 @@ Contribute a prompt when you have:
 | Factor | Guidance |
 |--------|----------|
 | Specificity | Be precise about what you want |
-| Context | Provide relevant background information |
+| [Context](../playbooks/context-engineering.md) | Provide relevant background information |
 | Constraints | State boundaries and requirements clearly |
 | Examples | Show what good output looks like |
 | Format | Specify desired output structure |
@@ -115,29 +115,29 @@ Contribute a prompt when you have:
 
 If results are not what you expected:
 
-1. Check your context, did you provide enough information?
-2. Clarify constraints, were requirements explicit?
-3. Try rephrasing, different wording may help.
-4. Break it down, smaller requests may work better.
-5. Add examples, show what you want.
-6. Try a different approach, ask differently.
+1. Check your context to see if you provided enough information.
+2. Clarify constraints to ensure requirements were explicit.
+3. Try rephrasing as different wording may help.
+4. Break down the request as smaller requests may work better.
+5. Add examples to show what you want.
+6. Try a different approach by asking differently.
 
 ---
 
-## Tool-specific notes
+## Tool specific notes
 
 ### GitHub Copilot
 You should use:
 - inline suggestions work best with clear code context
 - comments to guide suggestions
 - chat mode for longer explanations and generation
-- Copilot Edits for multi-file changes
+- Copilot Edits for multi file changes
 
 ### Claude Code
 Claude Code:
 - excels at longer, more complex prompts
 - is strong at explaining and documenting
-- has good multi-file context awareness
+- has good multi file context awareness
 - can use CLAUDE.md for project context
 
 ### Amazon Q Engineer:
@@ -149,21 +149,18 @@ Amazon Q Engineer:
 
 ### Gemini Code Assist:
 Gemini Code Assist:
-- is good for GCP-related tasks
+- is good for GCP related tasks
 - has strong code explanation capabilities
 - is effective for large codebase understanding
 - works well for code customisation with your repos
 
 ---
 
-## Related documents
-Related documents include:
-- [prompt template](prompt-template.md) - template for contributing prompts
-- [context engineering playbook](../playbooks/context-engineering.md) - provides effective context
-- [AI-SDLC playbook](../playbooks/ai-sdlc-playbook.md) - using AI in development workflow
-- [guardrails base](../governance/guardrails-base.md) - security boundaries for prompts
+## Further reading
 
-## References
-
-- [Anthropic prompt engineering overview](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview)
+- [Prompt template](prompt-template.md)
+- [Context engineering playbook](../playbooks/context-engineering.md)
+- [AI-SDLC playbook](../playbooks/ai-sdlc-playbook.md)
+- [Guardrails base](../governance/guardrails-base.md)
 - [GitHub Copilot documentation](https://docs.github.com/en/copilot)
+- [Prompt engineering guide](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview)

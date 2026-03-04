@@ -28,7 +28,7 @@ This guide is for:
 - [integration with development workflow](#integration-with-development-workflow)
 - [security best practices](#security-best-practices)
 - [support and escalation](#support-and-escalation)
-- [contributing](#contributing) - how to improve this guide
+- [contributing](#contributing) (how to improve this guide)
 
 ## Before you start
 
@@ -72,9 +72,9 @@ Gemini Code Assist can:
 
 ### Agent mode
 
-Agent mode handles complex tasks spanning multiple files. It analyses your codebase, proposes a plan for your review, then executes changes with your oversight at each step. The documentation on how to [Code with Gemini Code Assist](https://developers.google.com/gemini-code-assist/docs/write-code-gemini) covers the full range of capabilities.
+Agent mode handles complex tasks spanning multiple files. It analyses your codebase, proposes a plan for your review, then executes changes with your oversight at each step. The [agent mode documentation](https://developers.google.com/gemini-code-assist/docs/write-code-gemini) covers the full range of capabilities.
 
-Gemini Code Assist tools were deprecated on 14 October 2025. External service integrations now use Model Context Protocol (MCP) servers in agent mode. See the [Developer Knowledge API and MCP server guidance](./developer-knowledge-api-and-mcp-server-guidance.md) for configuration details.
+Gemini Code Assist tools were deprecated on 14 October 2025. External service integrations now use Model Context Protocol (MCP) servers in agent mode.
 
 ## How it compares with other AI Engineering Lab tools
 
@@ -111,7 +111,7 @@ Gemini Code Assist processes code through Google Cloud Platform services. The fo
 - OFFICIAL-SENSITIVE: requires risk assessment and strict content exclusions
 - SECRET and above: not appropriate
 
-Check the [base guardrails](../../governance/guardrails-base.md) for departmental policy on AI tool usage and security boundaries. Check with your security team before you start. Reference [NCSC guidance on cloud services](https://www.ncsc.gov.uk/collection/cloud/the-cloud-security-principles) for risk assessment and [NCSC secure development guidance](https://www.ncsc.gov.uk/collection/developers-collection) for security best practices.
+Check with your security team before you start. Reference [NCSC guidance on cloud services](https://www.ncsc.gov.uk/collection/cloud/the-cloud-security-principles) for risk assessment and [NCSC secure development guidance](https://www.ncsc.gov.uk/collection/developers-collection) for security best practices.
 
 ### Content exclusions
 
@@ -145,6 +145,8 @@ Gemini Code Assist Enterprise includes IP indemnity. For government projects, us
 
 #### Standard
 
+$19 per user per month (annual commitment) or $22.80 per user per month (monthly commitment).
+
 Standard includes:
 
 - AI coding assistance with enterprise-grade security
@@ -153,14 +155,16 @@ Standard includes:
 
 #### Enterprise
 
-Enterprise is a paid plan and includes:
+$45 per user per month (annual commitment) or $54 per user per month (monthly commitment).
+
+Enterprise includes:
 
 - all Standard features
 - code customisation from private repositories
 - IP indemnity
 - usage analytics and reporting
 
-Prices are listed on [Cloud Platform SKUs](https://cloud.google.com/skus). Check [Gemini for Google Cloud pricing](https://cloud.google.com/products/gemini/pricing) for current rates. Gemini Code Assist is available through [Crown Commercial Service G-Cloud 14](https://www.crowncommercial.gov.uk/agreements/RM1557.14) for government departments.
+Prices are listed in USD. If you pay in a currency other than USD, the prices listed in your currency on [Cloud Platform SKUs](https://cloud.google.com/skus) apply. Check [Gemini for Google Cloud pricing](https://cloud.google.com/products/gemini/pricing) for current rates. Gemini Code Assist is available to government departments through [Crown Commercial Service G-Cloud 14](https://www.crowncommercial.gov.uk/agreements/RM1557.14).
 
 ### Installation process
 
@@ -202,7 +206,7 @@ Scale to full engineering team.
 #### Activities
 
 1. Roll out to entire team in groups of 10 to 15.
-2. Deliver 60-minute training sessions per group.
+2. Provide 60 minute training sessions per group.
 3. Share pilot user success stories, especially GCP and agent mode use cases.
 4. Establish support channels (Slack, Teams, or email).
 5. Create internal knowledge base of effective prompts.
@@ -366,7 +370,7 @@ For persistent issues, contact your team's champion or raise a support ticket.
 
 ### Security incidents
 
-If an engineer discovers code containing hardcoded secrets, vulnerabilities, or data protection issues, follow the [incident response playbook](../../governance/incident-response-playbook.md) for structured handling.
+If an engineer discovers code containing hardcoded secrets, vulnerabilities, or data protection issues:
 
 - do not commit the code
 - report to your security team using the standard incident process
@@ -435,8 +439,6 @@ Avoid using Gemini Code Assist for:
 - writing security controls (authentication, authorisation)
 - processing citizen data or personal information
 - configuring production Identity and Access Management (IAM) policies without validation
-
-The [safe usage guidance for Gemini Code Assist](../../user-tool-guides/gemini-code-assist/safe-usage-prototyping-vs-production.md) provides detailed guidance for engineers on the distinction between prototyping and production use.
 
 ## Policy configuration reference
 

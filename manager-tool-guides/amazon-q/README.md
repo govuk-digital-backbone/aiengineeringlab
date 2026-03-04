@@ -1,4 +1,4 @@
-> **ALPHA**
+> ALPHA
 > This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 
 # Amazon Q manager tool guide
@@ -39,7 +39,6 @@ This guide is organised into the following sections.
 - [integration with development workflow](#integration-with-development-workflow) - code review, Git workflow, testing, and CI/CD
 
 4. Additional resources
-- [related resources](#related-resources) - links to official documentation, government guidance, and repository materials
 - [contributing](#contributing) - how to improve this guide
 
 ## Before you start
@@ -53,7 +52,7 @@ Before reading this guide, you should understand:
 
 ## Summary
 
-Amazon Q Engineer is AWS's AI-powered code assistant, offering deep integration with AWS services and built-in security scanning. It is well-suited for government teams working primarily with AWS infrastructure.
+[Amazon Q Engineer](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/) is AWS's AI-powered code assistant, offering deep integration with AWS services and built-in security scanning. It is well-suited for government teams working primarily with AWS infrastructure.
 
 ### Key considerations
 
@@ -86,7 +85,7 @@ Choose Amazon Q when your team:
 - requires AWS infrastructure as code assistance
 
 Consider alternatives when:
-- you need faster inline completions (GitHub Copilot)
+- you need faster inline completions ([GitHub Copilot](../github-copilot/))
 - you need complex reasoning capabilities (Claude Code)
 - you work primarily with non-AWS cloud providers
 
@@ -165,7 +164,7 @@ Choose Amazon Q when:
 
 Consider combining with other tools to:
 
-- use GitHub Copilot for faster inline completions in non-AWS contexts
+- use [GitHub Copilot](../github-copilot/) for faster inline completions in non-AWS contexts
 - use Claude Code for complex architectural reasoning
 - use Claude with AWS MCP server for enhanced AWS resource management
 - combine Q's security scanning with manual security reviews
@@ -194,7 +193,7 @@ AWS MCP server capabilities include:
 
 The AWS MCP server is available for use with Claude and other MCP-compatible AI assistants. For configuration details, see [AWS MCP server documentation](https://github.com/modelcontextprotocol/servers/tree/main/src/aws).
 
-#### Government considerations:
+#### Government considerations
 
 The AWS MCP server requires IAM credentials with appropriate permissions. You should:
 - use IAM roles with least-privilege access
@@ -205,7 +204,7 @@ The AWS MCP server requires IAM credentials with appropriate permissions. You sh
 
 ## Q models and task suitability
 
-Amazon Q Engineer uses different models optimised for various development tasks. Understanding model capabilities helps set appropriate expectations and choose the right approach.
+Amazon Q Engineer uses different models optimised for various development tasks. Understanding model capabilities helps set appropriate expectations and choose the right approach. The [model selection playbook](../../playbooks/model-selection.md) provides broader guidance on choosing the right AI tool for different tasks.
 
 ### Model comparison
 
@@ -256,11 +255,11 @@ This section covers Amazon Q-specific considerations.
 
 Amazon Q Engineer processes code snippets through AWS services. This means it is generally acceptable for OFFICIAL classification with appropriate content exclusions configured. OFFICIAL-SENSITIVE requires risk assessment and strict content exclusions. SECRET and above classifications are not appropriate for this tool.
 
-Consult your departmental security team before deployment. Reference [NCSC guidance on cloud services](https://www.ncsc.gov.uk/collection/cloud/the-cloud-security-principles) for risk assessment.
+Consult your departmental security team before deployment. Reference [NCSC guidance on cloud services](https://www.ncsc.gov.uk/collection/cloud/the-cloud-security-principles) for risk assessment and [NCSC secure development and deployment guidance](https://www.ncsc.gov.uk/collection/developers-collection) for security best practices. The [Amazon Q security documentation](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security.html) covers Amazon Q-specific security features and configurations.
 
 ### Content exclusions
 
-You must configure Amazon Q to exclude sensitive files and patterns. Recommended exclusions for government projects:
+You must [configure Amazon Q to exclude sensitive files and patterns](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security-data-protection.html). Recommended exclusions for government projects:
 
 ```yaml
 # Environment and configuration files
@@ -292,7 +291,7 @@ You must configure Amazon Q to exclude sensitive files and patterns. Recommended
 
 Amazon Q Engineer processes requests through AWS services in AWS regions. As of January 2025, code suggestions are processed in AWS US regions. No customer code is stored or used for model training. Telemetry data follows AWS data residency policies.
 
-Check your department's data residency requirements before deployment. For UK government, verify compliance with data sovereignty requirements.
+Check your department's data residency requirements before deployment. For UK government, verify compliance with data sovereignty requirements. [AWS Artifact](https://aws.amazon.com/artifact/) provides compliance reports and certifications to support this assessment.
 
 ### Intellectual property
 
@@ -324,15 +323,17 @@ Amazon Q Engineer Pro ($19 per month per user):
 - includes usage analytics and reporting
 - doesn't require training on your code
 
+Current pricing is available on the [Amazon Q Engineer pricing page](https://aws.amazon.com/q/developer/pricing/).
+
 ### Procurement routes
 
-Amazon Q Engineer is available through Crown Commercial Service G-Cloud 14 (search for AWS offerings including Amazon Q), AWS Enterprise Agreement (for departments with existing AWS Enterprise Support), AWS Marketplace (direct subscription with consolidated billing), and TechUK Framework (through authorised AWS resellers).
+Amazon Q Engineer is available through [Crown Commercial Service G-Cloud 14](https://www.crowncommercial.gov.uk/agreements/RM1557.14) ([search on the Digital Marketplace](https://www.digitalmarketplace.service.gov.uk/)), AWS Enterprise Agreement (for departments with existing AWS Enterprise Support), AWS Marketplace (direct subscription with consolidated billing), and [TechUK Framework](https://www.techuk.org/) (through authorised AWS resellers).
 
 Consult the procurement guidance documentation for detailed pathways.
 
 ### Installation process
 
-Standard contributions require an introductory sentence before the numbered steps. The installation process consists of 4 steps.
+The [Amazon Q getting started guide](https://aws.amazon.com/q/developer/getting-started/) on the AWS website provides additional installation options. The installation process consists of 4 steps.
 
 1. Set up IAM Identity Center (if not already configured).
 2. Create user groups for Amazon Q access.
@@ -348,10 +349,10 @@ code --install-extension amazonwebservices.aws-toolkit-vscode
 ```
 
 For JetBrains IDEs:
-- Settings → Plugins → Search "AWS Toolkit" → Install
+- Settings then Plugins then Search "AWS Toolkit" then Install
 
 For Visual Studio:
-- Extensions → Manage Extensions → Search "AWS Toolkit" → Install
+- Extensions then Manage Extensions then Search "AWS Toolkit" then Install
 
 Engineers authenticate using IAM Identity Center.
 
@@ -373,7 +374,7 @@ Test installation by checking these indicators.
 
 ### Phase 1: pilot (weeks 1 to 4)
 
-Objective: The objective of this phase is to validate effectiveness and identify issues.
+Objective: the objective of this phase is to validate effectiveness and identify issues.
 
 #### Activities
 
@@ -392,12 +393,12 @@ Objective: The objective of this phase is to validate effectiveness and identify
 
 ### Phase 2: team expansion (weeks 5 to 12)
 
-Objective: The objective of this phase is to scale to the full engineering team.
+Objective: the objective of this phase is to scale to the full engineering team.
 
 #### Activities
 
 1. Roll out to entire team in groups of 10 to 15.
-2. Deliver 45-minute training sessions per group.
+2. Deliver 45 minute training sessions per group.
 3. Share pilot user success stories, especially AWS use cases.
 4. Establish support channels (Slack, Teams, or email).
 5. Create internal knowledge base of effective prompts.
@@ -411,7 +412,7 @@ Objective: The objective of this phase is to scale to the full engineering team.
 
 ### Phase 3: optimisation (ongoing)
 
-Objective: The objective of this phase is to maximise value and address friction.
+Objective: the objective of this phase is to maximise value and address friction.
 
 #### Activities
 
@@ -463,7 +464,7 @@ This module covers:
 - content exclusions and when they apply
 - integration with code review process
 
-Format: This training should be delivered as a live demonstration with hands-on practice using real AWS projects.
+Format: this training should be delivered as a live demonstration with hands-on practice using real AWS projects.
 
 ### Manager briefing (30 minutes)
 
@@ -476,7 +477,7 @@ This briefing covers:
 - addressing team concerns about AI tools
 - security scanning and compliance features
 
-Format: This briefing should be delivered as a presentation with a Q&A session.
+Format: this briefing should be delivered as a presentation with a Q and A session.
 
 ## Measuring success
 
@@ -592,6 +593,8 @@ Interventions.
 5. Use agent mode for multi-file context understanding.
 
 ## Integration with development workflow
+
+The [AI SDLC playbook](../../playbooks/ai-sdlc-playbook.md) covers integrating AI coding assistants across the full software development lifecycle.
 
 ### Code review process
 
@@ -735,11 +738,11 @@ Disable Amazon Q for specific file types where suggestions are not helpful:
 
 ### Organisation-level settings
 
-Configure in AWS console.
+The [Managing Amazon Q in your organisation guide](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security-iam.html) covers IAM and access control configuration in detail. Configure in AWS console.
 
-1. Navigate to IAM Identity Center → Applications → Amazon Q Engineer.
+1. Navigate to IAM Identity Center then Applications then Amazon Q Engineer.
 2. Assign users and groups.
-3. Configure content exclusions (Settings → Content Exclusions).
+3. Configure content exclusions (Settings then Content Exclusions).
 4. Set up usage analytics (CloudWatch integration).
 5. Configure sharing preferences (opt-out of telemetry if required).
 
@@ -770,62 +773,12 @@ IAM policy example for Amazon Q access:
 5. Plan pilot: identify 5 to 10 pilot users, prioritising those working with AWS.
 6. Measure impact: set baseline metrics before deployment.
 
-## Related resources
+## Further reading
 
-### Official AWS resources
-
-- [Amazon Q Engineer documentation](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/) - complete official documentation
-- [Amazon Q Engineer features](https://aws.amazon.com/q/developer/) - feature overview and capabilities
-- [Getting started with Amazon Q](https://aws.amazon.com/q/developer/getting-started/) - initial setup guides
-- [Amazon Q Engineer pricing](https://aws.amazon.com/q/developer/pricing/) - licensing and cost information
-- [AWS re:Post for Amazon Q](https://repost.aws/tags/TA4ckYf2i3Rh-L8LJ8eKPxqg/amazon-q) - community questions and answers
-
-### Enterprise and security
-
-- [Managing Amazon Q in your organisation](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security-iam.html) - IAM and access control
-- [Amazon Q security](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security.html) - security features and best practices
-- [Content exclusions](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security-data-protection.html) - configuring what Amazon Q can access
-- [AWS Artifact](https://aws.amazon.com/artifact/) - compliance reports and certifications
-
-### Government procurement
-
-- [Crown Commercial Service G-Cloud 14](https://www.crowncommercial.gov.uk/agreements/g-cloud-14) - UK government cloud services framework
-- [AWS on G-Cloud](https://www.digitalmarketplace.service.gov.uk/) - search for AWS services including Amazon Q
-- [TechUK Framework](https://www.techuk.org/) - alternative procurement route
-
-### NCSC guidance
-
-- [Cloud security principles](https://www.ncsc.gov.uk/collection/cloud/the-cloud-security-principles) - assessing cloud services
-- [Secure development and deployment guidance](https://www.ncsc.gov.uk/collection/developers-collection) - security best practices
-- [Vulnerability disclosure](https://www.ncsc.gov.uk/information/vulnerability-disclosure-toolkit) - handling security issues
-
-### Repository resources
-
-- [AI SDLC Playbook](../../playbooks/ai-sdlc-playbook.md) - integrating AI Engineering Lab tools across development lifecycle
-- [Model Selection Playbook](../../playbooks/model-selection.md) - choosing appropriate tools for tasks
-- [GitHub Copilot Manager Guide](../github-copilot/) - complementary tool for inline completions
+The [Amazon Q Engineer features page](https://aws.amazon.com/q/developer/) provides an overview of capabilities and what is included in each tier. The NCSC [vulnerability disclosure toolkit](https://www.ncsc.gov.uk/information/vulnerability-disclosure-toolkit) covers how to handle security issues identified in your tools or projects.
 
 ## Contributing
 
-See [CONTRIBUTING.md](../../CONTRIBUTING.md) for contribution guidelines.
-
 We encourage contributions from across government to keep this repository current and comprehensive. Share your team's experience, lessons learned, and effective practices to help other government departments.
 
-Before contributing, read [CONTRIBUTING.md](../../CONTRIBUTING.md) which covers:
-
-- content standards and style guide
-- review and approval process
-- accessibility requirements
-- how to submit changes
-
-## Licence
-
-This repository is published under the [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/).
-
-You are encouraged to use and adapt these materials for your own government context.
-
-When reusing content, you should:
-
-- maintain attribution to this repository
-- share improvements back via contribution
-- ensure adaptations remain suitable for government use
+See the [contribution guidelines](../../CONTRIBUTING.md) before submitting changes.

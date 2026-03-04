@@ -29,13 +29,15 @@ This guide focuses on:
 
 ## Contents
 
-Use the following steps.
+[Improve how you write prompts](#1-improve-how-you-write-prompts)
 
-1. Improve how you write prompts.
-2. Use Copilot with existing code.
-3. Generate tests and documentation.
-4. Refactor code safely.
-5. Understand limits and failure modes.
+[Use Copilot with existing code](#2-use-copilot-with-existing-code)
+
+[Generate tests and documentation](#3-generate-tests-and-documentation)
+
+[Refactor code safely](#4-refactor-code-safely)
+
+[Understand limits and failure modes](#5-understand-limits-and-failure-modes)
 
 ## 1. Improve how you write prompts
 

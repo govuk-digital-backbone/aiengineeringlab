@@ -1,5 +1,5 @@
-> **ALPHA**
-> This is a new service – your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
+> ALPHA
+> This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 # AI Engineering Lab measurement playbook
 
 > Practical guidance for implementing measurement and demonstrating the value of AI Engineering Lab adoption.
@@ -73,7 +73,7 @@ Principle: monitor leading indicators to prevent problems and track lagging indi
 |--------|------|-----|
 | Suggestion acceptance rate | Leading | High acceptance predicts productivity gains, declining rate signals issues |
 | Time on task | Lagging | Confirms productivity improvement after adoption |
-| Cycle time | Lagging | Outcome measure of delivery speed |
+| [Cycle time](https://dora.dev/guides/dora-metrics-four-keys/) | Lagging | Outcome measure of delivery speed, from [Accelerate](https://itrevolution.com/product/accelerate/) research |
 | Throughput (velocity) | Lagging | Confirms sustained productivity improvement |
 | Code commit frequency | Leading | Early signal of changed working patterns |
 
@@ -85,7 +85,7 @@ Principle: monitor leading indicators to prevent problems and track lagging indi
 | Test coverage | Leading | Coverage predicts defect detection capability |
 | Security scan results | Leading | Vulnerabilities found early predict production security |
 | Defect rate | Lagging | Confirms quality outcomes |
-| Change failure rate | Lagging | Confirms deployment reliability |
+| [Change failure rate](https://dora.dev/guides/dora-metrics-four-keys/) | Lagging | Confirms deployment reliability |
 | Technical debt score | Lagging | Confirms long-term code health |
 
 #### Satisfaction metrics
@@ -545,7 +545,7 @@ Available metrics include:
 - token usage
 - feature usage patterns
 
-Collection method: The specific collection method depends on the Claude deployment model.
+Collection method: the specific collection method depends on the Claude deployment model.
 
 ---
 
@@ -602,7 +602,7 @@ If resources are constrained, focus on the essential metrics.
 | Engineer sentiment | Early warning of issues | Monthly 3-question survey |
 | Qualitative feedback | Context for numbers | Retrospective discussions |
 
-#### Three-question minimum survey
+#### Three-question minimum survey |
 
 ```
 1. How often did you use the AI assistant this week?
@@ -864,13 +864,9 @@ Do not say:
 
 ---
 
-## Related documents
+## Further reading
 
-- [Quality strategy](quality-strategy.md) - strategic measurement framework
-- [Maturity assessment framework](../assessment/maturity-assessment-framework.md) - team assessment metrics
-
-## References
-
-- [DORA metrics](https://dora.dev/guides/dora-metrics-four-keys/) - software delivery performance
-- [GDS service manual - Measuring success](https://www.gov.uk/service-manual/measuring-success)
-- [Accelerate (Forsgren, Humble, Kim)](https://itrevolution.com/product/accelerate/) - DevOps metrics research
+- [Maturity assessment framework](../assessment/maturity-assessment-framework.md)
+- [DORA four keys](https://dora.dev/guides/dora-metrics-four-keys/)
+- [Accelerate](https://itrevolution.com/product/accelerate/) by Forsgren, Humble and Kim
+- [GDS service manual: measuring success](https://www.gov.uk/service-manual/measuring-success)

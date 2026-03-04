@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.4] - 2026-02-20
+
+### Added
+- vendor security requirements
+- creating secure by design AI
+- risk alignment framework
+- non-deterministic code generation
+- model assurance and transparency
+- Copilot premium credit management
+
+### Fixed
+- GDS styling fixes
+
 ## [0.0.3] - 2026-02-13
 
 ### Added

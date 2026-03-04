@@ -1,5 +1,5 @@
 > ALPHA
-> This is a new service – your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
+> This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 
 # AI-assisted software development lifecycle
 
@@ -39,17 +39,13 @@ Verify before committing. Never commit AI-generated code without understanding w
 
 Continuous compliance. Use Model Context Protocol (MCP) servers and guardrails to embed government standards (Technology Code of Practice, Web Content Accessibility Guidelines (WCAG), National Cyber Security Centre (NCSC), Government Service Standard) into your workflow from the start, not as an afterthought.
 
----
-
 ## Software development lifecycle phases
 
 The following sections describe how to use AI coding assistants effectively at each phase of the software development lifecycle. Each phase includes practical guidance, example prompts and anti-patterns to avoid.
 
----
-
 ## Plan
 
-Purpose: decide what to build next and break work into deliverable units.
+Decide what to build next and break work into deliverable units.
 
 ### How AI coding assistants help
 
@@ -61,13 +57,13 @@ Analyse user stories and acceptance criteria. Share user stories with your AI co
 
 ```
 Example prompt:
-"Review this user story and acceptance criteria. Identify any ambiguities, 
+'Review this user story and acceptance criteria. Identify any ambiguities, 
 missing edge cases, or technical considerations we should clarify before 
 development begins.
 
 User story: [paste story]
 Acceptance criteria: [paste criteria]
-Our tech stack: [brief description]"
+Our tech stack: [brief description]'
 ```
 
 Generate technical approach options. When facing implementation decisions, ask your AI coding assistant to outline alternative approaches with trade-offs. Use this as input to team discussions, not as the final decision.
@@ -92,11 +88,9 @@ You are following good practice if:
 - the technical approach is understood and agreed by the team
 - dependencies and risks are identified early
 
----
-
 ## Code
 
-Purpose: write software that solves user problems while meeting government standards.
+Write software that solves user problems while meeting government standards.
 
 ### How AI coding assistants help
 
@@ -110,14 +104,14 @@ Generate boilerplate with context. When creating new components, provide your co
 
 ```
 Example prompt:
-"Create a Spring Boot REST controller for managing [resource]. 
+'Create a Spring Boot REST controller for managing [resource]. 
 Follow these patterns:
 - use constructor injection
 - apply our standard error handling approach
 - include OpenAPI annotations
 - follow National Cyber Security Centre secure coding guidelines
 
-Existing controller for reference: [paste example]"
+Existing controller for reference: [paste example]'
 ```
 
 Explain and document existing code. When working with legacy or unfamiliar code, use AI coding assistants to generate explanations and documentation. Always verify accuracy against the actual behaviour.
@@ -135,7 +129,7 @@ The quality of AI coding assistant code suggestions depends heavily on context. 
 - intent context: what you are trying to achieve and why
 - constraint context: security requirements, performance needs, accessibility standards
 
-See 'context-engineering.md' for detailed guidance.
+See [context engineering](context-engineering.md) for detailed guidance.
 
 ### Security considerations
 
@@ -146,7 +140,9 @@ You should:
 - use static application security testing tools to validate AI-generated code
 - be cautious with AI-generated SQL, authentication and authorisation code
 - validate input handling and output encoding in generated code
-- configure coding agents to exclude sensitive files (agentic coding tools should be configured to avoid reading .env files, .env.local, credential files or any other files containing environment variables or secrets - add these patterns to your agent's ignore configuration to prevent accidental exposure of sensitive data)
+- configure coding agents to exclude sensitive files
+
+Agentic coding tools should be configured to avoid reading .env files, .env.local, credential files or any other files containing environment variables or secrets. Add these patterns to your agent's ignore configuration to prevent accidental exposure of sensitive data.
 
 ### Anti-patterns to avoid
 
@@ -167,11 +163,9 @@ You are following good practice if:
 - security-sensitive code receives additional review
 - engineers can explain what their code does
 
----
-
 ## Build
 
-Purpose: prepare code changes for testing by compiling, packaging and validating.
+Prepare code changes for testing by compiling, packaging and validating.
 
 ### How AI coding assistants help
 
@@ -183,11 +177,11 @@ Diagnose build failures. Share build error logs with your AI coding assistant to
 
 ```
 Example prompt:
-"This Maven build is failing with the following error. Explain the cause 
+'This Maven build is failing with the following error. Explain the cause 
 and suggest how to fix it.
 
 Error log: [paste log]
-Relevant pom.xml section: [paste section]"
+Relevant pom.xml section: [paste section]'
 ```
 
 Optimise build configuration. AI coding assistants can suggest improvements to build scripts, dependency management and continuous integration pipeline configuration.
@@ -213,11 +207,9 @@ You are following good practice if:
 - dependencies are up to date and secure
 - the build process is documented and reproducible
 
----
-
 ## Test
 
-Purpose: ensure everything works properly and meets quality standards.
+Ensure everything works properly and meets quality standards.
 
 ### How AI coding assistants help
 
@@ -229,7 +221,7 @@ Generate unit tests from implementation. After writing code, use AI coding assis
 
 ```
 Example prompt:
-"Generate JUnit 5 tests for this service class. Include:
+'Generate JUnit 5 tests for this service class. Include:
 - happy path scenarios
 - edge cases and boundary conditions
 - error handling paths
@@ -237,7 +229,7 @@ Example prompt:
 - follow AAA (Arrange-Act-Assert) pattern
 
 Class to test: [paste class]
-Dependencies to mock: [list]"
+Dependencies to mock: [list]'
 ```
 
 Identify missing test scenarios. Share your code and existing tests, asking the AI coding assistant to identify gaps in coverage.
@@ -276,11 +268,9 @@ You are following good practice if:
 - tests run reliably without flakiness
 - edge cases and error paths are covered
 
----
-
 ## Release
 
-Purpose: coordinate launching new features safely.
+Coordinate launching new features safely.
 
 ### How AI coding assistants help
 
@@ -292,14 +282,14 @@ Generate release notes. Summarise changes from commit history or ticket descript
 
 ```
 Example prompt:
-"Generate release notes for version [X.Y.Z] based on these changes. 
+'Generate release notes for version [X.Y.Z] based on these changes. 
 Write for a technical audience but keep it clear and scannable.
 
 Changes:
 [paste commit messages or ticket summaries]
 
 Previous version notes for style reference:
-[paste previous notes]"
+[paste previous notes]'
 ```
 
 Create deployment checklists. Generate environment-specific checklists to ensure consistent, safe deployments.
@@ -325,11 +315,9 @@ You are following good practice if:
 - breaking changes are communicated in advance
 - rollback procedures are tested and documented
 
----
-
 ## Deploy
 
-Purpose: put your service live for users safely and reliably.
+Put your service live for users safely and reliably.
 
 ### How AI coding assistants help
 
@@ -341,14 +329,14 @@ Generate infrastructure configuration. Create Terraform, CloudFormation or Kuber
 
 ```
 Example prompt:
-"Generate a Terraform configuration for an AWS ECS service with:
+'Generate a Terraform configuration for an AWS ECS service with:
 - application load balancer
 - auto-scaling based on CPU utilisation
 - cloudWatch logging
 - security groups following least-privilege principles
 - tags for cost allocation
 
-Follow National Cyber Security Centre cloud security principles."
+Follow National Cyber Security Centre cloud security principles.'
 ```
 
 Review infrastructure changes. Before applying infrastructure changes, use AI coding assistants to review configurations for security issues and best practices.
@@ -383,11 +371,9 @@ You are following good practice if:
 - rollback procedures work reliably
 - deployment time is minimised
 
----
-
 ## Operate
 
-Purpose: keep your service running smoothly for users.
+Keep your service running smoothly for users.
 
 ### How AI coding assistants help
 
@@ -399,12 +385,12 @@ Analyse incidents. During incidents, use AI coding assistants to quickly interpr
 
 ```
 Example prompt:
-"We're experiencing increased latency on our API. Analyse these logs 
+'We're experiencing increased latency on our API. Analyse these logs 
 and metrics to suggest likely causes and investigation steps.
 
 Error logs: [paste relevant logs]
 Metrics: [describe current vs normal values]
-Recent changes: [list recent deployments]"
+Recent changes: [list recent deployments]'
 ```
 
 Generate runbooks. Create operational runbooks for common scenarios, including monitoring alerts and their remediation steps.
@@ -430,11 +416,9 @@ You are following good practice if:
 - the service meets availability and performance targets
 - on-call burden is manageable
 
----
-
 ## Monitor
 
-Purpose: learn from real usage to improve the service.
+Learn from real usage to improve the service.
 
 ### How AI coding assistants help
 
@@ -446,13 +430,13 @@ Analyse usage patterns. Use AI coding assistants to identify trends, anomalies a
 
 ```
 Example prompt:
-"Analyse these service metrics from the past month. Identify:
+'Analyse these service metrics from the past month. Identify:
 - unusual patterns or anomalies
 - performance degradation trends
 - opportunities for optimisation
 - potential capacity concerns
 
-Metrics data: [paste or describe data]"
+Metrics data: [paste or describe data]'
 ```
 
 Generate dashboards. Create monitoring dashboard configurations that surface the most important metrics.
@@ -478,8 +462,6 @@ You are following good practice if:
 - service improvements are driven by data
 - user satisfaction is measured and improving
 
----
-
 ## Continuous compliance
 
 Throughout all software development lifecycle phases, use Model Context Protocol servers to maintain continuous compliance with government standards. This includes:
@@ -491,30 +473,25 @@ Throughout all software development lifecycle phases, use Model Context Protocol
 
 Configure your AI Engineering Lab tools to reference these standards automatically, catching compliance issues during development rather than at assessment.
 
----
-
 ## Getting help
 
-If you encounter challenges using AI coding assistants effectively, complete these steps.
+If you encounter challenges using AI coding assistants effectively, complete the following steps.
 
 1. Check the prompt library for tested prompts for common scenarios.
 2. Consult your team's AI Engineering Lab champion for guidance.
 3. Raise questions in the cross-government AI Engineering Lab community channels.
 4. Request support from the Forward Deployed Engineering team for complex adoption challenges.
 
----
+## Further reading
 
-## Related resources
-Review useful resources, including:
-- [context engineering playbook](context-engineering.md)
-- [model selection guidance](model-selection.md)
-- [guardrails base configuration](../governance/guardrails-base.md)
-- [government AI Playbook](https://www.gov.uk/government/publications/ai-playbook-for-the-uk-government)
-- [service manual](https://www.gov.uk/service-manual)
+### Interal resources
+
+- [Context engineering playbook](context-engineering.md)
+- [Model selection guidance](model-selection.md)
+- [Guardrails base configuration](../governance/guardrails-base.md)
+
+### External resources
+
+- [Government AI Playbook](https://www.gov.uk/government/publications/ai-playbook-for-the-uk-government)
+- [Service manual](https://www.gov.uk/service-manual)
 - [Version 1 UK Gov Example AI SDLC](https://github.com/Version1/uk-gov-example-ai-sdlc)
-
----
-
-## Contributing
-
-To suggest improvements or report issues, see [CONTRIBUTING.md](../CONTRIBUTING.md).

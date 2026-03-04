@@ -7,7 +7,7 @@
 
 This guide covers advanced Claude Code usage including better prompting, context management, and security practices. Use this guide once you are comfortable with the basics.
 
-For customisation through CLAUDE.md files, skills, hooks and Model Context Protocol (MCP) integration, read the [Customisation guide](customisation-guide.md).
+For customisation through CLAUDE.md files, skills, hooks and Model Context Protocol (MCP) integration, read the [customisation guide](customisation-guide.md).
 
 ## Who this is for
 
@@ -25,22 +25,24 @@ This guide focuses on:
 - comprehensive security practices
 
 ## Contents
-We recommend reading the sections in this order.
 
-- [Before you start](#before-you-start)
-- [1. Write better prompts for complex tasks](#1-write-better-prompts-for-complex-tasks)
-- [2. Manage context and long-running work](#2-manage-context-and-long-running-work)
-- [3. Security](#3-security)
+[Before you start](#before-you-start)
+
+[Write better prompts for complex tasks](#1-write-better-prompts-for-complex-tasks)
+
+[Manage context and long-running work](#2-manage-context-and-long-running-work)
+
+[Security](#3-security)
 
 ## Before you start
 
 This guide assumes you have:
 
-- completed the [Getting started guide](getting-started.md)
+- completed the [getting started guide](getting-started.md)
 - used Claude Code for basic tasks
 - an understanding of your project structure and workflows
 
-If you are new to Claude Code, start with the [Getting started guide](getting-started.md).
+If you are new to Claude Code, start with the [getting started guide](getting-started.md).
 
 ## 1. Write better prompts for complex tasks
 
@@ -60,6 +62,7 @@ Describe what you want to achieve, include relevant technology details, and spec
 
 ```
 Create a TypeScript function that:
+
 - reads CSV files from an uploads directory
 - validates UK postcodes and National Insurance numbers
 - filters out records with missing required fields
@@ -91,7 +94,7 @@ Based on research with engineers, you can save the most time by using Claude Cod
 - learning new techniques to understand unfamiliar patterns
 - code documentation to generate docstrings and comments
 
-For detailed prompt engineering techniques and strategies, see the [Prompt engineering playbooks](../../playbooks/prompt-engineering/prompt-engineering-index.md).
+For detailed prompt engineering techniques and strategies, see the [prompt engineering playbooks](../../playbooks/prompt-engineering/prompt-engineering-index.md).
 
 ## 2. Manage context and long-running work
 
@@ -130,14 +133,14 @@ Use `/compact` to summarise history whilst preserving important details:
 /compact
 ```
 
-Compact when:
+You should compact:
 
-- context usage exceeds 70 per cent
+- when context usage exceeds 70%
 - after completing a major feature
 - before starting unrelated work
 - when responses become slower
 
-Focused compacting:
+#### Focused compacting
 
 Preserve specific topics:
 
@@ -156,8 +159,8 @@ Use `/clear` for a fresh start:
 Clear context when:
 
 - starting completely different work
-- context filled with irrelevant information
-- conversation has gone off track
+- context is filled with irrelevant information
+- the conversation has gone off track
 
 #### Proactive management strategies
 
@@ -210,7 +213,7 @@ Background processes let you run long-running tasks whilst continuing other work
 - running test suites or coverage reports
 - performing large-scale refactoring
 - generating documentation across the codebase
-- any task that takes more than a few minutes
+- any task takes more than a few minutes
 
 #### How to use
 
@@ -246,7 +249,7 @@ Read more about [security in Claude Code](https://code.claude.com/docs/en/securi
 
 ### Never include in prompts
 
-Never include the following in prompts:
+In prompts, never include:
 
 - API keys, passwords, authentication tokens
 - real citizen data or personal information
@@ -258,30 +261,30 @@ Instead, use:
 
 - placeholder values: `<API_KEY>`, `<DATABASE_URL>`, `<SECRET>`
 - synthetic test data following realistic formats
-- generic descriptions: "authentication endpoint", "payment gateway"
+- generic descriptions: 'authentication endpoint', 'payment gateway'
 
-Example - wrong:
-
-```
-"Update the API call to use key abc123-xyz789-prod"
-```
-
-Example - right:
+Example of incorrect use:
 
 ```
-"Update the API call to use key from environment variable API_KEY"
+'Update the API call to use key abc123-xyz789-prod'
+```
+
+Example of correct use:
+
+```
+'Update the API call to use key from environment variable API_KEY'
 ```
 
 ### Content exclusions
 
 Configure `.aiexclude` or rely on `.gitignore` patterns to exclude sensitive files from Claude Code access.
 
-Typically excluded files include:
+Exclude files including:
 
 - `.env` files and environment configurations
 - `secrets/` directories
 - service account JSON files
-- production configuration
+- production configuration files
 - SSH keys and certificates
 
 Create `.aiexclude` in your project root:
@@ -324,14 +327,14 @@ Add review markers in code:
 
 ### Security incident response
 
-If you discover a security issue in Claude Code generated code:
+Use the followin steps if you discover a security issue in Claude Code generated code.
 
 1. Do not commit the code to version control.
 2. Report immediately to your security team using your organisation's incident process.
 3. Document the issue by saving the conversation and noting what Claude Code generated.
 4. Alert your team to check their recent Claude Code usage for similar issues.
 
-For detailed incident response procedures, see the [Incident Response Playbook](../../governance/incident-response-playbook.md).
+For detailed incident response procedures, see the [incident response playbook](../../governance/incident-response-playbook.md).
 
 ### Security in team environments
 
@@ -343,14 +346,6 @@ When using Claude Code in government teams:
 - regularly review usage patterns for compliance
 - conduct security awareness training on AI tool risks
 
-## Next steps
+## Further reading
 
-You now have the skills to use Claude Code effectively and securely.
-
-To deepen your understanding and customise Claude Code for your specific workflows, see the [Customisation guide](customisation-guide.md). That guide covers:
-
-- configuring project-specific context with CLAUDE.md files
-- creating custom slash commands
-- setting up skills to automate patterns
-- implementing hooks to enforce policies
-- integrating external tools via Model Context Protocol (MCP) servers
+To deepen your understanding and customise Claude Code for your workflows, see the [customisation guide](customisation-guide.md). It covers configuring project-specific context with CLAUDE.md files, creating custom slash commands, setting up skills, implementing hooks, and integrating external tools via Model Context Protocol (MCP) servers.

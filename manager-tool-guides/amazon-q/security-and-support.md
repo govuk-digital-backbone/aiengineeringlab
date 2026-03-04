@@ -1,5 +1,5 @@
-> **ALPHA**
-> This is a new service – your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
+> ALPHA
+> This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 # Amazon Q - security and support guidance
 
 > Central home for Amazon Q security best practices and support content across government departments.
@@ -362,23 +362,6 @@ Repository resources include:
 
 ## Contributing
 
-See 'CONTRIBUTING.md' for contribution guidelines.
-
 We encourage contributions from across government to keep this repository current and comprehensive. Share your team's experience, lessons learned, and effective practices to help other government departments.
 
-Before contributing, read 'CONTRIBUTING.md' which covers:
-- content standards and style guide
-- review and approval process
-- accessibility requirements
-- how to submit changes
-
-## Licence
-
-This repository is published under the 'Open Government Licence v3.0'.
-
-You are encouraged to use and adapt these materials for your own government context.
-
-When reusing content you should:
-- maintain attribution to this repository
-- share improvements back via contribution
-- ensure adaptations remain suitable for government use
+See the [contribution guidelines](../../CONTRIBUTING.md) before submitting changes.

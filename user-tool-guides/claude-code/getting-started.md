@@ -17,13 +17,19 @@ This guide is for:
 
 ## Contents
 
-1. [Before you start](#before-you-start)
-2. [Installation and setup](#installation-and-setup)
-3. [Daily coding workflows](#daily-coding-workflows)
-4. [Code quality and review](#code-quality-and-review)
-5. [Use Claude Code safely and responsibly](#use-claude-code-safely-and-responsibly)
-6. [Troubleshooting](#troubleshooting)
-7. [Next steps](#next-steps)
+[Before you start](#before-you-start)
+
+[Installation and setup](#installation-and-setup)
+
+[Daily coding workflows](#daily-coding-workflows)
+
+[Code quality and review](#code-quality-and-review)
+
+[Use Claude Code safely and responsibly](#use-claude-code-safely-and-responsibly)
+
+[Troubleshooting](#troubleshooting)
+
+[Further reading](#further-reading)
 
 ## Before you start
 
@@ -36,14 +42,10 @@ You should know:
 - your department controls licensing through the AI Engineering Lab
 - if you don't have access you should contact your team lead
 - your project's security classification (OFFICIAL or OFFICIAL-SENSITIVE, where SENSITIVE means handling security-sensitive information)
-- Node.js 18 or later is required for terminal installation
+- that Node.js 18 or later is required for terminal installation
 - your team's coding standards and review processes
 
-Useful resources:
-
-- [Claude Code documentation](https://code.claude.com/docs)
-- [Anthropic Trust Center](https://trust.anthropic.com/)
-- [Anthropic's privacy policy](https://www.anthropic.com/privacy)
+See the [Claude Code documentation](https://code.claude.com/docs) for full reference material. Anthropic publishes its [privacy policy](https://www.anthropic.com/privacy) and security practices on the [Anthropic Trust Center](https://trust.anthropic.com/).
 
 ## Installation and setup
 
@@ -85,7 +87,7 @@ Verify installation:
 claude --version
 ```
 
-Note: npm installation is no longer recommended. Use the native installers above.
+Npm installation is no longer recommended. Use the native installers above.
 
 #### For web (no installation)
 
@@ -99,7 +101,7 @@ Visit [claude.ai/code](https://claude.ai/code) to use Claude Code in your browse
 2. Search for 'Claude Code'.
 3. Click Install and restart if prompted.
 
-Essential guide: [Use Claude Code in VS Code](https://code.claude.com/docs/en/vs-code)
+For more information, see [Use Claude Code in VS Code](https://code.claude.com/docs/en/vs-code).
 
 ##### JetBrains IDEs (IntelliJ, PyCharm, WebStorm)
 
@@ -107,7 +109,7 @@ Essential guide: [Use Claude Code in VS Code](https://code.claude.com/docs/en/vs
 2. In the Marketplace tab, search for 'Claude Code'.
 3. Click Install and restart your IDE.
 
-Essential guide: [Use Claude Code in JetBrains IDEs](https://code.claude.com/docs/en/jetbrains)
+For more information, see [Use Claude Code in JetBrains IDEs](https://code.claude.com/docs/en/jetbrains).
 
 #### For desktop app
 
@@ -118,7 +120,7 @@ Download the standalone desktop application from [claude.com/code](https://claud
 You can authenticate using:
 
 - a claude.ai subscription (Claude Pro, Max, Teams, or Enterprise), this is recommended for most users - visit [claude.ai](https://claude.ai)
-- Claude Console API access with pre-paid credits - visit [Claude Console](https://console.anthropic.com/)
+- Claude Console API access with pre-paid credits by visiting [Claude Console](https://console.anthropic.com/)
 - Amazon Bedrock with AWS credentials
 - Google Vertex AI with Google Cloud Platform (GCP) credentials
 - Microsoft Foundry with Azure credentials
@@ -175,9 +177,9 @@ export AWS_ACCESS_KEY_ID=your-access-key
 export AWS_SECRET_ACCESS_KEY=your-secret-key
 ```
 
-Note: When using Bedrock, the `/login` and `/logout` commands are not available. AWS credentials handle authentication.
+When using Bedrock, the `/login` and `/logout` commands are not available. AWS credentials handle authentication.
 
-Essential guide: [Claude Code on Amazon Bedrock](https://code.claude.com/docs/en/amazon-bedrock)
+See the [Claude Code on Amazon Bedrock](https://code.claude.com/docs/en/amazon-bedrock) guide for more information.
 
 #### For Google Vertex AI
 
@@ -206,11 +208,9 @@ gcloud config set project your-project-id
 gcloud services enable aiplatform.googleapis.com
 ```
 
-Note: When using Vertex AI, the `/login` and `/logout` commands are not available. Google Cloud credentials handle authentication.
+When using Vertex AI, the `/login` and `/logout` commands are not available. Google Cloud credentials handle authentication.
 
-Essential guide: [Claude Code on Google Vertex AI](https://code.claude.com/docs/en/google-vertex-ai)
-
-Read more about [Claude on Vertex AI](https://platform.claude.com/docs/en/build-with-claude/claude-on-vertex-ai).
+See the [Claude Code on Google Vertex AI](https://code.claude.com/docs/en/google-vertex-ai) guide and [Claude on Vertex AI](https://platform.claude.com/docs/en/build-with-claude/claude-on-vertex-ai) for more information.
 
 #### For Microsoft Foundry
 
@@ -226,7 +226,7 @@ export ANTHROPIC_FOUNDRY_API_KEY=your-api-key
 
 Or use Azure Entra ID authentication for enhanced security with role-based access control.
 
-Essential guide: [Claude in Microsoft Foundry](https://platform.claude.com/docs/en/build-with-claude/claude-in-microsoft-foundry)
+See the [Claude in Microsoft Foundry](https://platform.claude.com/docs/en/build-with-claude/claude-in-microsoft-foundry) guide for more information.
 
 ### Step 3: Start your first session
 
@@ -430,10 +430,7 @@ claude "Where are environment variables configured and what do they control?"
 claude "Review @src/auth/ and explain the authentication approach"
 ```
 
-### References
- - [Using CLAUDE.md files to customise Claude Code](https://claude.com/blog/using-claude-md-files)
- - for guidance on maintaining and customising CLAUDE.md files for your team, see the [Customisation guide](customisation-guide.md#claudemd-files).
-
+Read [using CLAUDE.md files to customise Claude Code](https://claude.com/blog/using-claude-md-files) for an introduction. For maintaining and customising CLAUDE.md files for your team, see the [customisation guide](customisation-guide.md#claudemd-files).
 
 ### Common scenarios for existing codebases
 
@@ -546,7 +543,7 @@ Read more about [best practices for using Claude Code](https://code.claude.com/d
 
 ### Improving code quality iteratively
 
-Use progressive refinement:
+Use progressive refinement with the following steps.
 
 1. Get basic working version: `claude "Implement the user registration endpoint"`.
 2. Add error handling: `claude "Add comprehensive error handling with specific exceptions and structured logging"`.
@@ -582,7 +579,7 @@ You should use Claude Code safely by:
 - never including secrets, API keys or sensitive data in prompts
 - following your organisation's coding standards and security policies
 
-For detailed security practices, see the [Advanced use guide](advanced-use.md#3-security).
+For detailed security practices, see the [advanced use guide](advanced-use.md#3-security).
 
 ## Troubleshooting
 
@@ -601,22 +598,11 @@ For help with common issues, read the [troubleshooting Claude Code guide](https:
 
 For persistent issues, contact your team's champion or raise a support ticket.
 
-## Next steps
+## Further reading
+The [advanced use guide](advanced-use.md) covers writing better prompts, managing context for long-running work, and security practices.
 
-Now that you understand the basics, you can explore these advanced features:
+The [customisation guide](customisation-guide.md) covers CLAUDE.md files, custom slash commands, skills, hooks, and Model Context Protocol (MCP) server integration.
 
-- writing better prompts for complex tasks
-- managing context effectively for long-running work
-- applying comprehensive security practices
 
-Read the [advanced use guide](advanced-use.md) for more information.
 
-To configure and customise Claude Code, you can:
 
-- create CLAUDE.md files with project standards
-- build custom slash commands for repeated workflows
-- set up skills for automated patterns
-- configure hooks to enforce policies
-- integrate external tools via Model Context Protocol (MCP) servers
-
-Read the [Customisation guide](customisation-guide.md) for configuration and integration.

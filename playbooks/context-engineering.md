@@ -1,5 +1,5 @@
 > ALPHA
-> This is a new service – your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
+> This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 
 # Context engineering for AI code assistants
 
@@ -101,7 +101,7 @@ Key files to maintain:
 | README.md | Project overview, setup, architecture | Primary context source |
 | CONTRIBUTING.md | Coding standards, conventions | Style guidance |
 | ARCHITECTURE.md | System design, patterns, decisions | Structural understanding |
-| .github/copilot-instructions.md | Copilot-specific guidance | Tool-specific rules |
+| .github/copilot-instructions.md | Copilot specific guidance | Tool-specific rules |
 | claude.md or CLAUDE.md | Claude-specific guidance | Tool-specific rules |
 | cursor-rules.md | Cursor-specific rules | Tool-specific rules |
 | docs/adr/ | Architecture Decision Records | Design rationale |
@@ -163,7 +163,7 @@ You should:
 See 'ARCHITECTURE.md' for detailed documentation.
 
 ## Project structure
-```
+
 src/
 ├── controllers/    # HTTP request handlers
 ├── services/       # Business logic
@@ -171,7 +171,6 @@ src/
 ├── models/         # Domain entities
 ├── utils/          # Shared utilities
 └── config/         # Configuration
-```
 
 ## Coding standards
 - [link to or summary of coding standards]
@@ -475,14 +474,14 @@ Create context files that summarise important information:
 Start with high-level context, then drill down:
 
 ```
-Prompt 1: "I am adding a new payment provider. Here is our current architecture:
-[paste architecture summary]. What integration points do I need?"
+Prompt 1: 'I am adding a new payment provider. Here is our current architecture:
+[paste architecture summary]. What integration points do I need?'
 
-Prompt 2: "Good. Now here is the PaymentGateway interface we use:
-[paste interface]. Can you suggest the implementation structure?"
+Prompt 2: 'Good. Now here is the PaymentGateway interface we use:
+[paste interface]. Can you suggest the implementation structure?'
 
-Prompt 3: "Here is my first attempt at the implementation:
-[paste code]. Review and suggest improvements."
+Prompt 3: 'Here is my first attempt at the implementation:
+[paste code]. Review and suggest improvements.'
 ```
 
 ## Team context standards
@@ -552,8 +551,6 @@ You should:
 - [ ] Meets accessibility requirements (if UI)
 - [ ] Documentation is adequate
 ```
-
----
 
 ## MCP servers for government standards
 
@@ -699,8 +696,6 @@ Current function:
 [paste code]
 ```
 
----
-
 ## Troubleshooting poor AI output
 
 | Problem | Likely cause | Solution |
@@ -713,18 +708,18 @@ Current function:
 | Inconsistent style | No style guidance | Add coding standards to context |
 | Security issues | No security context | Use security-focused prompting |
 
----
+## Further reading
 
-## Related documents
-Review useful resources, including:
-- [AI-SDLC playbook](ai-sdlc-playbook.md) - Integrating AI into development lifecycle
-- [model selection playbook](model-selection.md) - Choosing the right model for tasks
-- [prompt library](../prompt-library/) - Reusable prompt patterns
-- [guardrails base](../governance/guardrails-base.md) - Security boundaries
+### Internal resources
 
-## References
+- [AI-SDLC playbook](ai-sdlc-playbook.md) cover integrating AI into development lifecycle
+- [Model selection playbook](model-selection.md) describes choosing the right model for tasks
+- [Prompt library](../prompt-library/) covers reusable prompt patterns
+- [Guardrails base](../governance/guardrails-base.md) lays out security boundaries
+
+### External resources
 
 - [Anthropic Prompt Engineering Guide](https://docs.anthropic.com/claude/docs/prompt-engineering)
 - [GitHub Copilot documentation](https://docs.github.com/en/copilot)
 - [GOV.UK Design System](https://design-system.service.gov.uk/)
-- [GDS way - coding standards](https://gds-way.cloudapps.digital/)
+- [GDS way coding standards](https://gds-way.cloudapps.digital/)

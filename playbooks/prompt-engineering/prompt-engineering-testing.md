@@ -1,7 +1,5 @@
-[← Back to Index](./prompt-engineering-index.md)
-
-> **ALPHA**
-> This is a new service – your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
+> ALPHA
+> This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 
 # Prompt engineering for testing: getting comprehensive test coverage
 
@@ -13,7 +11,7 @@ AI assistants excel at generating comprehensive test suites when given the right
 
 Use this guide to learn how to prompt AI for:
 
-- unit, integration and end-to-end tests
+- unit, integration and end to end tests
 - security tests aligned with National Cyber Security Centre (NCSC) guidance
 - accessibility tests meeting Web Content Accessibility Guidelines (WCAG) standards
 - performance tests and edge case discovery
@@ -25,7 +23,7 @@ This guide applies to all engineers responsible for code quality:
 
 - engineers writing new features
 - quality assurance (QA) engineers building test automation
-- security-conscious engineers on government projects
+- security conscious engineers on government projects
 - teams implementing accessibility requirements
 
 
@@ -33,7 +31,7 @@ This guide applies to all engineers responsible for code quality:
 
 #### Unit tests - isolating individual components
 
-Use this xample prompt for unit tests.
+Use this example prompt for unit tests.
 ```
 Write unit tests for this user profile update function:
 
@@ -133,7 +131,7 @@ Why this matters: government services handle sensitive citizen data. Security te
 
 Use this example prompt for accessibility testing.
 ```
-Write automated accessibility tests for this citizen-facing form:
+Write automated accessibility tests for this citizen facing form:
 
 [paste form HTML or code]
 
@@ -148,7 +146,7 @@ Form structure:
 Error handling:
 - error summary at top has role="alert"
 - focus moves to error summary on validation failure
-- individual field errors visible and screen-reader accessible
+- individual field errors visible and screen reader accessible
 - error messages are clear and helpful
 
 Keyboard navigation:
@@ -169,7 +167,7 @@ Use pytest with playwright for browser testing and axe-core for automated access
 
 Use this example prompt for performance testing.
 ```
-Write performance tests for this public-facing endpoint:
+Write performance tests for this public facing endpoint:
 
 [paste endpoint code]
 
@@ -218,18 +216,18 @@ List every edge case you can think of. Consider:
 Data validity:
 - boundary values (minimum and maximum lengths)
 - empty, null, undefined inputs
-- whitespace-only inputs
+- whitespace only inputs
 - special characters, unicode, emojis
 - very long inputs (buffer overflow attempts)
 
 Business logic:
 - applications submitted outside business hours
 - duplicate submissions (same user, same data)
-- partial submissions (timeout mid-process)
+- partial submissions (timeout mid process)
 - applications that exactly match disqualification criteria
 
 System state:
-- database connection lost mid-transaction
+- database connection lost mid transaction
 - cache unavailable
 - external API (GOV.UK Notify) down
 - disk full (cannot write files)
@@ -243,7 +241,7 @@ Concurrency:
 Then write tests for the 10 most critical edge cases.
 ```
 
-What you get: edge cases you never thought of. The AI combines common software failure modes, domain-specific issues (government applications), concurrency problems and resource exhaustion scenarios.
+What you get: edge cases you never thought of. The AI combines common software failure modes, domain specific issues (government applications), concurrency problems and resource exhaustion scenarios.
 
 ### Maintaining test suites
 
@@ -311,9 +309,3 @@ The comprehensive approach includes:
 - testing accessibility requirements
 - keeping tests maintainable and fast
 - updating tests as code evolves
-
----
-
-Previous: [Practical use cases](./prompt-engineering-use-cases.md)
-
-Next: [Prompt engineering for code documentation](./prompt-engineering-documentation.md)

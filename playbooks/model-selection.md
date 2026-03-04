@@ -1,5 +1,5 @@
-> **ALPHA**
-> This is a new service – your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
+> ALPHA
+> This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 # Model selection guide
 
 > Guidance on selecting the right AI code assistant and model for your task.
@@ -8,22 +8,13 @@
 
 This guide helps engineers and teams choose appropriate AI code assistants and models based on their work type, task requirements and cost considerations. It supports the programme's goal of optimising cost to use trade-offs while maintaining productivity gains.
 
-Note: The AI landscape changes rapidly. Always verify pricing and capabilities against vendor documentation before making decisions. Pricing shown in GBP is converted at approximately £0.74 per $1 USD.
-
----
+The AI landscape changes rapidly. Always verify pricing and capabilities against vendor documentation before making decisions. Pricing shown in GBP is converted at approximately £0.74 per $1 USD.
 
 ## Tools in scope
 
-The AI Engineering Lab programme includes 4 core AI code assistants:
-
-- GitHub Copilot Enterprise by Microsoft and GitHub
-- Claude Code by Anthropic
-- Amazon Q Developer by AWS
-- Gemini Code Assist by Google
+The AI Engineering Lab programme includes 4 core AI code assistants: GitHub Copilot Enterprise by Microsoft and GitHub, Claude Code by Anthropic, Amazon Q Developer by AWS, and Gemini Code Assist by Google.
 
 Each tool has different strengths, pricing models and model options. This guide will be updated as comparative evidence emerges from programme deployments.
-
----
 
 ## Selection by work type
 
@@ -82,8 +73,6 @@ Data engineering, infrastructure automation, platform work.
 
 Evidence: Limited specific evidence in current programme data. Will be updated as data and infrastructure teams are onboarded.
 
----
-
 ## Important considerations when selecting models
 
 When choosing an AI model for your tool, consider these 2 primary characteristics.
@@ -102,13 +91,11 @@ Model agency levels include:
 - high agency: models willing to go beyond your prompt and solve problems independently
 - low agency: models that execute exactly what you ask without going further
 
----
-
 ## Model recommendations by use case
 
 ### Fast, iterative development
 
-Best models: Claude 4.5 Haiku, Gemini 3 Flash, GPT-5.2 Instant.
+Best models are Claude 4.5 Haiku, Gemini 3 Flash, GPT-5.2 Instant.
 
 Characteristics: fast response times, solid code quality, medium agency.
 
@@ -122,7 +109,7 @@ Use these models for:
 
 ### Deep problem analysis and new projects
 
-Best models: Claude Opus 4.6, Claude Opus 4.5.
+Best models are Claude Opus 4.6, Claude Opus 4.5.
 
 Characteristics: very high curiosity, excellent at reasoning through complex problems, strong multimodal understanding.
 
@@ -187,8 +174,6 @@ Use these models for:
 - complex feature builds requiring iteration
 - production-ready assistants for operational workflows
 
----
-
 ## Model personality comparison
 
 | Model | Speed | Curiosity | Agency | Best for |
@@ -197,7 +182,7 @@ Use these models for:
 | GPT-5.2 Thinking | Medium | High | High | Complex reasoning, professional work |
 | GPT-5.2-Codex | Medium | High | High | Agentic coding, long-context tasks |
 | GPT-5.3-Codex | Fast | Very high | Very high | Long-running development, multi-day projects |
-| Gemini 3 Flash | Very fast | Medium | Medium to high | Speed-optimized coding, fast iterations |
+| Gemini 3 Flash | Very fast | Medium | Medium to high | Speed-optimised coding, fast iterations |
 | Gemini 3 Pro | Fast | High | High | Complex multimodal tasks, reasoning-first workflows |
 | Claude 4.5 Haiku | Fast | Medium | Medium | Fast tasks with reasoning |
 | Claude 4.5 Sonnet | Medium | Medium | Medium | Stable, predictable coding |
@@ -214,15 +199,13 @@ Gemini 3 Flash (January 2026) is 3x faster than Gemini 2.5 Pro while outperformi
 
 Gemini 3 Pro (November 2025) is a reasoning-first model with 1M token context window. It uses thinking levels (low/high) for controlling reasoning depth.
 
----
-
 ## Multi-model approach
 
 For complex problems, consider using multiple models to validate solutions.
 
 Technique: present the same problem to different AI assistants, then have each evaluate the other's solution.
 
-To use multi-model validation, complete these steps.
+To use multi-model validation, complete the following steps.
 
 1. Present the problem to Model A, for example GitHub Copilot.
 2. Present the same problem to Model B, for example Claude.
@@ -231,8 +214,6 @@ To use multi-model validation, complete these steps.
 5. Create the best approach based on their analysis.
 
 Each model will evaluate and return analysis. This approach adds overhead but can improve solution quality for important problems.
-
----
 
 ## Practical tips for model selection
 
@@ -263,8 +244,6 @@ For context and efficiency, consider:
 - matching verbosity preference, some models are more verbose than others
 - context window size: Gemini 3 Pro (1M), Claude Opus 4.6 (1M with beta), GPT-5.2 (400K)
 
----
-
 ## Premium credit management
 
 Teams learn which AI code assistant models and approaches suit different tasks, optimising cost to use trade-offs and preventing licence waste.
@@ -274,8 +253,6 @@ Principle: use premium models for complex reasoning tasks and smaller or standar
 Sustainable usage patterns across billing periods ensure that premium model calls are distributed effectively without exhausting limits early, maintaining consistent impact throughout the period.
 
 Credit allocation is based on team size and maturity, with monitoring set up to track usage. Intervention occurs if burn rate is unsustainable.
-
----
 
 ## Comparative analysis
 
@@ -290,24 +267,22 @@ The programme is structured so that:
 
 Current status: comparative data collection is ongoing. This section will be updated with findings as evidence accumulates.
 
----
-
 ## Advanced considerations
 
-### Task specific optimisation
+### Task-specific optimisation
 
-Task-specific model recommendations include:
+Model recommendations should be task-specific and include:
 
-- code explanation using high curiosity models such as Claude 4.5 Opus or Claude Opus 4.6
-- bug fixing using balanced models such as Claude 4.5 Sonnet
-- feature implementation using lower agency models for precision
+- a code explanation using high curiosity models such as Claude 4.5 Opus or Claude Opus 4.6
+- advice on bug fixing using balanced models such as Claude 4.5 Sonnet
+- advice feature implementation using lower agency models for precision
 - architecture design using high curiosity and high agency models
-- long-running refactors using GPT-5.3-Codex or Claude Opus 4.6
-- agentic workflows using Gemini 3 Pro or Claude Opus 4.6
+- advice on applying long-running refactors using GPT-5.3-Codex or Claude Opus 4.6
+- advice on agentic workflows using Gemini 3 Pro or Claude Opus 4.6
 
 ### Team considerations
 
-Team-level considerations include:
+You should consider:
 
 - consistency by establishing team standards for model selection
 - documentation through models that excel at generating comprehensive documentation
@@ -322,39 +297,31 @@ Cost and capacity factors include:
 - budget constraints that balance model capability with usage costs
 - batch processing for non-urgent tasks (50% cost savings available for GPT and Claude models)
 - prompt caching for repeated contexts (up to 90% savings on Claude models)
-- Gemini 3 thinking levels - use "low" for faster, cheaper responses when complex reasoning is not required
-
----
+- Gemini 3 thinking levels - use 'low' for faster, cheaper responses when complex reasoning is not required
 
 ## Getting started
 
-1. Begin with a balanced model such as Claude 4.5 Sonnet.
+1. Begin with a balanced model such as Claude Sonnet 4.5.
 2. Experiment with different models for the same task.
 3. Note which models work best for your specific use cases.
 4. Build your personal quiver of 3 to 4 go-to models.
 5. Do not be afraid to switch if you are not getting good results.
 
-Remember: model selection is highly personal and task dependent. What works best for one developer or use case may not work for another. The important thing is experimentation and building familiarity with different model characteristics.
+Model selection is highly personal and task dependent. What works best for one developer or use case may not work for another. The important thing is experimentation and building familiarity with different model characteristics.
 
-## Related documents
-Review useful resources, including:
+## Further reading
+
+### Useful resources
+
 - [GitHub Copilot guide](../manager-tool-guides/github-copilot/)
 - [Amazon Q Developer guide](../manager-tool-guides/amazon-q/)
 - [tool comparative guidance](../manager-tool-guides/comparative-guidance.md) to select appropriate tools
 - [prompt library](../prompt-library/) for ready to use examples
 
----
+### Model documentation
 
-### Vendor documentation
-
-- [Claude API Documentation](https://docs.anthropic.com/claude/docs) - official Anthropic Claude documentation
-- [OpenAI API Documentation](https://platform.openai.com/docs) - GPT models and API reference
-- [Google AI Studio Documentation](https://ai.google.dev/gemini-api/docs) - Gemini models documentation
-- [Anthropic Prompt Engineering Guide](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering) - Claude specific prompting techniques
-- [OpenAI Prompt Engineering Guide](https://platform.openai.com/docs/guides/prompt-engineering) - best practices for GPT models
-
-## Contributing
-
-See 'CONTRIBUTING.md' (../../CONTRIBUTING.md) for contribution guidelines.
-
-We encourage contributions from across government. Share your team's experience, lessons learned and effective practices to help other departments.
+- [Claude API Documentation](https://docs.anthropic.com/claude/docs) for the official Anthropic Claude documentation
+- [OpenAI API Documentation](https://platform.openai.com/docs) covers GPT models and API reference
+- [Google AI Studio Documentation](https://ai.google.dev/gemini-api/docs) for Gemini model documentation
+- [Anthropic Prompt Engineering Guide](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering) for Claude specific prompting techniques
+- [OpenAI Prompt Engineering Guide](https://platform.openai.com/docs/guides/prompt-engineering) covers best practice for GPT models

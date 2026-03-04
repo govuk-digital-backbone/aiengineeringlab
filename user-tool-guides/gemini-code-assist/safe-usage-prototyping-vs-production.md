@@ -1,4 +1,4 @@
-> **ALPHA**
+> ALPHA
 > This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 
 # Safe usage guidance: prototyping vs production environments
@@ -26,20 +26,27 @@ Before using this guidance, ensure you have:
 - identified which environments your team uses
 - reviewed the [Gemini Code Assist manager tool guide](../../manager-tool-guides/gemini-code-assist/README.md)
 
-## Quick navigation
+## Contents
 
-| Section | Purpose |
-|---------|---------|
-| [Environment definitions](#environment-definitions) | Understand prototyping vs production environments |
-| [Data classification and environment matrix](#data-classification-and-environment-matrix) | Determine which Gemini Code Assist usage is permitted |
-| [Prototyping environment controls](#prototyping-environment-controls) | 6 controls for rapid experimentation |
-| [Production environment controls](#production-environment-controls) | 13 controls for production systems |
-| [Transition from prototype to production](#transition-from-prototype-to-production) | Checklist and process for promotion |
-| [Common scenarios](#common-scenarios-and-guidance) | Practical examples and guidance |
-| [Ethics review framework](#ethics-review-framework) | When and how to seek ethics approval |
-| [Departmental AI tool governance](#departmental-ai-tool-governance) | Tool approval and exception processes |
-| [Policy configuration](#policy-configuration-recommendations) | Gemini Code Assist settings and GCP policies |
-| [Measuring compliance](#measuring-safe-usage-compliance) | Compliance indicators and metrics |
+[Environment definitions](#environment-definitions)
+
+[Data classification and environment matrix](#data-classification-and-environment-matrix)
+
+[Prototyping environment controls](#prototyping-environment-controls)
+
+[Production environment controls](#production-environment-controls)
+
+[Transition from prototype to production](#transition-from-prototype-to-production)
+
+[Common scenarios](#common-scenarios-and-guidance)
+
+[Ethics review framework](#ethics-review-framework)
+
+[Departmental AI tool governance](#departmental-ai-tool-governance)
+
+[Policy configuration](#policy-configuration-recommendations)
+
+[Measuring compliance](#measuring-safe-usage-compliance)
 
 ## Environment definitions
 
@@ -93,8 +100,6 @@ If an environment contains any of the following, you should apply production-lev
 - code that will be promoted to production
 - infrastructure that mirrors production architecture
 
----
-
 ## Data classification and environment matrix
 
 The table below defines which Gemini Code Assist usage is permitted based on data classification and environment type.
@@ -109,29 +114,34 @@ The table below defines which Gemini Code Assist usage is permitted based on dat
 ### Notes on classifications
 
 #### OFFICIAL prototyping
+
 Standard controls apply. You should:
+
 - use synthetic or anonymised data
 - follow core guardrails
 
 #### OFFICIAL production
+
 Enhanced controls apply. You must:
+
 - ensure all generated code passes security scanning
 - perform a mandatory peer review before merging
 - use Gemini Code Assist Enterprise for intellectual property (IP) indemnity.
 
 #### OFFICIAL-SENSITIVE (both environments)
+
 OFFICIAL-SENSITIVE requires Gemini Code Assist Enterprise with:
+
 - content exclusions configured to protect sensitive repositories
 - audit logging enabled via Google Cloud Logging
 - Identity and Access Management (IAM) policies with least-privilege access
 - data residency controls (UK or approved GCP regions)
-- code customization disabled for sensitive repositories
+- code customisation disabled for sensitive repositories
 - no cross-project access to production from non-production tools
 
 #### SECRET and above
-Gemini Code Assist must not be used with any data classified SECRET or above in any environment.
 
----
+Gemini Code Assist must not be used with any data classified SECRET or above in any environment.
 
 ## Prototyping environment controls
 
@@ -179,9 +189,9 @@ You must:
 - use private repositories for all prototype work
 - not commit secrets, API keys, GCP service account keys or tokens
 - enable secret scanning on prototype repositories
-- clearly label repositories as "PROTOTYPE - NOT FOR PRODUCTION"
+- clearly label repositories as 'PROTOTYPE - NOT FOR PRODUCTION'
 - use separate GCP projects with guardrails for prototyping
-- configure GCP Organization policies to limit prototype project permissions
+- configure GCP Organisation policies to limit prototype project permissions
 
 You should:
 
@@ -200,7 +210,7 @@ You can:
 - iterate rapidly without extensive documentation
 - ask broad exploratory questions about GCP services
 - use large context windows with non-sensitive code
-- test code customization features with non-production repositories
+- test code customisation features with non-production repositories
 
 You must:
 
@@ -209,7 +219,7 @@ You must:
 - validate any GCP service configurations suggested by Gemini
 - review generated IAM policies before applying them
 - check Terraform or Deployment Manager templates for misconfigurations
-- not enable code customization for repositories containing sensitive data
+- not enable code customisation for repositories containing sensitive data
 
 ### P-05: GCP service and dependency management
 
@@ -237,11 +247,9 @@ Before moving prototype code to production, you must:
 - apply all production-level code standards
 - migrate to production GCP projects with appropriate controls
 - review and harden all IAM policies and resource configurations
-- disable code customization if it was used with sensitive data
+- disable code customisation if it was used with sensitive data
 
 A prototype transitioning to production must be treated as new production code and cannot skip any production controls.
-
----
 
 ## Production environment controls
 
@@ -257,7 +265,7 @@ You must:
 - never include personal data, credentials or classified information in prompts
 - use GCP Secret Manager for sensitive configuration
 - sanitise any code examples shared with Gemini Code Assist
-- ensure production GCP projects have appropriate organization policies and guardrails
+- ensure production GCP projects have appropriate organisation policies and guardrails
 
 You must not:
 
@@ -265,7 +273,7 @@ You must not:
 - include real API keys, passwords or GCP service account keys in any context
 - reference specific case details, investigation data or personal information
 - expose security-sensitive architecture details
-- enable code customization for repositories containing production code or sensitive data
+- enable code customisation for repositories containing production code or sensitive data
 
 ### PR-02: mandatory code review
 
@@ -324,6 +332,7 @@ You should:
 Code customisation allows Gemini Code Assist to learn from your private repositories.
 
 For assessment before enabling, follow these steps.
+
 1. Verify all repositories in scope contain only OFFICIAL data.
 2. Ensure no secrets or credentials are committed to these repositories.
 3. Confirm repositories do not contain commercially sensitive algorithms.
@@ -331,12 +340,14 @@ For assessment before enabling, follow these steps.
 5. Document which repositories are included and why.
 
 For ongoing management:
+
 - regularly audit which repositories are included in code customisation
 - remove repositories that no longer require customisation
 - monitor for accidental inclusion of sensitive repositories
 - disable immediately if sensitive data is discovered
 
 Never enable code customisation for:
+
 - repositories containing OFFICIAL-SENSITIVE or higher data
 - repositories with embedded secrets or credentials
 - third-party or customer codebases
@@ -369,6 +380,7 @@ Gemini Code Assist agent mode can execute complex multi-step tasks. You must not
 - enable agents to execute commands with privileged service accounts
 
 All agent actions must:
+
 - require explicit human approval of execution plans before proceeding
 - be logged and auditable in Google Cloud Logging
 - be scoped to minimal necessary permissions
@@ -378,8 +390,8 @@ All agent actions must:
 
 Engineers working with AI-generated code should be familiar with:
 
-- [OWASP LLM Top 10](https://genai.owasp.org/llm-top-10/) - top security risks for large language model applications
-- [OWASP Agentic AI Threats and Mitigations](https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/) - security considerations for autonomous AI systems
+- [OWASP LLM Top 10](https://genai.owasp.org/llm-top-10/) top security risks for large language model applications
+- [OWASP Agentic AI Threats and Mitigations](https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/), security considerations for autonomous AI systems
 
 These resources help identify vulnerabilities specific to AI-generated code and applications that integrate AI.
 
@@ -388,28 +400,39 @@ These resources help identify vulnerabilities specific to AI-generated code and 
 When using Gemini Code Assist for GCP code, you must comply with the following security controls. 
 
 #### IAM policies
-1. Review all AI-generated IAM policies against least-privilege principles.
-2. Never apply IAM policies to production without security team review.
-3. Use IAM Policy Analyzer to validate policies before applying.
-4. Avoid wildcard permissions in production IAM roles.
-5. Ensure service accounts have appropriate constraints.
+
+You must:
+
+- review all AI-generated IAM policies against least-privilege principles
+- never apply IAM policies to production without security team review
+- use IAM Policy Analyser to validate policies before applying
+- avoid wildcard permissions in production IAM roles
+- ensure service accounts have appropriate constraints
 
 #### Infrastructure as code
-1. Validate Deployment Manager or Terraform templates with security linters.
-2. Check for publicly accessible resources (Cloud Storage, Cloud SQL, Compute Engine).
-3. Ensure encryption at rest and in transit is configured.
-4. Verify logging and monitoring are enabled (Cloud Logging, Cloud Monitoring).
-5. Review VPC configurations for proper network segmentation.
+
+You must:
+
+- validate Deployment Manager or Terraform templates with security linters
+- check for publicly accessible resources (Cloud Storage, Cloud SQL, Compute Engine)
+- ensure encryption at rest and in transit is configured
+- verify logging and monitoring are enabled (Cloud Logging, Cloud Monitoring)
+- review VPC configurations for proper network segmentation
 
 #### Security configurations
-1. Verify VPC firewall rules follow least-privilege network access.
-2. Check that Cloud Storage buckets have appropriate IAM policies and encryption.
-3. Ensure Cloud KMS encryption keys have correct policies.
-4. Validate Cloud Functions or Cloud Run service permissions and environment variables.
-5. Review Security Command Center findings.
+
+You must:
+
+- verify VPC firewall rules follow least-privilege network access
+- check that Cloud Storage buckets have appropriate IAM policies and encryption
+- ensure Cloud KMS encryption keys have correct policies
+- validate Cloud Functions or Cloud Run service permissions and environment variables
+- review Security Command Center findings
 
 #### Google Cloud Architecture Framework
+
 You must:
+
 - validate AI-generated architecture against the framework pillars (operational excellence, security, reliability, performance optimisation, cost optimisation)
 - use Security Command Center to review implementations
 - ensure compliance with GCP security best practices
@@ -441,6 +464,7 @@ Warning signs requiring escalation include:
 Gemini Code Assist's large context window (up to 2 million tokens) requires careful management in production.
 
 You must:
+
 - limit context to only necessary files for the task
 - exclude sensitive configuration files from context
 - avoid including entire codebases in context unnecessarily
@@ -448,6 +472,7 @@ You must:
 - be aware that larger context windows increase risk of inadvertent data exposure
 
 You should:
+
 - use targeted file selection rather than workspace-wide context
 - configure content exclusions to prevent sensitive files being included
 - regularly audit which files are being used for context
@@ -502,7 +527,7 @@ If AI-generated code causes a production incident, follow these steps.
 3. Review whether guardrails were followed correctly.
 4. Identify whether the incident reveals a gap in controls.
 5. Check Google Cloud Logging for AI-assisted actions.
-6. Review whether code customization contributed to the issue.
+6. Review whether code customisation contributed to the issue.
 7. Share learnings with the AI Engineering Lab team.
 
 Do not hide that code was AI-generated. Transparency helps the community learn and improve.
@@ -538,15 +563,9 @@ For internal services, you must:
 - maintain clear records of where AI is used in decision-making processes
 - ensure AI usage does not conflict with departmental transparency commitments
 
-General principles include:
-
-- transparency builds public trust in digital government services
-- citizens have a right to know when AI influences decisions affecting them
-- AI should augment human decision-making, not replace accountability
+Transparency builds public trust in digital government services. Citizens have a right to know when AI influences decisions affecting them. AI should augment human decision-making, not replace accountability.
 
 Consult your department's data protection officer before deploying AI-assisted features that process personal data.
-
----
 
 ## Transition from prototype to production
 
@@ -565,33 +584,33 @@ Before promoting prototype code to production, complete this checklist.
 
 | Area | Requirement | Status |
 |------|-------------|--------|
-| **Security review** | Full security review by engineering team | ☐ |
-| **Threat modelling** | Threat model completed or updated | ☐ |
-| **Code standards** | Code refactored to meet department standards | ☐ |
-| **Test coverage** | Adequate automated tests written and passing | ☐ |
-| **Security scanning** | All scans (SAST, dependency, secrets) passing | ☐ |
-| **Dependency audit** | All dependencies verified and approved | ☐ |
-| **Documentation** | Production-quality documentation completed | ☐ |
-| **Accessibility** | WCAG 2.2 AA compliance verified (if user-facing) | ☐ |
-| **Data handling** | All mock or synthetic data replaced with production-ready code | ☐ |
-| **GCP architecture review** | Technical architect or lead engineer approval | ☐ |
-| **IAM policies hardened** | Production IAM policies follow least-privilege | ☐ |
-| **GCP Architecture Framework review** | Architecture reviewed against GCP best practices | ☐ |
-| **Cost analysis** | GCP costs estimated and approved | ☐ |
-| **Code customization audit** | Verified no sensitive data in customization scope | ☐ |
-| **Context window review** | Verified appropriate file scope for production use | ☐ |
-| **Peer review** | Detailed code review by at least 2 engineers | ☐ |
-| **Operational readiness** | Monitoring, logging, alerting configured | ☐ |
+| Security review | Full security review by engineering team | [ ] |
+| Threat modelling | Threat model completed or updated | [ ] |
+| Code standards | Code refactored to meet department standards | [ ] |
+| Test coverage | Adequate automated tests written and passing | [ ] |
+| Security scanning | All scans (SAST, dependency, secrets) passing | [ ] |
+| Dependency audit | All dependencies verified and approved | [ ] |
+| Documentation | Production-quality documentation completed | [ ] |
+| Accessibility | WCAG 2.2 AA compliance verified (if user-facing) | [ ] |
+| Data handling | All mock or synthetic data replaced with production-ready code | [ ] |
+| GCP architecture review | Technical architect or lead engineer approval | [ ] |
+| IAM policies hardened | Production IAM policies follow least-privilege | [ ] |
+| GCP Architecture Framework review | Architecture reviewed against GCP best practices | [ ] |
+| Cost analysis | GCP costs estimated and approved | [ ] |
+| Code customisation audit | Verified no sensitive data in customisation scope | [ ] |
+| Context window review | Verified appropriate file scope for production use | [ ] |
+| Peer review | Detailed code review by at least 2 engineers | [ ] |
+| Operational readiness | Monitoring, logging, alerting configured | [ ] |
 
 ### Recommended transition approach
 
-Rather than directly promoting prototype code:
+Instead of promoting prototype code:
 
-1. Rewrite with production intent, using the prototype as a reference implementation but write production code with full controls.
-2. Do incremental migration, moving small, well-tested components over time.
-3. Take a hybrid approach, keeping the prototype running alongside production during validation phase.
+- rewrite with production intent, using the prototype as a reference implementation but write production code with full controls
+- do incremental migration, moving small, well-tested components over time
+- take a hybrid approach, keeping the prototype running alongside production during validation phase
 
-Do not simply rename "prototype" repositories or GCP projects to "production" without applying appropriate controls.
+Do not simply rename 'prototype' repositories or GCP projects to 'production' without applying appropriate controls.
 
 ### Pre-use due diligence checklist
 
@@ -608,24 +627,23 @@ Before using Gemini Code Assist in any environment, complete this due diligence 
 | What security controls are needed? | Identify which controls from this guidance apply |
 | Who has approved this use? | Ensure appropriate management sign-off is obtained |
 | What GCP projects will be accessed? | Verify appropriate project boundaries and IAM controls |
-| Should code customization be enabled? | Assess necessity and security implications |
+| Should code customisation be enabled? | Assess necessity and security implications |
 | What is the cost impact? | Understand licensing costs, GCP resource costs, and context window usage costs |
 
 Document your answers and retain them for audit purposes. Escalate concerns to your technical lead or security team.
-
----
 
 ## Common scenarios and guidance
 
 ### Scenario 1: spike for GCP service integration
 
-**Context**: engineer needs to explore integrating with Cloud Functions and Firestore.
+Engineer needs to explore integrating with Cloud Functions and Firestore.
 
-**Environment**: prototyping
+Environment: prototyping
 
-**Appropriate controls**
+#### Appropriate controls
 
 You can:
+
 - use GCP sandbox project for testing
 - use Gemini Code Assist to generate Cloud Functions code rapidly
 - test with Firestore collections in sandbox project
@@ -633,52 +651,53 @@ You can:
 - experiment with agent mode for multi-file implementations
 
 You must not:
+
 - use production GCP projects or service accounts
 - access production Firestore databases
 - commit GCP service account keys to repository
 - create resources without billing controls
-- enable code customization for production repositories during exploration
+- enable code customisation for production repositories during exploration
 
-**Transition**: if integrating, rewrite with production IAM roles, add error handling, Cloud Logging integration and cost monitoring.
-
----
+If integrating, rewrite with production IAM roles, add error handling, Cloud Logging integration and cost monitoring.
 
 ### Scenario 2: building GOV.UK frontend prototype
 
-**Context**: team building prototype for user research using GOV.UK Design System.
+Team building prototype for user research using GOV.UK Design System.
 
-**Environment**: prototyping (if no real user data collected)
+Environment: prototyping (if no real user data collected)
 
-**Appropriate controls**
+#### Appropriate controls
 
 You can:
+
 - use Gemini Code Assist to generate components quickly
 - use fake data for examples
 - focus on speed over code quality
 - use large context window for design system consistency
 
 You should:
+
 - ensure accessibility basics (for representative testing)
 
 You must not:
+
 - collect real user data without production controls
 - use production analytics or tracking
 - deploy to production GCP infrastructure
-- enable code customization with user-facing repositories
+- enable code customisation with user-facing repositories
 
-**Transition**: rebuild with production code standards, full WCAG 2.2 AA compliance, production security headers, analytics and operational monitoring.
-
----
+Rebuild with production code standards, full WCAG 2.2 AA compliance, production security headers, analytics and operational monitoring.
 
 ### Scenario 3: refactoring production Cloud Function
 
-**Context**: engineer refactoring production Cloud Function for improved performance using Gemini agent mode.
+Engineer refactoring production Cloud Function for improved performance using Gemini agent mode.
 
-**Environment**: production
+Environment: production
 
-**Required controls**
+#### Required controls
 
 You must:
+
 - apply all production code review requirements
 - review agent execution plan before approving
 - maintain or improve test coverage
@@ -691,22 +710,22 @@ You must:
 - limit context window to necessary files only
 
 You must not:
+
 - accept large AI-generated refactors without thorough review
-- skip tests because "code behaviour is unchanged"
+- skip tests because 'code behaviour is unchanged'
 - deploy directly to production without testing
 - allow agent to execute without reviewing plan
 
----
-
 ### Scenario 4: code transformation for Python upgrade
 
-**Context**: team using Gemini Code Assist to upgrade Python 2.7 code to Python 3.12.
+Team using Gemini Code Assist to upgrade Python 2.7 code to Python 3.12.
 
-**Environment**: production (upgrading existing production code)
+Environment: production (upgrading existing production code)
 
-**Required controls**
+#### Required controls
 
 You must:
+
 - use code transformation in non-production environment first
 - review all transformed code thoroughly
 - test extensively before deploying to production
@@ -717,29 +736,29 @@ You must:
 - review agent execution plan before starting transformation
 
 You should:
+
 - pilot transformation on smaller, less critical applications first
 - document transformation decisions and any manual changes required
 - involve your technical architect in the upgrade plan
 - break large transformations into smaller, reviewable chunks
 
-**Special considerations**
 You must ensure:
+
 - code transformation operates at scale, increasing review burden
 - automated transformation may not catch all compatibility issues
 - legacy code patterns may require manual intervention
 - large context windows useful but require careful scoping
 
----
-
 ### Scenario 5: creating GCP infrastructure with Terraform
 
-**Context**: engineer using Gemini Code Assist to write Terraform for new GCP service.
+Engineer using Gemini Code Assist to write Terraform for new GCP service.
 
-**Environment**: production (infrastructure is always production)
+Environment: production (infrastructure is always production)
 
-**Required controls**
+#### Required controls
 
 You must:
+
 - apply all production code review requirements
 - validate with terraform validate and tflint
 - check for security misconfigurations (public resources, open firewall rules)
@@ -750,19 +769,19 @@ You must:
 - review Security Command Center findings after deployment
 
 You should:
+
 - use department-approved Terraform modules where available
 - follow Google Cloud Architecture Framework principles
 - implement cost controls and resource labelling
 - use Gemini Chat to understand GCP best practices before implementing
 
 You must not:
+
 - accept infrastructure code without security review
 - deploy Terraform directly to production without testing
-- enable code customization for infrastructure repositories without assessment
+- enable code customisation for infrastructure repositories without assessment
 
-**Rationale**: infrastructure misconfigurations can expose entire systems and generate unexpected costs.
-
----
+Infrastructure misconfigurations can expose entire systems and generate unexpected costs.
 
 ## Ethics review framework
 
@@ -771,11 +790,13 @@ You must not:
 Seek ethics review from your department's governance board or senior leadership before using Gemini Code Assist in these scenarios.
 
 When AI is replacing or augmenting human decision-making, seek a review for: 
+
 - code that automates decisions affecting citizens (benefits, licensing, enforcement)
 - systems that triage, prioritise or route cases or applications
 - algorithms that score, rank or classify individuals or organisations
 
 For ethically sensitive domains, seek a review for:
+
 - healthcare and medical systems
 - law enforcement and criminal justice
 - immigration and border control
@@ -784,11 +805,13 @@ For ethically sensitive domains, seek a review for:
 - military and defence systems
 
 For politically or socially sensitive applications, seek a review for:
+
 - systems subject to public debate or controversy
 - use cases at odds with government values (fairness, transparency, accountability)
 - applications that may face legal challenge or judicial review
 
 For code customisation in sensitive contexts, seek a review for:
+
 - enabling code customisation for repositories containing citizen-facing decision logic
 - using code customisation with repositories that handle vulnerable populations data
 
@@ -805,32 +828,31 @@ When submitting for ethics review, address these questions.
 | Can decisions be explained and challenged? | Support transparency and due process |
 | What happens if the system fails? | Understand safety implications |
 | Are there less intrusive alternatives? | Principle of necessity |
-| How is code customization being used? | Assess learning from sensitive codebases |
+| How is code customisation being used? | Assess learning from sensitive codebases |
 
 ### Ethics principles for AI use
 
 Government use of AI should adhere to the following principles.
 
-1. Fairness.
+#### 1. Fairness
 
 AI must not discriminate or create unjust outcomes. Consider impact on protected characteristics (age, disability, race, religion, sex, etc.).
 
-2. Accountability.
+#### 2. Accountability
 
 Humans remain responsible for AI-assisted decisions. AI is a tool, not a decision-maker.
 
-3. Transparency. 
+#### 3. Transparency 
 
 Be open about where and how AI is used. Provide meaningful explanations of AI-assisted decisions.
 
-4. Safety and security.
+#### 4. Safety and security
 
 Ensure AI systems are reliable, secure and fail safely. Protect against manipulation or misuse.
 
-5. Proportionality.
+#### 5. Proportionality
 
  Use AI only where benefits outweigh risks. Consider less intrusive alternatives.
-
 
 ### Escalation process
 
@@ -844,13 +866,11 @@ Follow these steps if you believe an ethics review is needed.
 
 If your department lacks an ethics review process, escalate to your chief technology officer or equivalent senior responsible officer.
 
----
-
 ## Departmental AI tool governance
 
 ### Approved tool lists
 
-Your department should maintain an approved AI tool list ("allow list") specifying:
+Your department should maintain an approved AI tool 'allow list' specifying:
 
 - which AI tools are approved for use
 - what data classifications each tool is approved for
@@ -866,7 +886,7 @@ Engineers must only use tools on the approved list unless an exception has been 
 3. Legal team reviews terms of service, liability, intellectual property.
 4. Data protection officer assesses GDPR compliance including data residency.
 5. Confirm licensing and commercial arrangements for procurement.
-6. Perform a risk assessment, documenting and accepting residual risks (including data residency constraints)
+6. Perform a risk assessment, documenting and accepting residual risks, including data residency constraints.
 7. Senior responsible officer approves or rejects.
 8. Tool added to approved list with conditions.
 
@@ -875,6 +895,7 @@ Engineers must only use tools on the approved list unless an exception has been 
 If Gemini Code Assist is not on the approved list, you should consider the following things.
 
 For prototyping and research:
+
 - unapproved AI tools may be used for non-production activities (training, proof of concept, research)
 - no department or citizen data must be used
 - no production systems may be accessed
@@ -883,6 +904,7 @@ For prototyping and research:
 - results must not be deployed to production
 
 For production use:
+
 - submit exception request to AI governance board or equivalent
 - provide business justification and risk mitigation
 - obtain senior management approval
@@ -913,8 +935,6 @@ Departments should review AI tool governance annually, to:
 
 This ensures governance keeps pace with evolving AI technology and risks.
 
----
-
 ## Policy configuration recommendations
 
 ### Gemini Code Assist settings
@@ -923,13 +943,13 @@ For UK government departments, configure Gemini Code Assist as follows.
 
 | Setting | Prototyping | Production | Rationale |
 |---------|-------------|------------|-----------|
-| **Edition** | Enterprise recommended | Enterprise required | IP indemnity and security features needed |
-| **Content exclusions** | Minimal | Comprehensive | Protects production code and secrets |
-| **Google Cloud Logging** | Enabled | Enabled | Audit trail for compliance |
-| **IAM policies** | Restricted to sandbox projects | Least-privilege access only | Prevents unintended resource access |
-| **Code customization** | Disabled or limited | Disabled unless specifically approved | Prevents learning from sensitive code |
-| **Context window limits** | Moderate | Strictly limited | Controls data exposure and costs |
-| **Data residency** | UK or EU regions | UK or EU regions | Meets government data requirements |
+| Edition | Enterprise recommended | Enterprise required | IP indemnity and security features needed |
+| Content exclusions | Minimal | Comprehensive | Protects production code and secrets |
+| Google Cloud Logging | Enabled | Enabled | Audit trail for compliance |
+| IAM policies | Restricted to sandbox projects | Least-privilege access only | Prevents unintended resource access |
+| Code customisation | Disabled or limited | Disabled unless specifically approved | Prevents learning from sensitive code |
+| Context window limits | Moderate | Strictly limited | Controls data exposure and costs |
+| Data residency | UK or EU regions | UK or EU regions | Meets government data requirements |
 
 ### Content exclusion patterns for production
 
@@ -965,7 +985,7 @@ Prototyping environment:
 Production environment:
 ```
 # Further restrict permissions based on roles
-- Require MFA for code customization access
+- Require MFA for code customisation access
 - Prevent cross-project resource access
 - Log all API calls via Cloud Logging
 - Implement VPC Service Controls where appropriate
@@ -973,7 +993,7 @@ Production environment:
 
 ### GCP organisation policies
 
-Use GCP organisation policies to enforce guardrails:
+Use GCP organisation policies to enforce guardrails to:
 
 - create separate folders for prototyping and production projects
 - apply policies to prevent cross-environment access
@@ -981,13 +1001,11 @@ Use GCP organisation policies to enforce guardrails:
 - implement cost controls and budgets by folder
 - centrally manage Cloud Logging and Security Command Center
 
----
-
 ## Measuring safe usage compliance
 
 ### Compliance indicators
 
-You can assess whether your team is following safe usage guidance by checking:
+Assess whether your team is following safe usage guidance by checking the following.
 
 | Indicator | Target | How to measure |
 |-----------|--------|----------------|
@@ -1005,39 +1023,35 @@ You can assess whether your team is following safe usage guidance by checking:
 Escalate immediately if you identify:
 
 - AI-generated code committed without review
-- Secrets, credentials or GCP service account keys in code generated with Gemini assistance
-- Production incidents caused by AI-generated security vulnerabilities
-- Engineers bypassing security scans for AI-generated code
-- Prototype code deployed to production without transition process
+- secrets, credentials or GCP service account keys in code generated with Gemini assistance
+- production incidents caused by AI-generated security vulnerabilities
+- engineers bypassing security scans for AI-generated code
+- prototype code deployed to production without transition process
 - OFFICIAL-SENSITIVE or higher data shared with Gemini Code Assist
-- Code customization enabled for sensitive repositories
-- Production IAM policies applied without security review
-- Excessive GCP costs from AI-suggested architectures
-- Large context windows used without justification
-
----
+- code customisation enabled for sensitive repositories
+- production IAM policies applied without security review
+- excessive GCP costs from AI-suggested architectures
+- large context windows used without justification
 
 ## Roles and responsibilities
 
 | Role | Prototyping responsibilities | Production responsibilities |
 |------|------------------------------|----------------------------|
-| **Engineer** | Follow prototyping controls, document findings, delete unused prototypes and GCP resources | Follow all production controls, complete security scanning, thorough code review, manage context windows appropriately |
-| **Technical lead** | Review prototype direction, approve transition to production, monitor GCP costs | Approve production code, ensure compliance, participate in security reviews, review IAM policies; approve code customisation scope |
-| **Engineering manager** | Ensure team trained on safe usage, allocate time for compliance, monitor GCP spending | Enforce production controls, track compliance metrics, escalate issues, approve GCP architecture changes, oversee code customisation governance |
-| **Security team** | Review transition plans, advise on risk, review IAM policies, assess code customisation proposals | Review production security scanning, investigate incidents, audit compliance, validate GCP architecture, audit code customisation scope |
-| **Service owner** | Decide whether prototypes progress to production | Accountable for service security, compliance and GCP costs |
+| Engineer | Follow prototyping controls, document findings, delete unused prototypes and GCP resources | Follow all production controls, complete security scanning, thorough code review, manage context windows appropriately |
+| Technical lead | Review prototype direction, approve transition to production, monitor GCP costs | Approve production code, ensure compliance, participate in security reviews, review IAM policies; approve code customisation scope |
+| Engineering manager | Ensure team trained on safe usage, allocate time for compliance, monitor GCP spending | Enforce production controls, track compliance metrics, escalate issues, approve GCP architecture changes, oversee code customisation governance |
+| Security team | Review transition plans, advise on risk, review IAM policies, assess code customisation proposals | Review production security scanning, investigate incidents, audit compliance, validate GCP architecture, audit code customisation scope |
+| Service owner | Decide whether prototypes progress to production | Accountable for service security, compliance and GCP costs |
 
----
-
-## Related resources
+## Further reading
 
 ### Internal documentation
 
-- [base guardrails](../../governance/guardrails-base.md) - foundational security controls
-- [AI SDLC playbook](../../playbooks/ai-sdlc-playbook.md) - integrating AI tools across development lifecycle
-- [incident response playbook](../../governance/incident-response-playbook.md) - responding to AI tool incidents
-- [Gemini Code Assist manager guide](../../manager-tool-guides/gemini-code-assist/README.md) - broader implementation guidance
-- [Developer Knowledge API and MCP server guidance](../../manager-tool-guides/gemini-code-assist/developer-knowledge-api-and-mcp-server-guidance.md) - extending Gemini capabilities
+- [Base guardrails](../../governance/guardrails-base.md) covers foundational security controls
+- [AI SDLC playbook](../../playbooks/ai-sdlc-playbook.md) describes integrating AI tools across development lifecycle
+- [Incident response playbook](../../governance/incident-response-playbook.md) provides guidance on responding to AI tool incidents
+- [Gemini Code Assist manager guide](../../manager-tool-guides/gemini-code-assist/README.md) covers broader implementation guidance
+- [Developer Knowledge API and MCP server guidance](../../manager-tool-guides/gemini-code-assist/developer-knowledge-api-and-mcp-server-guidance.md) covers extending Gemini capabilities
 
 ### Government guidance
 
@@ -1057,50 +1071,14 @@ Escalate immediately if you identify:
 
 ### AI security resources
 
-- [OWASP LLM Top 10](https://genai.owasp.org/llm-top-10/) - top security risks for large language model applications
-- [OWASP Agentic AI Threats and Mitigations](https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/) - security considerations for autonomous AI systems
-- [NCSC AI and Machine Learning Security](https://www.ncsc.gov.uk/collection/machine-learning) - UK guidance on securing AI systems
+- [OWASP LLM Top 10](https://genai.owasp.org/llm-top-10/) lists top security risks for large language model applications
+- [OWASP Agentic AI Threats and Mitigations](https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/) describes security considerations for autonomous AI systems
+- [NCSC AI and Machine Learning Security](https://www.ncsc.gov.uk/collection/machine-learning) provides UK guidance on securing AI systems
 
 ### GCP governance resources
 
-- [GCP Organization policy documentation](https://cloud.google.com/resource-manager/docs/organization-policy)
+- [GCP Organisation policy documentation](https://cloud.google.com/resource-manager/docs/organization-policy)
 - [VPC Service Controls](https://cloud.google.com/vpc-service-controls)
 - [Cloud Logging](https://cloud.google.com/logging)
 - [Cloud Monitoring](https://cloud.google.com/monitoring)
 - [IAM Policy Analyzer](https://cloud.google.com/iam/docs/policy-intelligence)
-
----
-
-## Feedback
-
-This is an alpha service. Your feedback helps improve this guidance.
-
-Share feedback through:
-- [GitHub discussions](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions)
-- Your department's AI Engineering Lab community channel
-- The AI Engineering Lab team
-
----
-
-## Contributing
-
-See [CONTRIBUTING.md](../../CONTRIBUTING.md) for contribution guidelines.
-
-We encourage contributions from across government to keep this repository current and comprehensive. Share your team's experience, lessons learned, and effective practices to help other government departments.
-
-Before contributing, read [CONTRIBUTING.md](../../CONTRIBUTING.md) which covers:
-- content standards and style guide
-- review and approval process
-- accessibility requirements
-- how to submit changes
-
-## Licence
-
-This repository is published under the [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/).
-
-You are encouraged to use and adapt these materials for your own government context.
-
-When reusing content you should:
-- maintain attribution to this repository
-- share improvements back via contribution
-- ensure adaptations remain suitable for government use

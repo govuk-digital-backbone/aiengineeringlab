@@ -11,3 +11,4 @@ This section provides developer user guides for AI tools.
 |---------|-------------|
 | [Gemini Code Assist](gemini-code-assist/) | User guides for Gemini Code Assist|
 | [GitHub Copilot](github-copilot/) | User guides for GitHub Copilot |
+| [Claude Code](claude-code/) | User guides for Claude Code |

@@ -1,5 +1,5 @@
 > ALPHA
-> This is a new service – your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
+> This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 
 # AI Engineering Lab comparative guidance
 
@@ -9,7 +9,7 @@
 
 This guide helps technical leads, delivery managers, and senior decision-makers evaluate AI Engineering Labs for their teams and departments. It provides objective comparison criteria, questions to ask vendors, and guidance on matching tools to team contexts.
 
-This guide does not recommend specific tools. Instead, it equips you to make informed decisions based on your team's needs, security requirements, and ways of working.
+This guide does not recommend specific tools. Instead, it equips you to make informed decisions based on your team's needs, security requirements, and ways of working. This approach is consistent with the [Technology Code of Practice](https://www.gov.uk/guidance/the-technology-code-of-practice), which sets standards for government technology decisions.
 
 ## Tools in scope
 
@@ -41,13 +41,13 @@ The table below shows criteria you should consider when evaluating security and 
 | Data retention | How long are prompts and code retained? Can retention be disabled? | high |
 | Training data usage | Is your code used to train models? Can this be disabled? | high |
 | Security certifications | ISO 27001, SOC 2 Type II, Cyber Essentials Plus? | high |
-| Government accreditation | Approved on G-Cloud? Any department-specific approvals? | high |
+| Government accreditation | Approved on [G-Cloud](https://www.digitalmarketplace.service.gov.uk/g-cloud)? Any department-specific approvals? | high |
 | Encryption | In-transit and at-rest encryption standards? | medium |
 | Access controls | SSO integration, MFA support, RBAC capabilities? | medium |
 | Audit logging | What usage logs are available? Export capabilities? | medium |
 | Vulnerability disclosure | Clear process for reporting and handling security issues? | medium |
 
-The 'weight' column indicates the relative importance of each criterion when making your evaluation decision.
+The 'weight' column indicates the relative importance of each criterion when making your evaluation decision. Reference the [NCSC cloud security guidance](https://www.ncsc.gov.uk/collection/cloud-security) when assessing cloud service providers against these criteria.
 
 ---
 
@@ -191,7 +191,7 @@ The 'weight' column indicates the relative importance of each criterion when mak
 
 ### Decision factors
 
-Different tools suit different contexts. The table below shows factors to consider:
+Different tools suit different contexts. The [model selection playbook](../playbooks/model-selection.md) provides complementary guidance on choosing appropriate AI models for specific tasks once you have selected a tool. The table below shows factors to consider:
 
 | Factor | Implications |
 |--------|--------------|
@@ -204,7 +204,7 @@ Different tools suit different contexts. The table below shows factors to consid
 
 ### Recommended evaluation approach
 
-#### Step 1: define requirements (Week 1)
+#### Step 1: define requirements (week 1)
 
 1. Document must-have security requirements.
 2. List primary languages and frameworks.
@@ -212,11 +212,11 @@ Different tools suit different contexts. The table below shows factors to consid
 4. Determine budget constraints.
 5. Capture any department-specific restrictions.
 
-#### Step 2: shortlist tools (Week 1)
+#### Step 2: shortlist tools (week 1)
 
 Using this guide and security requirements, identify one to 2 tools for proof of concept.
 
-#### Step 3: conduct proof of concept (Weeks 2 to 4)
+#### Step 3: conduct proof of concept (weeks 2 to 4)
 
 The table below shows activities to complete during your proof of concept:
 
@@ -232,17 +232,17 @@ PoC evaluation template:
 
 ```
 | Criterion                | Weight | Tool A score (1 to 5) | Tool B score (1 to 5) |
-|--------------------------|--------|-----------------------|-----------------------|
-| Code completion quality  | 20%    | [score 1-5]           | [score 1-5]           |
-| Security compliance      | 25%    | [score 1-5]           | [score 1-5]           |
-| Language support         | 15%    | [score 1-5]           | [score 1-5]           |
-| Integration ease         | 15%    | [score 1-5]           | [score 1-5]           |
-| Engineer satisfaction    | 15%    | [score 1-5]           | [score 1-5]           |
-| Support quality          | 10%    | [score 1-5]           | [score 1-5]           |
-| Weighted total           | 100%   | [calculate]           | [calculate]           |
+|--------------------------|--------|------------------------|-----------------------|
+| Code completion quality  | 20%    | [score 1 to 5]         | [score 1 to 5]        |
+| Security compliance      | 25%    | [score 1 to 5]         | [score 1 to 5]        |
+| Language support         | 15%    | [score 1 to 5]         | [score 1 to 5]        |
+| Integration ease         | 15%    | [score 1 to 5]         | [score 1 to 5]        |
+| Engineer satisfaction    | 15%    | [score 1 to 5]         | [score 1 to 5]        |
+| Support quality          | 10%    | [score 1 to 5]         | [score 1 to 5]        |
+| Weighted total           | 100%   | [calculate]            | [calculate]           |
 ```
 
-#### Step 4: make recommendation (Week 5)
+#### Step 4: make recommendation (week 5)
 
 You should make a recommendation that documents the following information.
 
@@ -354,7 +354,7 @@ Key requirements include:
 You should consider the following:
 
 - Amazon Q has specific mainframe and COBOL features
-- there's limited COBOL support across other tools
+- there is limited COBOL support across other tools
 - you may need specialised prompting
 
 ### Scenario 5: infrastructure and platform team
@@ -444,15 +444,3 @@ Regardless of tool selection, you should maintain exit capability by:
 - tracking contract end dates and renewal terms
 
 ---
-
-## Related documents
-
-- [GitHub Copilot Guide](github-copilot/)
-- [Amazon Q Engineer Guide](amazon-q/)
-- [Model Selection Playbook](../playbooks/model-selection.md)
-
-## References
-
-- [G-Cloud Digital Marketplace](https://www.digitalmarketplace.service.gov.uk/g-cloud)
-- [NCSC Cloud Security Principles](https://www.ncsc.gov.uk/collection/cloud-security)
-- [Technology Code of Practice](https://www.gov.uk/guidance/the-technology-code-of-practice)

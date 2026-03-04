@@ -1,4 +1,4 @@
-> **ALPHA**
+> ALPHA
 > This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 
 # AI Engineering Lab repository
@@ -30,8 +30,13 @@ This repository follows a structured approach designed to maintain clarity and s
 ├── governance/                  # Policy and guardrails
 │   ├── README.md
 │   ├── guardrails-base.md
+│   ├── department-risk-alignment-framework.md
 │   ├── incident-response-playbook.md
-│   └── risk-register-template.md
+│   ├── model-assurance-and-transparency.md
+│   ├── non-deterministic-code-assurance.md
+│   ├── risk-register-template.md
+│   ├── secure-by-design-ai-evidence.md
+│   └── vendor-contract-security-requirements.md
 │
 ├── manager-tool-guides/         # Tool selection and management
 │   ├── README.md
@@ -62,6 +67,11 @@ This repository follows a structured approach designed to maintain clarity and s
 │       ├── prompt-engineering-index.md
 │       ├── prompt-engineering-testing.md
 │       └── prompt-engineering-use-cases.md
+│
+├── policy/              # Strategic policy and compliance frameworks
+│   ├── README.md
+│   ├── data-sovereignty-and-jurisdiction.md
+│   └── dpia-ai-coding-assistants.md
 │
 ├── prompt-library/              # Reusable prompt patterns
 │   ├── README.md
@@ -96,7 +106,8 @@ This repository follows a structured approach designed to maintain clarity and s
     │   ├── getting-started.md
     │   ├── advanced-use.md
     │   ├── customisation-guide.md
-    │   └── safe-usage-prototyping-vs-production.md
+    │   ├── safe-usage-prototyping-vs-production.md
+    │   └── premium-credit-management.md
     └── gemini-code-assist/
         ├── README.md
         ├── getting-started.md

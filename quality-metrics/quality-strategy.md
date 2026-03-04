@@ -1,5 +1,5 @@
-> **ALPHA**
-> This is a new service – your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
+> ALPHA
+> This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 # AI Engineering Lab quality strategy
 
 > Strategic framework for measuring success and demonstrating value across the AI Engineering Lab programme.
@@ -20,8 +20,7 @@
 - [governance and accountability](#governance-and-accountability)
 - [continuous improvement](#continuous-improvement)
 - [data quality and integrity](#data-quality-and-integrity)
-- [related documents](#related-documents)
-- [references](#references)
+- [further reading](#further-reading)
 
 ## Purpose
 
@@ -122,14 +121,14 @@ Question answered: are people using the tools?
 Analyse adoption by:
 
 - department
-- team maturity level (starting, developing or established)
+- [team maturity level](../assessment/maturity-assessment-framework.md) (starting, developing or established)
 - tool (Copilot, Claude, Q or Gemini)
 - role (engineer, tech lead, or another suitable role)
 - work type (modernisation, greenfield or maintenance)
 
 ---
 
-## Tier 2: Productivity metrics
+## Tier 2: productivity metrics
 
 Question answered: are engineers more efficient?
 
@@ -140,7 +139,7 @@ Question answered: are engineers more efficient?
 | Suggestion acceptance rate | AI suggestions accepted and suggestions shown | Baseline and positive trend | Weekly |
 | Time on task | Time to complete comparable tasks | Decreasing versus baseline | Sprint |
 | Code commit frequency | Commits per engineer per day | Increasing versus baseline | Weekly |
-| Lead time for changes | Time from commit to production | Decreasing versus baseline | Sprint |
+| [Lead time for changes](https://dora.dev/) | Time from commit to production | Decreasing versus baseline | Sprint |
 | Engineer velocity | Story points per engineer per sprint | Baseline and improvement | Sprint |
 
 ### Productivity targets (indicative)
@@ -154,7 +153,7 @@ Question answered: are engineers more efficient?
 
 ### Measurement cautions
 
-Compare teams to their own baselines, not each other. Account for sprint-to-sprint variation. Control for team changes, holidays, major releases. Balance speed metrics with quality metrics.
+Compare teams to their own baselines, not each other. Account for sprint to sprint variation. Control for team changes, holidays, major releases. Balance speed metrics with quality metrics.
 
 ---
 
@@ -422,7 +421,7 @@ Compare departments on the following dimensions.
 | Adoption trajectory | Identify fast or slow adopters |
 | Support efficiency | FDE time to achieve outcomes |
 | Pattern effectiveness | Which approaches work best |
-| Maturity progression | Speed through starting, developing and established |
+| [Maturity progression](../assessment/maturity-assessment-framework.md) | Speed through starting, developing and established |
 
 Use for identifying transferable practices, not ranking departments.
 
@@ -448,7 +447,7 @@ Use for identifying transferable practices, not ranking departments.
 | Weekly summary | Weekly | Programme team, delivery managers | Progress, issues, actions |
 | Monthly report | Monthly | Programme board | Trends, insights, decisions |
 | Quarterly review | Quarterly | Senior responsible owners, senior leadership | Business outcomes, strategic direction |
-| Final evaluation | Programme end | DSIT, senior stakeholders | Overall impact, lessons, recommendations |
+| [Final evaluation](https://www.gov.uk/government/publications/the-magenta-book) | Programme end | DSIT, senior stakeholders | Overall impact, lessons, recommendations |
 
 ### Dashboard design principles
 
@@ -595,13 +594,6 @@ Use for identifying transferable practices, not ranking departments.
 
 ---
 
-## Related documents
-Related documents include:
-- [measurement playbook](measurement-playbook.md) - Practical implementation guidance
-- [maturity assessment framework](../assessment/maturity-assessment-framework.md) - Team-level assessment
+## Further reading
 
-## References
-
-- [DORA State of DevOps](https://dora.dev/) - Industry benchmarks
-- [GDS Service Manual - Measuring success](https://www.gov.uk/service-manual/measuring-success)
-- [HM Treasury Magenta Book](https://www.gov.uk/government/publications/the-magenta-book) - Evaluation guidance
+The [GDS service manual section on measuring success](https://www.gov.uk/service-manual/measuring-success) covers how to set performance metrics and define success criteria for government digital services.

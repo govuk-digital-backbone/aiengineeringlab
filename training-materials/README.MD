@@ -1,5 +1,6 @@
-> **ALPHA**
-> This is a new service – your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
+> ALPHA
+> This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
+
 # Recommended resources
 
 > Curated collection of external articles, courses, repositories, and videos for AI Engineering Lab learning.
@@ -163,7 +164,6 @@ This page is updated regularly. Last updated: 28 January 2026
 
 ---
 
-## Related documents
+## Further reading
 
-- [Context engineering playbook](../playbooks/context-engineering.md) - advanced techniques
-- [Prompt library](../prompt-library/) - reusable prompts
+The [context engineering playbook](../playbooks/context-engineering.md) covers advanced techniques for getting better results from AI coding assistants. The [prompt library](../prompt-library/) contains reusable prompts for common development tasks.

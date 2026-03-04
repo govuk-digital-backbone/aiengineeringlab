@@ -1,7 +1,5 @@
-[← Back to Index](./prompt-engineering-index.md)
-
-> **ALPHA**
-> This is a new service – your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
+> ALPHA
+> This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 
 # Foundational prompting techniques
 
@@ -15,7 +13,7 @@ Understanding foundational prompting techniques is essential for getting consist
 
 This guide applies to all engineers using AI code assistants, particularly:
 
-- engineers new to AI-assisted development
+- engineers new to AI assisted development
 - teams establishing AI adoption standards
 - anyone looking to improve the quality of AI-generated code
 
@@ -35,7 +33,7 @@ The better your instructions, the better the output. This applies whether you ar
 Example of the human test in action:
 ```
 This prompt fails the human test:
-"Build the login system"
+'Build the login system'
 
 A human would ask:
 - which framework are we using?
@@ -47,7 +45,7 @@ A human would ask:
 - how should this integrate with the existing system?
 
 This prompt passes the human test:
-"Build a login endpoint for our FastAPI service that:
+'Build a login endpoint for our FastAPI service that:
 - uses PostgreSQL (our existing user database)
 - follows the async pattern from our registration endpoint (see example below)
 - implements JSON Web Token (JWT) tokens matching our auth service pattern
@@ -57,7 +55,7 @@ This prompt passes the human test:
 - logs all attempts for audit trail
 - integrates with our Redis session store
 
-[paste example of existing auth endpoint]"
+[paste example of existing auth endpoint]'
 ```
 
 #### What you need to give someone to complete a task properly
@@ -99,34 +97,34 @@ Remember: AI is powerful, but it is not psychic. Treat it like you would treat a
 
 The 5 core techniques include:
 
-- chain of thought reasoning - getting AI to show its working by asking "Walk me through your thought process step by step..." or "Let's think through this systematically..."
-- few-shot prompting - teaching by example by saying "Reference this good example and make it look like that" and show the pattern you want repeated
-- reverse prompting - make the AI ask you questions first by saying "Before you get started, ask me for any information you need to do a good job", uncovering requirements before coding
-- role assignment - saying "Act as a senior Python engineer...". changes expertise level and perspective
-- emphasis - add context about importance to improve output quality by saying "This is critical for production code that handles sensitive user data." or "Think carefully about edge cases - this function processes financial transactions." or "This is important for my team's code review - be thorough"
+- chain of thought reasoning - getting AI to show its working by asking 'Walk me through your thought process step by step' or 'Let us think through this systematically'
+- few-shot prompting - teaching by example by saying 'Reference this good example and make it look like that' and show the pattern you want repeated
+- reverse prompting - make the AI ask you questions first by saying 'Before you get started, ask me for any information you need to do a good job', uncovering requirements before coding
+- role assignment - saying 'Act as a senior Python engineer' changes expertise level and perspective
+- emphasis - add context about importance to improve output quality by saying 'This is critical for production code that handles sensitive user data' or 'Think carefully about edge cases - this function processes financial transactions' or 'This is important for my team's code review - be thorough'
 
 Why this works: just as you would give a colleague more context about why something matters, AI responds to framing that indicates the stakes and required quality level.
 ### Combining techniques: the power prompt
 
 The most effective prompts combine multiple techniques. Here is the formula:
 ```
-"Help me write a [specific task].
+'Help me write a [specific task].
 
 This is critical for [context about importance]. (Emphasis)
 
 Before you get started, ask me for any information you need to do a good job. (Reverse prompting)
 
-Here is an example of similar code from our codebase that shows our style: (Few-Shot prompting)
+Here is an example of similar code from our codebase that shows our style: (few-shot prompting)
 [paste example]
 
 Walk me through your thought process step by step as you design the solution. (Chain of thought)
 
-Act as a senior [role] with expertise in [domain]. (Role assignment)"
+Act as a senior [role] with expertise in [domain]. (Role assignment)'
 ```
 
 Real example:
 ```
-"Help me write a user authentication endpoint.
+'Help me write a user authentication endpoint.
 
 This is critical for production as we handle 10,000+ logins daily.
 
@@ -137,7 +135,7 @@ Here is an example of another endpoint from our codebase:
 
 Once you understand the requirements, walk me through your design approach step by step before writing the code.
 
-Act as a senior backend engineer with FastAPI and security expertise."
+Act as a senior backend engineer with FastAPI and security expertise.'
 ```
 
 What happens when you use the power prompt.
@@ -236,7 +234,7 @@ You should include:
 - known edge cases
 - security and accessibility standards
 
-It's nice to include:
+It is nice to include:
 
 - team conventions and style preferences
 - performance benchmarks
@@ -253,7 +251,3 @@ For government projects, you should also include:
 - user research findings that inform the feature
 
 Remember: 5 minutes spent providing context saves hours of revision. Code never comes without bugs, whether it is AI-generated or human-written, but good context dramatically improves the starting point.
-
----
-
-Next: [Different ways to use your AI assistant](./prompt-engineering-ai-roles.md)

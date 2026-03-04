@@ -7,7 +7,7 @@
 
 ## Purpose
 
-This guide provides detailed criteria for classifying teams following the maturity assessment. It helps assessors make consistent classification decisions and helps teams understand what their classification means.
+This guide provides detailed criteria for classifying teams following the [maturity assessment](maturity-assessment-framework.md). It helps assessors make consistent classification decisions and helps teams understand what their classification means.
 
 Use this guide to:
 
@@ -46,12 +46,12 @@ Starting teams have limited AI assistant experience, face significant constraint
 
 #### Team indicators
 
-| Indicator | What it looks like |
-|-----------|-------------------|
-| Limited AI experience | Less than 20% of team have used any AI coding tools |
-| Junior-heavy composition | More than 50% of team are junior engineers |
-| High turnover | Significant team changes in past 6 months |
-| Knowledge silos | One to 2 individuals hold key knowledge |
+| Indicator | What it looks like                                   |
+|-----------|------------------------------------------------------|
+| Limited AI experience | Less than 20% of team have used any AI coding tools  |
+| Junior-heavy composition | More than 50% of team are junior engineers           |
+| High turnover | Significant team changes in past 6 months            |
+| Knowledge silos | One to two individuals hold important knowledge      |
 | Limited learning culture | No time allocated for learning, no knowledge sharing |
 
 #### Delivery indicators
@@ -133,15 +133,15 @@ Developing teams have foundational capabilities or some AI experience. They need
 
 #### Attitude indicators
 
-| Indicator | What it looks like |
-|-----------|-------------------|
-| Cautiously positive | Open to trying, want to see results |
-| Some concerns | Questions about quality, security, workflow |
-| Mixed enthusiasm | Some keen, some neutral, few resistant |
-| Pragmatic mindset | 'Show me it works' attitude |
-| Potential champions | 1 or 2 people who could become champions |
+| Indicator | What it looks like                           |
+|-----------|----------------------------------------------|
+| Cautiously positive | Open to trying, want to see results          |
+| Some concerns | Questions about quality, security, workflow  |
+| Mixed enthusiasm | Some keen, some neutral, few resistant       |
+| Pragmatic mindset | 'Show me it works' attitude                  |
+| Potential champions | One or two people who could become champions |
 
-### Support approach for Developing teams
+### Support approach for developing teams
 
 | Element | Approach |
 |---------|----------|
@@ -177,7 +177,7 @@ Established teams are ready for self-sufficient AI Engineering Lab adoption. The
 | Mature CI/CD | Comprehensive automated testing, continuous deployment |
 | Well-maintained codebase | Low technical debt, regular refactoring |
 | Clear security posture | Security requirements clear and met |
-| Strong documentation | Up-to-date docs, architecture decision records |
+| Strong documentation | Up to date docs, architecture decision records |
 
 #### Team indicators
 
@@ -368,7 +368,7 @@ Despite legacy technical environment, team is stable, has capacity, and sees AI 
 
 ---
 
-### Scenario 2: High-pressure delivery team
+### Scenario 2: high-pressure delivery team
 
 Team building new citizen-facing service with go-live in 6 weeks.
 
@@ -389,7 +389,7 @@ Classification: starting (deferred).
 
 Despite strong indicators, team cannot allocate time for adoption. Recommend deferring intensive adoption until after go-live, with self-service resources available for interested individuals now.
 
-### Scenario 3: Security-constrained team
+### Scenario 3: security-constrained team
 
 Team working on law enforcement system with strict security requirements.
 
@@ -406,7 +406,7 @@ Average: 2.2 leading to developing classification.
 
 Developing classification but with security-focused onboarding. FDE engagement should focus on guardrails configuration and security-safe workflows. May need extended timeline for security approvals.
 
-### Scenario 4: Resistant team
+### Scenario 4: resistant team
 
 Team where engineers are sceptical about AI tools.
 
@@ -419,11 +419,11 @@ Team where engineers are sceptical about AI tools.
 | Attitudes | 1 | 40% resistant, 30% neutral, 30% positive |
 | Ways of working | 3 | Strong |
 
-Average: 2.3 leading to Developing classification.
+Average: 2.3 leading to developing classification.
 
-Despite good technical foundations, attitude score pulls down average. Developing classification with heavy change management focus. FDE should work with resistant individuals, demonstrating value, and building from the 30% who are positive.
+Despite good technical foundations, attitude score pulls down average. Developing classification with heavy change management emphasis. FDE should work with resistant individuals, demonstrating value, and building from the 30% who are positive.
 
-### Scenario 5: Champion-ready team
+### Scenario 5: champion-ready team
 
 Team with several AI enthusiasts already experimenting.
 
@@ -437,9 +437,9 @@ Team with several AI enthusiasts already experimenting.
 | Ways of working | 3 | Strong practices |
 
 
-Average: 3.0 leading to Established classification.
+Average: 3.0 leading to established classification.
 
-Clear Established classification. Focus on enabling existing enthusiasts as champions, capturing their patterns for AI Engineering Lab repository, and connecting them to community. Light-touch support only.
+Clear established classification. Focus on enabling existing enthusiasts as champions, capturing their patterns for AI Engineering Lab repository, and connecting them to community. Light-touch support only.
 
 ## Classification communication
 
@@ -470,11 +470,11 @@ Team: [Name]
 Classification: [Starting, Developing, or Established]
 Assessment date: [Date]
 
-What this means.
+What this means:
 
 [2 to 3 sentences explaining the classification and support model]
 
-Key strengths identified.
+Main strengths identified.
 
 1. [Strength 1]
 2. [Strength 2]
@@ -489,7 +489,7 @@ Your support plan.
 
 1. FDE model: [Embedded, Shared, or On-demand]
 2. Training: [Approach]
-3. Check-in frequency: [Frequency]
+3. Check in frequency: [Frequency]
 
 Next steps.
 
@@ -533,9 +533,6 @@ You should record:
 
 ---
 
-## Related documents
+## Further reading
 
-- [Maturity Assessment Framework](maturity-assessment-framework.md) - full assessment process
-- [Delivery Manager Assessment](assessment-questionnaires/delivery-manager-assessment.md) - delivery manager questionnaire
-- [Technical Lead Assessment](assessment-questionnaires/technical-lead-assessment.md) - tech lead questionnaire
-- [Individual Engineer Assessment](assessment-questionnaires/individual-engineer-assessment.md) - engineer questionnaire
+The [delivery manager assessment](assessment-questionnaires/delivery-manager-assessment.md), [technical lead assessment](assessment-questionnaires/technical-lead-assessment.md), and [individual engineer assessment](assessment-questionnaires/individual-engineer-assessment.md) questionnaires are the assessment instruments used alongside this guide to gather the evidence needed to make classification decisions.

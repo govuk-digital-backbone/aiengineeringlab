@@ -1,7 +1,5 @@
-[← Back to Index](./prompt-engineering-index.md)
-
-> **ALPHA**
-> This is a new service – your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
+> ALPHA
+> This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 
 # Prompt engineering for AI coding agents
 
@@ -26,19 +24,17 @@ Advanced AI tools should be used by:
 - team leads evaluating agent-based tools
 - anyone responsible for code quality and maintainability
 
-
 ### Chat vs agentic systems: how to prompt each
 
 Understanding the difference and how your prompting approach should change.
 
-#### Chat-based assistants
-
+Chat-based assistants:
 1. You paste code snippets.
 2. AI suggests changes.
 3. You apply changes manually.
 4. You have full control over every modification.
 
-#### Agentic systems
+Agentic systems:
 1. AI can read and write multiple files.
 2. The AI makes changes directly.
 3. It has greater automation.
@@ -80,10 +76,10 @@ Before accepting agentic code changes, complete these steps.
 
 Agents struggle in these areas:
 
-- context beyond code - business logic, domain knowledge, user intent
-- non-obvious dependencies - implicit contracts, external integrations
-- style consistency - your team's specific preferences
-- testing implications - what additional tests are now needed
+- context beyond code (business logic, domain knowledge, user intent)
+- non-obvious dependencies (implicit contracts, external integrations)
+- style consistency (your team's specific preferences)
+- testing implications (what additional tests are now needed)
 
 Common agent mistakes include:
 
@@ -97,7 +93,7 @@ Common agent mistakes include:
 
 1. Start with specific instructions, such as 'Add type hints to all functions in the auth/ directory using Python 3.11 syntax' instead of just 'Improve this codebase'.
 2. Review changes incrementally by asking the agent to make changes one file at a time, stopping after each file for your review before proceeding.
-3. Test between changes by instructing the agent to ensure all tests pass after each refactoring before moving to the next change.
+3. Test between changes by instructing the agent to ensure all tests pass after each refactoring. Do this before moving to the next change.
 4. Understand changes before accepting them by asking questions like 'Why did you change this specific code, what problem does this solve, and are there any risks or trade-offs with this approach' if you see something unclear.
 5. Preserve important context by providing constraints upfront, such as telling the agent 'Before refactoring, note that we have this important business rule, this performance requirement, and this integration constraint, so ensure your changes respect these'.
 
@@ -119,12 +115,4 @@ To prevent tech debt from AI-generated code, complete these steps after the agen
 5. Ensure documentation is updated.
 6. Check if new tests are needed.
 
-The rule: If you do not understand code well enough to maintain it, do not merge it.
-
----
-
-Previous: [Prompt engineering for code documentation](./prompt-engineering-documentation.md)
-
-Next: [Prompt engineering for AI coding agents](./prompt-engineering-agents.md)
-
-[Return to index](./prompt-engineering-index.md)
+If you do not understand code well enough to maintain it, do not merge it.

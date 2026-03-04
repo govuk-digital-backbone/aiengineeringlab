@@ -30,7 +30,7 @@ AI energy consumption is driven by:
 
 - token generation where every word the model produces costs compute
 - failed iterations where unclear prompts lead to back-and-forth cycles that multiply consumption
-- model size where larger premium models consume more resources than smaller ones.
+- model size where larger premium models consume more resources than smaller ones
 
 The good news is that the practices that reduce environmental impact also save time and improve output quality.
 
@@ -190,10 +190,7 @@ Model selection checklist.
 - [ ] Boilerplate or docs to fast or small
 - [ ] Quick questions to consider skipping AI
 
-## References
+## Further reading
 
-[Foundational Prompting Techniques](../playbooks/prompt-engineering/prompt-engineering-foundations.md), a detailed guide on writing effective prompts.
-
-[Model Selection Guidance](../manager-tool-guides/comparative-guidance.md), tool-specific recommendations.
-
-[Prompt Library](../prompt-library/), reusable prompts that work.
+For further information, refer to this [detailed guide on writing effective prompts](../playbooks/prompt-engineering/prompt-engineering-foundations.md) as well as this guide on 
+[tool-specific recommendations](../manager-tool-guides/comparative-guidance.md), and a selection of guides on [reusable prompts that work](../prompt-library/).

@@ -1,4 +1,4 @@
-> **ALPHA**
+> ALPHA
 > This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 
 # AI code assistant data residency
@@ -23,7 +23,7 @@ If you must make a defensible claim of UK only data residency, the strongest opt
 
 ### Residency overview
 
-GitHub Copilot inherits its data residency from GitHub Enterprise Cloud. GitHub supports EU data residency which became generally available in October 2024.
+GitHub Copilot inherits its data residency from [GitHub Enterprise Cloud](https://docs.github.com/en/enterprise-cloud@latest/admin/data-residency/about-github-enterprise-cloud-with-data-residency). GitHub supports EU data residency which [became generally available in October 2024](https://github.blog/changelog/2024-10-29-github-enterprise-cloud-data-residency-in-the-eu-is-generally-available/).
 
 The UK is not available as a selectable residency region.
 
@@ -37,17 +37,13 @@ GitHub Copilot is EU resident, not UK resident.
 
 ### References
 
-[GitHub Enterprise Cloud data residency](https://docs.github.com/en/enterprise-cloud@latest/admin/data-residency/about-github-enterprise-cloud-with-data-residency)
-
-[GitHub announcement on EU data residency](https://github.com/newsroom/press-releases/data-residency-in-the-eu)
-
-[GitHub changelog EU residency](https://github.blog/changelog/2024-10-29-github-enterprise-cloud-data-residency-in-the-eu-is-generally-available/)
+- [GitHub announcement on EU data residency](https://github.com/newsroom/press-releases/data-residency-in-the-eu)
 
 ## Amazon Kiro
 
 ### What it is
 
-Amazon Kiro is an agent based AI IDE and command line tool. It runs partly on the developer machine and partly against AWS hosted services.
+[Amazon Kiro](https://kiro.dev/) is an agent-based AI IDE and command line tool. It runs partly on the developer machine and partly against AWS hosted services.
 
 ### Residency overview
 
@@ -63,17 +59,14 @@ Amazon Kiro is UK capable in practice, but without any explicit UK residency gua
 
 ### References
 
-[Transform DevOps practice with Kiro](https://aws.amazon.com/blogs/publicsector/transform-devops-practice-with-kiro-ai-powered-agents/)
-
-[Kiro official site](https://kiro.dev/)
-
-[Kiro launch and positioning](https://www.geekwire.com/2025/amazons-surprise-indie-hit-kiro-launches-broadly-in-bid-to-reshape-ai-powered-software-development/)
+- [Transform DevOps practice with Kiro](https://aws.amazon.com/blogs/publicsector/transform-devops-practice-with-kiro-ai-powered-agents/)
+- [Kiro launch and positioning](https://www.geekwire.com/2025/amazons-surprise-indie-hit-kiro-launches-broadly-in-bid-to-reshape-ai-powered-software-development/)
 
 ## Amazon Q developer and business
 
 ### Residency overview
 
-Amazon Q services are available in multiple AWS regions including Europe London. Some Amazon Q variants support region local storage and processing.
+Amazon Q services are available in [multiple AWS regions including Europe London](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/regions.html). Some Amazon Q variants support region local storage and processing.
 
 ### Key caveat
 
@@ -92,13 +85,9 @@ Amazon Q UK residency is achievable, but configuration and governance are requir
 
 ### References
 
-[Supported regions](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/regions.html)
-
-[EU region launch](https://aws-news.com/article/01963573-891b-093c-5176-af1477748270)
-
-[Amazon Q Business Europe and data sovereignty](https://www.itpro.com/technology/artificial-intelligence/amazon-q-business-europe-data-sovereignty)
-
-[Amazon Q in QuickSight](https://community.amazonquicksight.com/t/amazon-q-in-quicksight-is-now-available-in-5-additional-regions/34268)
+- [EU region launch](https://aws-news.com/article/01963573-891b-093c-5176-af1477748270)
+- [Amazon Q Business Europe and data sovereignty](https://www.itpro.com/technology/artificial-intelligence/amazon-q-business-europe-data-sovereignty)
+- [Amazon Q in QuickSight](https://community.amazonquicksight.com/t/amazon-q-in-quicksight-is-now-available-in-5-additional-regions/34268)
 
 ## Gemini Code Assist enterprise on Google Cloud
 
@@ -106,7 +95,7 @@ Amazon Q UK residency is achievable, but configuration and governance are requir
 
 Gemini Code Assist inherits Gemini enterprise data residency controls.
 
-When used through Google Cloud enterprise editions, data storage and processing can be restricted to the UK region. This includes both prompt data and generated outputs.
+When used through Google Cloud enterprise editions, [data storage and processing can be restricted to the UK region](https://docs.cloud.google.com/gemini/enterprise/docs/locations). This includes both prompt data and generated outputs.
 
 ### Implications
 
@@ -120,11 +109,8 @@ Gemini Code is UK resident for storage and processing. High confidence option fo
 
 ### References
 
-[Gemini Enterprise locations & data residency](https://docs.cloud.google.com/gemini/enterprise/docs/locations)
-
-[Google Cloud blog – UK ML processing for Gemini](https://blog.google/company-news/inside-google/around-the-globe/google-europe/united-kingdom/data-residency-machine-learning-processing-uk/)
-
-[IT Pro – Google Cloud announces UK Gemini residency](https://www.itpro.com/cloud/cloud-computing/google-cloud-announces-new-data-residency-flexibility-for-uk-firms-accelerator-for-regional-startups)
+- [Google Cloud blog: UK ML processing for Gemini](https://blog.google/company-news/inside-google/around-the-globe/google-europe/united-kingdom/data-residency-machine-learning-processing-uk/)
+- [IT Pro: Google Cloud announces UK Gemini residency](https://www.itpro.com/cloud/cloud-computing/google-cloud-announces-new-data-residency-flexibility-for-uk-firms-accelerator-for-regional-startups)
 
 ## Claude Code
 
@@ -132,23 +118,17 @@ Gemini Code is UK resident for storage and processing. High confidence option fo
 
 Claude Code can be used directly via **Anthropic** or via hyperscalers.
 
-By default, when Claude Code is hosted and managed by Anthropic, customer data may be processed in multiple global locations. Customer data is stored in the United States by default.
+By default, when Claude Code is hosted and managed by Anthropic, customer data may be processed in multiple global locations. Customer data is [stored in the United States by default](https://privacy.claude.com/en/articles/7996890-where-are-your-servers-located-do-you-host-your-models-on-eu-servers).
 
 ### Implications
 
-Regional data residency options are limited at present. UK data residency is not currently available.
+[Regional data residency options](https://platform.claude.com/docs/en/build-with-claude/data-residency) are limited at present. UK data residency is not currently available.
 
 ### Verdict
 
-Not UK-resident today. EU regional support is planned but not yet in GA.
+Not UK-resident today. [EU regional support](https://claude.com/regional-compliance) is planned but not yet in GA.
 
 ### References
 
-[Anthropic server locations](https://privacy.claude.com/en/articles/7996890-where-are-your-servers-located-do-you-host-your-models-on-eu-servers)
-
-[Claude API data residency controls](https://platform.claude.com/docs/en/build-with-claude/data-residency)
-
-[Claude regional compliance and roadmap](https://claude.com/regional-compliance)
-
-[Anthropic as subprocessor](https://learn.microsoft.com/en-us/copilot/microsoft-365/connect-to-ai-subprocessor)
+- [Anthropic as subprocessor](https://learn.microsoft.com/en-us/copilot/microsoft-365/connect-to-ai-subprocessor)
 
