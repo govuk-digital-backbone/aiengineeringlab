@@ -14,3 +14,4 @@ This section provides guidance on tool selection and management.
 | [Amazon Q](amazon-q/) | A manager tool guide for Amazon Q |
 | [GitHub Copilot](github-copilot/) | A manager tool guide for GitHub Copilot |
 | [Google Gemini](gemini-code-assist/) | A manager tool guide for Google Gemini |
+| [Claude Code](claude-code/) | A manager tool guide for Claude Code |
