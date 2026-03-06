@@ -38,6 +38,7 @@ Use these resources to:
 
 | Course | Provider | Duration | Description |
 |--------|----------|----------|-------------|
+| [Anthropic academy courses](https://anthropic.skilljar.com) | [Anthropic](https://www.anthropic.com/) | Varies | Free, self-paced courses covering Claude 101, Claude Code, the Claude API, Model Context Protocol (MCP), agent skills and AI fluency. Create a free Skilljar account to access |
 | [Building with the Claude API](https://www.coursera.org/learn/building-with-the-claude-api) | [Coursera](https://www.coursera.org/) | 10 hours | This course teaches engineers how to build applications with Claude's API, covering fundamentals, prompt engineering, tool use, retrieval systems, and agentic workflows. Learners will build projects including chat interfaces, evaluation pipelines, tool-enabled systems, RAG implementations, and autonomous agents |
 | [Start writing prompts like a pro](https://www.coursera.org/learn/google-start-writing-prompts-like-a-pro) | [Coursera](https://www.coursera.org/) | 2 hours | This course teaches a 5-step prompting framework that can be used across tools and models. Learners will understand how to define prompts, recognise and apply the prompting framework (task, context, references, evaluate, iterate), and learn to evaluate outputs and improve prompts through iteration methods |
 | [Learn using Claude](https://learn.deeplearning.ai/courses/claude-code-a-highly-agentic-coding-assistant) | [DeepLearning](https://learn.deeplearning.ai) | 1 hour |Learn how to use Claude Code to explore, develop, test, refactor, and debug codebases. Extend its capabilities with MCP servers like Playwright and Figma |
@@ -159,8 +160,6 @@ AI Engineering Labs evolve rapidly. To stay current:
 - join communities, participate in AI Engineering Lab champion network
 - experiment, try new features as they release
 - share learnings, contribute back to programme
-
-This page is updated regularly. Last updated: 28 January 2026
 
 ---
 
