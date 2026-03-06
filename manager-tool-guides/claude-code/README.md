@@ -42,7 +42,7 @@ Before reading this guide, you should understand:
 
 ## What Claude Code does
 
-Claude Code is an AI powered software development assistant that helps developers design, write, test, and maintain code through natural language conversation. Unlike inline autocomplete tools, Claude Code understands full codebases and performs multi-step tasks autonomously.
+Claude Code is an AI-powered software development assistant that helps developers design, write, test, and maintain code through natural language conversation. Unlike inline autocomplete tools, Claude Code understands full codebases and performs multi-step tasks autonomously.
 
 Primary capabilities include:
 
@@ -215,10 +215,10 @@ For government projects, use a paid subscription tier only. Free and trial tiers
 Claude Code is available through:
 
 - direct subscription from Anthropic for individual or team plans
-- the DSIT AI Engineering Lab Programme Phase 1 licences
+- the DSIT AI Engineering Lab programme phase 1 licences
 - Crown Commercial Service (CCS) G-Cloud framework for enterprise agreements
 
-Check whether your department already holds a licence through the AI Engineering Lab Programme before procuring separately.
+Check whether your department already holds a licence through the AI Engineering Lab programme before procuring separately.
 
 ## Getting started
 
@@ -293,7 +293,7 @@ Test installation by running `claude` in a terminal from a project directory. Cl
 
 ## Training requirements
 
-### Engineer training (45 minutes)
+### Engineer training (approximately 45 minutes)
 
 Module 1: basic usage (15 minutes)
 
