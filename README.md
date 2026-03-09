@@ -20,6 +20,7 @@ This repository is a central home for all AI Engineering Lab content across gove
 | [Policy](policy/) | Strategic policy and compliance frameworks |
 | [Prompt library](prompt-library/) | Tested prompts organised by task and language |
 | [Quality metrics](quality-metrics/) | Quality strategy and measurement frameworks |
+| [Security](security/) | Security policies and threat modelling guidance |
 | [Sustainable AI](sustainable-ai/) | AI environmental sustainability |
 | [Training materials](training-materials/) | Onboarding, scenarios, and guided learning paths |
 

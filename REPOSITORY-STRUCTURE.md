@@ -47,6 +47,8 @@ This repository follows a structured approach designed to maintain clarity and s
 │   ├── amazon-q/
 │   │   ├── README.md
 │   │   └── security-and-support.md
+│   ├── claude-code/
+│   │   └── README.md
 │   ├── github-copilot/
 │   │   └── README.md
 │   └── gemini-code-assist/
@@ -83,6 +85,11 @@ This repository follows a structured approach designed to maintain clarity and s
 ├── quality-metrics/             # Measurement and reporting
 │   ├── measurement-playbook.md
 │   └── quality-strategy.md
+│
+├── security/                    # Security resources 
+│   ├── README.md
+│   ├── security-policies.md
+│   └── threat-modelling.md
 │
 ├── sustainable-ai/              # Environmental sustainability 
 │   ├── README.md

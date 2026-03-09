@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.5] - 2026-03-06
+
+### Added
+- Claude Code manager tool guide
+- do's and don'ts for using Copilot within UKSHA
+- latest model capabilities to Copilot manager tool guide
+- links to free training courses for Claude provided by Anthropic
+
+### Fixed
+- update Gemini manager tool guides to reference project credentials
+
 ## [0.0.4] - 2026-02-20
 
 ### Added

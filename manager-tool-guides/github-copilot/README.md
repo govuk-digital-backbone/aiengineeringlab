@@ -127,13 +127,20 @@ GitHub Copilot uses different models depending on the task. Understanding which 
 | GPT-5 mini | OpenAI | Balanced speed and capability | Included | No premium requests on paid plans |
 | GPT-5 | OpenAI | Complex code generation, debugging | 1x | Strong general-purpose model |
 | GPT-5.1 | OpenAI | Latest OpenAI capabilities | 1x | Enhanced reasoning |
-| GPT-5.2 | OpenAI | Most advanced OpenAI model | 1x | Best for complex tasks |
+| GPT-5.1-Codex-Max | OpenAI | Extended agentic coding tasks | 1x | Optimised for long-running agent workflows |
+| GPT-5.1-Codex-Mini (Preview) | OpenAI | Lightweight agentic coding | 0.33x | Cost effective agent option, preview |
+| GPT-5.2 | OpenAI | Advanced reasoning and code generation | 1x | Best for complex tasks |
+| GPT-5.2-Codex | OpenAI | Agentic coding with advanced reasoning | 1x | Codex variant of GPT-5.2 |
+| GPT-5.3-Codex | OpenAI | Latest agentic coding model | 1x | Most recent Codex model |
 | Claude Haiku 4.5 | Anthropic | Fast responses, simple tasks | 0.33x | Cost-effective option |
 | Claude Sonnet 4 | Anthropic | Balanced reasoning and speed | 1x | Good all-rounder |
 | Claude Sonnet 4.5 | Anthropic | Advanced coding tasks | 1x | Strong code understanding |
+| Claude Sonnet 4.6 | Anthropic | Latest balanced coding model | 1x | Updated Sonnet with improved capabilities |
 | Claude Opus 4.1 | Anthropic | Deep reasoning, complex refactoring | 10x | Best for architectural decisions |
-| Claude Opus 4.5 | Anthropic | Most advanced Claude model | 3x | Superior reasoning capabilities |
+| Claude Opus 4.5 | Anthropic | Superior reasoning capabilities | 3x | Advanced reasoning model |
+| Claude Opus 4.6 | Anthropic | Most advanced Claude model | 3x | Latest Opus with strongest reasoning |
 | Gemini 2.5 Pro | Google | Multimodal tasks, large context | 1x | Good for visual and code tasks |
+|  Gemini 3.1 Pro (Preview) | Google | Next generation multimodal capabilities | 1x | Preview, may have stability limitations |
 | Grok Code Fast 1 | xAI | Fast code generation | 0.25x | Currently complimentary |
 | Raptor mini | Fine-tuned GPT-5 mini | Optimised completions | Included | Preview - tuned for coding |
 
@@ -143,15 +150,18 @@ GitHub Copilot uses different models depending on the task. Understanding which 
 |---|---|---|
 | Autocomplete as you type | GPT-4.1 or Raptor mini (default) | Fast response, no premium cost |
 | Generate unit tests | GPT-5 or Claude Sonnet 4.5 | Better understanding of edge cases |
-| Debug complex issues | Claude Opus 4.5 or GPT-5.2 | Superior reasoning about code behaviour |
+| Debug complex issues | Claude Opus 4.6 or GPT-5.2 | Superior reasoning about code behaviour |
 | Write boilerplate code | GPT-5 mini or Claude Haiku 4.5 | Sufficient for repetitive patterns, cost-effective |
-| Refactor legacy code | Claude Opus 4.1 or GPT-5.1 | Needs deep understanding of code structure |
+| Refactor legacy code | Claude Opus 4.6 or GPT-5.1 | Needs deep understanding of code structure |
 | Implement algorithms | GPT-5.2 | Optimised for mathematical reasoning |
-| Generate documentation | GPT-5 or Claude Sonnet 4 | Strong natural language generation |
+| Generate documentation | GPT-5 or Claude Sonnet 4.6 | Strong natural language generation |
 | SQL query generation | GPT-5.1 | Better syntax accuracy and optimisation |
-| Security code review | Claude Sonnet 4.5 | Strong pattern recognition for vulnerabilities |
+| Security code review | Claude Sonnet 4.6 | Strong pattern recognition for vulnerabilities |
 | API client generation | GPT-5 mini | Template-based, does not need premium model |
-| Multimodal tasks (images and code) | Gemini 2.5 Pro | Best multimodal support |
+| Multimodal tasks (images and code) | Gemini 3.1 Pro or Gemini 2.5 Pro | Best multimodal support |
+| Agentic coding (multi step, autonomous) | GPT-5.3-Codex or GPT-5.2-Codex | Purpose built for long running agentic workflows |
+| Lightweight agentic tasks | GPT-5.1-Codex-Mini | Cost effective agent option at 0.33x |
+| Extended agentic sessions | GPT-5.1-Codex-Max | Optimised for sustained agent task execution |
 
 ### Controlling model selection
 
@@ -166,7 +176,7 @@ Included models (no premium requests on paid plans) are:
 Premium models (consume premium requests) are:
 
 - all Claude models (Haiku, Sonnet, Opus variants)
-- GPT-5, GPT-5.1, GPT-5.2
+- GPT-5, GPT-5.1, GPT-5.2, GPT-5.x-Codex
 - Gemini models
 - Grok Code Fast 1 (currently complimentary)
 
