@@ -169,7 +169,7 @@ Prices are listed in USD. If you pay in a currency other than USD, the prices li
 ### Installation process
 
 1. Receive credentials from the central GCP enterprise account.
-2. Authenticate with provided organisation credentials.
+2. Authenticate with provided project credentials.
 3. Verify that your Gemini Code Assist licence is assigned.
 4. Configure content exclusion policies via GCP console.
 5. Install the Cloud Code extension in your IDE.

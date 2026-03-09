@@ -44,49 +44,25 @@ AI coding assistants involve data flowing between user devices, cloud providers,
 Example tools: GitHub Copilot, Amazon Q Developer, Gemini Code Assist, Claude.ai
 
 Architecture diagram:
-┌────────────────────────────────────────────────────────────────┐
-│ Government Network │
-│ │
-│ ┌──────────────┐ ┌──────────────┐ │
-│ │ Developer │────────▶│ IDE │ │
-│ │ Workstation │ │ (+ Plugin) │ │
-│ └──────────────┘ └───────┬──────┘ │
-│ │ │
-│ │ HTTPS/TLS 1.3 │
-│ │ (Code context + prompt) │
-│ [Trust Boundary TB-01] │
-└────────────────────────────────────┼───────────────────────────┘
-│
-▼
-┌─────────────────────┐
-│ Vendor Cloud │
-│ (e.g., GitHub, │
-│ AWS, Google) │
-│ │
-│ ┌──────────────┐ │
-│ │ Load Balancer│ │
-│ └──────┬───────┘ │
-│ │ │
-│ ▼ │
-│ ┌──────────────┐ │
-│ │ AI Model API │ │
-│ │ (Inference) │ │
-│ └──────┬───────┘ │
-│ │ │
-│ ▼ │
-│ ┌──────────────┐ │
-│ │ User Data │ │ [Trust Boundary TB-02]
-│ │ Store │ │ (Training pipeline)
-│ └──────────────┘ │
-└─────────────────────┘
-│
-▼ (Optional training data collection)
-┌─────────────────────┐
-│ Training Data │
-│ Pipeline │
-│ (May include user │
-│ code snippets) │
-└─────────────────────┘
+```mermaid
+flowchart TD
+    subgraph gov["Government Network"]
+        subgraph ws["Developer Workstation"]
+            ide["IDE (+ Plugin)"]
+        end
+    end
+
+    ide -->|"HTTPS/TLS 1.3<br>[TB-01]"| lb
+
+    subgraph vendor["Vendor Cloud"]
+        lb[Load Balancer]
+        api["AI Model API (Inference)"]
+        store[User Data Store]
+        lb --> api --> store
+    end
+
+    store -.->|"[TB-02] Optional"| training["Training Data Pipeline"]
+```
 
 
 Data flows:
@@ -130,48 +106,24 @@ Key security considerations include:
 Example tools: Cursor, Windsurf, GitHub Copilot (IDE extension), Amazon Kiro, Claude Code
 
 Architecture diagram:
-┌────────────────────────────────────────────────────────────────┐
-│ Developer Workstation │
-│ │
-│ ┌──────────────┐ ┌──────────────┐ │
-│ │ User │────────▶│ IDE │ │
-│ │ │ │ (Cursor/ │ │
-│ │ │ │ Windsurf/ │ │
-│ │ │ │ Kiro CLI) │ │
-│ └──────────────┘ └───────┬──────┘ │
-│ │ │
-│ │ Local processing │
-│ ▼ │
-│ ┌───────────────┐ │
-│ │ Local Cache/ │ │
-│ │ Index Engine │ │
-│ │ (Codebase │ │
-│ │ embeddings) │ │
-│ └───────┬───────┘ │
-│ │ │
-│ │ Context filtering │
-│ ▼ │
-│ ┌───────────────┐ │
-│ │ Context │ │
-│ │ Selection │ │
-│ │ (Privacy │ │
-│ │ filtering) │ │
-│ └───────┬───────┘ │
-│ │ │
-│ │ HTTPS (filtered context) │
-│ │ [Trust Boundary TB-01] │
-└────────────────────────────────────┼───────────────────────────┘
-│
-▼
-┌─────────────────────┐
-│ AI Provider │
-│ (Anthropic, │
-│ OpenAI, etc.) │
-│ │
-│ ┌──────────────┐ │
-│ │ AI Model │ │
-│ └──────────────┘ │
-└─────────────────────┘
+```mermaid
+flowchart TD
+    subgraph ws["Developer Workstation"]
+        ide["IDE (Cursor / Windsurf / Kiro CLI)"]
+        cache["Local Cache / Index Engine"]
+        ctx["Context Selection<br>(Privacy filtering)"]
+        ide -->|Local processing| cache
+        cache -->|Context filtering| ctx
+    end
+
+    ctx -->|"HTTPS filtered context<br>[TB-01]"| model
+
+    subgraph provider["AI Provider"]
+        model[AI Model]
+    end
+
+    model -->|Suggestions| ide
+```
 
 
 Data flows:
@@ -217,62 +169,31 @@ Key security considerations include:
 Example tools: Devin, Amazon Kiro (frontier agent mode), Claude Code (agentic with extended permissions)
 
 Architecture diagram:
-┌────────────────────────────────────────────────────────────────┐
-│ Government Network │
-│ │
-│ ┌──────────────┐ ┌──────────────┐ │
-│ │ Operator │────────▶│ Agent │ │
-│ │ (Human) │ Monitor │ Control │ │
-│ │ │◀────────│ Console │ │
-│ │ │ Control │ (UI/CLI) │ │
-│ └──────────────┘ └───────┬──────┘ │
-│ │ │
-│ │ API / CLI │
-│ │ (Task definition, │
-│ │ checkpoints, │
-│ │ kill switch) │
-│ [Trust Boundary TB-01] │
-└────────────────────────────────────┼───────────────────────────┘
-│
-▼
-┌────────────────────────────────────────────────┐
-│ Sandbox Environment │
-│ (Isolated Cloud Account/VPC) │
-│ Network Isolated from Production │
-│ │
-│ ┌─────────────┐ ┌─────────────┐ │
-│ │ Agent │◀──────▶│ AI Model │ │
-│ │ Runtime │ API │ Service │ │
-│ │ Engine │ │ (Claude, │ │
-│ │ │ │ GPT-4) │ │
-│ └──────┬──────┘ └─────────────┘ │
-│ │ │
-│ │ [Trust Boundary TB-05: Agent Actions]│
-│ ▼ │
-│ ┌──────────────┐ ┌──────────────┐ │
-│ │ Dev Repo │ │ Test Env │ │
-│ │ (Clone) │ │ (Isolated) │ │
-│ │ │ │ │ │
-│ └──────────────┘ └──────────────┘ │
-│ │ │ │
-│ ▼ ▼ │
-│ ┌──────────────┐ ┌──────────────┐ │
-│ │ Audit Log │ │ Metrics & │ │
-│ │ (Immutable) │ │ Monitoring │ │
-│ └──────────────┘ └──────────────┘ │
-│ │
-│ [Trust Boundary TB-04] │
-└─────────────────────┬───────────────────────────┘
-│ Output
-▼
-┌────────────────┐
-│ Pull Request │
-│ to Production │
-│ Repository │
-│ │
-│ (Dual Approval │
-│ Required) │
-└────────────────┘
+```mermaid
+flowchart TD
+    subgraph gov["Government Network"]
+        operator["Operator (Human)"]
+        console["Agent Control Console"]
+        operator -->|Task definition| console
+        console -->|"Monitor / Control"| operator
+    end
+
+    console -->|"API / CLI [TB-01]"| engine
+
+    subgraph sandbox["Sandbox Environment"]
+        engine[Agent Runtime Engine]
+        aimodel[AI Model Service]
+        engine <-->|API| aimodel
+
+        engine -->|"[TB-05]"| repo["Dev Repo (Clone)"]
+        engine -->|"[TB-05]"| testenv["Test Env (Isolated)"]
+
+        repo --> audit["Audit Log (Immutable)"]
+        testenv --> metrics["Metrics & Monitoring"]
+    end
+
+    engine -->|"Output [TB-04]"| pr["Pull Request<br>(Dual Approval Required)"]
+```
 
 
 Data flows:
@@ -326,59 +247,34 @@ Example tools: Ollama, LocalAI, LM Studio, private model hosting on isolated net
 
 Architecture diagram:
 
-┌────────────────────────────────────────────────────────────────┐
-│ Air-Gapped Development Environment │
-│ (Physically Isolated Network) │
-│ │
-│ ┌──────────────┐ ┌──────────────┐ │
-│ │ Developer │────────▶│ IDE │ │
-│ │ Workstation │ │ (+ Plugin) │ │
-│ └──────────────┘ └───────┬──────┘ │
-│ │ Localhost / LAN │
-│ │ (No internet) │
-│ ▼ │
-│ ┌─────────────────────┐ │
-│ │ Inference Server │ │
-│ │ (Ollama/LocalAI) │ │
-│ │ Port 11434 / 8080 │ │
-│ └──────────┬──────────┘ │
-│ │ │
-│ ▼ │
-│ ┌─────────────────────┐ │
-│ │ Local LLM Model │ │
-│ │ Files (.gguf, │ │
-│ │ .safetensors) │ │
-│ │ │ │
-│ │ Examples: │ │
-│ │ - Llama 3.1 │ │
-│ │ - Mistral │ │
-│ │ - CodeLlama │ │
-│ └─────────────────────┘ │
-│ │
-│ [NO EXTERNAL TRUST BOUNDARIES - All contained locally] │
-│ │
-│ ┌──────────────────────────────────────────────────────────┐ │
-│ │ Model Transfer Process (One Way) │ │
-│ │ │ │
-│ │ External Approved Security Hash │ │
-│ │ Network ───▶ Removable ───▶ Review ───▶ Verify ─▶│ │
-│ │ (Download) Media Station ation │ │
-│ │ (USB/DVD) │ │
-│ │ │ │ │
-│ │ ▼ │ │
-│ │ Load to Air Gap │ │
-│ │ Network │ │
-│ └──────────────────────────────────────────────────────────┘ │
-│ │
-│ ┌──────────────────────────────────────────────────────────┐ │
-│ │ Local Logging Only │ │
-│ │ ┌─────────────┐ ┌─────────────┐ │ │
-│ │ │ Application │────────▶ │ Syslog │ │ │
-│ │ │ Logs │ │ Server │ │ │
-│ │ └─────────────┘ │ (Local) │ │ │
-│ │ └─────────────┘ │ │
-│ └──────────────────────────────────────────────────────────┘ │
-└────────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TD
+    subgraph transfer["Model Transfer (One-Way)"]
+        download["External Network"] --> media["Removable Media"]
+        media --> review["Security Review"]
+        review --> verify["Hash Verify (SHA-256)"]
+    end
+
+    verify -->|"Physical transfer"| model
+
+    subgraph airgap["Air-Gapped Environment"]
+        model["Local LLM Model Files"]
+        model --> inference
+        inference["Inference Server (Ollama/LocalAI)"]
+
+        subgraph ws["Developer Workstation"]
+            ide["IDE (+ Plugin)"]
+        end
+
+        ide -->|"Localhost / LAN"| inference
+        inference -->|"Code suggestions"| ide
+
+        inference --> applogs
+        subgraph logging["Local Logging"]
+            applogs[Application Logs] --> syslog[Syslog Server]
+        end
+    end
+```
 
 
 #### Data flows:
