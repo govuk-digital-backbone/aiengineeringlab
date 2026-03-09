@@ -5,6 +5,8 @@
 
 This repository is a central home for all AI Engineering Lab content across government departments. It provides reusable guidance, templates, training materials, and practices for safely and effectively adopting AI code assistants.
 
+To find out more and get involved, visit the [AI Engineering Lab site](https://govuk-digital-backbone.github.io/aiengineeringlab_signpost/).
+
 ## Quick navigation
 
 | Section | Description |
