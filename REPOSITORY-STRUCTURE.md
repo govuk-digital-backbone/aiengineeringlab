@@ -60,6 +60,7 @@ This repository follows a structured approach designed to maintain clarity and s
 │   ├── ai-code-assistant-instructions.md
 │   ├── ai-sdlc-playbook.md
 │   ├── context-engineering.md
+│   ├── legacy-system-modernisation.md
 │   ├── model-selection.md
 │   └── prompt-engineering
 │       ├── prompt-engineering-agents.md
@@ -80,7 +81,10 @@ This repository follows a structured approach designed to maintain clarity and s
 │   ├── prompt-library-overview.md
 │   ├── prompt-template.md
 │   └── by-task-type/
-│       └── README.md
+│       ├── README.md
+│       ├── legacy-maintenance.md
+│       ├── modernisation.md
+│       └── refactoring.md
 │
 ├── quality-metrics/             # Measurement and reporting
 │   ├── measurement-playbook.md

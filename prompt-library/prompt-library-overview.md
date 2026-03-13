@@ -50,14 +50,10 @@ prompt-library/
 │   └── python.md
 │
 ├── by-task-type/                     # Task specific prompts
-│   ├── code-generation.md
-│   ├── testing.md
-│   ├── refactoring.md
-│   ├── documentation.md
-│   ├── debugging.md
-│   ├── security-review.md
-│   ├── accessibility.md
-│   └── gov-uk-patterns.md
+│   ├── README.md
+│   ├── legacy-maintenance.md
+│   ├── modernisation.md
+│   └── refactoring.md
 │
 └── workflow/                    # Development workflow prompts
     ├── code-review.md

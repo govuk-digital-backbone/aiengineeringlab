@@ -2,11 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.6] - 2026-03-13
+
+### Added
+- guidance on using AI to help with infrastructure as code (IaC) transformations
+- guidance on managing context window limitations when using AI for code generation
+- best practices for legacy code modernisation with AI
+
 ## [0.0.5] - 2026-03-06
 
 ### Added
 - Claude Code manager tool guide
-- do's and don'ts for using Copilot within UKSHA
 - latest model capabilities to Copilot manager tool guide
 - links to free training courses for Claude provided by Anthropic
 
