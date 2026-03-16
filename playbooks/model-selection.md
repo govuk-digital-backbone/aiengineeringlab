@@ -235,6 +235,36 @@ You should switch models when you:
 - need deeper analysis from Claude Opus 4.6, GPT-5.3-Codex, or other deep reasoning models
 - require sustained multi-step work from GPT-5.3-Codex or Claude Opus 4.6
 
+## Working with constrained model access
+
+Not all teams can access the latest models. Government departments may be limited by procurement timelines, cost controls, data residency rules, or availability of on-premises deployments. In these situations, you may need to work with models that have significantly smaller context windows or fewer capabilities than current flagship models.
+
+### Capability versus context size trade-offs
+
+When choosing between a more capable model with a smaller context window and a less capable model with a larger one, the right choice depends on the task.
+
+| Scenario | Recommendation |
+|----------|----------------|
+| Complex reasoning on a single small file | Use the more capable model — capability matters more than context size here |
+| Refactoring across many files at once | Use the larger-context model — you need to share multiple files simultaneously |
+| Long agentic workflow spanning many steps | Use the larger-context model — conversation history accumulates quickly |
+| Generating a single well-defined function | Use the more capable model — the task fits in any context window |
+| Analysing a large log file or test output | Use the larger-context model — the input itself may exceed a smaller window |
+| Simple, repetitive code generation | Use the smaller, faster model — capability needs are low, context needs are small |
+
+There is no universal answer. Match the model to the task, and apply context optimisation techniques when the task exceeds a model's natural capacity.
+
+### Fallback strategies when access to large-context models is restricted
+
+If your team's access to large-context models changes — for example, due to a procurement decision, cost controls, or a data residency requirement — follow these steps to adapt your workflow.
+
+1. Identify which tasks in your current workflow relied on large context windows, such as whole-codebase refactors or long agentic sessions.
+2. Apply chunking and summarisation techniques to break those tasks into smaller, context-appropriate units of work.
+3. Use structured handoff notes between sessions to preserve progress without consuming context.
+4. Update your team's AI usage standards to reflect the new constraints.
+
+For detailed techniques, see [Working with constrained context windows](working-with-constrained-context-windows.md).
+
 ### Context and efficiency
 
 For context and efficiency, consider:
@@ -243,6 +273,20 @@ For context and efficiency, consider:
 - response time, balancing quality needs with speed requirements
 - matching verbosity preference, some models are more verbose than others
 - context window size: Gemini 3 Pro (1M), Claude Opus 4.6 (1M with beta), GPT-5.2 (400K)
+
+Context window size is particularly important when your tasks involve multiple files, long conversations, or agentic workflows. A model with a larger context window can consider more of your codebase at once, but may be less capable or more expensive than a smaller-window alternative.
+
+For teams with access restrictions — for example, those using older procured models, on-premises deployments, or models available under data residency constraints — context windows may be as small as 4,096 to 32,768 tokens. In these situations, see [Working with constrained context windows](working-with-constrained-context-windows.md) for techniques to adapt your workflow.
+
+#### Context window size by task type
+
+| Task type | Minimum recommended context window | Reason |
+|-----------|-------------------------------------|--------|
+| Inline code completion | 8,000 tokens | Needs current file and immediate neighbours |
+| Chat-based coding assistance | 32,000 tokens | Needs file under edit and related interfaces |
+| Multi-file refactoring | 128,000 tokens | Needs several files simultaneously |
+| Agentic workflows spanning many steps | 200,000 tokens or more | Accumulated conversation history grows rapidly |
+| Whole-codebase analysis or migration | 200,000 tokens or more | Needs broad codebase visibility |
 
 ## Premium credit management
 
@@ -317,6 +361,7 @@ Model selection is highly personal and task dependent. What works best for one d
 - [Amazon Q Developer guide](../manager-tool-guides/amazon-q/)
 - [tool comparative guidance](../manager-tool-guides/comparative-guidance.md) to select appropriate tools
 - [prompt library](../prompt-library/) for ready to use examples
+- [Working with constrained context windows](working-with-constrained-context-windows.md) for guidance on adapting workflows when access to large-context models is restricted
 
 ### Model documentation
 

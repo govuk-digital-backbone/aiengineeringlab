@@ -396,16 +396,18 @@ Be thorough and assume hostile users.
 
 ### Understanding context limits
 
-Each AI tool has a context window limit. This is the maximum amount of text it can consider.
+Each AI tool has a context window limit. This is the maximum amount of text it can consider at one time, including your prompts, the code you share, conversation history, and system instructions.
 
-| Tool | Approximate context window |
-|------|---------------------------|
-| GitHub Copilot | Varies by model |
-| Claude Code | 200,000 tokens |
-| Amazon Q | Varies by feature |
-| Gemini Code Assist | 1,000,000 tokens (Gemini 1.5) |
+| Tool | Approximate context window | Notes |
+|------|---------------------------|-------|
+| GitHub Copilot | Varies by model | Depends on the underlying model selected |
+| Claude Code | 200,000 tokens (Claude 4.5); 1,000,000 tokens (Claude Opus 4.6) | Older Claude models had smaller windows |
+| Amazon Q Developer | Varies by feature | Inline completion uses a smaller local window |
+| Gemini Code Assist | 1,000,000 tokens (Gemini 1.5 and later) | Gemini 1.0 Pro had a 32,768-token window |
 
-Rule of thumb: 1 token is approximately 4 characters in English, or roughly 3/4 of a word.
+As a rule of thumb, 1 token is roughly 4 characters, or three-quarters of a word in English.
+
+Teams using older models or models deployed on-premises may have significantly smaller context windows — sometimes under 32,000 tokens. See [Working with constrained context windows](working-with-constrained-context-windows.md) for detailed guidance on adapting your workflow in these situations.
 
 ### Strategies for large codebases
 
@@ -707,15 +709,22 @@ Current function:
 | Hallucinated methods | Unfamiliar library | Provide interface or type definitions |
 | Inconsistent style | No style guidance | Add coding standards to context |
 | Security issues | No security context | Use security-focused prompting |
+| Model forgets earlier instructions | Context overflow on small-window model | Start a new session, use summaries |
+| Suggestions drift from project patterns | Silent context truncation | Re-provide key constraints in a new session |
+
+For detailed guidance on working with models that have limited context windows, see [Working with constrained context windows](working-with-constrained-context-windows.md).
 
 ## Further reading
 
 ### Internal resources
 
-- [AI-SDLC playbook](ai-sdlc-playbook.md) cover integrating AI into development lifecycle
-- [Model selection playbook](model-selection.md) describes choosing the right model for tasks
-- [Prompt library](../prompt-library/) covers reusable prompt patterns
-- [Guardrails base](../governance/guardrails-base.md) lays out security boundaries
+Use the: 
+
+- [AI-SDLC playbook](ai-sdlc-playbook.md) for integrating AI into development lifecycles
+- [Model selection playbook](model-selection.md) for choosing the right model for tasks
+- [Working with constrained context windows](working-with-constrained-context-windows.md) to adapt workflows for models with smaller context windows
+- [Prompt library](../prompt-library/) for reusable prompt patterns
+- [Guardrails base](../governance/guardrails-base.md) for security boundaries
 
 ### External resources
 
