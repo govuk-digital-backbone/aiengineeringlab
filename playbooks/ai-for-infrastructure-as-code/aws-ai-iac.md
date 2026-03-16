@@ -7,7 +7,7 @@
 
 Amazon Web Services (AWS) is a significant part of the UK public sector cloud estate. UK government departments operate substantial AWS environments, often running production workloads for citizen-facing services. AI coding assistants are well-suited to accelerating delivery across all of these formats.
 
-This page covers how AI tools can support the primary AWS IaC formats, including Terraform, AWS CloudFormation and the AWS Cloud Development Kit (CDK).
+This page covers how AI tools can support the primary AWS infrastructure as code IaC formats, including Terraform, AWS CloudFormation and the AWS Cloud Development Kit (CDK).
 
 ## AWS IaC tooling: an overview
 

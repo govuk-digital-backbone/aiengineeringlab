@@ -9,14 +9,6 @@ Practical guidance for engineers working with AI models that have limited contex
 
 Not all teams can access the latest large-context models. Government departments may be constrained by procurement timelines, cost controls, data residency requirements, or the availability of on-premises model deployments. In these situations, engineers may work with models that have smaller context windows under 32,000 tokens. These are significantly smaller than the windows on current flagship models, which range from 200,000 to 1 million tokens.
 
-This guide applies to engineers, technical leads and delivery teams in UK government organisations who are using AI coding assistants and (any of these can apply):
-
-- working with models procured through older or fixed contracts
-- using self-hosted or on-premises model deployments
-- operating under data residency rules that restrict access to current cloud-hosted models 
-- managing tight cost budgets that make smaller models more appropriate for routine tasks 
-- working in air-gapped or restricted environments
-
 ## Who this applies to
 
 This guide applies to engineers, technical leads and delivery teams in UK government organisations who are using AI coding assistants under any of the following conditions:
@@ -359,7 +351,7 @@ If your team loses access to a large-context model and needs to fall back to a s
 
 ### Step 1: audit what relied on large context
 
-Identify which tasks in your workflow depended on large context:
+Identify which tasks in your workflow depended on large context, such as:
 
 - whole-codebase refactors where many files were shared simultaneously
 - long agentic sessions where the model retained state across many steps

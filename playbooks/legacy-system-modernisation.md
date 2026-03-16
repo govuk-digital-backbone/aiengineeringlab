@@ -49,7 +49,7 @@ This guidance is for:
 Before using AI assistants on a legacy codebase, you should:
 
 - identify a subject matter expert (SME) — someone who knows the business domain and how the system is used in practice
-- remember that AI cannot replace this knowledge. Without an SME, you cannot tell which behaviours are intentional, which are bugs, and which business rules are hidden in the code
+- remember that AI cannot replace this knowledge, so without an SME, you cannot tell which behaviours are intentional, which are bugs, and which business rules are hidden in the code
 - understand your data classification and what you can share with AI tools — never paste code containing credentials, personally identifiable information (PII), or sensitive configuration (see [PS-02: data classification compliance](../security/security-policies.md#ps-02-data-classification-compliance))
 - review the [guardrails base](../governance/guardrails-base.md) for your organisation
 - read the [non-deterministic code assurance guidance](../governance/non-deterministic-code-assurance.md), which is particularly relevant when AI is generating changes to existing production behaviour
@@ -67,9 +67,9 @@ Legacy system analysis is top-down, not bottom-up. Do not start by picking a cla
 
 Analysis works at three levels.
 
-1. Understand the full landscape at system level before touching any code.
-2. Work component by component at module or service level, using the system map.
-3. Analyse specific classes and functions at class or function level once a module is scoped for change.
+1. You should understand the full landscape at system level before touching any code.
+2. You should work component by component at module or service level, using the system map.
+3. You should analyse specific classes and functions at class or function level once a module is scoped for change.
 
 At system level, feed the AI architecture documents, dependency manifests, and directory structures to produce an overview before examining individual modules or files.
 
@@ -162,7 +162,7 @@ For how to prompt an AI to generate characterisation tests, including what to as
 
 ### Coding from user stories
 
-Take each user story from Phase 2 in priority order, simplest first. Provide the user story, the relevant section of your architectural map, and any existing code in that component as context. Ask the AI to generate the implementation and corresponding tests together. Do not move to the next story until the current one passes its tests and has been reviewed by a human.
+Take each user story from Phase 2 in priority order, with the simplest first. Provide the user story, the relevant section of your architectural map, and any existing code in that component as context. Ask the AI to generate the implementation and corresponding tests together. Do not move to the next story until the current one passes its tests and has been reviewed by a human.
 
 If the first output is not right, you should:
 

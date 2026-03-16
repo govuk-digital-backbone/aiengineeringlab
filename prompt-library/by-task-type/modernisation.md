@@ -99,7 +99,7 @@ Flag any increment that cannot meet this requirement and explain why.
 
 ## Compliance at each step
 
-Government standards apply to every deployed state of a service, not just the final modernised version. Each increment must meet Web Content Accessibility Guidelines (WCAG), National Cyber Security Centre (NCSC) security requirements, and the Technology Code of Practice (TCoP).
+Government standards apply to every deployed state of a service, not just the final modernised version. Each increment must meet [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/TR/WCAG22/), [National Cyber Security Centre (NCSC)](https://www.ncsc.gov.uk/) security requirements, and the [Technology Code of Practice (TCoP)](https://www.gov.uk/guidance/the-technology-code-of-practice).
 
 When prompting for migration strategies or decomposed scope, ask the AI to flag compliance implications at each step. Do not just check the end state. This prevents a situation where a partially modernised service is live but not compliant with government standards.
 
