@@ -34,6 +34,7 @@ This guide is organised into the following sections.
 
 3. Managing adoption
 
+- [managing agent mode and premium credit spend](#managing-agent-mode-and-premium-credit-spend) - controlling model access and preventing unexpected costs
 - [measuring success](#measuring-success) - quality metrics and troubleshooting
 - [policy configuration reference](#policy-configuration-reference) - content exclusions and IDE settings
 
@@ -80,6 +81,8 @@ GitHub Copilot offers several ways to interact with AI assistance, each suited f
 - workspace for planning new features, breaking down epics, and designing implementations
 - agent mode for investigating bugs across codebase, migrating frameworks, and comprehensive refactoring
 
+Agent mode can be extended with custom agents, hooks, and skills to enforce policies and automate repeatable workflows. Read the [GitHub Copilot customisation guide](../../user-tool-guides/github-copilot/customisation-guide.md) for more detail on these features.
+
 ### Best suited for
 
 GitHub Copilot is best suited for:
@@ -121,11 +124,12 @@ GitHub Copilot uses different models depending on the task. Understanding which 
 
 ### Model comparison
 
+The table below combines task suitability information from the [GitHub Copilot model comparison](https://docs.github.com/en/copilot/reference/ai-models/model-comparison) and cost multipliers from [supported AI models in GitHub Copilot](https://docs.github.com/en/copilot/reference/ai-models/supported-models). Check both pages for the latest information, as the model catalogue changes regularly.
+
 | Model | Provider | Best for | Cost | Notes |
 |---|---|---|---|---|
 | GPT-4.1 | OpenAI | General coding, fast completions | Included | No premium requests on paid plans |
 | GPT-5 mini | OpenAI | Balanced speed and capability | Included | No premium requests on paid plans |
-| GPT-5 | OpenAI | Complex code generation, debugging | 1x | Strong general-purpose model |
 | GPT-5.1 | OpenAI | Latest OpenAI capabilities | 1x | Enhanced reasoning |
 | GPT-5.1-Codex-Max | OpenAI | Extended agentic coding tasks | 1x | Optimised for long-running agent workflows |
 | GPT-5.1-Codex-Mini (Preview) | OpenAI | Lightweight agentic coding | 0.33x | Cost effective agent option, preview |
@@ -136,7 +140,6 @@ GitHub Copilot uses different models depending on the task. Understanding which 
 | Claude Sonnet 4 | Anthropic | Balanced reasoning and speed | 1x | Good all-rounder |
 | Claude Sonnet 4.5 | Anthropic | Advanced coding tasks | 1x | Strong code understanding |
 | Claude Sonnet 4.6 | Anthropic | Latest balanced coding model | 1x | Updated Sonnet with improved capabilities |
-| Claude Opus 4.1 | Anthropic | Deep reasoning, complex refactoring | 10x | Best for architectural decisions |
 | Claude Opus 4.5 | Anthropic | Superior reasoning capabilities | 3x | Advanced reasoning model |
 | Claude Opus 4.6 | Anthropic | Most advanced Claude model | 3x | Latest Opus with strongest reasoning |
 | Gemini 2.5 Pro | Google | Multimodal tasks, large context | 1x | Good for visual and code tasks |
@@ -146,15 +149,17 @@ GitHub Copilot uses different models depending on the task. Understanding which 
 
 ### Recommended models by task
 
+The recommendations below come from the [GitHub Copilot model comparison](https://docs.github.com/en/copilot/reference/ai-models/model-comparison). GitHub adds new models frequently, so check that page to confirm the most suitable option for your task.
+
 | Task | Recommended model | Why |
 |---|---|---|
 | Autocomplete as you type | GPT-4.1 or Raptor mini (default) | Fast response, no premium cost |
-| Generate unit tests | GPT-5 or Claude Sonnet 4.5 | Better understanding of edge cases |
+| Generate unit tests | GPT-5.2 or Claude Sonnet 4.5 | Better understanding of edge cases |
 | Debug complex issues | Claude Opus 4.6 or GPT-5.2 | Superior reasoning about code behaviour |
 | Write boilerplate code | GPT-5 mini or Claude Haiku 4.5 | Sufficient for repetitive patterns, cost-effective |
 | Refactor legacy code | Claude Opus 4.6 or GPT-5.1 | Needs deep understanding of code structure |
 | Implement algorithms | GPT-5.2 | Optimised for mathematical reasoning |
-| Generate documentation | GPT-5 or Claude Sonnet 4.6 | Strong natural language generation |
+| Generate documentation | GPT-5.2 or Claude Sonnet 4.6 | Strong natural language generation |
 | SQL query generation | GPT-5.1 | Better syntax accuracy and optimisation |
 | Security code review | Claude Sonnet 4.6 | Strong pattern recognition for vulnerabilities |
 | API client generation | GPT-5 mini | Template-based, does not need premium model |
@@ -165,7 +170,7 @@ GitHub Copilot uses different models depending on the task. Understanding which 
 
 ### Controlling model selection
 
-In Copilot Chat, you can select models from the model picker dropdown. When using Auto mode, Copilot automatically selects the best model based on your task and current availability.
+In Copilot Chat, engineers select models from the model picker dropdown. When using Auto mode, Copilot automatically selects the best model based on availability and stays within 0× to 1× multiplier models. This means it won't route to high-cost models such as Claude Opus. Read more about [Copilot auto model selection](https://docs.github.com/en/copilot/concepts/auto-model-selection). 
 
 Included models (no premium requests on paid plans) are:
 
@@ -180,7 +185,7 @@ Premium models (consume premium requests) are:
 - Gemini models
 - Grok Code Fast 1 (currently complimentary)
 
-Model availability depends on your license tier. Business and Enterprise tiers have access to all models. Premium model usage counts towards your organisation's monthly allowance.
+Model availability depends on your licence tier. Business and Enterprise tiers have access to all models. Premium model usage counts towards your organisation's monthly allowance.
 
 For detailed guidance on managing premium request budgets, preventing unexpected costs, and understanding what happens when teams exceed their allowance, see [Premium credit management](../../user-tool-guides/github-copilot/premium-credit-management.md).
 
@@ -259,7 +264,7 @@ The [GitHub Copilot getting started guide](https://docs.github.com/en/copilot/ge
 
 1. Enable Copilot in your GitHub organisation settings.
 2. Configure content exclusion policies.
-3. Assign licenses to pilot users.
+3. Assign licences to pilot users.
 4. Enable usage metrics collection.
 
 #### Step 2: engineer installation
@@ -274,7 +279,7 @@ code --install-extension GitHub.copilot-chat
 
 For JetBrains IDEs:
 
-- Settings → Plugins → Search 'GitHub Copilot' → Install
+- Settings, then Plugins, then search 'GitHub Copilot', then Install
 
 #### Step 3: authentication
 
@@ -328,6 +333,51 @@ This briefing covers:
 
 This briefing should be delivered as a presentation with a question and answer session.
 
+## Managing agent mode and premium credit spend
+
+Agent mode is one of the most productive features in GitHub Copilot, but it is also the most likely to exhaust an engineer's monthly premium request allowance when used with premium models. This section gives administrators the controls they need to prevent unexpected costs across their teams.
+
+Before diving into the admin controls, it helps to understand how engineers actually use agent mode day to day and what tasks they are likely to run in it. The [GitHub Copilot advanced use guide](../../user-tool-guides/github-copilot/advanced-use.md) covers refactoring, test generation, and multi-file editing patterns. These are the tasks most likely to drive credit consumption. The [GitHub Copilot customisation guide](../../user-tool-guides/github-copilot/customisation-guide.md) covers custom agents, hooks for security and cost logging, and skills. All of these interact with agent mode and affect how your team uses it at scale.
+
+### Understanding how agent mode consumes credits
+
+[Each prompt an engineer sends in agent mode counts as one premium request, multiplied by the selected model's multiplier](https://docs.github.com/en/copilot/using-github-copilot/copilot-chat/asking-github-copilot-questions-in-your-ide). Internal tool calls the agent makes between prompts, such as reading files or running terminal commands, are not charged separately. Only the prompts the engineer sends trigger a charge.
+
+Complex tasks require many messages. On a Business plan (300 requests per user per month), two or three feature implementation sessions with a premium model can exhaust an engineer's entire monthly allowance. GitHub Copilot does not warn engineers before a premium request is charged and there is no automatic notification when an individual approaches their limit.
+
+For worked examples of credit consumption across different task types and model choices, see the [agent mode billing guide](../../user-tool-guides/github-copilot/agent-mode-billing.md).
+
+### Restricting which models engineers can use
+
+As an enterprise or organisation owner, you can disable premium models to prevent engineers from selecting them in agent mode and chat. [Model policies apply equally to all Copilot features including agent mode](https://docs.github.com/en/copilot/how-tos/use-ai-models/configure-access-to-ai-models). There is no separate policy for agent mode alone. [Auto model selection also respects these restrictions](https://docs.github.com/en/copilot/concepts/auto-model-selection) and will not route to a disabled model.
+
+Disabling a model removes it from both Auto routing and manual selection. Engineers cannot use a model you have disabled, even if they choose it themselves. Administrators cannot set a default model for engineers. GitHub controls the platform-wide default, which has been GPT-4.1 since May 2025.
+
+For the full step-by-step procedure, including how to enforce included-only model use and a middle-ground option that keeps low-cost premium models available, see [Enforcing included model use through model policies](../../user-tool-guides/github-copilot/agent-mode-billing.md#enforcing-included-model-use-through-model-policies) in the agent mode billing guide.
+
+### Setting a hard spending limit
+
+You can set a monthly budget and enable a hard limit to automatically block premium requests once the budget is exhausted. Once the limit is reached, engineers are switched to included models automatically and no further charges accrue. This is the recommended configuration for cost governance. The [premium request paid usage policy](https://docs.github.com/en/copilot/how-tos/manage-and-track-spending/manage-request-allowances) has been available for Business and Enterprise plans since August 2025.
+
+Since November 2025, the Copilot coding agent has its own dedicated stock keeping unit (SKU) separate from chat and agent mode in the IDE. This allows you to set separate budgets for each feature if you want more detailed control.
+
+For the full procedure including budget configuration, alert thresholds, and the difference between hard and soft limits, see [Managing premium credits](../../user-tool-guides/github-copilot/premium-credit-management.md#managing-premium-credits) in the premium credit management guide.
+
+### Monitoring usage by engineer
+
+[Download monthly usage reports](https://docs.github.com/en/billing/how-tos/products/view-productlicense-use) to identify which engineers are consuming the most premium requests and which models they are using. Filter by feature and model to identify agent mode usage specifically.
+
+Contact engineers who are consistently near or over their allowance. Share the [premium credit management guide](../../user-tool-guides/github-copilot/premium-credit-management.md) to help them understand how to reduce consumption and choose appropriate models for each task type.
+
+### What to communicate to engineers
+
+Engineers may not realise how quickly agent mode sessions with premium models consume requests. Sharing the following points with your team will help:
+
+- agent mode with included models (GPT-4.1, GPT-4o, GPT-5 mini) costs nothing, so encourage engineers to use these as their default
+- [Auto model selection stays within 0× to 1× multiplier models](https://docs.github.com/en/copilot/concepts/auto-model-selection) and gives a 10% discount on paid plans, making it a safe default if engineers want automatic model selection
+- premium models such as Claude Sonnet 4.5 and Claude Opus 4.5 should be reserved for tasks that genuinely require advanced reasoning
+- [the Copilot coding agent on GitHub.com uses one premium request per session](https://github.blog/changelog/2025-07-10-github-copilot-coding-agent-now-uses-one-premium-request-per-session/) regardless of task complexity, making it far more cost-effective than agent mode chat for large, multi-file tasks
+
 ## Measuring success
 
 ### Quality metrics
@@ -361,7 +411,7 @@ Symptoms include:
 Follow these steps to resolve the issue.
 
 1. Check GitHub service status at [githubstatus.com](https://www.githubstatus.com/).
-2. Verify license is active in GitHub organisation settings.
+2. Verify licence is active in GitHub organisation settings.
 3. Clear chat history and restart conversation.
 4. Check corporate proxy or firewall allows Copilot endpoints.
 5. Update to latest extension version.
@@ -420,7 +470,7 @@ Follow these steps to resolve the issue.
 
 Symptoms include:
 
-- license assignment not working
+- licence assignment not working
 - policy changes not taking effect
 - usage metrics not appearing
 
@@ -447,7 +497,7 @@ They must take the following immediate actions.
 3. Document the suggestion for analysis.
 4. Update content exclusions if pattern-based.
 
-They must follow-up by:
+They must follow up by:
 
 - reviewing similar code in recent commits
 - updating the team training materials
@@ -513,9 +563,9 @@ Disable Copilot for specific file types where suggestions are not helpful or may
 
 ### Organisation-level settings
 
-The [Managing Copilot in your organisation guide](https://docs.github.com/en/copilot/managing-copilot/managing-github-copilot-in-your-organization) covers policy configuration and administration in detail. Configure your organisation-level settings.
+The [Managing Copilot in your organisation guide](https://docs.github.com/en/copilot/managing-copilot/managing-github-copilot-in-your-organization) covers policy configuration and administration in detail. To configure your organisation-level settings:
 
-1. Navigate to Settings → Copilot.
+1. Navigate to Settings, then Copilot.
 2. Enable Copilot for organisation.
 3. Configure suggestion matching (block suggestions matching public code if required).
 4. Set content exclusion repository.
@@ -527,4 +577,4 @@ The NCSC [vulnerability disclosure toolkit](https://www.ncsc.gov.uk/information/
 
 ## Contributing
 
-See the [contribution guidelines](../../CONTRIBUTING.md) before submitting changes. We encourage contributions from across government to keep this repository current
+See the [contribution guidelines](../../CONTRIBUTING.md) before submitting changes. We encourage contributions from across government to keep this repository current.

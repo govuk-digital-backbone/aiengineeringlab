@@ -5,6 +5,8 @@
 
 A practical guide to customising GitHub Copilot through instructions, custom agents, subagents, hooks and skills.
 
+This guide assumes you are already familiar with everyday Copilot usage. If you are new to Copilot, start with the [advanced use guide](advanced-use.md) first, which covers effective prompting, refactoring, and test generation.
+
 ## Contents
 
 [Instructions](#instructions)
@@ -84,6 +86,8 @@ Custom agents are specialised personas you select for specific workflows. Use th
 
 - consistent expertise such as testing, security or documentation
 - restricted available tools
+
+The model a custom agent uses determines the premium request cost of every session. An agent running on an included model (GPT-4.1, GPT-4o, GPT-5 mini) costs nothing. An agent running on Claude Opus 4.5 costs three premium requests per message. Before deploying custom agents for team-wide use, check which model they will run on and what your monthly allowance supports. Read [agent mode and credit consumption](premium-credit-management.md#agent-mode-and-credit-consumption) for worked examples showing how agent sessions translate into credit costs.
 
 ### File format
 
@@ -172,7 +176,7 @@ Use `copilot --agent=test-specialist --prompt 'Add authentication tests'` or use
 
 ### What and when
 
-Subagents are contextd isolated sessions that you invoke to handle bounded tasks. They are not independent entities. They handle tasks such as research and analysis without cluttering your main context. The subagent loads what it needs, processes it and returns only the summary.
+Subagents are context isolated sessions that you invoke to handle bounded tasks. They are not independent entities. They handle tasks such as research and analysis without cluttering your main context. The subagent loads what it needs, processes it and returns only the summary.
 
 Use subagents to:
 
@@ -381,7 +385,7 @@ Hooks support common use cases to:
 - log all actions for audit trails for compliance
 - run linters before code edits and validate test coverage for quality
 - alert teams on production changes for notifications
-- monitor tool usage across teams for cost tracking
+- track tool usage across teams for cost management. For broader guidance on controlling credit spend and setting organisation-wide spending limits, see the [premium credit management guide](premium-credit-management.md#managing-agent-mode-and-premium-credit-spend)
 
 ## Skills
 
@@ -545,19 +549,19 @@ This provides the following capabilities.
 
 #### Security first development
 
-Never commit secrets and validate all inputs for instructions. Use `@security-auditor` as a custom agent with read-only tools to review code for vulnerabilities. 
+Never commit secrets and validate all inputs for instructions. Use `@security-auditor` as a custom agent with read-only tools to review code for vulnerabilities.
 
 Implement `preToolUse` hooks that block hardcoded credentials and dangerous commands. Create a `secret-scanner` skill with automated scanning to detect and prevent secrets in commits.
 
 #### Compliance heavy environment
 
-Track all actions through comprehensive audit logging for instructions. Use `@compliance-auditor` as a custom agent with role-specific tools limited to read and reporting functions. 
+Track all actions through comprehensive audit logging for instructions. Use `@compliance-auditor` as a custom agent with role-specific tools limited to read and reporting functions.
 
 Implement `sessionStart` hooks to log user and session metadata, `preToolUse` hooks to enforce file access policies, `postToolUse` hooks to track all actions to a database, and `sessionEnd` hooks to generate compliance reports. Create an `audit-trail-generator` skill with automated report generation and policy templates.
 
 #### Quality focused testing
 
-Require 80% or higher coverage and follow the AAA pattern for instructions. Use `@test-specialist` as a custom agent with testing expertise and restricted tools. 
+Require 80% or higher coverage and follow the AAA pattern for instructions. Use `@test-specialist` as a custom agent with testing expertise and restricted tools.
 
 Implement `preToolUse` hooks that run linters before code edits to enforce code quality standards. Create a `unit-testing` skill with test templates and automated test runners. Invoke `@documentation-reader` as a subagent to fetch and summarise framework documentation when implementing new features.
 
@@ -618,11 +622,16 @@ Refine your configuration based on usage patterns.
 
 ## Further reading
 
-- [GitHub Copilot documentation](https://docs.github.com/copilot)
-- [Custom instructions guidance](https://docs.github.com/copilot/how-tos/configure-custom-instructions)
-- [Custom agents guidance](https://docs.github.com/copilot/how-tos/use-copilot-agents/coding-agent/create-custom-agents)
-- [Hooks reference](https://docs.github.com/en/copilot/reference/hooks-configuration)
-- [Agent skills guidance](https://docs.github.com/copilot/concepts/agents/about-agent-skills)
-- [Awesome Copilot repository](https://github.com/github/awesome-copilot) for community examples
-- [AGENTS.md standard](https://agents.md/) for cross-tool format
-- [Official GitHub Copilot documentation](https://docs.github.com/copilot) for the latest information
+[GitHub Copilot documentation](https://docs.github.com/copilot)
+
+[Custom instructions guidance](https://docs.github.com/copilot/how-tos/configure-custom-instructions)
+
+[Custom agents guidance](https://docs.github.com/copilot/how-tos/use-copilot-agents/coding-agent/create-custom-agents)
+
+[Hooks reference](https://docs.github.com/en/copilot/reference/hooks-configuration)
+
+[Agent skills guidance](https://docs.github.com/copilot/concepts/agents/about-agent-skills)
+
+[Awesome Copilot repository](https://github.com/github/awesome-copilot) for community examples
+
+[AGENTS.md standard](https://agents.md/) for cross-tool format

@@ -43,7 +43,7 @@ This guide focuses on:
 
 Good prompts lead to better results.
 
-You can [improve prompt quality](../../playbooks/prompt-engineering/) by clearly describing what the code should do rather than how it should be written, including any relevant constraints such as performance or readability, and referencing existing functions or patterns already used in the codebase.
+You can [improve prompt quality](../../playbooks/prompt-engineering/) by describing clearly what the code should do rather than how it should be written. Include any relevant constraints such as performance or readability. Reference existing functions or patterns already used in the codebase.
 
 You can prompt Copilot effectively by:
 
@@ -104,6 +104,8 @@ You can improve the quality of outputs by:
 - ensuring generated tests still fail when code breaks
 - ensuring documentation reflects real behaviour rather than intent
 
+If you use agent mode to generate tests across multiple files, the number of messages you send determines how many premium requests you consume. See [Agent mode billing](agent-mode-billing.md) for worked examples showing credit usage for test generation sessions, including how to keep costs to zero using included models.
+
 ### References
 
 - [Generate unit tests with GitHub Copilot](https://docs.github.com/en/copilot/tutorials/customization-library/prompt-files/generate-unit-tests)
@@ -114,7 +116,7 @@ You can improve the quality of outputs by:
 
 Copilot can assist with refactoring, but it should not drive it.
 
-Safe refactoring practices include making one logical change at a time, asking Copilot to suggest refactoring options rather than applying changes blindly, and running tests after each change to ensure behaviour remains correct.
+Safe refactoring practices include making one logical change at a time. Ask Copilot to suggest options rather than applying changes without review. Run tests after each change to confirm behaviour remains correct.
 
 You can use Copilot effectively during refactoring by:
 
@@ -124,8 +126,10 @@ You can use Copilot effectively during refactoring by:
 
 You can refactor more safely by:
 
-- avoiding large multi file changes generated in one step
+- avoiding large multi-file changes generated in one step
 - keeping changes reviewable in pull requests
+
+Multi-file refactoring is one of the most credit-intensive agent mode tasks. A complex refactoring job can involve 15 to 25 messages, which adds up quickly if you use a premium model. See [Agent mode billing](agent-mode-billing.md) for a cost comparison across model choices, including how to use agent mode for refactoring at zero premium cost with included models.
 
 ### References
 
@@ -133,7 +137,7 @@ You can refactor more safely by:
 
 ## 5. Understand limits and failure modes
 
-Copilot is not aware of organisational standards, architectural decisions, or security and compliance requirements, so its suggestions must always be reviewed in the context of your organisation’s policies and constraints.
+Copilot is not aware of organisational standards, architectural decisions, or security and compliance requirements, so its suggestions must always be reviewed in the context of your organisation's policies and constraints.
 
 Common failure modes include:
 
@@ -173,6 +177,4 @@ You can now:
 
 GitHub Copilot is a tool. You remain accountable for the code you ship.
 
-### Further reading
-
-- [GitHub Copilot documentation and Trust Center](https://docs.github.com/en/copilot)
+Once you are comfortable with the techniques in this guide, the [GitHub Copilot customisation guide](customisation-guide.md) covers how to go further, including setting up custom agents, repository instructions, hooks for security and compliance, and skills for repeatable workflows.
