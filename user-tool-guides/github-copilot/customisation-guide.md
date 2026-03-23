@@ -176,7 +176,7 @@ Use `copilot --agent=test-specialist --prompt 'Add authentication tests'` or use
 
 ### What and when
 
-Subagents are context isolated sessions that you invoke to handle bounded tasks. They are not independent entities. They handle tasks such as research and analysis without cluttering your main context. The subagent loads what it needs, processes it and returns only the summary.
+Subagents are context-isolated sessions that you invoke to handle bounded tasks. They are not independent entities. They handle tasks such as research and analysis without cluttering your main context. The subagent loads what it needs, processes it and returns only the summary.
 
 Use subagents to:
 

@@ -371,9 +371,9 @@ Contact engineers who are consistently near or over their allowance. Share the [
 
 ### What to communicate to engineers
 
-Engineers may not realise how quickly agent mode sessions with premium models consume requests. Sharing the following points with your team will help:
+Engineers may not realise how quickly agent mode sessions with premium models consume requests. You should make sure that your team understands that:
 
-- agent mode with included models (GPT-4.1, GPT-4o, GPT-5 mini) costs nothing, so encourage engineers to use these as their default
+- agent mode with included models (GPT-4.1, GPT-4o, GPT-5 mini) costs nothing, so these should be used as default
 - [Auto model selection stays within 0× to 1× multiplier models](https://docs.github.com/en/copilot/concepts/auto-model-selection) and gives a 10% discount on paid plans, making it a safe default if engineers want automatic model selection
 - premium models such as Claude Sonnet 4.5 and Claude Opus 4.5 should be reserved for tasks that genuinely require advanced reasoning
 - [the Copilot coding agent on GitHub.com uses one premium request per session](https://github.blog/changelog/2025-07-10-github-copilot-coding-agent-now-uses-one-premium-request-per-session/) regardless of task complexity, making it far more cost-effective than agent mode chat for large, multi-file tasks

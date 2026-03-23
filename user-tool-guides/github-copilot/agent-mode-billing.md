@@ -67,7 +67,7 @@ Engineers who regularly use premium models on complex tasks can exhaust a 300-re
 
 ## What auto model selection does in agent mode
 
-When you select "Auto", it [automatically chooses a model](https://docs.github.com/en/copilot/concepts/auto-model-selection) based on current availability. It only selects models with multipliers of 1x or below, so it will never select Claude Opus or other high-cost models.
+When you select 'Auto', it [automatically chooses a model](https://docs.github.com/en/copilot/concepts/auto-model-selection) based on current availability. It only selects models with multipliers of 1x or below, so it will never select Claude Opus or other high-cost models.
 
 The models it may currently select include:
 
@@ -88,7 +88,7 @@ When using auto model selection:
 
 On paid plans, [auto model selection applies a 10% discount to the model multiplier](https://docs.github.com/en/copilot/concepts/billing/copilot-requests). For example, if Auto selects Claude Sonnet 4.5 (normally 1x), you are charged 0.9 of a premium request per message. This discount applies to Copilot Chat and agent mode in the IDE, but not to the Copilot coding agent on GitHub.com. If you are using auto model selection outside VS Code, read the [about Copilot auto model selection](https://docs.github.com/en/copilot/concepts/auto-model-selection) guide to confirm whether the discount applies.
 
-Auto model selection is generally available in VS Code. It is in public preview for Visual Studio, JetBrains, Xcode, and Eclipse. For those IDEs, your administrator must enable the 'Editor preview features' policy before "Auto" appears in the model picker.
+Auto model selection is generally available in VS Code. It is in public preview for Visual Studio, JetBrains, Xcode, and Eclipse. For those IDEs, your administrator must enable the 'Editor preview features' policy before 'Auto' appears in the model picker.
 
 Auto model selection respects administrator model policies and will not route to any model your organisation has disabled.
 
@@ -135,7 +135,7 @@ Follow these steps to enforce included-only model use.
 3. Disable every model with a multiplier above 0x. This includes Claude Haiku 4.5 (0.33x), Claude Sonnet 4.5 (1x), GPT-5.1 and all other premium models.
 4. Save your changes. The restriction applies immediately across all features and IDEs.
 
-Note that "above 0x" includes any premium model, even low-cost ones such as Claude Haiku 4.5 (0.33x) and Grok Code Fast 1 (0.25x).
+Note that 'above 0x' includes any premium model, even low-cost ones such as Claude Haiku 4.5 (0.33x) and Grok Code Fast 1 (0.25x).
 
 Engineers lose manual access to any model you disable, so consider which approach suits your team.
 
