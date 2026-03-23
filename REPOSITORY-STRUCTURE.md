@@ -7,7 +7,7 @@ This repository is the central home for all AI Engineering Lab content across go
 
 ## Overview
 
-This repository follows a structured approach designed to maintain clarity and scalability as the project grows. 
+This repository follows a structured approach designed to maintain clarity and scalability as the project grows.
 
 ## Repository structure
 
@@ -90,12 +90,12 @@ This repository follows a structured approach designed to maintain clarity and s
 │   ├── measurement-playbook.md
 │   └── quality-strategy.md
 │
-├── security/                    # Security resources 
+├── security/                    # Security resources
 │   ├── README.md
 │   ├── security-policies.md
 │   └── threat-modelling.md
 │
-├── sustainable-ai/              # Environmental sustainability 
+├── sustainable-ai/              # Environmental sustainability
 │   ├── README.md
 │   ├── overview.md
 │   ├── carbon-footprint.md
@@ -118,6 +118,8 @@ This repository follows a structured approach designed to maintain clarity and s
     │   ├── advanced-use.md
     │   ├── customisation-guide.md
     │   ├── safe-usage-prototyping-vs-production.md
+    │   ├── agent-mode-billing.md
+    │   ├── copilot-cli-billing.md
     │   └── premium-credit-management.md
     └── gemini-code-assist/
         ├── README.md
