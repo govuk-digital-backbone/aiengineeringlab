@@ -48,8 +48,18 @@ This repository follows a structured approach designed to maintain clarity and s
 │   │   ├── README.md
 │   │   └── security-and-support.md
 │   ├── claude-code/
+│   │   ├── style-guides/
+│   │   │   ├── go.md
+│   │   │   ├── html-css.md
+│   │   │   ├── java.md
+│   │   │   ├── javascript.md
+│   │   │   ├── python.md
+│   │   │   ├── ruby.md
+│   │   │   ├── shell.md
+│   │   │   └── README.md
 │   │   └── README.md
 │   ├── github-copilot/
+│   │   ├── copilot-usage-guide.md
 │   │   └── README.md
 │   └── gemini-code-assist/
 │       ├── README.md

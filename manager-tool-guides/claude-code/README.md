@@ -19,17 +19,27 @@ This guide is for:
 
 ## Contents
 
-- [What Claude Code does](#what-claude-code-does)
-- [How it compares with other AI code assistants](#how-it-compares-with-other-ai-code-assistants)
-- [Claude Code models and task suitability](#claude-code-models-and-task-suitability)
-- [UK government specific considerations](#uk-government-specific-considerations)
-- [Getting started](#getting-started)
-- [Training requirements](#training-requirements)
-- [Measuring success](#measuring-success)
-- [Common troubleshooting scenarios](#common-troubleshooting-scenarios)
-- [Policy configuration reference](#policy-configuration-reference)
-- [Integration with development workflow](#integration-with-development-workflow)
-- [Further reading](#further-reading)
+[What Claude Code does](#what-claude-code-does)
+
+[How it compares with other AI code assistants](#how-it-compares-with-other-ai-code-assistants)
+
+[Claude Code models and task suitability](#claude-code-models-and-task-suitability)
+
+[UK government specific considerations](#uk-government-specific-considerations)
+
+[Training requirements](#training-requirements)
+
+[Measuring success](#measuring-success)
+
+[Common troubleshooting scenarios](#common-troubleshooting-scenarios)
+
+[Policy configuration reference](#policy-configuration-reference)
+
+[Language style guides](#language-style-guides)
+
+[Integration with development workflow](#integration-with-development-workflow)
+
+[Further reading](#further-reading)
 
 ## Before you start
 
@@ -212,25 +222,37 @@ For government projects, use a paid subscription tier only. Free and trial tiers
 
 ### Procurement
 
-Claude Code is available through:
+Claude models within the AI Engineering Lab are accessed through AWS Bedrock, with requests routed through a centralised LiteLLM gateway (referred to internally as LLMLite). This removes the need for individual Anthropic subscriptions or direct API keys from Anthropic.
 
-- direct subscription from Anthropic for individual or team plans
-- the DSIT AI Engineering Lab programme phase 1 licences
-- Crown Commercial Service (CCS) G-Cloud framework for enterprise agreements
+#### How access works
 
-Check whether your department already holds a licence through the AI Engineering Lab programme before procuring separately.
+The LiteLLM gateway is deployed within a dedicated AWS account in the EU (London) region (`eu-west-2`). This keeps data within UK-compliant infrastructure. It exposes an OpenAI-compatible API. Developers authenticate with a virtual API key issued by a LiteLLM administrator, rather than managing AWS credentials or Anthropic accounts directly.
 
-## Getting started
+#### What this means for your department
 
-### Licensing options
+Rather than procuring Claude licences separately, departments in the AI Engineering Lab programme receive access through the centrally managed LiteLLM gateway. Your LiteLLM administrator creates user accounts, assigns team membership, and issues virtual API keys. These keys can be scoped to specific models, rate limits, and spend budgets at both individual and team level.
 
-| Plan | Best for | Key features |
-|------|----------|--------------|
-| Claude Pro | Individual engineers | Terminal and web access, Sonnet and Haiku models, reasonable usage limits |
-| Claude Max | Power users and technical leads | Higher usage limits, priority access, Opus model access |
-| API access | Teams and enterprise | Pay per token, full model access, team management, audit logs |
+#### Available models through the gateway
 
-For government deployments, API access with a team account provides the most control over data handling, usage policies, and audit trails.
+| Model | Availability |
+|-------|-------------|
+| Claude Sonnet | Available via Bedrock through the LiteLLM gateway |
+| Claude Opus | Available via Bedrock through the LiteLLM gateway |
+
+Model access for each user is controlled at the gateway layer. Your administrator configures which models your team can use and the associated spend limits.
+
+#### Steps to get access
+
+1. Confirm your department is enrolled in the AI Engineering Lab programme.
+2. Request a user account from your LiteLLM administrator.
+3. Once assigned to a team, request a virtual API key.
+4. Configure your IDE or CLI tool to point at the LiteLLM gateway endpoint and authenticate with your virtual key.
+
+#### Key governance features provided by the gateway
+
+The LiteLLM gateway enforces per-user and per-team spend budgets, rate limits (requests per minute and tokens per minute), and model access controls automatically. All usage is logged and attributed to individual keys. This gives full cost visibility and audit trails without requiring departments to manage AWS IAM credentials or Bedrock configuration directly.
+
+For detailed guidance on managing users, teams, and keys, refer to the LiteLLM administration guides.
 
 ### Installation process
 
@@ -439,6 +461,20 @@ They must follow up by:
 - updating the team training materials
 - sharing learning without blame
 
+## Language style guides
+
+Starter style guide files are available for each language supported by the [GDS Way programming language guidance](https://gds-way.digital.cabinet-office.gov.uk/standards/programming-languages.html#programming-languages).
+
+- [Ruby](style-guides/ruby.md)
+- [Python](style-guides/python.md)
+- [JavaScript](style-guides/javascript.md)
+- [Gp](style-guides/go.md)
+- [Java](style-guides/java.md)
+- [HTML and CSS](style-guides/html-css.md)
+- [Shell and Bash](style-guides/shell.md)
+
+Copy the relevant block into your project's `CLAUDE.md` to give Claude Code persistent, language-specific coding standards. See the [style guides README](style-guides/README.md) for more detail on how to use them.
+
 ## Integration with development workflow
 
 ### Code review
@@ -496,7 +532,17 @@ Always recommend environment variables for configuration values.
 
 ## Coding standards
 
-Follow Government Digital Service (GDS) coding standards.
+Follow [Government Digital Service (GDS) coding standards](https://gds-way.digital.cabinet-office.gov.uk/standards/programming-languages.html)
+
+This project uses [LANGUAGE]. Apply the standards from the relevant style guide:
+- Ruby - 2-space indentation, frozen_string_literal, RuboCop enforced
+- Python - PEP 8, 4-space indentation, type hints, black formatted
+- JavaScript - ES2015+, const/let not var, StandardJS style, semicolons
+- Go - gofmt formatted, Effective Go conventions, explicit error handling
+- Java - Google Java Style Guide, 4-space indentation, google-java-format
+- HTML/CSS - GOV.UK Design System components, BEM naming, semantic HTML
+- Shell - set -euo pipefail, ShellCheck passing, quoted variables
+
 Use British English in comments and documentation.
 Write tests for all new functions.
 Keep functions under 20 lines where possible.
@@ -542,15 +588,26 @@ This restricts Claude Code to reading all files, editing only source files, and 
 
 ## Further reading
 
-- [Anthropic Trust Center](https://www.anthropic.com/trust)
-- [Claude Code GitHub discussions](https://github.com/anthropics/anthropic-sdk-python/discussions)
-- [NCSC secure development and deployment guidance](https://www.ncsc.gov.uk/collection/developers-collection/principles/develop-and-deploy-your-software-securely)
-- [AI Playbook for the UK Government](https://www.gov.uk/government/publications/ai-playbook-for-the-uk-government)
-- [Crown Commercial Service G-Cloud framework](https://www.cloudstore.service.gov.uk/)
-- [User guide for Claude Code](../../user-tool-guides/claude-code/README.md)
-- [Getting started guide](../../user-tool-guides/claude-code/getting-started.md)
-- [Advanced use guide](../../user-tool-guides/claude-code/advanced-use.md)
-- [Safe usage guidance](../../user-tool-guides/claude-code/safe-usage-prototyping-vs-production.md)
-- [AI-assisted SDLC playbook](../../playbooks/ai-sdlc-playbook.md)
-- [Model selection playbook](../../playbooks/model-selection.md)
-- [Base guardrails](../../governance/guardrails-base.md)
+[Anthropic Trust Center](https://www.anthropic.com/trust)
+
+[Claude Code GitHub discussions](https://github.com/anthropics/anthropic-sdk-python/discussions)
+
+[NCSC secure development and deployment guidance](https://www.ncsc.gov.uk/collection/developers-collection/principles/develop-and-deploy-your-software-securely)
+
+[AI Playbook for the UK Government](https://www.gov.uk/government/publications/ai-playbook-for-the-uk-government)
+
+[Crown Commercial Service G-Cloud framework](https://www.cloudstore.service.gov.uk/)
+
+[User guide for Claude Code](../../user-tool-guides/claude-code/README.md)
+
+[Getting started guide](../../user-tool-guides/claude-code/getting-started.md)
+
+[Advanced use guide](../../user-tool-guides/claude-code/advanced-use.md)
+
+[Safe usage guidance](../../user-tool-guides/claude-code/safe-usage-prototyping-vs-production.md)
+
+[AI-assisted SDLC playbook](../../playbooks/ai-sdlc-playbook.md)
+
+[Model selection playbook](../../playbooks/model-selection.md)
+
+[Base guardrails](../../governance/guardrails-base.md)
