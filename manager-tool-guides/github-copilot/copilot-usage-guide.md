@@ -39,15 +39,6 @@ Enabling filters protects against intellectual property risks by blocking sugges
 
 Do not accept AI suggestions without understanding what the code does. Treat AI code with the same scrutiny as code from a junior developer.
 
-### Remove sensitive data before submitting prompts
-
-Check and clean code before using it with AI tools. Remove all or add relevant files to `.copilotignore`:
-
-- secrets and credentials
-- personal data
-- special category data
-- internal system details
-
 ### Test AI-generated code thoroughly
 
 AI code needs the same or more thorough testing as human-written code. Test for correctness, security vulnerabilities, and edge cases.
